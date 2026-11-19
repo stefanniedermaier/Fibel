@@ -40,6 +40,38 @@
     "title": "Silben klatschen"
   },
   {
+    "id": "k1.schreiben.silben-legen",
+    "grade": 1,
+    "topic": "schreiben",
+    "exercise": "schreiben.silben-legen",
+    "params": { "wordGrade": 1 },
+    "title": "Silben legen"
+  },
+  {
+    "id": "k1.schreiben.luecke",
+    "grade": 1,
+    "topic": "schreiben",
+    "exercise": "schreiben.luecke",
+    "params": { "wordGrade": 1 },
+    "title": "Lückenwort"
+  },
+  {
+    "id": "k1.schreiben.buchstaben-legen",
+    "grade": 1,
+    "topic": "schreiben",
+    "exercise": "schreiben.buchstaben-legen",
+    "params": { "wordGrade": 1 },
+    "title": "Buchstaben legen"
+  },
+  {
+    "id": "k1.schreiben.abc-tastatur",
+    "grade": 1,
+    "topic": "schreiben",
+    "exercise": "schreiben.abc-tastatur",
+    "params": { "wordGrade": 1 },
+    "title": "ABC-Tastatur"
+  },
+  {
     "id": "k1.rechnen.mengen-10",
     "grade": 1,
     "topic": "rechnen",

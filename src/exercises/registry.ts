@@ -9,6 +9,9 @@ import { mengen } from './rechnen/mengen'
 import { plusMinus } from './rechnen/plus-minus'
 import { vergleichen } from './rechnen/vergleichen'
 import { zahlenhaus } from './rechnen/zahlenhaus'
+import { abcTastatur } from './schreiben/abc-tastatur'
+import { buchstabenLegen, luecke } from './schreiben/buchstaben-legen'
+import { silbenLegen } from './schreiben/silben-legen'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -28,6 +31,10 @@ register(mengeLegen)
 register(vergleichen)
 register(zahlenhaus)
 register(plusMinus)
+register(silbenLegen)
+register(luecke)
+register(buchstabenLegen)
+register(abcTastatur)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

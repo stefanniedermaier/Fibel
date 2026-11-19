@@ -406,6 +406,10 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
   - R5 Plus/Minus bis 20 mit Zwanzigerfeld (2 × 10) erscheint, sobald im Elternbereich der Zahlenraum 20 eingestellt ist, Zehnerübergang optional.
   - Im Elternbereich gibt es Zahlenraum, Minus an/aus und Zehnerübergang.
   - Jede Aufgabe zeigt ihre Anweisung zusätzlich als Text, mit dem Vorlese-Knopf daneben (aus ToDo.md). Bei Hör-Aufgaben steht dort ein neutraler Text, der die Lösung nicht verrät.
+- Phase 5 ist umgesetzt:
+  - Spielbar sind S1 Silben legen, S2 Buchstaben legen (Mehrgraphe wie Sch und Ei als eine Kachel), das Lückenwort (leichte Variante, nur ein Buchstabe fehlt) und S3 ABC-Tastatur.
+  - Die ABC-Tastatur hat nur die bekannten Buchstaben und markiert nach einem Fehler, welche Buchstaben stimmen. Groß-/Kleinschreibung zählt nur, wenn sie eingeschaltet ist; sonst wird der erste Buchstabe von Nomen automatisch groß.
+  - Geschrieben werden dieselben Wörter wie beim Lesen: nur bekannte Buchstaben, bis zum aktuellen Wort-Level.
 
 | Phase | Inhalt | Fertig, wenn … | Umfang |
 |---|---|---|---|
