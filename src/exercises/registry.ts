@@ -1,4 +1,9 @@
 /** All exercise modules. A new exercise = new module + entry here + catalog entries. */
+import { anlaut } from './lesen/anlaut'
+import { bildWort } from './lesen/bild-wort'
+import { silbenHoeren } from './lesen/silben-hoeren'
+import { silbenKlatschen } from './lesen/silben-klatschen'
+import { wortBild } from './lesen/wort-bild'
 import { mengen } from './rechnen/mengen'
 import type { ExerciseModule } from './types'
 
@@ -9,6 +14,11 @@ function register<P, D>(module: ExerciseModule<P, D>) {
   modules.set(module.id, module as unknown as ExerciseModule)
 }
 
+register(silbenHoeren)
+register(wortBild)
+register(bildWort)
+register(anlaut)
+register(silbenKlatschen)
 register(mengen)
 
 export function getExercise(id: string): ExerciseModule | undefined {

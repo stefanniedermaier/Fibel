@@ -395,6 +395,12 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 - Phase 2 ist umgesetzt:
   - Wörterbücher, Grapheme-Zerleger, Lauttreue-Prüfung (`npm run data:check`, auch in der CI), OpenMoji-Bilder (`npm run data:openmoji`) und der Sprachtest im Elternbereich sind fertig.
   - Offen ist noch das Anhören aller Einträge auf dem Gerät. Markierte Fälle bekommen danach ein `say`-Override.
+- Phase 3 ist umgesetzt:
+  - L1–L5 sind spielbar, mit Silbenfärbung und optionalen Silbenbögen.
+  - Wort-Level steigen automatisch, sobald 80 % eines Levels sicher sitzen. Im Elternbereich lassen sie sich auch von Hand setzen.
+  - Im Elternbereich gibt es ein Buchstaben-Raster, das zeigt, wie viele Wörter und Silben damit lesbar sind.
+  - Eine Einheit verteilt die Aufgaben gleichmäßig auf die Übungen und bringt dieselbe Übung nicht zweimal hintereinander.
+  - Offen ist noch der Test mit dem Kind (geplant nach Phase 3).
 
 | Phase | Inhalt | Fertig, wenn … | Umfang |
 |---|---|---|---|

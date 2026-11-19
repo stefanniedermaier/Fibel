@@ -1,11 +1,13 @@
 import type { Component } from 'vue'
 import type { Rng } from '@/core/random'
-import type { LandCode, ProfileSettings, Topic } from '@/core/types'
+import type { LandCode, ProfileSettings, ProgressRecord, Topic } from '@/core/types'
 
 export interface LearnerContext {
   land: LandCode
   grade: number
   settings: ProfileSettings
+  /** Learning progress per item key; used e.g. to unlock the next word level. */
+  progress?: ReadonlyMap<string, ProgressRecord>
 }
 
 export interface GeneratedTask<D = unknown> {

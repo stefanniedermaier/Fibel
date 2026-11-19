@@ -1,7 +1,7 @@
 /** Rules of a unit: which tasks, when a star, when the crown. Pure functions. */
 import type { ExerciseModule, GeneratedTask, LearnerContext } from '@/exercises/types'
 import { pickItems, type Outcome } from './leitner'
-import type { Rng } from './random'
+import { shuffle, type Rng } from './random'
 import type { CatalogEntry, ProgressRecord, SessionRecord, TaskResult, Topic } from './types'
 
 /** After this many wrong answers the solution is shown. */
@@ -36,18 +36,65 @@ export function planSession(
   rng: Rng,
   lookup: ModuleLookup,
 ): PlannedTask[] {
-  const candidates = entries.flatMap((entry) => {
-    const module = lookup(entry.exercise)
-    if (!module) return []
-    return module.items(ctx, entry.params).map((itemKey) => ({ entry, module, itemKey }))
-  })
-  return pickItems(candidates, (c) => c.itemKey, progress, count, rng).map((c, i) => ({
+  // The modules see the progress, e.g. to unlock the next word level.
+  const learner: LearnerContext = { ...ctx, progress }
+  const groups = entries
+    .map((entry) => {
+      const module = lookup(entry.exercise)
+      const items = module ? module.items(learner, entry.params) : []
+      return { entry, module, items }
+    })
+    .filter((g): g is typeof g & { module: ExerciseModule } => !!g.module && g.items.length > 0)
+  if (groups.length === 0) return []
+
+  // Every exercise gets an equal share of the tasks (the remainder goes to random
+  // exercises), so an exercise with many items does not crowd out the others.
+  const quotas = sharesOf(count, groups.length, rng)
+  const picked = groups.flatMap((g, i) =>
+    pickItems(g.items, (key) => key, progress, quotas[i] ?? 0, rng).map((itemKey) => ({
+      ...g,
+      itemKey,
+    })),
+  )
+  return spreadOut(shuffle(picked, rng), (p) => p.entry.id).map((c, i) => ({
     id: `${i}-${c.entry.id}-${c.itemKey}`,
     entry: c.entry,
     module: c.module,
     itemKey: c.itemKey,
-    task: c.module.generate(ctx, c.entry.params, c.itemKey, rng),
+    task: c.module.generate(learner, c.entry.params, c.itemKey, rng),
   }))
+}
+
+/** Splits `count` into `parts` nearly equal shares; the extra ones go to random parts. */
+export function sharesOf(count: number, parts: number, rng: Rng): number[] {
+  const base = Math.floor(count / parts)
+  const shares = Array.from({ length: parts }, () => base)
+  const extra = shuffle(
+    Array.from({ length: parts }, (_, i) => i),
+    rng,
+  ).slice(0, count - base * parts)
+  for (const i of extra) shares[i] = (shares[i] ?? 0) + 1
+  return shares
+}
+
+/** Reorders so the same exercise does not come twice in a row where avoidable. */
+export function spreadOut<T>(items: readonly T[], keyOf: (item: T) => string): T[] {
+  // Always continue with the exercise that has the most tasks left (but not the one
+  // just used) – otherwise the frequent one piles up at the end.
+  const rest = [...items]
+  const result: T[] = []
+  while (rest.length > 0) {
+    const last = result.length > 0 ? keyOf(result[result.length - 1] as T) : undefined
+    const counts = new Map<string, number>()
+    for (const item of rest) counts.set(keyOf(item), (counts.get(keyOf(item)) ?? 0) + 1)
+    let best: string | undefined
+    for (const [key, n] of counts) {
+      if (key !== last && (best === undefined || n > (counts.get(best) ?? 0))) best = key
+    }
+    const index = best === undefined ? 0 : rest.findIndex((item) => keyOf(item) === best)
+    result.push(...rest.splice(index, 1))
+  }
+  return result
 }
 
 export function outcomeOf(wrongAttempts: number, revealed: boolean): Outcome {

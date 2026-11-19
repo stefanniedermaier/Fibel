@@ -1,5 +1,45 @@
 [
   {
+    "id": "k1.lesen.silben-hoeren",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.silben-hoeren",
+    "params": { "wordGrade": 1 },
+    "title": "Silben hören"
+  },
+  {
+    "id": "k1.lesen.wort-bild",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.wort-bild",
+    "params": { "wordGrade": 1 },
+    "title": "Wort lesen, Bild finden"
+  },
+  {
+    "id": "k1.lesen.bild-wort",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.bild-wort",
+    "params": { "wordGrade": 1 },
+    "title": "Bild ansehen, Wort finden"
+  },
+  {
+    "id": "k1.lesen.anlaut",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.anlaut",
+    "params": { "wordGrade": 1 },
+    "title": "Anlaut erkennen"
+  },
+  {
+    "id": "k1.lesen.silben-klatschen",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.silben-klatschen",
+    "params": { "wordGrade": 1 },
+    "title": "Silben klatschen"
+  },
+  {
     "id": "k1.rechnen.mengen-10",
     "grade": 1,
     "topic": "rechnen",
