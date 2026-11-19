@@ -1,0 +1,66 @@
+:root {
+  --bg: #fff8ee;
+  --surface: #ffffff;
+  --text: #2b2118;
+  --muted: #6b5a4a;
+  --accent: #ffb703;
+  --accent-strong: #c77700;
+  --ok: #2a9d4b;
+  --error: #c0392b;
+  /* Syllable colours (blue/red, as in many primers) */
+  --syllable-a: #1d70b8;
+  --syllable-b: #d4351c;
+
+  --radius: 20px;
+  --tap: 64px; /* minimum touch target */
+  --font: 'Andika', system-ui, sans-serif;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 20px;
+  line-height: 1.4;
+  /* Guard against accidental gestures by small children */
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+#app {
+  min-height: 100%;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
