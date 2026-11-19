@@ -1,0 +1,58 @@
+[
+  {
+    "id": "bluete",
+    "text": "Blüte",
+    "syllables": ["Blü", "te"],
+    "image": "1F338",
+    "category": "natur",
+    "similar": ["blume"]
+  },
+  {
+    "id": "buch",
+    "text": "Buch",
+    "syllables": ["Buch"],
+    "image": "1F4D6",
+    "category": "dinge",
+    "similar": ["bus"]
+  },
+  {
+    "id": "raupe",
+    "text": "Raupe",
+    "syllables": ["Rau", "pe"],
+    "image": "1F41B",
+    "category": "tiere",
+    "similar": ["rabe", "lupe"]
+  },
+  {
+    "id": "schere",
+    "text": "Schere",
+    "syllables": ["Sche", "re"],
+    "image": "2702",
+    "category": "dinge",
+    "similar": ["schule"]
+  },
+  {
+    "id": "nadel",
+    "text": "Nadel",
+    "syllables": ["Na", "del"],
+    "image": "1FAA1",
+    "category": "dinge",
+    "similar": ["nudel", "gabel"]
+  },
+  {
+    "id": "nebel",
+    "text": "Nebel",
+    "syllables": ["Ne", "bel"],
+    "image": "1F32B",
+    "category": "natur",
+    "similar": ["gabel", "kabel"]
+  },
+  {
+    "id": "euro",
+    "text": "Euro",
+    "syllables": ["Eu", "ro"],
+    "image": "1F4B6",
+    "category": "dinge",
+    "similar": ["eule"]
+  }
+]

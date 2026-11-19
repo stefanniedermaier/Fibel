@@ -71,6 +71,63 @@ export interface LandOverlay {
     remove?: string[]
     patch?: Record<string, Partial<Omit<CatalogEntry, 'id'>>>
   }
+  /** Word list changes per grade (key = grade). */
+  words?: Record<
+    string,
+    {
+      /** Path of an extra word list, relative to the state folder. */
+      add?: string
+      remove?: string[]
+      /** Word ids that belong to the state's official basic vocabulary. */
+      grundwortschatz?: string[]
+    }
+  >
+  /** Handwriting used for tracing, per grade (e.g. 'druckschrift'). */
+  script?: Record<string, string>
+  /** Where the adjustments come from (curriculum reference). */
+  source?: string
+}
+
+// --- Dictionaries ------------------------------------------------------------
+
+/** A word as stored in the JSON dictionaries. */
+export interface WordEntry {
+  id: string
+  /** Written form; nouns capitalised. */
+  text: string
+  /** Spoken syllables; joined they must give `text`. */
+  syllables: string[]
+  /** OpenMoji code point(s), e.g. '1F339'. */
+  image: string
+  category: string
+  /** Ids of similar-looking words, used as targeted distractors. */
+  similar?: string[]
+  /** Different text for the speech output if the TTS mispronounces the word. */
+  say?: string
+}
+
+/** A word with derived data, as the exercises use it. */
+export interface Word extends WordEntry {
+  graphemes: string[]
+  level: 1 | 2 | 3 | 4
+  grundwortschatz: boolean
+  /** 'basis' or the state code the word comes from. */
+  source: string
+}
+
+export interface Syllable {
+  text: string
+  say?: string
+}
+
+export interface Letter {
+  id: string
+  upper: string
+  type: 'vokal' | 'konsonant' | 'umlaut' | 'mehrgraph'
+  example: string
+  image: string
+  /** Where the sound is in the example word. */
+  position: 'anlaut' | 'inlaut' | 'auslaut'
 }
 
 export interface ProgressRecord {

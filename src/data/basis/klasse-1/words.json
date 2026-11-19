@@ -1,0 +1,805 @@
+[
+  {
+    "id": "oma",
+    "text": "Oma",
+    "syllables": ["O", "ma"],
+    "image": "1F475",
+    "category": "menschen",
+    "similar": ["opa"]
+  },
+  {
+    "id": "opa",
+    "text": "Opa",
+    "syllables": ["O", "pa"],
+    "image": "1F474",
+    "category": "menschen",
+    "similar": ["oma"]
+  },
+  {
+    "id": "mama",
+    "text": "Mama",
+    "syllables": ["Ma", "ma"],
+    "image": "1F469",
+    "category": "menschen",
+    "similar": ["papa", "lama"]
+  },
+  {
+    "id": "papa",
+    "text": "Papa",
+    "syllables": ["Pa", "pa"],
+    "image": "1F468",
+    "category": "menschen",
+    "similar": ["mama"]
+  },
+  {
+    "id": "lama",
+    "text": "Lama",
+    "syllables": ["La", "ma"],
+    "image": "1F999",
+    "category": "tiere",
+    "similar": ["mama", "limo"]
+  },
+  {
+    "id": "sofa",
+    "text": "Sofa",
+    "syllables": ["So", "fa"],
+    "image": "1F6CB",
+    "category": "dinge",
+    "similar": ["mofa"]
+  },
+  {
+    "id": "rose",
+    "text": "Rose",
+    "syllables": ["Ro", "se"],
+    "image": "1F339",
+    "category": "natur",
+    "similar": ["dose", "hose"]
+  },
+  {
+    "id": "nase",
+    "text": "Nase",
+    "syllables": ["Na", "se"],
+    "image": "1F443",
+    "category": "koerper",
+    "similar": ["hase", "hose"]
+  },
+  {
+    "id": "hase",
+    "text": "Hase",
+    "syllables": ["Ha", "se"],
+    "image": "1F407",
+    "category": "tiere",
+    "similar": ["nase", "hose"]
+  },
+  {
+    "id": "dose",
+    "text": "Dose",
+    "syllables": ["Do", "se"],
+    "image": "1F96B",
+    "category": "dinge",
+    "similar": ["rose", "hose"]
+  },
+  {
+    "id": "hose",
+    "text": "Hose",
+    "syllables": ["Ho", "se"],
+    "image": "1F456",
+    "category": "dinge",
+    "similar": ["rose", "dose", "hase"]
+  },
+  {
+    "id": "limo",
+    "text": "Limo",
+    "syllables": ["Li", "mo"],
+    "image": "1F964",
+    "category": "essen",
+    "similar": ["lama", "dino"]
+  },
+  {
+    "id": "lupe",
+    "text": "Lupe",
+    "syllables": ["Lu", "pe"],
+    "image": "1F50D",
+    "category": "dinge",
+    "similar": ["pute"]
+  },
+  {
+    "id": "dino",
+    "text": "Dino",
+    "syllables": ["Di", "no"],
+    "image": "1F995",
+    "category": "tiere",
+    "similar": ["limo", "kiwi"]
+  },
+  {
+    "id": "mofa",
+    "text": "Mofa",
+    "syllables": ["Mo", "fa"],
+    "image": "1F6F5",
+    "category": "fahrzeuge",
+    "similar": ["sofa"]
+  },
+  {
+    "id": "pute",
+    "text": "Pute",
+    "syllables": ["Pu", "te"],
+    "image": "1F983",
+    "category": "tiere",
+    "similar": ["lupe", "note"]
+  },
+  {
+    "id": "kuli",
+    "text": "Kuli",
+    "syllables": ["Ku", "li"],
+    "image": "1F58A",
+    "category": "dinge",
+    "similar": ["kiwi"]
+  },
+  {
+    "id": "note",
+    "text": "Note",
+    "syllables": ["No", "te"],
+    "image": "1F3B5",
+    "category": "musik",
+    "similar": ["pute", "nase"]
+  },
+  {
+    "id": "rabe",
+    "text": "Rabe",
+    "syllables": ["Ra", "be"],
+    "image": "1F426-200D-2B1B",
+    "category": "tiere",
+    "similar": ["rose"]
+  },
+  {
+    "id": "kanu",
+    "text": "Kanu",
+    "syllables": ["Ka", "nu"],
+    "image": "1F6F6",
+    "category": "fahrzeuge",
+    "similar": ["kuli"]
+  },
+  {
+    "id": "ufo",
+    "text": "Ufo",
+    "syllables": ["U", "fo"],
+    "image": "1F6F8",
+    "category": "fahrzeuge",
+    "similar": ["opa"]
+  },
+  {
+    "id": "kiwi",
+    "text": "Kiwi",
+    "syllables": ["Ki", "wi"],
+    "image": "1F95D",
+    "category": "essen",
+    "similar": ["kuli"]
+  },
+
+  {
+    "id": "tomate",
+    "text": "Tomate",
+    "syllables": ["To", "ma", "te"],
+    "image": "1F345",
+    "category": "essen",
+    "similar": ["rakete", "melone"]
+  },
+  {
+    "id": "banane",
+    "text": "Banane",
+    "syllables": ["Ba", "na", "ne"],
+    "image": "1F34C",
+    "category": "essen",
+    "similar": ["melone", "tomate"]
+  },
+  {
+    "id": "melone",
+    "text": "Melone",
+    "syllables": ["Me", "lo", "ne"],
+    "image": "1F349",
+    "category": "essen",
+    "similar": ["banane", "tomate"]
+  },
+  {
+    "id": "rakete",
+    "text": "Rakete",
+    "syllables": ["Ra", "ke", "te"],
+    "image": "1F680",
+    "category": "fahrzeuge",
+    "similar": ["tomate"]
+  },
+  {
+    "id": "koala",
+    "text": "Koala",
+    "syllables": ["Ko", "a", "la"],
+    "image": "1F428",
+    "category": "tiere",
+    "similar": ["kamera"]
+  },
+  {
+    "id": "radio",
+    "text": "Radio",
+    "syllables": ["Ra", "di", "o"],
+    "image": "1F4FB",
+    "category": "dinge",
+    "similar": ["rakete"]
+  },
+  {
+    "id": "kamera",
+    "text": "Kamera",
+    "syllables": ["Ka", "me", "ra"],
+    "image": "1F4F7",
+    "category": "dinge",
+    "similar": ["koala", "kamel"]
+  },
+
+  {
+    "id": "igel",
+    "text": "Igel",
+    "syllables": ["I", "gel"],
+    "image": "1F994",
+    "category": "tiere",
+    "similar": ["esel", "gabel"]
+  },
+  {
+    "id": "esel",
+    "text": "Esel",
+    "syllables": ["E", "sel"],
+    "image": "1FACF",
+    "category": "tiere",
+    "similar": ["igel", "besen"]
+  },
+  {
+    "id": "kamel",
+    "text": "Kamel",
+    "syllables": ["Ka", "mel"],
+    "image": "1F42B",
+    "category": "tiere",
+    "similar": ["kamera", "kabel"]
+  },
+  {
+    "id": "ananas",
+    "text": "Ananas",
+    "syllables": ["A", "na", "nas"],
+    "image": "1F34D",
+    "category": "essen",
+    "similar": ["banane"]
+  },
+  {
+    "id": "tulpe",
+    "text": "Tulpe",
+    "syllables": ["Tul", "pe"],
+    "image": "1F337",
+    "category": "natur",
+    "similar": ["lupe", "palme"]
+  },
+  {
+    "id": "wal",
+    "text": "Wal",
+    "syllables": ["Wal"],
+    "image": "1F40B",
+    "category": "tiere",
+    "similar": ["wolf", "salz"]
+  },
+  {
+    "id": "gabel",
+    "text": "Gabel",
+    "syllables": ["Ga", "bel"],
+    "image": "1F374",
+    "category": "dinge",
+    "similar": ["kabel", "igel"]
+  },
+  {
+    "id": "nudel",
+    "text": "Nudel",
+    "syllables": ["Nu", "del"],
+    "image": "1F35D",
+    "category": "essen",
+    "similar": ["pudel"]
+  },
+  {
+    "id": "pudel",
+    "text": "Pudel",
+    "syllables": ["Pu", "del"],
+    "image": "1F429",
+    "category": "tiere",
+    "similar": ["nudel"]
+  },
+  {
+    "id": "kabel",
+    "text": "Kabel",
+    "syllables": ["Ka", "bel"],
+    "image": "1F50C",
+    "category": "dinge",
+    "similar": ["gabel", "kamel"]
+  },
+  {
+    "id": "paket",
+    "text": "Paket",
+    "syllables": ["Pa", "ket"],
+    "image": "1F4E6",
+    "category": "dinge",
+    "similar": ["salat"]
+  },
+  {
+    "id": "salat",
+    "text": "Salat",
+    "syllables": ["Sa", "lat"],
+    "image": "1F957",
+    "category": "essen",
+    "similar": ["salz", "paket"]
+  },
+  {
+    "id": "hut",
+    "text": "Hut",
+    "syllables": ["Hut"],
+    "image": "1F3A9",
+    "category": "dinge",
+    "similar": ["bus"]
+  },
+  {
+    "id": "bus",
+    "text": "Bus",
+    "syllables": ["Bus"],
+    "image": "1F68C",
+    "category": "fahrzeuge",
+    "similar": ["hut"]
+  },
+  {
+    "id": "nest",
+    "text": "Nest",
+    "syllables": ["Nest"],
+    "image": "1FABA",
+    "category": "natur",
+    "similar": ["zelt"]
+  },
+  {
+    "id": "zelt",
+    "text": "Zelt",
+    "syllables": ["Zelt"],
+    "image": "26FA",
+    "category": "dinge",
+    "similar": ["nest", "salz"]
+  },
+  {
+    "id": "mantel",
+    "text": "Mantel",
+    "syllables": ["Man", "tel"],
+    "image": "1F9E5",
+    "category": "dinge",
+    "similar": ["kamel"]
+  },
+  {
+    "id": "pinsel",
+    "text": "Pinsel",
+    "syllables": ["Pin", "sel"],
+    "image": "1F58C",
+    "category": "dinge",
+    "similar": ["insel"]
+  },
+  {
+    "id": "pilz",
+    "text": "Pilz",
+    "syllables": ["Pilz"],
+    "image": "1F344",
+    "category": "natur",
+    "similar": ["salz"]
+  },
+  {
+    "id": "salz",
+    "text": "Salz",
+    "syllables": ["Salz"],
+    "image": "1F9C2",
+    "category": "essen",
+    "similar": ["pilz", "saft", "salat"]
+  },
+  {
+    "id": "brot",
+    "text": "Brot",
+    "syllables": ["Brot"],
+    "image": "1F35E",
+    "category": "essen",
+    "similar": ["kran", "krone"]
+  },
+  {
+    "id": "paprika",
+    "text": "Paprika",
+    "syllables": ["Pa", "pri", "ka"],
+    "image": "1FAD1",
+    "category": "essen",
+    "similar": ["kamera"]
+  },
+  {
+    "id": "keks",
+    "text": "Keks",
+    "syllables": ["Keks"],
+    "image": "1F36A",
+    "category": "essen",
+    "similar": ["kiwi"]
+  },
+  {
+    "id": "ente",
+    "text": "Ente",
+    "syllables": ["En", "te"],
+    "image": "1F986",
+    "category": "tiere",
+    "similar": ["note"]
+  },
+  {
+    "id": "delfin",
+    "text": "Delfin",
+    "syllables": ["Del", "fin"],
+    "image": "1F42C",
+    "category": "tiere",
+    "similar": ["dino"]
+  },
+  {
+    "id": "zebra",
+    "text": "Zebra",
+    "syllables": ["Ze", "bra"],
+    "image": "1F993",
+    "category": "tiere",
+    "similar": ["panda"]
+  },
+  {
+    "id": "panda",
+    "text": "Panda",
+    "syllables": ["Pan", "da"],
+    "image": "1F43C",
+    "category": "tiere",
+    "similar": ["zebra", "papa"]
+  },
+  {
+    "id": "wolf",
+    "text": "Wolf",
+    "syllables": ["Wolf"],
+    "image": "1F43A",
+    "category": "tiere",
+    "similar": ["wal", "wolke"]
+  },
+  {
+    "id": "krake",
+    "text": "Krake",
+    "syllables": ["Kra", "ke"],
+    "image": "1F419",
+    "category": "tiere",
+    "similar": ["krone", "kran"]
+  },
+  {
+    "id": "lok",
+    "text": "Lok",
+    "syllables": ["Lok"],
+    "image": "1F682",
+    "category": "fahrzeuge",
+    "similar": ["keks"]
+  },
+  {
+    "id": "kran",
+    "text": "Kran",
+    "syllables": ["Kran"],
+    "image": "1F3D7",
+    "category": "fahrzeuge",
+    "similar": ["krake", "krone"]
+  },
+  {
+    "id": "musik",
+    "text": "Musik",
+    "syllables": ["Mu", "sik"],
+    "image": "1F3B6",
+    "category": "musik",
+    "similar": ["note"]
+  },
+  {
+    "id": "trompete",
+    "text": "Trompete",
+    "syllables": ["Trom", "pe", "te"],
+    "image": "1F3BA",
+    "category": "musik",
+    "similar": ["tomate", "rakete"]
+  },
+  {
+    "id": "telefon",
+    "text": "Telefon",
+    "syllables": ["Te", "le", "fon"],
+    "image": "260E",
+    "category": "dinge",
+    "similar": ["melone"]
+  },
+  {
+    "id": "besen",
+    "text": "Besen",
+    "syllables": ["Be", "sen"],
+    "image": "1F9F9",
+    "category": "dinge",
+    "similar": ["esel", "regen"]
+  },
+  {
+    "id": "lineal",
+    "text": "Lineal",
+    "syllables": ["Li", "ne", "al"],
+    "image": "1F4CF",
+    "category": "dinge",
+    "similar": ["limo"]
+  },
+  {
+    "id": "kaktus",
+    "text": "Kaktus",
+    "syllables": ["Kak", "tus"],
+    "image": "1F335",
+    "category": "natur",
+    "similar": ["bus"]
+  },
+  {
+    "id": "palme",
+    "text": "Palme",
+    "syllables": ["Pal", "me"],
+    "image": "1F334",
+    "category": "natur",
+    "similar": ["tulpe"]
+  },
+  {
+    "id": "blume",
+    "text": "Blume",
+    "syllables": ["Blu", "me"],
+    "image": "1F33C",
+    "category": "natur",
+    "similar": ["palme", "lupe"]
+  },
+  {
+    "id": "wolke",
+    "text": "Wolke",
+    "syllables": ["Wol", "ke"],
+    "image": "2601",
+    "category": "natur",
+    "similar": ["wolf"]
+  },
+  {
+    "id": "regen",
+    "text": "Regen",
+    "syllables": ["Re", "gen"],
+    "image": "1F327",
+    "category": "natur",
+    "similar": ["besen"]
+  },
+  {
+    "id": "insel",
+    "text": "Insel",
+    "syllables": ["In", "sel"],
+    "image": "1F3DD",
+    "category": "natur",
+    "similar": ["pinsel", "esel"]
+  },
+  {
+    "id": "krone",
+    "text": "Krone",
+    "syllables": ["Kro", "ne"],
+    "image": "1F451",
+    "category": "dinge",
+    "similar": ["krake", "kran", "rose"]
+  },
+  {
+    "id": "saft",
+    "text": "Saft",
+    "syllables": ["Saft"],
+    "image": "1F9C3",
+    "category": "essen",
+    "similar": ["salz"]
+  },
+  {
+    "id": "apfel",
+    "text": "Apfel",
+    "syllables": ["Ap", "fel"],
+    "image": "1F34E",
+    "category": "essen",
+    "similar": ["gabel"]
+  },
+  {
+    "id": "elefant",
+    "text": "Elefant",
+    "syllables": ["E", "le", "fant"],
+    "image": "1F418",
+    "category": "tiere",
+    "similar": ["telefon"]
+  },
+  {
+    "id": "gans",
+    "text": "Gans",
+    "syllables": ["Gans"],
+    "image": "1FABF",
+    "category": "tiere",
+    "similar": ["wal"]
+  },
+
+  {
+    "id": "ameise",
+    "text": "Ameise",
+    "syllables": ["A", "mei", "se"],
+    "image": "1F41C",
+    "category": "tiere",
+    "similar": ["seife"]
+  },
+  {
+    "id": "loewe",
+    "text": "Löwe",
+    "syllables": ["Lö", "we"],
+    "image": "1F981",
+    "category": "tiere",
+    "similar": ["lupe"]
+  },
+  {
+    "id": "maus",
+    "text": "Maus",
+    "syllables": ["Maus"],
+    "image": "1F42D",
+    "category": "tiere",
+    "similar": ["haus"]
+  },
+  {
+    "id": "haus",
+    "text": "Haus",
+    "syllables": ["Haus"],
+    "image": "1F3E0",
+    "category": "dinge",
+    "similar": ["maus"]
+  },
+  {
+    "id": "eule",
+    "text": "Eule",
+    "syllables": ["Eu", "le"],
+    "image": "1F989",
+    "category": "tiere",
+    "similar": ["schule"]
+  },
+  {
+    "id": "eis",
+    "text": "Eis",
+    "syllables": ["Eis"],
+    "image": "1F366",
+    "category": "essen",
+    "similar": ["ei"]
+  },
+  {
+    "id": "ei",
+    "text": "Ei",
+    "syllables": ["Ei"],
+    "image": "1F95A",
+    "category": "essen",
+    "similar": ["eis"]
+  },
+  {
+    "id": "auto",
+    "text": "Auto",
+    "syllables": ["Au", "to"],
+    "image": "1F697",
+    "category": "fahrzeuge",
+    "similar": ["auge"]
+  },
+  {
+    "id": "auge",
+    "text": "Auge",
+    "syllables": ["Au", "ge"],
+    "image": "1F441",
+    "category": "koerper",
+    "similar": ["auto"]
+  },
+  {
+    "id": "schaf",
+    "text": "Schaf",
+    "syllables": ["Schaf"],
+    "image": "1F411",
+    "category": "tiere",
+    "similar": ["schal"]
+  },
+  {
+    "id": "schal",
+    "text": "Schal",
+    "syllables": ["Schal"],
+    "image": "1F9E3",
+    "category": "dinge",
+    "similar": ["schaf"]
+  },
+  {
+    "id": "fisch",
+    "text": "Fisch",
+    "syllables": ["Fisch"],
+    "image": "1F41F",
+    "category": "tiere",
+    "similar": ["frosch"]
+  },
+  {
+    "id": "frosch",
+    "text": "Frosch",
+    "syllables": ["Frosch"],
+    "image": "1F438",
+    "category": "tiere",
+    "similar": ["fisch"]
+  },
+  {
+    "id": "kaese",
+    "text": "Käse",
+    "syllables": ["Kä", "se"],
+    "image": "1F9C0",
+    "category": "essen",
+    "similar": ["hase", "nase"]
+  },
+  {
+    "id": "seife",
+    "text": "Seife",
+    "syllables": ["Sei", "fe"],
+    "image": "1F9FC",
+    "category": "dinge",
+    "similar": ["ameise"]
+  },
+  {
+    "id": "schule",
+    "text": "Schule",
+    "syllables": ["Schu", "le"],
+    "image": "1F3EB",
+    "category": "dinge",
+    "similar": ["eule"]
+  },
+  {
+    "id": "baum",
+    "text": "Baum",
+    "syllables": ["Baum"],
+    "image": "1F333",
+    "category": "natur",
+    "similar": ["maus"]
+  },
+  {
+    "id": "milch",
+    "text": "Milch",
+    "syllables": ["Milch"],
+    "image": "1F95B",
+    "category": "essen",
+    "similar": ["pilz"]
+  },
+  {
+    "id": "bein",
+    "text": "Bein",
+    "syllables": ["Bein"],
+    "image": "1F9B5",
+    "category": "koerper",
+    "similar": ["eis"]
+  },
+  {
+    "id": "drache",
+    "text": "Drache",
+    "syllables": ["Dra", "che"],
+    "image": "1F409",
+    "category": "tiere",
+    "similar": ["krake"]
+  },
+  {
+    "id": "kuchen",
+    "text": "Kuchen",
+    "syllables": ["Ku", "chen"],
+    "image": "1F370",
+    "category": "essen",
+    "similar": ["kuli"]
+  },
+  {
+    "id": "schwan",
+    "text": "Schwan",
+    "syllables": ["Schwan"],
+    "image": "1F9A2",
+    "category": "tiere",
+    "similar": ["schaf"]
+  },
+  {
+    "id": "pfau",
+    "text": "Pfau",
+    "syllables": ["Pfau"],
+    "image": "1F99A",
+    "category": "tiere",
+    "similar": ["baum"]
+  },
+  {
+    "id": "papagei",
+    "text": "Papagei",
+    "syllables": ["Pa", "pa", "gei"],
+    "image": "1F99C",
+    "category": "tiere",
+    "similar": ["papa"]
+  }
+]

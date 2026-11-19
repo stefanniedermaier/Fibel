@@ -41,6 +41,34 @@ const store = useAppStore()
     <p class="muted">Sprachausgabe, Offline-Betrieb und Speicher prüfen.</p>
     <RouterLink class="btn" :to="{ name: 'device-check' }">Gerätetest öffnen</RouterLink>
   </section>
+
+  <section class="card">
+    <h2>Wörter und Silben anhören</h2>
+    <p class="muted">
+      Alle Wörter und Silben der Übungen vorlesen lassen und markieren, was falsch klingt.
+    </p>
+    <RouterLink class="btn" :to="{ name: 'speech-check' }">Sprachtest öffnen</RouterLink>
+  </section>
+
+  <section class="card info">
+    <h2>Info</h2>
+    <p>
+      Fibel speichert alles nur auf diesem Gerät. Es gibt kein Konto und keinen Server, und es
+      werden keine Daten verschickt.
+    </p>
+    <h3>Verwendete Werke</h3>
+    <ul>
+      <li>
+        Bilder: <strong>OpenMoji</strong> – das offene Emoji-Projekt (openmoji.org), Lizenz CC BY-SA
+        4.0
+      </li>
+      <li>Schrift: <strong>Andika</strong> von SIL International, SIL Open Font License 1.1</li>
+      <li>
+        Wortauswahl für Bayern abgeglichen mit dem Grundwortschatz für die Jahrgangsstufen 1 und 2
+        (ISB, LehrplanPLUS Grundschule Bayern)
+      </li>
+    </ul>
+  </section>
 </template>
 
 <style scoped>
@@ -101,7 +129,25 @@ h2 {
   font-size: 28px;
 }
 
-li + li {
+.profiles li + li {
   border-top: 1px solid #eee2d0;
+}
+
+.info {
+  font-size: 16px;
+}
+
+.info h3 {
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.info ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.info li + li {
+  margin-top: 6px;
 }
 </style>

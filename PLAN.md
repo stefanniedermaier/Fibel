@@ -206,7 +206,11 @@ Das Beispiel zeigt nur, wie der Mechanismus funktioniert. Es sind nicht die echt
 - `core/content.ts` setzt Basis und Länderanpassung zur Laufzeit zusammen. Es ist eine reine Funktion und hat Unit-Tests.
 - `data:check` prüft jede Länderanpassung: Alle Verweise auf Einträge und Wörter müssen existieren, die Parameter müssen gültig sein, und der zusammengesetzte Inhalt jedes aktiven Landes muss alle Regeln erfüllen.
 - Für die Wortlisten der Länder gelten dieselben Regeln wie für die Basis, in Klasse 1 also strenge Lauttreue. Wörter eines Grundwortschatzes mit Besonderheiten gehören deshalb in die Listen ab Klasse 2.
-- **Bayern in Version 1:** Vor Phase 2 gleichen wir den Basis-Katalog und die Wortliste der Klasse 1 mit dem bayerischen LehrplanPLUS ab (Grundschule, Jahrgangsstufe 1/2). Was davon abweicht, kommt in `laender/DE-BY/overlay.json`.
+- **Bayern in Version 1:** Abgeglichen mit dem LehrplanPLUS Grundschule (Deutsch 1/2, Abschnitt 4.4 „Richtig schreiben“) und dem ISB-Grundwortschatz für die Jahrgangsstufen 1 und 2. Ergebnis:
+  - **Wortliste:** Die lauttreuen Wörter des Grundwortschatzes stehen größtenteils schon in der Basis, z. B. Oma, Hase, Tomate, Esel und Gabel. `laender/DE-BY/klasse-1/words.json` ergänzt Blüte, Buch, Raupe, Schere, Nadel, Nebel und Euro. Das Feld `grundwortschatz` in `overlay.json` markiert alle Wörter, die auf der offiziellen Liste stehen.
+  - **Wörter mit Besonderheiten:** Wörter mit ie, Doppelkonsonanten, Auslautverhärtung, Dehnungs-h, ck/tz, v/x/y usw. ordnet der Grundwortschatz eigenen Übungsschwerpunkten zu. Sie kommen in Klasse 2, das passt zu unserer Lauttreue-Regel.
+  - **Schrift:** Klasse 1 schreibt in Druckschrift. Für die verbundene Schrift nennt der Lehrplan die Vereinfachte Ausgangsschrift oder die Schulausgangsschrift; welche, entscheidet die Schule. Sobald Klasse 2 dazukommt, braucht es dafür also eine Einstellung pro Profil.
+  - **Rechnen:** Für Klasse 1 gibt es keine Abweichung vom Basis-Katalog.
 - In Berlin und Brandenburg dauert die Grundschule sechs Jahre. Die gültigen Klassen sind deshalb nicht fest im Code verdrahtet, sondern stehen pro Land in `laender/index.json`.
 
 ## 5. Wörterbücher (`src/data`)
@@ -265,6 +269,17 @@ Zugelassen sind nur Wörter, in denen jeder Laut genau einem Buchstaben bzw. Gra
 | 4 | Mehrgraphe und Umlaute (später) | Maus 🐭, Eis 🍦, Auto 🚗, Schaf 🐑, Fisch 🐟, Käse 🧀 |
 
 **Umfang für Phase 2:** etwa 120 Wörter (Schwerpunkt Level 1–3) und etwa 80 Silben.
+
+**Umgesetzt:** 100 Wörter in der Basis und 7 Ergänzungen für Bayern, zusammen 107 mit Bild:
+
+| Level | Wörter |
+|---|---|
+| 1 | 22 |
+| 2 | 7 |
+| 3 | 48 |
+| 4 | 30 |
+
+Dazu kommen 80 Silben (16 Konsonanten × 5 Vokale) und 40 Buchstaben und Mehrgraphe in Schulreihenfolge. Level 2 ist bewusst klein, weil es nur wenige drei- oder mehrsilbige lauttreue Wörter gibt, zu denen ein passendes Bild existiert.
 
 **Zusammenspiel mit der Buchstaben-Freischaltung:** Ein Wort kommt nur vor, wenn alle seine Grapheme freigeschaltet sind und sein Level erreicht ist. Gibt es für eine Übung zu wenige passende Wörter, weicht sie auf Silben aus. Der Elternbereich zeigt an, wie viele Wörter mit den gewählten Buchstaben möglich sind.
 
@@ -377,6 +392,9 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 **Stand:**
 - Phase 0 ist erledigt: Die App ist auf GitHub Pages veröffentlicht und auf dem Handy getestet.
 - Phase 1 ist umgesetzt. Als Test-Übung dient R1 „Mengen erkennen“ aus Phase 4, die damit schon fertig ist.
+- Phase 2 ist umgesetzt:
+  - Wörterbücher, Grapheme-Zerleger, Lauttreue-Prüfung (`npm run data:check`, auch in der CI), OpenMoji-Bilder (`npm run data:openmoji`) und der Sprachtest im Elternbereich sind fertig.
+  - Offen ist noch das Anhören aller Einträge auf dem Gerät. Markierte Fälle bekommen danach ein `say`-Override.
 
 | Phase | Inhalt | Fertig, wenn … | Umfang |
 |---|---|---|---|

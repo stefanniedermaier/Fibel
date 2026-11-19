@@ -1,9 +1,55 @@
 {
   "land": "DE-BY",
+  "source": "LehrplanPLUS Grundschule Bayern, Deutsch 1/2 (4.4 Richtig schreiben) und ISB-Grundwortschatz für die Jahrgangsstufen 1 und 2",
   "gradeDefaults": {},
   "catalog": {
     "add": [],
     "remove": [],
     "patch": {}
+  },
+  "words": {
+    "1": {
+      "add": "klasse-1/words.json",
+      "remove": [],
+      "grundwortschatz": [
+        "auge",
+        "auto",
+        "blume",
+        "bluete",
+        "brot",
+        "buch",
+        "dose",
+        "ente",
+        "hase",
+        "hose",
+        "loewe",
+        "oma",
+        "opa",
+        "rabe",
+        "raupe",
+        "salz",
+        "schaf",
+        "schere",
+        "schule",
+        "telefon",
+        "tomate",
+        "wolf",
+        "wolke",
+        "esel",
+        "gabel",
+        "nadel",
+        "nebel",
+        "pinsel",
+        "regen",
+        "ameise",
+        "ei",
+        "eis",
+        "seife",
+        "euro"
+      ]
+    }
+  },
+  "script": {
+    "1": "druckschrift"
   }
 }

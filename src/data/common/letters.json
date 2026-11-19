@@ -1,0 +1,322 @@
+[
+  {
+    "id": "m",
+    "upper": "M",
+    "type": "konsonant",
+    "example": "Maus",
+    "image": "1F42D",
+    "position": "anlaut"
+  },
+  {
+    "id": "a",
+    "upper": "A",
+    "type": "vokal",
+    "example": "Apfel",
+    "image": "1F34E",
+    "position": "anlaut"
+  },
+  {
+    "id": "i",
+    "upper": "I",
+    "type": "vokal",
+    "example": "Igel",
+    "image": "1F994",
+    "position": "anlaut"
+  },
+  {
+    "id": "o",
+    "upper": "O",
+    "type": "vokal",
+    "example": "Oma",
+    "image": "1F475",
+    "position": "anlaut"
+  },
+  {
+    "id": "l",
+    "upper": "L",
+    "type": "konsonant",
+    "example": "Lama",
+    "image": "1F999",
+    "position": "anlaut"
+  },
+  {
+    "id": "e",
+    "upper": "E",
+    "type": "vokal",
+    "example": "Esel",
+    "image": "1FACF",
+    "position": "anlaut"
+  },
+  {
+    "id": "u",
+    "upper": "U",
+    "type": "vokal",
+    "example": "Ufo",
+    "image": "1F6F8",
+    "position": "anlaut"
+  },
+  {
+    "id": "s",
+    "upper": "S",
+    "type": "konsonant",
+    "example": "Sofa",
+    "image": "1F6CB",
+    "position": "anlaut"
+  },
+  {
+    "id": "r",
+    "upper": "R",
+    "type": "konsonant",
+    "example": "Rose",
+    "image": "1F339",
+    "position": "anlaut"
+  },
+  {
+    "id": "n",
+    "upper": "N",
+    "type": "konsonant",
+    "example": "Nase",
+    "image": "1F443",
+    "position": "anlaut"
+  },
+  {
+    "id": "t",
+    "upper": "T",
+    "type": "konsonant",
+    "example": "Tomate",
+    "image": "1F345",
+    "position": "anlaut"
+  },
+  {
+    "id": "f",
+    "upper": "F",
+    "type": "konsonant",
+    "example": "Fisch",
+    "image": "1F41F",
+    "position": "anlaut"
+  },
+  {
+    "id": "w",
+    "upper": "W",
+    "type": "konsonant",
+    "example": "Wal",
+    "image": "1F40B",
+    "position": "anlaut"
+  },
+  {
+    "id": "h",
+    "upper": "H",
+    "type": "konsonant",
+    "example": "Hase",
+    "image": "1F407",
+    "position": "anlaut"
+  },
+  {
+    "id": "d",
+    "upper": "D",
+    "type": "konsonant",
+    "example": "Dino",
+    "image": "1F995",
+    "position": "anlaut"
+  },
+  {
+    "id": "b",
+    "upper": "B",
+    "type": "konsonant",
+    "example": "Banane",
+    "image": "1F34C",
+    "position": "anlaut"
+  },
+  {
+    "id": "p",
+    "upper": "P",
+    "type": "konsonant",
+    "example": "Panda",
+    "image": "1F43C",
+    "position": "anlaut"
+  },
+  {
+    "id": "k",
+    "upper": "K",
+    "type": "konsonant",
+    "example": "Krone",
+    "image": "1F451",
+    "position": "anlaut"
+  },
+  {
+    "id": "g",
+    "upper": "G",
+    "type": "konsonant",
+    "example": "Gabel",
+    "image": "1F374",
+    "position": "anlaut"
+  },
+  {
+    "id": "ei",
+    "upper": "Ei",
+    "type": "mehrgraph",
+    "example": "Eis",
+    "image": "1F366",
+    "position": "anlaut"
+  },
+  {
+    "id": "au",
+    "upper": "Au",
+    "type": "mehrgraph",
+    "example": "Auto",
+    "image": "1F697",
+    "position": "anlaut"
+  },
+  {
+    "id": "sch",
+    "upper": "Sch",
+    "type": "mehrgraph",
+    "example": "Schaf",
+    "image": "1F411",
+    "position": "anlaut"
+  },
+  {
+    "id": "ch",
+    "upper": "Ch",
+    "type": "mehrgraph",
+    "example": "Kuchen",
+    "image": "1F370",
+    "position": "inlaut"
+  },
+  {
+    "id": "j",
+    "upper": "J",
+    "type": "konsonant",
+    "example": "Jo-Jo",
+    "image": "1FA80",
+    "position": "anlaut"
+  },
+  {
+    "id": "z",
+    "upper": "Z",
+    "type": "konsonant",
+    "example": "Zebra",
+    "image": "1F993",
+    "position": "anlaut"
+  },
+  {
+    "id": "eu",
+    "upper": "Eu",
+    "type": "mehrgraph",
+    "example": "Eule",
+    "image": "1F989",
+    "position": "anlaut"
+  },
+  {
+    "id": "ä",
+    "upper": "Ä",
+    "type": "umlaut",
+    "example": "Käse",
+    "image": "1F9C0",
+    "position": "inlaut"
+  },
+  {
+    "id": "ö",
+    "upper": "Ö",
+    "type": "umlaut",
+    "example": "Löwe",
+    "image": "1F981",
+    "position": "inlaut"
+  },
+  {
+    "id": "ü",
+    "upper": "Ü",
+    "type": "umlaut",
+    "example": "Würfel",
+    "image": "1F3B2",
+    "position": "inlaut"
+  },
+  {
+    "id": "äu",
+    "upper": "Äu",
+    "type": "mehrgraph",
+    "example": "Häuser",
+    "image": "1F3D8",
+    "position": "inlaut"
+  },
+  {
+    "id": "pf",
+    "upper": "Pf",
+    "type": "mehrgraph",
+    "example": "Pfau",
+    "image": "1F99A",
+    "position": "anlaut"
+  },
+  {
+    "id": "v",
+    "upper": "V",
+    "type": "konsonant",
+    "example": "Vogel",
+    "image": "1F426",
+    "position": "anlaut"
+  },
+  {
+    "id": "qu",
+    "upper": "Qu",
+    "type": "mehrgraph",
+    "example": "Qualle",
+    "image": "1FABC",
+    "position": "anlaut"
+  },
+  {
+    "id": "x",
+    "upper": "X",
+    "type": "konsonant",
+    "example": "Taxi",
+    "image": "1F695",
+    "position": "inlaut"
+  },
+  {
+    "id": "y",
+    "upper": "Y",
+    "type": "konsonant",
+    "example": "Pony",
+    "image": "1F434",
+    "position": "inlaut"
+  },
+  {
+    "id": "c",
+    "upper": "C",
+    "type": "konsonant",
+    "example": "Clown",
+    "image": "1F921",
+    "position": "anlaut"
+  },
+  {
+    "id": "ß",
+    "upper": "ß",
+    "type": "konsonant",
+    "example": "Fuß",
+    "image": "1F9B6",
+    "position": "auslaut"
+  },
+  {
+    "id": "ie",
+    "upper": "Ie",
+    "type": "mehrgraph",
+    "example": "Biene",
+    "image": "1F41D",
+    "position": "inlaut"
+  },
+  {
+    "id": "ck",
+    "upper": "Ck",
+    "type": "mehrgraph",
+    "example": "Socke",
+    "image": "1F9E6",
+    "position": "inlaut"
+  },
+  {
+    "id": "tz",
+    "upper": "Tz",
+    "type": "mehrgraph",
+    "example": "Katze",
+    "image": "1F408",
+    "position": "inlaut"
+  }
+]

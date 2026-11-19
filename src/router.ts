@@ -41,6 +41,11 @@ export const router = createRouter({
           component: () => import('./views/parent/ProfileEditView.vue'),
         },
         {
+          path: 'sprachtest',
+          name: 'speech-check',
+          component: () => import('./views/parent/SpeechCheckView.vue'),
+        },
+        {
           path: 'profil/:id',
           name: 'profile-edit',
           component: () => import('./views/parent/ProfileEditView.vue'),

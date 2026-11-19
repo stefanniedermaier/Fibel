@@ -1,0 +1,14 @@
+[
+  { "image": "1F98A", "label": "Fuchs" },
+  { "image": "1F43B", "label": "Bär" },
+  { "image": "1F430", "label": "Hase" },
+  { "image": "1F981", "label": "Löwe" },
+  { "image": "1F42F", "label": "Tiger" },
+  { "image": "1F428", "label": "Koala" },
+  { "image": "1F43C", "label": "Panda" },
+  { "image": "1F438", "label": "Frosch" },
+  { "image": "1F984", "label": "Einhorn" },
+  { "image": "1F989", "label": "Eule" },
+  { "image": "1F422", "label": "Schildkröte" },
+  { "image": "1F42C", "label": "Delfin" }
+]
