@@ -1,0 +1,45 @@
+{
+  "base": {
+    "unlockedGrades": [],
+    "letterFilter": false,
+    "letters": [],
+    "syllableColoring": false,
+    "syllableArcs": false,
+    "strictCase": true,
+    "numberRange": 10,
+    "allowMinus": true,
+    "tenCrossing": false,
+    "tasksPerUnit": 8,
+    "crownRatio": 0.75,
+    "sound": true,
+    "voiceURI": null,
+    "speechRate": 0.85,
+    "levels": {}
+  },
+  "grades": {
+    "1": {
+      "letterFilter": true,
+      "letters": ["a", "e", "i", "o", "u", "m", "l"],
+      "syllableColoring": true,
+      "strictCase": false,
+      "numberRange": 10,
+      "tasksPerUnit": 8
+    },
+    "2": {
+      "syllableColoring": true,
+      "numberRange": 100,
+      "tenCrossing": true,
+      "tasksPerUnit": 8
+    },
+    "3": {
+      "numberRange": 1000,
+      "tenCrossing": true,
+      "tasksPerUnit": 10
+    },
+    "4": {
+      "numberRange": 1000000,
+      "tenCrossing": true,
+      "tasksPerUnit": 10
+    }
+  }
+}

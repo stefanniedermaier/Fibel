@@ -64,3 +64,72 @@ button {
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
     env(safe-area-inset-left);
 }
+
+/* --- Shared building blocks ------------------------------------------------ */
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--tap);
+  padding: 0 24px;
+  border: 3px solid var(--accent);
+  border-radius: 16px;
+  background: var(--surface);
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btn-primary {
+  background: var(--accent);
+  box-shadow: 0 5px 0 var(--accent-strong);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--accent-strong);
+}
+
+.btn-danger {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap);
+  height: var(--tap);
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: var(--surface);
+  font-size: 30px;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.muted {
+  color: var(--muted);
+}

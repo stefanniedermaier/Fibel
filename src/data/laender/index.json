@@ -1,0 +1,18 @@
+[
+  { "code": "DE-BW", "name": "Baden-Württemberg", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-BY", "name": "Bayern", "enabled": true, "grades": [1, 2, 3, 4] },
+  { "code": "DE-BE", "name": "Berlin", "enabled": false, "grades": [1, 2, 3, 4, 5, 6] },
+  { "code": "DE-BB", "name": "Brandenburg", "enabled": false, "grades": [1, 2, 3, 4, 5, 6] },
+  { "code": "DE-HB", "name": "Bremen", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-HH", "name": "Hamburg", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-HE", "name": "Hessen", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-MV", "name": "Mecklenburg-Vorpommern", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-NI", "name": "Niedersachsen", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-NW", "name": "Nordrhein-Westfalen", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-RP", "name": "Rheinland-Pfalz", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-SL", "name": "Saarland", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-SN", "name": "Sachsen", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-ST", "name": "Sachsen-Anhalt", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-SH", "name": "Schleswig-Holstein", "enabled": false, "grades": [1, 2, 3, 4] },
+  { "code": "DE-TH", "name": "Thüringen", "enabled": false, "grades": [1, 2, 3, 4] }
+]

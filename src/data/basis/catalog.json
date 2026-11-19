@@ -1,0 +1,10 @@
+[
+  {
+    "id": "k1.rechnen.mengen-10",
+    "grade": 1,
+    "topic": "rechnen",
+    "exercise": "rechnen.mengen",
+    "params": { "max": 10 },
+    "title": "Mengen erkennen bis 10"
+  }
+]

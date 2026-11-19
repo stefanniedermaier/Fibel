@@ -374,6 +374,10 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 ## 11. Umsetzungsphasen
 
+**Stand:**
+- Phase 0 ist erledigt: Die App ist auf GitHub Pages veröffentlicht und auf dem Handy getestet.
+- Phase 1 ist umgesetzt. Als Test-Übung dient R1 „Mengen erkennen“ aus Phase 4, die damit schon fertig ist.
+
 | Phase | Inhalt | Fertig, wenn … | Umfang |
 |---|---|---|---|
 | **0 – Setup und Geräte-Check** | Vite/Vue/TS-Projekt, ESLint/Prettier, Vitest, PWA-Plugin, GitHub-Repo mit Pages-Action, Andika, Hash-Router. Spike: TTS-Testseite, die Stimmen auflistet und Silben spricht | … die leere App auf dem Android-Tablet installiert ist, im Flugmodus startet und die deutsche Stimme spricht | S |

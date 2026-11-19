@@ -1,0 +1,9 @@
+{
+  "land": "DE-BY",
+  "gradeDefaults": {},
+  "catalog": {
+    "add": [],
+    "remove": [],
+    "patch": {}
+  }
+}

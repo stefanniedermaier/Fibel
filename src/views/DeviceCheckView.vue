@@ -207,9 +207,25 @@ h3 {
 
 dl {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content minmax(0, 1fr);
   gap: 8px 16px;
   margin: 0;
+}
+
+/* Phones in portrait: label above value instead of two columns. */
+@media (max-width: 520px) {
+  section {
+    padding: 16px;
+  }
+
+  dl {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  dd {
+    margin-bottom: 12px;
+  }
 }
 
 dt {
@@ -246,6 +262,9 @@ input[type='text'] {
   border: 2px solid var(--accent);
   border-radius: 12px;
   background: #fff;
+  /* Form controls have a large intrinsic width; let them shrink on phones. */
+  width: 100%;
+  min-width: 0;
 }
 
 .samples {
@@ -282,8 +301,16 @@ button[type='submit'] {
   margin-top: 16px;
 }
 
+.custom {
+  flex-wrap: wrap;
+}
+
 .custom input {
-  flex: 1;
+  flex: 1 1 220px;
+}
+
+.custom button {
+  flex: 1 0 auto;
 }
 
 .update {
@@ -293,5 +320,12 @@ button[type='submit'] {
 details {
   margin-top: 16px;
   font-size: 16px;
+  /* Android voice IDs such as "de-de-x-nfh-local" must not widen the page. */
+  overflow-wrap: anywhere;
+}
+
+dd,
+.sample {
+  overflow-wrap: anywhere;
 }
 </style>

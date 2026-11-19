@@ -1,0 +1,9 @@
+{
+  "greeting": ["Hallo {name}!", "Schön, dass du da bist, {name}!"],
+  "praise": ["Super!", "Toll gemacht!", "Richtig!", "Klasse!", "Prima!", "Genau!", "Sehr gut!"],
+  "retry": ["Versuch es nochmal.", "Fast! Probier es noch einmal.", "Schau noch einmal genau hin."],
+  "reveal": ["Schau mal, so ist es richtig.", "Das war knifflig. Hier ist die Lösung."],
+  "crown": ["Super! Du hast eine Krone gewonnen!", "Wow, eine Krone für dich!"],
+  "noCrown": ["Toll gemacht! Du hast {stars} gesammelt.", "Gut geübt! Du hast {stars} gesammelt."],
+  "start": ["Los geht's!"]
+}
