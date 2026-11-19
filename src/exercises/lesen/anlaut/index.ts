@@ -53,6 +53,7 @@ export const anlaut: ExerciseModule<LesenParams, AnlautData> = {
     ).slice(0, CHOICES - 1)
     return {
       instruction: `Womit fängt ${spoken(word)} an?`,
+      caption: 'Womit fängt das Wort an?',
       hint: `Hör genau hin: ${spoken(word)}.`,
       solution: `${spoken(word)} fängt mit ${target.upper} an.`,
       data: {

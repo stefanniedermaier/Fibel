@@ -32,6 +32,7 @@ export const silbenKlatschen: ExerciseModule<LesenParams, SilbenKlatschenData> =
     const counted = n === 1 ? 'eine Silbe' : `${numberWord(n)} Silben`
     return {
       instruction: `Wie viele Silben hat ${spoken(word)}? Klatsch mit!`,
+      caption: 'Wie viele Silben hörst du? Klatsch mit!',
       hint: `Sprich langsam mit: ${spoken(word)}.`,
       solution: `${word.syllables.join(' – ')}. ${spoken(word)} hat ${counted}.`,
       data: {

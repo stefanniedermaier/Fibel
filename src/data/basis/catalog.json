@@ -46,5 +46,45 @@
     "exercise": "rechnen.mengen",
     "params": { "max": 10 },
     "title": "Mengen erkennen bis 10"
+  },
+  {
+    "id": "k1.rechnen.menge-legen-10",
+    "grade": 1,
+    "topic": "rechnen",
+    "exercise": "rechnen.menge-legen",
+    "params": { "max": 10 },
+    "title": "Menge legen bis 10"
+  },
+  {
+    "id": "k1.rechnen.vergleichen-10",
+    "grade": 1,
+    "topic": "rechnen",
+    "exercise": "rechnen.vergleichen",
+    "params": { "max": 10 },
+    "title": "Zahlen vergleichen bis 10"
+  },
+  {
+    "id": "k1.rechnen.zahlenhaus-10",
+    "grade": 1,
+    "topic": "rechnen",
+    "exercise": "rechnen.zahlenhaus",
+    "params": { "max": 10 },
+    "title": "Zahlenhaus bis 10"
+  },
+  {
+    "id": "k1.rechnen.plus-minus-10",
+    "grade": 1,
+    "topic": "rechnen",
+    "exercise": "rechnen.plus-minus",
+    "params": { "max": 10 },
+    "title": "Plus und Minus bis 10"
+  },
+  {
+    "id": "k1.rechnen.plus-minus-20",
+    "grade": 1,
+    "topic": "rechnen",
+    "exercise": "rechnen.plus-minus",
+    "params": { "max": 20, "above": 10 },
+    "title": "Plus und Minus bis 20"
   }
 ]

@@ -401,6 +401,11 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
   - Im Elternbereich gibt es ein Buchstaben-Raster, das zeigt, wie viele Wörter und Silben damit lesbar sind.
   - Eine Einheit verteilt die Aufgaben gleichmäßig auf die Übungen und bringt dieselbe Übung nicht zweimal hintereinander.
   - Offen ist noch der Test mit dem Kind (geplant nach Phase 3).
+- Phase 4 ist umgesetzt:
+  - R1 Mengen erkennen und umgekehrt Menge legen, R2 Vergleichen, R3 Zahlenhaus und R4 Plus/Minus bis 10 sind spielbar. Bei Plus/Minus lassen sich die Plättchen als Hilfe einblenden; nach einem Fehler erscheinen sie automatisch.
+  - R5 Plus/Minus bis 20 mit Zwanzigerfeld (2 × 10) erscheint, sobald im Elternbereich der Zahlenraum 20 eingestellt ist, Zehnerübergang optional.
+  - Im Elternbereich gibt es Zahlenraum, Minus an/aus und Zehnerübergang.
+  - Jede Aufgabe zeigt ihre Anweisung zusätzlich als Text, mit dem Vorlese-Knopf daneben (aus ToDo.md). Bei Hör-Aufgaben steht dort ein neutraler Text, der die Lösung nicht verrät.
 
 | Phase | Inhalt | Fertig, wenn … | Umfang |
 |---|---|---|---|

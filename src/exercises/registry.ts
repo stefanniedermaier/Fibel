@@ -4,7 +4,11 @@ import { bildWort } from './lesen/bild-wort'
 import { silbenHoeren } from './lesen/silben-hoeren'
 import { silbenKlatschen } from './lesen/silben-klatschen'
 import { wortBild } from './lesen/wort-bild'
+import { mengeLegen } from './rechnen/menge-legen'
 import { mengen } from './rechnen/mengen'
+import { plusMinus } from './rechnen/plus-minus'
+import { vergleichen } from './rechnen/vergleichen'
+import { zahlenhaus } from './rechnen/zahlenhaus'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -20,6 +24,10 @@ register(bildWort)
 register(anlaut)
 register(silbenKlatschen)
 register(mengen)
+register(mengeLegen)
+register(vergleichen)
+register(zahlenhaus)
+register(plusMinus)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

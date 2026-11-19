@@ -12,7 +12,14 @@ import {
   wordsForSettings,
 } from '@/core/words'
 import { READING_LEVEL_KEY } from '@/exercises/lesen/shared'
-import { DEFAULT_LAND, LAENDER, getLand, gradeHasContent, resolveDefaults } from '@/core/content'
+import {
+  DEFAULT_LAND,
+  LAENDER,
+  catalogFor,
+  getLand,
+  gradeHasContent,
+  resolveDefaults,
+} from '@/core/content'
 import { plain } from '@/core/plain'
 import { say } from '@/core/speech'
 import { loadVoices, rankGermanVoices } from '@/core/tts'
@@ -96,6 +103,14 @@ const readingLevel = computed({
     else levels[READING_LEVEL_KEY] = level
     settings.value.levels = levels
   },
+})
+
+// --- Arithmetic --------------------------------------------------------------
+const hasRechnen = computed(() => catalogFor(form.land, form.grade, 'rechnen').length > 0)
+/** Number ranges up to the grade's start value (grade 1: 10 and 20). */
+const numberRanges = computed(() => {
+  const start = resolveDefaults(form.land, form.grade).numberRange
+  return [10, 20, 100, 1000, 1000000].filter((n) => n <= Math.max(start, 20))
 })
 
 function toggleGrade(g: number, on: boolean) {
@@ -287,6 +302,24 @@ async function remove() {
           <option :value="3">3 – geschlossene Silben (Igel, Brot)</option>
           <option :value="4">4 – Sch, Ei, Au, Umlaute (Schaf, Eis)</option>
         </select>
+      </label>
+    </section>
+
+    <section v-if="hasRechnen" class="card">
+      <h2>Rechnen</h2>
+      <label>
+        Zahlenraum
+        <select v-model.number="settings.numberRange">
+          <option v-for="n in numberRanges" :key="n" :value="n">bis {{ n }}</option>
+        </select>
+      </label>
+      <label class="check">
+        <input v-model="settings.allowMinus" type="checkbox" />
+        Minus-Aufgaben
+      </label>
+      <label v-if="settings.numberRange >= 20" class="check">
+        <input v-model="settings.tenCrossing" type="checkbox" />
+        Mit Zehnerübergang (z. B. 8 + 5, 13 − 5)
       </label>
     </section>
 

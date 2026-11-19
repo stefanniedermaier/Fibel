@@ -207,15 +207,16 @@ onUnmounted(() => {
         :results="results"
         :current="index"
       />
-      <button
-        class="icon-btn"
-        :disabled="phase !== 'running'"
-        aria-label="Nochmal vorlesen"
-        @click="speakInstruction"
-      >
+      <!-- Keeps the beads centred. -->
+      <span class="bar-spacer" aria-hidden="true" />
+    </header>
+
+    <div v-if="phase === 'running' && current" class="instruction">
+      <p>{{ current.task.caption ?? current.task.instruction }}</p>
+      <button class="icon-btn speak" aria-label="Nochmal vorlesen" @click="speakInstruction">
         🔊
       </button>
-    </header>
+    </div>
 
     <section v-if="phase === 'running' && current" class="stage">
       <component
@@ -268,7 +269,31 @@ onUnmounted(() => {
   gap: 12px;
 }
 
-.bar .icon-btn {
+.bar .icon-btn,
+.bar-spacer {
+  flex: none;
+  width: var(--tap);
+}
+
+.instruction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 8px 8px 8px 16px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.instruction p {
+  margin: 0;
+  font-size: clamp(20px, 5.5vw, 26px);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.instruction .speak {
   flex: none;
 }
 

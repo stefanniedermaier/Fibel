@@ -13,6 +13,11 @@ export interface LearnerContext {
 export interface GeneratedTask<D = unknown> {
   /** Spoken automatically when the task appears. */
   instruction: string
+  /**
+   * Shown as text above the task (default: the instruction). Listening tasks set their
+   * own text, so the written words do not give the answer away ("Wo steht mo?").
+   */
+  caption?: string
   /** Spoken after the first wrong answer (optional). */
   hint?: string
   /** Spoken when the solution is revealed after the second wrong answer. */

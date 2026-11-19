@@ -43,6 +43,7 @@ export const silbenHoeren: ExerciseModule<LesenParams, SilbenHoerenData> = {
     const say = all.find((s) => s.text === target)?.say ?? target
     return {
       instruction: `Wo steht ${say}?`,
+      caption: 'Welche Silbe hörst du?',
       solution: `Hier steht ${say}.`,
       data: {
         target,
