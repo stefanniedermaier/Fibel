@@ -115,12 +115,13 @@ describe('S3 ABC-Tastatur', () => {
 })
 
 describe('Schreiben in Klasse 1', () => {
-  it('hat mit den Startbuchstaben alle vier Übungen', () => {
+  it('hat mit den Startbuchstaben alle fünf Übungen', () => {
     const entries = availableEntries(catalogFor('DE-BY', 1, 'schreiben'), start, getExercise)
     expect(entries.map((e) => e.exercise).sort()).toEqual([
       'schreiben.abc-tastatur',
       'schreiben.buchstaben-legen',
       'schreiben.luecke',
+      'schreiben.nachspuren',
       'schreiben.silben-legen',
     ])
     const tasks = planSession(entries, start, new Map(), 8, createRng(7), getExercise)

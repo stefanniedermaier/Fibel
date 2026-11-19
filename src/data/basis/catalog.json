@@ -72,6 +72,14 @@
     "title": "ABC-Tastatur"
   },
   {
+    "id": "k1.schreiben.nachspuren",
+    "grade": 1,
+    "topic": "schreiben",
+    "exercise": "schreiben.nachspuren",
+    "params": {},
+    "title": "Buchstaben nachspuren"
+  },
+  {
     "id": "k1.rechnen.mengen-10",
     "grade": 1,
     "topic": "rechnen",

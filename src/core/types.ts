@@ -45,6 +45,8 @@ export interface ProfileSettings {
   /** Share of stars needed for the crown (0 = always). */
   crownRatio: number
   sound: boolean
+  /** How exactly the finger must follow when tracing (0.7 strict, 1 normal, 1.4 easy). */
+  traceTolerance: number
   voiceURI: string | null
   speechRate: number
   /** Levels set by hand, per catalog entry id. */

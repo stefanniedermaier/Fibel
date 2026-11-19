@@ -11,6 +11,7 @@ import { vergleichen } from './rechnen/vergleichen'
 import { zahlenhaus } from './rechnen/zahlenhaus'
 import { abcTastatur } from './schreiben/abc-tastatur'
 import { buchstabenLegen, luecke } from './schreiben/buchstaben-legen'
+import { nachspuren } from './schreiben/nachspuren'
 import { silbenLegen } from './schreiben/silben-legen'
 import type { ExerciseModule } from './types'
 
@@ -35,6 +36,7 @@ register(silbenLegen)
 register(luecke)
 register(buchstabenLegen)
 register(abcTastatur)
+register(nachspuren)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

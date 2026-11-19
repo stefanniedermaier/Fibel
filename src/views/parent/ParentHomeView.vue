@@ -50,6 +50,14 @@ const store = useAppStore()
     <RouterLink class="btn" :to="{ name: 'speech-check' }">Sprachtest öffnen</RouterLink>
   </section>
 
+  <section class="card">
+    <h2>Schrift-Vorlagen</h2>
+    <p class="muted">
+      So schreibt die App die Buchstaben beim Nachspuren vor: Reihenfolge und Richtung der Striche.
+    </p>
+    <RouterLink class="btn" :to="{ name: 'script-preview' }">Vorlagen ansehen</RouterLink>
+  </section>
+
   <section class="card info">
     <h2>Info</h2>
     <p>

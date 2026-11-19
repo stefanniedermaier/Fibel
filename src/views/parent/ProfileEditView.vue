@@ -107,6 +107,7 @@ const readingLevel = computed({
 
 // --- Arithmetic --------------------------------------------------------------
 const hasRechnen = computed(() => catalogFor(form.land, form.grade, 'rechnen').length > 0)
+const hasSchreiben = computed(() => catalogFor(form.land, form.grade, 'schreiben').length > 0)
 /** Number ranges up to the grade's start value (grade 1: 10 and 20). */
 const numberRanges = computed(() => {
   const start = resolveDefaults(form.land, form.grade).numberRange
@@ -320,6 +321,22 @@ async function remove() {
       <label v-if="settings.numberRange >= 20" class="check">
         <input v-model="settings.tenCrossing" type="checkbox" />
         Mit Zehnerübergang (z. B. 8 + 5, 13 − 5)
+      </label>
+    </section>
+
+    <section v-if="hasSchreiben" class="card">
+      <h2>Schreiben</h2>
+      <label class="check">
+        <input v-model="settings.strictCase" type="checkbox" />
+        Groß-/Kleinschreibung werten (sonst wird der Anfangsbuchstabe von Nomen automatisch groß)
+      </label>
+      <label>
+        Nachspuren: Wie genau muss der Finger der Linie folgen?
+        <select v-model.number="settings.traceTolerance">
+          <option :value="1.4">locker</option>
+          <option :value="1">normal</option>
+          <option :value="0.7">genau</option>
+        </select>
       </label>
     </section>
 

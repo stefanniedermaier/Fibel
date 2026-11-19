@@ -12,6 +12,7 @@
     "tasksPerUnit": 8,
     "crownRatio": 0.75,
     "sound": true,
+    "traceTolerance": 1,
     "voiceURI": null,
     "speechRate": 0.85,
     "levels": {}

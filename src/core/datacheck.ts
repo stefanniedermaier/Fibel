@@ -6,6 +6,7 @@ import avatars from '@/data/common/avatars.json'
 import { BASE_CATALOG, LAENDER, OVERLAYS, applyOverlay } from './content'
 import { graphemes } from './graphemes'
 import { checkLauttreu } from './lauttreue'
+import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
 import type { Syllable, Word } from './types'
 import { LETTERS, applyWordOverlay, baseSyllables, baseWordEntries } from './words'
 
@@ -19,7 +20,23 @@ export const CATEGORIES = new Set([
   'koerper',
   'musik',
 ])
-export const SCRIPTS = new Set(['druckschrift'])
+/** Known handwriting templates (folders under src/data/schriften). */
+export const SCRIPT_IDS = new Set(Object.keys(SCRIPTS))
+
+/** Every template must cover all letters (capital and small) and be well-formed. */
+function checkScripts(): string[] {
+  const problems: string[] = []
+  const needed = lettersNeeded(LETTERS.map((l) => l.id))
+  for (const script of Object.values(SCRIPTS)) {
+    for (const ch of needed) {
+      if (!script.glyphs[ch]) problems.push(`${script.name}: Vorlage für „${ch}“ fehlt`)
+    }
+    for (const [ch, glyph] of Object.entries(script.glyphs)) {
+      for (const p of glyphProblems(glyph)) problems.push(`${script.name} „${ch}“: ${p}`)
+    }
+  }
+  return problems
+}
 /** Grades that have content (folders under src/data/basis). */
 export const CONTENT_GRADES = [1]
 
@@ -95,7 +112,7 @@ function checkLetters(images: ReadonlySet<string>) {
 }
 
 export function checkData(images: ReadonlySet<string>): string[] {
-  const problems: string[] = [...checkLetters(images)]
+  const problems: string[] = [...checkLetters(images), ...checkScripts()]
 
   for (const a of avatars) {
     if (!images.has(a.image)) problems.push(`Avatar „${a.label}“: Bild ${a.image} fehlt`)
@@ -125,7 +142,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
       problems.push(`${land.name}: Katalog – ${(e as Error).message}`)
     }
     for (const [grade, script] of Object.entries(overlay.script ?? {})) {
-      if (!SCRIPTS.has(script))
+      if (!SCRIPT_IDS.has(script))
         problems.push(`${land.name}: unbekannte Schrift „${script}“ (Klasse ${grade})`)
     }
     for (const grade of CONTENT_GRADES) {

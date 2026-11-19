@@ -410,6 +410,13 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
   - Spielbar sind S1 Silben legen, S2 Buchstaben legen (Mehrgraphe wie Sch und Ei als eine Kachel), das Lückenwort (leichte Variante, nur ein Buchstabe fehlt) und S3 ABC-Tastatur.
   - Die ABC-Tastatur hat nur die bekannten Buchstaben und markiert nach einem Fehler, welche Buchstaben stimmen. Groß-/Kleinschreibung zählt nur, wenn sie eingeschaltet ist; sonst wird der erste Buchstabe von Nomen automatisch groß.
   - Geschrieben werden dieselben Wörter wie beim Lesen: nur bekannte Buchstaben, bis zum aktuellen Wort-Level.
+- Phase 6 ist umgesetzt:
+  - S4 Nachspuren für alle Buchstaben, groß und klein. Mehrgraphe werden aus Einzelbuchstaben zusammengesetzt (Sch = S + c + h).
+  - Die Vorlagen der Druckschrift liegen in `src/data/schriften/druckschrift/strokes.json`. Jeder Buchstabe besteht aus Strichen aus Linien, Bögen und Punkten, mit Schreibrichtung und Reihenfolge.
+  - **Abweichung vom Plan:** Statt eines Zeichen-Editors gibt es im Elternbereich die Seite „Schrift-Vorlagen“. Sie zeigt jeden Buchstaben mit nummerierten Strichen, führt die Reihenfolge als Animation vor, lässt dich selbst nachspuren und zeigt alle Buchstaben auf einen Blick. Angepasst wird direkt in der JSON-Datei; `data:check` prüft, ob alle Buchstaben vorhanden sind, ob die Striche zusammenhängen und ob sie innerhalb der Lineatur liegen.
+  - Beim Nachspuren gilt: am Startpunkt beginnen, auf der Linie bleiben, alle Kontrollpunkte in der richtigen Reihenfolge treffen. Ein Abrutschen setzt nur den aktuellen Strich zurück und zeigt einen Hinweis; es kostet keinen Stern.
+  - Die Genauigkeit ist im Elternbereich einstellbar (locker/normal/genau). Dort lässt sich jetzt auch die Groß-/Kleinschreibung werten.
+  - Offen ist der Abgleich der Strichreihenfolge mit dem, was die Schule vorgibt.
 
 | Phase | Inhalt | Fertig, wenn … | Umfang |
 |---|---|---|---|
