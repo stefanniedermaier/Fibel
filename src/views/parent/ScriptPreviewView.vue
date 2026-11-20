@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackButton from '@/components/BackButton.vue'
 import { computed, ref } from 'vue'
 import GlyphAnimation from '@/components/GlyphAnimation.vue'
 import TraceBoard from '@/components/TraceBoard.vue'
@@ -36,7 +37,7 @@ function choose(text: string) {
 
 <template>
   <header class="top">
-    <RouterLink class="icon-btn" :to="{ name: 'parent' }" aria-label="Zurück">←</RouterLink>
+    <BackButton :to="{ name: 'parent' }" />
     <h1>Schrift-Vorlagen</h1>
   </header>
   <p class="muted">

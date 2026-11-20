@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackButton from '@/components/BackButton.vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
 import { DEFAULT_LAND, getLand } from '@/core/content'
@@ -107,7 +108,7 @@ async function copyList() {
 
 <template>
   <header class="top">
-    <RouterLink class="icon-btn" :to="{ name: 'parent' }" aria-label="Zurück">←</RouterLink>
+    <BackButton :to="{ name: 'parent' }" />
     <h1>Sprachtest</h1>
   </header>
   <p class="muted">

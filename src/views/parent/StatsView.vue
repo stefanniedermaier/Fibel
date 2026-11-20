@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackButton from '@/components/BackButton.vue'
 import { computed, onMounted, ref } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
 import { rewardTotals } from '@/core/session'
@@ -50,7 +51,7 @@ const trouble = computed(() =>
 
 <template>
   <header class="top">
-    <RouterLink class="icon-btn" :to="{ name: 'parent' }" aria-label="Zurück">←</RouterLink>
+    <BackButton :to="{ name: 'parent' }" />
     <h1>Statistik</h1>
   </header>
 
