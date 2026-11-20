@@ -40,6 +40,30 @@
     "title": "Silben klatschen"
   },
   {
+    "id": "k1.lesen.reimen",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.reimen",
+    "params": { "wordGrade": 1 },
+    "title": "Was reimt sich?"
+  },
+  {
+    "id": "k1.lesen.anlaut-gleich",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.anlaut-gleich",
+    "params": { "wordGrade": 1 },
+    "title": "Gleicher Anfang"
+  },
+  {
+    "id": "k1.lesen.anlaut-fremd",
+    "grade": 1,
+    "topic": "lesen",
+    "exercise": "lesen.anlaut-fremd",
+    "params": { "wordGrade": 1 },
+    "title": "Welches fängt anders an?"
+  },
+  {
     "id": "k1.schreiben.silben-legen",
     "grade": 1,
     "topic": "schreiben",

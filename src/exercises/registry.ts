@@ -1,5 +1,7 @@
 /** All exercise modules. A new exercise = new module + entry here + catalog entries. */
 import { anlaut } from './lesen/anlaut'
+import { anlautFremd, anlautGleich } from './lesen/anlaute'
+import { reimen } from './lesen/reimen'
 import { bildWort } from './lesen/bild-wort'
 import { silbenHoeren } from './lesen/silben-hoeren'
 import { silbenKlatschen } from './lesen/silben-klatschen'
@@ -27,6 +29,9 @@ register(wortBild)
 register(bildWort)
 register(anlaut)
 register(silbenKlatschen)
+register(reimen)
+register(anlautGleich)
+register(anlautFremd)
 register(mengen)
 register(mengeLegen)
 register(vergleichen)

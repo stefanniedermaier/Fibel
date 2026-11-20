@@ -544,13 +544,25 @@ Bewertet am 20.11.2026, Punkt für Punkt:
   - Jede Anlautgruppe hat mindestens 3 Wörter.
 - **Hörwortschatz** = diese Liste plus alle Wörter des Lese-Wörterbuchs mit Bild. Er wird genutzt für Silben klatschen, Reimen und gleiche Anlaute.
 
-### E3 – Reimen (Umfang S, braucht E2)
+### E3 – Reimen (Umfang S, braucht E2) – ✅ umgesetzt
+
+**Stand:**
+- Die Übung „Was reimt sich?“ fragt jedes Wort mit Reimpartner ab.
+- Ein Ablenker hat nach Möglichkeit den gleichen Anlaut wie das Zielwort.
+- Die Anweisung liest die drei Auswahlwörter in Bildschirm-Reihenfolge mit vor („Nase, Hund oder Ball?“), weil ein Kind nicht jedes Bild sicher benennen kann.
+- Nach der Antwort erscheinen die Namen unter den Bildern.
 
 - **Übung „Was reimt sich auf …?“:** Bild und gesprochenes Wort („Hase“), dazu drei Bilder. Eines reimt sich, die beiden Ablenker gerade nicht.
 - **Ablenker:** möglichst mit gleichem Anlaut oder gleichem Vokal, damit Raten nicht hilft.
 - **Fach:** Lesen (Sprachbewusstheit). Es werden keine Buchstaben gebraucht, deshalb ist die Übung sofort verfügbar.
 
-### E4 – Gleiche Anlaute (Umfang S, braucht E2)
+### E4 – Gleiche Anlaute (Umfang S, braucht E2) – ✅ umgesetzt
+
+**Stand:**
+- Variante A heißt „Gleicher Anfang“: Die beiden Ablenker haben zwei verschiedene Anlaute.
+- Variante B heißt „Welches fängt anders an?“: vier Bilder, ein Item pro Anlautgruppe.
+- Beide lesen die Auswahl mit vor.
+- **Hinweis zur Mischung:** Lesen hat jetzt 8 Übungen. Eine Einheit mit 8 Aufgaben bringt also jede Übung etwa einmal. Falls die eigentlichen Leseübungen dadurch zu kurz kommen, lässt sich das über eine Gewichtung im Katalog nachsteuern.
 
 - **Variante A „Welches Bild fängt genauso an?“:** ein Bild und drei Bilder zur Auswahl.
 - **Variante B „Welches passt nicht dazu?“:** vier Bilder, drei davon mit gleichem Anlaut.
