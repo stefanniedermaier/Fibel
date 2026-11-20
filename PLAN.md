@@ -94,7 +94,7 @@ Die Session-Engine mischt für jede Einheit die verfügbaren Katalog-Einträge e
 ```
 fibel/
 ├─ .github/workflows/deploy.yml   # Format, Lint, data:check, Tests, Audit, Build, dist:check, Deploy
-├─ .github/workflows/security.yml # CodeQL, npm audit, Gitleaks, Dependency Review
+├─ .github/workflows/security.yml # npm audit, Gitleaks, Dependency Review (CodeQL: Default setup)
 ├─ .github/dependabot.yml         # wöchentliche Updates (npm, Actions)
 ├─ public/
 │  ├─ img/                        # generiert: benötigte OpenMoji-SVGs
