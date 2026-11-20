@@ -78,5 +78,8 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     include: ['tests/**/*.spec.ts'],
+    alias: {
+      'virtual:pwa-register': fileURLToPath(new URL('./tests/stubs/pwa-register.ts', import.meta.url)),
+    },
   },
 })

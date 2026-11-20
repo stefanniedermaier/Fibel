@@ -420,7 +420,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 - Phase 7 ist umgesetzt bis auf die Punkte, die nur auf dem Gerät gehen:
   - **Statistik** pro Profil: Einheiten, Minuten, Sterne und Kronen; fertige Einheiten der letzten 14 Tage; Trefferquote pro Klasse und Fach; „Stolpersteine“, also Aufgaben, die oft danebengehen und noch nicht sitzen.
   - **Sicherung:** Export als JSON-Datei und Import mit Prüfung. Ein Import ersetzt alles in einer Transaktion. Im Elternbereich erscheint eine Erinnerung, wenn die letzte Sicherung älter als 30 Tage ist.
-  - **Version und Deployment** (aus ToDo.md): Die Version kommt aus `package.json` und `version.json` liegt neben der App. Im Elternbereich stehen die installierte und die neueste Version. Veröffentlicht wird nur noch bei einem Versions-Tag `v*`, jeder Push auf `main` wird nur geprüft. Ablauf siehe README.
+  - **Version und Deployment** (aus ToDo.md): Die Version kommt aus `package.json` und `version.json` liegt neben der App. Im Elternbereich stehen die installierte und die neueste Version, jeweils mit Build-Zeitpunkt. Veröffentlicht wird bei jedem Push auf `main` (Testrunden) und bei Versions-Tags `v*`. Die Tags kommen, sobald die Features fertig sind. Ablauf siehe README.
   - **Lighthouse** (Version 12, ohne die entfernte PWA-Kategorie): Performance 99, Barrierefreiheit 100, Best Practices 100 für den Produktions-Build.
   - **Offen:** Version 1.0 taggen und veröffentlichen, die Testrunde mit dem Kind und das Anhören aller Wörter im Sprachtest auf dem Gerät.
 
@@ -483,3 +483,93 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 - Sticker-Album oder Welten zum Freischalten mit Kronen
 - Geometrie und Formen
 - Tageslimit für Einheiten
+
+## 15. Erweiterungen vor Version 1.0 (aus der ToDo-Bewertung)
+
+Bewertet am 20.11.2026, Punkt für Punkt:
+
+| Punkt | Entscheidung |
+|---|---|
+| Aufgabe als Text anzeigen | erledigt (Phase 4) |
+| Größeres Wörterbuch | umsetzen → E1 |
+| Wort mit dem Finger schreiben | umsetzen als Kästchen mit Erkennung → E6 |
+| Speech-to-Text beim Vorlesen | verworfen: Die Audiodaten gingen an Google-Server, Kinderstimmen werden schlecht erkannt, und offline funktioniert es nicht |
+| Reimen | umsetzen, mit Hörwortschatz → E2, E3 |
+| Gleiche Anlaute finden | umsetzen, beide Varianten → E4 |
+| Reihen erkennen und fortsetzen | umsetzen unter Rechnen → E5 |
+| Nur Versions-Tags deployen / Version anzeigen | erledigt: geändert zu „jeder Push auf main und Tags“, die Version steht mit Build-Stand im Elternbereich |
+
+### E1 – Größeres Wörterbuch (Umfang M) – ✅ umgesetzt
+
+**Stand:**
+- 359 Wörter in der Basis und 7 für Bayern, zusammen 366: 155 Nomen, 71 Verben, 32 Adjektive, 46 kleine Wörter, 55 Namen. 100 davon haben ein Bild.
+- Mit den Startbuchstaben gibt es jetzt 22 lesbare Wörter statt 4.
+- 93 Wörter sind als bayerischer Grundwortschatz markiert.
+- Alle neuen Wörter bestehen die Lauttreue-Prüfung. Offen ist nur noch das Anhören im Sprachtest auf dem Gerät.
+
+- **Ziel:** von 107 auf 350–500 lauttreue Wörter. Qualität geht vor Menge: Die Lauttreue-Regeln bleiben unverändert, nur sauber passende Wörter kommen hinein.
+- **Wortarten:**
+  - Nomen
+  - Verben (malen, holen, rufen, baden, reden …, viele aus dem bayerischen Grundwortschatz)
+  - Adjektive (rot, gut, lila, rosa, laut …)
+  - kleine Wörter (am, im, um, so, da, mal …)
+  - Vornamen (Mila, Leo, Ole, Emil, Uli, Lilo …)
+  Die Vornamen helfen besonders am Anfang: Mit A, E, I, O, U, M, L gibt es bisher nur 4 Wörter.
+- **Datenformat:**
+  - `image` wird optional.
+  - Neues Feld `wortart` (`nomen`, `verb`, `adjektiv`, `klein`, `name`).
+  - `data:check` prüft die Großschreibung passend zur Wortart: Nomen und Namen groß, alles andere klein.
+- **Übungen:**
+  - Wort → Bild, Bild → Wort und Anlaut erklären, dass sie ein Bild brauchen, und nehmen nur Wörter mit Bild.
+  - Silben klatschen und alle Schreibübungen funktionieren ohne Bild. Statt des Bilds erscheint dort ein großer 🔊-Knopf.
+- **Prüfung:** Alle neuen Wörter im Sprachtest auf dem Gerät anhören. Ein Test stellt sicher, dass jede Bild-Übung mit den Startbuchstaben genug Wörter hat.
+
+### E2 – Hörwortschatz (Umfang M)
+
+- **Neue Liste** `basis/klasse-1/hoerwoerter.json` mit etwa 150 Wörtern mit Bild, die nur gehört und nie gelesen werden. Deshalb gilt hier keine Lauttreue, sodass auch Hund/Mund, Kuh/Schuh, Tisch/Fisch und Sonne/Tonne möglich sind.
+- **Felder:** Silben, Bild, `reim` (Reimgruppe) und `anlaut`.
+  - `anlaut` meint den gesprochenen Anlaut, nicht den Buchstaben: Vogel und Fisch fangen gleich an, Stern und Sonne nicht.
+  - Der Anlaut wird automatisch abgeleitet und lässt sich von Hand korrigieren.
+- **`data:check`:**
+  - Jedes Bild ist vorhanden.
+  - Jede Reimgruppe hat mindestens 2 Wörter.
+  - Jede Anlautgruppe hat mindestens 3 Wörter.
+- **Hörwortschatz** = diese Liste plus alle Wörter des Lese-Wörterbuchs mit Bild. Er wird genutzt für Silben klatschen, Reimen und gleiche Anlaute.
+
+### E3 – Reimen (Umfang S, braucht E2)
+
+- **Übung „Was reimt sich auf …?“:** Bild und gesprochenes Wort („Hase“), dazu drei Bilder. Eines reimt sich, die beiden Ablenker gerade nicht.
+- **Ablenker:** möglichst mit gleichem Anlaut oder gleichem Vokal, damit Raten nicht hilft.
+- **Fach:** Lesen (Sprachbewusstheit). Es werden keine Buchstaben gebraucht, deshalb ist die Übung sofort verfügbar.
+
+### E4 – Gleiche Anlaute (Umfang S, braucht E2)
+
+- **Variante A „Welches Bild fängt genauso an?“:** ein Bild und drei Bilder zur Auswahl.
+- **Variante B „Welches passt nicht dazu?“:** vier Bilder, drei davon mit gleichem Anlaut.
+- Beide funktionieren rein übers Hören, ohne Buchstaben. Fach: Lesen.
+
+### E5 – Reihen erkennen und fortsetzen (Umfang M, unabhängig)
+
+- **Neue Übung im Fach Rechnen.** Eine Reihe wird gezeigt, ein Element fehlt, drei Möglichkeiten stehen zur Wahl. Später kann die Lücke auch in der Mitte liegen.
+- **Level:**
+  1. AB mit Farben
+  2. AAB, ABB, ABC
+  3. Bilder und Formen
+  4. Zahlenfolgen +1, +2, −1
+  5. größere Sprünge im Zahlenraum 20
+- **Freischaltung:** Das nächste Level öffnet sich bei 80 % sicheren Aufgaben. Im Elternbereich lässt sich das Level auch von Hand setzen.
+- Farben gibt es immer zusammen mit einer Form, damit die Übung auch bei Farbsehschwäche funktioniert.
+
+### E6 – Wort in Kästchen schreiben, mit Erkennung (Umfang L, Experiment)
+
+- **Ablauf:** Das Wort wird vorgelesen und das Bild gezeigt. Das Kind schreibt jeden Buchstaben mit dem Finger in ein eigenes Kästchen auf Schullinien.
+- **Erkennung, offline:** ein Punktwolken-Vergleich ($P-Verfahren) der Fingerspur mit unseren Druckschrift-Vorlagen.
+  - Verglichen wird nur mit den bekannten Buchstaben, groß oder klein passend zur Stelle im Wort.
+  - Erkannt gilt der Buchstabe, wenn der richtige Buchstabe am besten passt und der Abstand eine Schwelle unterschreitet. Die Schwelle ist im Elternbereich einstellbar.
+- **Bewertung:**
+  - Ein erkannter Buchstabe wird grün.
+  - Ist die Erkennung unsicher, gibt es kein hartes „falsch“. Die Vorlage wird blass eingeblendet, und das Kind darf neu schreiben.
+  - Den Stern gibt es, wenn alle Buchstaben erkannt wurden.
+- **Ausprobieren:** Im Elternbereich lässt sich die Übung zuschalten, standardmäßig ist sie aus. Erst mit echter Kinderschrift testen und abstimmen, dann standardmäßig einschalten.
+
+**Reihenfolge:** E1 → E2 → E3 und E4 → E5 → E6. E5 hängt von nichts ab und kann auch früher kommen.

@@ -15,7 +15,9 @@ import {
 import SilbenLegenTask from './SilbenLegenTask.vue'
 
 export interface SilbenLegenData {
-  image: string
+  /** Optional: words without a picture are only heard (🔊). */
+  image?: string
+  spoken: string
   target: string[]
   tiles: Tile[]
   capitalizeFirst: boolean
@@ -47,6 +49,7 @@ export const silbenLegen: ExerciseModule<SchreibenParams, SilbenLegenData> = {
       solution: `${spoken(word)}: ${word.syllables.join(' – ')}.`,
       data: {
         image: word.image,
+        spoken: spoken(word),
         target,
         tiles: toTiles([...target, ...extra], rng),
         capitalizeFirst: isCapitalised(word),

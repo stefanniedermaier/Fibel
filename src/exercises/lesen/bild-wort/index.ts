@@ -8,6 +8,7 @@ import {
   itemId,
   readingPool,
   spoken,
+  withImage,
   type LesenParams,
 } from '../shared'
 import BildWortTask from './BildWortTask.vue'
@@ -30,12 +31,13 @@ export const bildWort: ExerciseModule<LesenParams, BildWortData> = {
     const pool = readingPool(ctx, params)
     // All three words must be readable, so the pool needs enough words.
     if (pool.length < Math.max(MIN_POOL, CHOICES)) return []
-    return pool.map((w) => `lesen.bild-wort:${w.id}`)
+    // Only words with a picture can be asked; the distractors may be any readable word.
+    return withImage(pool).map((w) => `lesen.bild-wort:${w.id}`)
   },
 
   generate(ctx, params, itemKey, rng) {
     const pool = readingPool(ctx, params)
-    const word = findWord(pool, itemId(itemKey))
+    const word = findWord(withImage(pool), itemId(itemKey))
     const others = distractorWords(word, pool, CHOICES - 1, rng)
     return {
       instruction: 'Welches Wort passt zum Bild?',

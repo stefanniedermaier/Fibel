@@ -5,7 +5,8 @@
     "syllables": ["O", "ma"],
     "image": "1F475",
     "category": "menschen",
-    "similar": ["opa"]
+    "similar": ["opa"],
+    "wortart": "nomen"
   },
   {
     "id": "opa",
@@ -13,7 +14,8 @@
     "syllables": ["O", "pa"],
     "image": "1F474",
     "category": "menschen",
-    "similar": ["oma"]
+    "similar": ["oma"],
+    "wortart": "nomen"
   },
   {
     "id": "mama",
@@ -21,7 +23,8 @@
     "syllables": ["Ma", "ma"],
     "image": "1F469",
     "category": "menschen",
-    "similar": ["papa", "lama"]
+    "similar": ["papa", "lama"],
+    "wortart": "nomen"
   },
   {
     "id": "papa",
@@ -29,7 +32,8 @@
     "syllables": ["Pa", "pa"],
     "image": "1F468",
     "category": "menschen",
-    "similar": ["mama"]
+    "similar": ["mama"],
+    "wortart": "nomen"
   },
   {
     "id": "lama",
@@ -37,7 +41,8 @@
     "syllables": ["La", "ma"],
     "image": "1F999",
     "category": "tiere",
-    "similar": ["mama", "limo"]
+    "similar": ["mama", "limo"],
+    "wortart": "nomen"
   },
   {
     "id": "sofa",
@@ -45,7 +50,8 @@
     "syllables": ["So", "fa"],
     "image": "1F6CB",
     "category": "dinge",
-    "similar": ["mofa"]
+    "similar": ["mofa"],
+    "wortart": "nomen"
   },
   {
     "id": "rose",
@@ -53,7 +59,8 @@
     "syllables": ["Ro", "se"],
     "image": "1F339",
     "category": "natur",
-    "similar": ["dose", "hose"]
+    "similar": ["dose", "hose"],
+    "wortart": "nomen"
   },
   {
     "id": "nase",
@@ -61,7 +68,8 @@
     "syllables": ["Na", "se"],
     "image": "1F443",
     "category": "koerper",
-    "similar": ["hase", "hose"]
+    "similar": ["hase", "hose"],
+    "wortart": "nomen"
   },
   {
     "id": "hase",
@@ -69,7 +77,8 @@
     "syllables": ["Ha", "se"],
     "image": "1F407",
     "category": "tiere",
-    "similar": ["nase", "hose"]
+    "similar": ["nase", "hose"],
+    "wortart": "nomen"
   },
   {
     "id": "dose",
@@ -77,7 +86,8 @@
     "syllables": ["Do", "se"],
     "image": "1F96B",
     "category": "dinge",
-    "similar": ["rose", "hose"]
+    "similar": ["rose", "hose"],
+    "wortart": "nomen"
   },
   {
     "id": "hose",
@@ -85,7 +95,8 @@
     "syllables": ["Ho", "se"],
     "image": "1F456",
     "category": "dinge",
-    "similar": ["rose", "dose", "hase"]
+    "similar": ["rose", "dose", "hase"],
+    "wortart": "nomen"
   },
   {
     "id": "limo",
@@ -93,7 +104,8 @@
     "syllables": ["Li", "mo"],
     "image": "1F964",
     "category": "essen",
-    "similar": ["lama", "dino"]
+    "similar": ["lama", "dino"],
+    "wortart": "nomen"
   },
   {
     "id": "lupe",
@@ -101,7 +113,8 @@
     "syllables": ["Lu", "pe"],
     "image": "1F50D",
     "category": "dinge",
-    "similar": ["pute"]
+    "similar": ["pute"],
+    "wortart": "nomen"
   },
   {
     "id": "dino",
@@ -109,7 +122,8 @@
     "syllables": ["Di", "no"],
     "image": "1F995",
     "category": "tiere",
-    "similar": ["limo", "kiwi"]
+    "similar": ["limo", "kiwi"],
+    "wortart": "nomen"
   },
   {
     "id": "mofa",
@@ -117,7 +131,8 @@
     "syllables": ["Mo", "fa"],
     "image": "1F6F5",
     "category": "fahrzeuge",
-    "similar": ["sofa"]
+    "similar": ["sofa"],
+    "wortart": "nomen"
   },
   {
     "id": "pute",
@@ -125,7 +140,8 @@
     "syllables": ["Pu", "te"],
     "image": "1F983",
     "category": "tiere",
-    "similar": ["lupe", "note"]
+    "similar": ["lupe", "note"],
+    "wortart": "nomen"
   },
   {
     "id": "kuli",
@@ -133,7 +149,8 @@
     "syllables": ["Ku", "li"],
     "image": "1F58A",
     "category": "dinge",
-    "similar": ["kiwi"]
+    "similar": ["kiwi"],
+    "wortart": "nomen"
   },
   {
     "id": "note",
@@ -141,7 +158,8 @@
     "syllables": ["No", "te"],
     "image": "1F3B5",
     "category": "musik",
-    "similar": ["pute", "nase"]
+    "similar": ["pute", "nase"],
+    "wortart": "nomen"
   },
   {
     "id": "rabe",
@@ -149,7 +167,8 @@
     "syllables": ["Ra", "be"],
     "image": "1F426-200D-2B1B",
     "category": "tiere",
-    "similar": ["rose"]
+    "similar": ["rose"],
+    "wortart": "nomen"
   },
   {
     "id": "kanu",
@@ -157,7 +176,8 @@
     "syllables": ["Ka", "nu"],
     "image": "1F6F6",
     "category": "fahrzeuge",
-    "similar": ["kuli"]
+    "similar": ["kuli"],
+    "wortart": "nomen"
   },
   {
     "id": "ufo",
@@ -165,7 +185,8 @@
     "syllables": ["U", "fo"],
     "image": "1F6F8",
     "category": "fahrzeuge",
-    "similar": ["opa"]
+    "similar": ["opa"],
+    "wortart": "nomen"
   },
   {
     "id": "kiwi",
@@ -173,16 +194,17 @@
     "syllables": ["Ki", "wi"],
     "image": "1F95D",
     "category": "essen",
-    "similar": ["kuli"]
+    "similar": ["kuli"],
+    "wortart": "nomen"
   },
-
   {
     "id": "tomate",
     "text": "Tomate",
     "syllables": ["To", "ma", "te"],
     "image": "1F345",
     "category": "essen",
-    "similar": ["rakete", "melone"]
+    "similar": ["rakete", "melone"],
+    "wortart": "nomen"
   },
   {
     "id": "banane",
@@ -190,7 +212,8 @@
     "syllables": ["Ba", "na", "ne"],
     "image": "1F34C",
     "category": "essen",
-    "similar": ["melone", "tomate"]
+    "similar": ["melone", "tomate"],
+    "wortart": "nomen"
   },
   {
     "id": "melone",
@@ -198,7 +221,8 @@
     "syllables": ["Me", "lo", "ne"],
     "image": "1F349",
     "category": "essen",
-    "similar": ["banane", "tomate"]
+    "similar": ["banane", "tomate"],
+    "wortart": "nomen"
   },
   {
     "id": "rakete",
@@ -206,7 +230,8 @@
     "syllables": ["Ra", "ke", "te"],
     "image": "1F680",
     "category": "fahrzeuge",
-    "similar": ["tomate"]
+    "similar": ["tomate"],
+    "wortart": "nomen"
   },
   {
     "id": "koala",
@@ -214,7 +239,8 @@
     "syllables": ["Ko", "a", "la"],
     "image": "1F428",
     "category": "tiere",
-    "similar": ["kamera"]
+    "similar": ["kamera"],
+    "wortart": "nomen"
   },
   {
     "id": "radio",
@@ -222,7 +248,8 @@
     "syllables": ["Ra", "di", "o"],
     "image": "1F4FB",
     "category": "dinge",
-    "similar": ["rakete"]
+    "similar": ["rakete"],
+    "wortart": "nomen"
   },
   {
     "id": "kamera",
@@ -230,16 +257,17 @@
     "syllables": ["Ka", "me", "ra"],
     "image": "1F4F7",
     "category": "dinge",
-    "similar": ["koala", "kamel"]
+    "similar": ["koala", "kamel"],
+    "wortart": "nomen"
   },
-
   {
     "id": "igel",
     "text": "Igel",
     "syllables": ["I", "gel"],
     "image": "1F994",
     "category": "tiere",
-    "similar": ["esel", "gabel"]
+    "similar": ["esel", "gabel"],
+    "wortart": "nomen"
   },
   {
     "id": "esel",
@@ -247,7 +275,8 @@
     "syllables": ["E", "sel"],
     "image": "1FACF",
     "category": "tiere",
-    "similar": ["igel", "besen"]
+    "similar": ["igel", "besen"],
+    "wortart": "nomen"
   },
   {
     "id": "kamel",
@@ -255,7 +284,8 @@
     "syllables": ["Ka", "mel"],
     "image": "1F42B",
     "category": "tiere",
-    "similar": ["kamera", "kabel"]
+    "similar": ["kamera", "kabel"],
+    "wortart": "nomen"
   },
   {
     "id": "ananas",
@@ -263,7 +293,8 @@
     "syllables": ["A", "na", "nas"],
     "image": "1F34D",
     "category": "essen",
-    "similar": ["banane"]
+    "similar": ["banane"],
+    "wortart": "nomen"
   },
   {
     "id": "tulpe",
@@ -271,7 +302,8 @@
     "syllables": ["Tul", "pe"],
     "image": "1F337",
     "category": "natur",
-    "similar": ["lupe", "palme"]
+    "similar": ["lupe", "palme"],
+    "wortart": "nomen"
   },
   {
     "id": "wal",
@@ -279,7 +311,8 @@
     "syllables": ["Wal"],
     "image": "1F40B",
     "category": "tiere",
-    "similar": ["wolf", "salz"]
+    "similar": ["wolf", "salz"],
+    "wortart": "nomen"
   },
   {
     "id": "gabel",
@@ -287,7 +320,8 @@
     "syllables": ["Ga", "bel"],
     "image": "1F374",
     "category": "dinge",
-    "similar": ["kabel", "igel"]
+    "similar": ["kabel", "igel"],
+    "wortart": "nomen"
   },
   {
     "id": "nudel",
@@ -295,7 +329,8 @@
     "syllables": ["Nu", "del"],
     "image": "1F35D",
     "category": "essen",
-    "similar": ["pudel"]
+    "similar": ["pudel"],
+    "wortart": "nomen"
   },
   {
     "id": "pudel",
@@ -303,7 +338,8 @@
     "syllables": ["Pu", "del"],
     "image": "1F429",
     "category": "tiere",
-    "similar": ["nudel"]
+    "similar": ["nudel"],
+    "wortart": "nomen"
   },
   {
     "id": "kabel",
@@ -311,7 +347,8 @@
     "syllables": ["Ka", "bel"],
     "image": "1F50C",
     "category": "dinge",
-    "similar": ["gabel", "kamel"]
+    "similar": ["gabel", "kamel"],
+    "wortart": "nomen"
   },
   {
     "id": "paket",
@@ -319,7 +356,8 @@
     "syllables": ["Pa", "ket"],
     "image": "1F4E6",
     "category": "dinge",
-    "similar": ["salat"]
+    "similar": ["salat"],
+    "wortart": "nomen"
   },
   {
     "id": "salat",
@@ -327,7 +365,8 @@
     "syllables": ["Sa", "lat"],
     "image": "1F957",
     "category": "essen",
-    "similar": ["salz", "paket"]
+    "similar": ["salz", "paket"],
+    "wortart": "nomen"
   },
   {
     "id": "hut",
@@ -335,7 +374,8 @@
     "syllables": ["Hut"],
     "image": "1F3A9",
     "category": "dinge",
-    "similar": ["bus"]
+    "similar": ["bus"],
+    "wortart": "nomen"
   },
   {
     "id": "bus",
@@ -343,7 +383,8 @@
     "syllables": ["Bus"],
     "image": "1F68C",
     "category": "fahrzeuge",
-    "similar": ["hut"]
+    "similar": ["hut"],
+    "wortart": "nomen"
   },
   {
     "id": "nest",
@@ -351,7 +392,8 @@
     "syllables": ["Nest"],
     "image": "1FABA",
     "category": "natur",
-    "similar": ["zelt"]
+    "similar": ["zelt"],
+    "wortart": "nomen"
   },
   {
     "id": "zelt",
@@ -359,7 +401,8 @@
     "syllables": ["Zelt"],
     "image": "26FA",
     "category": "dinge",
-    "similar": ["nest", "salz"]
+    "similar": ["nest", "salz"],
+    "wortart": "nomen"
   },
   {
     "id": "mantel",
@@ -367,7 +410,8 @@
     "syllables": ["Man", "tel"],
     "image": "1F9E5",
     "category": "dinge",
-    "similar": ["kamel"]
+    "similar": ["kamel"],
+    "wortart": "nomen"
   },
   {
     "id": "pinsel",
@@ -375,7 +419,8 @@
     "syllables": ["Pin", "sel"],
     "image": "1F58C",
     "category": "dinge",
-    "similar": ["insel"]
+    "similar": ["insel"],
+    "wortart": "nomen"
   },
   {
     "id": "pilz",
@@ -383,7 +428,8 @@
     "syllables": ["Pilz"],
     "image": "1F344",
     "category": "natur",
-    "similar": ["salz"]
+    "similar": ["salz"],
+    "wortart": "nomen"
   },
   {
     "id": "salz",
@@ -391,7 +437,8 @@
     "syllables": ["Salz"],
     "image": "1F9C2",
     "category": "essen",
-    "similar": ["pilz", "saft", "salat"]
+    "similar": ["pilz", "saft", "salat"],
+    "wortart": "nomen"
   },
   {
     "id": "brot",
@@ -399,7 +446,8 @@
     "syllables": ["Brot"],
     "image": "1F35E",
     "category": "essen",
-    "similar": ["kran", "krone"]
+    "similar": ["kran", "krone"],
+    "wortart": "nomen"
   },
   {
     "id": "paprika",
@@ -407,7 +455,8 @@
     "syllables": ["Pa", "pri", "ka"],
     "image": "1FAD1",
     "category": "essen",
-    "similar": ["kamera"]
+    "similar": ["kamera"],
+    "wortart": "nomen"
   },
   {
     "id": "keks",
@@ -415,7 +464,8 @@
     "syllables": ["Keks"],
     "image": "1F36A",
     "category": "essen",
-    "similar": ["kiwi"]
+    "similar": ["kiwi"],
+    "wortart": "nomen"
   },
   {
     "id": "ente",
@@ -423,7 +473,8 @@
     "syllables": ["En", "te"],
     "image": "1F986",
     "category": "tiere",
-    "similar": ["note"]
+    "similar": ["note"],
+    "wortart": "nomen"
   },
   {
     "id": "delfin",
@@ -431,7 +482,8 @@
     "syllables": ["Del", "fin"],
     "image": "1F42C",
     "category": "tiere",
-    "similar": ["dino"]
+    "similar": ["dino"],
+    "wortart": "nomen"
   },
   {
     "id": "zebra",
@@ -439,7 +491,8 @@
     "syllables": ["Ze", "bra"],
     "image": "1F993",
     "category": "tiere",
-    "similar": ["panda"]
+    "similar": ["panda"],
+    "wortart": "nomen"
   },
   {
     "id": "panda",
@@ -447,7 +500,8 @@
     "syllables": ["Pan", "da"],
     "image": "1F43C",
     "category": "tiere",
-    "similar": ["zebra", "papa"]
+    "similar": ["zebra", "papa"],
+    "wortart": "nomen"
   },
   {
     "id": "wolf",
@@ -455,7 +509,8 @@
     "syllables": ["Wolf"],
     "image": "1F43A",
     "category": "tiere",
-    "similar": ["wal", "wolke"]
+    "similar": ["wal", "wolke"],
+    "wortart": "nomen"
   },
   {
     "id": "krake",
@@ -463,7 +518,8 @@
     "syllables": ["Kra", "ke"],
     "image": "1F419",
     "category": "tiere",
-    "similar": ["krone", "kran"]
+    "similar": ["krone", "kran"],
+    "wortart": "nomen"
   },
   {
     "id": "lok",
@@ -471,7 +527,8 @@
     "syllables": ["Lok"],
     "image": "1F682",
     "category": "fahrzeuge",
-    "similar": ["keks"]
+    "similar": ["keks"],
+    "wortart": "nomen"
   },
   {
     "id": "kran",
@@ -479,7 +536,8 @@
     "syllables": ["Kran"],
     "image": "1F3D7",
     "category": "fahrzeuge",
-    "similar": ["krake", "krone"]
+    "similar": ["krake", "krone"],
+    "wortart": "nomen"
   },
   {
     "id": "musik",
@@ -487,7 +545,8 @@
     "syllables": ["Mu", "sik"],
     "image": "1F3B6",
     "category": "musik",
-    "similar": ["note"]
+    "similar": ["note"],
+    "wortart": "nomen"
   },
   {
     "id": "trompete",
@@ -495,7 +554,8 @@
     "syllables": ["Trom", "pe", "te"],
     "image": "1F3BA",
     "category": "musik",
-    "similar": ["tomate", "rakete"]
+    "similar": ["tomate", "rakete"],
+    "wortart": "nomen"
   },
   {
     "id": "telefon",
@@ -503,7 +563,8 @@
     "syllables": ["Te", "le", "fon"],
     "image": "260E",
     "category": "dinge",
-    "similar": ["melone"]
+    "similar": ["melone"],
+    "wortart": "nomen"
   },
   {
     "id": "besen",
@@ -511,7 +572,8 @@
     "syllables": ["Be", "sen"],
     "image": "1F9F9",
     "category": "dinge",
-    "similar": ["esel", "regen"]
+    "similar": ["esel", "regen"],
+    "wortart": "nomen"
   },
   {
     "id": "lineal",
@@ -519,7 +581,8 @@
     "syllables": ["Li", "ne", "al"],
     "image": "1F4CF",
     "category": "dinge",
-    "similar": ["limo"]
+    "similar": ["limo"],
+    "wortart": "nomen"
   },
   {
     "id": "kaktus",
@@ -527,7 +590,8 @@
     "syllables": ["Kak", "tus"],
     "image": "1F335",
     "category": "natur",
-    "similar": ["bus"]
+    "similar": ["bus"],
+    "wortart": "nomen"
   },
   {
     "id": "palme",
@@ -535,7 +599,8 @@
     "syllables": ["Pal", "me"],
     "image": "1F334",
     "category": "natur",
-    "similar": ["tulpe"]
+    "similar": ["tulpe"],
+    "wortart": "nomen"
   },
   {
     "id": "blume",
@@ -543,7 +608,8 @@
     "syllables": ["Blu", "me"],
     "image": "1F33C",
     "category": "natur",
-    "similar": ["palme", "lupe"]
+    "similar": ["palme", "lupe"],
+    "wortart": "nomen"
   },
   {
     "id": "wolke",
@@ -551,7 +617,8 @@
     "syllables": ["Wol", "ke"],
     "image": "2601",
     "category": "natur",
-    "similar": ["wolf"]
+    "similar": ["wolf"],
+    "wortart": "nomen"
   },
   {
     "id": "regen",
@@ -559,7 +626,8 @@
     "syllables": ["Re", "gen"],
     "image": "1F327",
     "category": "natur",
-    "similar": ["besen"]
+    "similar": ["besen"],
+    "wortart": "nomen"
   },
   {
     "id": "insel",
@@ -567,7 +635,8 @@
     "syllables": ["In", "sel"],
     "image": "1F3DD",
     "category": "natur",
-    "similar": ["pinsel", "esel"]
+    "similar": ["pinsel", "esel"],
+    "wortart": "nomen"
   },
   {
     "id": "krone",
@@ -575,7 +644,8 @@
     "syllables": ["Kro", "ne"],
     "image": "1F451",
     "category": "dinge",
-    "similar": ["krake", "kran", "rose"]
+    "similar": ["krake", "kran", "rose"],
+    "wortart": "nomen"
   },
   {
     "id": "saft",
@@ -583,7 +653,8 @@
     "syllables": ["Saft"],
     "image": "1F9C3",
     "category": "essen",
-    "similar": ["salz"]
+    "similar": ["salz"],
+    "wortart": "nomen"
   },
   {
     "id": "apfel",
@@ -591,7 +662,8 @@
     "syllables": ["Ap", "fel"],
     "image": "1F34E",
     "category": "essen",
-    "similar": ["gabel"]
+    "similar": ["gabel"],
+    "wortart": "nomen"
   },
   {
     "id": "elefant",
@@ -599,7 +671,8 @@
     "syllables": ["E", "le", "fant"],
     "image": "1F418",
     "category": "tiere",
-    "similar": ["telefon"]
+    "similar": ["telefon"],
+    "wortart": "nomen"
   },
   {
     "id": "gans",
@@ -607,16 +680,17 @@
     "syllables": ["Gans"],
     "image": "1FABF",
     "category": "tiere",
-    "similar": ["wal"]
+    "similar": ["wal"],
+    "wortart": "nomen"
   },
-
   {
     "id": "ameise",
     "text": "Ameise",
     "syllables": ["A", "mei", "se"],
     "image": "1F41C",
     "category": "tiere",
-    "similar": ["seife"]
+    "similar": ["seife"],
+    "wortart": "nomen"
   },
   {
     "id": "loewe",
@@ -624,7 +698,8 @@
     "syllables": ["Lö", "we"],
     "image": "1F981",
     "category": "tiere",
-    "similar": ["lupe"]
+    "similar": ["lupe"],
+    "wortart": "nomen"
   },
   {
     "id": "maus",
@@ -632,7 +707,8 @@
     "syllables": ["Maus"],
     "image": "1F42D",
     "category": "tiere",
-    "similar": ["haus"]
+    "similar": ["haus"],
+    "wortart": "nomen"
   },
   {
     "id": "haus",
@@ -640,7 +716,8 @@
     "syllables": ["Haus"],
     "image": "1F3E0",
     "category": "dinge",
-    "similar": ["maus"]
+    "similar": ["maus"],
+    "wortart": "nomen"
   },
   {
     "id": "eule",
@@ -648,7 +725,8 @@
     "syllables": ["Eu", "le"],
     "image": "1F989",
     "category": "tiere",
-    "similar": ["schule"]
+    "similar": ["schule"],
+    "wortart": "nomen"
   },
   {
     "id": "eis",
@@ -656,7 +734,8 @@
     "syllables": ["Eis"],
     "image": "1F366",
     "category": "essen",
-    "similar": ["ei"]
+    "similar": ["ei"],
+    "wortart": "nomen"
   },
   {
     "id": "ei",
@@ -664,7 +743,8 @@
     "syllables": ["Ei"],
     "image": "1F95A",
     "category": "essen",
-    "similar": ["eis"]
+    "similar": ["eis"],
+    "wortart": "nomen"
   },
   {
     "id": "auto",
@@ -672,7 +752,8 @@
     "syllables": ["Au", "to"],
     "image": "1F697",
     "category": "fahrzeuge",
-    "similar": ["auge"]
+    "similar": ["auge"],
+    "wortart": "nomen"
   },
   {
     "id": "auge",
@@ -680,7 +761,8 @@
     "syllables": ["Au", "ge"],
     "image": "1F441",
     "category": "koerper",
-    "similar": ["auto"]
+    "similar": ["auto"],
+    "wortart": "nomen"
   },
   {
     "id": "schaf",
@@ -688,7 +770,8 @@
     "syllables": ["Schaf"],
     "image": "1F411",
     "category": "tiere",
-    "similar": ["schal"]
+    "similar": ["schal"],
+    "wortart": "nomen"
   },
   {
     "id": "schal",
@@ -696,7 +779,8 @@
     "syllables": ["Schal"],
     "image": "1F9E3",
     "category": "dinge",
-    "similar": ["schaf"]
+    "similar": ["schaf"],
+    "wortart": "nomen"
   },
   {
     "id": "fisch",
@@ -704,7 +788,8 @@
     "syllables": ["Fisch"],
     "image": "1F41F",
     "category": "tiere",
-    "similar": ["frosch"]
+    "similar": ["frosch"],
+    "wortart": "nomen"
   },
   {
     "id": "frosch",
@@ -712,7 +797,8 @@
     "syllables": ["Frosch"],
     "image": "1F438",
     "category": "tiere",
-    "similar": ["fisch"]
+    "similar": ["fisch"],
+    "wortart": "nomen"
   },
   {
     "id": "kaese",
@@ -720,7 +806,8 @@
     "syllables": ["Kä", "se"],
     "image": "1F9C0",
     "category": "essen",
-    "similar": ["hase", "nase"]
+    "similar": ["hase", "nase"],
+    "wortart": "nomen"
   },
   {
     "id": "seife",
@@ -728,7 +815,8 @@
     "syllables": ["Sei", "fe"],
     "image": "1F9FC",
     "category": "dinge",
-    "similar": ["ameise"]
+    "similar": ["ameise"],
+    "wortart": "nomen"
   },
   {
     "id": "schule",
@@ -736,7 +824,8 @@
     "syllables": ["Schu", "le"],
     "image": "1F3EB",
     "category": "dinge",
-    "similar": ["eule"]
+    "similar": ["eule"],
+    "wortart": "nomen"
   },
   {
     "id": "baum",
@@ -744,7 +833,8 @@
     "syllables": ["Baum"],
     "image": "1F333",
     "category": "natur",
-    "similar": ["maus"]
+    "similar": ["maus"],
+    "wortart": "nomen"
   },
   {
     "id": "milch",
@@ -752,7 +842,8 @@
     "syllables": ["Milch"],
     "image": "1F95B",
     "category": "essen",
-    "similar": ["pilz"]
+    "similar": ["pilz"],
+    "wortart": "nomen"
   },
   {
     "id": "bein",
@@ -760,7 +851,8 @@
     "syllables": ["Bein"],
     "image": "1F9B5",
     "category": "koerper",
-    "similar": ["eis"]
+    "similar": ["eis"],
+    "wortart": "nomen"
   },
   {
     "id": "drache",
@@ -768,7 +860,8 @@
     "syllables": ["Dra", "che"],
     "image": "1F409",
     "category": "tiere",
-    "similar": ["krake"]
+    "similar": ["krake"],
+    "wortart": "nomen"
   },
   {
     "id": "kuchen",
@@ -776,7 +869,8 @@
     "syllables": ["Ku", "chen"],
     "image": "1F370",
     "category": "essen",
-    "similar": ["kuli"]
+    "similar": ["kuli"],
+    "wortart": "nomen"
   },
   {
     "id": "schwan",
@@ -784,7 +878,8 @@
     "syllables": ["Schwan"],
     "image": "1F9A2",
     "category": "tiere",
-    "similar": ["schaf"]
+    "similar": ["schaf"],
+    "wortart": "nomen"
   },
   {
     "id": "pfau",
@@ -792,7 +887,8 @@
     "syllables": ["Pfau"],
     "image": "1F99A",
     "category": "tiere",
-    "similar": ["baum"]
+    "similar": ["baum"],
+    "wortart": "nomen"
   },
   {
     "id": "papagei",
@@ -800,6 +896,1820 @@
     "syllables": ["Pa", "pa", "gei"],
     "image": "1F99C",
     "category": "tiere",
-    "similar": ["papa"]
+    "similar": ["papa"],
+    "wortart": "nomen"
+  },
+  {
+    "id": "name",
+    "text": "Name",
+    "syllables": ["Na", "me"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "ende",
+    "text": "Ende",
+    "syllables": ["En", "de"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "tante",
+    "text": "Tante",
+    "syllables": ["Tan", "te"],
+    "wortart": "nomen",
+    "category": "menschen"
+  },
+  {
+    "id": "frau",
+    "text": "Frau",
+    "syllables": ["Frau"],
+    "wortart": "nomen",
+    "category": "menschen"
+  },
+  {
+    "id": "pirat",
+    "text": "Pirat",
+    "syllables": ["Pi", "rat"],
+    "wortart": "nomen",
+    "category": "menschen"
+  },
+  {
+    "id": "pilot",
+    "text": "Pilot",
+    "syllables": ["Pi", "lot"],
+    "wortart": "nomen",
+    "category": "menschen"
+  },
+  {
+    "id": "mut",
+    "text": "Mut",
+    "syllables": ["Mut"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "wut",
+    "text": "Wut",
+    "syllables": ["Wut"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "rat",
+    "text": "Rat",
+    "syllables": ["Rat"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "tal",
+    "text": "Tal",
+    "syllables": ["Tal"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "hof",
+    "text": "Hof",
+    "syllables": ["Hof"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "mus",
+    "text": "Mus",
+    "syllables": ["Mus"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "rasen",
+    "text": "Rasen",
+    "syllables": ["Ra", "sen"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "kino",
+    "text": "Kino",
+    "syllables": ["Ki", "no"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "reise",
+    "text": "Reise",
+    "syllables": ["Rei", "se"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "leine",
+    "text": "Leine",
+    "syllables": ["Lei", "ne"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "kugel",
+    "text": "Kugel",
+    "syllables": ["Ku", "gel"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "hupe",
+    "text": "Hupe",
+    "syllables": ["Hu", "pe"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "tube",
+    "text": "Tube",
+    "syllables": ["Tu", "be"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "wade",
+    "text": "Wade",
+    "syllables": ["Wa", "de"],
+    "wortart": "nomen",
+    "category": "koerper"
+  },
+  {
+    "id": "made",
+    "text": "Made",
+    "syllables": ["Ma", "de"],
+    "wortart": "nomen",
+    "category": "tiere"
+  },
+  {
+    "id": "rute",
+    "text": "Rute",
+    "syllables": ["Ru", "te"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "salami",
+    "text": "Salami",
+    "syllables": ["Sa", "la", "mi"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "rosine",
+    "text": "Rosine",
+    "syllables": ["Ro", "si", "ne"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "domino",
+    "text": "Domino",
+    "syllables": ["Do", "mi", "no"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "limonade",
+    "text": "Limonade",
+    "syllables": ["Li", "mo", "na", "de"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "kakao",
+    "text": "Kakao",
+    "syllables": ["Ka", "ka", "o"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "kamin",
+    "text": "Kamin",
+    "syllables": ["Ka", "min"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "ofen",
+    "text": "Ofen",
+    "syllables": ["O", "fen"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "hafen",
+    "text": "Hafen",
+    "syllables": ["Ha", "fen"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "laden",
+    "text": "Laden",
+    "syllables": ["La", "den"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "faden",
+    "text": "Faden",
+    "syllables": ["Fa", "den"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "boden",
+    "text": "Boden",
+    "syllables": ["Bo", "den"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "tafel",
+    "text": "Tafel",
+    "syllables": ["Ta", "fel"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "salto",
+    "text": "Salto",
+    "syllables": ["Sal", "to"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "ast",
+    "text": "Ast",
+    "syllables": ["Ast"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "post",
+    "text": "Post",
+    "syllables": ["Post"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "rost",
+    "text": "Rost",
+    "syllables": ["Rost"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "mast",
+    "text": "Mast",
+    "syllables": ["Mast"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "atlas",
+    "text": "Atlas",
+    "syllables": ["At", "las"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "kilo",
+    "text": "Kilo",
+    "syllables": ["Ki", "lo"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "gras",
+    "text": "Gras",
+    "syllables": ["Gras"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "glas",
+    "text": "Glas",
+    "syllables": ["Glas"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "kanal",
+    "text": "Kanal",
+    "syllables": ["Ka", "nal"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "roman",
+    "text": "Roman",
+    "syllables": ["Ro", "man"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "film",
+    "text": "Film",
+    "syllables": ["Film"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "kiste",
+    "text": "Kiste",
+    "syllables": ["Kis", "te"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "aufgabe",
+    "text": "Aufgabe",
+    "syllables": ["Auf", "ga", "be"],
+    "wortart": "nomen",
+    "category": "dinge"
+  },
+  {
+    "id": "gemuese",
+    "text": "Gemüse",
+    "syllables": ["Ge", "mü", "se"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "pause",
+    "text": "Pause",
+    "syllables": ["Pau", "se"],
+    "wortart": "nomen",
+    "category": "zeit"
+  },
+  {
+    "id": "minute",
+    "text": "Minute",
+    "syllables": ["Mi", "nu", "te"],
+    "wortart": "nomen",
+    "category": "zeit"
+  },
+  {
+    "id": "sekunde",
+    "text": "Sekunde",
+    "syllables": ["Se", "kun", "de"],
+    "wortart": "nomen",
+    "category": "zeit"
+  },
+  {
+    "id": "monat",
+    "text": "Monat",
+    "syllables": ["Mo", "nat"],
+    "wortart": "nomen",
+    "category": "zeit"
+  },
+  {
+    "id": "woche",
+    "text": "Woche",
+    "syllables": ["Wo", "che"],
+    "wortart": "nomen",
+    "category": "zeit"
+  },
+  {
+    "id": "moment",
+    "text": "Moment",
+    "syllables": ["Mo", "ment"],
+    "wortart": "nomen",
+    "category": "zeit"
+  },
+  {
+    "id": "malen",
+    "text": "malen",
+    "syllables": ["ma", "len"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "holen",
+    "text": "holen",
+    "syllables": ["ho", "len"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "rufen",
+    "text": "rufen",
+    "syllables": ["ru", "fen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "baden",
+    "text": "baden",
+    "syllables": ["ba", "den"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "reden",
+    "text": "reden",
+    "syllables": ["re", "den"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "lesen",
+    "text": "lesen",
+    "syllables": ["le", "sen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "leben",
+    "text": "leben",
+    "syllables": ["le", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "geben",
+    "text": "geben",
+    "syllables": ["ge", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "sagen",
+    "text": "sagen",
+    "syllables": ["sa", "gen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "legen",
+    "text": "legen",
+    "syllables": ["le", "gen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "fegen",
+    "text": "fegen",
+    "syllables": ["fe", "gen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "loben",
+    "text": "loben",
+    "syllables": ["lo", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "toben",
+    "text": "toben",
+    "syllables": ["to", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "raten",
+    "text": "raten",
+    "syllables": ["ra", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "beten",
+    "text": "beten",
+    "syllables": ["be", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "heben",
+    "text": "heben",
+    "syllables": ["he", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "graben",
+    "text": "graben",
+    "syllables": ["gra", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "kleben",
+    "text": "kleben",
+    "syllables": ["kle", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "nagen",
+    "text": "nagen",
+    "syllables": ["na", "gen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "fragen",
+    "text": "fragen",
+    "syllables": ["fra", "gen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "haben",
+    "text": "haben",
+    "syllables": ["ha", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "finden",
+    "text": "finden",
+    "syllables": ["fin", "den"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "tanzen",
+    "text": "tanzen",
+    "syllables": ["tan", "zen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "atmen",
+    "text": "atmen",
+    "syllables": ["at", "men"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "pusten",
+    "text": "pusten",
+    "syllables": ["pus", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "kosten",
+    "text": "kosten",
+    "syllables": ["kos", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "testen",
+    "text": "testen",
+    "syllables": ["tes", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "rasten",
+    "text": "rasten",
+    "syllables": ["ras", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "landen",
+    "text": "landen",
+    "syllables": ["lan", "den"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "enden",
+    "text": "enden",
+    "syllables": ["en", "den"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "senden",
+    "text": "senden",
+    "syllables": ["sen", "den"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "melden",
+    "text": "melden",
+    "syllables": ["mel", "den"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "falten",
+    "text": "falten",
+    "syllables": ["fal", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "halten",
+    "text": "halten",
+    "syllables": ["hal", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "basteln",
+    "text": "basteln",
+    "syllables": ["bas", "teln"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "rodeln",
+    "text": "rodeln",
+    "syllables": ["ro", "deln"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "hupen",
+    "text": "hupen",
+    "syllables": ["hu", "pen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "tun",
+    "text": "tun",
+    "syllables": ["tun"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "laufen",
+    "text": "laufen",
+    "syllables": ["lau", "fen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "kaufen",
+    "text": "kaufen",
+    "syllables": ["kau", "fen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "raufen",
+    "text": "raufen",
+    "syllables": ["rau", "fen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "taufen",
+    "text": "taufen",
+    "syllables": ["tau", "fen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "machen",
+    "text": "machen",
+    "syllables": ["ma", "chen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "lachen",
+    "text": "lachen",
+    "syllables": ["la", "chen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "kochen",
+    "text": "kochen",
+    "syllables": ["ko", "chen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "suchen",
+    "text": "suchen",
+    "syllables": ["su", "chen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "tauchen",
+    "text": "tauchen",
+    "syllables": ["tau", "chen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "naschen",
+    "text": "naschen",
+    "syllables": ["na", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "waschen",
+    "text": "waschen",
+    "syllables": ["wa", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "duschen",
+    "text": "duschen",
+    "syllables": ["du", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "wischen",
+    "text": "wischen",
+    "syllables": ["wi", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "fischen",
+    "text": "fischen",
+    "syllables": ["fi", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "tauschen",
+    "text": "tauschen",
+    "syllables": ["tau", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "kuscheln",
+    "text": "kuscheln",
+    "syllables": ["ku", "scheln"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "hoeren",
+    "text": "hören",
+    "syllables": ["hö", "ren"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "loesen",
+    "text": "lösen",
+    "syllables": ["lö", "sen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "rechnen",
+    "text": "rechnen",
+    "syllables": ["rech", "nen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "schreiben",
+    "text": "schreiben",
+    "syllables": ["schrei", "ben"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "reiten",
+    "text": "reiten",
+    "syllables": ["rei", "ten"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "reisen",
+    "text": "reisen",
+    "syllables": ["rei", "sen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "heilen",
+    "text": "heilen",
+    "syllables": ["hei", "len"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "teilen",
+    "text": "teilen",
+    "syllables": ["tei", "len"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "weinen",
+    "text": "weinen",
+    "syllables": ["wei", "nen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "heizen",
+    "text": "heizen",
+    "syllables": ["hei", "zen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "pfeifen",
+    "text": "pfeifen",
+    "syllables": ["pfei", "fen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "baumeln",
+    "text": "baumeln",
+    "syllables": ["bau", "meln"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "wuenschen",
+    "text": "wünschen",
+    "syllables": ["wün", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "schaukeln",
+    "text": "schaukeln",
+    "syllables": ["schau", "keln"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "sausen",
+    "text": "sausen",
+    "syllables": ["sau", "sen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "brausen",
+    "text": "brausen",
+    "syllables": ["brau", "sen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "lauschen",
+    "text": "lauschen",
+    "syllables": ["lau", "schen"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "rot",
+    "text": "rot",
+    "syllables": ["rot"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "gut",
+    "text": "gut",
+    "syllables": ["gut"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "lila",
+    "text": "lila",
+    "syllables": ["li", "la"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "rosa",
+    "text": "rosa",
+    "syllables": ["ro", "sa"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "laut",
+    "text": "laut",
+    "syllables": ["laut"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "blau",
+    "text": "blau",
+    "syllables": ["blau"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "grau",
+    "text": "grau",
+    "syllables": ["grau"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "braun",
+    "text": "braun",
+    "syllables": ["braun"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "alt",
+    "text": "alt",
+    "syllables": ["alt"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "kalt",
+    "text": "kalt",
+    "syllables": ["kalt"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "klein",
+    "text": "klein",
+    "syllables": ["klein"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "fein",
+    "text": "fein",
+    "syllables": ["fein"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "neu",
+    "text": "neu",
+    "syllables": ["neu"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "leise",
+    "text": "leise",
+    "syllables": ["lei", "se"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "weit",
+    "text": "weit",
+    "syllables": ["weit"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "faul",
+    "text": "faul",
+    "syllables": ["faul"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "bunt",
+    "text": "bunt",
+    "syllables": ["bunt"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "schoen",
+    "text": "schön",
+    "syllables": ["schön"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "fit",
+    "text": "fit",
+    "syllables": ["fit"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "gruen",
+    "text": "grün",
+    "syllables": ["grün"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "schlau",
+    "text": "schlau",
+    "syllables": ["schlau"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "sanft",
+    "text": "sanft",
+    "syllables": ["sanft"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "fest",
+    "text": "fest",
+    "syllables": ["fest"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "muede",
+    "text": "müde",
+    "syllables": ["mü", "de"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "boese",
+    "text": "böse",
+    "syllables": ["bö", "se"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "hoch",
+    "text": "hoch",
+    "syllables": ["hoch"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "heil",
+    "text": "heil",
+    "syllables": ["heil"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "rein",
+    "text": "rein",
+    "syllables": ["rein"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "wach",
+    "text": "wach",
+    "syllables": ["wach"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "schwach",
+    "text": "schwach",
+    "syllables": ["schwach"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "prima",
+    "text": "prima",
+    "syllables": ["pri", "ma"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "edel",
+    "text": "edel",
+    "syllables": ["e", "del"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften"
+  },
+  {
+    "id": "am",
+    "text": "am",
+    "syllables": ["am"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "im",
+    "text": "im",
+    "syllables": ["im"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "um",
+    "text": "um",
+    "syllables": ["um"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "an",
+    "text": "an",
+    "syllables": ["an"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "in",
+    "text": "in",
+    "syllables": ["in"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "es",
+    "text": "es",
+    "syllables": ["es"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "so",
+    "text": "so",
+    "syllables": ["so"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "da",
+    "text": "da",
+    "syllables": ["da"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "mal",
+    "text": "mal",
+    "syllables": ["mal"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "mit",
+    "text": "mit",
+    "syllables": ["mit"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "ist",
+    "text": "ist",
+    "syllables": ["ist"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "ein",
+    "text": "ein",
+    "syllables": ["ein"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "eine",
+    "text": "eine",
+    "syllables": ["ei", "ne"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "wo",
+    "text": "wo",
+    "syllables": ["wo"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "nun",
+    "text": "nun",
+    "syllables": ["nun"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "aus",
+    "text": "aus",
+    "syllables": ["aus"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "auf",
+    "text": "auf",
+    "syllables": ["auf"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "los",
+    "text": "los",
+    "syllables": ["los"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "hin",
+    "text": "hin",
+    "syllables": ["hin"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "du",
+    "text": "du",
+    "syllables": ["du"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "man",
+    "text": "man",
+    "syllables": ["man"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "ja",
+    "text": "ja",
+    "syllables": ["ja"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "bei",
+    "text": "bei",
+    "syllables": ["bei"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "mein",
+    "text": "mein",
+    "syllables": ["mein"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "dein",
+    "text": "dein",
+    "syllables": ["dein"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "sein",
+    "text": "sein",
+    "syllables": ["sein"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "uns",
+    "text": "uns",
+    "syllables": ["uns"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "als",
+    "text": "als",
+    "syllables": ["als"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "also",
+    "text": "also",
+    "syllables": ["al", "so"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "oben",
+    "text": "oben",
+    "syllables": ["o", "ben"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "unten",
+    "text": "unten",
+    "syllables": ["un", "ten"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "hinten",
+    "text": "hinten",
+    "syllables": ["hin", "ten"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "fast",
+    "text": "fast",
+    "syllables": ["fast"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "heute",
+    "text": "heute",
+    "syllables": ["heu", "te"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "oft",
+    "text": "oft",
+    "syllables": ["oft"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "einmal",
+    "text": "einmal",
+    "syllables": ["ein", "mal"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "selten",
+    "text": "selten",
+    "syllables": ["sel", "ten"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "rechts",
+    "text": "rechts",
+    "syllables": ["rechts"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "doch",
+    "text": "doch",
+    "syllables": ["doch"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "ich",
+    "text": "ich",
+    "syllables": ["ich"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "nach",
+    "text": "nach",
+    "syllables": ["nach"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "nein",
+    "text": "nein",
+    "syllables": ["nein"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "nicht",
+    "text": "nicht",
+    "syllables": ["nicht"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "schon",
+    "text": "schon",
+    "syllables": ["schon"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "was",
+    "text": "was",
+    "syllables": ["was"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "weil",
+    "text": "weil",
+    "syllables": ["weil"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "mila",
+    "text": "Mila",
+    "syllables": ["Mi", "la"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lilo",
+    "text": "Lilo",
+    "syllables": ["Li", "lo"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "leo",
+    "text": "Leo",
+    "syllables": ["Le", "o"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ole",
+    "text": "Ole",
+    "syllables": ["O", "le"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "emil",
+    "text": "Emil",
+    "syllables": ["E", "mil"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "uli",
+    "text": "Uli",
+    "syllables": ["U", "li"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lea",
+    "text": "Lea",
+    "syllables": ["Le", "a"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ina",
+    "text": "Ina",
+    "syllables": ["I", "na"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "tim",
+    "text": "Tim",
+    "syllables": ["Tim"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "tom",
+    "text": "Tom",
+    "syllables": ["Tom"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "udo",
+    "text": "Udo",
+    "syllables": ["U", "do"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ida",
+    "text": "Ida",
+    "syllables": ["I", "da"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lina",
+    "text": "Lina",
+    "syllables": ["Li", "na"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "nina",
+    "text": "Nina",
+    "syllables": ["Ni", "na"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "timo",
+    "text": "Timo",
+    "syllables": ["Ti", "mo"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lisa",
+    "text": "Lisa",
+    "syllables": ["Li", "sa"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "toni",
+    "text": "Toni",
+    "syllables": ["To", "ni"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "mia",
+    "text": "Mia",
+    "syllables": ["Mi", "a"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ela",
+    "text": "Ela",
+    "syllables": ["E", "la"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ali",
+    "text": "Ali",
+    "syllables": ["A", "li"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lola",
+    "text": "Lola",
+    "syllables": ["Lo", "la"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "momo",
+    "text": "Momo",
+    "syllables": ["Mo", "mo"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "paul",
+    "text": "Paul",
+    "syllables": ["Paul"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "luka",
+    "text": "Luka",
+    "syllables": ["Lu", "ka"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "tina",
+    "text": "Tina",
+    "syllables": ["Ti", "na"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "nele",
+    "text": "Nele",
+    "syllables": ["Ne", "le"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "malte",
+    "text": "Malte",
+    "syllables": ["Mal", "te"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "pia",
+    "text": "Pia",
+    "syllables": ["Pi", "a"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ben",
+    "text": "Ben",
+    "syllables": ["Ben"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lukas",
+    "text": "Lukas",
+    "syllables": ["Lu", "kas"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "jonas",
+    "text": "Jonas",
+    "syllables": ["Jo", "nas"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "elias",
+    "text": "Elias",
+    "syllables": ["E", "li", "as"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "leon",
+    "text": "Leon",
+    "syllables": ["Le", "on"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "paula",
+    "text": "Paula",
+    "syllables": ["Pau", "la"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lena",
+    "text": "Lena",
+    "syllables": ["Le", "na"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "tobi",
+    "text": "Tobi",
+    "syllables": ["To", "bi"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "susi",
+    "text": "Susi",
+    "syllables": ["Su", "si"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "fabian",
+    "text": "Fabian",
+    "syllables": ["Fa", "bi", "an"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ilka",
+    "text": "Ilka",
+    "syllables": ["Il", "ka"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "alma",
+    "text": "Alma",
+    "syllables": ["Al", "ma"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "mona",
+    "text": "Mona",
+    "syllables": ["Mo", "na"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "ute",
+    "text": "Ute",
+    "syllables": ["U", "te"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "uwe",
+    "text": "Uwe",
+    "syllables": ["U", "we"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "olaf",
+    "text": "Olaf",
+    "syllables": ["O", "laf"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "rudi",
+    "text": "Rudi",
+    "syllables": ["Ru", "di"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "elif",
+    "text": "Elif",
+    "syllables": ["E", "lif"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "mira",
+    "text": "Mira",
+    "syllables": ["Mi", "ra"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "sami",
+    "text": "Sami",
+    "syllables": ["Sa", "mi"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lara",
+    "text": "Lara",
+    "syllables": ["La", "ra"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "sara",
+    "text": "Sara",
+    "syllables": ["Sa", "ra"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "nora",
+    "text": "Nora",
+    "syllables": ["No", "ra"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "dana",
+    "text": "Dana",
+    "syllables": ["Da", "na"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "lino",
+    "text": "Lino",
+    "syllables": ["Li", "no"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "milan",
+    "text": "Milan",
+    "syllables": ["Mi", "lan"],
+    "wortart": "name",
+    "category": "namen"
+  },
+  {
+    "id": "anton",
+    "text": "Anton",
+    "syllables": ["An", "ton"],
+    "wortart": "name",
+    "category": "namen"
   }
 ]

@@ -5,7 +5,9 @@ import { findWord, gradeWords, itemId, spoken, type LesenParams } from '../share
 import SilbenKlatschenTask from './SilbenKlatschenTask.vue'
 
 export interface SilbenKlatschenData {
-  image: string
+  /** Optional: words without a picture are only heard (🔊). */
+  image?: string
+  spoken: string
   syllables: string[]
   coloring: boolean
   arcs: boolean
@@ -37,6 +39,7 @@ export const silbenKlatschen: ExerciseModule<LesenParams, SilbenKlatschenData> =
       solution: `${word.syllables.join(' – ')}. ${spoken(word)} hat ${counted}.`,
       data: {
         image: word.image,
+        spoken: spoken(word),
         syllables: word.syllables,
         coloring: ctx.settings.syllableColoring,
         arcs: ctx.settings.syllableArcs,

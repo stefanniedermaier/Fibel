@@ -69,7 +69,7 @@ export function itemId(itemKey: string): string {
   return itemKey.slice(itemKey.indexOf(':') + 1)
 }
 
-export function findWord(words: readonly Word[], id: string): Word {
+export function findWord<W extends Word>(words: readonly W[], id: string): W {
   const word = words.find((w) => w.id === id)
   if (!word) throw new Error(`Unbekanntes Wort: ${id}`)
   return word
@@ -79,13 +79,15 @@ export function findWord(words: readonly Word[], id: string): Word {
  * Distractors for a word: similar-looking words first (Rose → Dose, Hose), then random
  * ones. Never the word itself or a word with the same picture.
  */
-export function distractorWords(
+export function distractorWords<W extends Word>(
   target: Word,
-  candidates: readonly Word[],
+  candidates: readonly W[],
   count: number,
   rng: Rng,
-): Word[] {
-  const usable = candidates.filter((w) => w.id !== target.id && w.image !== target.image)
+): W[] {
+  const usable = candidates.filter(
+    (w) => w.id !== target.id && w.text.toLowerCase() !== target.text.toLowerCase(),
+  )
   const similar = new Set(target.similar ?? [])
   const first = shuffle(
     usable.filter((w) => similar.has(w.id)),
@@ -95,13 +97,19 @@ export function distractorWords(
     usable.filter((w) => !similar.has(w.id)),
     rng,
   )
-  const result: Word[] = []
-  const images = new Set([target.image])
+  const result: W[] = []
+  // Words without a picture never clash; pictures must all be different.
+  const images = new Set(target.image ? [target.image] : [])
   for (const w of [...first, ...rest]) {
     if (result.length >= count) break
-    if (images.has(w.image)) continue
-    images.add(w.image)
+    if (w.image && images.has(w.image)) continue
+    if (w.image) images.add(w.image)
     result.push(w)
   }
   return result
+}
+
+/** Only words with a picture (for the picture exercises). */
+export function withImage(words: readonly Word[]): (Word & { image: string })[] {
+  return words.filter((w): w is Word & { image: string } => typeof w.image === 'string')
 }

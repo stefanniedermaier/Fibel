@@ -103,11 +103,32 @@ describe('deriveLevel', () => {
 
 describe('Wortlisten mit Länderanpassung', () => {
   const base: WordEntry[] = [
-    { id: 'oma', text: 'Oma', syllables: ['O', 'ma'], image: '1F475', category: 'menschen' },
-    { id: 'opa', text: 'Opa', syllables: ['O', 'pa'], image: '1F474', category: 'menschen' },
+    {
+      id: 'oma',
+      text: 'Oma',
+      syllables: ['O', 'ma'],
+      image: '1F475',
+      category: 'menschen',
+      wortart: 'nomen',
+    },
+    {
+      id: 'opa',
+      text: 'Opa',
+      syllables: ['O', 'pa'],
+      image: '1F474',
+      category: 'menschen',
+      wortart: 'nomen',
+    },
   ]
   const extra: WordEntry[] = [
-    { id: 'rose', text: 'Rose', syllables: ['Ro', 'se'], image: '1F339', category: 'natur' },
+    {
+      id: 'rose',
+      text: 'Rose',
+      syllables: ['Ro', 'se'],
+      image: '1F339',
+      category: 'natur',
+      wortart: 'nomen',
+    },
   ]
   const overlay = (words: NonNullable<LandOverlay['words']>): LandOverlay => ({
     land: 'DE-XX',
@@ -156,7 +177,13 @@ describe('Wortlisten mit Länderanpassung', () => {
   it('filtert nach freigeschalteten Buchstaben (Startwerte Klasse 1)', () => {
     const settings = resolveDefaults('DE-BY', 1)
     const words = wordsForSettings(resolveWords('DE-BY', 1), settings)
-    expect(words.map((w) => w.text).sort()).toEqual(['Lama', 'Limo', 'Mama', 'Oma'])
+    // Nouns plus names and small words: far more than the 4 nouns of the first version.
+    expect(words.length).toBeGreaterThanOrEqual(15)
+    expect(words.map((w) => w.text)).toEqual(
+      expect.arrayContaining(['Oma', 'Mama', 'Lama', 'Limo', 'Mila', 'lila']),
+    )
+    const unlocked = new Set(settings.letters)
+    for (const w of words) expect(usesOnly(w.text, unlocked), w.text).toBe(true)
     const syllables = syllablesForSettings(baseSyllables(1), settings)
     expect(syllables.map((s) => s.text)).toEqual([
       'ma',

@@ -20,14 +20,18 @@ import BuchstabenLegenTask from './BuchstabenLegenTask.vue'
 import LueckeTask from './LueckeTask.vue'
 
 export interface BuchstabenLegenData {
-  image: string
+  /** Optional: words without a picture are only heard (🔊). */
+  image?: string
+  spoken: string
   target: string[]
   tiles: Tile[]
   capitalizeFirst: boolean
 }
 
 export interface LueckeData {
-  image: string
+  /** Optional: words without a picture are only heard (🔊). */
+  image?: string
+  spoken: string
   /** The word's graphemes; the one at `gap` is missing. */
   graphemes: string[]
   gap: number
@@ -60,6 +64,7 @@ export const buchstabenLegen: ExerciseModule<SchreibenParams, BuchstabenLegenDat
       solution: `So schreibt man ${spoken(word)}.`,
       data: {
         image: word.image,
+        spoken: spoken(word),
         target: word.graphemes,
         tiles: toTiles([...word.graphemes, ...extra], rng),
         capitalizeFirst: isCapitalised(word),
@@ -91,6 +96,7 @@ export const luecke: ExerciseModule<SchreibenParams, LueckeData> = {
       solution: `So schreibt man ${spoken(word)}.`,
       data: {
         image: word.image,
+        spoken: spoken(word),
         graphemes: word.graphemes,
         gap,
         capitalizeFirst: isCapitalised(word),

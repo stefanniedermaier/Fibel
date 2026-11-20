@@ -16,7 +16,9 @@ import {
 import AbcTastaturTask from './AbcTastaturTask.vue'
 
 export interface AbcTastaturData {
-  image: string
+  /** Optional: words without a picture are only heard (🔊). */
+  image?: string
+  spoken: string
   target: string
   /** Keys in school order (single letters and units like "sch", "ei"). */
   keys: string[]
@@ -58,6 +60,7 @@ export const abcTastatur: ExerciseModule<SchreibenParams, AbcTastaturData> = {
       solution: `So schreibt man ${spoken(word)}.`,
       data: {
         image: word.image,
+        spoken: spoken(word),
         target: word.text,
         keys,
         strictCase: ctx.settings.strictCase,

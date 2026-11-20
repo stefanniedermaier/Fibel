@@ -37,7 +37,10 @@ const RUNS = 30
 describe('Lesepool und Level', () => {
   it('enthält mit den Start-Buchstaben nur lesbare Wörter', () => {
     const pool = readingPool(start, params)
-    expect(pool.map((w) => w.text).sort()).toEqual(['Lama', 'Limo', 'Mama', 'Oma'])
+    expect(pool.length).toBeGreaterThanOrEqual(10)
+    expect(pool.map((w) => w.text)).toEqual(expect.arrayContaining(['Oma', 'Mama', 'Mila', 'Leo']))
+    const unlocked = new Set(startSettings.letters)
+    for (const w of pool) expect(usesOnly(w.text, unlocked), w.text).toBe(true)
   })
 
   it('beginnt ohne Lernstand bei Level 1', () => {
@@ -132,7 +135,8 @@ describe('L3 Bild → Wort', () => {
   })
 
   it('braucht mindestens drei lesbare Wörter', () => {
-    expect(bildWort.items(ctxWith({ letters: ['o', 'm', 'a'] }), params)).toEqual([])
+    // o + m only give Momo – one readable word, three are needed.
+    expect(bildWort.items(ctxWith({ letters: ['o', 'm'] }), params)).toEqual([])
   })
 })
 

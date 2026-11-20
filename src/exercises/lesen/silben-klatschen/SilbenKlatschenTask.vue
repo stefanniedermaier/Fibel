@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import ChoiceButtons from '@/components/ChoiceButtons.vue'
-import EmojiPicture from '@/components/EmojiPicture.vue'
+import WordPrompt from '@/components/WordPrompt.vue'
 import SyllableWord from '@/components/SyllableWord.vue'
 import type { SilbenKlatschenData } from './index'
 
@@ -22,7 +22,7 @@ function answer(correct: boolean) {
 
 <template>
   <div class="task">
-    <EmojiPicture :code="data.image" :size="140" />
+    <WordPrompt :image="data.image" :spoken="data.spoken" :size="140" />
     <div class="word" :class="{ visible: solved || revealed }" aria-live="polite">
       <SyllableWord
         v-if="solved || revealed"

@@ -93,14 +93,22 @@ export interface LandOverlay {
 // --- Dictionaries ------------------------------------------------------------
 
 /** A word as stored in the JSON dictionaries. */
+/** Word type – decides capitalisation (nouns and names capitalised). */
+export type Wortart = 'nomen' | 'verb' | 'adjektiv' | 'klein' | 'name'
+export const WORTARTEN: readonly Wortart[] = ['nomen', 'verb', 'adjektiv', 'klein', 'name']
+
 export interface WordEntry {
   id: string
-  /** Written form; nouns capitalised. */
+  /** Written form; nouns and names capitalised. */
   text: string
   /** Spoken syllables; joined they must give `text`. */
   syllables: string[]
-  /** OpenMoji code point(s), e.g. '1F339'. */
-  image: string
+  wortart: Wortart
+  /**
+   * OpenMoji code point(s), e.g. '1F339'. Optional: picture exercises only use words
+   * with a picture; the others read the word aloud instead.
+   */
+  image?: string
   category: string
   /** Ids of similar-looking words, used as targeted distractors. */
   similar?: string[]

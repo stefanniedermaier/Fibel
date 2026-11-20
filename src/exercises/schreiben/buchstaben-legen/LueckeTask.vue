@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import ChoiceButtons from '@/components/ChoiceButtons.vue'
-import EmojiPicture from '@/components/EmojiPicture.vue'
+import WordPrompt from '@/components/WordPrompt.vue'
 import type { LueckeData } from './index'
 
 const props = defineProps<{ data: LueckeData; revealed: boolean; locked: boolean }>()
@@ -34,7 +34,7 @@ const parts = computed(() =>
 
 <template>
   <div class="task">
-    <EmojiPicture :code="data.image" :size="120" />
+    <WordPrompt :image="data.image" :spoken="data.spoken" :size="120" />
     <p class="word">
       <span
         v-for="(p, i) in parts"

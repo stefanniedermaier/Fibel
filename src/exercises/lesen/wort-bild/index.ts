@@ -8,6 +8,7 @@ import {
   itemId,
   readingPool,
   spoken,
+  withImage,
   type LesenParams,
 } from '../shared'
 import WortBildTask from './WortBildTask.vue'
@@ -27,11 +28,11 @@ export const wortBild: ExerciseModule<LesenParams, WortBildData> = {
   topic: 'lesen',
 
   items(ctx, params) {
-    return readingPool(ctx, params).map((w) => `lesen.wort-bild:${w.id}`)
+    return withImage(readingPool(ctx, params)).map((w) => `lesen.wort-bild:${w.id}`)
   },
 
   generate(ctx, params, itemKey, rng) {
-    const all = gradeWords(ctx, params)
+    const all = withImage(gradeWords(ctx, params))
     const word = findWord(all, itemId(itemKey))
     // Pictures may show any word – the child only has to read the target word.
     const others = distractorWords(word, all, CHOICES - 1, rng)

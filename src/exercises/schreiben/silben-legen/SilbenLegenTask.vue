@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import EmojiPicture from '@/components/EmojiPicture.vue'
+import WordPrompt from '@/components/WordPrompt.vue'
 import TileBoard from '@/components/TileBoard.vue'
 import type { SilbenLegenData } from './index'
 
@@ -9,7 +9,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 
 <template>
   <div class="task">
-    <EmojiPicture :code="data.image" :size="120" />
+    <WordPrompt :image="data.image" :spoken="data.spoken" :size="120" />
     <TileBoard
       :tiles="data.tiles"
       :target="data.target"

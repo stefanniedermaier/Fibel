@@ -7,7 +7,7 @@ import { BASE_CATALOG, LAENDER, OVERLAYS, applyOverlay } from './content'
 import { graphemes } from './graphemes'
 import { checkLauttreu } from './lauttreue'
 import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
-import type { Syllable, Word } from './types'
+import { WORTARTEN, type Syllable, type Word } from './types'
 import { LETTERS, applyWordOverlay, baseSyllables, baseWordEntries } from './words'
 
 export const CATEGORIES = new Set([
@@ -19,6 +19,12 @@ export const CATEGORIES = new Set([
   'fahrzeuge',
   'koerper',
   'musik',
+  'zeit',
+  // Categories of the other word types
+  'tun',
+  'eigenschaften',
+  'woerter',
+  'namen',
 ])
 /** Known handwriting templates (folders under src/data/schriften). */
 export const SCRIPT_IDS = new Set(Object.keys(SCRIPTS))
@@ -57,9 +63,20 @@ function checkWords(
     if (w.syllables.join('') !== w.text) {
       problems.push(`${where}: Silben „${w.syllables.join('-')}“ ergeben nicht das Wort`)
     }
-    if (!images.has(w.image))
+    if (w.image !== undefined && !images.has(w.image))
       problems.push(`${where}: Bild ${w.image} fehlt (npm run data:openmoji)`)
     if (!CATEGORIES.has(w.category)) problems.push(`${where}: unbekannte Kategorie „${w.category}“`)
+    if (!WORTARTEN.includes(w.wortart)) {
+      problems.push(`${where}: unbekannte Wortart „${w.wortart}“`)
+    } else {
+      // Nouns and names start with a capital letter, everything else is lower case.
+      const first = w.text.charAt(0)
+      const capital = first !== first.toLowerCase()
+      const shouldBe = w.wortart === 'nomen' || w.wortart === 'name'
+      if (capital !== shouldBe) {
+        problems.push(`${where}: als ${w.wortart} ${shouldBe ? 'großschreiben' : 'kleinschreiben'}`)
+      }
+    }
     for (const g of w.graphemes) {
       if (!letterIds.has(g)) problems.push(`${where}: Graphem „${g}“ fehlt in letters.json`)
     }

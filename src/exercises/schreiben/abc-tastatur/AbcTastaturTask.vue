@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import EmojiPicture from '@/components/EmojiPicture.vue'
+import WordPrompt from '@/components/WordPrompt.vue'
 import { MAX_LETTERS, marks, matches, type AbcTastaturData } from './index'
 
 const props = defineProps<{ data: AbcTastaturData; revealed: boolean; locked: boolean }>()
@@ -61,7 +61,7 @@ function submit() {
 
 <template>
   <div class="task">
-    <EmojiPicture :code="data.image" :size="96" />
+    <WordPrompt :image="data.image" :spoken="data.spoken" :size="96" />
 
     <p class="typed" :class="{ wrong: state === 'wrong', right: state === 'right' || revealed }">
       <span

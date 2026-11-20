@@ -5,10 +5,30 @@ import { getLand } from '@/core/content'
 import { applyUpdate, needRefresh } from '@/core/pwa'
 import { backupDue, lastBackup } from '@/core/storage/backup'
 import { getDb } from '@/core/storage/db'
-import { APP_VERSION, fetchLatestVersion, isNewer, type VersionInfo } from '@/core/version'
+import {
+  APP_VERSION,
+  BUILD_TIME,
+  fetchLatestVersion,
+  isNewer,
+  type VersionInfo,
+} from '@/core/version'
 import { useAppStore } from '@/stores/app'
 
 const store = useAppStore()
+
+/** Test builds share a version number – the build time tells them apart. */
+function formatBuild(iso: string): string {
+  const date = new Date(iso)
+  if (Number.isNaN(date.getTime())) return '–'
+  return date.toLocaleString('de-DE', { dateStyle: 'short', timeStyle: 'short' })
+}
+
+function hasUpdate(info: VersionInfo): boolean {
+  return (
+    isNewer(info.version, APP_VERSION) ||
+    (info.version === APP_VERSION && info.builtAt > BUILD_TIME)
+  )
+}
 
 const remindBackup = ref(false)
 const latest = ref<VersionInfo | null>()
@@ -79,14 +99,17 @@ onMounted(async () => {
   <section class="card">
     <h2>Version</h2>
     <p>
-      Installiert: <strong>{{ APP_VERSION }}</strong><br />
+      Installiert: <strong>{{ APP_VERSION }}</strong>
+      <span class="muted">&nbsp;· Stand {{ formatBuild(BUILD_TIME) }}</span
+      ><br />
       Neueste:
-      <strong v-if="latest">{{ latest.version }}</strong>
+      <template v-if="latest">
+        <strong>{{ latest.version }}</strong>
+        <span class="muted">&nbsp;· Stand {{ formatBuild(latest.builtAt) }}</span>
+      </template>
       <span v-else-if="latest === null" class="muted">unbekannt (offline)</span>
       <span v-else class="muted">wird geprüft …</span>
-      <span v-if="latest && isNewer(latest.version, APP_VERSION)" class="new">
-        – Update verfügbar</span
-      >
+      <span v-if="latest && hasUpdate(latest)" class="new"> – Update verfügbar</span>
     </p>
   </section>
 

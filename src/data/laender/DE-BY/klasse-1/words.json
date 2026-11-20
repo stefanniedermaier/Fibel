@@ -5,7 +5,8 @@
     "syllables": ["Blü", "te"],
     "image": "1F338",
     "category": "natur",
-    "similar": ["blume"]
+    "similar": ["blume"],
+    "wortart": "nomen"
   },
   {
     "id": "buch",
@@ -13,7 +14,8 @@
     "syllables": ["Buch"],
     "image": "1F4D6",
     "category": "dinge",
-    "similar": ["bus"]
+    "similar": ["bus"],
+    "wortart": "nomen"
   },
   {
     "id": "raupe",
@@ -21,7 +23,8 @@
     "syllables": ["Rau", "pe"],
     "image": "1F41B",
     "category": "tiere",
-    "similar": ["rabe", "lupe"]
+    "similar": ["rabe", "lupe"],
+    "wortart": "nomen"
   },
   {
     "id": "schere",
@@ -29,7 +32,8 @@
     "syllables": ["Sche", "re"],
     "image": "2702",
     "category": "dinge",
-    "similar": ["schule"]
+    "similar": ["schule"],
+    "wortart": "nomen"
   },
   {
     "id": "nadel",
@@ -37,7 +41,8 @@
     "syllables": ["Na", "del"],
     "image": "1FAA1",
     "category": "dinge",
-    "similar": ["nudel", "gabel"]
+    "similar": ["nudel", "gabel"],
+    "wortart": "nomen"
   },
   {
     "id": "nebel",
@@ -45,7 +50,8 @@
     "syllables": ["Ne", "bel"],
     "image": "1F32B",
     "category": "natur",
-    "similar": ["gabel", "kabel"]
+    "similar": ["gabel", "kabel"],
+    "wortart": "nomen"
   },
   {
     "id": "euro",
@@ -53,6 +59,7 @@
     "syllables": ["Eu", "ro"],
     "image": "1F4B6",
     "category": "dinge",
-    "similar": ["eule"]
+    "similar": ["eule"],
+    "wortart": "nomen"
   }
 ]

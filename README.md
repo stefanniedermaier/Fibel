@@ -21,17 +21,23 @@ Im WLAN per `http://<PC-IP>:5173` lässt sich die Sprachausgabe testen, aber nic
 
 ## Veröffentlichen (GitHub Pages)
 
-Jeder Push auf `main` wird geprüft (Lint, Datenprüfung, Tests, Build), aber **nicht**
-veröffentlicht. Veröffentlicht wird nur eine Version mit Versions-Tag.
+Jeder Push auf `main` wird geprüft (Lint, Datenprüfung, Tests, Build) und veröffentlicht – das
+ist der Stand für Testrunden. Ebenso jeder Versions-Tag (`v1.0.0` …). Pull Requests werden nur
+geprüft.
+
+Im Elternbereich unter **Version** stehen Versionsnummer und Build-Zeitpunkt („Stand“) der
+installierten und der neuesten Fassung. Solange sich die Versionsnummer nicht ändert, erkennt man
+neue Testversionen am Stand.
 
 ### Einmalig einrichten
 
 1. Auf GitHub: **Settings → Pages → Source: GitHub Actions**.
-2. **Settings → Environments → github-pages → Deployment branches and tags**: eine Regel für
-   Tags mit dem Muster `v*` hinzufügen. Ohne diese Regel lehnt GitHub das Deployment von
-   Tags ab („not allowed to deploy to github-pages due to environment protection rules“).
+2. Erst für den ersten Versions-Tag: **Settings → Environments → github-pages → Deployment
+   branches and tags**: eine Regel für Tags mit dem Muster `v*` hinzufügen. Ohne diese Regel
+   lehnt GitHub das Deployment von Tags ab („not allowed to deploy to github-pages due to
+   environment protection rules“).
 
-### Neue Version veröffentlichen
+### Version veröffentlichen (wenn alles fertig ist)
 
 ```bash
 npm version minor            # oder patch / major: erhöht die Version, committet, legt Tag vX.Y.Z an

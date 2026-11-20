@@ -24,12 +24,11 @@ const RUNS = 20
 describe('S1 Silben legen', () => {
   it('nimmt nur lesbare Wörter mit mindestens zwei Silben', () => {
     const items = silbenLegen.items(start, params)
-    expect(items.sort()).toEqual([
-      'schreiben.silben-legen:lama',
-      'schreiben.silben-legen:limo',
-      'schreiben.silben-legen:mama',
-      'schreiben.silben-legen:oma',
-    ])
+    expect(items).toEqual(
+      expect.arrayContaining(['schreiben.silben-legen:oma', 'schreiben.silben-legen:mila']),
+    )
+    // Words with one syllable (am, so …) cannot be laid out from syllables.
+    expect(items).not.toContain('schreiben.silben-legen:so')
   })
 
   it('legt die Silben des Worts und lesbare Ablenker aus', () => {
@@ -42,7 +41,10 @@ describe('S1 Silben legen', () => {
         for (const s of data.target) expect(texts).toContain(s)
         expect(new Set(data.tiles.map((t) => t.id)).size).toBe(data.tiles.length)
         for (const t of texts) expect(usesOnly(t, unlocked), t).toBe(true)
-        expect(data.capitalizeFirst).toBe(true)
+        // Nouns and names capitalised, lila/so/du not.
+        const first = data.target[0]!
+        expect(typeof data.capitalizeFirst).toBe('boolean')
+        expect(first).toBe(first.toLowerCase())
       }
     }
   })

@@ -6,7 +6,7 @@ import { shuffle } from '@/core/random'
 import type { Letter } from '@/core/types'
 import { LETTERS } from '@/core/words'
 import type { ExerciseModule, LearnerContext } from '../../types'
-import { findWord, gradeWords, itemId, spoken, type LesenParams } from '../shared'
+import { findWord, gradeWords, itemId, spoken, withImage, type LesenParams } from '../shared'
 import AnlautTask from './AnlautTask.vue'
 
 export interface AnlautData {
@@ -28,7 +28,8 @@ function candidates(ctx: LearnerContext, params: LesenParams) {
   const letters = knownLetters(ctx)
   if (letters.length < CHOICES) return []
   const ids = new Set(letters.map((l) => l.id))
-  return gradeWords(ctx, params).filter(
+  // Picture + spoken word: only words with a picture.
+  return withImage(gradeWords(ctx, params)).filter(
     (w) => w.graphemes[0] !== undefined && ids.has(w.graphemes[0]),
   )
 }
@@ -42,7 +43,7 @@ export const anlaut: ExerciseModule<LesenParams, AnlautData> = {
   },
 
   generate(ctx, params, itemKey, rng) {
-    const word = findWord(gradeWords(ctx, params), itemId(itemKey))
+    const word = findWord(withImage(gradeWords(ctx, params)), itemId(itemKey))
     const first = word.graphemes[0] as string
     const letters = knownLetters(ctx)
     const target = letters.find((l) => l.id === first) as Letter
