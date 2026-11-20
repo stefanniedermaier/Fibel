@@ -568,7 +568,15 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 - **Variante B „Welches passt nicht dazu?“:** vier Bilder, drei davon mit gleichem Anlaut.
 - Beide funktionieren rein übers Hören, ohne Buchstaben. Fach: Lesen.
 
-### E5 – Reihen erkennen und fortsetzen (Umfang M, unabhängig)
+### E5 – Reihen erkennen und fortsetzen (Umfang M, unabhängig) – ✅ umgesetzt
+
+**Stand:**
+- Die Übung „Reihen erkennen“ im Fach Rechnen hat 5 Level und 17 Mustertypen.
+- **Muster:** Jede Form hat ihre eigene Farbe, z. B. roter Kreis und blaues Viereck. Bei den Bildern sind nur klar unterscheidbare Motive dabei; Hund und Katze sahen sich in OpenMoji zu ähnlich, deshalb gibt es keinen Hund.
+- **Länge:** Eine Reihe zeigt genau zwei Wiederholungen plus ein Element. So passt sie auch bei 360 px Breite in eine Zeile, was für jeden Mustertyp gemessen ist.
+- **Lücke:** Ab Level 3 liegt sie manchmal in der Mitte.
+- **Zahlenfolgen:** Sie bleiben immer zwischen 0 und 20. Die Lösung nennt die Regel („Es geht immer zwei weiter.“).
+- **Level:** Das nächste Level öffnet sich bei 80 % sicheren Mustern. Im Elternbereich (Rechnen) lässt es sich auch von Hand setzen.
 
 - **Neue Übung im Fach Rechnen.** Eine Reihe wird gezeigt, ein Element fehlt, drei Möglichkeiten stehen zur Wahl. Später kann die Lücke auch in der Mitte liegen.
 - **Level:**

@@ -9,6 +9,7 @@ import { wortBild } from './lesen/wort-bild'
 import { mengeLegen } from './rechnen/menge-legen'
 import { mengen } from './rechnen/mengen'
 import { plusMinus } from './rechnen/plus-minus'
+import { reihen } from './rechnen/reihen'
 import { vergleichen } from './rechnen/vergleichen'
 import { zahlenhaus } from './rechnen/zahlenhaus'
 import { abcTastatur } from './schreiben/abc-tastatur'
@@ -37,6 +38,7 @@ register(mengeLegen)
 register(vergleichen)
 register(zahlenhaus)
 register(plusMinus)
+register(reihen)
 register(silbenLegen)
 register(luecke)
 register(buchstabenLegen)

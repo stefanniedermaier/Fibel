@@ -12,6 +12,7 @@ import {
   wordsForSettings,
 } from '@/core/words'
 import { READING_LEVEL_KEY } from '@/exercises/lesen/shared'
+import { LEVEL_KEY as REIHEN_LEVEL_KEY } from '@/exercises/rechnen/reihen'
 import {
   DEFAULT_LAND,
   LAENDER,
@@ -94,6 +95,20 @@ function lettersUpTo(id: string) {
   const index = LETTERS.findIndex((l) => l.id === id)
   settings.value.letters = LETTERS.slice(0, index + 1).map((l) => l.id)
 }
+
+/** A level set by hand (0 = automatic), stored in settings.levels[key]. */
+function levelSetting(key: string) {
+  return computed({
+    get: () => settings.value.levels[key] ?? 0,
+    set: (level: number) => {
+      const levels = { ...settings.value.levels }
+      if (level === 0) delete levels[key]
+      else levels[key] = level
+      settings.value.levels = levels
+    },
+  })
+}
+const reihenLevelSetting = levelSetting(REIHEN_LEVEL_KEY)
 
 const readingLevel = computed({
   get: () => settings.value.levels[READING_LEVEL_KEY] ?? 0,
@@ -321,6 +336,17 @@ async function remove() {
       <label v-if="settings.numberRange >= 20" class="check">
         <input v-model="settings.tenCrossing" type="checkbox" />
         Mit Zehnerübergang (z. B. 8 + 5, 13 − 5)
+      </label>
+      <label>
+        Reihen erkennen: Level
+        <select v-model.number="reihenLevelSetting">
+          <option :value="0">automatisch (steigt mit dem Lernfortschritt)</option>
+          <option :value="1">1 – Formen im Wechsel (AB)</option>
+          <option :value="2">2 – Formen-Muster (AAB, ABB, ABC)</option>
+          <option :value="3">3 – Bilder-Muster, Lücke auch in der Mitte</option>
+          <option :value="4">4 – Zahlenfolgen +1, +2, −1</option>
+          <option :value="5">5 – größere Sprünge bis 20</option>
+        </select>
       </label>
     </section>
 

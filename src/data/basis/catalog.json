@@ -150,5 +150,13 @@
     "exercise": "rechnen.plus-minus",
     "params": { "max": 20, "above": 10 },
     "title": "Plus und Minus bis 20"
+  },
+  {
+    "id": "k1.rechnen.reihen",
+    "grade": 1,
+    "topic": "rechnen",
+    "exercise": "rechnen.reihen",
+    "params": {},
+    "title": "Reihen erkennen"
   }
 ]

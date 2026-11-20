@@ -3,6 +3,7 @@
  * Returns a list of readable problems; empty = everything fine.
  */
 import avatars from '@/data/common/avatars.json'
+import reihenBilder from '@/data/common/reihen-bilder.json'
 import { BASE_CATALOG, LAENDER, OVERLAYS, applyOverlay } from './content'
 import { graphemes } from './graphemes'
 import { MIN_ANLAUT_GROUP, groupBy, listenEntries, resolveListenWords } from './hoeren'
@@ -179,6 +180,12 @@ export function checkData(images: ReadonlySet<string>): string[] {
 
   for (const a of avatars) {
     if (!images.has(a.image)) problems.push(`Avatar „${a.label}“: Bild ${a.image} fehlt`)
+  }
+  for (const b of reihenBilder) {
+    if (!images.has(b.image)) problems.push(`Reihen-Bild „${b.name}“: Bild ${b.image} fehlt`)
+  }
+  if (new Set(reihenBilder.map((b) => b.image)).size !== reihenBilder.length) {
+    problems.push('Reihen-Bilder: ein Bild kommt doppelt vor')
   }
 
   for (const grade of CONTENT_GRADES) {
