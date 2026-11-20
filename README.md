@@ -12,6 +12,8 @@ npm test           # Unit-Tests (Vitest)
 npm run lint       # ESLint
 npm run build      # Typecheck + Produktions-Build nach dist/
 npm run preview    # Build lokal ansehen (mit Service Worker)
+npm run data:check     # Wörterbücher, Lauttreue, Bilder, Schrift-Vorlagen prüfen
+npm run data:openmoji  # benötigte OpenMoji-Bilder nach public/img/openmoji kopieren
 ```
 
 Der Service Worker (Offline-Betrieb, Installation) funktioniert nur über HTTPS oder `localhost`.
@@ -19,10 +21,26 @@ Im WLAN per `http://<PC-IP>:5173` lässt sich die Sprachausgabe testen, aber nic
 
 ## Veröffentlichen (GitHub Pages)
 
-1. Repo auf GitHub anlegen und pushen (Branch `main`).
-2. Auf GitHub: **Settings → Pages → Source: GitHub Actions**.
-3. Jeder Push auf `main` prüft (Lint, Tests), baut und veröffentlicht unter
-   `https://<benutzer>.github.io/<repo>/`.
+Jeder Push auf `main` wird geprüft (Lint, Datenprüfung, Tests, Build), aber **nicht**
+veröffentlicht. Veröffentlicht wird nur eine Version mit Versions-Tag.
+
+### Einmalig einrichten
+
+1. Auf GitHub: **Settings → Pages → Source: GitHub Actions**.
+2. **Settings → Environments → github-pages → Deployment branches and tags**: eine Regel für
+   Tags mit dem Muster `v*` hinzufügen. Ohne diese Regel lehnt GitHub das Deployment von
+   Tags ab („not allowed to deploy to github-pages due to environment protection rules“).
+
+### Neue Version veröffentlichen
+
+```bash
+npm version minor            # oder patch / major: erhöht die Version, committet, legt Tag vX.Y.Z an
+git push --follow-tags       # pusht Commit und Tag – der Tag löst das Deployment aus
+```
+
+Der Workflow prüft, ob der Tag zur Version in `package.json` passt. Danach ist die App unter
+`https://<benutzer>.github.io/<repo>/` aktuell. Im Elternbereich unter **Version** stehen die
+installierte und die neueste Version; das Update wird dort bestätigt, nie mitten in einer Übung.
 
 Das Repo ist öffentlich: Es enthält keine Daten der Kinder. Profile und Fortschritt entstehen nur
 auf dem Gerät.

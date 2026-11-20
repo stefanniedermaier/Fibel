@@ -1,17 +1,19 @@
-name: Deploy to GitHub Pages
+name: Check and deploy
 
+# Every push to main is checked (lint, data, tests, build).
+# Published to GitHub Pages only for a version tag like v1.0.0.
 on:
   push:
     branches: [main]
+    tags: ['v*']
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -24,21 +26,34 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - name: Tag matches package.json version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          expected="v$(node -p "require('./package.json').version")"
+          if [ "$expected" != "${GITHUB_REF_NAME}" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} passt nicht zur Version in package.json ($expected)."
+            exit 1
+          fi
       - run: npm run lint
-      # Dictionaries: lauttreue rules, syllables, images, state adjustments
+      # Dictionaries and stroke templates: lauttreue rules, images, state adjustments
       - run: npm run data:check
       - run: npm test
       - run: npm run build
         env:
           # Project pages live under /<repo-name>/
           BASE_PATH: /${{ github.event.repository.name }}/
-      - uses: actions/upload-pages-artifact@v3
+      - if: startsWith(github.ref, 'refs/tags/v')
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
   deploy:
+    if: startsWith(github.ref, 'refs/tags/v')
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

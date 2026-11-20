@@ -41,6 +41,17 @@ export const router = createRouter({
           component: () => import('./views/parent/ProfileEditView.vue'),
         },
         {
+          path: 'statistik/:id',
+          name: 'stats',
+          component: () => import('./views/parent/StatsView.vue'),
+          props: true,
+        },
+        {
+          path: 'sicherung',
+          name: 'backup',
+          component: () => import('./views/parent/BackupView.vue'),
+        },
+        {
           path: 'schrift',
           name: 'script-preview',
           component: () => import('./views/parent/ScriptPreviewView.vue'),

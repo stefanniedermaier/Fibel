@@ -1,16 +1,45 @@
 /// <reference types="vitest/config" />
+import { readFileSync } from 'node:fs'
 import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // GitHub Pages serves the app under /<repo-name>/. The deploy workflow sets BASE_PATH.
 const base = process.env.BASE_PATH ?? '/'
 
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as {
+  version: string
+}
+const buildTime = new Date().toISOString()
+
+/**
+ * Writes version.json next to the app. The parent area reads it (from the same
+ * server) to show whether a newer version is published. Not precached on purpose.
+ */
+function versionFile(): Plugin {
+  return {
+    name: 'fibel-version-file',
+    apply: 'build',
+    generateBundle() {
+      this.emitFile({
+        type: 'asset',
+        fileName: 'version.json',
+        source: JSON.stringify({ version: pkg.version, builtAt: buildTime }),
+      })
+    },
+  }
+}
+
 export default defineConfig({
   base,
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
+    __BUILD_TIME__: JSON.stringify(buildTime),
+  },
   plugins: [
     vue(),
+    versionFile(),
     VitePWA({
       // Updates are applied only after confirmation (later: in the parent area),
       // so a running exercise is never interrupted.
@@ -35,6 +64,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,json}'],
+        // Always fetched fresh from the server (newest version), never from the cache.
+        globIgnores: ['**/node_modules/**/*', 'version.json'],
         cleanupOutdatedCaches: true,
       },
     }),

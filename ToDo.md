@@ -1,6 +1,7 @@
 # Aufgefallene ToDos
 
 - Aufgabe als String anzeigen "wie viele Punkte siehst du?"
+- Größeres Wörterbuch für lesen und schreiben (ggf ohne Bild, was für manche Aufgaben nicht nötig ist)
 
 ## Schreiben
 
@@ -14,6 +15,10 @@
 
 - Reimen
 - Gleiche Anlaute finden
+
+## Logik
+
+- Reihen erkennen und fortsetzen (Bilder, Farben, Symbole, später Zahlen und mathematische Folgen)
 
 ## Deployment und Versionierung
 

@@ -1,10 +1,22 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
 import { getLand } from '@/core/content'
 import { applyUpdate, needRefresh } from '@/core/pwa'
+import { backupDue, lastBackup } from '@/core/storage/backup'
+import { getDb } from '@/core/storage/db'
+import { APP_VERSION, fetchLatestVersion, isNewer, type VersionInfo } from '@/core/version'
 import { useAppStore } from '@/stores/app'
 
 const store = useAppStore()
+
+const remindBackup = ref(false)
+const latest = ref<VersionInfo | null>()
+onMounted(async () => {
+  const db = await getDb()
+  remindBackup.value = backupDue(await lastBackup(db), await db.count('sessions'))
+  latest.value = await fetchLatestVersion()
+})
 </script>
 
 <template>
@@ -16,8 +28,18 @@ const store = useAppStore()
   </header>
 
   <section v-if="needRefresh" class="card update">
-    <p>Eine neue Version der App ist da.</p>
+    <p>
+      Eine neue Version der App ist da<template v-if="latest"> ({{ latest.version }})</template>.
+    </p>
     <button class="btn btn-primary" @click="applyUpdate">Jetzt aktualisieren</button>
+  </section>
+
+  <section v-if="remindBackup" class="card reminder">
+    <p>
+      💾 Die letzte Sicherung ist länger als 30 Tage her – oder es gibt noch keine. Sichere die
+      Sterne und den Lernstand, damit nichts verloren geht.
+    </p>
+    <RouterLink class="btn btn-primary" :to="{ name: 'backup' }">Jetzt sichern</RouterLink>
   </section>
 
   <section class="card">
@@ -31,15 +53,41 @@ const store = useAppStore()
           <span class="muted">Klasse {{ p.grade }} · {{ getLand(p.land)?.name ?? p.land }}</span>
           <span aria-hidden="true">›</span>
         </RouterLink>
+        <RouterLink
+          class="icon-btn stats"
+          :to="{ name: 'stats', params: { id: p.id } }"
+          :aria-label="`Statistik von ${p.name}`"
+          >📊</RouterLink
+        >
       </li>
     </ul>
     <RouterLink class="btn" :to="{ name: 'profile-new' }">＋ Neues Profil</RouterLink>
   </section>
 
   <section class="card">
+    <h2>Sicherung</h2>
+    <p class="muted">Alle Daten als Datei speichern oder auf einem neuen Gerät wieder laden.</p>
+    <RouterLink class="btn" :to="{ name: 'backup' }">Sicherung öffnen</RouterLink>
+  </section>
+
+  <section class="card">
     <h2>Gerät</h2>
     <p class="muted">Sprachausgabe, Offline-Betrieb und Speicher prüfen.</p>
     <RouterLink class="btn" :to="{ name: 'device-check' }">Gerätetest öffnen</RouterLink>
+  </section>
+
+  <section class="card">
+    <h2>Version</h2>
+    <p>
+      Installiert: <strong>{{ APP_VERSION }}</strong><br />
+      Neueste:
+      <strong v-if="latest">{{ latest.version }}</strong>
+      <span v-else-if="latest === null" class="muted">unbekannt (offline)</span>
+      <span v-else class="muted">wird geprüft …</span>
+      <span v-if="latest && isNewer(latest.version, APP_VERSION)" class="new">
+        – Update verfügbar</span
+      >
+    </p>
   </section>
 
   <section class="card">
@@ -94,8 +142,30 @@ h2 {
   margin-top: 0;
 }
 
-.update {
+.update,
+.reminder {
   border: 3px solid var(--accent);
+}
+
+.profiles li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profiles .profile {
+  flex: 1;
+  min-width: 0;
+}
+
+.stats {
+  flex: none;
+  font-size: 24px;
+}
+
+.new {
+  color: var(--ok);
+  font-weight: 700;
 }
 
 .profiles {

@@ -416,7 +416,13 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
   - **Abweichung vom Plan:** Statt eines Zeichen-Editors gibt es im Elternbereich die Seite „Schrift-Vorlagen“. Sie zeigt jeden Buchstaben mit nummerierten Strichen, führt die Reihenfolge als Animation vor, lässt dich selbst nachspuren und zeigt alle Buchstaben auf einen Blick. Angepasst wird direkt in der JSON-Datei; `data:check` prüft, ob alle Buchstaben vorhanden sind, ob die Striche zusammenhängen und ob sie innerhalb der Lineatur liegen.
   - Beim Nachspuren gilt: am Startpunkt beginnen, auf der Linie bleiben, alle Kontrollpunkte in der richtigen Reihenfolge treffen. Ein Abrutschen setzt nur den aktuellen Strich zurück und zeigt einen Hinweis; es kostet keinen Stern.
   - Die Genauigkeit ist im Elternbereich einstellbar (locker/normal/genau). Dort lässt sich jetzt auch die Groß-/Kleinschreibung werten.
-  - Offen ist der Abgleich der Strichreihenfolge mit dem, was die Schule vorgibt.
+  - Offen ist der Abgleich der Strichreihenfolge mit dem, was die Schule vorgibt. M und A (in einem Zug von unten) sowie l (mit Bogen unten) sind bereits angepasst.
+- Phase 7 ist umgesetzt bis auf die Punkte, die nur auf dem Gerät gehen:
+  - **Statistik** pro Profil: Einheiten, Minuten, Sterne und Kronen; fertige Einheiten der letzten 14 Tage; Trefferquote pro Klasse und Fach; „Stolpersteine“, also Aufgaben, die oft danebengehen und noch nicht sitzen.
+  - **Sicherung:** Export als JSON-Datei und Import mit Prüfung. Ein Import ersetzt alles in einer Transaktion. Im Elternbereich erscheint eine Erinnerung, wenn die letzte Sicherung älter als 30 Tage ist.
+  - **Version und Deployment** (aus ToDo.md): Die Version kommt aus `package.json` und `version.json` liegt neben der App. Im Elternbereich stehen die installierte und die neueste Version. Veröffentlicht wird nur noch bei einem Versions-Tag `v*`, jeder Push auf `main` wird nur geprüft. Ablauf siehe README.
+  - **Lighthouse** (Version 12, ohne die entfernte PWA-Kategorie): Performance 99, Barrierefreiheit 100, Best Practices 100 für den Produktions-Build.
+  - **Offen:** Version 1.0 taggen und veröffentlichen, die Testrunde mit dem Kind und das Anhören aller Wörter im Sprachtest auf dem Gerät.
 
 | Phase | Inhalt | Fertig, wenn … | Umfang |
 |---|---|---|---|

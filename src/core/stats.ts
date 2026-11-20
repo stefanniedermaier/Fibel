@@ -1,0 +1,122 @@
+/** Statistics for the parent area – computed from sessions and progress, nothing stored. */
+import { BASE_CATALOG } from './content'
+import type { ProgressRecord, SessionRecord, Topic } from './types'
+
+const DAY_MS = 24 * 60 * 60 * 1000
+
+/** Local calendar day as "YYYY-MM-DD". */
+export function dayKey(ms: number): string {
+  const d = new Date(ms)
+  const pad = (n: number) => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
+}
+
+export interface DayStat {
+  day: string
+  /** Weekday initial, e.g. "Mo". */
+  label: string
+  units: number
+  minutes: number
+}
+
+const WEEKDAYS = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
+
+/** Finished units and practice time per day, oldest day first. */
+export function lastDays(
+  sessions: readonly SessionRecord[],
+  days = 14,
+  now = Date.now(),
+): DayStat[] {
+  const result: DayStat[] = []
+  for (let i = days - 1; i >= 0; i--) {
+    const ms = now - i * DAY_MS
+    result.push({ day: dayKey(ms), label: WEEKDAYS[new Date(ms).getDay()]!, units: 0, minutes: 0 })
+  }
+  const byDay = new Map(result.map((d) => [d.day, d]))
+  for (const s of sessions) {
+    const stat = byDay.get(dayKey(s.startedAt))
+    if (!stat) continue
+    if (s.completed) stat.units++
+    stat.minutes += s.durationMs / 60_000
+  }
+  for (const d of result) d.minutes = Math.round(d.minutes)
+  return result
+}
+
+export interface TopicStat {
+  grade: number
+  topic: Topic
+  tasks: number
+  stars: number
+  /** Share of tasks with a star (0–1). */
+  rate: number
+}
+
+/** Hit rate per grade and subject: tasks solved without the solution being shown. */
+export function hitRates(sessions: readonly SessionRecord[]): TopicStat[] {
+  const map = new Map<string, TopicStat>()
+  for (const s of sessions) {
+    if (s.tasks.length === 0) continue
+    const key = `${s.grade}:${s.topic}`
+    const stat = map.get(key) ?? { grade: s.grade, topic: s.topic, tasks: 0, stars: 0, rate: 0 }
+    stat.tasks += s.tasks.length
+    stat.stars += s.tasks.filter((t) => t.star).length
+    map.set(key, stat)
+  }
+  return [...map.values()]
+    .map((s) => ({ ...s, rate: s.stars / s.tasks }))
+    .sort((a, b) => a.grade - b.grade || a.topic.localeCompare(b.topic))
+}
+
+export interface Stumble {
+  itemKey: string
+  exercise: string
+  wrong: number
+  correct: number
+  box: number
+}
+
+/** Items that often went wrong and are not yet solid – the "Stolperwörter". */
+export function stumbles(progress: readonly ProgressRecord[], limit = 10): Stumble[] {
+  return progress
+    .filter((p) => p.wrong >= 2 && p.box <= 3)
+    .sort((a, b) => b.wrong - a.wrong || a.box - b.box || b.lastSeen - a.lastSeen)
+    .slice(0, limit)
+    .map((p) => ({
+      itemKey: p.itemKey,
+      exercise: p.itemKey.slice(0, p.itemKey.indexOf(':')),
+      wrong: p.wrong,
+      correct: p.correct,
+      box: p.box,
+    }))
+}
+
+export function exerciseTitle(moduleId: string): string {
+  return BASE_CATALOG.find((e) => e.exercise === moduleId)?.title ?? moduleId
+}
+
+/** Readable label for an item key, e.g. 'rechnen.plus-minus:7-2' → '7 − 2'. */
+export function itemLabel(itemKey: string, wordText: (id: string) => string | undefined): string {
+  const colon = itemKey.indexOf(':')
+  const module = itemKey.slice(0, colon)
+  const part = itemKey.slice(colon + 1)
+  switch (module) {
+    case 'rechnen.mengen':
+      return `${part} Punkte`
+    case 'rechnen.menge-legen':
+      return `${part} legen`
+    case 'rechnen.vergleichen':
+      return part.replace('-', ' ○ ')
+    case 'rechnen.zahlenhaus': {
+      const [total, known] = part.split('-')
+      return `${total} = ${known} + ?`
+    }
+    case 'rechnen.plus-minus':
+      return part.replace('+', ' + ').replace('-', ' − ')
+    case 'lesen.silben-hoeren':
+    case 'schreiben.nachspuren':
+      return part
+    default:
+      return wordText(part) ?? part
+  }
+}
