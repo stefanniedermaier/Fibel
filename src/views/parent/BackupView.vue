@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackButton from '@/components/BackButton.vue'
 import { onMounted, ref } from 'vue'
 import {
   backupFileName,
@@ -84,7 +85,7 @@ async function restore(event: Event) {
 
 <template>
   <header class="top">
-    <RouterLink class="icon-btn" :to="{ name: 'parent' }" aria-label="Zurück">←</RouterLink>
+    <BackButton :to="{ name: 'parent' }" />
     <h1>Sicherung</h1>
   </header>
   <p class="muted">

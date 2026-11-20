@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackButton from '@/components/BackButton.vue'
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import EmojiPicture from '@/components/EmojiPicture.vue'
@@ -198,7 +199,7 @@ async function remove() {
 
 <template>
   <header class="top">
-    <RouterLink class="icon-btn" :to="{ name: 'parent' }" aria-label="Zurück">←</RouterLink>
+    <BackButton :to="{ name: 'parent' }" />
     <h1>{{ isNew ? 'Neues Profil' : 'Profil bearbeiten' }}</h1>
   </header>
 
