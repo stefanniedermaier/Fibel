@@ -15,8 +15,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
-    "format": "prettier --write src tests",
+    "format": "prettier --write src tests scripts .github",
+    "format:check": "prettier --check src tests scripts .github",
     "data:check": "vitest run tests/data.spec.ts",
+    "dist:check": "node scripts/check-dist.mjs",
     "data:openmoji": "node scripts/sync-openmoji.mjs"
   },
   "dependencies": {

@@ -93,12 +93,15 @@ Die Session-Engine mischt für jede Einheit die verfügbaren Katalog-Einträge e
 
 ```
 fibel/
-├─ .github/workflows/deploy.yml   # data:check, Tests, Build, Deploy auf GitHub Pages
+├─ .github/workflows/deploy.yml   # Format, Lint, data:check, Tests, Audit, Build, dist:check, Deploy
+├─ .github/workflows/security.yml # CodeQL, npm audit, Gitleaks, Dependency Review
+├─ .github/dependabot.yml         # wöchentliche Updates (npm, Actions)
 ├─ public/
 │  ├─ img/                        # generiert: benötigte OpenMoji-SVGs
 │  └─ icons/                      # App-Icons (maskable)
 ├─ scripts/
 │  ├─ check-data.ts               # prüft die Wörterbücher
+│  ├─ check-dist.mjs              # prüft den Build: CSP, keine externen Zugriffe
 │  └─ sync-openmoji.ts            # kopiert die verwendeten Bilder
 ├─ src/
 │  ├─ data/
@@ -421,7 +424,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 - Phase 7 ist umgesetzt bis auf die Punkte, die nur auf dem Gerät gehen:
   - **Statistik** pro Profil: Einheiten, Minuten, Sterne und Kronen; fertige Einheiten der letzten 14 Tage; Trefferquote pro Klasse und Fach; „Stolpersteine“, also Aufgaben, die oft danebengehen und noch nicht sitzen.
   - **Sicherung:** Export als JSON-Datei und Import mit Prüfung. Ein Import ersetzt alles in einer Transaktion. Im Elternbereich erscheint eine Erinnerung, wenn die letzte Sicherung älter als 30 Tage ist.
-  - **Version und Deployment** (aus ToDo.md): Die Version kommt aus `package.json` und `version.json` liegt neben der App. Im Elternbereich stehen die installierte und die neueste Version, jeweils mit Build-Zeitpunkt. Veröffentlicht wird bei jedem Push auf `main` (Testrunden) und bei Versions-Tags `v*`. Die Tags kommen, sobald die Features fertig sind. Ablauf siehe README.
+  - **Version und Deployment** (aus ToDo.md): Die Version kommt aus `package.json` und `version.json` liegt neben der App. Im Elternbereich stehen die installierte und die neueste Version, jeweils mit Build-Zeitpunkt. Veröffentlicht wird nur bei Versions-Tags `v*`; Pushes auf `main` werden nur geprüft (während der Testrunden wurde zeitweise auch `main` veröffentlicht). Ablauf siehe README.
   - **Lighthouse** (Version 12, ohne die entfernte PWA-Kategorie): Performance 99, Barrierefreiheit 100, Best Practices 100 für den Produktions-Build.
   - **Offen:** Version 1.0 taggen und veröffentlichen, die Testrunde mit dem Kind und das Anhören aller Wörter im Sprachtest auf dem Gerät.
 
@@ -498,7 +501,7 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 | Reimen                                        | umsetzen, mit Hörwortschatz → E2, E3                                                                                        |
 | Gleiche Anlaute finden                        | umsetzen, beide Varianten → E4                                                                                              |
 | Reihen erkennen und fortsetzen                | umsetzen unter Rechnen → E5                                                                                                 |
-| Nur Versions-Tags deployen / Version anzeigen | erledigt: geändert zu „jeder Push auf main und Tags“, die Version steht mit Build-Stand im Elternbereich                    |
+| Nur Versions-Tags deployen / Version anzeigen | erledigt: nur Versions-Tags (zwischendurch auch main), Version mit Build-Stand im Elternbereich                             |
 
 ### E1 – Größeres Wörterbuch (Umfang M) – ✅ umgesetzt
 

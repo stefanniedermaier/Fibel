@@ -1,7 +1,7 @@
 name: Check and deploy
 
-# Every push to main and every version tag (v1.0.0 …) is checked and published to
-# GitHub Pages. Pull requests are only checked.
+# Only version tags (v1.0.0 …) are published to GitHub Pages. Pushes to main and
+# pull requests run the same checks without deploying.
 on:
   push:
     branches: [main]
@@ -12,11 +12,11 @@ on:
 permissions:
   contents: read
 
-# Deployments share one queue (push to main and its tag arrive together);
-# pull requests get their own.
+# Each branch/PR has its own queue (newer runs replace older ones). Releases share
+# one queue and are never cancelled half-way through a deployment.
 concurrency:
-  group: ${{ github.event_name == 'pull_request' && github.ref || 'pages' }}
-  cancel-in-progress: true
+  group: ${{ startsWith(github.ref, 'refs/tags/v') && 'pages' || github.ref }}
+  cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/v') }}
 
 jobs:
   build:
@@ -36,21 +36,29 @@ jobs:
             echo "::error::Tag ${GITHUB_REF_NAME} passt nicht zur Version in package.json ($expected)."
             exit 1
           fi
+      # Quality: formatting, lint, data, tests (the type check runs in the build)
+      - run: npm run format:check
       - run: npm run lint
       # Dictionaries and stroke templates: lauttreue rules, images, state adjustments
       - run: npm run data:check
       - run: npm test
+      # Security: everything shipped to the device must be free of known vulnerabilities
+      # (dev tools are checked separately in security.yml and do not block a deploy).
+      - name: Known vulnerabilities in runtime dependencies
+        run: npm audit --omit=dev --audit-level=moderate
       - run: npm run build
         env:
           # Project pages live under /<repo-name>/
           BASE_PATH: /${{ github.event.repository.name }}/
-      - if: github.event_name != 'pull_request'
+      # "Nothing leaves the device": strict CSP, no external resources or connections
+      - run: npm run dist:check
+      - if: startsWith(github.ref, 'refs/tags/v')
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: startsWith(github.ref, 'refs/tags/v')
     needs: build
     runs-on: ubuntu-latest
     permissions:

@@ -10,10 +10,12 @@ npm install
 npm run dev        # Entwicklungsserver, auch im WLAN erreichbar (--host)
 npm test           # Unit-Tests (Vitest)
 npm run lint       # ESLint
+npm run format:check   # Prettier-Formatierung prüfen (npm run format korrigiert)
 npm run build      # Typecheck + Produktions-Build nach dist/
 npm run preview    # Build lokal ansehen (mit Service Worker)
 npm run data:check     # Wörterbücher, Lauttreue, Bilder, Schrift-Vorlagen prüfen
 npm run data:openmoji  # benötigte OpenMoji-Bilder nach public/img/openmoji kopieren
+npm run dist:check     # nach dem Build: strenge CSP, keine externen Zugriffe in dist/
 ```
 
 Der Service Worker (Offline-Betrieb, Installation) funktioniert nur über HTTPS oder `localhost`.
@@ -21,21 +23,32 @@ Im WLAN per `http://<PC-IP>:5173` lässt sich die Sprachausgabe testen, aber nic
 
 ## Veröffentlichen (GitHub Pages)
 
-Jeder Push auf `main` wird geprüft (Lint, Datenprüfung, Tests, Build) und veröffentlicht – das
-ist der Stand für Testrunden. Ebenso jeder Versions-Tag (`v1.0.0` …). Pull Requests werden nur
-geprüft.
+Veröffentlicht wird nur ein Versions-Tag (`v1.0.0` …). Pushes auf `main` und Pull Requests
+durchlaufen dieselben Prüfungen, werden aber nicht veröffentlicht.
+
+**Vor jedem Deploy** (`deploy.yml`, ein Fehler stoppt das Deployment): Formatierung, Lint,
+Datenprüfung, Tests, `npm audit` der Laufzeit-Abhängigkeiten, Typecheck und Build, danach
+`dist:check` (strenge Content-Security-Policy, keine fremden Ressourcen oder Verbindungen,
+keine Source-Maps – „nichts verlässt das Gerät“).
+
+**Sicherheit** (`security.yml`, bei Push, Pull Request und montags; blockiert kein Deployment):
+CodeQL-Codeanalyse, `npm audit` aller Abhängigkeiten samt Signaturen, Gitleaks gegen Geheimnisse
+im Code und bei Pull Requests die Prüfung neuer Abhängigkeiten (Schwachstellen, GPL-Lizenzen).
+Dependabot schlägt montags Updates für npm-Pakete und Actions vor.
 
 Im Elternbereich unter **Version** stehen Versionsnummer und Build-Zeitpunkt („Stand“) der
-installierten und der neuesten Fassung. Solange sich die Versionsnummer nicht ändert, erkennt man
-neue Testversionen am Stand.
+installierten und der neuesten Fassung.
 
 ### Einmalig einrichten
 
 1. Auf GitHub: **Settings → Pages → Source: GitHub Actions**.
-2. Erst für den ersten Versions-Tag: **Settings → Environments → github-pages → Deployment
-   branches and tags**: eine Regel für Tags mit dem Muster `v*` hinzufügen. Ohne diese Regel
+2. **Settings → Environments → github-pages → Deployment branches and tags**: eine Regel für Tags mit dem Muster `v*` hinzufügen. Ohne diese Regel
    lehnt GitHub das Deployment von Tags ab („not allowed to deploy to github-pages due to
    environment protection rules“).
+3. **Settings → Code security**: Dependabot alerts und Secret scanning mit Push protection
+   einschalten. Bei Code scanning **kein** „Default setup“ wählen – die CodeQL-Analyse kommt aus
+   `security.yml` (beides zusammen meldet einen Konflikt). Die Ergebnisse stehen unter
+   **Security → Code scanning**.
 
 ### Version veröffentlichen (wenn alles fertig ist)
 
