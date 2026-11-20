@@ -9,26 +9,26 @@ Stand: 19.11.2026
 
 ## 1. Entscheidungen aus dem Wizard
 
-| Thema | Entscheidung | Folge für die Umsetzung |
-|---|---|---|
-| Zielgerät | Android-Tablet/-Handy (Chrome) | Sprachausgabe über Google-TTS mit offline geladener deutscher Stimme; Installation über Chrome; Tests auf dem echten Gerät |
-| Stack | Vite + Vue 3 + TypeScript | Pinia für den State, Vue Router im Hash-Modus, vite-plugin-pwa |
-| Hosting | GitHub Pages | Deployment per GitHub Action; das Repo ist öffentlich, deshalb stehen keine Daten des Kindes im Code |
-| Profile | mehrere | Profilauswahl beim Start; Fortschritt und Einstellungen pro Kind |
-| Klassenstufen | 1–4 vorgesehen, Inhalte in Version 1 nur für Klasse 1 | Jedes Profil hat eine Klassenstufe; die Übungen sind in einem Katalog nach Klasse und Fach gruppiert (Abschnitt 4) |
-| Andere Klassen | eigene Klasse und alle darunter | Die Klassen darunter dienen zum Wiederholen; höhere Klassen schaltet nur der Elternbereich frei |
-| Klassenwechsel | nur manuell | Kein automatischer Wechsel zum Schuljahr; die Klasse wird im Elternbereich umgestellt |
-| Klasse und Einstellungen | Klasse setzt Startwerte | Jede Klasse bringt Voreinstellungen mit (Buchstaben-Filter, Zahlenraum, Silbenfärbung …), die sich weiter fein anpassen lassen |
-| Bundesland | pro Profil, Standard Bayern | Bundesland und Klasse bestimmen zusammen Übungskatalog, Startwerte, Wortlisten und Schrift (Abschnitt 4) |
-| Länder in Version 1 | nur Bayern wählbar | Die anderen 15 Länder erscheinen ausgegraut („kommt später“) |
-| Silbenfärbung | umschaltbar | Standard: an (blau/rot); Silbenbögen optional; beides im Elternbereich abschaltbar |
-| Wortauswahl | nach gelernten Buchstaben | Eltern haken die Buchstaben ab, die App filtert das Wörterbuch danach |
-| Schreiben | alle vier Formen | Silben legen, Buchstaben legen, ABC-Tastatur, Nachspuren |
-| Einzellaute | TTS spricht nur Silben und Wörter | Anlaut-Übungen laufen über Bild + gesprochenes Wort, isolierte Laute gibt es nicht |
-| Rechnen | Mengen bis 10, Zahlzerlegung, Plus/Minus bis 10, Zahlenraum bis 20 | Der Zahlenraum 20 wird im Elternbereich freigeschaltet |
-| Belohnung | Sterne und Kronen sammeln und anzeigen | Trophäen-Ansicht, kein Shop und nichts zum Freischalten |
-| Bilder | OpenMoji (CC BY-SA 4.0) | Nur die benötigten SVGs kommen ins Build; Namensnennung im Info-Screen |
-| Einheit | feste Aufgabenzahl | 8 Aufgaben (einstellbar 6–10), kein Timer, Krone am Ende |
+| Thema                    | Entscheidung                                                       | Folge für die Umsetzung                                                                                                        |
+| ------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Zielgerät                | Android-Tablet/-Handy (Chrome)                                     | Sprachausgabe über Google-TTS mit offline geladener deutscher Stimme; Installation über Chrome; Tests auf dem echten Gerät     |
+| Stack                    | Vite + Vue 3 + TypeScript                                          | Pinia für den State, Vue Router im Hash-Modus, vite-plugin-pwa                                                                 |
+| Hosting                  | GitHub Pages                                                       | Deployment per GitHub Action; das Repo ist öffentlich, deshalb stehen keine Daten des Kindes im Code                           |
+| Profile                  | mehrere                                                            | Profilauswahl beim Start; Fortschritt und Einstellungen pro Kind                                                               |
+| Klassenstufen            | 1–4 vorgesehen, Inhalte in Version 1 nur für Klasse 1              | Jedes Profil hat eine Klassenstufe; die Übungen sind in einem Katalog nach Klasse und Fach gruppiert (Abschnitt 4)             |
+| Andere Klassen           | eigene Klasse und alle darunter                                    | Die Klassen darunter dienen zum Wiederholen; höhere Klassen schaltet nur der Elternbereich frei                                |
+| Klassenwechsel           | nur manuell                                                        | Kein automatischer Wechsel zum Schuljahr; die Klasse wird im Elternbereich umgestellt                                          |
+| Klasse und Einstellungen | Klasse setzt Startwerte                                            | Jede Klasse bringt Voreinstellungen mit (Buchstaben-Filter, Zahlenraum, Silbenfärbung …), die sich weiter fein anpassen lassen |
+| Bundesland               | pro Profil, Standard Bayern                                        | Bundesland und Klasse bestimmen zusammen Übungskatalog, Startwerte, Wortlisten und Schrift (Abschnitt 4)                       |
+| Länder in Version 1      | nur Bayern wählbar                                                 | Die anderen 15 Länder erscheinen ausgegraut („kommt später“)                                                                   |
+| Silbenfärbung            | umschaltbar                                                        | Standard: an (blau/rot); Silbenbögen optional; beides im Elternbereich abschaltbar                                             |
+| Wortauswahl              | nach gelernten Buchstaben                                          | Eltern haken die Buchstaben ab, die App filtert das Wörterbuch danach                                                          |
+| Schreiben                | alle vier Formen                                                   | Silben legen, Buchstaben legen, ABC-Tastatur, Nachspuren                                                                       |
+| Einzellaute              | TTS spricht nur Silben und Wörter                                  | Anlaut-Übungen laufen über Bild + gesprochenes Wort, isolierte Laute gibt es nicht                                             |
+| Rechnen                  | Mengen bis 10, Zahlzerlegung, Plus/Minus bis 10, Zahlenraum bis 20 | Der Zahlenraum 20 wird im Elternbereich freigeschaltet                                                                         |
+| Belohnung                | Sterne und Kronen sammeln und anzeigen                             | Trophäen-Ansicht, kein Shop und nichts zum Freischalten                                                                        |
+| Bilder                   | OpenMoji (CC BY-SA 4.0)                                            | Nur die benötigten SVGs kommen ins Build; Namensnennung im Info-Screen                                                         |
+| Einheit                  | feste Aufgabenzahl                                                 | 8 Aufgaben (einstellbar 6–10), kein Timer, Krone am Ende                                                                       |
 
 ## 2. Leitplanken
 
@@ -50,15 +50,15 @@ Stand: 19.11.2026
 
 ### Kernmodule (`src/core`)
 
-| Modul | Aufgabe |
-|---|---|
-| `tts.ts` | Web Speech API: wählt eine deutsche Stimme (bevorzugt `localService`, also offline), steuert Tempo und Tonhöhe und hält eine Warteschlange (`cancel()` vor jedem neuen Satz). Wendet `say`-Overrides aus dem Wörterbuch an und spricht Zahlen als Wörter. |
-| `sounds.ts` | Erfolgs- und Fehlertöne, per Web Audio synthetisiert, ohne Audiodateien |
-| `graphemes.ts` | Zerlegt Wörter in Grapheme; `sch`, `ch`, `ei`, `au`, `eu` und `äu` zählen jeweils als eine Einheit |
-| `leitner.ts` | Lernstand pro Item (Box 1–5) und Auswahl der nächsten Items |
-| `session.ts` | Generischer Ablauf einer Einheit: Aufgaben erzeugen, Antworten auswerten, Sterne und Krone vergeben, speichern |
-| `content.ts` | Stellt die Inhalte für ein Profil zusammen: Basis plus Anpassung des Bundeslands, gefiltert nach Klasse (Katalog, Startwerte, Wortlisten, Schrift) |
-| `storage/` | IndexedDB-Schema, Migrationen, Repositories, Export/Import |
+| Modul          | Aufgabe                                                                                                                                                                                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tts.ts`       | Web Speech API: wählt eine deutsche Stimme (bevorzugt `localService`, also offline), steuert Tempo und Tonhöhe und hält eine Warteschlange (`cancel()` vor jedem neuen Satz). Wendet `say`-Overrides aus dem Wörterbuch an und spricht Zahlen als Wörter. |
+| `sounds.ts`    | Erfolgs- und Fehlertöne, per Web Audio synthetisiert, ohne Audiodateien                                                                                                                                                                                   |
+| `graphemes.ts` | Zerlegt Wörter in Grapheme; `sch`, `ch`, `ei`, `au`, `eu` und `äu` zählen jeweils als eine Einheit                                                                                                                                                        |
+| `leitner.ts`   | Lernstand pro Item (Box 1–5) und Auswahl der nächsten Items                                                                                                                                                                                               |
+| `session.ts`   | Generischer Ablauf einer Einheit: Aufgaben erzeugen, Antworten auswerten, Sterne und Krone vergeben, speichern                                                                                                                                            |
+| `content.ts`   | Stellt die Inhalte für ein Profil zusammen: Basis plus Anpassung des Bundeslands, gefiltert nach Klasse (Katalog, Startwerte, Wortlisten, Schrift)                                                                                                        |
+| `storage/`     | IndexedDB-Schema, Migrationen, Repositories, Export/Import                                                                                                                                                                                                |
 
 ### Übungsmodule und Katalog
 
@@ -66,11 +66,11 @@ Ein Übungsmodul ist ein Übungs*typ* wie „Wort → Bild“, bestehend aus Gen
 
 ```ts
 interface ExerciseModule<P, T> {
-  id: string;                                            // z. B. 'lesen.wort-bild'
-  topic: 'lesen' | 'schreiben' | 'rechnen';
-  isAvailable(ctx: LearnerContext, params: P): boolean;  // z. B.: genug Wörter mit freigeschalteten Buchstaben?
-  generate(ctx: LearnerContext, params: P): Task<T>;     // wählt Items über Leitner aus
-  component: Component;                                  // zeigt die Aufgabe und meldet 'answer'
+  id: string // z. B. 'lesen.wort-bild'
+  topic: 'lesen' | 'schreiben' | 'rechnen'
+  isAvailable(ctx: LearnerContext, params: P): boolean // z. B.: genug Wörter mit freigeschalteten Buchstaben?
+  generate(ctx: LearnerContext, params: P): Task<T> // wählt Items über Leitner aus
+  component: Component // zeigt die Aufgabe und meldet 'answer'
 }
 ```
 
@@ -78,12 +78,12 @@ Welche Übungen es in welcher Klasse gibt, legt der Übungskatalog fest. Ausgang
 
 ```ts
 interface CatalogEntry {
-  id: string;                 // z. B. 'k1.rechnen.plus-minus-10'
-  grade: number;              // 1–4; die Länderliste legt die gültigen Klassen fest
-  topic: 'lesen' | 'schreiben' | 'rechnen';
-  exercise: string;           // Modul-ID, z. B. 'rechnen.plus-minus'
-  params: object;             // z. B. { max: 10, ops: ['+', '-'] } oder { words: 'klasse-1' }
-  title: string;              // Anzeigename im Elternbereich
+  id: string // z. B. 'k1.rechnen.plus-minus-10'
+  grade: number // 1–4; die Länderliste legt die gültigen Klassen fest
+  topic: 'lesen' | 'schreiben' | 'rechnen'
+  exercise: string // Modul-ID, z. B. 'rechnen.plus-minus'
+  params: object // z. B. { max: 10, ops: ['+', '-'] } oder { words: 'klasse-1' }
+  title: string // Anzeigename im Elternbereich
 }
 ```
 
@@ -141,34 +141,34 @@ Welche Übungen ein Kind bekommt, hängt von Bundesland und Klasse seines Profil
 
 ### Welche Klassen ein Kind sieht
 
-| Bereich | Inhalt |
-|---|---|
-| Startseite | Lesen, Schreiben und Rechnen der eigenen Klasse |
+| Bereich          | Inhalt                                                                                   |
+| ---------------- | ---------------------------------------------------------------------------------------- |
+| Startseite       | Lesen, Schreiben und Rechnen der eigenen Klasse                                          |
 | „Wiederholen“ 🔁 | die Übungen aller niedrigeren Klassen, nach Klasse gruppiert; erscheint erst ab Klasse 2 |
-| Höhere Klassen | nur sichtbar, wenn der Elternbereich sie für dieses Profil freischaltet |
+| Höhere Klassen   | nur sichtbar, wenn der Elternbereich sie für dieses Profil freischaltet                  |
 
 ### Startwerte pro Klasse (`basis/grade-defaults.json`)
 
 Wenn ein Profil angelegt wird, übernimmt es die Startwerte seiner Klasse; das Bundesland kann einzelne davon ändern. Wechseln Klasse oder Bundesland, fragt die App, ob sie die neuen Startwerte übernehmen soll, damit eigene Anpassungen nicht unbemerkt verloren gehen. Danach lässt sich jede Einstellung im Elternbereich fein anpassen.
 
-| Einstellung | Klasse 1 | Klasse 2 | Klasse 3 | Klasse 4 |
-|---|---|---|---|---|
-| Buchstaben-Filter | an, Start mit A, E, I, O, U, M, L | aus | aus | aus |
-| Silbenfärbung | an | an | aus | aus |
-| Groß-/Kleinschreibung werten | aus | an | an | an |
-| Zahlenraum | 10 (20 freischaltbar) | 100 | 1000 | 1 000 000 |
-| Aufgaben pro Einheit | 8 | 8 | 10 | 10 |
+| Einstellung                  | Klasse 1                          | Klasse 2 | Klasse 3 | Klasse 4  |
+| ---------------------------- | --------------------------------- | -------- | -------- | --------- |
+| Buchstaben-Filter            | an, Start mit A, E, I, O, U, M, L | aus      | aus      | aus       |
+| Silbenfärbung                | an                                | an       | aus      | aus       |
+| Groß-/Kleinschreibung werten | aus                               | an       | an       | an        |
+| Zahlenraum                   | 10 (20 freischaltbar)             | 100      | 1000     | 1 000 000 |
+| Aufgaben pro Einheit         | 8                                 | 8        | 10       | 10        |
 
 Die Werte für die Klassen 2–4 sind nur ein Vorschlag. Festgelegt werden sie, wenn die Inhalte dieser Klassen entstehen.
 
 ### Katalog-Skizze
 
-| Klasse | Lesen | Schreiben | Rechnen |
-|---|---|---|---|
-| **1** (Version 1) | Silben, lauttreue Wörter, Anlaute, Silben klatschen | Silben und Buchstaben legen, ABC-Tastatur, Nachspuren | Mengen bis 10, Vergleichen, Zahlenhaus, Plus/Minus bis 10 und 20 |
-| 2 (später) | Sätze lesen, Satz und Bild zuordnen | Wörter mit Besonderheiten (ie, Doppelkonsonanten, ck/tz, Dehnungs-h, Auslautverhärtung), Großschreibung von Nomen | Zahlenraum 100, Zehner und Einer, Einmaleins, Uhrzeit, Geld |
-| 3 (später) | kurze Texte mit Fragen zum Inhalt | Wortfamilien, Ableiten (ä/äu), Wortarten | Zahlenraum 1000, halbschriftliches Rechnen, Größen |
-| 4 (später) | längere Texte, Informationen entnehmen | Satzzeichen, wörtliche Rede, das/dass | Zahlenraum 1 Million, schriftliche Rechenverfahren |
+| Klasse            | Lesen                                               | Schreiben                                                                                                         | Rechnen                                                          |
+| ----------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **1** (Version 1) | Silben, lauttreue Wörter, Anlaute, Silben klatschen | Silben und Buchstaben legen, ABC-Tastatur, Nachspuren                                                             | Mengen bis 10, Vergleichen, Zahlenhaus, Plus/Minus bis 10 und 20 |
+| 2 (später)        | Sätze lesen, Satz und Bild zuordnen                 | Wörter mit Besonderheiten (ie, Doppelkonsonanten, ck/tz, Dehnungs-h, Auslautverhärtung), Großschreibung von Nomen | Zahlenraum 100, Zehner und Einer, Einmaleins, Uhrzeit, Geld      |
+| 3 (später)        | kurze Texte mit Fragen zum Inhalt                   | Wortfamilien, Ableiten (ä/äu), Wortarten                                                                          | Zahlenraum 1000, halbschriftliches Rechnen, Größen               |
+| 4 (später)        | längere Texte, Informationen entnehmen              | Satzzeichen, wörtliche Rede, das/dass                                                                             | Zahlenraum 1 Million, schriftliche Rechenverfahren               |
 
 Die Skizze beschreibt den länderneutralen Basis-Katalog und ist für die Klassen 2–4 bewusst grob. Was ein Land anders macht, steht in seiner Länderanpassung (siehe unten).
 
@@ -178,12 +178,12 @@ Jedes Profil hat ein Bundesland, vorbelegt ist Bayern. In Version 1 lässt sich 
 
 Ein Bundesland kann vier Bereiche anpassen:
 
-| Bereich | Was das Land ändern kann | Beispiel |
-|---|---|---|
-| Übungskatalog | Einträge hinzufügen, entfernen, in eine andere Klasse verschieben, Parameter ändern | Verfahren der schriftlichen Subtraktion (Abziehen oder Ergänzen) |
-| Startwerte | einzelne Werte pro Klasse überschreiben | Zahlenraum zu Beginn einer Klasse |
-| Wortlisten | Wörter ergänzen oder herausnehmen | ein vorgegebener Grundwortschatz |
-| Schrift | festlegen, welche Schrift die Nachspur-Vorlagen in welcher Klasse nutzen | Druckschrift in Klasse 1, später die Schreibschrift des Landes (Grundschrift, Schulausgangsschrift, Lateinische oder Vereinfachte Ausgangsschrift) |
+| Bereich       | Was das Land ändern kann                                                            | Beispiel                                                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Übungskatalog | Einträge hinzufügen, entfernen, in eine andere Klasse verschieben, Parameter ändern | Verfahren der schriftlichen Subtraktion (Abziehen oder Ergänzen)                                                                                   |
+| Startwerte    | einzelne Werte pro Klasse überschreiben                                             | Zahlenraum zu Beginn einer Klasse                                                                                                                  |
+| Wortlisten    | Wörter ergänzen oder herausnehmen                                                   | ein vorgegebener Grundwortschatz                                                                                                                   |
+| Schrift       | festlegen, welche Schrift die Nachspur-Vorlagen in welcher Klasse nutzen            | Druckschrift in Klasse 1, später die Schreibschrift des Landes (Grundschrift, Schulausgangsschrift, Lateinische oder Vereinfachte Ausgangsschrift) |
 
 **Basis plus Länderanpassung:** `basis/` enthält alles, was überall gleich ist. Jedes Land beschreibt in `laender/<Code>/overlay.json` nur seine Abweichungen. Die Codes folgen ISO 3166-2, Bayern ist zum Beispiel `DE-BY`.
 
@@ -192,11 +192,11 @@ Ein Bundesland kann vier Bereiche anpassen:
   "land": "DE-BY",
   "gradeDefaults": { "1": { "numberRange": 10 } },
   "catalog": {
-    "add":    [],
+    "add": [],
     "remove": ["k1.lesen.silben-klatschen"],
-    "patch":  { "k1.rechnen.plus-minus-20": { "grade": 1, "params": { "max": 20 } } }
+    "patch": { "k1.rechnen.plus-minus-20": { "grade": 1, "params": { "max": 20 } } }
   },
-  "words":  { "klasse-1": { "add": "klasse-1/words.json", "remove": ["mofa"] } },
+  "words": { "klasse-1": { "add": "klasse-1/words.json", "remove": ["mofa"] } },
   "script": { "1": "druckschrift" }
 }
 ```
@@ -217,14 +217,14 @@ Das Beispiel zeigt nur, wie der Mechanismus funktioniert. Es sind nicht die echt
 
 ### Dateien
 
-| Datei | Inhalt |
-|---|---|
-| `common/letters.json` | Grapheme in typischer Schulreihenfolge mit Typ (Vokal, Konsonant, Mehrgraph), Groß- und Kleinform und Anlautbild |
-| `common/phrases.json` | Anweisungen und wechselnde Lobsätze („Super!“, „Toll gelesen!“) für die Sprachausgabe |
-| `schriften/druckschrift/strokes.json` | Strichvorlagen fürs Nachspuren (Phase 6); jede weitere Schrift bekommt einen eigenen Ordner |
-| `basis/klasse-1/words.json` | Wörter mit Silben, Kategorie, Bild und Ablenker-Gruppe |
-| `basis/klasse-1/syllables.json` | Silben, vor allem Konsonant + Vokal (ma, lo, ri …), mit optionaler TTS-Korrektur |
-| `laender/DE-BY/…` | Anpassung und zusätzliche Wortlisten für Bayern (Abschnitt 4) |
+| Datei                                 | Inhalt                                                                                                           |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `common/letters.json`                 | Grapheme in typischer Schulreihenfolge mit Typ (Vokal, Konsonant, Mehrgraph), Groß- und Kleinform und Anlautbild |
+| `common/phrases.json`                 | Anweisungen und wechselnde Lobsätze („Super!“, „Toll gelesen!“) für die Sprachausgabe                            |
+| `schriften/druckschrift/strokes.json` | Strichvorlagen fürs Nachspuren (Phase 6); jede weitere Schrift bekommt einen eigenen Ordner                      |
+| `basis/klasse-1/words.json`           | Wörter mit Silben, Kategorie, Bild und Ablenker-Gruppe                                                           |
+| `basis/klasse-1/syllables.json`       | Silben, vor allem Konsonant + Vokal (ma, lo, ri …), mit optionaler TTS-Korrektur                                 |
+| `laender/DE-BY/…`                     | Anpassung und zusätzliche Wortlisten für Bayern (Abschnitt 4)                                                    |
 
 Jede Klasse bekommt einen eigenen Ordner, und das Prüfskript wendet pro Klasse eigene Regeln an. In Klasse 1 gilt strenge Lauttreue. Ab Klasse 2 muss jedes Wort seine Besonderheit angeben, zum Beispiel `"phenomena": ["ie"]`. Diese Regeln gelten auch für die Wortlisten der Länder.
 
@@ -261,23 +261,23 @@ Zugelassen sind nur Wörter, in denen jeder Laut genau einem Buchstaben bzw. Gra
 
 ### Wort-Level in Klasse 1
 
-| Level | Struktur | Beispiele |
-|---|---|---|
-| 1 | zwei offene Silben (KV-KV) | Oma 👵, Opa 👴, Lama 🦙, Sofa 🛋️, Rose 🌹, Nase 👃, Hase 🐇, Dose 🥫, Hose 👖, Limo 🥤, Lupe 🔍, Dino 🦕, Mofa 🛵 |
-| 2 | drei oder mehr offene Silben | Tomate 🍅, Banane 🍌, Melone 🍉, Rakete 🚀 |
-| 3 | geschlossene Silben, einfache Konsonantenfolgen | Igel 🦔, Esel 🫏, Kamel 🐫, Ananas 🍍, Tulpe 🌷, Wal 🐋, Gabel 🍴 |
-| 4 | Mehrgraphe und Umlaute (später) | Maus 🐭, Eis 🍦, Auto 🚗, Schaf 🐑, Fisch 🐟, Käse 🧀 |
+| Level | Struktur                                        | Beispiele                                                                                                         |
+| ----- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| 1     | zwei offene Silben (KV-KV)                      | Oma 👵, Opa 👴, Lama 🦙, Sofa 🛋️, Rose 🌹, Nase 👃, Hase 🐇, Dose 🥫, Hose 👖, Limo 🥤, Lupe 🔍, Dino 🦕, Mofa 🛵 |
+| 2     | drei oder mehr offene Silben                    | Tomate 🍅, Banane 🍌, Melone 🍉, Rakete 🚀                                                                        |
+| 3     | geschlossene Silben, einfache Konsonantenfolgen | Igel 🦔, Esel 🫏, Kamel 🐫, Ananas 🍍, Tulpe 🌷, Wal 🐋, Gabel 🍴                                                 |
+| 4     | Mehrgraphe und Umlaute (später)                 | Maus 🐭, Eis 🍦, Auto 🚗, Schaf 🐑, Fisch 🐟, Käse 🧀                                                             |
 
 **Umfang für Phase 2:** etwa 120 Wörter (Schwerpunkt Level 1–3) und etwa 80 Silben.
 
 **Umgesetzt:** 100 Wörter in der Basis und 7 Ergänzungen für Bayern, zusammen 107 mit Bild:
 
 | Level | Wörter |
-|---|---|
-| 1 | 22 |
-| 2 | 7 |
-| 3 | 48 |
-| 4 | 30 |
+| ----- | ------ |
+| 1     | 22     |
+| 2     | 7      |
+| 3     | 48     |
+| 4     | 30     |
 
 Dazu kommen 80 Silben (16 Konsonanten × 5 Vokale) und 40 Buchstaben und Mehrgraphe in Schulreihenfolge. Level 2 ist bewusst klein, weil es nur wenige drei- oder mehrsilbige lauttreue Wörter gibt, zu denen ein passendes Bild existiert.
 
@@ -297,34 +297,34 @@ In jeder Aufgabe wird die Anweisung automatisch vorgelesen, der 🔊-Button wied
 
 ### Lesen
 
-| ID | Übung | Ablauf |
-|---|---|---|
-| L1 | Silben hören | Die TTS spricht eine Silbe, das Kind tippt sie unter drei Silben an. |
-| L2 | Wort → Bild | Das Wort steht da (silbengefärbt), das Kind wählt aus 3–4 Bildern. Nach einem Fehler wird das Wort als Hilfe vorgelesen. |
-| L3 | Bild → Wort | Zu einem Bild stehen drei ähnliche Wörter zur Wahl (Rose/Dose/Hose). |
-| L4 | Anlaut | Bild und gesprochenes Wort: „Womit fängt *Hase* an?“ Drei Buchstaben stehen zur Wahl. |
-| L5 | Silben klatschen | Das Kind hört ein Wort und wählt die Anzahl der Silben (1–4); klatschende Hände als Animation. |
+| ID  | Übung            | Ablauf                                                                                                                   |
+| --- | ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| L1  | Silben hören     | Die TTS spricht eine Silbe, das Kind tippt sie unter drei Silben an.                                                     |
+| L2  | Wort → Bild      | Das Wort steht da (silbengefärbt), das Kind wählt aus 3–4 Bildern. Nach einem Fehler wird das Wort als Hilfe vorgelesen. |
+| L3  | Bild → Wort      | Zu einem Bild stehen drei ähnliche Wörter zur Wahl (Rose/Dose/Hose).                                                     |
+| L4  | Anlaut           | Bild und gesprochenes Wort: „Womit fängt _Hase_ an?“ Drei Buchstaben stehen zur Wahl.                                    |
+| L5  | Silben klatschen | Das Kind hört ein Wort und wählt die Anzahl der Silben (1–4); klatschende Hände als Animation.                           |
 
 ### Schreiben
 
-| ID | Übung | Ablauf |
-|---|---|---|
-| S1 | Silben legen | Wort hören + Bild; das Kind tippt die Silbenkacheln (inklusive 1–2 Ablenkern) in der richtigen Reihenfolge an. |
-| S2 | Buchstaben legen | Wort hören + Bild; das Kind setzt Buchstabenkacheln in die Lücken. Leichte Variante: Es fehlt nur ein Buchstabe. |
-| S3 | ABC-Tastatur | Eigene Bildschirmtastatur mit nur den freigeschalteten Buchstaben; das Wort wird frei geschrieben. Groß-/Kleinschreibung zählt anfangs nicht (umschaltbar). |
-| S4 | Nachspuren | Buchstabe groß und klein mit Startpunkt und Richtungspfeilen. Der Finger muss die Kontrollpunkte in der richtigen Reihenfolge treffen, die Toleranz ist einstellbar. |
+| ID  | Übung            | Ablauf                                                                                                                                                               |
+| --- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| S1  | Silben legen     | Wort hören + Bild; das Kind tippt die Silbenkacheln (inklusive 1–2 Ablenkern) in der richtigen Reihenfolge an.                                                       |
+| S2  | Buchstaben legen | Wort hören + Bild; das Kind setzt Buchstabenkacheln in die Lücken. Leichte Variante: Es fehlt nur ein Buchstabe.                                                     |
+| S3  | ABC-Tastatur     | Eigene Bildschirmtastatur mit nur den freigeschalteten Buchstaben; das Wort wird frei geschrieben. Groß-/Kleinschreibung zählt anfangs nicht (umschaltbar).          |
+| S4  | Nachspuren       | Buchstabe groß und klein mit Startpunkt und Richtungspfeilen. Der Finger muss die Kontrollpunkte in der richtigen Reihenfolge treffen, die Toleranz ist einstellbar. |
 
 Für S4 entsteht ein eigener Editor (`#/dev/strokes`), mit dem die Strichvorlagen gezeichnet und als `strokes.json` gespeichert werden: normierte Koordinaten, Striche in Reihenfolge, Schreibrichtung nach der Schrift, die das Bundesland für die Klasse vorgibt (in Klasse 1 Druckschrift). Jede Schrift hat einen eigenen Ordner unter `schriften/`.
 
 ### Rechnen
 
-| ID | Übung | Ablauf |
-|---|---|---|
-| R1 | Mengen erkennen | Würfelbild oder Zehnerfeld → Zahl wählen; umgekehrt: Zahl → so viele Plättchen antippen |
-| R2 | Vergleichen | „Wo sind mehr?“ bzw. <, > oder = bei Zahlen bis 10 |
-| R3 | Zahlenhaus | Dach 7, Stockwerk 3 + ? → die fehlende Zahl finden |
-| R4 | Plus/Minus bis 10 | Mit einblendbarem Zehnerfeld als Rechenhilfe; das Ergebnis wird über große Zahlen-Tasten eingegeben |
-| R5 | Plus/Minus bis 20 | Nur nach Freischaltung: erst ohne, dann mit Zehnerübergang (Zwanzigerfeld) |
+| ID  | Übung             | Ablauf                                                                                              |
+| --- | ----------------- | --------------------------------------------------------------------------------------------------- |
+| R1  | Mengen erkennen   | Würfelbild oder Zehnerfeld → Zahl wählen; umgekehrt: Zahl → so viele Plättchen antippen             |
+| R2  | Vergleichen       | „Wo sind mehr?“ bzw. <, > oder = bei Zahlen bis 10                                                  |
+| R3  | Zahlenhaus        | Dach 7, Stockwerk 3 + ? → die fehlende Zahl finden                                                  |
+| R4  | Plus/Minus bis 10 | Mit einblendbarem Zehnerfeld als Rechenhilfe; das Ergebnis wird über große Zahlen-Tasten eingegeben |
+| R5  | Plus/Minus bis 20 | Nur nach Freischaltung: erst ohne, dann mit Zehnerübergang (Zwanzigerfeld)                          |
 
 Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Dabei gilt: kein negatives Ergebnis, alles bleibt im Zahlenraum, und dieselbe Aufgabe kommt in einer Einheit nicht zweimal vor. Die TTS liest Aufgaben mit Zahlwörtern („drei plus vier“). R4 und R5 sind dasselbe Modul (`rechnen.plus-minus`) mit anderem Zahlenraum; in Klasse 2 wird es mit Zahlenraum 100 weiterverwendet.
 
@@ -344,13 +344,13 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 ## 8. Datenmodell (IndexedDB `fibel`)
 
-| Store | Schlüssel | Inhalt |
-|---|---|---|
-| `profiles` | `id` | Name, Avatar, Bundesland (z. B. `DE-BY`), Klassenstufe, Anlagedatum |
-| `settings` | `profileId` | Startwerte aus Klasse und Bundesland, danach frei anpassbar: freigeschaltete höhere Klassen, von Hand gesetzte Level, freigeschaltete Buchstaben, Silbenfärbung, Silbenbögen, Groß-/Klein werten, Zahlenraum, Minus, Zehnerübergang, Aufgaben pro Einheit, Kronen-Schwelle, Stimme, Tempo, Ton an/aus |
-| `progress` | `[profileId, itemKey]` | Box, richtig/falsch, zuletzt gesehen; `itemKey` z. B. `lesen.wort-bild:rose` oder `rechnen.plus10:3+4` |
-| `sessions` | `id` (Index `profileId`) | Bundesland, Klasse, Fach, Start, Dauer, Aufgaben mit Ergebnis, Sterne, Krone |
-| `meta` | `key` | Schema-Version, Datum des letzten Backups |
+| Store      | Schlüssel                | Inhalt                                                                                                                                                                                                                                                                                                |
+| ---------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `profiles` | `id`                     | Name, Avatar, Bundesland (z. B. `DE-BY`), Klassenstufe, Anlagedatum                                                                                                                                                                                                                                   |
+| `settings` | `profileId`              | Startwerte aus Klasse und Bundesland, danach frei anpassbar: freigeschaltete höhere Klassen, von Hand gesetzte Level, freigeschaltete Buchstaben, Silbenfärbung, Silbenbögen, Groß-/Klein werten, Zahlenraum, Minus, Zehnerübergang, Aufgaben pro Einheit, Kronen-Schwelle, Stimme, Tempo, Ton an/aus |
+| `progress` | `[profileId, itemKey]`   | Box, richtig/falsch, zuletzt gesehen; `itemKey` z. B. `lesen.wort-bild:rose` oder `rechnen.plus10:3+4`                                                                                                                                                                                                |
+| `sessions` | `id` (Index `profileId`) | Bundesland, Klasse, Fach, Start, Dauer, Aufgaben mit Ergebnis, Sterne, Krone                                                                                                                                                                                                                          |
+| `meta`     | `key`                    | Schema-Version, Datum des letzten Backups                                                                                                                                                                                                                                                             |
 
 - Sterne und Kronen werden aus `sessions` berechnet. So gibt es nur eine Quelle für diese Zahlen.
 - Der Lernstand gehört zum Item, nicht zur Klasse oder zum Bundesland. Kommt „Rose“ in Klasse 2 wieder vor, zählt der bisherige Lernstand weiter.
@@ -390,6 +390,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 ## 11. Umsetzungsphasen
 
 **Stand:**
+
 - Phase 0 ist erledigt: Die App ist auf GitHub Pages veröffentlicht und auf dem Handy getestet.
 - Phase 1 ist umgesetzt. Als Test-Übung dient R1 „Mengen erkennen“ aus Phase 4, die damit schon fertig ist.
 - Phase 2 ist umgesetzt:
@@ -424,16 +425,16 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
   - **Lighthouse** (Version 12, ohne die entfernte PWA-Kategorie): Performance 99, Barrierefreiheit 100, Best Practices 100 für den Produktions-Build.
   - **Offen:** Version 1.0 taggen und veröffentlichen, die Testrunde mit dem Kind und das Anhören aller Wörter im Sprachtest auf dem Gerät.
 
-| Phase | Inhalt | Fertig, wenn … | Umfang |
-|---|---|---|---|
-| **0 – Setup und Geräte-Check** | Vite/Vue/TS-Projekt, ESLint/Prettier, Vitest, PWA-Plugin, GitHub-Repo mit Pages-Action, Andika, Hash-Router. Spike: TTS-Testseite, die Stimmen auflistet und Silben spricht | … die leere App auf dem Android-Tablet installiert ist, im Flugmodus startet und die deutsche Stimme spricht | S |
-| **1 – Kern** | Storage mit Migrationen, Profile mit Bundesland und Klassenstufe, Übungskatalog und Startwerte mit Länderanpassung (`content.ts`, Länderliste mit nur Bayern aktiv), TTS-Service, Sounds, Session-Engine mit Registry, Startseite nach Klasse mit Wiederholen-Bereich, Komponenten für Feedback, Sterne und Kronen, Trophäen-Ansicht, Eltern-Schranke, Grundeinstellungen | … eine Dummy-Übung als Katalog-Eintrag der Klasse 1 komplett läuft, inklusive Krone und Speicherung | M |
-| **2 – Wörterbücher Klasse 1** | Abgleich mit dem LehrplanPLUS Bayern (Jahrgangsstufe 1) und Anpassung `DE-BY`; `letters`, `words` (~120), `syllables` (~80), `phrases`; Grapheme-Zerleger, Prüfskript mit Regeln pro Klasse, OpenMoji-Sync, TTS-Prüfseite | … `data:check` grün ist und alle Einträge auf dem Gerät angehört wurden | M |
-| **3 – Lesen** | L1–L5, Buchstaben-Filter, Silbenfärbung | … Lesen eine vollständig spielbare Einheit ist | M |
-| **4 – Rechnen** | R1–R4, R5 freischaltbar; Zehnerfeld, Zahlenhaus, Zahlen-Tasten | … Rechnen spielbar ist und die Generatoren getestet sind | M |
-| **5 – Schreiben I** | S1 Silben legen, S2 Buchstaben legen, S3 ABC-Tastatur | … Schreiben ohne Nachspuren spielbar ist | M |
-| **6 – Schreiben II** | Stroke-Editor (Dev), `strokes.json`, S4 Nachspuren | … Nachspuren für alle Buchstaben aus `letters.json` funktioniert | L |
-| **7 – Feinschliff** | Statistik, Backup, Update-Hinweis, Lighthouse-PWA-Check, Testrunde mit dem Kind | … Version 1.0 auf GitHub Pages läuft | M |
+| Phase                          | Inhalt                                                                                                                                                                                                                                                                                                                                                                    | Fertig, wenn …                                                                                               | Umfang |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
+| **0 – Setup und Geräte-Check** | Vite/Vue/TS-Projekt, ESLint/Prettier, Vitest, PWA-Plugin, GitHub-Repo mit Pages-Action, Andika, Hash-Router. Spike: TTS-Testseite, die Stimmen auflistet und Silben spricht                                                                                                                                                                                               | … die leere App auf dem Android-Tablet installiert ist, im Flugmodus startet und die deutsche Stimme spricht | S      |
+| **1 – Kern**                   | Storage mit Migrationen, Profile mit Bundesland und Klassenstufe, Übungskatalog und Startwerte mit Länderanpassung (`content.ts`, Länderliste mit nur Bayern aktiv), TTS-Service, Sounds, Session-Engine mit Registry, Startseite nach Klasse mit Wiederholen-Bereich, Komponenten für Feedback, Sterne und Kronen, Trophäen-Ansicht, Eltern-Schranke, Grundeinstellungen | … eine Dummy-Übung als Katalog-Eintrag der Klasse 1 komplett läuft, inklusive Krone und Speicherung          | M      |
+| **2 – Wörterbücher Klasse 1**  | Abgleich mit dem LehrplanPLUS Bayern (Jahrgangsstufe 1) und Anpassung `DE-BY`; `letters`, `words` (~120), `syllables` (~80), `phrases`; Grapheme-Zerleger, Prüfskript mit Regeln pro Klasse, OpenMoji-Sync, TTS-Prüfseite                                                                                                                                                 | … `data:check` grün ist und alle Einträge auf dem Gerät angehört wurden                                      | M      |
+| **3 – Lesen**                  | L1–L5, Buchstaben-Filter, Silbenfärbung                                                                                                                                                                                                                                                                                                                                   | … Lesen eine vollständig spielbare Einheit ist                                                               | M      |
+| **4 – Rechnen**                | R1–R4, R5 freischaltbar; Zehnerfeld, Zahlenhaus, Zahlen-Tasten                                                                                                                                                                                                                                                                                                            | … Rechnen spielbar ist und die Generatoren getestet sind                                                     | M      |
+| **5 – Schreiben I**            | S1 Silben legen, S2 Buchstaben legen, S3 ABC-Tastatur                                                                                                                                                                                                                                                                                                                     | … Schreiben ohne Nachspuren spielbar ist                                                                     | M      |
+| **6 – Schreiben II**           | Stroke-Editor (Dev), `strokes.json`, S4 Nachspuren                                                                                                                                                                                                                                                                                                                        | … Nachspuren für alle Buchstaben aus `letters.json` funktioniert                                             | L      |
+| **7 – Feinschliff**            | Statistik, Backup, Update-Hinweis, Lighthouse-PWA-Check, Testrunde mit dem Kind                                                                                                                                                                                                                                                                                           | … Version 1.0 auf GitHub Pages läuft                                                                         | M      |
 
 **Abhängigkeiten:** Rechnen (Phase 4) braucht nur den Kern und kann deshalb parallel zu den Wörterbüchern und zu Lesen entstehen. Lesen und Schreiben brauchen die Wörterbücher aus Phase 2.
 
@@ -463,17 +464,17 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 ## 13. Risiken
 
-| Risiko | Gegenmaßnahme |
-|---|---|
-| Die TTS liest Silben falsch oder als Abkürzung | `say`-Overrides, TTS-Prüfseite, Silben werden kleingeschrieben an die TTS übergeben |
-| Die deutsche Stimme funktioniert nur online | `voice.localService` prüfen; im Elternbereich erklären, wie man die deutsche Stimme von Google-TTS offline lädt |
-| Datenverlust (Chrome-Daten gelöscht, App entfernt) | `storage.persist()`, JSON-Export, Erinnerung im Elternbereich, wenn das letzte Backup älter als 30 Tage ist |
-| Öffentliches Repo | Keine Namen oder Daten des Kindes im Code; Profile entstehen nur auf dem Gerät |
-| Zu wenige Wörter bei wenigen Buchstaben | Ausweichen auf Silben, Hinweis im Elternbereich |
-| Nachspuren ist zu streng oder zu locker | Toleranz einstellbar; zuerst mit wenigen Buchstaben testen |
-| Ein Update unterbricht eine Übung | Updates werden nur nach Bestätigung im Elternbereich eingespielt |
-| Basis-Katalog und Lehrpläne der Länder weichen voneinander ab | Abweichungen kommen in die Länderanpassung. Bayern wird vor jeder neuen Klasse mit dem LehrplanPLUS abgeglichen, andere Länder erst, wenn sie aktiviert werden. |
-| Eine Länderanpassung verweist ins Leere oder widerspricht der Basis | `data:check` prüft den zusammengesetzten Inhalt jedes aktiven Landes |
+| Risiko                                                              | Gegenmaßnahme                                                                                                                                                   |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Die TTS liest Silben falsch oder als Abkürzung                      | `say`-Overrides, TTS-Prüfseite, Silben werden kleingeschrieben an die TTS übergeben                                                                             |
+| Die deutsche Stimme funktioniert nur online                         | `voice.localService` prüfen; im Elternbereich erklären, wie man die deutsche Stimme von Google-TTS offline lädt                                                 |
+| Datenverlust (Chrome-Daten gelöscht, App entfernt)                  | `storage.persist()`, JSON-Export, Erinnerung im Elternbereich, wenn das letzte Backup älter als 30 Tage ist                                                     |
+| Öffentliches Repo                                                   | Keine Namen oder Daten des Kindes im Code; Profile entstehen nur auf dem Gerät                                                                                  |
+| Zu wenige Wörter bei wenigen Buchstaben                             | Ausweichen auf Silben, Hinweis im Elternbereich                                                                                                                 |
+| Nachspuren ist zu streng oder zu locker                             | Toleranz einstellbar; zuerst mit wenigen Buchstaben testen                                                                                                      |
+| Ein Update unterbricht eine Übung                                   | Updates werden nur nach Bestätigung im Elternbereich eingespielt                                                                                                |
+| Basis-Katalog und Lehrpläne der Länder weichen voneinander ab       | Abweichungen kommen in die Länderanpassung. Bayern wird vor jeder neuen Klasse mit dem LehrplanPLUS abgeglichen, andere Länder erst, wenn sie aktiviert werden. |
+| Eine Länderanpassung verweist ins Leere oder widerspricht der Basis | `data:check` prüft den zusammengesetzten Inhalt jedes aktiven Landes                                                                                            |
 
 ## 14. Später (nicht in Version 1)
 
@@ -488,20 +489,21 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 Bewertet am 20.11.2026, Punkt für Punkt:
 
-| Punkt | Entscheidung |
-|---|---|
-| Aufgabe als Text anzeigen | erledigt (Phase 4) |
-| Größeres Wörterbuch | umsetzen → E1 |
-| Wort mit dem Finger schreiben | umsetzen als Kästchen mit Erkennung → E6 |
-| Speech-to-Text beim Vorlesen | verworfen: Die Audiodaten gingen an Google-Server, Kinderstimmen werden schlecht erkannt, und offline funktioniert es nicht |
-| Reimen | umsetzen, mit Hörwortschatz → E2, E3 |
-| Gleiche Anlaute finden | umsetzen, beide Varianten → E4 |
-| Reihen erkennen und fortsetzen | umsetzen unter Rechnen → E5 |
-| Nur Versions-Tags deployen / Version anzeigen | erledigt: geändert zu „jeder Push auf main und Tags“, die Version steht mit Build-Stand im Elternbereich |
+| Punkt                                         | Entscheidung                                                                                                                |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Aufgabe als Text anzeigen                     | erledigt (Phase 4)                                                                                                          |
+| Größeres Wörterbuch                           | umsetzen → E1                                                                                                               |
+| Wort mit dem Finger schreiben                 | umsetzen als Kästchen mit Erkennung → E6                                                                                    |
+| Speech-to-Text beim Vorlesen                  | verworfen: Die Audiodaten gingen an Google-Server, Kinderstimmen werden schlecht erkannt, und offline funktioniert es nicht |
+| Reimen                                        | umsetzen, mit Hörwortschatz → E2, E3                                                                                        |
+| Gleiche Anlaute finden                        | umsetzen, beide Varianten → E4                                                                                              |
+| Reihen erkennen und fortsetzen                | umsetzen unter Rechnen → E5                                                                                                 |
+| Nur Versions-Tags deployen / Version anzeigen | erledigt: geändert zu „jeder Push auf main und Tags“, die Version steht mit Build-Stand im Elternbereich                    |
 
 ### E1 – Größeres Wörterbuch (Umfang M) – ✅ umgesetzt
 
 **Stand:**
+
 - 359 Wörter in der Basis und 7 für Bayern, zusammen 366: 155 Nomen, 71 Verben, 32 Adjektive, 46 kleine Wörter, 55 Namen. 100 davon haben ein Bild.
 - Mit den Startbuchstaben gibt es jetzt 22 lesbare Wörter statt 4.
 - 93 Wörter sind als bayerischer Grundwortschatz markiert.
@@ -514,7 +516,7 @@ Bewertet am 20.11.2026, Punkt für Punkt:
   - Adjektive (rot, gut, lila, rosa, laut …)
   - kleine Wörter (am, im, um, so, da, mal …)
   - Vornamen (Mila, Leo, Ole, Emil, Uli, Lilo …)
-  Die Vornamen helfen besonders am Anfang: Mit A, E, I, O, U, M, L gibt es bisher nur 4 Wörter.
+    Die Vornamen helfen besonders am Anfang: Mit A, E, I, O, U, M, L gibt es bisher nur 4 Wörter.
 - **Datenformat:**
   - `image` wird optional.
   - Neues Feld `wortart` (`nomen`, `verb`, `adjektiv`, `klein`, `name`).
@@ -527,6 +529,7 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 ### E2 – Hörwortschatz (Umfang M) – ✅ umgesetzt
 
 **Stand:**
+
 - 84 Hörwörter in `basis/klasse-1/hoerwoerter.json`. Zusammen mit den 107 Lese-Wörtern, die ein Bild haben, ergibt das einen Hörwortschatz von 191 Bildwörtern.
 - **Reimgruppen:** 27 Gruppen, von Rose/Dose/Hose bis Hund/Mund und Kuh/Schuh.
 - **Anlautgruppen:** 22 Gruppen mit mindestens 3 Wörtern, nach Klang sortiert. Vogel steht bei f, Vase bei w, Stern und Spinne bei sch.
@@ -547,6 +550,7 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 ### E3 – Reimen (Umfang S, braucht E2) – ✅ umgesetzt
 
 **Stand:**
+
 - Die Übung „Was reimt sich?“ fragt jedes Wort mit Reimpartner ab.
 - Ein Ablenker hat nach Möglichkeit den gleichen Anlaut wie das Zielwort.
 - Die Anweisung liest die drei Auswahlwörter in Bildschirm-Reihenfolge mit vor („Nase, Hund oder Ball?“), weil ein Kind nicht jedes Bild sicher benennen kann.
@@ -559,6 +563,7 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 ### E4 – Gleiche Anlaute (Umfang S, braucht E2) – ✅ umgesetzt
 
 **Stand:**
+
 - Variante A heißt „Gleicher Anfang“: Die beiden Ablenker haben zwei verschiedene Anlaute.
 - Variante B heißt „Welches fängt anders an?“: vier Bilder, ein Item pro Anlautgruppe.
 - Beide lesen die Auswahl mit vor.
@@ -571,6 +576,7 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 ### E5 – Reihen erkennen und fortsetzen (Umfang M, unabhängig) – ✅ umgesetzt
 
 **Stand:**
+
 - Die Übung „Reihen erkennen“ im Fach Rechnen hat 5 Level und 17 Mustertypen.
 - **Muster:** Jede Form hat ihre eigene Farbe, z. B. roter Kreis und blaues Viereck. Bei den Bildern sind nur klar unterscheidbare Motive dabei; Hund und Katze sahen sich in OpenMoji zu ähnlich, deshalb gibt es keinen Hund.
 - **Länge:** Eine Reihe zeigt genau zwei Wiederholungen plus ein Element. So passt sie auch bei 360 px Breite in eine Zeile, was für jeden Mustertyp gemessen ist.
@@ -588,7 +594,19 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 - **Freischaltung:** Das nächste Level öffnet sich bei 80 % sicheren Aufgaben. Im Elternbereich lässt sich das Level auch von Hand setzen.
 - Farben gibt es immer zusammen mit einer Form, damit die Übung auch bei Farbsehschwäche funktioniert.
 
-### E6 – Wort in Kästchen schreiben, mit Erkennung (Umfang L, Experiment)
+### E6 – Wort in Kästchen schreiben, mit Erkennung (Umfang L, Experiment) – ✅ umgesetzt
+
+**Stand:**
+
+- Die Übung „Wort in Kästchen schreiben (Experiment)“ steht im Fach Schreiben. Sie ist standardmäßig aus und lässt sich im Elternbereich (Schreiben) einschalten. Dort ist auch die Strenge wählbar: locker, normal oder genau.
+- **Wörter:** Es kommen nur kurze Wörter (bis 5 Buchstaben) aus bereits bekannten Buchstaben dran. Der erste Buchstabe von Nomen wird mit Großbuchstaben verglichen, alle anderen mit Kleinbuchstaben.
+- **Erkennung:** $P-Punktwolke mit 32 Punkten. Dazu kommt die Lage zwischen den Schullinien als Zusatzkriterium, denn ohne sie wurde im Browser-Test ein Zickzack als „U“ erkannt. i-Punkte und andere kurze Striche bekommen eigene Punkte, sonst sähe „i“ wie „l“ aus.
+- **Kalibrierung:** Die Schwelle liegt bei 1,6.
+  - Simuliert verwackelte echte Buchstaben werden zu etwa 90 % erkannt.
+  - Gekritzel wird nur noch zu etwa 19 % angenommen (vorher 79 %), und dann nur, wenn es dem verlangten Buchstaben am ähnlichsten ist.
+  - Bei stark verwackelter Schrift sind Verwechslungen a↔o/u und l↔i möglich.
+- **Ablauf:** Ist die Erkennung unsicher, erscheint die Vorlage blass, und das Kind schreibt neu. Nach 3 Versuchen wird der Buchstabe „mit Hilfe“ ausgefüllt und zählt als Fehler.
+- **Offen:** Mit echter Kinderschrift auf dem Handy testen und die Schwelle abstimmen. Erst danach standardmäßig einschalten.
 
 - **Ablauf:** Das Wort wird vorgelesen und das Bild gezeigt. Das Kind schreibt jeden Buchstaben mit dem Finger in ein eigenes Kästchen auf Schullinien.
 - **Erkennung, offline:** ein Punktwolken-Vergleich ($P-Verfahren) der Fingerspur mit unseren Druckschrift-Vorlagen.

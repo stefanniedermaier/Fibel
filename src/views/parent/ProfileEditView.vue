@@ -364,6 +364,18 @@ async function remove() {
           <option :value="0.7">genau</option>
         </select>
       </label>
+      <label class="check">
+        <input v-model="settings.kaestchen" type="checkbox" />
+        Experiment: Wörter frei in Kästchen schreiben (die App erkennt die Buchstaben)
+      </label>
+      <label v-if="settings.kaestchen">
+        Erkennung: Wie genau muss geschrieben werden?
+        <select v-model.number="settings.recognitionTolerance">
+          <option :value="1.25">locker</option>
+          <option :value="1">normal</option>
+          <option :value="0.8">genau</option>
+        </select>
+      </label>
     </section>
 
     <section class="card">

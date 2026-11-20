@@ -104,6 +104,14 @@
     "title": "Buchstaben nachspuren"
   },
   {
+    "id": "k1.schreiben.kaestchen",
+    "grade": 1,
+    "topic": "schreiben",
+    "exercise": "schreiben.kaestchen",
+    "params": { "wordGrade": 1 },
+    "title": "Wort in Kästchen schreiben (Experiment)"
+  },
+  {
     "id": "k1.rechnen.mengen-10",
     "grade": 1,
     "topic": "rechnen",

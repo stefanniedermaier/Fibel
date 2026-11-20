@@ -13,6 +13,8 @@
     "crownRatio": 0.75,
     "sound": true,
     "traceTolerance": 1,
+    "kaestchen": false,
+    "recognitionTolerance": 1,
     "voiceURI": null,
     "speechRate": 0.85,
     "levels": {}

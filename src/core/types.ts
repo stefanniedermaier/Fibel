@@ -47,6 +47,10 @@ export interface ProfileSettings {
   sound: boolean
   /** How exactly the finger must follow when tracing (0.7 strict, 1 normal, 1.4 easy). */
   traceTolerance: number
+  /** Experiment: write words freely in boxes, with letter recognition (default off). */
+  kaestchen: boolean
+  /** How strict the recognition is (0.8 strict, 1 normal, 1.25 easy). */
+  recognitionTolerance: number
   voiceURI: string | null
   speechRate: number
   /** Levels set by hand, per catalog entry id. */
