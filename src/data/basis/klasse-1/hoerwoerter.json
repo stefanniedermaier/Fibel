@@ -1,0 +1,709 @@
+[
+  {
+    "id": "hund",
+    "text": "Hund",
+    "syllables": ["Hund"],
+    "wortart": "nomen",
+    "image": "1F415",
+    "category": "tiere",
+    "reim": "und"
+  },
+  {
+    "id": "mund",
+    "text": "Mund",
+    "syllables": ["Mund"],
+    "wortart": "nomen",
+    "image": "1F444",
+    "category": "koerper",
+    "reim": "und"
+  },
+  {
+    "id": "kuh",
+    "text": "Kuh",
+    "syllables": ["Kuh"],
+    "wortart": "nomen",
+    "image": "1F404",
+    "category": "tiere",
+    "reim": "uh"
+  },
+  {
+    "id": "schuh",
+    "text": "Schuh",
+    "syllables": ["Schuh"],
+    "wortart": "nomen",
+    "image": "1F45F",
+    "category": "dinge",
+    "reim": "uh"
+  },
+  {
+    "id": "sonne",
+    "text": "Sonne",
+    "syllables": ["Son", "ne"],
+    "wortart": "nomen",
+    "image": "2600",
+    "category": "natur",
+    "reim": "onne"
+  },
+  {
+    "id": "tonne",
+    "text": "Tonne",
+    "syllables": ["Ton", "ne"],
+    "wortart": "nomen",
+    "image": "1F6E2",
+    "category": "dinge",
+    "reim": "onne"
+  },
+  {
+    "id": "schwein",
+    "text": "Schwein",
+    "syllables": ["Schwein"],
+    "wortart": "nomen",
+    "image": "1F416",
+    "category": "tiere",
+    "reim": "ein"
+  },
+  {
+    "id": "stein",
+    "text": "Stein",
+    "syllables": ["Stein"],
+    "wortart": "nomen",
+    "image": "1FAA8",
+    "category": "natur",
+    "reim": "ein"
+  },
+  {
+    "id": "vase",
+    "text": "Vase",
+    "syllables": ["Va", "se"],
+    "wortart": "nomen",
+    "image": "1F3FA",
+    "category": "dinge",
+    "reim": "ase",
+    "anlaut": "w"
+  },
+  {
+    "id": "katze",
+    "text": "Katze",
+    "syllables": ["Kat", "ze"],
+    "wortart": "nomen",
+    "image": "1F408",
+    "category": "tiere",
+    "reim": "atze"
+  },
+  {
+    "id": "tatze",
+    "text": "Tatze",
+    "syllables": ["Tat", "ze"],
+    "wortart": "nomen",
+    "image": "1F43E",
+    "category": "tiere",
+    "reim": "atze"
+  },
+  {
+    "id": "schaum",
+    "text": "Schaum",
+    "syllables": ["Schaum"],
+    "wortart": "nomen",
+    "image": "1FAE7",
+    "category": "dinge",
+    "reim": "aum"
+  },
+  {
+    "id": "hand",
+    "text": "Hand",
+    "syllables": ["Hand"],
+    "wortart": "nomen",
+    "image": "270B",
+    "category": "koerper",
+    "reim": "and"
+  },
+  {
+    "id": "sand",
+    "text": "Sand",
+    "syllables": ["Sand"],
+    "wortart": "nomen",
+    "image": "1F3D6",
+    "category": "natur",
+    "reim": "and"
+  },
+  {
+    "id": "zahn",
+    "text": "Zahn",
+    "syllables": ["Zahn"],
+    "wortart": "nomen",
+    "image": "1F9B7",
+    "category": "koerper",
+    "reim": "ahn"
+  },
+  {
+    "id": "hahn",
+    "text": "Hahn",
+    "syllables": ["Hahn"],
+    "wortart": "nomen",
+    "image": "1F413",
+    "category": "tiere",
+    "reim": "ahn"
+  },
+  {
+    "id": "giraffe",
+    "text": "Giraffe",
+    "syllables": ["Gi", "raf", "fe"],
+    "wortart": "nomen",
+    "image": "1F992",
+    "category": "tiere",
+    "reim": "affe"
+  },
+  {
+    "id": "affe",
+    "text": "Affe",
+    "syllables": ["Af", "fe"],
+    "wortart": "nomen",
+    "image": "1F412",
+    "category": "tiere",
+    "reim": "affe"
+  },
+  {
+    "id": "socke",
+    "text": "Socke",
+    "syllables": ["So", "cke"],
+    "wortart": "nomen",
+    "image": "1F9E6",
+    "category": "dinge",
+    "reim": "ocke"
+  },
+  {
+    "id": "glocke",
+    "text": "Glocke",
+    "syllables": ["Glo", "cke"],
+    "wortart": "nomen",
+    "image": "1F514",
+    "category": "dinge",
+    "reim": "ocke"
+  },
+  {
+    "id": "boot",
+    "text": "Boot",
+    "syllables": ["Boot"],
+    "wortart": "nomen",
+    "image": "26F5",
+    "category": "fahrzeuge",
+    "reim": "ot"
+  },
+  {
+    "id": "zitrone",
+    "text": "Zitrone",
+    "syllables": ["Zi", "tro", "ne"],
+    "wortart": "nomen",
+    "image": "1F34B",
+    "category": "essen",
+    "reim": "one"
+  },
+  {
+    "id": "spiegel",
+    "text": "Spiegel",
+    "syllables": ["Spie", "gel"],
+    "wortart": "nomen",
+    "image": "1FA9E",
+    "category": "dinge",
+    "reim": "igel"
+  },
+  {
+    "id": "reis",
+    "text": "Reis",
+    "syllables": ["Reis"],
+    "wortart": "nomen",
+    "image": "1F35A",
+    "category": "essen",
+    "reim": "eis"
+  },
+  {
+    "id": "kreis",
+    "text": "Kreis",
+    "syllables": ["Kreis"],
+    "wortart": "nomen",
+    "image": "2B55",
+    "category": "dinge",
+    "reim": "eis"
+  },
+  {
+    "id": "tanne",
+    "text": "Tanne",
+    "syllables": ["Tan", "ne"],
+    "wortart": "nomen",
+    "image": "1F332",
+    "category": "natur",
+    "reim": "anne"
+  },
+  {
+    "id": "pfanne",
+    "text": "Pfanne",
+    "syllables": ["Pfan", "ne"],
+    "wortart": "nomen",
+    "image": "1F373",
+    "category": "dinge",
+    "reim": "anne"
+  },
+  {
+    "id": "fliege",
+    "text": "Fliege",
+    "syllables": ["Flie", "ge"],
+    "wortart": "nomen",
+    "image": "1FAB0",
+    "category": "tiere",
+    "reim": "iege"
+  },
+  {
+    "id": "ziege",
+    "text": "Ziege",
+    "syllables": ["Zie", "ge"],
+    "wortart": "nomen",
+    "image": "1F410",
+    "category": "tiere",
+    "reim": "iege"
+  },
+  {
+    "id": "taube",
+    "text": "Taube",
+    "syllables": ["Tau", "be"],
+    "wortart": "nomen",
+    "image": "1F54A",
+    "category": "tiere",
+    "reim": "aube"
+  },
+  {
+    "id": "traube",
+    "text": "Traube",
+    "syllables": ["Trau", "be"],
+    "wortart": "nomen",
+    "image": "1F347",
+    "category": "essen",
+    "reim": "aube"
+  },
+  {
+    "id": "nuss",
+    "text": "Nuss",
+    "syllables": ["Nuss"],
+    "wortart": "nomen",
+    "image": "1F330",
+    "category": "essen",
+    "reim": "us"
+  },
+  {
+    "id": "brille",
+    "text": "Brille",
+    "syllables": ["Bril", "le"],
+    "wortart": "nomen",
+    "image": "1F453",
+    "category": "dinge",
+    "reim": "ille"
+  },
+  {
+    "id": "grille",
+    "text": "Grille",
+    "syllables": ["Gril", "le"],
+    "wortart": "nomen",
+    "image": "1F997",
+    "category": "tiere",
+    "reim": "ille"
+  },
+  {
+    "id": "uhr",
+    "text": "Uhr",
+    "syllables": ["Uhr"],
+    "wortart": "nomen",
+    "image": "23F0",
+    "category": "dinge"
+  },
+  {
+    "id": "ohr",
+    "text": "Ohr",
+    "syllables": ["Ohr"],
+    "wortart": "nomen",
+    "image": "1F442",
+    "category": "koerper"
+  },
+  {
+    "id": "orange",
+    "text": "Orange",
+    "syllables": ["O", "ran", "ge"],
+    "wortart": "nomen",
+    "image": "1F34A",
+    "category": "essen"
+  },
+  {
+    "id": "aubergine",
+    "text": "Aubergine",
+    "syllables": ["Au", "ber", "gi", "ne"],
+    "wortart": "nomen",
+    "image": "1F346",
+    "category": "essen"
+  },
+  {
+    "id": "eichhoernchen",
+    "text": "Eichhörnchen",
+    "syllables": ["Eich", "hörn", "chen"],
+    "wortart": "nomen",
+    "image": "1F43F",
+    "category": "tiere"
+  },
+  {
+    "id": "eimer",
+    "text": "Eimer",
+    "syllables": ["Ei", "mer"],
+    "wortart": "nomen",
+    "image": "1FAA3",
+    "category": "dinge"
+  },
+  {
+    "id": "zug",
+    "text": "Zug",
+    "syllables": ["Zug"],
+    "wortart": "nomen",
+    "image": "1F686",
+    "category": "fahrzeuge"
+  },
+  {
+    "id": "geschenk",
+    "text": "Geschenk",
+    "syllables": ["Ge", "schenk"],
+    "wortart": "nomen",
+    "image": "1F381",
+    "category": "dinge"
+  },
+  {
+    "id": "fuss",
+    "text": "Fuß",
+    "syllables": ["Fuß"],
+    "wortart": "nomen",
+    "image": "1F9B6",
+    "category": "koerper"
+  },
+  {
+    "id": "vogel",
+    "text": "Vogel",
+    "syllables": ["Vo", "gel"],
+    "wortart": "nomen",
+    "image": "1F426",
+    "category": "tiere"
+  },
+  {
+    "id": "feder",
+    "text": "Feder",
+    "syllables": ["Fe", "der"],
+    "wortart": "nomen",
+    "image": "1FAB6",
+    "category": "dinge"
+  },
+  {
+    "id": "fahrrad",
+    "text": "Fahrrad",
+    "syllables": ["Fahr", "rad"],
+    "wortart": "nomen",
+    "image": "1F6B2",
+    "category": "fahrzeuge"
+  },
+  {
+    "id": "wurm",
+    "text": "Wurm",
+    "syllables": ["Wurm"],
+    "wortart": "nomen",
+    "image": "1FAB1",
+    "category": "tiere"
+  },
+  {
+    "id": "wuerfel",
+    "text": "Würfel",
+    "syllables": ["Wür", "fel"],
+    "wortart": "nomen",
+    "image": "1F3B2",
+    "category": "dinge"
+  },
+  {
+    "id": "wurst",
+    "text": "Wurst",
+    "syllables": ["Wurst"],
+    "wortart": "nomen",
+    "image": "1F32D",
+    "category": "essen"
+  },
+  {
+    "id": "stern",
+    "text": "Stern",
+    "syllables": ["Stern"],
+    "wortart": "nomen",
+    "image": "2B50",
+    "category": "natur"
+  },
+  {
+    "id": "stuhl",
+    "text": "Stuhl",
+    "syllables": ["Stuhl"],
+    "wortart": "nomen",
+    "image": "1FA91",
+    "category": "dinge"
+  },
+  {
+    "id": "spinne",
+    "text": "Spinne",
+    "syllables": ["Spin", "ne"],
+    "wortart": "nomen",
+    "image": "1F577",
+    "category": "tiere"
+  },
+  {
+    "id": "ball",
+    "text": "Ball",
+    "syllables": ["Ball"],
+    "wortart": "nomen",
+    "image": "26BD",
+    "category": "dinge"
+  },
+  {
+    "id": "baer",
+    "text": "Bär",
+    "syllables": ["Bär"],
+    "wortart": "nomen",
+    "image": "1F43B",
+    "category": "tiere"
+  },
+  {
+    "id": "biene",
+    "text": "Biene",
+    "syllables": ["Bie", "ne"],
+    "wortart": "nomen",
+    "image": "1F41D",
+    "category": "tiere"
+  },
+  {
+    "id": "bett",
+    "text": "Bett",
+    "syllables": ["Bett"],
+    "wortart": "nomen",
+    "image": "1F6CF",
+    "category": "dinge"
+  },
+  {
+    "id": "mond",
+    "text": "Mond",
+    "syllables": ["Mond"],
+    "wortart": "nomen",
+    "image": "1F319",
+    "category": "natur"
+  },
+  {
+    "id": "muetze",
+    "text": "Mütze",
+    "syllables": ["Müt", "ze"],
+    "wortart": "nomen",
+    "image": "1F9E2",
+    "category": "dinge"
+  },
+  {
+    "id": "suppe",
+    "text": "Suppe",
+    "syllables": ["Sup", "pe"],
+    "wortart": "nomen",
+    "image": "1F372",
+    "category": "essen"
+  },
+  {
+    "id": "tasse",
+    "text": "Tasse",
+    "syllables": ["Tas", "se"],
+    "wortart": "nomen",
+    "image": "2615",
+    "category": "dinge"
+  },
+  {
+    "id": "tiger",
+    "text": "Tiger",
+    "syllables": ["Ti", "ger"],
+    "wortart": "nomen",
+    "image": "1F405",
+    "category": "tiere"
+  },
+  {
+    "id": "loeffel",
+    "text": "Löffel",
+    "syllables": ["Löf", "fel"],
+    "wortart": "nomen",
+    "image": "1F944",
+    "category": "dinge"
+  },
+  {
+    "id": "pferd",
+    "text": "Pferd",
+    "syllables": ["Pferd"],
+    "wortart": "nomen",
+    "image": "1F40E",
+    "category": "tiere"
+  },
+  {
+    "id": "ampel",
+    "text": "Ampel",
+    "syllables": ["Am", "pel"],
+    "wortart": "nomen",
+    "image": "1F6A6",
+    "category": "dinge"
+  },
+  {
+    "id": "anker",
+    "text": "Anker",
+    "syllables": ["An", "ker"],
+    "wortart": "nomen",
+    "image": "2693",
+    "category": "dinge"
+  },
+  {
+    "id": "engel",
+    "text": "Engel",
+    "syllables": ["En", "gel"],
+    "wortart": "nomen",
+    "image": "1F47C",
+    "category": "menschen"
+  },
+  {
+    "id": "erdbeere",
+    "text": "Erdbeere",
+    "syllables": ["Erd", "bee", "re"],
+    "wortart": "nomen",
+    "image": "1F353",
+    "category": "essen"
+  },
+  {
+    "id": "herz",
+    "text": "Herz",
+    "syllables": ["Herz"],
+    "wortart": "nomen",
+    "image": "2764",
+    "category": "dinge"
+  },
+  {
+    "id": "kerze",
+    "text": "Kerze",
+    "syllables": ["Ker", "ze"],
+    "wortart": "nomen",
+    "image": "1F56F",
+    "category": "dinge"
+  },
+  {
+    "id": "torte",
+    "text": "Torte",
+    "syllables": ["Tor", "te"],
+    "wortart": "nomen",
+    "image": "1F382",
+    "category": "essen"
+  },
+  {
+    "id": "pinguin",
+    "text": "Pinguin",
+    "syllables": ["Pin", "gu", "in"],
+    "wortart": "nomen",
+    "image": "1F427",
+    "category": "tiere"
+  },
+  {
+    "id": "biber",
+    "text": "Biber",
+    "syllables": ["Bi", "ber"],
+    "wortart": "nomen",
+    "image": "1F9AB",
+    "category": "tiere"
+  },
+  {
+    "id": "daumen",
+    "text": "Daumen",
+    "syllables": ["Dau", "men"],
+    "wortart": "nomen",
+    "image": "1F44D",
+    "category": "koerper"
+  },
+  {
+    "id": "dusche",
+    "text": "Dusche",
+    "syllables": ["Du", "sche"],
+    "wortart": "nomen",
+    "image": "1F6BF",
+    "category": "dinge"
+  },
+  {
+    "id": "gurke",
+    "text": "Gurke",
+    "syllables": ["Gur", "ke"],
+    "wortart": "nomen",
+    "image": "1F952",
+    "category": "essen"
+  },
+  {
+    "id": "kirsche",
+    "text": "Kirsche",
+    "syllables": ["Kir", "sche"],
+    "wortart": "nomen",
+    "image": "1F352",
+    "category": "essen"
+  },
+  {
+    "id": "birne",
+    "text": "Birne",
+    "syllables": ["Bir", "ne"],
+    "wortart": "nomen",
+    "image": "1F350",
+    "category": "essen"
+  },
+  {
+    "id": "karotte",
+    "text": "Karotte",
+    "syllables": ["Ka", "rot", "te"],
+    "wortart": "nomen",
+    "image": "1F955",
+    "category": "essen"
+  },
+  {
+    "id": "kartoffel",
+    "text": "Kartoffel",
+    "syllables": ["Kar", "tof", "fel"],
+    "wortart": "nomen",
+    "image": "1F954",
+    "category": "essen"
+  },
+  {
+    "id": "brezel",
+    "text": "Brezel",
+    "syllables": ["Bre", "zel"],
+    "wortart": "nomen",
+    "image": "1F968",
+    "category": "essen"
+  },
+  {
+    "id": "pizza",
+    "text": "Pizza",
+    "syllables": ["Piz", "za"],
+    "wortart": "nomen",
+    "image": "1F355",
+    "category": "essen"
+  },
+  {
+    "id": "schnecke",
+    "text": "Schnecke",
+    "syllables": ["Schne", "cke"],
+    "wortart": "nomen",
+    "image": "1F40C",
+    "category": "tiere"
+  },
+  {
+    "id": "schildkroete",
+    "text": "Schildkröte",
+    "syllables": ["Schild", "krö", "te"],
+    "wortart": "nomen",
+    "image": "1F422",
+    "category": "tiere"
+  },
+  {
+    "id": "hamster",
+    "text": "Hamster",
+    "syllables": ["Hams", "ter"],
+    "wortart": "nomen",
+    "image": "1F439",
+    "category": "tiere"
+  }
+]

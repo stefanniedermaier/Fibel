@@ -5,10 +5,11 @@
 import avatars from '@/data/common/avatars.json'
 import { BASE_CATALOG, LAENDER, OVERLAYS, applyOverlay } from './content'
 import { graphemes } from './graphemes'
+import { MIN_ANLAUT_GROUP, groupBy, listenEntries, resolveListenWords } from './hoeren'
 import { checkLauttreu } from './lauttreue'
 import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
-import { WORTARTEN, type Syllable, type Word } from './types'
-import { LETTERS, applyWordOverlay, baseSyllables, baseWordEntries } from './words'
+import { WORTARTEN, type LandCode, type Syllable, type Word } from './types'
+import { LETTERS, applyWordOverlay, baseSyllables, baseWordEntries, resolveWords } from './words'
 
 export const CATEGORIES = new Set([
   'menschen',
@@ -128,6 +129,51 @@ function checkLetters(images: ReadonlySet<string>) {
   return problems
 }
 
+/** At least this many initial-sound groups must have enough words for the exercises. */
+export const MIN_USABLE_ANLAUT_GROUPS = 12
+
+/**
+ * Listening vocabulary: well-formed entries with pictures, no picture used twice in
+ * the pool, every rhyme group with a partner, enough usable initial-sound groups.
+ * No lauttreue check – these words are only heard.
+ */
+function checkListening(land: LandCode, grade: number, images: ReadonlySet<string>): string[] {
+  const problems: string[] = []
+  const label = `Hörwortschatz Klasse ${grade}`
+  const readingIds = new Set(resolveWords(land, grade).map((w) => w.id))
+  const seen = new Set<string>()
+  for (const e of listenEntries(grade)) {
+    const where = `${label}, „${e.text}“ (${e.id})`
+    if (seen.has(e.id) || readingIds.has(e.id)) problems.push(`${where}: ID doppelt`)
+    seen.add(e.id)
+    if (!e.image) problems.push(`${where}: Hörwörter brauchen ein Bild`)
+    else if (!images.has(e.image)) problems.push(`${where}: Bild ${e.image} fehlt`)
+    if (e.syllables.join('') !== e.text) problems.push(`${where}: Silben ergeben nicht das Wort`)
+    if (!CATEGORIES.has(e.category)) problems.push(`${where}: unbekannte Kategorie „${e.category}“`)
+    if (e.wortart !== 'nomen') problems.push(`${where}: Hörwörter sind Nomen`)
+  }
+
+  const pool = resolveListenWords(land, grade)
+  for (const [image, words] of groupBy(pool, (w) => w.image)) {
+    if (words.length > 1) {
+      problems.push(`${label}: Bild ${image} doppelt (${words.map((w) => w.text).join(', ')})`)
+    }
+  }
+  for (const [reim, words] of groupBy(pool, (w) => w.reim)) {
+    if (words.length < 2)
+      problems.push(`${label}: Reimgruppe „${reim}“ hat nur „${words[0]?.text}“`)
+  }
+  const usable = [...groupBy(pool, (w) => w.anlaut).values()].filter(
+    (g) => g.length >= MIN_ANLAUT_GROUP,
+  ).length
+  if (usable < MIN_USABLE_ANLAUT_GROUPS) {
+    problems.push(
+      `${label}: nur ${usable} Anlautgruppen mit mindestens ${MIN_ANLAUT_GROUP} Wörtern`,
+    )
+  }
+  return problems
+}
+
 export function checkData(images: ReadonlySet<string>): string[] {
   const problems: string[] = [...checkLetters(images), ...checkScripts()]
 
@@ -166,6 +212,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
       try {
         const words = applyWordOverlay(baseWordEntries(grade), grade, overlay)
         problems.push(...checkWords(words, grade, land.name, images))
+        problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)
       }

@@ -24,7 +24,8 @@
     "image": "1F469",
     "category": "menschen",
     "similar": ["papa", "lama"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ama"
   },
   {
     "id": "papa",
@@ -42,7 +43,8 @@
     "image": "1F999",
     "category": "tiere",
     "similar": ["mama", "limo"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ama"
   },
   {
     "id": "sofa",
@@ -60,7 +62,8 @@
     "image": "1F339",
     "category": "natur",
     "similar": ["dose", "hose"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ose"
   },
   {
     "id": "nase",
@@ -69,7 +72,8 @@
     "image": "1F443",
     "category": "koerper",
     "similar": ["hase", "hose"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ase"
   },
   {
     "id": "hase",
@@ -78,7 +82,8 @@
     "image": "1F407",
     "category": "tiere",
     "similar": ["nase", "hose"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ase"
   },
   {
     "id": "dose",
@@ -87,7 +92,8 @@
     "image": "1F96B",
     "category": "dinge",
     "similar": ["rose", "hose"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ose"
   },
   {
     "id": "hose",
@@ -96,7 +102,8 @@
     "image": "1F456",
     "category": "dinge",
     "similar": ["rose", "dose", "hase"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ose"
   },
   {
     "id": "limo",
@@ -222,7 +229,8 @@
     "image": "1F349",
     "category": "essen",
     "similar": ["banane", "tomate"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "one"
   },
   {
     "id": "rakete",
@@ -231,7 +239,8 @@
     "image": "1F680",
     "category": "fahrzeuge",
     "similar": ["tomate"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ete"
   },
   {
     "id": "koala",
@@ -267,7 +276,8 @@
     "image": "1F994",
     "category": "tiere",
     "similar": ["esel", "gabel"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "igel"
   },
   {
     "id": "esel",
@@ -312,7 +322,8 @@
     "image": "1F40B",
     "category": "tiere",
     "similar": ["wolf", "salz"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "al"
   },
   {
     "id": "gabel",
@@ -321,7 +332,8 @@
     "image": "1F374",
     "category": "dinge",
     "similar": ["kabel", "igel"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "abel"
   },
   {
     "id": "nudel",
@@ -330,7 +342,8 @@
     "image": "1F35D",
     "category": "essen",
     "similar": ["pudel"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "udel"
   },
   {
     "id": "pudel",
@@ -339,7 +352,8 @@
     "image": "1F429",
     "category": "tiere",
     "similar": ["nudel"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "udel"
   },
   {
     "id": "kabel",
@@ -348,7 +362,8 @@
     "image": "1F50C",
     "category": "dinge",
     "similar": ["gabel", "kamel"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "abel"
   },
   {
     "id": "paket",
@@ -384,7 +399,8 @@
     "image": "1F68C",
     "category": "fahrzeuge",
     "similar": ["hut"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "us"
   },
   {
     "id": "nest",
@@ -447,7 +463,8 @@
     "image": "1F35E",
     "category": "essen",
     "similar": ["kran", "krone"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ot"
   },
   {
     "id": "paprika",
@@ -555,7 +572,8 @@
     "image": "1F3BA",
     "category": "musik",
     "similar": ["tomate", "rakete"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ete"
   },
   {
     "id": "telefon",
@@ -645,7 +663,8 @@
     "image": "1F451",
     "category": "dinge",
     "similar": ["krake", "kran", "rose"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "one"
   },
   {
     "id": "saft",
@@ -708,7 +727,8 @@
     "image": "1F42D",
     "category": "tiere",
     "similar": ["haus"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "aus"
   },
   {
     "id": "haus",
@@ -717,7 +737,8 @@
     "image": "1F3E0",
     "category": "dinge",
     "similar": ["maus"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "aus"
   },
   {
     "id": "eule",
@@ -735,7 +756,8 @@
     "image": "1F366",
     "category": "essen",
     "similar": ["ei"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "eis"
   },
   {
     "id": "ei",
@@ -780,7 +802,8 @@
     "image": "1F9E3",
     "category": "dinge",
     "similar": ["schaf"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "al"
   },
   {
     "id": "fisch",
@@ -834,7 +857,8 @@
     "image": "1F333",
     "category": "natur",
     "similar": ["maus"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "aum"
   },
   {
     "id": "milch",
@@ -852,7 +876,8 @@
     "image": "1F9B5",
     "category": "koerper",
     "similar": ["eis"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ein"
   },
   {
     "id": "drache",
@@ -879,7 +904,8 @@
     "image": "1F9A2",
     "category": "tiere",
     "similar": ["schaf"],
-    "wortart": "nomen"
+    "wortart": "nomen",
+    "reim": "ahn"
   },
   {
     "id": "pfau",

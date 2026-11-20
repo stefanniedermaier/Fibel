@@ -177,7 +177,9 @@ describe('L5 Silben klatschen', () => {
       silbenKlatschen.generate(start, params, 'lesen.silben-klatschen:wal', rng).data.correctKey,
     ).toBe('1')
     // A listening task: independent of the unlocked letters.
-    expect(silbenKlatschen.items(start, params).length).toBe(resolveWords('DE-BY', 1).length)
+    expect(silbenKlatschen.items(start, params).length).toBeGreaterThan(
+      resolveWords('DE-BY', 1).length,
+    )
   })
 })
 

@@ -112,6 +112,10 @@ export interface WordEntry {
   category: string
   /** Ids of similar-looking words, used as targeted distractors. */
   similar?: string[]
+  /** Rhyme group, e.g. 'ose' for Rose/Dose/Hose (set by hand). */
+  reim?: string
+  /** Spoken initial sound, if it differs from the derived one (Vase → 'w'). */
+  anlaut?: string
   /** Different text for the speech output if the TTS mispronounces the word. */
   say?: string
 }

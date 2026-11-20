@@ -4,6 +4,7 @@ import EmojiPicture from '@/components/EmojiPicture.vue'
 import { DEFAULT_LAND, getLand } from '@/core/content'
 import { stopSpeaking } from '@/core/speech'
 import { getDb, getMeta, setMeta } from '@/core/storage/db'
+import { resolveListenWords } from '@/core/hoeren'
 import { baseSyllables, resolveWords } from '@/core/words'
 import { useAppStore } from '@/stores/app'
 
@@ -31,6 +32,12 @@ const groups = computed<{ title: string; items: Item[] }[]>(() => [
       .filter((w) => w.level === level)
       .map((w) => ({ key: `wort:${w.id}`, label: w.text, speak: w.say ?? w.text, image: w.image })),
   })),
+  {
+    title: 'Hörwörter (nur zum Hören)',
+    items: resolveListenWords(land.value, GRADE)
+      .filter((w) => w.source === 'hoeren')
+      .map((w) => ({ key: `hoer:${w.id}`, label: w.text, speak: w.say ?? w.text, image: w.image })),
+  },
   {
     title: 'Silben',
     items: syllables.map((s) => ({
@@ -89,7 +96,8 @@ const flagged = computed(() =>
 const copied = ref(false)
 async function copyList() {
   const text = flagged.value.map(
-    (i) => `${i.key.startsWith('wort') ? 'Wort' : 'Silbe'}: ${i.label}`,
+    (i) =>
+      `${({ wort: 'Wort', hoer: 'Hörwort', silbe: 'Silbe' } as Record<string, string>)[i.key.split(':')[0]!]}: ${i.label}`,
   )
   await navigator.clipboard?.writeText(text.join('\n'))
   copied.value = true

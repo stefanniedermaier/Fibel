@@ -524,7 +524,15 @@ Bewertet am 20.11.2026, Punkt für Punkt:
   - Silben klatschen und alle Schreibübungen funktionieren ohne Bild. Statt des Bilds erscheint dort ein großer 🔊-Knopf.
 - **Prüfung:** Alle neuen Wörter im Sprachtest auf dem Gerät anhören. Ein Test stellt sicher, dass jede Bild-Übung mit den Startbuchstaben genug Wörter hat.
 
-### E2 – Hörwortschatz (Umfang M)
+### E2 – Hörwortschatz (Umfang M) – ✅ umgesetzt
+
+**Stand:**
+- 84 Hörwörter in `basis/klasse-1/hoerwoerter.json`. Zusammen mit den 107 Lese-Wörtern, die ein Bild haben, ergibt das einen Hörwortschatz von 191 Bildwörtern.
+- **Reimgruppen:** 27 Gruppen, von Rose/Dose/Hose bis Hund/Mund und Kuh/Schuh.
+- **Anlautgruppen:** 22 Gruppen mit mindestens 3 Wörtern, nach Klang sortiert. Vogel steht bei f, Vase bei w, Stern und Spinne bei sch.
+- **Datenprüfung:** Kein Bild kommt doppelt vor, jede Reimgruppe hat einen Partner, und es gibt mindestens 12 nutzbare Anlautgruppen. Von der ursprünglich geplanten Regel „jede Anlautgruppe mindestens 3 Wörter“ weiche ich ab: Kleine Gruppen wie u (Ufo, Uhr) sind erlaubt, werden aber nicht als Zielgruppe abgefragt.
+- „Silben klatschen“ übt jetzt auch mit den Hörwörtern.
+- Im Sprachtest gibt es eine eigene Gruppe „Hörwörter“.
 
 - **Neue Liste** `basis/klasse-1/hoerwoerter.json` mit etwa 150 Wörtern mit Bild, die nur gehört und nie gelesen werden. Deshalb gilt hier keine Lauttreue, sodass auch Hund/Mund, Kuh/Schuh, Tisch/Fisch und Sonne/Tonne möglich sind.
 - **Felder:** Silben, Bild, `reim` (Reimgruppe) und `anlaut`.
