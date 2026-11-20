@@ -32,9 +32,10 @@ Datenprüfung, Tests, `npm audit` der Laufzeit-Abhängigkeiten, Typecheck und Bu
 keine Source-Maps – „nichts verlässt das Gerät“).
 
 **Sicherheit** (`security.yml`, bei Push, Pull Request und montags; blockiert kein Deployment):
-CodeQL-Codeanalyse, `npm audit` aller Abhängigkeiten samt Signaturen, Gitleaks gegen Geheimnisse
-im Code und bei Pull Requests die Prüfung neuer Abhängigkeiten (Schwachstellen, GPL-Lizenzen).
-Dependabot schlägt montags Updates für npm-Pakete und Actions vor.
+`npm audit` aller Abhängigkeiten samt Signaturen, Gitleaks gegen Geheimnisse im Code und bei Pull
+Requests die Prüfung neuer Abhängigkeiten (Schwachstellen, GPL-Lizenzen). Die CodeQL-Codeanalyse
+läuft über das „Default setup“ von GitHub. Dependabot schlägt montags Updates für npm-Pakete und
+Actions vor.
 
 Im Elternbereich unter **Version** stehen Versionsnummer und Build-Zeitpunkt („Stand“) der
 installierten und der neuesten Fassung.
@@ -42,13 +43,13 @@ installierten und der neuesten Fassung.
 ### Einmalig einrichten
 
 1. Auf GitHub: **Settings → Pages → Source: GitHub Actions**.
-2. **Settings → Environments → github-pages → Deployment branches and tags**: eine Regel für Tags mit dem Muster `v*` hinzufügen. Ohne diese Regel
-   lehnt GitHub das Deployment von Tags ab („not allowed to deploy to github-pages due to
-   environment protection rules“).
+2. **Settings → Environments → github-pages → Deployment branches and tags**: eine Regel für
+   Tags mit dem Muster `v*` hinzufügen. Ohne diese Regel lehnt GitHub das Deployment von Tags
+   ab („not allowed to deploy to github-pages due to environment protection rules“).
 3. **Settings → Code security**: Dependabot alerts und Secret scanning mit Push protection
-   einschalten. Bei Code scanning **kein** „Default setup“ wählen – die CodeQL-Analyse kommt aus
-   `security.yml` (beides zusammen meldet einen Konflikt). Die Ergebnisse stehen unter
-   **Security → Code scanning**.
+   einschalten, bei Code scanning „CodeQL analysis → Default setup“. In `security.yml` steht
+   deshalb kein eigener CodeQL-Job (beides zusammen meldet einen Konflikt). Die Ergebnisse
+   stehen unter **Security → Code scanning**.
 
 ### Version veröffentlichen (wenn alles fertig ist)
 

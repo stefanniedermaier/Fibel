@@ -49,5 +49,11 @@
     "vitest": "^5.1.1",
     "vue-tsc": "^3.3.14",
     "workbox-window": "^7.4.1"
+  },
+  "overrides": {
+    "editorconfig": {
+      "minimatch": "^11.0.9"
+    },
+    "glob": "^14.0.6"
   }
 }

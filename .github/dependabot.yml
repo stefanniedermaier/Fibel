@@ -11,6 +11,11 @@ updates:
       # Minor and patch updates together in one PR, majors one by one.
       minor-and-patch:
         update-types: [minor, patch]
+    ignore:
+      # TypeScript 7 (native compiler) is not yet supported by typescript-eslint
+      # (needs <6.1). Remove this once it is supported; TypeScript 6 is allowed.
+      - dependency-name: typescript
+        versions: ['>=7.0.0']
 
   - package-ecosystem: github-actions
     directory: /
