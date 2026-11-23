@@ -10,7 +10,7 @@ import {
   getDb,
   getMeta,
   listProfiles,
-  listSessions,
+  currentSessions,
   loadSettings,
   saveProfile,
   saveSettings,
@@ -61,7 +61,11 @@ export const useAppStore = defineStore('app', () => {
     const db = await getDb()
     activeId.value = id
     await setMeta(db, ACTIVE_PROFILE_KEY, id)
-    sessions.value = await listSessions(db, id)
+    sessions.value = await currentSessions(db, id, rewardDaysOf(id))
+  }
+
+  function rewardDaysOf(id: string): number {
+    return settingsById.value[id]?.rewardDays ?? 14
   }
 
   async function createProfile(data: NewProfile): Promise<Profile> {
@@ -102,6 +106,7 @@ export const useAppStore = defineStore('app', () => {
     const next = { ...current, ...patch }
     await saveSettings(await getDb(), profileId, next)
     settingsById.value[profileId] = next
+    if (patch.rewardDays !== undefined && profileId === activeId.value) await refreshSessions()
   }
 
   async function removeProfile(id: string): Promise<void> {
@@ -117,7 +122,9 @@ export const useAppStore = defineStore('app', () => {
   }
 
   async function refreshSessions(): Promise<void> {
-    if (activeId.value) sessions.value = await listSessions(await getDb(), activeId.value)
+    // Also deletes units that expired since the last look.
+    const id = activeId.value
+    if (id) sessions.value = await currentSessions(await getDb(), id, rewardDaysOf(id))
   }
 
   /** Speaks with the active profile's voice settings. */

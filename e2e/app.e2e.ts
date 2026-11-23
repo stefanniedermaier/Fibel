@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { createProfile, expectAccessible, watchErrors } from './helpers'
+import { createProfile, expectAccessible, passParentGate, watchErrors } from './helpers'
 
 test('Erster Start: Willkommen, ohne Fehler und barrierearm', async ({ page }) => {
   const errors = watchErrors(page)
@@ -51,4 +51,29 @@ test('PWA: Manifest und Service Worker sind vorhanden', async ({ page, request }
   expect(manifest.name).toBe('Fibel')
   expect(manifest.display).toBe('standalone')
   expect((await request.get('sw.js')).ok()).toBe(true)
+})
+
+test('Datenschutz-Seite ist vom Start aus erreichbar und barrierearm', async ({ page }) => {
+  const errors = watchErrors(page)
+  await page.goto('./')
+  await page.getByRole('link', { name: 'Datenschutz' }).click()
+  await expect(page.getByRole('heading', { name: 'Datenschutz', level: 1 })).toBeVisible()
+  await expectAccessible(page)
+  await page.getByRole('link', { name: 'Zurück' }).click()
+  await expect(page.getByRole('heading', { name: 'Willkommen bei Fibel!' })).toBeVisible()
+  expect(errors).toEqual([])
+})
+
+test('Elternbereich: Statistik zeigt den Zeitraum', async ({ page }) => {
+  const errors = watchErrors(page)
+  await createProfile(page)
+  await page.getByRole('link', { name: 'Für Eltern' }).click()
+  await passParentGate(page)
+  await page
+    .getByRole('link', { name: /Statistik/ })
+    .first()
+    .click()
+  await expect(page.getByText('Letzte 14 Tage')).toBeVisible()
+  await expectAccessible(page)
+  expect(errors).toEqual([])
 })

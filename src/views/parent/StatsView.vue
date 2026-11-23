@@ -4,7 +4,7 @@ import { computed, onMounted, ref } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
 import { rewardTotals } from '@/core/session'
 import { exerciseTitle, hitRates, itemLabel, lastDays, stumbles } from '@/core/stats'
-import { getDb, listSessions, loadProgress } from '@/core/storage/db'
+import { currentSessions, getDb, loadProgress } from '@/core/storage/db'
 import { TOPIC_INFO, type ProgressRecord, type SessionRecord } from '@/core/types'
 import { resolveWords } from '@/core/words'
 import { useAppStore } from '@/stores/app'
@@ -13,13 +13,16 @@ const props = defineProps<{ id: string }>()
 const store = useAppStore()
 const profile = computed(() => store.profiles.find((p) => p.id === props.id))
 
+const rewardDays = computed(() => store.settingsById[props.id]?.rewardDays ?? 14)
+const periodLabel = computed(() => (rewardDays.value >= 30 ? 'Letzter Monat' : 'Letzte 14 Tage'))
 const sessions = ref<SessionRecord[]>([])
 const progress = ref<ProgressRecord[]>([])
 const loaded = ref(false)
 
 onMounted(async () => {
   const db = await getDb()
-  sessions.value = await listSessions(db, props.id)
+  // Expired units are deleted first – the statistics only cover the chosen period.
+  sessions.value = await currentSessions(db, props.id, rewardDays.value)
   progress.value = [...(await loadProgress(db, props.id)).values()]
   loaded.value = true
 })
@@ -28,7 +31,7 @@ const totals = computed(() => rewardTotals(sessions.value))
 const totalMinutes = computed(() =>
   Math.round(sessions.value.reduce((sum, s) => sum + s.durationMs, 0) / 60_000),
 )
-const days = computed(() => lastDays(sessions.value))
+const days = computed(() => lastDays(sessions.value, rewardDays.value))
 const maxUnits = computed(() => Math.max(1, ...days.value.map((d) => d.units)))
 const rates = computed(() => hitRates(sessions.value))
 
@@ -64,6 +67,10 @@ const trouble = computed(() =>
       </div>
     </section>
 
+    <p class="muted period">
+      {{ periodLabel }} · ältere Einheiten werden automatisch gelöscht, der Lernstand bleibt.
+    </p>
+
     <section class="card summary">
       <div>
         <strong>{{ totals.units }}</strong><span>Einheiten</span>
@@ -80,10 +87,16 @@ const trouble = computed(() =>
     </section>
 
     <section class="card">
-      <h2>Letzte 14 Tage</h2>
-      <div class="bars" role="img" aria-label="Fertige Einheiten pro Tag in den letzten 14 Tagen">
+      <h2>Einheiten pro Tag</h2>
+      <div
+        class="bars"
+        :class="{ month: days.length > 14 }"
+        :style="{ '--days': days.length }"
+        role="img"
+        :aria-label="`Fertige Einheiten pro Tag, ${periodLabel}`"
+      >
         <div
-          v-for="d in days"
+          v-for="(d, i) in days"
           :key="d.day"
           class="bar"
           :title="`${d.day}: ${d.units} Einheiten, ${d.minutes} Min.`"
@@ -91,6 +104,12 @@ const trouble = computed(() =>
           <span class="value">{{ d.units || '' }}</span>
           <span class="fill" :style="{ height: `${(d.units / maxUnits) * 100}%` }" />
           <span class="label">{{ d.label }}</span>
+          <!-- A month: only every fifth date, ending with today. -->
+          <span
+            class="date"
+            :class="{ hidden: days.length > 14 && (days.length - 1 - i) % 5 !== 0 }"
+            >{{ Number(d.day.slice(8)) }}</span
+          >
         </div>
       </div>
     </section>
@@ -170,7 +189,7 @@ h2 {
 
 .bars {
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(var(--days, 14), 1fr);
   align-items: end;
   gap: 4px;
   height: 140px;
@@ -189,6 +208,28 @@ h2 {
   min-height: 2px;
   border-radius: 6px 6px 0 0;
   background: var(--accent);
+}
+
+.bars.month {
+  gap: 2px;
+}
+
+/* A month has no room for weekday letters: only the day of the month. */
+.bars.month .label {
+  display: none;
+}
+
+.date {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.date.hidden {
+  visibility: hidden;
+}
+
+.period {
+  margin: 8px 0 0;
 }
 
 .value {

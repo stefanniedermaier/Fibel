@@ -39,10 +39,18 @@ async function choose(id: string) {
       </div>
       <RouterLink class="parents" :to="{ name: 'parent' }">Für Eltern</RouterLink>
     </template>
+    <RouterLink class="privacy-link" :to="{ name: 'privacy' }">Datenschutz</RouterLink>
   </main>
 </template>
 
 <style scoped>
+.privacy-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  color: var(--muted);
+}
+
 .profiles {
   display: flex;
   flex-direction: column;

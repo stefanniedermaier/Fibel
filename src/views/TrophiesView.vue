@@ -5,6 +5,10 @@ import { useAppStore } from '@/stores/app'
 
 const store = useAppStore()
 const SHELF_MAX = 60
+// Stars and crowns expire (parent setting): the shelf shows the current period.
+const period = computed(() =>
+  (store.settings?.rewardDays ?? 14) >= 30 ? 'im letzten Monat' : 'in den letzten 14 Tagen',
+)
 
 const shelf = computed(() => Math.min(store.totals.crowns, SHELF_MAX))
 const extra = computed(() => store.totals.crowns - shelf.value)
@@ -16,6 +20,8 @@ const extra = computed(() => store.totals.crowns - shelf.value)
       <RouterLink class="icon-btn" :to="{ name: 'home' }" aria-label="Zurück">🏠</RouterLink>
       <h1>Meine Schätze</h1>
     </header>
+
+    <p class="period muted">Gesammelt {{ period }}</p>
 
     <section class="card totals">
       <div>
@@ -59,6 +65,10 @@ header {
 
 section {
   margin-top: 16px;
+}
+
+.period {
+  margin: 12px 0 0;
 }
 
 h2 {

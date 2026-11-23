@@ -400,6 +400,17 @@ async function remove() {
         <input v-model="settings.sound" type="checkbox" />
         Töne bei richtig und falsch
       </label>
+      <label>
+        Sterne, Kronen und Statistik gelten
+        <select v-model.number="settings.rewardDays">
+          <option :value="14">14 Tage</option>
+          <option :value="30">1 Monat</option>
+        </select>
+      </label>
+      <p class="muted">
+        Ältere Einheiten werden automatisch vom Gerät gelöscht. Der Lernstand (was schon sitzt)
+        bleibt erhalten.
+      </p>
     </section>
 
     <section class="card">
