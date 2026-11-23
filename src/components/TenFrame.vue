@@ -60,6 +60,7 @@ const label = computed(() => {
         :class="{ five: perRow === 10 && c === 5 }"
         :type="tappable ? 'button' : undefined"
         :aria-pressed="tappable ? cell.kind === 'red' : undefined"
+        :aria-label="tappable ? `Feld ${cell.index + 1}` : undefined"
         @click="tappable && emit('tap', cell.index)"
       >
         <span v-if="cell.kind !== 'empty'" class="dot" :class="cell.kind" />

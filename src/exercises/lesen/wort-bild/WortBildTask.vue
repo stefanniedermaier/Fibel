@@ -19,6 +19,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
       />
     </div>
     <ChoiceButtons
+      label-prefix="Bild"
       :options="data.choices"
       :correct-key="data.correctKey"
       :revealed="revealed"
