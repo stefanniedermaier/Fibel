@@ -237,11 +237,12 @@ dd {
 }
 
 .ok {
-  color: var(--ok);
+  color: #1e7a39;
 }
 
+/* Darker than --accent-strong / --ok so the text has enough contrast (WCAG AA). */
 .warn {
-  color: var(--accent-strong);
+  color: #8a5200;
 }
 
 .error {
@@ -289,6 +290,7 @@ button[type='submit'] {
 
 .small {
   margin-left: 8px;
+  color: var(--text);
   padding: 4px 12px;
   border: 2px solid var(--accent);
   border-radius: 10px;

@@ -11,14 +11,18 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
     "preview": "vite preview --host",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
+    "e2e": "playwright test",
     "lint": "eslint .",
-    "format": "prettier --write src tests scripts .github",
-    "format:check": "prettier --check src tests scripts .github",
+    "format": "prettier --write src tests e2e scripts .github playwright.config.ts",
+    "format:check": "prettier --check src tests e2e scripts .github playwright.config.ts",
     "data:check": "vitest run tests/data.spec.ts",
     "dist:check": "node scripts/check-dist.mjs",
+    "licenses:check": "node scripts/check-licenses.mjs",
     "data:openmoji": "node scripts/sync-openmoji.mjs"
   },
   "dependencies": {
@@ -29,9 +33,12 @@
     "vue-router": "^5.5.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
     "@types/node": "^26.6.6",
     "@vite-pwa/assets-generator": "^2.0.0",
     "@vitejs/plugin-vue": "^6.0.11",
+    "@vitest/coverage-v8": "^5.1.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.9.0",
     "@vue/test-utils": "^2.6.0",

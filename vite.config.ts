@@ -78,6 +78,15 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     include: ['tests/**/*.spec.ts'],
+    coverage: {
+      provider: 'v8',
+      include: ['src/**/*.{ts,vue}'],
+      exclude: ['src/**/*.d.ts', 'src/main.ts'],
+      reporter: ['text-summary', 'html', 'lcov'],
+      // Ratchet: just below the current values. Raise them as tests are added –
+      // never lower them to get a change through.
+      thresholds: { statements: 47, branches: 32, functions: 46, lines: 48 },
+    },
     alias: {
       'virtual:pwa-register': fileURLToPath(new URL('./tests/stubs/pwa-register.ts', import.meta.url)),
     },

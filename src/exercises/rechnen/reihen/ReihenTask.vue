@@ -38,6 +38,7 @@ const size = computed(() => (props.data.tokens.length > 7 ? 24 : isNumbers.value
     </ol>
 
     <ChoiceButtons
+      label-prefix="Antwort"
       :options="data.choices"
       :correct-key="data.correctKey"
       :revealed="revealed"

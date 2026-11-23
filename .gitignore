@@ -10,3 +10,5 @@ coverage/
 
 # Personal notes and ideas – local only
 ToDo.md
+test-results/
+playwright-report/

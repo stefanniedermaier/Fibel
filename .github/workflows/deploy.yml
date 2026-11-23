@@ -2,6 +2,15 @@ name: Check and deploy
 
 # Only version tags (v1.0.0 …) are published to GitHub Pages. Pushes to main and
 # pull requests run the same checks without deploying.
+#
+# Jobs: quality (format, lint, types, data, unit tests with coverage)
+#       build (runtime audit, licences, build, "nothing leaves the device", SBOM)
+#       e2e (the built artifact in a real browser, incl. accessibility)
+#       deploy (tags only, after all of the above)
+#
+# Supply chain: actions are pinned to commit SHAs (Dependabot keeps them current),
+# checkouts keep no credentials, and no job of this workflow uses a dependency cache,
+# so nothing a pull request writes can end up in a release.
 on:
   push:
     branches: [main]
@@ -18,15 +27,25 @@ concurrency:
   group: ${{ startsWith(github.ref, 'refs/tags/v') && 'pages' || github.ref }}
   cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/v') }}
 
+env:
+  NODE_VERSION: 24
+  # Project pages live under /<repo-name>/; the e2e tests use the same path.
+  BASE_PATH: /${{ github.event.repository.name }}/
+
 jobs:
-  build:
+  quality:
+    name: Qualität (Format, Lint, Typen, Daten, Unit-Tests)
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          node-version: 24
-          cache: npm
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          # setup-node caches npm by default; see the note at the top.
+          package-manager-cache: false
       - run: npm ci
       - name: Tag matches package.json version
         if: startsWith(github.ref, 'refs/tags/v')
@@ -36,31 +55,111 @@ jobs:
             echo "::error::Tag ${GITHUB_REF_NAME} passt nicht zur Version in package.json ($expected)."
             exit 1
           fi
-      # Quality: formatting, lint, data, tests (the type check runs in the build)
       - run: npm run format:check
       - run: npm run lint
+      - run: npm run typecheck
       # Dictionaries and stroke templates: lauttreue rules, images, state adjustments
       - run: npm run data:check
-      - run: npm test
-      # Security: everything shipped to the device must be free of known vulnerabilities
+      # All unit tests; fails if the coverage drops below the thresholds in vite.config.ts.
+      - run: npm run test:coverage
+      - name: Coverage report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: coverage
+          path: coverage/
+          retention-days: 14
+
+  build:
+    name: Build und Sicherheit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      # Build provenance for releases (attest step below, tags only)
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          # setup-node caches npm by default; see the note at the top.
+          package-manager-cache: false
+      - run: npm ci
+      # Everything shipped to the device must be free of known vulnerabilities
       # (dev tools are checked separately in security.yml and do not block a deploy).
       - name: Known vulnerabilities in runtime dependencies
         run: npm audit --omit=dev --audit-level=moderate
+      - name: Licences of runtime dependencies
+        run: npm run licenses:check
       - run: npm run build
-        env:
-          # Project pages live under /<repo-name>/
-          BASE_PATH: /${{ github.event.repository.name }}/
       # "Nothing leaves the device": strict CSP, no external resources or connections
       - run: npm run dist:check
+      - name: SBOM (CycloneDX) of the runtime dependencies
+        run: npm sbom --omit=dev --sbom-format cyclonedx > sbom.cdx.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: sbom
+          path: sbom.cdx.json
+          retention-days: 90
+      - name: Build provenance
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: |
+            dist/index.html
+            dist/sw.js
+            dist/assets/*
       - if: startsWith(github.ref, 'refs/tags/v')
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist
 
-  deploy:
-    if: startsWith(github.ref, 'refs/tags/v')
+  e2e:
+    name: E2E und Barrierefreiheit
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          # setup-node caches npm by default; see the note at the top.
+          package-manager-cache: false
+      - run: npm ci
+      # Exactly the artifact that gets deployed – not a second build.
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: dist
+          path: dist
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e
+      - name: Playwright report
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+  deploy:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [quality, build, e2e]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       pages: write
       id-token: write
@@ -69,4 +168,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

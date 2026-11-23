@@ -9,6 +9,9 @@ Läuft komplett offline auf dem Gerät – kein Server, kein Konto. Details: [PL
 npm install
 npm run dev        # Entwicklungsserver, auch im WLAN erreichbar (--host)
 npm test           # Unit-Tests (Vitest)
+npm run test:coverage  # Unit-Tests mit Coverage-Schwellen (Bericht in coverage/)
+npm run e2e        # E2E- und Barrierefreiheits-Tests (Playwright + axe) gegen den Build
+npm run typecheck  # TypeScript prüfen (vue-tsc)
 npm run lint       # ESLint
 npm run format:check   # Prettier-Formatierung prüfen (npm run format korrigiert)
 npm run build      # Typecheck + Produktions-Build nach dist/
@@ -16,7 +19,12 @@ npm run preview    # Build lokal ansehen (mit Service Worker)
 npm run data:check     # Wörterbücher, Lauttreue, Bilder, Schrift-Vorlagen prüfen
 npm run data:openmoji  # benötigte OpenMoji-Bilder nach public/img/openmoji kopieren
 npm run dist:check     # nach dem Build: strenge CSP, keine externen Zugriffe in dist/
+npm run licenses:check # Lizenzen der Laufzeit-Abhängigkeiten gegen die Erlaubt-Liste
 ```
+
+Für `npm run e2e` einmalig den Browser laden (`npx playwright install chromium`) und vorher
+`npm run build` ausführen. Ein schon installiertes Chromium lässt sich mit
+`PW_CHROMIUM_PATH=/pfad/zu/chromium` verwenden.
 
 Der Service Worker (Offline-Betrieb, Installation) funktioniert nur über HTTPS oder `localhost`.
 Im WLAN per `http://<PC-IP>:5173` lässt sich die Sprachausgabe testen, aber nicht die Installation.
@@ -26,16 +34,30 @@ Im WLAN per `http://<PC-IP>:5173` lässt sich die Sprachausgabe testen, aber nic
 Veröffentlicht wird nur ein Versions-Tag (`v1.0.0` …). Pushes auf `main` und Pull Requests
 durchlaufen dieselben Prüfungen, werden aber nicht veröffentlicht.
 
-**Vor jedem Deploy** (`deploy.yml`, ein Fehler stoppt das Deployment): Formatierung, Lint,
-Datenprüfung, Tests, `npm audit` der Laufzeit-Abhängigkeiten, Typecheck und Build, danach
-`dist:check` (strenge Content-Security-Policy, keine fremden Ressourcen oder Verbindungen,
-keine Source-Maps – „nichts verlässt das Gerät“).
+**Vor jedem Deploy** (`deploy.yml`, ein Fehler stoppt das Deployment):
+
+- **Qualität:** Formatierung, Lint, Typecheck, Datenprüfung, Unit-Tests mit Coverage-Schwellen
+  (Bericht als Artefakt `coverage`).
+- **Build und Sicherheit:** `npm audit` der Laufzeit-Abhängigkeiten, Lizenzprüfung, Build,
+  `dist:check` (strenge Content-Security-Policy, keine fremden Ressourcen oder Verbindungen,
+  keine Source-Maps – „nichts verlässt das Gerät“), SBOM im CycloneDX-Format (Artefakt `sbom`).
+  Bei Releases wird zusätzlich eine signierte Build-Provenienz (Attestation) erzeugt.
+- **E2E und Barrierefreiheit:** Genau das gebaute Artefakt läuft in Chromium (Pixel-7-Profil):
+  erster Start, Profil anlegen, eine Einheit je Fach, keine Konsolenfehler, keine Anfragen an
+  fremde Server, Manifest und Service Worker, dazu axe-Prüfungen nach WCAG 2.1 AA.
 
 **Sicherheit** (`security.yml`, bei Push, Pull Request und montags; blockiert kein Deployment):
-`npm audit` aller Abhängigkeiten samt Signaturen, Gitleaks gegen Geheimnisse im Code und bei Pull
-Requests die Prüfung neuer Abhängigkeiten (Schwachstellen, GPL-Lizenzen). Die CodeQL-Codeanalyse
-läuft über das „Default setup“ von GitHub. Dependabot schlägt montags Updates für npm-Pakete und
-Actions vor.
+`npm audit` aller Abhängigkeiten samt Signaturen, Lizenzprüfung, Gitleaks gegen Geheimnisse im
+Code, bei Pull Requests die Prüfung neuer Abhängigkeiten (Schwachstellen, GPL-Lizenzen, OpenSSF
+Scorecard der neuen Pakete) und die Prüfung der Workflows selbst mit actionlint und zizmor
+(Injections, ungepinnte Actions, zu weite Rechte). Die CodeQL-Codeanalyse läuft über das
+„Default setup“ von GitHub. Die **OpenSSF Scorecard** (`scorecard.yml`) bewertet montags und bei
+Pushes auf `main` die Sicherheitspraktiken des Repos; die Ergebnisse stehen unter
+**Security → Code scanning**.
+
+Alle Actions sind auf Commit-SHAs gepinnt, Checkouts behalten keine Zugangsdaten, und der
+Deploy-Workflow nutzt keinen Abhängigkeits-Cache. Dependabot schlägt montags Updates für
+npm-Pakete und Actions vor (auch für die SHA-Pins).
 
 Im Elternbereich unter **Version** stehen Versionsnummer und Build-Zeitpunkt („Stand“) der
 installierten und der neuesten Fassung.

@@ -31,11 +31,20 @@ const otherGrades = computed(() => {
 <template>
   <main v-if="store.active" class="page home">
     <header>
-      <RouterLink class="who" :to="{ name: 'profiles' }" aria-label="Profil wechseln">
+      <!-- The accessible names start with the visible text (WCAG 2.5.3 "Label in Name"). -->
+      <RouterLink
+        class="who"
+        :to="{ name: 'profiles' }"
+        :aria-label="`${store.active.name} – Profil wechseln`"
+      >
         <EmojiPicture :code="store.active.avatar" :size="44" />
         <span class="name">{{ store.active.name }}</span>
       </RouterLink>
-      <RouterLink class="rewards" :to="{ name: 'trophies' }" aria-label="Meine Sterne und Kronen">
+      <RouterLink
+        class="rewards"
+        :to="{ name: 'trophies' }"
+        :aria-label="`⭐ ${store.totals.stars} 👑 ${store.totals.crowns} – meine Sterne und Kronen`"
+      >
         <span>⭐ {{ store.totals.stars }}</span>
         <span>👑 {{ store.totals.crowns }}</span>
       </RouterLink>

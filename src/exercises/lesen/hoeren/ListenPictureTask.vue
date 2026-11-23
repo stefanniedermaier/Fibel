@@ -34,6 +34,7 @@ function answer(correct: boolean) {
       <EmojiPicture :code="data.target.image" :size="120" />
     </button>
     <ChoiceButtons
+      label-prefix="Bild"
       :options="data.choices"
       :correct-key="data.correctKey"
       :revealed="revealed"

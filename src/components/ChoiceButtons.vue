@@ -11,8 +11,13 @@ const props = withDefaults(
     locked: boolean
     /** Minimum button width in px. */
     minWidth?: number
+    /**
+     * For buttons without text (pictures, shapes): accessible names "Bild 1", "Bild 2" …
+     * A neutral name, so a screen reader does not give the answer away.
+     */
+    labelPrefix?: string
   }>(),
-  { minWidth: 96 },
+  { minWidth: 96, labelPrefix: undefined },
 )
 const emit = defineEmits<{ answer: [correct: boolean] }>()
 defineSlots<{ default(props: { option: T }): unknown }>()
@@ -46,9 +51,10 @@ function choose(option: T) {
 <template>
   <div class="choices" :style="{ '--min': `${minWidth}px` }">
     <button
-      v-for="option in options"
+      v-for="(option, i) in options"
       :key="option.key"
       class="choice"
+      :aria-label="labelPrefix ? `${labelPrefix} ${i + 1}` : undefined"
       :class="{
         wrong: wrong.has(option.key),
         correct: (solved || revealed) && option.key === correctKey,
