@@ -55,4 +55,5 @@ export const nachspuren: ExerciseModule<Record<string, never>, NachspurenData> =
   },
 
   component: NachspurenTask,
+  layout: 'fit',
 }

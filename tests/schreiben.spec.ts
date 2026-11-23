@@ -6,6 +6,7 @@ import { availableEntries, planSession } from '@/core/session'
 import type { ProfileSettings } from '@/core/types'
 import { abcTastatur, marks, matches } from '@/exercises/schreiben/abc-tastatur'
 import { buchstabenLegen, luecke } from '@/exercises/schreiben/buchstaben-legen'
+import { display, onlyLetters } from '@/exercises/schreiben/tippen'
 import { silbenLegen } from '@/exercises/schreiben/silben-legen'
 import { getExercise } from '@/exercises/registry'
 import type { LearnerContext } from '@/exercises/types'
@@ -51,19 +52,16 @@ describe('S1 Silben legen', () => {
 })
 
 describe('S2 Buchstaben legen', () => {
-  it('legt die Grapheme des Worts plus bekannte Ablenker aus', () => {
+  it('zeigt ein Kästchen pro Buchstabe und tippt auf der Gerätetastatur', () => {
     const rng = createRng(2)
-    const unlocked = new Set(more.settings.letters)
     for (const key of buchstabenLegen.items(more, params)) {
       const { data } = buchstabenLegen.generate(more, params, key, rng)
-      const texts = data.tiles.map((t) => t.text)
-      expect(texts.length).toBe(data.target.length + 2)
-      for (const g of data.target) expect(texts).toContain(g)
-      for (const t of texts) expect(unlocked.has(t), t).toBe(true)
+      expect(data.slots).toBe(true)
+      expect([...data.target].length).toBeLessThanOrEqual(7)
     }
   })
 
-  it('zählt Mehrgraphe als eine Kachel (Sch-a-f)', () => {
+  it('erwartet das ganze Wort, auch bei Mehrgraphen (Schaf)', () => {
     const ctx = ctxWith({ letterFilter: false, levels: { 'lesen.woerter': 4 } })
     const { data } = buchstabenLegen.generate(
       ctx,
@@ -71,7 +69,8 @@ describe('S2 Buchstaben legen', () => {
       'schreiben.buchstaben-legen:schaf',
       createRng(3),
     )
-    expect(data.target).toEqual(['sch', 'a', 'f'])
+    expect(data.target).toBe('Schaf')
+    expect(data.autoCapitalize).toBe(true)
   })
 })
 
@@ -90,9 +89,9 @@ describe('Lückenwort', () => {
 })
 
 describe('S3 ABC-Tastatur', () => {
-  it('hat nur Tasten für bekannte Buchstaben', () => {
+  it('schreibt frei, ohne Kästchen, die die Länge verraten', () => {
     const { data } = abcTastatur.generate(start, params, 'schreiben.abc-tastatur:oma', createRng(5))
-    expect(data.keys).toEqual(['m', 'a', 'i', 'o', 'l', 'e', 'u'])
+    expect(data.slots).toBe(false)
     expect(data.target).toBe('Oma')
     expect(data.autoCapitalize).toBe(true)
   })
@@ -113,6 +112,13 @@ describe('S3 ABC-Tastatur', () => {
   it('markiert richtige und falsche Buchstaben', () => {
     expect(marks('Oam', 'Oma')).toEqual([true, false, false])
     expect(marks('Om', 'Oma')).toEqual([true, true])
+  })
+
+  it('lässt von der Gerätetastatur nur Buchstaben durch', () => {
+    expect(onlyLetters('O m4a😀')).toBe('Oma')
+    expect(onlyLetters('Bär-Fuß')).toBe('BärFuß')
+    expect(display('oma', true)).toBe('Oma')
+    expect(display('oma', false)).toBe('oma')
   })
 })
 

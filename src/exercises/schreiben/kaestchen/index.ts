@@ -81,4 +81,5 @@ export const kaestchen: ExerciseModule<SchreibenParams, KaestchenData> = {
   },
 
   component: KaestchenTask,
+  layout: 'fit',
 }

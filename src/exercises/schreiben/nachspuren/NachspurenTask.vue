@@ -32,7 +32,10 @@ watch(
 </template>
 
 <style scoped>
+/* Fills the stage (layout 'fit'); the board takes whatever height is left. */
 .task {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +43,14 @@ watch(
   width: 100%;
 }
 
+.task :deep(.board) {
+  flex: 1 1 0;
+  min-height: 160px;
+  max-height: 560px;
+}
+
 .hint {
+  flex: none;
   min-height: 1.4em;
   margin: 0;
   color: var(--accent-strong);

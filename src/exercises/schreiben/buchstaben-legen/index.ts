@@ -1,9 +1,9 @@
 /**
- * S2 "Buchstaben legen": hear a word, lay it out from letter tiles (Sch, Ei … count as
- * one tile). The easy variant "Lückenwort" only asks for one missing letter.
+ * S2 "Buchstaben legen": hear a word, write it letter by letter into one box per letter
+ * with the device's own keyboard (the boxes show how long the word is). The easy
+ * variant "Lückenwort" only asks for one missing letter.
  */
 import { randomInt, shuffle } from '@/core/random'
-import type { Tile } from '@/components/tiles'
 import type { ExerciseModule } from '../../types'
 import {
   distractors,
@@ -12,21 +12,14 @@ import {
   itemId,
   knownSingleLetters,
   spoken,
-  toTiles,
   writingPool,
   type SchreibenParams,
 } from '../shared'
-import BuchstabenLegenTask from './BuchstabenLegenTask.vue'
+import { tippenData, type TippenData } from '../tippen'
+import TippenTask from '../tippen/TippenTask.vue'
 import LueckeTask from './LueckeTask.vue'
 
-export interface BuchstabenLegenData {
-  /** Optional: words without a picture are only heard (🔊). */
-  image?: string
-  spoken: string
-  target: string[]
-  tiles: Tile[]
-  capitalizeFirst: boolean
-}
+export type BuchstabenLegenData = TippenData
 
 export interface LueckeData {
   /** Optional: words without a picture are only heard (🔊). */
@@ -40,9 +33,8 @@ export interface LueckeData {
   choices: { key: string }[]
 }
 
-export const DISTRACTORS = 2
-/** Longer words would make too many tiles for a phone screen. */
-export const MAX_GRAPHEMES = 7
+/** Longer words would make too many boxes for a phone screen. */
+export const MAX_LETTERS = 7
 
 export const buchstabenLegen: ExerciseModule<SchreibenParams, BuchstabenLegenData> = {
   id: 'schreiben.buchstaben-legen',
@@ -50,29 +42,22 @@ export const buchstabenLegen: ExerciseModule<SchreibenParams, BuchstabenLegenDat
 
   items(ctx, params) {
     return writingPool(ctx, params)
-      .filter((w) => w.graphemes.length <= MAX_GRAPHEMES)
+      .filter((w) => [...w.text].length <= MAX_LETTERS)
       .map((w) => `schreiben.buchstaben-legen:${w.id}`)
   },
 
-  generate(ctx, params, itemKey, rng) {
+  generate(ctx, params, itemKey) {
     const word = findWord(writingPool(ctx, params), itemId(itemKey))
-    const extra = distractors(knownSingleLetters(ctx), word.graphemes, DISTRACTORS, rng)
     return {
       instruction: `Schreibe ${spoken(word)}.`,
-      caption: 'Lege das Wort mit Buchstaben.',
+      caption: 'Schreibe das Wort in die Kästchen.',
       hint: `Sprich langsam mit: ${word.syllables.join(' – ')}.`,
       solution: `So schreibt man ${spoken(word)}.`,
-      data: {
-        image: word.image,
-        spoken: spoken(word),
-        target: word.graphemes,
-        tiles: toTiles([...word.graphemes, ...extra], rng),
-        capitalizeFirst: isCapitalised(word),
-      },
+      data: tippenData(ctx, word, true),
     }
   },
 
-  component: BuchstabenLegenTask,
+  component: TippenTask,
 }
 
 export const luecke: ExerciseModule<SchreibenParams, LueckeData> = {
