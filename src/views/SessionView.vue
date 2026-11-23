@@ -198,7 +198,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main class="session">
+  <main class="session" :class="{ fit: phase === 'running' && current?.module.layout === 'fit' }">
     <header class="bar">
       <RouterLink class="icon-btn" :to="{ name: 'home' }" aria-label="Aufhören">🏠</RouterLink>
       <ProgressBeads
@@ -260,6 +260,27 @@ onUnmounted(() => {
   min-height: 100vh;
   min-height: 100dvh;
   padding: 12px 16px 24px;
+}
+
+/* Drawing tasks: everything on one screen in portrait – scrolling would get in the way. */
+@media (orientation: portrait) {
+  .session.fit {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
+
+.session.fit {
+  padding-bottom: 12px;
+}
+
+.session.fit .stage {
+  min-height: 0;
+  justify-content: flex-start;
+  gap: 12px;
+  padding-top: 8px;
 }
 
 .bar {

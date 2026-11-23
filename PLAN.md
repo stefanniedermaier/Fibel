@@ -313,8 +313,8 @@ In jeder Aufgabe wird die Anweisung automatisch vorgelesen, der 🔊-Button wied
 | ID  | Übung            | Ablauf                                                                                                                                                               |
 | --- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | S1  | Silben legen     | Wort hören + Bild; das Kind tippt die Silbenkacheln (inklusive 1–2 Ablenkern) in der richtigen Reihenfolge an.                                                       |
-| S2  | Buchstaben legen | Wort hören + Bild; das Kind setzt Buchstabenkacheln in die Lücken. Leichte Variante: Es fehlt nur ein Buchstabe.                                                     |
-| S3  | ABC-Tastatur     | Eigene Bildschirmtastatur mit nur den freigeschalteten Buchstaben; das Wort wird frei geschrieben. Groß-/Kleinschreibung zählt anfangs nicht (umschaltbar).          |
+| S2  | Buchstaben legen | Wort hören + Bild; das Kind tippt das Wort mit der Tastatur des Geräts in ein Kästchen pro Buchstabe. Leichte Variante: Es fehlt nur ein Buchstabe.                  |
+| S3  | ABC-Tastatur     | Tastatur des Geräts; das Wort wird frei geschrieben, ohne Kästchen. Groß-/Kleinschreibung zählt anfangs nicht (umschaltbar).                                         |
 | S4  | Nachspuren       | Buchstabe groß und klein mit Startpunkt und Richtungspfeilen. Der Finger muss die Kontrollpunkte in der richtigen Reihenfolge treffen, die Toleranz ist einstellbar. |
 
 Für S4 entsteht ein eigener Editor (`#/dev/strokes`), mit dem die Strichvorlagen gezeichnet und als `strokes.json` gespeichert werden: normierte Koordinaten, Striche in Reihenfolge, Schreibrichtung nach der Schrift, die das Bundesland für die Klasse vorgibt (in Klasse 1 Druckschrift). Jede Schrift hat einen eigenen Ordner unter `schriften/`.
@@ -622,3 +622,9 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 - **Ausprobieren:** Im Elternbereich lässt sich die Übung zuschalten, standardmäßig ist sie aus. Erst mit echter Kinderschrift testen und abstimmen, dann standardmäßig einschalten.
 
 **Reihenfolge:** E1 → E2 → E3 und E4 → E5 → E6. E5 hängt von nichts ab und kann auch früher kommen.
+
+## 16. ToDos vom 23.11.2026 – ✅ umgesetzt
+
+- **Erste Aufgabe ohne Ton:** Auf Touch-Geräten zählt erst das Loslassen des Fingers als Nutzer-Geste, nicht `pointerdown`. Der Audio-Kontext startete deshalb pausiert, und die Sprachausgabe war beim ersten Satz einer Einheit oft noch nicht bereit. Jetzt werden Audio und Sprachausgabe bei `pointerup`, `touchend`, `click` und `keydown` freigeschaltet, die Sprachausgabe wird mit einem stummen Satz geweckt, und `speak()` bricht nur ab, wenn wirklich etwas läuft, und wartet danach kurz (Chrome verschluckt sonst den nächsten Satz). Der aktuelle Satz wird festgehalten, damit Chrome ihn nicht vorzeitig aufräumt.
+- **Native Tastatur:** Die eigene Bildschirmtastatur ist entfernt. „ABC-Tastatur“ und „Buchstaben legen“ nutzen ein gemeinsames Eingabefeld (`schreiben/tippen`) mit der Tastatur des Geräts. Ein unsichtbares `<input>` liegt über der großen Buchstabenanzeige, sodass Markierungen nach Fehlern und der automatische Großbuchstabe erhalten bleiben. Nur Buchstaben werden übernommen; Vorschläge, Autokorrektur und automatische Großschreibung der Tastatur sind aus. „Buchstaben legen“ zeigt ein Kästchen pro Buchstabe (die Wortlänge ist sichtbar), „ABC-Tastatur“ schreibt frei. Mit `interactive-widget=resizes-content` verkleinert die eingeblendete Tastatur das Layout, und ✓ steht neben dem Feld, damit alles sichtbar bleibt.
+- **Freihand-Aufgaben im Hochformat ohne Scrollen:** Übungsmodule können `layout: 'fit'` setzen. Die Einheit füllt dann im Hochformat genau die Bildschirmhöhe, und das Schreibfeld nimmt den restlichen Platz. Bei „Wort in Kästchen schreiben“ stehen Bild und Kästchen nebeneinander, und der Hinweis liegt über dem Schreibfeld. „Nachspuren“ nutzt dasselbe Layout.

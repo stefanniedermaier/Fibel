@@ -43,4 +43,9 @@ export interface ExerciseModule<P = Record<string, unknown>, D = unknown> {
   generate(ctx: LearnerContext, params: P, itemKey: string, rng: Rng): GeneratedTask<D>
   /** Emits `answer` with `true`/`false`. */
   component: Component
+  /**
+   * 'fit': the task fills exactly the screen height in portrait (no scrolling), e.g.
+   * for drawing with the finger, where scrolling would get in the way.
+   */
+  layout?: 'fit'
 }

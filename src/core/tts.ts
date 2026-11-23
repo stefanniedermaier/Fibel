@@ -74,21 +74,60 @@ export function loadVoices(timeoutMs = 3000): Promise<SpeechSynthesisVoice[]> {
   })
 }
 
+/**
+ * Chrome drops utterances whose object was garbage-collected before `end` fired, so the
+ * one being spoken is kept here.
+ */
+let currentUtterance: SpeechSynthesisUtterance | undefined
+
+/** Chrome may swallow an utterance queued in the same tick as `cancel()`. */
+const CANCEL_GAP_MS = 60
+
 /** Speaks `text`, cancelling anything still being spoken. Resolves when finished. */
-export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
-  if (!isTtsSupported()) return Promise.reject(new Error('Sprachausgabe wird nicht unterstützt'))
+export async function speak(text: string, options: SpeakOptions = {}): Promise<void> {
+  if (!isTtsSupported()) throw new Error('Sprachausgabe wird nicht unterstützt')
   const synth = window.speechSynthesis
-  synth.cancel()
+  if (synth.speaking || synth.pending) {
+    synth.cancel()
+    await new Promise((resolve) => setTimeout(resolve, CANCEL_GAP_MS))
+  }
+  // A paused engine (Chrome after the tab was in the background) would queue silently.
+  if (synth.paused) synth.resume()
   const utterance = new SpeechSynthesisUtterance(text)
   utterance.lang = options.voice?.lang ?? 'de-DE'
   if (options.voice) utterance.voice = options.voice
   utterance.rate = options.rate ?? DEFAULT_RATE
   utterance.pitch = options.pitch ?? DEFAULT_PITCH
+  currentUtterance = utterance
   return new Promise((resolve, reject) => {
-    utterance.onend = () => resolve()
+    const settle = (fn: () => void) => {
+      if (currentUtterance === utterance) currentUtterance = undefined
+      fn()
+    }
+    utterance.onend = () => settle(resolve)
     utterance.onerror = (e) =>
       // 'interrupted'/'canceled' happen when a new text replaces the current one – not an error.
-      e.error === 'interrupted' || e.error === 'canceled' ? resolve() : reject(new Error(e.error))
+      settle(() =>
+        e.error === 'interrupted' || e.error === 'canceled'
+          ? resolve()
+          : reject(new Error(e.error)),
+      )
     synth.speak(utterance)
   })
+}
+
+/**
+ * Wakes the speech engine with a silent utterance. Call from a tap: on Android the very
+ * first utterance after start is otherwise often lost (engine still starting, or no
+ * user activation yet when the first task speaks).
+ */
+export function primeSpeech(): void {
+  if (!isTtsSupported()) return
+  const synth = window.speechSynthesis
+  if (synth.speaking || synth.pending) return
+  const u = new SpeechSynthesisUtterance(' ')
+  u.volume = 0
+  u.lang = 'de-DE'
+  currentUtterance = u
+  synth.speak(u)
 }

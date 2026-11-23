@@ -9,9 +9,14 @@ function audio(): AudioContext | undefined {
   return ctx
 }
 
-/** Call on the first tap: browsers only allow audio after a user gesture. */
+/** Call on a tap: browsers only allow audio after a user gesture. */
 export function unlockAudio(): void {
   audio()
+}
+
+/** True once the audio context runs (it starts suspended without a user gesture). */
+export function audioUnlocked(): boolean {
+  return ctx?.state === 'running'
 }
 
 function tone(freq: number, start: number, duration: number, type: OscillatorType, volume: number) {

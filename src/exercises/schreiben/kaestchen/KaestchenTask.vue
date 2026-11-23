@@ -130,46 +130,50 @@ const shownChar = (i: number) =>
 
 <template>
   <div class="task">
-    <WordPrompt :image="data.image" :spoken="data.spoken" :size="88" />
-
-    <ol class="boxes" aria-label="Kästchen">
-      <li
-        v-for="(c, i) in data.chars"
-        :key="i"
-        class="box"
-        :class="[states[i], { current: i === index && !done }]"
-      >
-        {{ shownChar(i) }}
-      </li>
-    </ol>
+    <!-- Picture and boxes side by side: leaves as much height as possible for the pad. -->
+    <div class="head">
+      <WordPrompt :image="data.image" :spoken="data.spoken" :size="64" />
+      <ol class="boxes" aria-label="Kästchen">
+        <li
+          v-for="(c, i) in data.chars"
+          :key="i"
+          class="box"
+          :class="[states[i], { current: i === index && !done }]"
+        >
+          {{ shownChar(i) }}
+        </li>
+      </ol>
+    </div>
 
     <template v-if="!done">
-      <svg
-        ref="pad"
-        class="pad"
-        :class="{ ok: feedback === 'ok', retry: feedback === 'retry' }"
-        :viewBox="viewBox"
-        role="img"
-        :aria-label="`Schreibfeld für Buchstabe ${index + 1}`"
-        @pointerdown.prevent="down"
-        @pointermove.prevent="move"
-        @pointerup="up"
-        @pointercancel="up"
-      >
-        <g class="lines">
-          <line x1="-10" :x2="PAD_W + 10" :y1="LINES.top" :y2="LINES.top" />
-          <line class="mid" x1="-10" :x2="PAD_W + 10" :y1="LINES.middle" :y2="LINES.middle" />
-          <line class="base" x1="-10" :x2="PAD_W + 10" :y1="LINES.base" :y2="LINES.base" />
-          <line x1="-10" :x2="PAD_W + 10" :y1="LINES.bottom" :y2="LINES.bottom" />
-        </g>
-        <g v-if="showTemplate" class="template">
-          <path v-for="(pts, i) in template" :key="i" :d="toPath(pts)" />
-        </g>
-        <path v-for="(s, i) in strokes" :key="`s${i}`" :d="toPath(s)" class="ink" />
-      </svg>
-      <p class="hint" :class="{ visible: feedback === 'retry' }" aria-live="polite">
-        Schau dir die Vorlage an und schreib noch einmal.
-      </p>
+      <div class="pad-wrap">
+        <svg
+          ref="pad"
+          class="pad"
+          :class="{ ok: feedback === 'ok', retry: feedback === 'retry' }"
+          :viewBox="viewBox"
+          role="img"
+          :aria-label="`Schreibfeld für Buchstabe ${index + 1}`"
+          @pointerdown.prevent="down"
+          @pointermove.prevent="move"
+          @pointerup="up"
+          @pointercancel="up"
+        >
+          <g class="lines">
+            <line x1="-10" :x2="PAD_W + 10" :y1="LINES.top" :y2="LINES.top" />
+            <line class="mid" x1="-10" :x2="PAD_W + 10" :y1="LINES.middle" :y2="LINES.middle" />
+            <line class="base" x1="-10" :x2="PAD_W + 10" :y1="LINES.base" :y2="LINES.base" />
+            <line x1="-10" :x2="PAD_W + 10" :y1="LINES.bottom" :y2="LINES.bottom" />
+          </g>
+          <g v-if="showTemplate" class="template">
+            <path v-for="(pts, i) in template" :key="i" :d="toPath(pts)" />
+          </g>
+          <path v-for="(s, i) in strokes" :key="`s${i}`" :d="toPath(s)" class="ink" />
+        </svg>
+        <p class="hint" :class="{ visible: feedback === 'retry' }" aria-live="polite">
+          Schau dir die Vorlage an und schreib noch einmal.
+        </p>
+      </div>
       <div class="controls">
         <button type="button" class="key" aria-label="Löschen" @click="clear">⌫</button>
         <button
@@ -187,12 +191,23 @@ const shownChar = (i: number) =>
 </template>
 
 <style scoped>
+/* Fills the stage (layout 'fit'); the pad takes whatever height is left. */
 .task {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   width: 100%;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .boxes {
@@ -207,8 +222,8 @@ const shownChar = (i: number) =>
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 54px;
+  width: 42px;
+  height: 52px;
   border: 3px solid #d9c7ad;
   border-radius: 10px;
   background: var(--surface);
@@ -231,10 +246,21 @@ const shownChar = (i: number) =>
   background: #fff3d6;
 }
 
-.pad {
+.pad-wrap {
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  max-width: 300px;
-  max-height: 40vh;
+  min-height: 160px;
+  max-height: 520px;
+}
+
+/* As big as the space allows, keeping the pad's aspect ratio. */
+.pad {
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 130 / 185;
   touch-action: none;
   background: #fff;
   border: 3px solid var(--accent);
@@ -279,9 +305,18 @@ const shownChar = (i: number) =>
   stroke-linejoin: round;
 }
 
+/* Over the bottom of the pad instead of an extra row. */
 .hint {
-  min-height: 1.3em;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
   margin: 0;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 85%);
+  font-size: 17px;
+  pointer-events: none;
   color: var(--accent-strong);
   font-weight: 700;
   text-align: center;
@@ -293,6 +328,7 @@ const shownChar = (i: number) =>
 }
 
 .controls {
+  flex: none;
   display: flex;
   gap: 12px;
 }
