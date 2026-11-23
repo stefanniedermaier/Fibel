@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NumberPad from '@/components/NumberPad.vue'
+import NumberInput from '@/components/NumberInput.vue'
 import type { ZahlenhausData } from './index'
 
 defineProps<{ data: ZahlenhausData; revealed: boolean; locked: boolean }>()
@@ -21,7 +21,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
         </span>
       </div>
     </div>
-    <NumberPad
+    <NumberInput
       :answer="data.missing"
       :revealed="revealed"
       :locked="locked"
@@ -39,7 +39,8 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 }
 
 .house {
-  --w: clamp(180px, 52vw, 240px);
+  /* Smaller when the screen is short, e.g. with the keyboard open (dvh shrinks then). */
+  --w: clamp(130px, min(52vw, 30dvh), 240px);
   width: var(--w);
 }
 
@@ -72,7 +73,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(64px, 18vw, 84px);
+  min-height: clamp(48px, min(18vw, 10dvh), 84px);
   font-size: clamp(36px, 10vw, 48px);
   font-weight: 700;
 }

@@ -121,7 +121,7 @@ fibel/
 │  │  ├─ schreiben/
 │  │  └─ rechnen/
 │  ├─ components/                 # BigButton, SpeakerButton, SyllableWord, TileBoard,
-│  │                              # TenFrame, NumberHouse, NumberPad, StarBurst, Crown …
+│  │                              # TenFrame, NumberHouse, NumberInput, StarBurst, Crown …
 │  ├─ views/                      # ProfileSelect, Home, Session, SessionEnd, Trophies,
 │  │                              # parent/*, dev/* (nur im Dev-Build)
 │  ├─ stores/                     # Pinia: profile, settings, session

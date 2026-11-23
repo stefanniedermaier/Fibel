@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import NumberPad from '@/components/NumberPad.vue'
+import NumberInput from '@/components/NumberInput.vue'
 import TenFrame from '@/components/TenFrame.vue'
 import { shownOp } from '../shared'
 import type { PlusMinusData } from './index'
@@ -36,7 +36,7 @@ function answer(correct: boolean) {
       </button>
     </div>
 
-    <NumberPad :answer="data.result" :revealed="revealed" :locked="locked" @answer="answer" />
+    <NumberInput :answer="data.result" :revealed="revealed" :locked="locked" @answer="answer" />
   </div>
 </template>
 
@@ -51,7 +51,7 @@ function answer(correct: boolean) {
 
 .equation {
   margin: 0;
-  font-size: clamp(44px, 12vw, 64px);
+  font-size: clamp(36px, min(12vw, 9dvh), 64px);
   font-weight: 700;
   white-space: nowrap;
 }
