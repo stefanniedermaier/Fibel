@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest'
+import { mount } from '@vue/test-utils'
+import NumberInput from '@/components/NumberInput.vue'
+import { cleanNumber } from '@/core/numbers'
 import { catalogFor, resolveDefaults } from '@/core/content'
 import { createRng } from '@/core/random'
 import { availableEntries, planSession } from '@/core/session'
@@ -148,5 +151,37 @@ describe('Rechnen in Klasse 1', () => {
     const tasks = planSession(entries, ctxWith(), new Map(), 8, createRng(3), getExercise)
     expect(tasks).toHaveLength(8)
     for (const t of tasks) expect((t.task.caption ?? t.task.instruction).length).toBeGreaterThan(0)
+  })
+})
+
+describe('Zahleneingabe mit der Gerätetastatur', () => {
+  it('lässt nur Ziffern ohne führende Null durch', () => {
+    expect(cleanNumber('07', 2)).toBe('7')
+    expect(cleanNumber('1 2', 2)).toBe('12')
+    expect(cleanNumber('-3,5', 2)).toBe('35')
+    expect(cleanNumber('123', 2)).toBe('12')
+    expect(cleanNumber('0', 2)).toBe('0')
+    expect(cleanNumber('00', 2)).toBe('0')
+  })
+
+  it('öffnet die Zifferntastatur und prüft die Antwort', async () => {
+    const wrapper = mount(NumberInput, {
+      props: { answer: 7, revealed: false, locked: false },
+      attachTo: document.body,
+    })
+    const input = wrapper.get('input')
+    expect(input.attributes('inputmode')).toBe('numeric')
+    await input.setValue('a7')
+    expect(wrapper.text()).toContain('7')
+    await wrapper.get('form').trigger('submit')
+    expect(wrapper.emitted('answer')).toEqual([[true]])
+    wrapper.unmount()
+  })
+
+  it('meldet eine falsche Antwort', async () => {
+    const wrapper = mount(NumberInput, { props: { answer: 7, revealed: false, locked: false } })
+    await wrapper.get('input').setValue('8')
+    await wrapper.get('form').trigger('submit')
+    expect(wrapper.emitted('answer')).toEqual([[false]])
   })
 })

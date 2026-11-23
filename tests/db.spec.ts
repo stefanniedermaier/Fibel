@@ -2,7 +2,9 @@ import 'fake-indexeddb/auto'
 import { describe, expect, it } from 'vitest'
 import { reactive } from 'vue'
 import { resolveDefaults } from '@/core/content'
+import { expiryCutoff } from '@/core/session'
 import {
+  currentSessions,
   deleteProfile,
   getMeta,
   listProfiles,
@@ -105,5 +107,48 @@ describe('IndexedDB-Speicher', () => {
     expect(await listSessions(db, 'a')).toHaveLength(0)
     expect(await listSessions(db, 'b')).toHaveLength(1)
     expect((await loadProgress(db, 'b')).size).toBe(1)
+  })
+})
+
+describe('Ablauf von Sternen, Kronen und Statistik', () => {
+  const DAY = 24 * 60 * 60 * 1000
+  const now = new Date(2026, 10, 23, 15, 0).getTime()
+
+  it('zählt den heutigen Tag und die Tage davor (14 Tage = heute + 13)', () => {
+    const cutoff = expiryCutoff(14, now)
+    expect(new Date(cutoff)).toEqual(new Date(2026, 10, 10, 0, 0))
+    expect(expiryCutoff(30, now)).toBe(new Date(2026, 9, 25, 0, 0).getTime())
+  })
+
+  it('löscht abgelaufene Einheiten, behält neuere und den Lernstand', async () => {
+    const db = await freshDb()
+    const at = (id: string, profileId: string, daysAgo: number) => ({
+      ...session(id, profileId),
+      startedAt: now - daysAgo * DAY,
+    })
+    await saveSession(db, at('alt', 'p1', 20))
+    await saveSession(db, at('neu', 'p1', 2))
+    await saveSession(db, at('fremd', 'p2', 20))
+    await saveProgress(db, {
+      profileId: 'p1',
+      itemKey: 'lesen.wort-bild:oma',
+      box: 3,
+      correct: 4,
+      wrong: 1,
+      lastSeen: now - 40 * DAY,
+    })
+
+    const current = await currentSessions(db, 'p1', 14, now)
+    expect(current.map((s) => s.id)).toEqual(['neu'])
+    // Other profiles are untouched until they are opened; progress stays.
+    expect((await listSessions(db, 'p2')).map((s) => s.id)).toEqual(['fremd'])
+    expect((await loadProgress(db, 'p1')).size).toBe(1)
+
+    // A month keeps more – but what is already deleted stays deleted.
+    await saveSession(db, at('mittel', 'p1', 20))
+    expect((await currentSessions(db, 'p1', 30, now)).map((s) => s.id).sort()).toEqual([
+      'mittel',
+      'neu',
+    ])
   })
 })

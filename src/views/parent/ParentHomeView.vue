@@ -133,7 +133,8 @@ onMounted(async () => {
     <h2>Info</h2>
     <p>
       Fibel speichert alles nur auf diesem Gerät. Es gibt kein Konto und keinen Server, und es
-      werden keine Daten verschickt.
+      werden keine Lern- oder Profildaten verschickt. Einzelheiten, auch zur Sprachausgabe:
+      <RouterLink :to="{ name: 'privacy' }">Datenschutz</RouterLink>.
     </p>
     <h3>Verwendete Werke</h3>
     <ul>

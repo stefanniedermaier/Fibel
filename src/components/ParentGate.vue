@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onUnmounted, ref } from 'vue'
+import NumberInput from '@/components/NumberInput.vue'
 import { createRng, randomInt } from '@/core/random'
 
 // Parent gate: hold for 2 seconds, then solve a multiplication task for adults.
@@ -11,14 +12,12 @@ const stage = ref<'hold' | 'question'>('hold')
 const holding = ref(false)
 const a = ref(0)
 const b = ref(0)
-const input = ref('')
 const wrongAnswer = ref(false)
 let timer: ReturnType<typeof setTimeout> | undefined
 
 function newQuestion() {
   a.value = randomInt(rng, 6, 9)
   b.value = randomInt(rng, 6, 9)
-  input.value = ''
 }
 
 function startHold() {
@@ -35,24 +34,22 @@ function cancelHold() {
   clearTimeout(timer)
 }
 
-function press(key: string) {
-  wrongAnswer.value = false
-  if (key === '⌫') input.value = input.value.slice(0, -1)
-  else if (input.value.length < 3) input.value += key
-}
-
-function submit() {
-  if (Number(input.value) === a.value * b.value) {
+// The answer is typed on the device's number keyboard (NumberInput checks it).
+// Wrong: it shakes, then a new task appears.
+let nextTimer: ReturnType<typeof setTimeout> | undefined
+function answered(correct: boolean) {
+  if (correct) {
     emit('pass')
-  } else {
-    wrongAnswer.value = true
-    newQuestion()
+    return
   }
+  wrongAnswer.value = true
+  nextTimer = setTimeout(newQuestion, 600)
 }
 
-onUnmounted(() => clearTimeout(timer))
-
-const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '⌫', '0']
+onUnmounted(() => {
+  clearTimeout(timer)
+  clearTimeout(nextTimer)
+})
 </script>
 
 <template>
@@ -76,14 +73,14 @@ const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '⌫', '0']
 
     <template v-else>
       <h2>Wie viel ist {{ a }} × {{ b }}?</h2>
-      <p class="answer" :class="{ error: wrongAnswer }">
-        {{ input || '?' }}
-      </p>
       <p v-if="wrongAnswer" class="error">Leider falsch – hier ist eine neue Aufgabe.</p>
-      <div class="pad">
-        <button v-for="k in keys" :key="k" class="key" @click="press(k)">{{ k }}</button>
-        <button class="key ok" :disabled="!input" @click="submit">OK</button>
-      </div>
+      <NumberInput
+        :answer="a * b"
+        :revealed="false"
+        :locked="false"
+        @answer="answered"
+        @input="wrongAnswer = false"
+      />
     </template>
   </div>
 </template>
@@ -128,33 +125,7 @@ h2 {
   position: relative;
 }
 
-.answer {
-  min-height: 56px;
-  margin: 0 0 12px;
-  font-size: 44px;
-  font-weight: 700;
-}
-
 .error {
   color: var(--error);
-}
-
-.pad {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.key {
-  min-height: var(--tap);
-  border: 3px solid var(--accent);
-  border-radius: 14px;
-  background: var(--surface);
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.key.ok {
-  background: var(--accent);
 }
 </style>

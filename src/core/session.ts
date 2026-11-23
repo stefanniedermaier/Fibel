@@ -122,6 +122,20 @@ export interface RewardTotals {
   byTopic: Record<Topic, { stars: number; crowns: number }>
 }
 
+/** How long stars, crowns and statistics last: 14 days or one month. */
+export const REWARD_DAYS = [14, 30] as const
+
+/**
+ * Units that started before this moment have expired: the start of the local day
+ * `days - 1` days ago, so "14 days" means today and the 13 days before (like the chart).
+ */
+export function expiryCutoff(days: number, now = Date.now()): number {
+  const d = new Date(now)
+  d.setHours(0, 0, 0, 0)
+  d.setDate(d.getDate() - (days - 1))
+  return d.getTime()
+}
+
 /** Stars and crowns are derived from the sessions – one source of truth. */
 export function rewardTotals(sessions: readonly SessionRecord[]): RewardTotals {
   const totals: RewardTotals = {

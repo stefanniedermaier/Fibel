@@ -49,6 +49,11 @@ export interface ProfileSettings {
   traceTolerance: number
   /** Experiment: write words freely in boxes, with letter recognition (default off). */
   kaestchen: boolean
+  /**
+   * Stars, crowns and statistics cover this many days (14 or 30). Older units are
+   * deleted from the device; the learning progress per item stays.
+   */
+  rewardDays: number
   /** How strict the recognition is (0.8 strict, 1 normal, 1.25 easy). */
   recognitionTolerance: number
   voiceURI: string | null

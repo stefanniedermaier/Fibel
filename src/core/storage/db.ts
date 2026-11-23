@@ -4,6 +4,7 @@
  */
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb'
 import { plain } from '../plain'
+import { expiryCutoff } from '../session'
 import type { ProfileSettings, ProgressRecord, Profile, SessionRecord } from '../types'
 
 export const DB_NAME = 'fibel'
@@ -119,6 +120,40 @@ export async function saveSession(db: Db, session: SessionRecord): Promise<void>
 
 export async function listSessions(db: Db, profileId: string): Promise<SessionRecord[]> {
   return db.getAllFromIndex('sessions', 'byProfile', profileId)
+}
+
+/**
+ * Deletes a profile's units that started before `cutoff` (expired stars, crowns and
+ * statistics). The learning progress per item is kept. Returns how many were deleted.
+ */
+export async function deleteSessionsBefore(
+  db: Db,
+  profileId: string,
+  cutoff: number,
+): Promise<number> {
+  const tx = db.transaction('sessions', 'readwrite')
+  let deleted = 0
+  let cursor = await tx.store.index('byProfile').openCursor(profileId)
+  while (cursor) {
+    if (cursor.value.startedAt < cutoff) {
+      await cursor.delete()
+      deleted++
+    }
+    cursor = await cursor.continue()
+  }
+  await tx.done
+  return deleted
+}
+
+/** Deletes the expired units of a profile, then lists the remaining ones. */
+export async function currentSessions(
+  db: Db,
+  profileId: string,
+  rewardDays: number,
+  now = Date.now(),
+): Promise<SessionRecord[]> {
+  await deleteSessionsBefore(db, profileId, expiryCutoff(rewardDays, now))
+  return listSessions(db, profileId)
 }
 
 // --- Meta --------------------------------------------------------------------

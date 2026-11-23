@@ -33,10 +33,9 @@ export async function passParentGate(page: Page) {
   await expect(question).toBeVisible({ timeout: 5000 })
   await page.mouse.up()
   const [, a, b] = (await question.textContent())!.match(/(\d+)\s*×\s*(\d+)/)!
-  for (const digit of String(Number(a) * Number(b))) {
-    await page.getByRole('button', { name: digit, exact: true }).click()
-  }
-  await page.getByRole('button', { name: 'OK' }).click()
+  // Typed on the device's number keyboard (an input field), confirmed with ✓.
+  await page.getByLabel('Ergebnis').fill(String(Number(a) * Number(b)))
+  await page.getByRole('button', { name: 'Fertig' }).click()
 }
 
 /** Sets the app up with one profile (first start) and ends on the home screen. */

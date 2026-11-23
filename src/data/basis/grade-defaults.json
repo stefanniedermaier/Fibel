@@ -15,6 +15,7 @@
     "traceTolerance": 1,
     "kaestchen": false,
     "recognitionTolerance": 1,
+    "rewardDays": 14,
     "voiceURI": null,
     "speechRate": 0.85,
     "levels": {}

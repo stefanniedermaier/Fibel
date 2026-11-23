@@ -45,3 +45,11 @@ export function numberWord(n: number): string {
   if (ones === 0) return tens
   return `${ones === 1 ? 'ein' : ONES[ones]}und${tens}`
 }
+
+/** Typed number answer: digits only, no leading zeros ("07" → "7"), at most `maxDigits`. */
+export function cleanNumber(text: string, maxDigits: number): string {
+  return text
+    .replace(/\D/g, '')
+    .replace(/^0+(?=\d)/, '')
+    .slice(0, maxDigits)
+}

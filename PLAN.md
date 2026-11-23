@@ -121,7 +121,7 @@ fibel/
 │  │  ├─ schreiben/
 │  │  └─ rechnen/
 │  ├─ components/                 # BigButton, SpeakerButton, SyllableWord, TileBoard,
-│  │                              # TenFrame, NumberHouse, NumberPad, StarBurst, Crown …
+│  │                              # TenFrame, NumberHouse, NumberInput, StarBurst, Crown …
 │  ├─ views/                      # ProfileSelect, Home, Session, SessionEnd, Trophies,
 │  │                              # parent/*, dev/* (nur im Dev-Build)
 │  ├─ stores/                     # Pinia: profile, settings, session
@@ -637,3 +637,10 @@ Bewertet am 20.11.2026, Punkt für Punkt:
 - **Workflows:** actionlint (inkl. shellcheck) und zizmor.
 - **OpenSSF Scorecard** als eigener Workflow, Ergebnisse in Code scanning; die Prüfung neuer Abhängigkeiten zeigt deren Scorecard-Wert.
 - **Nicht aufgenommen:** Lighthouse (die PWA-Kategorie gibt es nicht mehr, Barrierefreiheit deckt axe ab) und ein zweiter SAST-Scanner neben CodeQL.
+
+## 18. ToDos vom 23.11.2026 (2) – ✅ umgesetzt
+
+- **Zifferntastatur beim Rechnen:** `NumberPad` ist durch `NumberInput` ersetzt: ein unsichtbares `<input inputmode="numeric">` über der großen Anzeige, nur Ziffern ohne führende Null, ✓ neben dem Feld. Plus/Minus und Zahlenhaus nutzen es; Gleichung und Haus werden bei geöffneter Tastatur kleiner.
+- **Elternbereich:** Die Rechenaufgabe der Eltern-Sperre nutzt ebenfalls `NumberInput`, die eigene Tastatur ist entfernt.
+- **Sterne, Kronen und Statistik laufen ab:** neue Einstellung `rewardDays` pro Profil (14 Tage oder 1 Monat, Standard 14 Tage). Einheiten, die vor Beginn des Zeitraums (Tagesanfang vor `rewardDays − 1` Tagen) gestartet wurden, werden beim Öffnen des Profils, nach jeder Einheit und in der Statistik vom Gerät gelöscht (`currentSessions`). Der Lernstand pro Aufgabe bleibt erhalten. Kronen-Regal und Statistik zeigen den Zeitraum an; die Statistik zeigt bei einem Monat 30 Balken.
+- **Datenschutz-Seite** (`/datenschutz`), verlinkt auf dem Startbildschirm, der Profilauswahl und im Elternbereich: was auf dem Gerät liegt und wie lange, Sicherung, Sprachausgabe (Online-Stimmen können Text an den Anbieter schicken), Bereitstellung über GitHub Pages, Rechte, Projekt. Ohne Links nach außen.
