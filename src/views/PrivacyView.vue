@@ -81,19 +81,35 @@ const back = computed(() => {
     </section>
 
     <section class="card">
-      <h2>Ihre Rechte</h2>
+      <h2>Verantwortlich (Art. 13 DSGVO)</h2>
+      <address>
+        Stefan Niedermaier<br />
+        Ostendstr. 5<br />
+        85777 Fahrenzhausen<br />
+        E-Mail: <a href="mailto:stefan@niedermaier.bayern">stefan@niedermaier.bayern</a>
+      </address>
       <p>
-        Da alle Daten nur auf Ihrem Gerät liegen, haben Sie sie selbst in der Hand: Sie können sie
-        im Elternbereich ansehen (Statistik), sichern und löschen. Dem Projekt liegen keine Daten
-        über Sie oder Ihr Kind vor.
+        Fibel ist ein privates, nicht-kommerzielles Open-Source-Projekt; der Quellcode ist auf
+        GitHub öffentlich einsehbar (Repository „Fibel“).
       </p>
     </section>
 
     <section class="card">
-      <h2>Wer steht dahinter</h2>
+      <h2>Ihre Rechte</h2>
       <p>
-        Fibel ist ein privates, nicht-kommerzielles Open-Source-Projekt. Der Quellcode ist auf
-        GitHub öffentlich einsehbar (Repository „Fibel“); dort lassen sich auch Fragen stellen.
+        Da alle Lern- und Profildaten nur auf Ihrem Gerät liegen, haben Sie sie selbst in der Hand:
+        Sie können sie im Elternbereich ansehen (Statistik), sichern und löschen. Dem
+        Verantwortlichen liegen keine Daten über Sie oder Ihr Kind vor.
+      </p>
+      <p>
+        Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
+        Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Wenden Sie sich dafür
+        an die oben genannte Adresse. Für die Verarbeitung durch GitHub beim Laden der App ist
+        GitHub selbst zuständig.
+      </p>
+      <p>
+        Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO),
+        zum Beispiel beim Bayerischen Landesamt für Datenschutzaufsicht (BayLDA) in Ansbach.
       </p>
     </section>
   </main>
@@ -131,6 +147,12 @@ p:last-child {
 
 ul {
   padding-left: 20px;
+}
+
+address {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.5;
 }
 
 .lead {
