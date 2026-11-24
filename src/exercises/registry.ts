@@ -10,6 +10,8 @@ import { mengeLegen } from './rechnen/menge-legen'
 import { mengen } from './rechnen/mengen'
 import { plusMinus } from './rechnen/plus-minus'
 import { reihen } from './rechnen/reihen'
+import { uhrLesen } from './rechnen/uhr-lesen'
+import { uhrStellen } from './rechnen/uhr-stellen'
 import { vergleichen } from './rechnen/vergleichen'
 import { zahlenhaus } from './rechnen/zahlenhaus'
 import { abcTastatur } from './schreiben/abc-tastatur'
@@ -40,6 +42,8 @@ register(vergleichen)
 register(zahlenhaus)
 register(plusMinus)
 register(reihen)
+register(uhrLesen)
+register(uhrStellen)
 register(silbenLegen)
 register(luecke)
 register(buchstabenLegen)

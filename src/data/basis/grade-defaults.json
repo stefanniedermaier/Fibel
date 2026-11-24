@@ -14,6 +14,7 @@
     "sound": true,
     "traceTolerance": 1,
     "kaestchen": false,
+    "clock": true,
     "recognitionTolerance": 1,
     "rewardDays": 14,
     "voiceURI": null,

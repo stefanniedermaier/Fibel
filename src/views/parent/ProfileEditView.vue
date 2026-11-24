@@ -14,6 +14,7 @@ import {
 } from '@/core/words'
 import { READING_LEVEL_KEY } from '@/exercises/lesen/shared'
 import { LEVEL_KEY as REIHEN_LEVEL_KEY } from '@/exercises/rechnen/reihen'
+import { CLOCK_LEVEL_KEY } from '@/exercises/rechnen/uhr/time'
 import {
   DEFAULT_LAND,
   LAENDER,
@@ -110,6 +111,7 @@ function levelSetting(key: string) {
   })
 }
 const reihenLevelSetting = levelSetting(REIHEN_LEVEL_KEY)
+const clockLevelSetting = levelSetting(CLOCK_LEVEL_KEY)
 
 const readingLevel = computed({
   get: () => settings.value.levels[READING_LEVEL_KEY] ?? 0,
@@ -347,6 +349,21 @@ async function remove() {
           <option :value="3">3 – Bilder-Muster, Lücke auch in der Mitte</option>
           <option :value="4">4 – Zahlenfolgen +1, +2, −1</option>
           <option :value="5">5 – größere Sprünge bis 20</option>
+        </select>
+      </label>
+      <label class="check">
+        <input v-model="settings.clock" type="checkbox" />
+        Uhr lesen und stellen
+      </label>
+      <label v-if="settings.clock">
+        Uhr: Level
+        <select v-model.number="clockLevelSetting">
+          <option :value="0">automatisch (Klasse 1: bis halbe Stunden, Klasse 2 ab Viertel)</option>
+          <option :value="1">1 – volle Stunden</option>
+          <option :value="2">2 – halbe Stunden</option>
+          <option :value="3">3 – Viertelstunden</option>
+          <option :value="4">4 – 5-Minuten-Schritte</option>
+          <option :value="5">5 – auf die Minute (nur lesen)</option>
         </select>
       </label>
     </section>

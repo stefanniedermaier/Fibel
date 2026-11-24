@@ -49,6 +49,8 @@ export interface ProfileSettings {
   traceTolerance: number
   /** Experiment: write words freely in boxes, with letter recognition (default off). */
   kaestchen: boolean
+  /** Clock exercises ("Uhr lesen", "Uhr stellen") in arithmetic (default on). */
+  clock: boolean
   /**
    * Stars, crowns and statistics cover this many days (14 or 30). Older units are
    * deleted from the device; the learning progress per item stays.
