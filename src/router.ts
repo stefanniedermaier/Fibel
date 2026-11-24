@@ -75,6 +75,11 @@ export const router = createRouter({
       component: () => import('./views/PrivacyView.vue'),
     },
     {
+      path: '/ueber',
+      name: 'about',
+      component: () => import('./views/AboutView.vue'),
+    },
+    {
       // Device check (voice, offline, storage); also linked from the parent area.
       path: '/geraetetest',
       name: 'device-check',
@@ -93,6 +98,6 @@ router.beforeEach(async (to) => {
 router.afterEach((to) => {
   // Leaving the parent area locks it again.
   const keepsParentOpen =
-    to.path.startsWith('/eltern') || ['device-check', 'privacy'].includes(String(to.name))
+    to.path.startsWith('/eltern') || ['device-check', 'privacy', 'about'].includes(String(to.name))
   if (!keepsParentOpen) useAppStore().lockParent()
 })

@@ -78,6 +78,14 @@ const back = computed(() => {
         in der Datenschutzerklärung von GitHub. Danach läuft Fibel auch ohne Internet, und es werden
         keine Lern- oder Profildaten verschickt.
       </p>
+      <p>
+        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO: Ohne diese Verbindungsdaten lässt sich die
+        App nicht ausliefern, und das berechtigte Interesse liegt darin, sie sicher und zuverlässig
+        bereitzustellen. GitHub hat seinen Sitz in den USA, die Daten können also dorthin
+        übermittelt werden. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert; für die
+        USA gilt damit ein Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO). Wie lange
+        GitHub diese Daten speichert, steht in der Datenschutzerklärung von GitHub.
+      </p>
     </section>
 
     <section class="card">

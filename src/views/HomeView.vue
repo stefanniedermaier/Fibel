@@ -75,6 +75,7 @@ const otherGrades = computed(() => {
     <footer>
       <RouterLink class="parents" :to="{ name: 'parent' }">Für Eltern</RouterLink>
       <RouterLink class="parents" :to="{ name: 'privacy' }">Datenschutz</RouterLink>
+      <RouterLink class="parents" :to="{ name: 'about' }">Über Fibel</RouterLink>
     </footer>
   </main>
 </template>
@@ -202,6 +203,7 @@ header {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
   margin-top: auto;
