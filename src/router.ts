@@ -13,7 +13,7 @@ export const router = createRouter({
       component: () => import('./views/ProfileSelectView.vue'),
     },
     {
-      path: '/einheit/:grade(\\d+)/:topic(lesen|schreiben|rechnen)',
+      path: '/einheit/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr)',
       name: 'session',
       component: () => import('./views/SessionView.vue'),
       meta: { needsProfile: true },

@@ -1,6 +1,6 @@
 # Fibel
 
-Lern-PWA für Grundschulkinder: Lesen, Schreiben und Rechnen in kurzen Einheiten.
+Lern-PWA für Grundschulkinder: Lesen, Schreiben, Rechnen und die Uhr in kurzen Einheiten.
 Läuft komplett offline auf dem Gerät – kein Server, kein Konto. Details: [PLAN.md](PLAN.md).
 
 ## Entwicklung

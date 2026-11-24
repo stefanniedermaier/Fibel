@@ -166,5 +166,37 @@
     "exercise": "rechnen.reihen",
     "params": {},
     "title": "Reihen erkennen"
+  },
+  {
+    "id": "k1.uhr.lesen",
+    "grade": 1,
+    "topic": "uhr",
+    "exercise": "uhr.lesen",
+    "params": { "maxLevel": 2 },
+    "title": "Uhr lesen"
+  },
+  {
+    "id": "k1.uhr.stellen",
+    "grade": 1,
+    "topic": "uhr",
+    "exercise": "uhr.stellen",
+    "params": { "maxLevel": 2 },
+    "title": "Uhr stellen"
+  },
+  {
+    "id": "k2.uhr.lesen",
+    "grade": 2,
+    "topic": "uhr",
+    "exercise": "uhr.lesen",
+    "params": { "minLevel": 3 },
+    "title": "Uhr lesen"
+  },
+  {
+    "id": "k2.uhr.stellen",
+    "grade": 2,
+    "topic": "uhr",
+    "exercise": "uhr.stellen",
+    "params": { "minLevel": 3 },
+    "title": "Uhr stellen"
   }
 ]

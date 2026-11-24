@@ -1,10 +1,11 @@
-export type Topic = 'lesen' | 'schreiben' | 'rechnen'
-export const TOPICS: readonly Topic[] = ['lesen', 'schreiben', 'rechnen']
+export type Topic = 'lesen' | 'schreiben' | 'rechnen' | 'uhr'
+export const TOPICS: readonly Topic[] = ['lesen', 'schreiben', 'rechnen', 'uhr']
 
 export const TOPIC_INFO: Record<Topic, { label: string; icon: string }> = {
   lesen: { label: 'Lesen', icon: '📖' },
   schreiben: { label: 'Schreiben', icon: '✏️' },
   rechnen: { label: 'Rechnen', icon: '🔢' },
+  uhr: { label: 'Uhr', icon: '🕒' },
 }
 
 /** ISO 3166-2 code of a German state, e.g. 'DE-BY'. */

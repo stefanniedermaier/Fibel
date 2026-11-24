@@ -17,6 +17,8 @@ import { buchstabenLegen, luecke } from './schreiben/buchstaben-legen'
 import { kaestchen } from './schreiben/kaestchen'
 import { nachspuren } from './schreiben/nachspuren'
 import { silbenLegen } from './schreiben/silben-legen'
+import { uhrLesen } from './uhr/lesen'
+import { uhrStellen } from './uhr/stellen'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -40,6 +42,8 @@ register(vergleichen)
 register(zahlenhaus)
 register(plusMinus)
 register(reihen)
+register(uhrLesen)
+register(uhrStellen)
 register(silbenLegen)
 register(luecke)
 register(buchstabenLegen)

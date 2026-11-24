@@ -25,7 +25,7 @@ test('Profil anlegen und eine Einheit starten', async ({ page }) => {
   const errors = watchErrors(page)
   await createProfile(page)
   await expectAccessible(page)
-  for (const topic of ['Lesen', 'Schreiben', 'Rechnen']) {
+  for (const topic of ['Lesen', 'Schreiben', 'Rechnen', 'Uhr']) {
     await page.goto('./#/')
     await page.getByRole('link', { name: new RegExp(topic) }).click()
     await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
@@ -75,5 +75,50 @@ test('Elternbereich: Statistik zeigt den Zeitraum', async ({ page }) => {
     .click()
   await expect(page.getByText('Letzte 14 Tage')).toBeVisible()
   await expectAccessible(page)
+  expect(errors).toEqual([])
+})
+
+test('Uhr: lesen und stellen sind bedienbar und barrierearm', async ({ page }) => {
+  const errors = watchErrors(page)
+  await createProfile(page)
+  if (process.env.UHR_SHOTS) await page.screenshot({ path: `${process.env.UHR_SHOTS}/home.png` })
+  const seen = new Set<string>()
+  // The unit is planned at random; restart it until each clock exercise came up first.
+  for (let i = 0; i < 60 && seen.size < 2; i++) {
+    await page.goto('./#/')
+    await page.getByRole('link', { name: /Uhr/ }).click()
+    await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
+    if (
+      !seen.has('stellen') &&
+      (await page.getByRole('group', { name: 'Uhr zum Stellen' }).count())
+    ) {
+      seen.add('stellen')
+      await expectAccessible(page)
+      const minute = page.getByRole('slider', { name: 'Minutenzeiger' })
+      await minute.focus()
+      await page.keyboard.press('ArrowRight')
+      await expect(minute).toHaveAttribute('aria-valuetext', /:05$/)
+      await expect(page.getByRole('button', { name: 'Fertig' })).toBeEnabled()
+      // Dragging the minute hand to the 3 with the finger: quarter past.
+      const box = (await page.getByRole('group', { name: 'Uhr zum Stellen' }).boundingBox())!
+      const cx = box.x + box.width / 2
+      const cy = box.y + box.height / 2
+      // Start on the minute hand (at 5 past, i.e. pointing at the 1).
+      await page.mouse.move(cx + box.width * 0.15, cy - box.height * 0.26)
+      await page.mouse.down()
+      await page.mouse.move(cx + box.width * 0.2, cy - box.height * 0.2, { steps: 5 })
+      await page.mouse.move(cx + box.width * 0.3, cy, { steps: 5 })
+      await page.mouse.up()
+      await expect(minute).toHaveAttribute('aria-valuetext', /:15$/)
+      if (process.env.UHR_SHOTS)
+        await page.screenshot({ path: `${process.env.UHR_SHOTS}/stellen.png` })
+    } else if (!seen.has('lesen') && (await page.getByRole('img', { name: 'Uhr' }).count())) {
+      seen.add('lesen')
+      await expectAccessible(page)
+      if (process.env.UHR_SHOTS)
+        await page.screenshot({ path: `${process.env.UHR_SHOTS}/lesen.png` })
+    }
+  }
+  expect([...seen].sort()).toEqual(['lesen', 'stellen'])
   expect(errors).toEqual([])
 })
