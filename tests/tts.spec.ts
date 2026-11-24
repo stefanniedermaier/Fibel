@@ -1,5 +1,12 @@
-import { describe, expect, it } from 'vitest'
-import { isGerman, pickGermanVoice, rankGermanVoices, type VoiceInfo } from '@/core/tts'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import {
+  START_TIMEOUT_MS,
+  isGerman,
+  pickGermanVoice,
+  rankGermanVoices,
+  speak,
+  type VoiceInfo,
+} from '@/core/tts'
 
 const voice = (
   name: string,
@@ -42,5 +49,81 @@ describe('German voice selection', () => {
 
   it('returns undefined when there is no German voice', () => {
     expect(pickGermanVoice([voice('English', 'en-US', true)])).toBeUndefined()
+  })
+})
+
+describe('speak: lost first utterance', () => {
+  interface FakeUtterance {
+    text: string
+    onstart: (() => void) | null
+    onend: (() => void) | null
+    onerror: ((e: { error: string }) => void) | null
+  }
+
+  /** A speech engine that drops the first `drop` utterances (never starts them). */
+  function fakeEngine(drop: number) {
+    const spoken: string[] = []
+    const calls: string[] = []
+    let dropped = 0
+    const synth = {
+      speaking: false,
+      pending: false,
+      paused: false,
+      resume() {},
+      cancel() {},
+      speak(u: FakeUtterance) {
+        calls.push(u.text)
+        if (dropped < drop) {
+          dropped++
+          return
+        }
+        spoken.push(u.text)
+        setTimeout(() => u.onstart?.(), 10)
+        setTimeout(() => u.onend?.(), 200)
+      },
+    }
+    vi.stubGlobal('speechSynthesis', synth)
+    vi.stubGlobal(
+      'SpeechSynthesisUtterance',
+      class {
+        onstart = null
+        onend = null
+        onerror = null
+        constructor(public text: string) {}
+      },
+    )
+    return { spoken, calls }
+  }
+
+  beforeEach(() => vi.useFakeTimers())
+  afterEach(() => {
+    vi.useRealTimers()
+    vi.unstubAllGlobals()
+  })
+
+  it('spricht eine Ansage, die nicht startet, nach einer Sekunde noch einmal', async () => {
+    const { spoken } = fakeEngine(1)
+    const done = speak('Wie spät ist es?')
+    await vi.advanceTimersByTimeAsync(START_TIMEOUT_MS - 1)
+    expect(spoken).toEqual([])
+    await vi.advanceTimersByTimeAsync(500)
+    expect(spoken).toEqual(['Wie spät ist es?'])
+    await vi.runAllTimersAsync()
+    await expect(done).resolves.toBeUndefined()
+  })
+
+  it('wiederholt nichts, wenn die Ansage gleich startet', async () => {
+    const { spoken } = fakeEngine(0)
+    const done = speak('Rechne aus.')
+    await vi.runAllTimersAsync()
+    await done
+    expect(spoken).toEqual(['Rechne aus.'])
+  })
+
+  it('versucht es nur einmal', async () => {
+    const { calls } = fakeEngine(5)
+    void speak('Hallo')
+    await vi.advanceTimersByTimeAsync(5 * START_TIMEOUT_MS)
+    expect(calls).toEqual(['Hallo', 'Hallo'])
   })
 })
