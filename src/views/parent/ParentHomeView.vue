@@ -136,18 +136,10 @@ onMounted(async () => {
       werden keine Lern- oder Profildaten verschickt. Einzelheiten, auch zur Sprachausgabe:
       <RouterLink :to="{ name: 'privacy' }">Datenschutz</RouterLink>.
     </p>
-    <h3>Verwendete Werke</h3>
-    <ul>
-      <li>
-        Bilder: <strong>OpenMoji</strong> – das offene Emoji-Projekt (openmoji.org), Lizenz CC BY-SA
-        4.0
-      </li>
-      <li>Schrift: <strong>Andika</strong> von SIL International, SIL Open Font License 1.1</li>
-      <li>
-        Wortauswahl für Bayern abgeglichen mit dem Grundwortschatz für die Jahrgangsstufen 1 und 2
-        (ISB, LehrplanPLUS Grundschule Bayern)
-      </li>
-    </ul>
+    <p>
+      Bilder, Schrift und Programmbibliotheken mit ihren Lizenzen:
+      <RouterLink :to="{ name: 'about' }">Über Fibel</RouterLink>.
+    </p>
   </section>
 </template>
 

@@ -39,11 +39,21 @@ async function choose(id: string) {
       </div>
       <RouterLink class="parents" :to="{ name: 'parent' }">Für Eltern</RouterLink>
     </template>
-    <RouterLink class="privacy-link" :to="{ name: 'privacy' }">Datenschutz</RouterLink>
+    <nav class="info-links">
+      <RouterLink class="privacy-link" :to="{ name: 'privacy' }">Datenschutz</RouterLink>
+      <RouterLink class="privacy-link" :to="{ name: 'about' }">Über Fibel</RouterLink>
+    </nav>
   </main>
 </template>
 
 <style scoped>
+.info-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
 .privacy-link {
   display: inline-flex;
   align-items: center;
