@@ -5,9 +5,9 @@ import { catalogFor, resolveDefaults } from '@/core/content'
 import { createRng } from '@/core/random'
 import { availableEntries } from '@/core/session'
 import { getExercise } from '@/exercises/registry'
-import { CLOCK_CHOICE_COUNT, uhrLesen } from '@/exercises/rechnen/uhr-lesen'
-import UhrStellenTask from '@/exercises/rechnen/uhr-stellen/UhrStellenTask.vue'
-import { startTotal, uhrStellen } from '@/exercises/rechnen/uhr-stellen'
+import { CLOCK_CHOICE_COUNT, uhrLesen } from '@/exercises/uhr/lesen'
+import UhrStellenTask from '@/exercises/uhr/stellen/UhrStellenTask.vue'
+import { startTotal, uhrStellen } from '@/exercises/uhr/stellen'
 import {
   CLOCK_LEVEL_KEY,
   CLOCK_STEPS,
@@ -21,7 +21,7 @@ import {
   timesFor,
   toTotal,
   typicalMistakes,
-} from '@/exercises/rechnen/uhr/time'
+} from '@/exercises/uhr/time'
 
 const ctxFor = (grade: number) => ({
   land: 'DE-BY',
@@ -96,7 +96,7 @@ describe('Uhr-Level', () => {
 
   it('beginnt in Klasse 1 bei vollen Stunden und geht höchstens bis halb', () => {
     expect(clockLevel({}, none, { maxLevel: 2 })).toBe(1)
-    const fullHours = timesFor([60]).map((t) => `rechnen.uhr-lesen:${timeKey(t)}`)
+    const fullHours = timesFor([60]).map((t) => `uhr.lesen:${timeKey(t)}`)
     expect(clockLevel({}, progressWith(fullHours.slice(0, 5)), { maxLevel: 2 })).toBe(1)
     expect(clockLevel({}, progressWith(fullHours.slice(0, 6)), { maxLevel: 2 })).toBe(2)
     expect(clockLevel({}, progressWith(fullHours), { maxLevel: 2 })).toBe(2)
@@ -107,24 +107,17 @@ describe('Uhr-Level', () => {
     const ctx = { ...ctxFor(2), progress: none }
     const keys = uhrLesen.items(ctx, { minLevel: 3 })
     expect(keys).toHaveLength(12 + 12 + 24)
-    expect(keys).toContain('rechnen.uhr-lesen:3-0')
-    expect(keys).toContain('rechnen.uhr-lesen:3-45')
+    expect(keys).toContain('uhr.lesen:3-0')
+    expect(keys).toContain('uhr.lesen:3-45')
   })
 
   it('nimmt das im Elternbereich gesetzte Level, aber nicht über das Maximum', () => {
     expect(clockLevel({ [CLOCK_LEVEL_KEY]: 4 }, none, {})).toBe(4)
     expect(clockLevel({ [CLOCK_LEVEL_KEY]: 4 }, none, { maxLevel: 2 })).toBe(2)
   })
-
-  it('bietet nichts an, wenn die Uhr abgeschaltet ist', () => {
-    const ctx = ctxFor(1)
-    const off = { ...ctx, settings: { ...ctx.settings, clock: false } }
-    expect(uhrLesen.items(off, {})).toEqual([])
-    expect(uhrStellen.items(off, {})).toEqual([])
-  })
 })
 
-describe('R7 Uhr lesen', () => {
+describe('Uhr lesen', () => {
   it('bietet drei verschiedene Uhrzeiten an, deren Minuten zur Stufe passen', () => {
     const rng = createRng(5)
     const ctx = ctxFor(2)
@@ -142,7 +135,7 @@ describe('R7 Uhr lesen', () => {
   })
 
   it('spricht Frage und Lösung', () => {
-    const task = uhrLesen.generate(ctxFor(1), {}, 'rechnen.uhr-lesen:3-30', createRng(1))
+    const task = uhrLesen.generate(ctxFor(1), {}, 'uhr.lesen:3-30', createRng(1))
     expect(task.instruction).toBe('Wie spät ist es?')
     expect(task.solution).toBe('Es ist halb vier.')
     expect(task.data.total).toBe(210)
@@ -153,7 +146,7 @@ describe('R7 Uhr lesen', () => {
   })
 })
 
-describe('R8 Uhr stellen', () => {
+describe('Uhr stellen', () => {
   it('übt in Klasse 1 volle und halbe Stunden, aber nie einzelne Minuten', () => {
     expect(uhrStellen.items({ ...ctxFor(1), progress: new Map() }, { maxLevel: 2 })).toHaveLength(
       12,
@@ -170,7 +163,7 @@ describe('R8 Uhr stellen', () => {
   })
 
   it('wertet die gestellte Uhr aus', async () => {
-    const { data } = uhrStellen.generate(ctxFor(1), {}, 'rechnen.uhr-stellen:3-30', createRng(1))
+    const { data } = uhrStellen.generate(ctxFor(1), {}, 'uhr.stellen:3-30', createRng(1))
     expect(data.target).toBe(210)
     const wrapper = mount(UhrStellenTask, { props: { data, revealed: false, locked: false } })
     const check = wrapper.get('button.check')
@@ -199,17 +192,19 @@ describe('R8 Uhr stellen', () => {
   })
 })
 
-describe('Uhr im Katalog', () => {
-  it('ist in Klasse 1 und 2 verfügbar', () => {
+describe('Uhr als eigener Bereich', () => {
+  it('hat in Klasse 1 und 2 genau „Uhr lesen“ und „Uhr stellen“', () => {
     for (const grade of [1, 2]) {
-      const ctx = ctxFor(grade)
-      const ids = availableEntries(catalogFor('DE-BY', grade, 'rechnen'), ctx, getExercise).map(
-        (e) => e.id,
+      const ids = availableEntries(catalogFor('DE-BY', grade, 'uhr'), ctxFor(grade), getExercise)
+      expect(ids.map((e) => e.id)).toEqual([`k${grade}.uhr.lesen`, `k${grade}.uhr.stellen`])
+    }
+  })
+
+  it('kommt im Rechnen nicht mehr vor', () => {
+    for (const grade of [1, 2]) {
+      expect(catalogFor('DE-BY', grade, 'rechnen').some((e) => e.exercise.startsWith('uhr.'))).toBe(
+        false,
       )
-      expect(ids.filter((id) => id.includes('.uhr-'))).toEqual([
-        `k${grade}.rechnen.uhr-lesen`,
-        `k${grade}.rechnen.uhr-stellen`,
-      ])
     }
   })
 })

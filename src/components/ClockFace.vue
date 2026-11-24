@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { digital, fromTotal } from '@/exercises/rechnen/uhr/time'
+import { digital, fromTotal } from '@/exercises/uhr/time'
 
 // Analogue clock like the learning clocks used at school: short blue hour hand, long red
 // minute hand. With `settable` both hands can be dragged (or moved with the arrow keys);

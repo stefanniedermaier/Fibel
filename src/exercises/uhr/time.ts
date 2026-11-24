@@ -6,7 +6,7 @@ import { numberWord } from '@/core/numbers'
 import { SAFE_BOX } from '@/core/leitner'
 import { shuffle, type Rng } from '@/core/random'
 import type { ProgressRecord } from '@/core/types'
-import type { LearnerContext } from '../../types'
+import type { LearnerContext } from '../types'
 
 /** A time on the analogue clock face: hour 1–12, minute 0–59. */
 export interface ClockTime {
@@ -24,7 +24,7 @@ export const CLOCK_STEPS: readonly ClockStep[] = [60, 30, 15, 5, 1]
 
 /** Level 1–5 = full hours, half past, quarters, five minutes, single minutes. */
 export const CLOCK_LEVELS = CLOCK_STEPS.map((_, i) => i + 1)
-export const CLOCK_LEVEL_KEY = 'rechnen.uhr'
+export const CLOCK_LEVEL_KEY = 'uhr'
 const lastLevel = CLOCK_LEVELS.length
 
 export interface ClockParams {
@@ -37,7 +37,7 @@ export interface ClockParams {
 /** A level counts as learnt once this many of its times are safe (Leitner box ≥ 2). */
 export const MASTERY_COUNT = 6
 
-const readingKey = (t: ClockTime) => `rechnen.uhr-lesen:${timeKey(t)}`
+const readingKey = (t: ClockTime) => `uhr.lesen:${timeKey(t)}`
 
 /**
  * Current level: set by hand in the parent area, otherwise the lowest level from
@@ -61,7 +61,6 @@ export function clockLevel(
 
 /** The steps practised: everything up to the current level, so earlier ones are repeated. */
 export function stepsFor(ctx: LearnerContext, params: ClockParams): ClockStep[] {
-  if (!ctx.settings.clock) return []
   const level = clockLevel(ctx.settings.levels, ctx.progress ?? new Map(), params)
   return CLOCK_STEPS.slice(0, level)
 }

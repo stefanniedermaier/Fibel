@@ -1,10 +1,11 @@
-export type Topic = 'lesen' | 'schreiben' | 'rechnen'
-export const TOPICS: readonly Topic[] = ['lesen', 'schreiben', 'rechnen']
+export type Topic = 'lesen' | 'schreiben' | 'rechnen' | 'uhr'
+export const TOPICS: readonly Topic[] = ['lesen', 'schreiben', 'rechnen', 'uhr']
 
 export const TOPIC_INFO: Record<Topic, { label: string; icon: string }> = {
   lesen: { label: 'Lesen', icon: '📖' },
   schreiben: { label: 'Schreiben', icon: '✏️' },
   rechnen: { label: 'Rechnen', icon: '🔢' },
+  uhr: { label: 'Uhr', icon: '🕒' },
 }
 
 /** ISO 3166-2 code of a German state, e.g. 'DE-BY'. */
@@ -49,8 +50,6 @@ export interface ProfileSettings {
   traceTolerance: number
   /** Experiment: write words freely in boxes, with letter recognition (default off). */
   kaestchen: boolean
-  /** Clock exercises ("Uhr lesen", "Uhr stellen") in arithmetic (default on). */
-  clock: boolean
   /**
    * Stars, crowns and statistics cover this many days (14 or 30). Older units are
    * deleted from the device; the learning progress per item stays.

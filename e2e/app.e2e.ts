@@ -25,7 +25,7 @@ test('Profil anlegen und eine Einheit starten', async ({ page }) => {
   const errors = watchErrors(page)
   await createProfile(page)
   await expectAccessible(page)
-  for (const topic of ['Lesen', 'Schreiben', 'Rechnen']) {
+  for (const topic of ['Lesen', 'Schreiben', 'Rechnen', 'Uhr']) {
     await page.goto('./#/')
     await page.getByRole('link', { name: new RegExp(topic) }).click()
     await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
@@ -81,11 +81,12 @@ test('Elternbereich: Statistik zeigt den Zeitraum', async ({ page }) => {
 test('Uhr: lesen und stellen sind bedienbar und barrierearm', async ({ page }) => {
   const errors = watchErrors(page)
   await createProfile(page)
+  if (process.env.UHR_SHOTS) await page.screenshot({ path: `${process.env.UHR_SHOTS}/home.png` })
   const seen = new Set<string>()
-  // The unit is planned at random; restart it until both clock exercises came up first.
+  // The unit is planned at random; restart it until each clock exercise came up first.
   for (let i = 0; i < 60 && seen.size < 2; i++) {
     await page.goto('./#/')
-    await page.getByRole('link', { name: /Rechnen/ }).click()
+    await page.getByRole('link', { name: /Uhr/ }).click()
     await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
     if (
       !seen.has('stellen') &&

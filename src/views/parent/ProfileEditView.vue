@@ -14,7 +14,7 @@ import {
 } from '@/core/words'
 import { READING_LEVEL_KEY } from '@/exercises/lesen/shared'
 import { LEVEL_KEY as REIHEN_LEVEL_KEY } from '@/exercises/rechnen/reihen'
-import { CLOCK_LEVEL_KEY } from '@/exercises/rechnen/uhr/time'
+import { CLOCK_LEVEL_KEY } from '@/exercises/uhr/time'
 import {
   DEFAULT_LAND,
   LAENDER,
@@ -125,6 +125,7 @@ const readingLevel = computed({
 
 // --- Arithmetic --------------------------------------------------------------
 const hasRechnen = computed(() => catalogFor(form.land, form.grade, 'rechnen').length > 0)
+const hasUhr = computed(() => catalogFor(form.land, form.grade, 'uhr').length > 0)
 const hasSchreiben = computed(() => catalogFor(form.land, form.grade, 'schreiben').length > 0)
 /** Number ranges up to the grade's start value (grade 1: 10 and 20). */
 const numberRanges = computed(() => {
@@ -351,12 +352,12 @@ async function remove() {
           <option :value="5">5 – größere Sprünge bis 20</option>
         </select>
       </label>
-      <label class="check">
-        <input v-model="settings.clock" type="checkbox" />
-        Uhr lesen und stellen
-      </label>
-      <label v-if="settings.clock">
-        Uhr: Level
+    </section>
+
+    <section v-if="hasUhr" class="card">
+      <h2>Uhr</h2>
+      <label>
+        Level
         <select v-model.number="clockLevelSetting">
           <option :value="0">automatisch (Klasse 1: bis halbe Stunden, Klasse 2 ab Viertel)</option>
           <option :value="1">1 – volle Stunden</option>

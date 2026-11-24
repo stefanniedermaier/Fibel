@@ -140,10 +140,10 @@ describe('R1 umgekehrt: Menge legen', () => {
 })
 
 describe('Rechnen in Klasse 1', () => {
-  it('hat mit den Startwerten acht Übungen (zwei zur Uhr), mit Zahlenraum 20 neun', () => {
+  it('hat mit den Startwerten sechs Übungen, mit Zahlenraum 20 sieben', () => {
     const entries = catalogFor('DE-BY', 1, 'rechnen')
-    expect(availableEntries(entries, ctxWith(), getExercise)).toHaveLength(8)
-    expect(availableEntries(entries, ctxWith({ numberRange: 20 }), getExercise)).toHaveLength(9)
+    expect(availableEntries(entries, ctxWith(), getExercise)).toHaveLength(6)
+    expect(availableEntries(entries, ctxWith({ numberRange: 20 }), getExercise)).toHaveLength(7)
   })
 
   it('plant eine Einheit, in der jede Aufgabe eine Anzeige-Zeile hat', () => {

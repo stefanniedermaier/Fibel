@@ -146,6 +146,7 @@ export function rewardTotals(sessions: readonly SessionRecord[]): RewardTotals {
       lesen: { stars: 0, crowns: 0 },
       schreiben: { stars: 0, crowns: 0 },
       rechnen: { stars: 0, crowns: 0 },
+      uhr: { stars: 0, crowns: 0 },
     },
   }
   for (const s of sessions) {

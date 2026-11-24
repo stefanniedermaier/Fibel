@@ -1,10 +1,10 @@
 /**
- * R7 "Uhr lesen": an analogue clock is shown, the child picks the matching time.
+ * "Uhr lesen": an analogue clock is shown, the child picks the matching time.
  * The wrong choices are typical reading mistakes (wrong hour at "halb", "nach" and
  * "vor" mixed up, hands mixed up).
  */
 import type { ExerciseModule } from '../../types'
-import { itemPart } from '../shared'
+import { itemPart } from '../../rechnen/shared'
 import {
   CLOCK_STEPS,
   clockChoices,
@@ -19,7 +19,7 @@ import {
   toTotal,
   type ClockParams,
   type ClockTime,
-} from '../uhr/time'
+} from '../time'
 import UhrLesenTask from './UhrLesenTask.vue'
 
 export const CLOCK_CHOICE_COUNT = 3
@@ -43,11 +43,11 @@ export function hintFor({ m }: ClockTime): string {
 }
 
 export const uhrLesen: ExerciseModule<ClockParams, UhrLesenData> = {
-  id: 'rechnen.uhr-lesen',
-  topic: 'rechnen',
+  id: 'uhr.lesen',
+  topic: 'uhr',
 
   items(ctx, params) {
-    return timesFor(stepsFor(ctx, params)).map((t) => `rechnen.uhr-lesen:${timeKey(t)}`)
+    return timesFor(stepsFor(ctx, params)).map((t) => `uhr.lesen:${timeKey(t)}`)
   },
 
   generate(_ctx, _params, itemKey, rng) {
