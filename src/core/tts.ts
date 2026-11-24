@@ -83,6 +83,13 @@ let currentUtterance: SpeechSynthesisUtterance | undefined
 /** Chrome may swallow an utterance queued in the same tick as `cancel()`. */
 const CANCEL_GAP_MS = 60
 
+/**
+ * Android (seen on Samsung phones) drops the first utterance after the speech engine
+ * was idle for a while: it never starts, no error, no `end`. If an utterance has not
+ * started after this time, it is spoken once more – by then the engine is awake.
+ */
+export const START_TIMEOUT_MS = 1000
+
 /** Speaks `text`, cancelling anything still being spoken. Resolves when finished. */
 export async function speak(text: string, options: SpeakOptions = {}): Promise<void> {
   if (!isTtsSupported()) throw new Error('Sprachausgabe wird nicht unterstützt')
@@ -91,6 +98,11 @@ export async function speak(text: string, options: SpeakOptions = {}): Promise<v
     synth.cancel()
     await new Promise((resolve) => setTimeout(resolve, CANCEL_GAP_MS))
   }
+  return speakOnce(text, options, true)
+}
+
+function speakOnce(text: string, options: SpeakOptions, retry: boolean): Promise<void> {
+  const synth = window.speechSynthesis
   // A paused engine (Chrome after the tab was in the background) would queue silently.
   if (synth.paused) synth.resume()
   const utterance = new SpeechSynthesisUtterance(text)
@@ -100,9 +112,16 @@ export async function speak(text: string, options: SpeakOptions = {}): Promise<v
   utterance.pitch = options.pitch ?? DEFAULT_PITCH
   currentUtterance = utterance
   return new Promise((resolve, reject) => {
+    let started = false
+    let timer: ReturnType<typeof setTimeout> | undefined
     const settle = (fn: () => void) => {
+      clearTimeout(timer)
       if (currentUtterance === utterance) currentUtterance = undefined
       fn()
+    }
+    utterance.onstart = () => {
+      started = true
+      clearTimeout(timer)
     }
     utterance.onend = () => settle(resolve)
     utterance.onerror = (e) =>
@@ -112,6 +131,16 @@ export async function speak(text: string, options: SpeakOptions = {}): Promise<v
           ? resolve()
           : reject(new Error(e.error)),
       )
+    if (retry) {
+      timer = setTimeout(() => {
+        // Started, or already replaced by a newer text: leave it alone. (`synth.speaking`
+        // is no help here: some engines report it even for the dropped utterance.)
+        if (started || currentUtterance !== utterance) return
+        utterance.onend = utterance.onerror = utterance.onstart = null
+        synth.cancel()
+        setTimeout(() => speakOnce(text, options, false).then(resolve, reject), CANCEL_GAP_MS)
+      }, START_TIMEOUT_MS)
+    }
     synth.speak(utterance)
   })
 }
