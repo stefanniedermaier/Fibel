@@ -1,0 +1,4 @@
+{
+  "zweck": "OpenMoji-Bilder, die nur im Programmcode vorkommen (nicht in den Inhaltsdateien), damit npm run data:openmoji sie mitkopiert.",
+  "images": ["1F6AA"]
+}

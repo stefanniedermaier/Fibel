@@ -268,5 +268,17 @@
     "topic": "sprache",
     "title": "Wörter bilden",
     "icon": "🧩"
+  },
+  {
+    "id": "messen.geld",
+    "topic": "messen",
+    "title": "Geld",
+    "icon": "💶"
+  },
+  {
+    "id": "messen.laengen",
+    "topic": "messen",
+    "title": "Längen",
+    "icon": "📏"
   }
 ]

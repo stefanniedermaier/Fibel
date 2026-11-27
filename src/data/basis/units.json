@@ -635,5 +635,40 @@
     "topic": "sprache",
     "title": "Wortfelder",
     "term": 2
+  },
+  {
+    "id": "k2.messen.geld",
+    "grade": 2,
+    "topic": "messen",
+    "title": "Münzen und Scheine bis 100 €, Cent",
+    "term": 1
+  },
+  {
+    "id": "k2.messen.legen",
+    "grade": 2,
+    "topic": "messen",
+    "title": "Geld legen und wechseln",
+    "term": 1
+  },
+  {
+    "id": "k2.messen.einkaufen",
+    "grade": 2,
+    "topic": "messen",
+    "title": "Einkaufen und Rückgeld",
+    "term": 2
+  },
+  {
+    "id": "k2.messen.lineal",
+    "grade": 2,
+    "topic": "messen",
+    "title": "Mit dem Lineal messen, Meter und Zentimeter",
+    "term": 2
+  },
+  {
+    "id": "k2.messen.schaetzen",
+    "grade": 2,
+    "topic": "messen",
+    "title": "Längen schätzen",
+    "term": 2
   }
 ]

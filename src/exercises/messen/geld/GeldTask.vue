@@ -37,13 +37,18 @@ function check() {
 
 <template>
   <div class="task">
-    <template v-if="data.mode === 'erkennen'">
+    <template v-if="data.mode !== 'legen'">
+      <p v-if="data.question" class="question card">{{ data.question }}</p>
       <div class="money card">
-        <MoneyPiece v-for="(p, i) in data.shown" :key="i" :value="p" />
+        <MoneyPiece v-for="(p, i) in data.shown" :key="i" :value="p" :cent="data.cent" />
+        <template v-if="data.mode === 'wechseln'">
+          <span class="arrow">→ ? ×</span>
+          <MoneyPiece :value="data.pieces[0]!" />
+        </template>
       </div>
       <ChoiceButtons
         :options="data.choices"
-        :correct-key="String(data.amount)"
+        :correct-key="data.correctKey ?? String(data.amount)"
         :revealed="revealed"
         :locked="locked"
         @answer="emit('answer', $event)"
@@ -64,10 +69,10 @@ function check() {
           :aria-label="`${p} Euro herausnehmen`"
           @click="remove(i)"
         >
-          <MoneyPiece :value="p" :size="0.8" />
+          <MoneyPiece :value="p" :size="0.8" :cent="data.cent" />
         </button>
       </div>
-      <p v-if="revealed" class="sum">{{ data.amount }} €</p>
+      <p v-if="revealed" class="sum">{{ data.amount }} {{ data.cent ? 'ct' : '€' }}</p>
       <div class="pieces">
         <button
           v-for="p in data.pieces"
@@ -78,7 +83,7 @@ function check() {
           :disabled="disabled"
           @click="add(p)"
         >
-          <MoneyPiece :value="p" />
+          <MoneyPiece :value="p" :cent="data.cent" />
         </button>
       </div>
       <button type="button" class="btn btn-primary" :disabled="disabled" @click="check">
@@ -116,6 +121,18 @@ function check() {
 
 .purse.right {
   border-color: var(--ok);
+}
+
+.question {
+  margin: 0;
+  padding: 6px 18px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.arrow {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .pieces {

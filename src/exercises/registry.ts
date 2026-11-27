@@ -30,6 +30,7 @@ import {
   wortfeld,
   zusammensetzen,
 } from './sprache/klasse2'
+import { lineal, schaetzen, umrechnen } from './messen/laenge'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -142,6 +143,9 @@ register(sprachFormen)
 register(wortfamilie)
 register(wortfeld)
 register(zusammensetzen)
+register(lineal)
+register(umrechnen)
+register(schaetzen)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

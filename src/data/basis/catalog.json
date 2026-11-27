@@ -2296,5 +2296,113 @@
     "exercise": "sprache.wortfeld",
     "params": {},
     "title": "Welches Wort passt dazu?"
+  },
+  {
+    "id": "k2.messen.geld.erkennen",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.geld",
+    "unit": "k2.messen.geld",
+    "exercise": "messen.geld",
+    "params": {
+      "max": 100,
+      "mode": "erkennen"
+    },
+    "title": "Wie viel Geld ist das?"
+  },
+  {
+    "id": "k2.messen.geld.cent",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.geld",
+    "unit": "k2.messen.geld",
+    "exercise": "messen.geld",
+    "params": {
+      "max": 100,
+      "mode": "erkennen",
+      "cent": true
+    },
+    "title": "Wie viele Cent sind das?"
+  },
+  {
+    "id": "k2.messen.legen.legen",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.geld",
+    "unit": "k2.messen.legen",
+    "exercise": "messen.geld",
+    "params": {
+      "max": 100,
+      "mode": "legen"
+    },
+    "title": "Geld legen"
+  },
+  {
+    "id": "k2.messen.legen.wechseln",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.geld",
+    "unit": "k2.messen.legen",
+    "exercise": "messen.geld",
+    "params": {
+      "max": 100,
+      "mode": "wechseln"
+    },
+    "title": "Geld wechseln"
+  },
+  {
+    "id": "k2.messen.einkaufen.einkaufen",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.geld",
+    "unit": "k2.messen.einkaufen",
+    "exercise": "messen.geld",
+    "params": {
+      "max": 50,
+      "mode": "einkaufen"
+    },
+    "title": "Wie viel bekommst du zurück?"
+  },
+  {
+    "id": "k2.messen.lineal.lineal",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.laengen",
+    "unit": "k2.messen.lineal",
+    "exercise": "messen.lineal",
+    "params": {},
+    "title": "Am Lineal ablesen"
+  },
+  {
+    "id": "k2.messen.lineal.versetzt",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.laengen",
+    "unit": "k2.messen.lineal",
+    "exercise": "messen.lineal",
+    "params": {
+      "versetzt": true
+    },
+    "title": "Nicht bei null angelegt"
+  },
+  {
+    "id": "k2.messen.lineal.umrechnen",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.laengen",
+    "unit": "k2.messen.lineal",
+    "exercise": "messen.umrechnen",
+    "params": {},
+    "title": "Meter und Zentimeter"
+  },
+  {
+    "id": "k2.messen.schaetzen.schaetzen",
+    "grade": 2,
+    "topic": "messen",
+    "category": "messen.laengen",
+    "unit": "k2.messen.schaetzen",
+    "exercise": "messen.schaetzen",
+    "params": {},
+    "title": "Schätzen"
   }
 ]
