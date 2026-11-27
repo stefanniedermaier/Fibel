@@ -33,6 +33,24 @@ export interface Sortierung {
   muell?: boolean
 }
 
+/** A place in a picture search: a box to tap, drawn with pictures or a built-in form. */
+export interface SuchStelle {
+  key: string
+  /** [x, y, width, height] in the scene's coordinates. */
+  box: [number, number, number, number]
+  bilder?: { image: string; x: number; y: number; size: number }[]
+  /** Drawn by the component: zebra crossing, crossing at the lights, socket. */
+  form?: 'zebra' | 'furt' | 'steckdose'
+}
+
+export interface Suchbild {
+  id: string
+  /** Background drawn by the component. */
+  hintergrund: 'strasse' | 'kueche' | 'zimmer'
+  stellen: SuchStelle[]
+  fragen: { frage: string; richtig: string[]; regel: string }[]
+}
+
 /** "Stimmt das?": a statement with a picture, thumbs up or down, then the rule. */
 export interface Aussage {
   text: string
@@ -61,6 +79,11 @@ export interface Thema {
   sortieren: Sortierung[]
   paare: Paar[]
   aussagen: Aussage[]
+  suchbilder: Suchbild[]
+  /** Offers "Welcher Turm steht sicherer?" (sache.turm). */
+  turm?: boolean
+  /** Tasks on the annual circle (sache.jahreskreis). */
+  jahreskreis?: ('nach' | 'vor' | 'monat' | 'monat-jahreszeit' | 'fest')[]
   /** Sequences of lesen.reihenfolge for this theme. */
   ablaeufe: string[]
   merke?: 'ziel' | 'richtig'

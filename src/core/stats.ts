@@ -176,6 +176,15 @@ export function itemLabel(itemKey: string, wordText: (id: string) => string | un
       const [thema, i] = part.split(':')
       return THEMEN.find((t) => t.id === thema)?.aussagen[Number(i)]?.text ?? part
     }
+    case 'sache.suchbild': {
+      const [bild, i] = part.split(':')
+      const b = THEMEN.flatMap((t) => t.suchbilder).find((x) => x.id === bild)
+      return b?.fragen[Number(i)]?.frage ?? part
+    }
+    case 'sache.turm':
+      return `Turm: ${part}`
+    case 'sache.jahreskreis':
+      return `Jahreskreis: ${part.replace(':', ' ')}`
     case 'sache.paare': {
       const [thema, i] = part.split(':')
       return THEMEN.find((t) => t.id === thema)?.paare[Number(i)]?.frage ?? part

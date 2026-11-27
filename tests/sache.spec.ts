@@ -11,6 +11,9 @@ import { paare } from '@/exercises/sache/paare'
 import { getBegriff, THEMEN } from '@/exercises/sache/shared'
 import { sortieren } from '@/exercises/sache/sortieren'
 import { stimmtDas } from '@/exercises/sache/stimmt-das'
+import { suchbild } from '@/exercises/sache/suchbild'
+import { TUERME, turm } from '@/exercises/sache/turm'
+import { jahreskreis } from '@/exercises/sache/jahreskreis'
 
 const settings = resolveDefaults('DE-BY', 1)
 const ctx = { land: 'DE-BY', grade: 1, settings }
@@ -156,5 +159,84 @@ describe('HSU Stufe 2', () => {
 
   it('jedes Thema hat einen Forscherauftrag', () => {
     for (const t of THEMEN) expect(t.forscherauftrag.length).toBeGreaterThan(20)
+  })
+})
+
+describe('HSU Stufe 3', () => {
+  const allUnits = {
+    ...ctx,
+    settings: {
+      ...settings,
+      units: Object.fromEntries(THEMEN.map((t) => [`k1.sache.${t.id}`, true])),
+    },
+  }
+
+  it('Suchbild: mehrere richtige Stellen, alle im Bild', () => {
+    const t = suchbild.generate(ctx, { thema: 'verkehr' }, 'sache.suchbild:strasse:0', createRng(1))
+    expect(t.data.correct).toEqual(['zebra', 'ampel'])
+    expect(t.hint).toBeTruthy()
+    for (const th of THEMEN)
+      for (const key of suchbild.items(allUnits, { thema: th.id })) {
+        const d = suchbild.generate(allUnits, { thema: th.id }, key, createRng(1)).data
+        const keys = d.scene.stellen.map((s) => s.key)
+        for (const k of d.correct) expect(keys).toContain(k)
+      }
+  })
+
+  it('Turm: der sichere Turm ist richtig und mal links, mal rechts', () => {
+    const sides = new Set<number>()
+    for (let seed = 0; seed < 20; seed++) {
+      const d = turm.generate(ctx, {}, 'sache.turm:pyramide', createRng(seed)).data
+      expect(d.correctKey).toBe('sicher')
+      sides.add(d.choices.findIndex((c) => c.key === 'sicher'))
+    }
+    expect([...sides].sort()).toEqual([0, 1])
+    // The sturdy tower really has the wider base.
+    for (const key of turm.items(ctx, {})) {
+      const t = TUERME[key.split(':')[1]!]!
+      const base = (parts: typeof t.sicher) =>
+        Math.max(...parts.filter((p) => p.y + p.h === 150).map((p) => p.w))
+      if (key.endsWith('gerade')) continue
+      expect(base(t.sicher), key).toBeGreaterThanOrEqual(base(t.wackelig))
+    }
+  })
+
+  it('Jahreskreis: Jahreszeiten im Kreis, Feste im richtigen Monat', () => {
+    const nach = jahreskreis.generate(
+      ctx,
+      { modes: ['nach'] },
+      'sache.jahreskreis:nach:winter',
+      createRng(1),
+    )
+    expect(nach.data).toEqual({ ring: 'jahreszeit', correctKey: 'fruehling' })
+    expect(nach.instruction).toContain('nach dem Winter')
+    const vor = jahreskreis.generate(
+      ctx,
+      { modes: ['vor'] },
+      'sache.jahreskreis:vor:fruehling',
+      createRng(1),
+    )
+    expect(vor.data.correctKey).toBe('winter')
+    const jan = jahreskreis.generate(
+      ctx,
+      { modes: ['monat-jahreszeit'] },
+      'sache.jahreskreis:monat-jahreszeit:0',
+      createRng(1),
+    )
+    expect(jan.data.correctKey).toBe('winter')
+    const martin = jahreskreis.generate(
+      ctx,
+      { modes: ['fest'] },
+      'sache.jahreskreis:fest:martin',
+      createRng(1),
+    )
+    expect(martin.data).toEqual({ ring: 'monat', correctKey: '10' })
+    expect(martin.solution).toBe('Sankt Martin ist im November.')
+    expect(jahreskreis.items(ctx, { modes: ['monat'] })).toHaveLength(12)
+  })
+
+  it('alle 19 Themen haben Übungen', () => {
+    expect(THEMEN).toHaveLength(19)
+    expect(practiceCategories(allUnits, 'sache', getExercise)).toHaveLength(19)
   })
 })

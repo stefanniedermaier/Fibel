@@ -190,11 +190,29 @@ export function checkSache(images: ReadonlySet<string>): string[] {
     if (!t.lehrplan || !t.quelle) problems.push(`${where}: Lehrplan oder Quelle fehlt`)
     for (const a of t.aussagen) {
       if (!images.has(a.image)) problems.push(`${where}, „${a.text}“: Bild ${a.image} fehlt`)
-      if (!a.text.endsWith('.') || !a.regel.endsWith('.'))
-        problems.push(`${where}, „${a.text}“: Aussage und Regel enden mit Punkt`)
+      if (!a.text.endsWith('.') || !/[.!]$/.test(a.regel))
+        problems.push(`${where}, „${a.text}“: Aussage und Regel brauchen einen Punkt am Ende`)
     }
     if (t.aussagen.length > 0 && t.aussagen.every((a) => a.richtig === t.aussagen[0]!.richtig))
       problems.push(`${where}: Aussagen sind alle richtig oder alle falsch`)
+    for (const bild of t.suchbilder) {
+      const at = `${where}, Suchbild „${bild.id}“`
+      const keys = new Set(bild.stellen.map((s) => s.key))
+      if (keys.size !== bild.stellen.length) problems.push(`${at}: Stelle doppelt`)
+      for (const s of bild.stellen) {
+        const [x, y, w, h] = s.box
+        if (x < 0 || y < 0 || x + w > 400 || y + h > 270)
+          problems.push(`${at}: Stelle „${s.key}“ liegt außerhalb`)
+        for (const b of s.bilder ?? [])
+          if (!images.has(b.image)) problems.push(`${at}: Bild ${b.image} fehlt`)
+        if (!s.form && !s.bilder?.length) problems.push(`${at}: Stelle „${s.key}“ ohne Bild`)
+      }
+      for (const f of bild.fragen) {
+        if (f.richtig.length === 0 || f.richtig.some((k) => !keys.has(k)))
+          problems.push(`${at}, „${f.frage}“: richtige Stelle fehlt`)
+        if (!/[.!]$/.test(f.regel)) problems.push(`${at}, „${f.frage}“: Regel ohne Punkt`)
+      }
+    }
     for (const id of t.ablaeufe)
       if (!ablaufIds.has(id)) problems.push(`${where}: Ablauf „${id}“ fehlt`)
   }

@@ -740,6 +740,18 @@
     "title": "Sicher zu Fuß: Stimmt das?"
   },
   {
+    "id": "k1.sache.verkehr.suchbild",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.verkehr",
+    "unit": "k1.sache.verkehr",
+    "exercise": "sache.suchbild",
+    "params": {
+      "thema": "verkehr"
+    },
+    "title": "Sicher zu Fuß: Suchbild"
+  },
+  {
     "id": "k1.sache.obst-gemuese.erkennen",
     "grade": 1,
     "topic": "sache",
@@ -849,6 +861,18 @@
     "title": "Zeit und Jahreszeiten: Sortieren"
   },
   {
+    "id": "k1.sache.jahreszeiten.jahreskreis",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.jahreszeiten",
+    "unit": "k1.sache.jahreszeiten",
+    "exercise": "sache.jahreskreis",
+    "params": {
+      "modes": ["nach", "vor", "monat-jahreszeit", "monat"]
+    },
+    "title": "Zeit und Jahreszeiten: Jahreskreis"
+  },
+  {
     "id": "k1.sache.jahreszeiten.reihenfolge",
     "grade": 1,
     "topic": "sache",
@@ -884,6 +908,18 @@
       "thema": "feste"
     },
     "title": "Feste im Jahr: Sortieren"
+  },
+  {
+    "id": "k1.sache.feste.jahreskreis",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.feste",
+    "unit": "k1.sache.feste",
+    "exercise": "sache.jahreskreis",
+    "params": {
+      "modes": ["fest"]
+    },
+    "title": "Feste im Jahr: Jahreskreis"
   },
   {
     "id": "k1.sache.wetter.erkennen",
@@ -1006,6 +1042,42 @@
       "thema": "gefuehle"
     },
     "title": "Gefühle erkennen: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.zuhause.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.zuhause",
+    "unit": "k1.sache.zuhause",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "zuhause"
+    },
+    "title": "Sicher zu Hause: Was ist das?"
+  },
+  {
+    "id": "k1.sache.zuhause.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.zuhause",
+    "unit": "k1.sache.zuhause",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "zuhause"
+    },
+    "title": "Sicher zu Hause: Stimmt das?"
+  },
+  {
+    "id": "k1.sache.zuhause.suchbild",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.zuhause",
+    "unit": "k1.sache.zuhause",
+    "exercise": "sache.suchbild",
+    "params": {
+      "thema": "zuhause"
+    },
+    "title": "Sicher zu Hause: Suchbild"
   },
   {
     "id": "k1.sache.wiese.erkennen",
@@ -1153,6 +1225,64 @@
     },
     "title": "In der Hecke: Wer frisst wen?: Was kommt zuerst?",
     "weight": 0.4
+  },
+  {
+    "id": "k1.sache.raum.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.raum",
+    "unit": "k1.sache.raum",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "raum"
+    },
+    "title": "Von oben gesehen: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.raum.suchbild",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.raum",
+    "unit": "k1.sache.raum",
+    "exercise": "sache.suchbild",
+    "params": {
+      "thema": "raum"
+    },
+    "title": "Von oben gesehen: Suchbild"
+  },
+  {
+    "id": "k1.sache.bauen.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.bauen",
+    "unit": "k1.sache.bauen",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "bauen"
+    },
+    "title": "Bauen: Was steht sicher?: Was ist das?"
+  },
+  {
+    "id": "k1.sache.bauen.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.bauen",
+    "unit": "k1.sache.bauen",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "bauen"
+    },
+    "title": "Bauen: Was steht sicher?: Stimmt das?"
+  },
+  {
+    "id": "k1.sache.bauen.turm",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.bauen",
+    "unit": "k1.sache.bauen",
+    "exercise": "sache.turm",
+    "params": {},
+    "title": "Bauen: Was steht sicher?: Welcher Turm steht sicherer?"
   },
   {
     "id": "k1.sache.berufe.erkennen",

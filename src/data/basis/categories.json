@@ -132,6 +132,12 @@
     "icon": "😀"
   },
   {
+    "id": "sache.zuhause",
+    "topic": "sache",
+    "title": "Sicher zu Hause",
+    "icon": "🔥"
+  },
+  {
     "id": "sache.wiese",
     "topic": "sache",
     "title": "Auf der Wiese",
@@ -154,6 +160,18 @@
     "topic": "sache",
     "title": "In der Hecke: Wer frisst wen?",
     "icon": "🦔"
+  },
+  {
+    "id": "sache.raum",
+    "topic": "sache",
+    "title": "Von oben gesehen",
+    "icon": "🗺️"
+  },
+  {
+    "id": "sache.bauen",
+    "topic": "sache",
+    "title": "Bauen: Was steht sicher?",
+    "icon": "🧱"
   },
   {
     "id": "sache.berufe",

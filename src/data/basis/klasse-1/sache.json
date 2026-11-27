@@ -1301,6 +1301,146 @@
       "wen": "den Computer",
       "image": "1F4BB",
       "merksatz": "Computer gibt es noch nicht so lange."
+    },
+    {
+      "id": "oben-tisch",
+      "text": "der Tisch von oben",
+      "wen": "den Tisch von oben",
+      "image": "fibel-oben-tisch",
+      "merksatz": "Von oben siehst du die Tischplatte und die Stühle."
+    },
+    {
+      "id": "oben-tasse",
+      "text": "die Tasse von oben",
+      "wen": "die Tasse von oben",
+      "image": "fibel-oben-tasse",
+      "merksatz": "Von oben ist eine Tasse rund."
+    },
+    {
+      "id": "oben-bett",
+      "text": "das Bett von oben",
+      "wen": "das Bett von oben",
+      "image": "fibel-oben-bett",
+      "merksatz": "Von oben siehst du die Decke und das Kissen."
+    },
+    {
+      "id": "oben-auto",
+      "text": "das Auto von oben",
+      "wen": "das Auto von oben",
+      "image": "fibel-oben-auto",
+      "merksatz": "Von oben siehst du das Dach vom Auto."
+    },
+    {
+      "id": "oben-baum",
+      "text": "der Baum von oben",
+      "wen": "den Baum von oben",
+      "image": "fibel-oben-baum",
+      "merksatz": "Von oben siehst du nur die Krone vom Baum."
+    },
+    {
+      "id": "oben-haus",
+      "text": "das Haus von oben",
+      "wen": "das Haus von oben",
+      "image": "fibel-oben-haus",
+      "merksatz": "Von oben siehst du das Dach vom Haus."
+    },
+    {
+      "id": "tisch",
+      "text": "der Tisch",
+      "wen": "den Tisch",
+      "image": "fibel-tisch",
+      "merksatz": "Am Tisch sitzen wir beim Essen."
+    },
+    {
+      "id": "tasse",
+      "text": "die Tasse",
+      "wen": "die Tasse",
+      "image": "2615",
+      "merksatz": "Aus der Tasse trinken wir."
+    },
+    {
+      "id": "bett",
+      "text": "das Bett",
+      "wen": "das Bett",
+      "image": "1F6CF",
+      "merksatz": "Im Bett schlafen wir."
+    },
+    {
+      "id": "burg",
+      "text": "die Burg",
+      "wen": "die Burg",
+      "image": "1F3F0",
+      "merksatz": "Burgen wurden früher mit dicken Mauern gebaut."
+    },
+    {
+      "id": "kirche",
+      "text": "die Kirche",
+      "wen": "die Kirche",
+      "image": "26EA",
+      "merksatz": "Viele Kirchen haben einen hohen Turm."
+    },
+    {
+      "id": "bruecke",
+      "text": "die Brücke",
+      "wen": "die Brücke",
+      "image": "1F309",
+      "merksatz": "Über eine Brücke kommt man über einen Fluss."
+    },
+    {
+      "id": "ziegel",
+      "text": "die Ziegelsteine",
+      "wen": "die Ziegelsteine",
+      "image": "1F9F1",
+      "merksatz": "Aus Ziegelsteinen baut man Häuser."
+    },
+    {
+      "id": "kran",
+      "text": "der Kran",
+      "wen": "den Kran",
+      "image": "1F3D7",
+      "merksatz": "Auf der Baustelle hebt ein Kran schwere Teile."
+    },
+    {
+      "id": "schule",
+      "text": "die Schule",
+      "wen": "die Schule",
+      "image": "1F3EB",
+      "merksatz": "In die Schule gehen wir zum Lernen."
+    },
+    {
+      "id": "kerze-brennt",
+      "text": "die brennende Kerze",
+      "wen": "die brennende Kerze",
+      "image": "1F56F",
+      "merksatz": "Eine brennende Kerze nie allein lassen."
+    },
+    {
+      "id": "messer",
+      "text": "das Messer",
+      "wen": "das Messer",
+      "image": "1F52A",
+      "merksatz": "Mit einem Messer schneidet man. Vorsicht, es ist scharf!"
+    },
+    {
+      "id": "tabletten",
+      "text": "die Tabletten",
+      "wen": "die Tabletten",
+      "image": "1F48A",
+      "merksatz": "Tabletten nimmst du nur, wenn ein Erwachsener sie dir gibt."
+    },
+    {
+      "id": "teddy",
+      "text": "der Teddy",
+      "wen": "den Teddy",
+      "image": "1F9F8",
+      "merksatz": "Mit dem Teddy kannst du ohne Gefahr spielen."
+    },
+    {
+      "id": "feuer",
+      "text": "das Feuer",
+      "wen": "das Feuer",
+      "image": "1F525",
+      "merksatz": "Wenn es brennt: raus, Tür zu und einen Erwachsenen rufen."
     }
   ],
   "themen": [
@@ -1413,7 +1553,120 @@
           "regel": "Ein Helm schützt deinen Kopf."
         }
       ],
-      "ablaeufe": []
+      "ablaeufe": [],
+      "suchbilder": [
+        {
+          "id": "strasse",
+          "hintergrund": "strasse",
+          "stellen": [
+            {
+              "key": "zebra",
+              "box": [25, 80, 70, 110],
+              "form": "zebra"
+            },
+            {
+              "key": "ampel",
+              "box": [120, 6, 70, 258],
+              "form": "furt",
+              "bilder": [
+                {
+                  "image": "fibel-ampel-gruen",
+                  "x": 128,
+                  "y": 2,
+                  "size": 42
+                },
+                {
+                  "image": "fibel-ampel-gruen",
+                  "x": 128,
+                  "y": 226,
+                  "size": 42
+                }
+              ]
+            },
+            {
+              "key": "bus",
+              "box": [207, 74, 101, 68],
+              "bilder": [
+                {
+                  "image": "1F68C",
+                  "x": 212,
+                  "y": 68,
+                  "size": 80
+                }
+              ]
+            },
+            {
+              "key": "autos",
+              "box": [292, 128, 108, 70],
+              "bilder": [
+                {
+                  "image": "1F697",
+                  "x": 294,
+                  "y": 126,
+                  "size": 62
+                },
+                {
+                  "image": "1F697",
+                  "x": 346,
+                  "y": 126,
+                  "size": 62
+                }
+              ]
+            },
+            {
+              "key": "kind",
+              "box": [207, 186, 76, 84],
+              "bilder": [
+                {
+                  "image": "1F9D2",
+                  "x": 214,
+                  "y": 190,
+                  "size": 62
+                }
+              ]
+            },
+            {
+              "key": "baum",
+              "box": [312, 0, 86, 50],
+              "bilder": [
+                {
+                  "image": "1F333",
+                  "x": 330,
+                  "y": -5,
+                  "size": 50
+                }
+              ]
+            }
+          ],
+          "fragen": [
+            {
+              "frage": "Wo kannst du sicher über die Straße gehen?",
+              "richtig": ["zebra", "ampel"],
+              "regel": "Am Zebrastreifen und an der Ampel gehst du sicher über die Straße."
+            },
+            {
+              "frage": "Wo ist es gefährlich, über die Straße zu gehen?",
+              "richtig": ["bus", "autos"],
+              "regel": "Hinter einem Bus und zwischen parkenden Autos sehen dich die Fahrer nicht."
+            },
+            {
+              "frage": "Tippe auf den Zebrastreifen.",
+              "richtig": ["zebra"],
+              "regel": "Am Zebrastreifen wartest du, bis die Autos stehen."
+            },
+            {
+              "frage": "Tippe auf die Ampel.",
+              "richtig": ["ampel"],
+              "regel": "An der Ampel gehst du nur bei Grün."
+            },
+            {
+              "frage": "Das Kind will über die Straße. Wo bleibt es zuerst stehen?",
+              "richtig": ["kind"],
+              "regel": "Am Bordstein bleibst du stehen und schaust: links, rechts, links."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "obst-gemuese",
@@ -1498,7 +1751,8 @@
       "paare": [],
       "ablaeufe": ["apfel"],
       "forscherauftrag": "Geht zusammen auf den Markt oder in den Supermarkt: Welches Obst und Gemüse kommt gerade aus Deutschland?",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": []
     },
     {
       "id": "sinne",
@@ -1568,7 +1822,8 @@
       "ablaeufe": [],
       "merke": "richtig",
       "forscherauftrag": "Verbindet dem Kind die Augen und lasst es Dinge nur durch Fühlen, Riechen oder Schmecken erraten.",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": []
     },
     {
       "id": "sichtbar",
@@ -1645,7 +1900,8 @@
           "regel": "Am Fahrrad gehört vorne ein weißes und hinten ein rotes Licht."
         }
       ],
-      "ablaeufe": []
+      "ablaeufe": [],
+      "suchbilder": []
     },
     {
       "id": "jahreszeiten",
@@ -1701,7 +1957,9 @@
       "paare": [],
       "ablaeufe": ["tag", "morgen"],
       "forscherauftrag": "Sucht euch einen Baum in der Nähe und schaut ihn euch in jeder Jahreszeit an. Was hat sich verändert?",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": [],
+      "jahreskreis": ["nach", "vor", "monat-jahreszeit", "monat"]
     },
     {
       "id": "feste",
@@ -1756,7 +2014,9 @@
       "paare": [],
       "ablaeufe": [],
       "forscherauftrag": "Hängt einen Kalender auf und malt die Feste des Jahres ein.",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": [],
+      "jahreskreis": ["fest"]
     },
     {
       "id": "wetter",
@@ -1802,7 +2062,8 @@
       ],
       "ablaeufe": ["regen", "schneemann"],
       "forscherauftrag": "Schaut eine Woche lang jeden Morgen aus dem Fenster und malt das Wetter auf.",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": []
     },
     {
       "id": "gesund",
@@ -1910,7 +2171,8 @@
           "regel": "Obst und Gemüse isst du am besten jeden Tag."
         }
       ],
-      "ablaeufe": ["haende"]
+      "ablaeufe": ["haende"],
+      "suchbilder": []
     },
     {
       "id": "gefuehle",
@@ -1950,6 +2212,194 @@
       ],
       "merke": "richtig",
       "aussagen": [],
+      "ablaeufe": [],
+      "suchbilder": []
+    },
+    {
+      "id": "zuhause",
+      "title": "Sicher zu Hause",
+      "icon": "🔥",
+      "term": 2,
+      "lehrplan": "HSU 1/2 3.2",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.2 (Feuer: Gefahren und richtiges Verhalten, Notruf); Brandschutzerziehung der Feuerwehren (Notruf 112)",
+      "forscherauftrag": "Geht zusammen durch die Wohnung: Wo ist es gefährlich? Übt den Notruf 112 mit einem Spieltelefon.",
+      "erkennen": ["feuerloescher", "messer", "tabletten", "kerze-brennt", "teddy"],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Wenn es brennt, rufe ich die Feuerwehr unter 112.",
+          "image": "1F9D1-200D-1F692",
+          "richtig": true,
+          "regel": "Die Feuerwehr erreichst du unter 112."
+        },
+        {
+          "text": "Wenn es brennt, verstecke ich mich unter dem Bett.",
+          "image": "1F525",
+          "richtig": false,
+          "regel": "Nie verstecken! Raus aus dem Raum, Tür zu und laut um Hilfe rufen."
+        },
+        {
+          "text": "Streichhölzer und Feuerzeuge sind kein Spielzeug.",
+          "image": "1F525",
+          "richtig": true,
+          "regel": "Mit Feuer spielen ist gefährlich. Nur Erwachsene zünden etwas an."
+        },
+        {
+          "text": "In die Steckdose darf ich etwas hineinstecken.",
+          "image": "1F50C",
+          "richtig": false,
+          "regel": "In die Steckdose steckst du nie etwas hinein. Strom ist gefährlich."
+        },
+        {
+          "text": "Tabletten esse ich nur, wenn ein Erwachsener sie mir gibt.",
+          "image": "1F48A",
+          "richtig": true,
+          "regel": "Tabletten sind keine Bonbons."
+        },
+        {
+          "text": "Eine heiße Herdplatte darf ich anfassen.",
+          "image": "1F373",
+          "richtig": false,
+          "regel": "Herdplatten können sehr heiß sein. Nicht anfassen!"
+        }
+      ],
+      "suchbilder": [
+        {
+          "id": "kueche",
+          "hintergrund": "kueche",
+          "stellen": [
+            {
+              "key": "herd",
+              "box": [0, 64, 102, 86],
+              "bilder": [
+                {
+                  "image": "1F373",
+                  "x": 15,
+                  "y": 71,
+                  "size": 70
+                }
+              ]
+            },
+            {
+              "key": "messer",
+              "box": [92, 76, 76, 72],
+              "bilder": [
+                {
+                  "image": "1F52A",
+                  "x": 100,
+                  "y": 82,
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "key": "putzmittel",
+              "box": [157, 72, 76, 76],
+              "bilder": [
+                {
+                  "image": "1F9F4",
+                  "x": 165,
+                  "y": 78,
+                  "size": 62
+                }
+              ]
+            },
+            {
+              "key": "apfel",
+              "box": [222, 80, 71, 68],
+              "bilder": [
+                {
+                  "image": "1F34E",
+                  "x": 230,
+                  "y": 86,
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "key": "tabletten",
+              "box": [280, 84, 64, 64],
+              "bilder": [
+                {
+                  "image": "1F48A",
+                  "x": 287,
+                  "y": 91,
+                  "size": 50
+                }
+              ]
+            },
+            {
+              "key": "kerze",
+              "box": [322, 12, 76, 68],
+              "bilder": [
+                {
+                  "image": "1F56F",
+                  "x": 332,
+                  "y": 16,
+                  "size": 58
+                }
+              ]
+            },
+            {
+              "key": "steckdose",
+              "box": [230, 20, 50, 50],
+              "form": "steckdose"
+            },
+            {
+              "key": "teddy",
+              "box": [22, 198, 86, 72],
+              "bilder": [
+                {
+                  "image": "1F9F8",
+                  "x": 31,
+                  "y": 203,
+                  "size": 70
+                }
+              ]
+            },
+            {
+              "key": "buch",
+              "box": [252, 204, 86, 66],
+              "bilder": [
+                {
+                  "image": "1F4D6",
+                  "x": 264,
+                  "y": 208,
+                  "size": 62
+                }
+              ]
+            }
+          ],
+          "fragen": [
+            {
+              "frage": "Was kann dich verbrennen?",
+              "richtig": ["herd", "kerze"],
+              "regel": "Herd und Kerze sind heiß. Nicht anfassen!"
+            },
+            {
+              "frage": "Was darfst du nie ohne Erwachsene in den Mund nehmen?",
+              "richtig": ["tabletten", "putzmittel"],
+              "regel": "Tabletten und Putzmittel können giftig sein. Erst einen Erwachsenen fragen."
+            },
+            {
+              "frage": "Womit kann man sich schneiden?",
+              "richtig": ["messer"],
+              "regel": "Ein Messer ist scharf. Vorsicht!"
+            },
+            {
+              "frage": "Wo darfst du nie etwas hineinstecken?",
+              "richtig": ["steckdose"],
+              "regel": "In der Steckdose ist Strom. Nie etwas hineinstecken!"
+            },
+            {
+              "frage": "Womit kannst du ohne Gefahr spielen?",
+              "richtig": ["teddy", "buch"],
+              "regel": "Teddy und Buch sind nicht gefährlich."
+            }
+          ]
+        }
+      ],
       "ablaeufe": []
     },
     {
@@ -2000,7 +2450,8 @@
       "paare": [],
       "ablaeufe": ["schmetterling-kurz", "blume"],
       "forscherauftrag": "Setzt euch zehn Minuten auf eine Wiese und zählt, wie viele verschiedene Tiere ihr seht.",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": []
     },
     {
       "id": "muell",
@@ -2086,7 +2537,8 @@
           "regel": "Aus Altpapier wird neues Papier gemacht."
         }
       ],
-      "ablaeufe": []
+      "ablaeufe": [],
+      "suchbilder": []
     },
     {
       "id": "tiere",
@@ -2169,7 +2621,8 @@
       ],
       "ablaeufe": ["huhn"],
       "forscherauftrag": "Besucht einen Bauernhof oder Tierpark: Welche Tiere geben uns etwas?",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": []
     },
     {
       "id": "hecke",
@@ -2214,7 +2667,207 @@
       ],
       "ablaeufe": ["kette-amsel", "kette-eule"],
       "forscherauftrag": "Beobachtet einen Vogel am Futterhaus oder in der Hecke: Was frisst er?",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": []
+    },
+    {
+      "id": "raum",
+      "title": "Von oben gesehen",
+      "icon": "🗺️",
+      "term": 2,
+      "lehrplan": "HSU 1/2 5.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 5.1 (Räume darstellen, einfache Pläne lesen, Raum-Lage-Begriffe)",
+      "forscherauftrag": "Stellt euch auf einen Stuhl und schaut auf den Tisch hinunter. Zeichnet zusammen, was ihr von oben seht.",
+      "erkennen": [],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "So sieht etwas von oben aus. Was ist das?",
+          "ziel": "oben-tisch",
+          "richtig": "tisch",
+          "ablenker": ["bett", "auto"]
+        },
+        {
+          "frage": "So sieht etwas von oben aus. Was ist das?",
+          "ziel": "oben-tasse",
+          "richtig": "tasse",
+          "ablenker": ["bett", "haus"]
+        },
+        {
+          "frage": "So sieht etwas von oben aus. Was ist das?",
+          "ziel": "oben-bett",
+          "richtig": "bett",
+          "ablenker": ["tisch", "tasse"]
+        },
+        {
+          "frage": "So sieht etwas von oben aus. Was ist das?",
+          "ziel": "oben-auto",
+          "richtig": "auto",
+          "ablenker": ["tisch", "baum"]
+        },
+        {
+          "frage": "So sieht etwas von oben aus. Was ist das?",
+          "ziel": "oben-baum",
+          "richtig": "baum",
+          "ablenker": ["tasse", "haus"]
+        },
+        {
+          "frage": "So sieht etwas von oben aus. Was ist das?",
+          "ziel": "oben-haus",
+          "richtig": "haus",
+          "ablenker": ["auto", "bett"]
+        }
+      ],
+      "merke": "ziel",
+      "aussagen": [],
+      "suchbilder": [
+        {
+          "id": "zimmer",
+          "hintergrund": "zimmer",
+          "stellen": [
+            {
+              "key": "bett",
+              "box": [20, 20, 90, 120],
+              "bilder": [
+                {
+                  "image": "fibel-oben-bett",
+                  "x": 10,
+                  "y": 20,
+                  "size": 110
+                }
+              ]
+            },
+            {
+              "key": "schrank",
+              "box": [230, 18, 150, 70],
+              "bilder": [
+                {
+                  "image": "fibel-oben-schrank",
+                  "x": 250,
+                  "y": 0,
+                  "size": 110
+                }
+              ]
+            },
+            {
+              "key": "tisch",
+              "box": [250, 130, 120, 110],
+              "bilder": [
+                {
+                  "image": "fibel-oben-tisch",
+                  "x": 255,
+                  "y": 130,
+                  "size": 110
+                }
+              ]
+            },
+            {
+              "key": "teppich",
+              "box": [115, 110, 120, 90],
+              "bilder": [
+                {
+                  "image": "fibel-oben-teppich",
+                  "x": 120,
+                  "y": 100,
+                  "size": 110
+                }
+              ]
+            },
+            {
+              "key": "tuer",
+              "box": [18, 170, 90, 85],
+              "bilder": [
+                {
+                  "image": "fibel-oben-tuer",
+                  "x": 20,
+                  "y": 170,
+                  "size": 84
+                }
+              ]
+            },
+            {
+              "key": "pflanze",
+              "box": [140, 20, 60, 60],
+              "bilder": [
+                {
+                  "image": "fibel-oben-baum",
+                  "x": 145,
+                  "y": 25,
+                  "size": 50
+                }
+              ]
+            }
+          ],
+          "fragen": [
+            {
+              "frage": "Das ist ein Zimmer von oben. Tippe auf das Bett.",
+              "richtig": ["bett"],
+              "regel": "Das Bett steht oben links in der Ecke."
+            },
+            {
+              "frage": "Das ist ein Zimmer von oben. Tippe auf den Tisch mit den Stühlen.",
+              "richtig": ["tisch"],
+              "regel": "Der Tisch steht unten rechts."
+            },
+            {
+              "frage": "Das ist ein Zimmer von oben. Wo ist die Tür?",
+              "richtig": ["tuer"],
+              "regel": "Die Tür ist unten links. Der Bogen zeigt, wie sie aufgeht."
+            },
+            {
+              "frage": "Das ist ein Zimmer von oben. Was liegt in der Mitte?",
+              "richtig": ["teppich"],
+              "regel": "In der Mitte liegt ein runder Teppich."
+            },
+            {
+              "frage": "Das ist ein Zimmer von oben. Tippe auf den Schrank.",
+              "richtig": ["schrank"],
+              "regel": "Der Schrank steht oben rechts an der Wand."
+            },
+            {
+              "frage": "Das ist ein Zimmer von oben. Tippe auf die Pflanze.",
+              "richtig": ["pflanze"],
+              "regel": "Von oben siehst du nur die Blätter der Pflanze."
+            }
+          ]
+        }
+      ],
+      "ablaeufe": []
+    },
+    {
+      "id": "bauen",
+      "title": "Bauen: Was steht sicher?",
+      "icon": "🧱",
+      "term": 2,
+      "lehrplan": "HSU 1/2 6.2",
+      "quelle": "LehrplanPLUS HSU 1/2, 6.2 (Standfestigkeit von Bauwerken: Grundfläche, Schwerpunkt, Höhe; bedeutsame Bauwerke)",
+      "forscherauftrag": "Baut zusammen zwei Türme aus Bausteinen: einen unten breit, einen unten schmal. Pustet vorsichtig dagegen. Welcher fällt zuerst?",
+      "erkennen": ["burg", "kirche", "bruecke", "haus", "kran", "schule"],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Ein Turm mit breitem Fuß steht sicherer.",
+          "image": "1F9F1",
+          "richtig": true,
+          "regel": "Unten breit, oben schmal: So steht ein Turm sicher."
+        },
+        {
+          "text": "Je höher ein Turm, desto weniger wackelt er.",
+          "image": "1F5FC",
+          "richtig": false,
+          "regel": "Hohe, dünne Türme wackeln leichter."
+        },
+        {
+          "text": "Die schwersten Steine legt man nach unten.",
+          "image": "1F9F1",
+          "richtig": true,
+          "regel": "Schwere Steine unten machen einen Turm sicherer."
+        }
+      ],
+      "suchbilder": [],
+      "turm": true,
+      "ablaeufe": []
     },
     {
       "id": "berufe",
@@ -2292,7 +2945,8 @@
       "ablaeufe": [],
       "merke": "richtig",
       "forscherauftrag": "Fragt Verwandte nach ihrem Beruf: Welche Werkzeuge brauchen sie?",
-      "aussagen": []
+      "aussagen": [],
+      "suchbilder": []
     },
     {
       "id": "wirklich",
@@ -2367,7 +3021,8 @@
           "regel": "Drachen gibt es nur in Märchen."
         }
       ],
-      "ablaeufe": []
+      "ablaeufe": [],
+      "suchbilder": []
     },
     {
       "id": "frueher",
@@ -2426,7 +3081,8 @@
           "regel": "Computer gibt es noch nicht so lange."
         }
       ],
-      "ablaeufe": []
+      "ablaeufe": [],
+      "suchbilder": []
     }
   ]
 }

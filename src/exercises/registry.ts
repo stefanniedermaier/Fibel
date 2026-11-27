@@ -7,6 +7,9 @@ import { hoerenBild } from './sache/hoeren-bild'
 import { paare } from './sache/paare'
 import { sortieren } from './sache/sortieren'
 import { stimmtDas } from './sache/stimmt-das'
+import { suchbild } from './sache/suchbild'
+import { turm } from './sache/turm'
+import { jahreskreis } from './sache/jahreskreis'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -98,6 +101,9 @@ register(hoerenBild)
 register(paare)
 register(sortieren)
 register(stimmtDas)
+register(suchbild)
+register(turm)
+register(jahreskreis)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

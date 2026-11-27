@@ -229,7 +229,20 @@ Session-Engine, Leitner, Sterne, Kronen und Statistik bleiben unverändert; die 
 
 **Abweichungen:** Die Mülltrennung kennt fünf Gruppen; Gelbe Tonne und Gelber Sack zählen als eine. Batterien gehören in keine Tonne und kommen deshalb nur als Aussage vor. „Früher und heute“ nutzt Paare statt Sortieren, weil vieles von früher (Pferde, Radio) auch heute noch da ist.
 
-- **Offen:** alle Begriffe, Merksätze und Aussagen auf dem Gerät anhören; Verkehrsregeln von einer Lehrkraft oder Verkehrserzieherin gegenlesen lassen; Testrunde mit dem Kind; Stufe 3 (Suchbilder, Draufsicht, Jahreskreis).
+**Stand (27.11.2026, Version 0.8.0):** Stufe 3 ist umgesetzt.
+
+- `sache.suchbild`: Szenen als SVG (400 × 270) mit tippbaren Stellen. Zu einer Frage können mehrere Stellen richtig sein. Es gibt drei Szenen:
+  - **Straße** (Sicher zu Fuß): Zebrastreifen, Ampel, hinter dem Bus, zwischen parkenden Autos, am Bordstein.
+  - **Küche** (neues Thema **Sicher zu Hause**, HSU 3.2): Herd, Kerze, Messer, Steckdose, Tabletten, Putzmittel; Teddy und Buch als ungefährliche Stellen. Dazu „Stimmt das?“ mit Notruf 112 und „nie verstecken, raus, Tür zu“.
+  - **Zimmer von oben** (neues Thema **Von oben gesehen**, HSU 5.1): einfacher Plan mit Bett, Schrank, Tisch, Teppich, Tür und Pflanze.
+- Draufsicht als Paare: Ein Gegenstand von oben (eigene Zeichnungen `oben-*`) wird dem Gegenstand von der Seite zugeordnet.
+- `sache.turm` (neues Thema **Bauen: Was steht sicher?**, HSU 6.2): Zwei Türme stehen zur Wahl, die Paare sind unten breit gegen unten schmal, gerade gegen schief, niedrig gegen hoch und Stein gegen Kugel. Dazu kommen Bauwerke erkennen und „Stimmt das?“.
+- `sache.jahreskreis`: Januar oben, die Monate außen, die Jahreszeiten innen. Es wird nur der Ring angetippt, nach dem gefragt ist. Bei „Zeit und Jahreszeiten“ geht es um vorher und nachher, die Jahreszeit eines Monats und das Finden eines Monats; bei „Feste“ um Feste mit festem Datum und ihren Monat.
+- Insgesamt 19 Themen. `data:check` prüft Suchbilder (Stellen im Bild, richtige Stellen vorhanden, Bilder vorhanden).
+
+**Abweichungen:** Die Jahreszeiten folgen den Monaten (Frühling März bis Mai usw.), nicht den astronomischen Daten um den 21. Die Draufsicht ist eine Zuordnung und ein Plan zum Antippen; eigene Pläne zeichnen bleibt im Unterricht. „Gefahren im Haushalt“ steht als eigenes Thema im 2. Halbjahr.
+
+- **Offen:** alle Begriffe, Merksätze und Aussagen auf dem Gerät anhören; Verkehrs- und Brandschutzregeln von einer Lehrkraft oder Verkehrserzieherin gegenlesen lassen; Testrunde mit dem Kind, besonders: Sind die Suchbilder auf dem Handy groß genug?
 
 **Zeitlich:** Stufe 1 lässt sich noch im laufenden Schuljahr nutzen; die Themen ab Frühling (Wiese, Tiere, Hecke, Berufe) liegen dann genau im Zeitraum der Schule. Das Verkehrsthema gehört an den Schuljahresanfang und kommt deshalb mit Stufe 2 rechtzeitig vor September 2027. Ab Klasse 2 läuft der Bereich weiter ([klasse-2.md](klasse-2.md), Abschnitt 10).
 

@@ -238,6 +238,13 @@
     "term": 1
   },
   {
+    "id": "k1.sache.zuhause",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Sicher zu Hause",
+    "term": 2
+  },
+  {
     "id": "k1.sache.wiese",
     "grade": 1,
     "topic": "sache",
@@ -263,6 +270,20 @@
     "grade": 1,
     "topic": "sache",
     "title": "In der Hecke: Wer frisst wen?",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.raum",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Von oben gesehen",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.bauen",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Bauen: Was steht sicher?",
     "term": 2
   },
   {
