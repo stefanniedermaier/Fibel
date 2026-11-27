@@ -82,6 +82,9 @@ import { uhrLesen } from './uhr/lesen'
 import { uhrStellen } from './uhr/stellen'
 import { dialog, hoeren, lesen } from './englisch'
 import { ablesen } from './messen/groessen'
+import { netz } from './formen/netz'
+import { gebaeude } from './formen/gebaeude'
+import { winkel } from './formen/winkel'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -181,6 +184,9 @@ register(hoeren)
 register(lesen)
 register(dialog)
 register(ablesen)
+register(netz)
+register(gebaeude)
+register(winkel)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

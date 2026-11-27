@@ -122,3 +122,42 @@ describe('Messen Klasse 3', () => {
     expect(t.data.correctKey).toBe('4 cm 7 mm')
   })
 })
+
+describe('Formen Klasse 3', () => {
+  it('Würfelnetze: genau die 11 Netze lassen sich falten, Gegenüber stimmt', async () => {
+    const { NETZE, falten, netz } = await import('@/exercises/formen/netz')
+    const ok = Object.keys(NETZE).filter((k) => falten(NETZE[k]!) !== undefined)
+    expect(ok).toEqual(['n1', 'n2', 'n3', 'n4', 'n5', 'n6', 'n7', 'n8', 'n9', 'n10', 'n11'])
+    // In the cross-like net the square left of the row lies opposite the third one.
+    const t = netz.generate(ctx, { mode: 'gegenueber' }, 'formen.netz:gegenueber:n5', createRng(3))
+    expect(t.data.choices.map((c) => c.key)).toContain(t.data.correctKey)
+    expect(t.data.correctKey).not.toBe(t.data.marked)
+    const f = falten(['.#..', '####', '.#..'])!
+    expect(f.get('1,0')! >> 1).toBe(f.get('1,2')! >> 1)
+    expect(f.get('0,1')! >> 1).toBe(f.get('2,1')! >> 1)
+  })
+
+  it('Würfelgebäude: Anzahl und Baupläne', async () => {
+    const { GEBAEUDE, anzahl, gebaeude } = await import('@/exercises/formen/gebaeude')
+    expect(anzahl(GEBAEUDE.g5!)).toBe(8)
+    for (const mode of ['zaehlen', 'bauplan'] as const)
+      for (const key of gebaeude.items(ctx, { mode })) {
+        const t = gebaeude.generate(ctx, { mode }, key, createRng(4))
+        expect(t.data.choices).toHaveLength(3)
+        const looks = t.data.choices.map((c) => c.label ?? JSON.stringify(c.plan))
+        expect(new Set(looks).size).toBe(3)
+      }
+  })
+
+  it('Rechter Winkel: genau ein rechter Winkel bzw. eine Figur mit rechten Winkeln', async () => {
+    const { winkel } = await import('@/exercises/formen/winkel')
+    for (const mode of ['winkel', 'figur'] as const)
+      for (const key of winkel.items(ctx, { mode })) {
+        const t = winkel.generate(ctx, { mode }, key, createRng(5))
+        expect(t.data.choices.filter((c) => c.key === t.data.correctKey)).toHaveLength(1)
+        for (const c of t.data.choices)
+          for (const [x, y] of c.points)
+            expect(Math.max(Math.abs(x - 50), Math.abs(y - 50))).toBeLessThanOrEqual(60)
+      }
+  })
+})

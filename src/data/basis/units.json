@@ -1076,5 +1076,40 @@
     "topic": "messen",
     "title": "Zeit: Sekunden, Minuten, Stunden, Tage",
     "term": 2
+  },
+  {
+    "id": "k3.formen.winkel",
+    "grade": 3,
+    "topic": "formen",
+    "title": "Rechter Winkel bei Rechteck und Quadrat",
+    "term": 1
+  },
+  {
+    "id": "k3.formen.wuerfel-quader",
+    "grade": 3,
+    "topic": "formen",
+    "title": "Würfel und Quader: Ecken, Kanten, Flächen",
+    "term": 1
+  },
+  {
+    "id": "k3.formen.netze",
+    "grade": 3,
+    "topic": "formen",
+    "title": "Würfelnetze",
+    "term": 2
+  },
+  {
+    "id": "k3.formen.gebaeude",
+    "grade": 3,
+    "topic": "formen",
+    "title": "Würfelgebäude und Baupläne",
+    "term": 2
+  },
+  {
+    "id": "k3.formen.symmetrie",
+    "grade": 3,
+    "topic": "formen",
+    "title": "Achsensymmetrie und Spiegelbild",
+    "term": 1
   }
 ]

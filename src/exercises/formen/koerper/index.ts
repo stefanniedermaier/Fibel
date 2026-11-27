@@ -28,9 +28,41 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 /** "der Würfel" → "ein Würfel", "die Kugel" → "eine Kugel". */
 const indef = (name: string) => name.replace(/^der /, 'ein ').replace(/^die /, 'eine ')
 
+export type Zaehlen = 'ecken' | 'kanten' | 'flaechen'
+
 export interface KoerperParams {
-  mode: 'name' | 'rollt' | 'ding' | 'ecken'
+  mode: 'name' | 'rollt' | 'ding' | Zaehlen | 'wuerfel-quader'
+  /** Only these solids (e.g. Würfel and Quader in grade 3). */
+  koerper?: string[]
 }
+
+const ZAEHLEN: Record<Zaehlen, { frage: string; hilfe: string }> = {
+  ecken: { frage: 'Ecken', hilfe: 'Zähle auch die Ecken hinten, die man nicht sieht.' },
+  kanten: {
+    frage: 'Kanten',
+    hilfe: 'Zähle oben, unten und an der Seite: Die Kanten hinten sieht man nicht.',
+  },
+  flaechen: {
+    frage: 'Flächen',
+    hilfe: 'Denk an einen Spielwürfel: Wie viele Seiten mit Augen hat er?',
+  },
+}
+
+/** F3-2: Würfel or Quader? Statements that fit one of them or both. */
+export const WUERFEL_QUADER = [
+  { id: 'quadrate', text: 'Alle Flächen sind gleich große Quadrate.', richtig: 'wuerfel' },
+  { id: 'kanten-gleich', text: 'Alle Kanten sind gleich lang.', richtig: 'wuerfel' },
+  {
+    id: 'rechtecke',
+    text: 'Manche Flächen sind Rechtecke, die keine Quadrate sind.',
+    richtig: 'quader',
+  },
+  { id: 'kanten-ungleich', text: 'Die Kanten sind verschieden lang.', richtig: 'quader' },
+  { id: 'ecken', text: 'Der Körper hat acht Ecken.', richtig: 'beide' },
+  { id: 'kanten', text: 'Der Körper hat zwölf Kanten.', richtig: 'beide' },
+  { id: 'flaechen', text: 'Der Körper hat sechs Flächen.', richtig: 'beide' },
+  { id: 'winkel', text: 'An jeder Ecke treffen sich rechte Winkel.', richtig: 'beide' },
+] as const
 
 export const koerper: ExerciseModule<KoerperParams, SacheData> = {
   id: 'formen.koerper',
@@ -38,7 +70,10 @@ export const koerper: ExerciseModule<KoerperParams, SacheData> = {
 
   items(_ctx, params) {
     if (params.mode === 'ding') return DINGE.map((d) => `formen.koerper:ding:${d.id}`)
-    const list = params.mode === 'ecken' ? KOERPER.filter((k) => k.ecken) : KOERPER
+    if (params.mode === 'wuerfel-quader')
+      return WUERFEL_QUADER.map((w) => `formen.koerper:wuerfel-quader:${w.id}`)
+    const own = KOERPER.filter((k) => !params.koerper || params.koerper.includes(k.id))
+    const list = params.mode in ZAEHLEN ? own.filter((k) => k.ecken) : own
     return list.map((k) => `formen.koerper:${params.mode}:${k.id}`)
   },
 
@@ -60,6 +95,27 @@ export const koerper: ExerciseModule<KoerperParams, SacheData> = {
           prompt: d.image,
           correctKey: right.id,
           choices: shuffle([right, ...others], rng).map((k) => ({ key: k.id, image: k.image })),
+        },
+      }
+    }
+    if (params.mode === 'wuerfel-quader') {
+      const w = WUERFEL_QUADER.find((x) => x.id === id)!
+      const said = {
+        wuerfel: 'Das passt nur zum Würfel.',
+        quader: 'Das passt nur zum Quader.',
+        beide: 'Das passt zu beiden.',
+      }
+      return {
+        instruction: `${w.text} Passt das zum Würfel, zum Quader oder zu beiden?`,
+        hint: 'Ein Würfel ist ein besonderer Quader: Alle seine Flächen sind Quadrate.',
+        solution: said[w.richtig],
+        data: {
+          correctKey: w.richtig,
+          choices: [
+            { key: 'wuerfel', image: 'fibel-koerper-wuerfel', label: 'Würfel' },
+            { key: 'quader', image: 'fibel-koerper-quader', label: 'Quader' },
+            { key: 'beide', label: 'beide' },
+          ],
         },
       }
     }
@@ -98,14 +154,17 @@ export const koerper: ExerciseModule<KoerperParams, SacheData> = {
         },
       }
     }
-    const n = k.ecken!
+    const what = params.mode as Zaehlen
+    const n = k[what]!
     const wrong = shuffle(
-      [n - 2, n + 2, n - 1, n + 4].filter((x) => x > 0),
+      [n - 2, n + 2, n - 1, n + 4, k.ecken!, k.kanten!, k.flaechen!].filter(
+        (x, i, all) => x > 0 && x !== n && all.indexOf(x) === i,
+      ),
       rng,
     ).slice(0, 2)
     return {
-      instruction: `Wie viele Ecken hat ${k.name}?`,
-      hint: 'Zähle auch die Ecken hinten, die man nicht sieht.',
+      instruction: `Wie viele ${ZAEHLEN[what].frage} hat ${k.name}?`,
+      hint: ZAEHLEN[what].hilfe,
       solution: `${cap(k.name)} hat ${numberWord(n)} Ecken, ${numberWord(k.kanten!)} Kanten und ${numberWord(k.flaechen!)} Flächen.`,
       data: {
         prompt: k.image,

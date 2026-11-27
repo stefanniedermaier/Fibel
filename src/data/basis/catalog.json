@@ -3741,5 +3741,150 @@
       "art": "zeit"
     },
     "title": "1 h 25 min = 85 min"
+  },
+  {
+    "id": "k3.formen.winkel.winkel",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k3.formen.winkel",
+    "exercise": "formen.winkel",
+    "params": {
+      "mode": "winkel"
+    },
+    "title": "Wo ist der rechte Winkel?"
+  },
+  {
+    "id": "k3.formen.winkel.figur",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k3.formen.winkel",
+    "exercise": "formen.winkel",
+    "params": {
+      "mode": "figur"
+    },
+    "title": "Nur rechte Winkel"
+  },
+  {
+    "id": "k3.formen.wuerfel-quader.ecken",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.wuerfel-quader",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "ecken",
+      "koerper": ["wuerfel", "quader", "pyramide"]
+    },
+    "title": "Ecken zählen"
+  },
+  {
+    "id": "k3.formen.wuerfel-quader.kanten",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.wuerfel-quader",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "kanten",
+      "koerper": ["wuerfel", "quader", "pyramide"]
+    },
+    "title": "Kanten zählen"
+  },
+  {
+    "id": "k3.formen.wuerfel-quader.flaechen",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.wuerfel-quader",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "flaechen",
+      "koerper": ["wuerfel", "quader", "pyramide"]
+    },
+    "title": "Flächen zählen"
+  },
+  {
+    "id": "k3.formen.wuerfel-quader.vergleich",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.wuerfel-quader",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "wuerfel-quader"
+    },
+    "title": "Würfel oder Quader?"
+  },
+  {
+    "id": "k3.formen.netze.ist-netz",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.netze",
+    "exercise": "formen.netz",
+    "params": {
+      "mode": "ist-netz"
+    },
+    "title": "Ist das ein Würfelnetz?"
+  },
+  {
+    "id": "k3.formen.netze.gegenueber",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.netze",
+    "exercise": "formen.netz",
+    "params": {
+      "mode": "gegenueber"
+    },
+    "title": "Was liegt gegenüber?"
+  },
+  {
+    "id": "k3.formen.gebaeude.zaehlen",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.gebaeude",
+    "exercise": "formen.gebaeude",
+    "params": {
+      "mode": "zaehlen"
+    },
+    "title": "Würfel zählen"
+  },
+  {
+    "id": "k3.formen.gebaeude.bauplan",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k3.formen.gebaeude",
+    "exercise": "formen.gebaeude",
+    "params": {
+      "mode": "bauplan"
+    },
+    "title": "Welcher Bauplan passt?"
+  },
+  {
+    "id": "k3.formen.symmetrie.erkennen",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.symmetrie",
+    "unit": "k3.formen.symmetrie",
+    "exercise": "formen.symmetrie",
+    "params": {},
+    "title": "Ist die Figur symmetrisch?"
+  },
+  {
+    "id": "k3.formen.symmetrie.ergaenzen",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.symmetrie",
+    "unit": "k3.formen.symmetrie",
+    "exercise": "formen.symmetrie",
+    "params": {
+      "mode": "ergaenzen"
+    },
+    "title": "Spiegelbild ergänzen"
   }
 ]
