@@ -63,3 +63,12 @@ describe('Englisch', () => {
     expect(t.caption).not.toContain('dog')
   })
 })
+
+describe('Rechenzeichen beim Vorlesen', () => {
+  it('liest mal, geteilt durch und minus', async () => {
+    const { spokenSigns } = await import('@/core/speech')
+    expect(spokenSigns('(34 + 26) : 2 = 30')).toBe('34 + 26 geteilt durch 2 = 30')
+    expect(spokenSigns('7 · 8 − 6')).toBe('7 mal 8 minus 6')
+    expect(spokenSigns('Hör zu: 9:05')).toBe('Hör zu: 9:05')
+  })
+})

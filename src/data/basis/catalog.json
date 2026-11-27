@@ -3886,5 +3886,98 @@
       "mode": "ergaenzen"
     },
     "title": "Spiegelbild ergänzen"
+  },
+  {
+    "id": "k3.uhr.zeitspannen.spaeter",
+    "grade": 3,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k3.uhr.zeitspannen",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "spaeter",
+      "minuten": true
+    },
+    "title": "Wie spät ist es dann?"
+  },
+  {
+    "id": "k3.uhr.zeitspannen.frueher",
+    "grade": 3,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k3.uhr.zeitspannen",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "frueher",
+      "minuten": true
+    },
+    "title": "Wie spät war es?"
+  },
+  {
+    "id": "k3.uhr.zeitspannen.dauer",
+    "grade": 3,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k3.uhr.zeitspannen",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "dauer",
+      "minuten": true
+    },
+    "title": "Wie lange dauert es?"
+  },
+  {
+    "id": "k3.rechnen.sachaufgaben.zweischritt",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k3.rechnen.sachaufgaben",
+    "exercise": "rechnen.sachaufgaben",
+    "params": {
+      "mode": "zweischritt"
+    },
+    "title": "Zwei Rechenschritte"
+  },
+  {
+    "id": "k3.rechnen.daten.balken",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k3.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "zaehlen",
+      "display": "balken",
+      "faktor": 10
+    },
+    "title": "Diagramm ablesen"
+  },
+  {
+    "id": "k3.rechnen.daten.unterschied",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k3.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "unterschied",
+      "display": "balken",
+      "faktor": 10
+    },
+    "title": "Wie viel mehr?"
+  },
+  {
+    "id": "k3.rechnen.daten.tabelle",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k3.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "unterschied",
+      "display": "tabelle",
+      "faktor": 10
+    },
+    "title": "Tabelle lesen"
   }
 ]

@@ -32,6 +32,14 @@ export function segments(text: string): Segment[] {
   return out
 }
 
+/** Arithmetic signs as words, so every voice reads "7 · 8" as "7 mal 8". */
+export const spokenSigns = (text: string) =>
+  text
+    .replace(/ · /g, ' mal ')
+    .replace(/ : /g, ' geteilt durch ')
+    .replace(/ − /g, ' minus ')
+    .replace(/[()]/g, '')
+
 /** The text as shown: English markers removed ("Hör zu: dog."). */
 export const shownText = (text: string) => text.replace(/\[\[en:(.+?)\]\]/g, '$1')
 
@@ -46,7 +54,7 @@ export async function say(text: string, settings: VoiceSettings, maxMs = 8000): 
   const run = async () => {
     for (const part of segments(text)) {
       const en = part.lang === 'en'
-      await speak(part.text, {
+      await speak(en ? part.text : spokenSigns(part.text), {
         voice: en ? english : german,
         lang: en ? 'en-GB' : 'de-DE',
         // English words a little slower: the children hear them for the first time.

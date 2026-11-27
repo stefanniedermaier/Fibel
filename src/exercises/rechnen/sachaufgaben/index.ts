@@ -4,6 +4,7 @@
  * mal and geteilt. Mode `pruefen`: "Kann das stimmen?" – is the given answer plausible?
  */
 import aufgaben from '@/data/basis/klasse-2/sachaufgaben.json'
+import zweischritt from '@/data/basis/klasse-3/sachaufgaben.json'
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemPart } from '../shared'
@@ -28,8 +29,32 @@ export function rechne(op: SachOp, a: number, b: number): number {
 
 const shown = (op: SachOp) => (op === '-' ? '−' : op)
 
+/** R3-11: two steps, "a op b op c", worked out from left to right. */
+export interface Zweischritt {
+  id: string
+  image: string
+  text: string
+  ops: [SachOp, SachOp]
+  a: number
+  b: number
+  c: number
+}
+
+export const ZWEISCHRITT: readonly Zweischritt[] = zweischritt as Zweischritt[]
+
+/** The term as written in grade 3: brackets where Punkt vor Strich would change it. */
+export function term(ops: readonly [SachOp, SachOp], a: number, b: number, c: number): string {
+  const first = `${a} ${shown(ops[0])} ${b}`
+  const strich = ops[0] === '+' || ops[0] === '-'
+  const punkt = ops[1] === '·' || ops[1] === ':'
+  return `${strich && punkt ? `(${first})` : first} ${shown(ops[1])} ${c}`
+}
+
+const zweiErgebnis = (ops: readonly [SachOp, SachOp], a: number, b: number, c: number) =>
+  rechne(ops[1], rechne(ops[0], a, b), c)
+
 export interface SachaufgabenParams {
-  mode: 'rechnen' | 'pruefen'
+  mode: 'rechnen' | 'pruefen' | 'zweischritt'
 }
 
 export interface SachaufgabenData {
@@ -49,11 +74,50 @@ export const sachaufgaben: ExerciseModule<SachaufgabenParams, SachaufgabenData> 
   topic: 'rechnen',
 
   items(_ctx, params) {
+    if (params.mode === 'zweischritt')
+      return ZWEISCHRITT.map((s) => `rechnen.sachaufgaben:zweischritt:${s.id}`)
     return SACHAUFGABEN.map((s) => `rechnen.sachaufgaben:${params.mode}:${s.id}`)
   },
 
   generate(_ctx, params, itemKey, rng) {
     const id = itemPart(itemKey).split(':')[1]
+    if (params.mode === 'zweischritt') {
+      const z = ZWEISCHRITT.find((x) => x.id === id)
+      if (!z) throw new Error(`Unbekannte Sachaufgabe: ${itemKey}`)
+      const text = z.text
+        .replace('{a}', String(z.a))
+        .replace('{b}', String(z.b))
+        .replace('{c}', String(z.c))
+      const right = term(z.ops, z.a, z.b, z.c)
+      const ok = (r: number) => Number.isInteger(r) && r >= 0
+      const ops: SachOp[] = ['+', '-', '·', ':']
+      const wrong = shuffle(
+        [
+          ...ops.map((o) => [o, z.ops[1]] as [SachOp, SachOp]),
+          ...ops.map((o) => [z.ops[0], o] as [SachOp, SachOp]),
+        ]
+          .filter((o) => ok(rechne(o[0], z.a, z.b)) && ok(zweiErgebnis(o, z.a, z.b, z.c)))
+          .map((o) => term(o, z.a, z.b, z.c))
+          .filter((t, i, all) => t !== right && all.indexOf(t) === i),
+        rng,
+      ).slice(0, 2)
+      const result = zweiErgebnis(z.ops, z.a, z.b, z.c)
+      const zwischen = rechne(z.ops[0], z.a, z.b)
+      return {
+        instruction: text,
+        caption: 'Lies die Aufgabe. Welche Rechnung passt? Es sind zwei Schritte.',
+        hint: 'Was rechnest du zuerst? Was passiert danach?',
+        solution: `Erst ${z.a} ${shown(z.ops[0])} ${z.b} = ${zwischen}, dann ${zwischen} ${shown(z.ops[1])} ${z.c} = ${result}.`,
+        data: {
+          mode: 'rechnen',
+          image: z.image,
+          text,
+          result,
+          correctKey: right,
+          choices: shuffle([right, ...wrong], rng).map((l) => ({ key: l, label: l })),
+        },
+      }
+    }
     const s = SACHAUFGABEN.find((x) => x.id === id)
     if (!s) throw new Error(`Unbekannte Sachaufgabe: ${itemKey}`)
     const text = s.text.replace('{a}', String(s.a)).replace('{b}', String(s.b))

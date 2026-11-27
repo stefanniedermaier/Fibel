@@ -1111,5 +1111,26 @@
     "topic": "formen",
     "title": "Achsensymmetrie und Spiegelbild",
     "term": 1
+  },
+  {
+    "id": "k3.uhr.zeitspannen",
+    "grade": 3,
+    "topic": "uhr",
+    "title": "Zeitspannen mit Minuten",
+    "term": 1
+  },
+  {
+    "id": "k3.rechnen.sachaufgaben",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Sachaufgaben mit zwei Schritten",
+    "term": 1
+  },
+  {
+    "id": "k3.rechnen.daten",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Tabellen und Säulendiagramme",
+    "term": 2
   }
 ]

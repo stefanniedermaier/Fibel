@@ -22,10 +22,14 @@ export interface DatenParams {
   mode: 'zaehlen' | 'meiste' | 'unterschied'
   /** Grade 2 (R2-15): also a bar chart or a table with numbers. */
   display?: 'striche' | 'balken' | 'tabelle'
+  /** Grade 3 (R3-12): one bar step stands for this many (e.g. 10 → up to 150). */
+  faktor?: number
 }
 
 export interface DatenData {
   display: 'striche' | 'balken' | 'tabelle'
+  /** One step of the bar chart or the table value stands for this many (default 1). */
+  faktor?: number
   rows: { key: string; image: string; count: number }[]
   /** The row asked about ("zaehlen"), highlighted. */
   asked?: string
@@ -58,6 +62,9 @@ export const daten: ExerciseModule<DatenParams, DatenData> = {
   generate(ctx, params, itemKey, rng) {
     const max = maxCount(ctx)
     const display = params.display ?? 'striche'
+    const f = params.faktor ?? 1
+    const v = (n: number) => n * f
+    const num = (n: number) => ({ key: String(v(n)), label: String(v(n)) })
     const look = display === 'striche' ? 'Striche' : display === 'balken' ? 'Balken' : 'Zahlen'
     if (params.mode === 'unterschied') {
       let r = rows(rng, max)
@@ -73,12 +80,13 @@ export const daten: ExerciseModule<DatenParams, DatenData> = {
       return {
         instruction: `Schau dir die ${look} an. Wie viele ${x.name} sind es mehr als ${y.name}?`,
         hint: `Zähle die ${x.name} und die ${y.name}. Dann rechne minus.`,
-        solution: `${x.count} minus ${y.count} ist ${d}. Es sind ${d} ${x.name} mehr.`,
+        solution: `${v(x.count)} minus ${v(y.count)} ist ${v(d)}. Es sind ${v(d)} ${x.name} mehr.`,
         data: {
           display,
+          faktor: f,
           rows: r.map((z) => ({ key: z.id, image: z.image, count: z.count })),
-          correctKey: String(d),
-          choices: shuffle([d, ...others], rng).map((v) => ({ key: String(v), label: String(v) })),
+          correctKey: String(v(d)),
+          choices: shuffle([d, ...others], rng).map(num),
         },
       }
     }
@@ -92,14 +100,18 @@ export const daten: ExerciseModule<DatenParams, DatenData> = {
       ).slice(0, 2)
       return {
         instruction: `Schau dir die ${look} an. Wie viele ${asked.name} sind es?`,
-        hint: 'Ein Bündel mit Querstrich sind fünf.',
-        solution: `Es sind ${n} ${asked.name}.`,
+        hint:
+          f > 1
+            ? `Schau an der Skala: Jeder Strich steht für ${f}.`
+            : 'Ein Bündel mit Querstrich sind fünf.',
+        solution: `Es sind ${v(n)} ${asked.name}.`,
         data: {
           display,
+          faktor: f,
           rows: shuffle(r, rng).map((x) => ({ key: x.id, image: x.image, count: x.count })),
           asked: asked.id,
-          correctKey: String(n),
-          choices: shuffle([n, ...others], rng).map((v) => ({ key: String(v), label: String(v) })),
+          correctKey: String(v(n)),
+          choices: shuffle([n, ...others], rng).map(num),
         },
       }
     }
@@ -111,9 +123,10 @@ export const daten: ExerciseModule<DatenParams, DatenData> = {
     return {
       instruction: `Schau dir die ${look} an. Wovon gibt es am meisten?`,
       hint: 'Welche Reihe hat die meisten Striche?',
-      solution: `Am meisten gibt es ${most.name}: ${most.count}.`,
+      solution: `Am meisten gibt es ${most.name}: ${v(most.count)}.`,
       data: {
         display,
+        faktor: f,
         rows: r.map((x) => ({ key: x.id, image: x.image, count: x.count })),
         correctKey: most.id,
         choices: r.map((x) => ({ key: x.id, image: x.image })),

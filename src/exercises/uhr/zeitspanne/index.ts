@@ -13,6 +13,100 @@ import UhrWahlTask, { type UhrWahlData } from '../digital/UhrWahlTask.vue'
 
 export interface ZeitspanneParams {
   mode: 'spaeter' | 'frueher' | 'dauer'
+  /** Grade 3 (U3-1): digital times in 5-minute steps, durations in minutes, over full hours. */
+  minuten?: boolean
+}
+
+/** U3-1: start times of the day and durations in minutes. */
+const STARTS = [
+  '7:45',
+  '8:20',
+  '9:35',
+  '10:50',
+  '11:15',
+  '13:40',
+  '14:55',
+  '16:25',
+  '17:10',
+  '18:35',
+]
+const DAUERN = [15, 25, 40, 45, 50, 75, 90, 105]
+
+const toMin = (t: string) => {
+  const [h, m] = t.split(':').map(Number) as [number, number]
+  return h * 60 + m
+}
+/** "9:05" – 24-hour digital time. */
+export const uhrzeit = (min: number) => {
+  const t = ((min % 1440) + 1440) % 1440
+  return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}`
+}
+/** "1 h 15 min", "40 min". */
+export const dauerKurz = (min: number) =>
+  min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? ` ${min % 60} min` : ''}` : `${min} min`
+/** Spoken: "9 Uhr 5", "1 Stunde und 15 Minuten". */
+const sagZeit = (min: number) => {
+  const [h, m] = uhrzeit(min).split(':').map(Number) as [number, number]
+  return m ? `${h} Uhr ${m}` : `${h} Uhr`
+}
+const sagDauer = (min: number) => (min < 60 ? `${min} Minuten` : dauerText(min))
+
+function minutenAufgabe(
+  mode: ZeitspanneParams['mode'],
+  start: number,
+  d: number,
+  rng: () => number,
+) {
+  if (mode === 'dauer') {
+    const end = start + d
+    const wrong = shuffle(
+      [d + 10, d - 10, d + 60, d - 60, d + 5].filter((x) => x > 0 && x !== d),
+      rng,
+    ).slice(0, 2)
+    return {
+      instruction: `Es fängt um ${sagZeit(start)} an und hört um ${sagZeit(end)} auf. Wie lange dauert es?`,
+      caption: 'Wie lange dauert es?',
+      hint: 'Rechne erst bis zur vollen Stunde, dann weiter bis zum Ende.',
+      solution: `Es dauert ${sagDauer(d)}.`,
+      data: {
+        clocks: [
+          { total: start % 720, label: `Anfang ${uhrzeit(start)}` },
+          { total: end % 720, label: `Ende ${uhrzeit(end)}` },
+        ],
+        correctKey: dauerKurz(d),
+        choices: shuffle([d, ...wrong], rng).map((x) => ({
+          key: dauerKurz(x),
+          label: dauerKurz(x),
+        })),
+      },
+    }
+  }
+  const sign = mode === 'spaeter' ? 1 : -1
+  const end = start + sign * d
+  const right = uhrzeit(end)
+  // Typical mistakes: the hour not carried, ten minutes off, the wrong direction.
+  const wrong = shuffle(
+    [end - sign * 60, end + 10, end - 10, start - sign * d]
+      .map(uhrzeit)
+      .filter((x, i, all) => x !== right && all.indexOf(x) === i),
+    rng,
+  ).slice(0, 2)
+  const how =
+    mode === 'spaeter'
+      ? `Wie spät ist es ${sagDauer(d)} später?`
+      : `Wie spät war es ${sagDauer(d)} früher?`
+  return {
+    instruction: `Es ist ${sagZeit(start)}. ${how}`,
+    caption: how,
+    hint: 'Rechne in Schritten: erst bis zur vollen Stunde, dann den Rest.',
+    solution: `Es ${mode === 'spaeter' ? 'ist dann' : 'war'} ${sagZeit(end)}.`,
+    data: {
+      prompt: uhrzeit(start),
+      clocks: [],
+      correctKey: right,
+      choices: shuffle([right, ...wrong], rng).map((k) => ({ key: k, label: k })),
+    },
+  }
 }
 
 /** "2 Stunden", "eine halbe Stunde", "1 Stunde und 30 Minuten" (in minutes). */
@@ -32,6 +126,8 @@ export const zeitspanne: ExerciseModule<ZeitspanneParams, UhrWahlData> = {
   topic: 'uhr',
 
   items(_ctx, params) {
+    if (params.minuten)
+      return STARTS.flatMap((t) => DAUERN.map((d) => `uhr.zeitspanne:${params.mode}:m${t}-${d}`))
     const keys: string[] = []
     for (let h = 1; h <= 12; h++)
       for (const m of [0, 30]) {
@@ -45,6 +141,11 @@ export const zeitspanne: ExerciseModule<ZeitspanneParams, UhrWahlData> = {
   },
 
   generate(_ctx, params, itemKey, rng) {
+    const part = itemPart(itemKey).split(':').slice(1).join(':')
+    if (part.startsWith('m')) {
+      const [t, d] = part.slice(1).split('-') as [string, string]
+      return minutenAufgabe(params.mode, toMin(t), Number(d), rng)
+    }
     const [h, m, d] = itemPart(itemKey).split(':')[1]!.split('-').map(Number) as [
       number,
       number,

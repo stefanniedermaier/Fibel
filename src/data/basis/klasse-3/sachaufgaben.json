@@ -1,0 +1,110 @@
+[
+  {
+    "id": "kino",
+    "image": "1F3AC",
+    "text": "Eine Kinokarte kostet {a} €. Familie Huber kauft {b} Karten und zahlt noch {c} € für Popcorn. Wie viel bezahlt die Familie?",
+    "ops": ["·", "+"],
+    "a": 8,
+    "b": 4,
+    "c": 9
+  },
+  {
+    "id": "bus3",
+    "image": "1F68C",
+    "text": "Im Bus sitzen {a} Leute. An der Haltestelle steigen {b} aus und {c} ein. Wie viele sitzen jetzt im Bus?",
+    "ops": ["-", "+"],
+    "a": 46,
+    "b": 18,
+    "c": 25
+  },
+  {
+    "id": "eier",
+    "image": "1F95A",
+    "text": "Ein Bauer sammelt am Montag {a} Eier und am Dienstag {b} Eier. Er verkauft {c} Eier. Wie viele Eier bleiben übrig?",
+    "ops": ["+", "-"],
+    "a": 135,
+    "b": 128,
+    "c": 190
+  },
+  {
+    "id": "aepfel",
+    "image": "1F34E",
+    "text": "In einer Kiste liegen {a} Reihen mit je {b} Äpfeln. {c} Äpfel sind faul. Wie viele gute Äpfel sind es?",
+    "ops": ["·", "-"],
+    "a": 6,
+    "b": 8,
+    "c": 5
+  },
+  {
+    "id": "taschengeld",
+    "image": "1F4B0",
+    "text": "Lena hat {a} € gespart. Sie bekommt {b} € Taschengeld und kauft ein Buch für {c} €. Wie viel Geld hat sie jetzt?",
+    "ops": ["+", "-"],
+    "a": 27,
+    "b": 10,
+    "c": 14
+  },
+  {
+    "id": "klassen",
+    "image": "1F3EB",
+    "text": "Eine Schule hat {a} Klassen mit je {b} Kindern. Dazu kommen {c} Kinder aus der Vorschule. Wie viele Kinder sind es zusammen?",
+    "ops": ["·", "+"],
+    "a": 8,
+    "b": 24,
+    "c": 18
+  },
+  {
+    "id": "stifte",
+    "image": "270F",
+    "text": "Frau Maier kauft {a} Packungen mit je {b} Stiften. Sie verteilt die Stifte gerecht an {c} Gruppen. Wie viele Stifte bekommt jede Gruppe?",
+    "ops": ["·", ":"],
+    "a": 6,
+    "b": 8,
+    "c": 4
+  },
+  {
+    "id": "zug",
+    "image": "1F686",
+    "text": "In einem Zug sitzen {a} Fahrgäste. In München steigen {b} aus. Dann teilen sich die übrigen auf {c} gleich volle Wagen auf. Wie viele sitzen in jedem Wagen?",
+    "ops": ["-", ":"],
+    "a": 250,
+    "b": 90,
+    "c": 4
+  },
+  {
+    "id": "kuchen3",
+    "image": "1F370",
+    "text": "Für ein Fest backt die Klasse {a} Bleche Kuchen mit je {b} Stücken. Am Ende sind {c} Stücke übrig. Wie viele Stücke wurden gegessen?",
+    "ops": ["·", "-"],
+    "a": 4,
+    "b": 24,
+    "c": 13
+  },
+  {
+    "id": "wanderung",
+    "image": "1F97E",
+    "text": "Die Klasse wandert am ersten Tag am Vormittag {a} m und am Nachmittag {b} m. Am zweiten Tag wandert sie {c} m weniger als am ersten Tag. Wie weit wandert sie am zweiten Tag?",
+    "ops": ["+", "-"],
+    "a": 350,
+    "b": 420,
+    "c": 200
+  },
+  {
+    "id": "murmeln",
+    "image": "1F7E2",
+    "text": "Tom hat {a} Murmeln. Er gewinnt {b} dazu und teilt dann alle gerecht mit seinem Bruder. Wie viele Murmeln bekommt jeder?",
+    "ops": ["+", ":"],
+    "a": 34,
+    "b": 26,
+    "c": 2
+  },
+  {
+    "id": "pizza",
+    "image": "1F355",
+    "text": "Eine Pizza kostet {a} €. Die Klasse bestellt {b} Pizzen. Für die Lieferung kommen noch {c} € dazu. Wie viel muss die Klasse bezahlen?",
+    "ops": ["·", "+"],
+    "a": 9,
+    "b": 6,
+    "c": 5
+  }
+]

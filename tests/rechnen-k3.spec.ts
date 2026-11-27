@@ -161,3 +161,48 @@ describe('Formen Klasse 3', () => {
       }
   })
 })
+
+describe('Uhr und Daten Klasse 3', () => {
+  it('Zeitspannen mit Minuten über volle Stunden', async () => {
+    const { zeitspanne, uhrzeit, dauerKurz } = await import('@/exercises/uhr/zeitspanne')
+    expect(uhrzeit(8 * 60 + 65)).toBe('9:05')
+    expect(dauerKurz(75)).toBe('1 h 15 min')
+    expect(dauerKurz(40)).toBe('40 min')
+    const t = zeitspanne.generate(
+      ctx,
+      { mode: 'spaeter', minuten: true },
+      'uhr.zeitspanne:spaeter:m8:20-45',
+      createRng(1),
+    )
+    expect(t.data.correctKey).toBe('9:05')
+    for (const mode of ['spaeter', 'frueher', 'dauer'] as const)
+      for (const key of zeitspanne.items(ctx, { mode, minuten: true })) {
+        const g = zeitspanne.generate(ctx, { mode, minuten: true }, key, createRng(2))
+        expect(new Set(g.data.choices.map((c) => c.key)).size).toBe(3)
+        expect(g.data.choices.map((c) => c.key)).toContain(g.data.correctKey)
+      }
+  })
+
+  it('Sachaufgaben mit zwei Schritten: ganze Zahlen, Klammern wo nötig', async () => {
+    const { sachaufgaben, term } = await import('@/exercises/rechnen/sachaufgaben')
+    expect(term(['+', ':'], 34, 26, 2)).toBe('(34 + 26) : 2')
+    expect(term(['·', '+'], 8, 4, 9)).toBe('8 · 4 + 9')
+    for (const key of sachaufgaben.items(ctx, { mode: 'zweischritt' })) {
+      const t = sachaufgaben.generate(ctx, { mode: 'zweischritt' }, key, createRng(3))
+      expect(Number.isInteger(t.data.result) && t.data.result >= 0).toBe(true)
+      expect(t.data.choices.length).toBeGreaterThanOrEqual(2)
+      expect(t.data.text).not.toMatch(/\{[abc]\}/)
+    }
+  })
+
+  it('Diagramm mit Maßstab: Werte mal zehn', async () => {
+    const { daten } = await import('@/exercises/rechnen/daten')
+    const t = daten.generate(
+      ctx,
+      { mode: 'zaehlen', display: 'balken', faktor: 10 },
+      'rechnen.daten:zaehlen:7',
+      createRng(1),
+    )
+    expect(t.data.correctKey).toBe('70')
+  })
+})

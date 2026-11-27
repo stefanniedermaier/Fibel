@@ -20,12 +20,14 @@ function bundles(count: number): number[] {
       <tbody>
         <tr v-for="r in data.rows" :key="r.key" :class="{ asked: r.key === data.asked }">
           <td><EmojiPicture :code="r.image" :size="48" /></td>
-          <td v-if="data.display === 'tabelle'" class="value">{{ r.count }}</td>
+          <td v-if="data.display === 'tabelle'" class="value">
+            {{ r.count * (data.faktor ?? 1) }}
+          </td>
           <td v-else-if="data.display === 'balken'" class="bar-cell">
             <span class="bar" :style="{ width: `${r.count * 18}px` }" />
             <span class="scale" aria-hidden="true">
               <span v-for="t in 15" :key="t" class="tick" :class="{ five: t % 5 === 0 }">{{
-                t % 5 === 0 ? t : ''
+                t % 5 === 0 ? t * (data.faktor ?? 1) : ''
               }}</span>
             </span>
           </td>
