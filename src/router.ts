@@ -13,9 +13,15 @@ export const router = createRouter({
       component: () => import('./views/ProfileSelectView.vue'),
     },
     {
-      path: '/einheit/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr)',
+      path: '/einheit/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr)/:category?',
       name: 'session',
       component: () => import('./views/SessionView.vue'),
+      meta: { needsProfile: true },
+    },
+    {
+      path: '/fach/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr)',
+      name: 'topic',
+      component: () => import('./views/TopicView.vue'),
       meta: { needsProfile: true },
     },
     {

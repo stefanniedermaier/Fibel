@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { catalogFor, visibleGrades } from '@/core/content'
-import { availableEntries } from '@/core/session'
+import { visibleGrades } from '@/core/content'
+import { practiceEntries, topicRoute } from '@/core/practice'
 import { TOPICS, TOPIC_INFO } from '@/core/types'
 import { getExercise } from '@/exercises/registry'
 import { useAppStore } from '@/stores/app'
@@ -16,12 +16,13 @@ const groups = computed(() => {
   const v = visibleGrades(profile, settings)
   return [...v.lower, ...v.higher].map((grade) => {
     const ctx = { land: profile.land, grade, settings }
+    const options = { revision: grade < profile.grade }
     return {
       grade,
       lower: grade < profile.grade,
       topics: TOPICS.filter(
-        (t) => availableEntries(catalogFor(profile.land, grade, t), ctx, getExercise).length > 0,
-      ).map((t) => ({ topic: t, ...TOPIC_INFO[t] })),
+        (t) => practiceEntries(ctx, t, getExercise, undefined, options).length > 0,
+      ).map((t) => ({ topic: t, ...TOPIC_INFO[t], to: topicRoute(ctx, t, getExercise, options) })),
     }
   })
 })
@@ -39,12 +40,7 @@ const groups = computed(() => {
       </h2>
       <p v-if="g.topics.length === 0" class="muted">Hier gibt es noch keine Übungen.</p>
       <div class="topics">
-        <RouterLink
-          v-for="t in g.topics"
-          :key="t.topic"
-          class="btn btn-primary"
-          :to="{ name: 'session', params: { grade: g.grade, topic: t.topic } }"
-        >
+        <RouterLink v-for="t in g.topics" :key="t.topic" class="btn btn-primary" :to="t.to">
           {{ t.icon }} {{ t.label }}
         </RouterLink>
       </div>

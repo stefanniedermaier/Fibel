@@ -50,3 +50,18 @@ export async function createProfile(page: Page, name = 'Testkind') {
   await page.goto('./#/')
   await expect(page.getByText(name)).toBeVisible()
 }
+
+/**
+ * Opens a subject from the home page. Subjects with categories show a page with
+ * "Alles gemischt" first; `check` runs the accessibility check there.
+ */
+export async function openTopic(page: Page, topic: string, check = false) {
+  await page.getByRole('link', { name: new RegExp(topic) }).click()
+  const mixed = page.getByRole('link', { name: /Alles gemischt/ })
+  const reading = page.getByRole('button', { name: 'Nochmal vorlesen' })
+  await expect(mixed.or(reading)).toBeVisible()
+  if (await mixed.isVisible()) {
+    if (check) await expectAccessible(page)
+    await mixed.click()
+  }
+}

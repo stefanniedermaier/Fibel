@@ -3,102 +3,152 @@
     "id": "k1.lesen.silben-hoeren",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.hoeren",
+    "unit": "k1.lesen.silben",
     "exercise": "lesen.silben-hoeren",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Silben hören"
   },
   {
     "id": "k1.lesen.wort-bild",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k1.lesen.woerter",
     "exercise": "lesen.wort-bild",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Wort lesen, Bild finden"
   },
   {
     "id": "k1.lesen.bild-wort",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k1.lesen.woerter",
     "exercise": "lesen.bild-wort",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Bild ansehen, Wort finden"
   },
   {
     "id": "k1.lesen.anlaut",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k1.lesen.laute",
     "exercise": "lesen.anlaut",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Anlaut erkennen"
   },
   {
     "id": "k1.lesen.silben-klatschen",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.hoeren",
+    "unit": "k1.lesen.silben",
     "exercise": "lesen.silben-klatschen",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Silben klatschen"
   },
   {
     "id": "k1.lesen.reimen",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.hoeren",
+    "unit": "k1.lesen.laute",
     "exercise": "lesen.reimen",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Was reimt sich?"
   },
   {
     "id": "k1.lesen.anlaut-gleich",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.hoeren",
+    "unit": "k1.lesen.laute",
     "exercise": "lesen.anlaut-gleich",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Gleicher Anfang"
   },
   {
     "id": "k1.lesen.anlaut-fremd",
     "grade": 1,
     "topic": "lesen",
+    "category": "lesen.hoeren",
+    "unit": "k1.lesen.laute",
     "exercise": "lesen.anlaut-fremd",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Welches fängt anders an?"
   },
   {
     "id": "k1.schreiben.silben-legen",
     "grade": 1,
     "topic": "schreiben",
+    "category": "schreiben.woerter",
+    "unit": "k1.schreiben.woerter",
     "exercise": "schreiben.silben-legen",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Silben legen"
   },
   {
     "id": "k1.schreiben.luecke",
     "grade": 1,
     "topic": "schreiben",
+    "category": "schreiben.woerter",
+    "unit": "k1.schreiben.woerter",
     "exercise": "schreiben.luecke",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Lückenwort"
   },
   {
     "id": "k1.schreiben.buchstaben-legen",
     "grade": 1,
     "topic": "schreiben",
+    "category": "schreiben.woerter",
+    "unit": "k1.schreiben.woerter",
     "exercise": "schreiben.buchstaben-legen",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Buchstaben legen"
   },
   {
     "id": "k1.schreiben.abc-tastatur",
     "grade": 1,
     "topic": "schreiben",
+    "category": "schreiben.woerter",
+    "unit": "k1.schreiben.woerter",
     "exercise": "schreiben.abc-tastatur",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "ABC-Tastatur"
   },
   {
     "id": "k1.schreiben.nachspuren",
     "grade": 1,
     "topic": "schreiben",
+    "category": "schreiben.buchstaben",
+    "unit": "k1.schreiben.buchstaben",
     "exercise": "schreiben.nachspuren",
     "params": {},
     "title": "Buchstaben nachspuren"
@@ -107,62 +157,93 @@
     "id": "k1.schreiben.kaestchen",
     "grade": 1,
     "topic": "schreiben",
+    "category": "schreiben.woerter",
+    "unit": "k1.schreiben.woerter",
     "exercise": "schreiben.kaestchen",
-    "params": { "wordGrade": 1 },
+    "params": {
+      "wordGrade": 1
+    },
     "title": "Wort in Kästchen schreiben (Experiment)"
   },
   {
     "id": "k1.rechnen.mengen-10",
     "grade": 1,
     "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-10",
     "exercise": "rechnen.mengen",
-    "params": { "max": 10 },
+    "params": {
+      "max": 10
+    },
     "title": "Mengen erkennen bis 10"
   },
   {
     "id": "k1.rechnen.menge-legen-10",
     "grade": 1,
     "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-10",
     "exercise": "rechnen.menge-legen",
-    "params": { "max": 10 },
+    "params": {
+      "max": 10
+    },
     "title": "Menge legen bis 10"
   },
   {
     "id": "k1.rechnen.vergleichen-10",
     "grade": 1,
     "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-10",
     "exercise": "rechnen.vergleichen",
-    "params": { "max": 10 },
+    "params": {
+      "max": 10
+    },
     "title": "Zahlen vergleichen bis 10"
   },
   {
     "id": "k1.rechnen.zahlenhaus-10",
     "grade": 1,
     "topic": "rechnen",
+    "category": "rechnen.rechnen",
+    "unit": "k1.rechnen.rechnen",
     "exercise": "rechnen.zahlenhaus",
-    "params": { "max": 10 },
+    "params": {
+      "max": 10
+    },
     "title": "Zahlenhaus bis 10"
   },
   {
     "id": "k1.rechnen.plus-minus-10",
     "grade": 1,
     "topic": "rechnen",
+    "category": "rechnen.rechnen",
+    "unit": "k1.rechnen.rechnen",
     "exercise": "rechnen.plus-minus",
-    "params": { "max": 10 },
+    "params": {
+      "max": 10
+    },
     "title": "Plus und Minus bis 10"
   },
   {
     "id": "k1.rechnen.plus-minus-20",
     "grade": 1,
     "topic": "rechnen",
+    "category": "rechnen.rechnen",
+    "unit": "k1.rechnen.rechnen",
     "exercise": "rechnen.plus-minus",
-    "params": { "max": 20, "above": 10 },
+    "params": {
+      "max": 20,
+      "above": 10
+    },
     "title": "Plus und Minus bis 20"
   },
   {
     "id": "k1.rechnen.reihen",
     "grade": 1,
     "topic": "rechnen",
+    "category": "rechnen.formen",
+    "unit": "k1.rechnen.muster",
     "exercise": "rechnen.reihen",
     "params": {},
     "title": "Reihen erkennen"
@@ -171,32 +252,48 @@
     "id": "k1.uhr.lesen",
     "grade": 1,
     "topic": "uhr",
+    "category": "uhr.uhrzeit",
+    "unit": "k1.uhr.uhrzeit",
     "exercise": "uhr.lesen",
-    "params": { "maxLevel": 2 },
+    "params": {
+      "maxLevel": 2
+    },
     "title": "Uhr lesen"
   },
   {
     "id": "k1.uhr.stellen",
     "grade": 1,
     "topic": "uhr",
+    "category": "uhr.uhrzeit",
+    "unit": "k1.uhr.uhrzeit",
     "exercise": "uhr.stellen",
-    "params": { "maxLevel": 2 },
+    "params": {
+      "maxLevel": 2
+    },
     "title": "Uhr stellen"
   },
   {
     "id": "k2.uhr.lesen",
     "grade": 2,
     "topic": "uhr",
+    "category": "uhr.uhrzeit",
+    "unit": "k2.uhr.uhrzeit",
     "exercise": "uhr.lesen",
-    "params": { "minLevel": 3 },
+    "params": {
+      "minLevel": 3
+    },
     "title": "Uhr lesen"
   },
   {
     "id": "k2.uhr.stellen",
     "grade": 2,
     "topic": "uhr",
+    "category": "uhr.uhrzeit",
+    "unit": "k2.uhr.uhrzeit",
     "exercise": "uhr.stellen",
-    "params": { "minLevel": 3 },
+    "params": {
+      "minLevel": 3
+    },
     "title": "Uhr stellen"
   }
 ]

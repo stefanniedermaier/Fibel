@@ -1,0 +1,72 @@
+[
+  {
+    "id": "k1.lesen.silben",
+    "grade": 1,
+    "topic": "lesen",
+    "title": "Silben hören und klatschen",
+    "term": 1
+  },
+  {
+    "id": "k1.lesen.laute",
+    "grade": 1,
+    "topic": "lesen",
+    "title": "Anlaute, Laute und Reime",
+    "term": 1
+  },
+  {
+    "id": "k1.lesen.woerter",
+    "grade": 1,
+    "topic": "lesen",
+    "title": "Wörter lesen",
+    "term": 1
+  },
+  {
+    "id": "k1.schreiben.buchstaben",
+    "grade": 1,
+    "topic": "schreiben",
+    "title": "Buchstaben nachspuren",
+    "term": 1
+  },
+  {
+    "id": "k1.schreiben.woerter",
+    "grade": 1,
+    "topic": "schreiben",
+    "title": "Wörter schreiben",
+    "term": 1
+  },
+  {
+    "id": "k1.rechnen.zahlen-10",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Zahlen bis 10",
+    "term": 1
+  },
+  {
+    "id": "k1.rechnen.rechnen",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Zerlegen, Plus und Minus",
+    "term": 1
+  },
+  {
+    "id": "k1.rechnen.muster",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Muster und Reihen",
+    "term": 1
+  },
+  {
+    "id": "k1.uhr.uhrzeit",
+    "grade": 1,
+    "topic": "uhr",
+    "title": "Volle und halbe Stunden",
+    "term": 1
+  },
+  {
+    "id": "k2.uhr.uhrzeit",
+    "grade": 2,
+    "topic": "uhr",
+    "title": "Viertelstunden und Minuten",
+    "term": 1
+  }
+]

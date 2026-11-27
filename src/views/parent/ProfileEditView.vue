@@ -22,11 +22,13 @@ import {
   getLand,
   gradeHasContent,
   resolveDefaults,
+  unitEnabled,
+  unitsFor,
 } from '@/core/content'
 import { plain } from '@/core/plain'
 import { say } from '@/core/speech'
 import { loadVoices, rankGermanVoices } from '@/core/tts'
-import type { ProfileSettings } from '@/core/types'
+import { TOPICS, TOPIC_INFO, type ProfileSettings } from '@/core/types'
 import { useAppStore } from '@/stores/app'
 
 const props = defineProps<{ id?: string }>()
@@ -132,6 +134,19 @@ const numberRanges = computed(() => {
   const start = resolveDefaults(form.land, form.grade).numberRange
   return [10, 20, 100, 1000, 1000000].filter((n) => n <= Math.max(start, 20))
 })
+
+// --- Teaching units (plaene/README.md, section 4) ---------------------------
+const unitGroups = computed(() =>
+  TOPICS.map((topic) => ({
+    topic,
+    ...TOPIC_INFO[topic],
+    units: unitsFor(form.grade, topic),
+  })).filter((g) => g.units.length > 0),
+)
+
+function toggleUnit(id: string, on: boolean) {
+  settings.value.units = { ...settings.value.units, [id]: on }
+}
 
 function toggleGrade(g: number, on: boolean) {
   const set = new Set(settings.value.unlockedGrades)
@@ -261,6 +276,25 @@ async function remove() {
         />
         Klasse {{ g }}
       </label>
+    </section>
+
+    <section v-if="unitGroups.length > 0" class="card">
+      <h2>Einheiten</h2>
+      <p class="muted">
+        Was in der Schule schon dran war. Einheiten des 1. Halbjahrs sind von Anfang an an, die des
+        2. Halbjahrs schalten Sie ein, sobald die Schule so weit ist.
+      </p>
+      <fieldset v-for="g in unitGroups" :key="g.topic" class="units">
+        <legend>{{ g.icon }} {{ g.label }}</legend>
+        <label v-for="u in g.units" :key="u.id" class="check">
+          <input
+            type="checkbox"
+            :checked="unitEnabled(u.id, settings)"
+            @change="toggleUnit(u.id, ($event.target as HTMLInputElement).checked)"
+          />
+          {{ u.title }} <small class="muted">{{ u.term }}. Halbjahr</small>
+        </label>
+      </fieldset>
     </section>
 
     <section v-if="gradeWordList.length > 0" class="card">

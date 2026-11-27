@@ -61,6 +61,11 @@ export interface ProfileSettings {
   speechRate: number
   /** Levels set by hand, per catalog entry id. */
   levels: Record<string, number>
+  /**
+   * Teaching units switched on or off by the parents (unit id → on). Units without an
+   * entry follow their default: 1st half-year on, 2nd half-year off.
+   */
+  units: Record<string, boolean>
 }
 
 export type SettingsPatch = Partial<ProfileSettings>
@@ -73,6 +78,31 @@ export interface CatalogEntry {
   exercise: string
   params: Record<string, unknown>
   title: string
+  /** Category inside the subject, e.g. 'lesen.hoeren' (the child picks it). */
+  category: string
+  /** Teaching unit, e.g. 'k1.lesen.laute' (the parents switch it on). */
+  unit: string
+  /** Share in mixed units (default 1). */
+  weight?: number
+}
+
+/** A category inside a subject, shown as a tile (e.g. "Hören" in Lesen). */
+export interface ExerciseCategory {
+  id: string
+  topic: Topic
+  title: string
+  /** Emoji shown on the tile. */
+  icon: string
+}
+
+/** A teaching unit that the parents switch on when school gets there. */
+export interface TeachingUnit {
+  id: string
+  grade: number
+  topic: Topic
+  title: string
+  /** Half-year in which schools usually teach it: 1 = on by default, 2 = off. */
+  term: 1 | 2
 }
 
 export interface LandOverlay {
@@ -179,6 +209,8 @@ export interface SessionRecord {
   land: LandCode
   grade: number
   topic: Topic
+  /** Chosen category; missing = everything mixed. */
+  category?: string
   startedAt: number
   durationMs: number
   total: number

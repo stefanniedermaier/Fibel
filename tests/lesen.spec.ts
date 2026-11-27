@@ -194,6 +194,8 @@ describe('Mischung in einer Einheit', () => {
     id: `k1.lesen.${id}`,
     grade: 1,
     topic: 'lesen',
+    category: 'lesen.woerter',
+    unit: 'k1.lesen.woerter',
     exercise: `lesen.${id}`,
     params,
     title: id,

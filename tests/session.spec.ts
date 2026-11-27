@@ -18,6 +18,8 @@ const mengen: CatalogEntry = {
   id: 'k1.rechnen.mengen-10',
   grade: 1,
   topic: 'rechnen',
+  category: 'rechnen.zahlen',
+  unit: 'k1.rechnen.zahlen-10',
   exercise: 'rechnen.mengen',
   params: { max: 10 },
   title: 'Mengen',

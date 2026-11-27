@@ -3,13 +3,13 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import ProgressBeads from '@/components/ProgressBeads.vue'
 import StarBurst from '@/components/StarBurst.vue'
-import { catalogFor } from '@/core/content'
+import { getCategory } from '@/core/content'
 import { updateProgress } from '@/core/leitner'
 import { numberWord } from '@/core/numbers'
+import { practiceEntries } from '@/core/practice'
 import { createId, createRng } from '@/core/random'
 import {
   MAX_WRONG,
-  availableEntries,
   countStars,
   earnsCrown,
   earnsStar,
@@ -29,6 +29,9 @@ const route = useRoute()
 const store = useAppStore()
 const grade = Number(route.params.grade)
 const topic = route.params.topic as Topic
+/** Chosen category; empty = everything mixed. */
+const category = (route.params.category as string | undefined) || undefined
+const categoryInfo = category ? getCategory(category) : undefined
 const rng = createRng()
 
 type Phase = 'loading' | 'empty' | 'running' | 'done'
@@ -56,7 +59,9 @@ async function start() {
   const settings = store.settings
   if (!profile || !settings) return
   const ctx = { land: profile.land, grade, settings }
-  const entries = availableEntries(catalogFor(profile.land, grade, topic), ctx, getExercise)
+  const entries = practiceEntries(ctx, topic, getExercise, category, {
+    revision: grade < profile.grade,
+  })
   if (entries.length === 0) {
     phase.value = 'empty'
     return
@@ -69,6 +74,7 @@ async function start() {
     land: profile.land,
     grade,
     topic,
+    ...(category ? { category } : {}),
     startedAt: Date.now(),
     durationMs: 0,
     total: tasks.value.length,
@@ -245,7 +251,9 @@ onUnmounted(() => {
         <RouterLink class="btn" :to="{ name: 'home' }">Fertig</RouterLink>
       </div>
       <p class="muted">
-        {{ TOPIC_INFO[topic].icon }} {{ TOPIC_INFO[topic].label }} · Klasse {{ grade }}
+        {{ TOPIC_INFO[topic].icon }} {{ TOPIC_INFO[topic].label }}
+        <template v-if="categoryInfo"> · {{ categoryInfo.icon }} {{ categoryInfo.title }}</template>
+        · Klasse {{ grade }}
       </p>
     </section>
 

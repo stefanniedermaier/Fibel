@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
-import { catalogFor, visibleGrades } from '@/core/content'
-import { availableEntries } from '@/core/session'
+import { visibleGrades } from '@/core/content'
+import { practiceEntries, topicRoute } from '@/core/practice'
 import { TOPICS, TOPIC_INFO } from '@/core/types'
 import { getExercise } from '@/exercises/registry'
 import { useAppStore } from '@/stores/app'
@@ -15,8 +15,8 @@ const tiles = computed(() => {
   return TOPICS.map((topic) => ({
     topic,
     ...TOPIC_INFO[topic],
-    available:
-      availableEntries(catalogFor(ctx.land, ctx.grade, topic), ctx, getExercise).length > 0,
+    available: practiceEntries(ctx, topic, getExercise).length > 0,
+    to: topicRoute(ctx, topic, getExercise),
   }))
 })
 
@@ -52,11 +52,7 @@ const otherGrades = computed(() => {
 
     <div class="tiles">
       <template v-for="t in tiles" :key="t.topic">
-        <RouterLink
-          v-if="t.available"
-          class="tile"
-          :to="{ name: 'session', params: { grade: store.active.grade, topic: t.topic } }"
-        >
+        <RouterLink v-if="t.available" class="tile" :to="t.to">
           <span class="icon" aria-hidden="true">{{ t.icon }}</span>
           <span>{{ t.label }}</span>
         </RouterLink>

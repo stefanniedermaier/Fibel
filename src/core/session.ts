@@ -47,9 +47,14 @@ export function planSession(
     .filter((g): g is typeof g & { module: ExerciseModule } => !!g.module && g.items.length > 0)
   if (groups.length === 0) return []
 
-  // Every exercise gets an equal share of the tasks (the remainder goes to random
-  // exercises), so an exercise with many items does not crowd out the others.
-  const quotas = sharesOf(count, groups.length, rng)
+  // Every exercise gets a share of the tasks by its weight (default: equal shares; the
+  // remainder goes to random exercises), so an exercise with many items does not crowd
+  // out the others.
+  const quotas = weightedShares(
+    count,
+    groups.map((g) => g.entry.weight ?? 1),
+    rng,
+  )
   const picked = groups.flatMap((g, i) =>
     pickItems(g.items, (key) => key, progress, quotas[i] ?? 0, rng).map((itemKey) => ({
       ...g,
@@ -74,6 +79,28 @@ export function sharesOf(count: number, parts: number, rng: Rng): number[] {
     rng,
   ).slice(0, count - base * parts)
   for (const i of extra) shares[i] = (shares[i] ?? 0) + 1
+  return shares
+}
+
+/**
+ * Splits `count` by the weights (largest remainder). Equal weights give the same result
+ * as `sharesOf`; ties for the remainder are broken at random.
+ */
+export function weightedShares(count: number, weights: readonly number[], rng: Rng): number[] {
+  const total = weights.reduce((sum, w) => sum + Math.max(0, w), 0)
+  if (total <= 0) return sharesOf(count, weights.length, rng)
+  const exact = weights.map((w) => (Math.max(0, w) / total) * count)
+  const shares = exact.map(Math.floor)
+  const order = shuffle(
+    weights.map((_, i) => i),
+    rng,
+  ).sort((a, b) => (exact[b] ?? 0) - (shares[b] ?? 0) - ((exact[a] ?? 0) - (shares[a] ?? 0)))
+  let rest = count - shares.reduce((sum, s) => sum + s, 0)
+  for (const i of order) {
+    if (rest <= 0) break
+    shares[i] = (shares[i] ?? 0) + 1
+    rest--
+  }
   return shares
 }
 

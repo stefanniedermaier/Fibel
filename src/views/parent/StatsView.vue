@@ -3,7 +3,7 @@ import BackButton from '@/components/BackButton.vue'
 import { computed, onMounted, ref } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
 import { rewardTotals } from '@/core/session'
-import { exerciseTitle, hitRates, itemLabel, lastDays, stumbles } from '@/core/stats'
+import { categoryRates, exerciseTitle, hitRates, itemLabel, lastDays, stumbles } from '@/core/stats'
 import { currentSessions, getDb, loadProgress } from '@/core/storage/db'
 import { TOPIC_INFO, type ProgressRecord, type SessionRecord } from '@/core/types'
 import { resolveWords } from '@/core/words'
@@ -34,6 +34,7 @@ const totalMinutes = computed(() =>
 const days = computed(() => lastDays(sessions.value, rewardDays.value))
 const maxUnits = computed(() => Math.max(1, ...days.value.map((d) => d.units)))
 const rates = computed(() => hitRates(sessions.value))
+const categoryStats = computed(() => categoryRates(sessions.value))
 
 const words = computed(() => {
   const p = profile.value
@@ -127,6 +128,16 @@ const trouble = computed(() =>
           <span class="pct">{{ Math.round(r.rate * 100) }} %</span>
         </li>
       </ul>
+      <template v-if="categoryStats.length > 0">
+        <h3>Nach Kategorie</h3>
+        <ul class="rates">
+          <li v-for="c in categoryStats" :key="`${c.grade}-${c.category}`">
+            <span>{{ c.icon }} {{ c.title }} · Klasse {{ c.grade }}</span>
+            <span class="meter"><span :style="{ width: `${Math.round(c.rate * 100)}%` }" /></span>
+            <span class="pct">{{ Math.round(c.rate * 100) }} %</span>
+          </li>
+        </ul>
+      </template>
       <p class="muted small">
         Anteil der Aufgaben mit Stern, also ohne dass die Lösung gezeigt wurde.
       </p>

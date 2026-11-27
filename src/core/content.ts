@@ -3,16 +3,20 @@
  * adjustments of the profile's state (see PLAN.md, section 4).
  */
 import baseCatalog from '@/data/basis/catalog.json'
+import categoryList from '@/data/basis/categories.json'
 import gradeDefaults from '@/data/basis/grade-defaults.json'
+import unitList from '@/data/basis/units.json'
 import laenderList from '@/data/laender/index.json'
 import type {
   CatalogEntry,
+  ExerciseCategory,
   Land,
   LandCode,
   LandOverlay,
   Profile,
   ProfileSettings,
   SettingsPatch,
+  TeachingUnit,
   Topic,
 } from './types'
 
@@ -20,6 +24,8 @@ export const DEFAULT_LAND: LandCode = 'DE-BY'
 
 export const LAENDER: readonly Land[] = laenderList
 export const BASE_CATALOG: readonly CatalogEntry[] = baseCatalog as CatalogEntry[]
+export const CATEGORIES: readonly ExerciseCategory[] = categoryList as ExerciseCategory[]
+export const UNITS: readonly TeachingUnit[] = unitList as TeachingUnit[]
 export const BASE_SETTINGS: ProfileSettings = gradeDefaults.base as ProfileSettings
 export const BASE_GRADE_DEFAULTS: Record<string, SettingsPatch> = gradeDefaults.grades
 
@@ -115,4 +121,56 @@ export function visibleGrades(profile: Profile, settings: ProfileSettings): Visi
 
 export function gradeHasContent(land: LandCode, grade: number): boolean {
   return catalogFor(land, grade).length > 0
+}
+
+// --- Teaching units and categories (plaene/README.md, section 4) -------------
+
+export function getUnit(id: string): TeachingUnit | undefined {
+  return UNITS.find((u) => u.id === id)
+}
+
+export function getCategory(id: string): ExerciseCategory | undefined {
+  return CATEGORIES.find((c) => c.id === id)
+}
+
+/**
+ * Switched on by the parents, or by default for units of the 1st half-year. When
+ * revising a lower grade (`revision`), all units count as done and are on by default.
+ */
+export function unitEnabled(
+  unitId: string,
+  settings: Pick<ProfileSettings, 'units'>,
+  revision = false,
+): boolean {
+  const stored = settings.units?.[unitId]
+  if (stored !== undefined) return stored
+  return revision || (getUnit(unitId)?.term ?? 1) === 1
+}
+
+/** Units of a grade and subject, in the order of units.json. */
+export function unitsFor(grade: number, topic: Topic): TeachingUnit[] {
+  return UNITS.filter((u) => u.grade === grade && u.topic === topic)
+}
+
+/**
+ * Catalog entries the child may practise: the grade's catalog, only switched-on units,
+ * optionally only one category.
+ */
+export function activeCatalog(
+  land: LandCode,
+  grade: number,
+  settings: Pick<ProfileSettings, 'units'>,
+  topic?: Topic,
+  category?: string,
+  revision = false,
+): CatalogEntry[] {
+  return catalogFor(land, grade, topic).filter(
+    (e) => unitEnabled(e.unit, settings, revision) && (!category || e.category === category),
+  )
+}
+
+/** Categories that occur in the given entries, in the order of categories.json. */
+export function categoriesOf(entries: readonly CatalogEntry[]): ExerciseCategory[] {
+  const used = new Set(entries.map((e) => e.category))
+  return CATEGORIES.filter((c) => used.has(c.id))
 }

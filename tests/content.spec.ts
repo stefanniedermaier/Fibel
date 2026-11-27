@@ -16,6 +16,8 @@ const entry = (id: string, grade = 1): CatalogEntry => ({
   id,
   grade,
   topic: 'rechnen',
+  category: 'rechnen.zahlen',
+  unit: 'k1.rechnen.zahlen-10',
   exercise: 'rechnen.mengen',
   params: { max: 10, extra: 1 },
   title: id,

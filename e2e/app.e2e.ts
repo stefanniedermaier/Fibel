@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { createProfile, expectAccessible, passParentGate, watchErrors } from './helpers'
+import { createProfile, expectAccessible, openTopic, passParentGate, watchErrors } from './helpers'
 
 test('Erster Start: Willkommen, ohne Fehler und barrierearm', async ({ page }) => {
   const errors = watchErrors(page)
@@ -16,7 +16,7 @@ test('Nichts verlässt das Gerät: nur Anfragen an den eigenen Server', async ({
     if (!url.startsWith(baseURL!) && !url.startsWith('data:')) foreign.push(url)
   })
   await createProfile(page)
-  await page.getByRole('link', { name: /Rechnen/ }).click()
+  await openTopic(page, 'Rechnen')
   await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
   expect(foreign).toEqual([])
 })
@@ -27,11 +27,22 @@ test('Profil anlegen und eine Einheit starten', async ({ page }) => {
   await expectAccessible(page)
   for (const topic of ['Lesen', 'Schreiben', 'Rechnen', 'Uhr']) {
     await page.goto('./#/')
-    await page.getByRole('link', { name: new RegExp(topic) }).click()
+    await openTopic(page, topic, true)
     await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
     await expect(page.getByLabel('Aufhören')).toBeVisible()
     await expectAccessible(page)
   }
+  expect(errors).toEqual([])
+})
+
+test('Kategorie wählen: nur Übungen dieser Kategorie', async ({ page }) => {
+  const errors = watchErrors(page)
+  await createProfile(page)
+  await page.getByRole('link', { name: /Lesen/ }).click()
+  await expect(page.getByRole('link', { name: /Alles gemischt/ })).toBeVisible()
+  await page.getByRole('link', { name: /Hören/ }).click()
+  await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
+  expect(page.url()).toContain('/einheit/1/lesen/lesen.hoeren')
   expect(errors).toEqual([])
 })
 
@@ -86,7 +97,7 @@ test('Uhr: lesen und stellen sind bedienbar und barrierearm', async ({ page }) =
   // The unit is planned at random; restart it until each clock exercise came up first.
   for (let i = 0; i < 60 && seen.size < 2; i++) {
     await page.goto('./#/')
-    await page.getByRole('link', { name: /Uhr/ }).click()
+    await openTopic(page, 'Uhr')
     await expect(page.getByRole('button', { name: 'Nochmal vorlesen' })).toBeVisible()
     if (
       !seen.has('stellen') &&

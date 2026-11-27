@@ -1,5 +1,5 @@
 /** Statistics for the parent area – computed from sessions and progress, nothing stored. */
-import { BASE_CATALOG } from './content'
+import { BASE_CATALOG, getCategory } from './content'
 import type { ProgressRecord, SessionRecord, Topic } from './types'
 
 const DAY_MS = 24 * 60 * 60 * 1000
@@ -66,6 +66,50 @@ export function hitRates(sessions: readonly SessionRecord[]): TopicStat[] {
   return [...map.values()]
     .map((s) => ({ ...s, rate: s.stars / s.tasks }))
     .sort((a, b) => a.grade - b.grade || a.topic.localeCompare(b.topic))
+}
+
+export interface CategoryStat {
+  grade: number
+  topic: Topic
+  category: string
+  title: string
+  icon: string
+  tasks: number
+  stars: number
+  rate: number
+}
+
+/** Hit rate per category, from the catalog entry of each task (mixed units included). */
+export function categoryRates(sessions: readonly SessionRecord[]): CategoryStat[] {
+  const entries = new Map(BASE_CATALOG.map((e) => [e.id, e]))
+  const map = new Map<string, CategoryStat>()
+  for (const s of sessions) {
+    for (const t of s.tasks) {
+      const entry = entries.get(t.entryId)
+      const category = entry && getCategory(entry.category)
+      if (!entry || !category) continue
+      const key = `${s.grade}:${category.id}`
+      const stat = map.get(key) ?? {
+        grade: s.grade,
+        topic: entry.topic,
+        category: category.id,
+        title: category.title,
+        icon: category.icon,
+        tasks: 0,
+        stars: 0,
+        rate: 0,
+      }
+      stat.tasks++
+      if (t.star) stat.stars++
+      map.set(key, stat)
+    }
+  }
+  return [...map.values()]
+    .map((s) => ({ ...s, rate: s.stars / s.tasks }))
+    .sort(
+      (a, b) =>
+        a.grade - b.grade || a.topic.localeCompare(b.topic) || a.title.localeCompare(b.title),
+    )
 }
 
 export interface Stumble {

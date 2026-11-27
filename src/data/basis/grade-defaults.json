@@ -18,7 +18,8 @@
     "rewardDays": 14,
     "voiceURI": null,
     "speechRate": 0.85,
-    "levels": {}
+    "levels": {},
+    "units": {}
   },
   "grades": {
     "1": {
