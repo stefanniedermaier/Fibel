@@ -3597,5 +3597,149 @@
       "richtung": "bild-wort"
     },
     "title": "Bild → Wort"
+  },
+  {
+    "id": "k3.messen.geld.komma",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.geld",
+    "unit": "k3.messen.geld",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "geld"
+    },
+    "title": "3,50 € = 350 ct"
+  },
+  {
+    "id": "k3.messen.laengen.lineal",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.laengen",
+    "unit": "k3.messen.laengen",
+    "exercise": "messen.ablesen",
+    "params": {
+      "instrument": "lineal"
+    },
+    "title": "Lineal mit Millimetern"
+  },
+  {
+    "id": "k3.messen.laengen.umrechnen",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.laengen",
+    "unit": "k3.messen.laengen",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "laenge"
+    },
+    "title": "Längen umrechnen"
+  },
+  {
+    "id": "k3.messen.gewichte.waage",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.gewichte",
+    "exercise": "messen.ablesen",
+    "params": {
+      "instrument": "waage"
+    },
+    "title": "Waage ablesen"
+  },
+  {
+    "id": "k3.messen.gewichte.umrechnen",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.gewichte",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "gewicht"
+    },
+    "title": "g und kg umrechnen"
+  },
+  {
+    "id": "k3.messen.hohlmasse.becher",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.hohlmasse",
+    "exercise": "messen.ablesen",
+    "params": {
+      "instrument": "messbecher"
+    },
+    "title": "Messbecher ablesen"
+  },
+  {
+    "id": "k3.messen.hohlmasse.umrechnen",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.hohlmasse",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "hohlmass"
+    },
+    "title": "ml und l umrechnen"
+  },
+  {
+    "id": "k3.messen.brueche.brueche",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.brueche",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "brueche"
+    },
+    "title": "½ l = 500 ml"
+  },
+  {
+    "id": "k3.messen.schaetzen.gewicht",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.schaetzen",
+    "exercise": "messen.schaetzen",
+    "params": {
+      "art": "gewicht"
+    },
+    "title": "Gewichte schätzen"
+  },
+  {
+    "id": "k3.messen.schaetzen.hohlmass",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.schaetzen",
+    "exercise": "messen.schaetzen",
+    "params": {
+      "art": "hohlmass"
+    },
+    "title": "Hohlmaße schätzen"
+  },
+  {
+    "id": "k3.messen.schaetzen.strecke",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.gewichte",
+    "unit": "k3.messen.schaetzen",
+    "exercise": "messen.schaetzen",
+    "params": {
+      "art": "strecke"
+    },
+    "title": "Strecken schätzen"
+  },
+  {
+    "id": "k3.messen.zeit.umrechnen",
+    "grade": 3,
+    "topic": "messen",
+    "category": "messen.zeit",
+    "unit": "k3.messen.zeit",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "zeit"
+    },
+    "title": "1 h 25 min = 85 min"
   }
 ]

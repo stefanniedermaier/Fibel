@@ -1027,5 +1027,54 @@
     "topic": "englisch",
     "title": "Bekannte Wörter lesen",
     "term": 2
+  },
+  {
+    "id": "k3.messen.geld",
+    "grade": 3,
+    "topic": "messen",
+    "title": "Geld mit Komma",
+    "term": 1
+  },
+  {
+    "id": "k3.messen.laengen",
+    "grade": 3,
+    "topic": "messen",
+    "title": "Längen: mm, cm, m, km",
+    "term": 1
+  },
+  {
+    "id": "k3.messen.gewichte",
+    "grade": 3,
+    "topic": "messen",
+    "title": "Gewichte: g und kg",
+    "term": 2
+  },
+  {
+    "id": "k3.messen.hohlmasse",
+    "grade": 3,
+    "topic": "messen",
+    "title": "Hohlmaße: ml und l",
+    "term": 2
+  },
+  {
+    "id": "k3.messen.brueche",
+    "grade": 3,
+    "topic": "messen",
+    "title": "Brüche bei Größen: ½ l, ¼ kg, ¾ h",
+    "term": 2
+  },
+  {
+    "id": "k3.messen.schaetzen",
+    "grade": 3,
+    "topic": "messen",
+    "title": "Schätzen mit 1 kg, 1 l, 1 km",
+    "term": 1
+  },
+  {
+    "id": "k3.messen.zeit",
+    "grade": 3,
+    "topic": "messen",
+    "title": "Zeit: Sekunden, Minuten, Stunden, Tage",
+    "term": 2
   }
 ]

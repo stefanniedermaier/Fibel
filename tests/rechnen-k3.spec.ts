@@ -88,3 +88,37 @@ describe('Rechnen Klasse 3', () => {
     }
   })
 })
+
+describe('Messen Klasse 3', () => {
+  it('Umrechnen: jede Aufgabe hat drei verschiedene Antworten, die Lösung ist dabei', async () => {
+    const { umrechnen } = await import('@/exercises/messen/laenge')
+    const { UMRECHNUNGEN, sayUnits, solved } = await import('@/exercises/messen/groessen/tabelle')
+    for (const art of Object.keys(UMRECHNUNGEN) as (keyof typeof UMRECHNUNGEN)[])
+      for (const key of umrechnen.items(ctx, { art })) {
+        const t = umrechnen.generate(ctx, { art }, key, createRng(1))
+        const keys = t.data.choices.map((c) => c.key)
+        expect(new Set(keys).size).toBe(3)
+        expect(keys).toContain(t.data.correctKey)
+        expect(t.solution).not.toMatch(/\d (ct|mm|cm|km|kg|g|ml|l|min|h|s|€)\b/)
+      }
+    expect(sayUnits(solved(UMRECHNUNGEN.geld[0]!))).toBe('3 Euro 50 sind 350 Cent')
+    expect(sayUnits('½ h = 30 min')).toBe('eine halbe Stunde sind 30 Minuten')
+  })
+
+  it('Ablesen: Waage, Messbecher und Lineal', async () => {
+    const { ablesen } = await import('@/exercises/messen/groessen')
+    for (const instrument of ['lineal', 'waage', 'messbecher'] as const)
+      for (const key of ablesen.items(ctx, { instrument })) {
+        const t = ablesen.generate(ctx, { instrument }, key, createRng(2))
+        expect(new Set(t.data.choices.map((c) => c.key)).size).toBe(3)
+        expect(t.data.choices.map((c) => c.key)).toContain(t.data.correctKey)
+      }
+    const t = ablesen.generate(
+      ctx,
+      { instrument: 'lineal' },
+      'messen.ablesen:lineal:47',
+      createRng(1),
+    )
+    expect(t.data.correctKey).toBe('4 cm 7 mm')
+  })
+})

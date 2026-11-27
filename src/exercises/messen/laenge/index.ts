@@ -9,6 +9,8 @@ import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import LinealTask from './LinealTask.vue'
+import { HILFE, sayUnits, solved, UMRECHNUNGEN, type GroessenArt } from '../groessen/tabelle'
+import { SCHAETZEN_3, type SchaetzArt } from '../groessen/schaetzen'
 
 const choices = (labels: readonly string[], rng: () => number) =>
   shuffle([...labels], rng).map((t) => ({ key: t, label: t }))
@@ -72,11 +74,18 @@ export const lineal: ExerciseModule<LinealParams, LinealData> = {
 
 // --- Umrechnen ------------------------------------------------------------------
 
-export const umrechnen: ExerciseModule<Record<string, never>, WahlData> = {
+export interface UmrechnenParams {
+  /** Grade 3: money, lengths, weights, capacity, fractions, time (default: m and cm). */
+  art?: GroessenArt
+}
+
+export const umrechnen: ExerciseModule<UmrechnenParams, WahlData> = {
   id: 'messen.umrechnen',
   topic: 'messen',
 
-  items() {
+  items(_ctx, params) {
+    if (params.art)
+      return UMRECHNUNGEN[params.art].map((x) => `messen.umrechnen:${params.art}:${x.id}`)
     const keys: string[] = []
     for (let m = 1; m <= 5; m++) keys.push(`messen.umrechnen:m-${m}`)
     for (const [m, cm] of [
@@ -92,7 +101,22 @@ export const umrechnen: ExerciseModule<Record<string, never>, WahlData> = {
     return keys
   },
 
-  generate(_ctx, _params, itemKey, rng) {
+  generate(_ctx, params, itemKey, rng) {
+    if (params.art) {
+      const id = itemKey.split(':')[2]
+      const x = UMRECHNUNGEN[params.art].find((t) => t.id === id)
+      if (!x) throw new Error(`Unbekannte Umrechnung: ${itemKey}`)
+      return {
+        instruction: x.frage,
+        hint: x.hilfe ?? HILFE[params.art],
+        solution: `${sayUnits(solved(x))}.`,
+        data: {
+          prompt: x.prompt,
+          correctKey: x.richtig,
+          choices: choices([x.richtig, ...x.falsch], rng),
+        },
+      }
+    }
     const [kind, a, b] = itemKey.split(':')[1]!.split('-') as [string, string, string?]
     const m = Number(a)
     if (kind === 'm') {
@@ -205,19 +229,30 @@ export const SCHAETZEN = [
   },
 ] as const
 
-export const schaetzen: ExerciseModule<Record<string, never>, WahlData> = {
+export interface SchaetzenParams {
+  /** Grade 3: weights, capacity, long distances (default: lengths of grade 2). */
+  art?: SchaetzArt
+}
+
+const schaetzListe = (art?: SchaetzArt) =>
+  art ? SCHAETZEN_3.filter((s) => s.art === art) : SCHAETZEN
+
+export const schaetzen: ExerciseModule<SchaetzenParams, WahlData> = {
   id: 'messen.schaetzen',
   topic: 'messen',
 
-  items() {
-    return SCHAETZEN.map((s) => `messen.schaetzen:${s.id}`)
+  items(_ctx, params) {
+    return schaetzListe(params.art).map((s) => `messen.schaetzen:${s.id}`)
   },
 
-  generate(_ctx, _params, itemKey, rng) {
-    const s = SCHAETZEN.find((x) => x.id === itemKey.split(':')[1])!
+  generate(_ctx, params, itemKey, rng) {
+    const s = schaetzListe(params.art).find((x) => x.id === itemKey.split(':')[1])!
     return {
       instruction: `Schätze: ${s.was}`,
-      hint: 'Denk an etwas, das du kennst: Ein Meter ist etwa so hoch wie ein Tisch und ein bisschen mehr.',
+      hint:
+        'hilfe' in s
+          ? s.hilfe
+          : 'Denk an etwas, das du kennst: Ein Meter ist etwa so hoch wie ein Tisch und ein bisschen mehr.',
       solution: `Ungefähr ${s.richtig}.`,
       data: {
         image: s.image,

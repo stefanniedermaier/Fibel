@@ -376,5 +376,17 @@
     "topic": "englisch",
     "title": "Freunde und Familie",
     "icon": "👪"
+  },
+  {
+    "id": "messen.gewichte",
+    "topic": "messen",
+    "title": "Gewichte und Hohlmaße",
+    "icon": "⚖️"
+  },
+  {
+    "id": "messen.zeit",
+    "topic": "messen",
+    "title": "Zeit umrechnen",
+    "icon": "⏱️"
   }
 ]
