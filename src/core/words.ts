@@ -6,6 +6,7 @@ import lettersData from '@/data/common/letters.json'
 import { OVERLAYS } from './content'
 import { graphemes, usesOnly } from './graphemes'
 import { deriveLevel } from './lauttreue'
+import { derivePhenomena } from './phenomena'
 import type {
   LandCode,
   LandOverlay,
@@ -48,6 +49,12 @@ export function toWord(entry: WordEntry, source: string, grundwortschatz: boolea
   return {
     ...entry,
     graphemes: graphemes(entry.text),
+    phenomena: [
+      ...new Set([
+        ...(entry.schwerpunkt ? [entry.schwerpunkt] : []),
+        ...derivePhenomena(entry.text, entry.syllables),
+      ]),
+    ].filter(Boolean),
     level: deriveLevel(entry.text, entry.syllables),
     grundwortschatz,
     source,

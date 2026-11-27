@@ -1,5 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { TOPICS } from './core/types'
 import { useAppStore } from './stores/app'
+
+const TOPIC_PATTERN = TOPICS.join('|')
 import HomeView from './views/HomeView.vue'
 
 // Hash history: deep links work on GitHub Pages without a 404 fallback.
@@ -13,13 +16,13 @@ export const router = createRouter({
       component: () => import('./views/ProfileSelectView.vue'),
     },
     {
-      path: '/einheit/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr|sache)/:category?',
+      path: `/einheit/:grade(\\d+)/:topic(${TOPIC_PATTERN})/:category?`,
       name: 'session',
       component: () => import('./views/SessionView.vue'),
       meta: { needsProfile: true },
     },
     {
-      path: '/fach/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr|sache)',
+      path: `/fach/:grade(\\d+)/:topic(${TOPIC_PATTERN})`,
       name: 'topic',
       component: () => import('./views/TopicView.vue'),
       meta: { needsProfile: true },

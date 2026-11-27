@@ -1,16 +1,33 @@
-export type Topic = 'lesen' | 'schreiben' | 'rechnen' | 'uhr' | 'sache'
-export const TOPICS: readonly Topic[] = ['lesen', 'schreiben', 'rechnen', 'uhr', 'sache']
+export type Topic =
+  'lesen' | 'schreiben' | 'sprache' | 'rechnen' | 'formen' | 'messen' | 'uhr' | 'sache'
+export const TOPICS: readonly Topic[] = [
+  'lesen',
+  'schreiben',
+  'sprache',
+  'rechnen',
+  'formen',
+  'messen',
+  'uhr',
+  'sache',
+]
 
 export const TOPIC_INFO: Record<Topic, { label: string; icon: string }> = {
   lesen: { label: 'Lesen', icon: '📖' },
   schreiben: { label: 'Schreiben', icon: '✏️' },
+  sprache: { label: 'Sprache', icon: '🧩' },
   rechnen: { label: 'Rechnen', icon: '🔢' },
+  formen: { label: 'Formen', icon: '🔷' },
+  messen: { label: 'Messen', icon: '📏' },
   uhr: { label: 'Uhr', icon: '🕒' },
   sache: { label: 'Sachunterricht', icon: '🔍' },
 }
 
-/** Subjects that only show a tile when the grade has content for them. */
-export const OPTIONAL_TOPICS: readonly Topic[] = ['sache']
+/**
+ * Subjects that only show a tile when the grade has content for them (plaene/README.md,
+ * section 3): Sprache, Formen and Messen start in grade 2; in grade 1 they are part of
+ * Schreiben and Rechnen.
+ */
+export const OPTIONAL_TOPICS: readonly Topic[] = ['sprache', 'formen', 'messen', 'sache']
 
 /** The subject's name in a state: in Bavaria it is "Heimat- und Sachunterricht" (HSU). */
 export function topicLabel(topic: Topic, land: LandCode | undefined): string {
@@ -188,11 +205,23 @@ export interface WordEntry {
   merkwort?: boolean
   /** Short example spoken together with the word, e.g. "der Hase" for "der". */
   beispiel?: string
+  // --- from grade 2 (plaene/klasse-2.md) ---
+  /** Exercise focus of the ISB basic vocabulary (a phenomenon id, see phenomena.ts). */
+  schwerpunkt?: string
+  /** Nouns: article and plural. */
+  artikel?: 'der' | 'die' | 'das'
+  plural?: string
+  /** Verbs: the form for er/sie/es ("spielt", "spricht"). */
+  er?: string
+  /** Umlaut and hardening: the form to practise and where it comes from (Hund ← Hunde). */
+  ableiten?: { wort: string; von: string }
 }
 
 /** A word with derived data, as the exercises use it. */
 export interface Word extends WordEntry {
   graphemes: string[]
+  /** Spelling phenomena: derived from the spelling plus the ISB focus. */
+  phenomena: string[]
   level: 1 | 2 | 3 | 4
   grundwortschatz: boolean
   /** 'basis' or the state code the word comes from. */

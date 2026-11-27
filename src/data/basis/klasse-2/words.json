@@ -1,0 +1,4188 @@
+[
+  {
+    "id": "aufgabe",
+    "text": "Aufgabe",
+    "syllables": ["Auf", "ga", "be"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Aufgaben",
+    "category": "dinge",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "auge",
+    "text": "Auge",
+    "syllables": ["Au", "ge"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Augen",
+    "category": "koerper",
+    "image": "1F441",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "auto",
+    "text": "Auto",
+    "syllables": ["Au", "to"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Autos",
+    "category": "fahrzeuge",
+    "image": "1F697",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "blau",
+    "text": "blau",
+    "syllables": ["blau"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F535",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "blume",
+    "text": "Blume",
+    "syllables": ["Blu", "me"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Blumen",
+    "category": "natur",
+    "image": "1F33C",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "bluete",
+    "text": "Blüte",
+    "syllables": ["Blü", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Blüten",
+    "category": "natur",
+    "image": "1F338",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "boese",
+    "text": "böse",
+    "syllables": ["bö", "se"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F620",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "braun",
+    "text": "braun",
+    "syllables": ["braun"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F7E4",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "brot",
+    "text": "Brot",
+    "syllables": ["Brot"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Brote",
+    "category": "essen",
+    "image": "1F35E",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "buch",
+    "text": "Buch",
+    "syllables": ["Buch"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Bücher",
+    "category": "dinge",
+    "image": "1F4D6",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "bunt",
+    "text": "bunt",
+    "syllables": ["bunt"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F308",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "dose",
+    "text": "Dose",
+    "syllables": ["Do", "se"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Dosen",
+    "category": "dinge",
+    "image": "1F96B",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "ende",
+    "text": "Ende",
+    "syllables": ["En", "de"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Enden",
+    "category": "dinge",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "ente",
+    "text": "Ente",
+    "syllables": ["En", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Enten",
+    "category": "tiere",
+    "image": "1F986",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "frau",
+    "text": "Frau",
+    "syllables": ["Frau"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Frauen",
+    "category": "menschen",
+    "image": "1F469",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "gemuese",
+    "text": "Gemüse",
+    "syllables": ["Ge", "mü", "se"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Gemüse",
+    "category": "essen",
+    "image": "1F966",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "gruen",
+    "text": "grün",
+    "syllables": ["grün"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F7E2",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "gut",
+    "text": "gut",
+    "syllables": ["gut"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F44D",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "hase",
+    "text": "Hase",
+    "syllables": ["Ha", "se"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Hasen",
+    "category": "tiere",
+    "image": "1F407",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "hose",
+    "text": "Hose",
+    "syllables": ["Ho", "se"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Hosen",
+    "category": "dinge",
+    "image": "1F456",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "kiste",
+    "text": "Kiste",
+    "syllables": ["Kis", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Kisten",
+    "category": "dinge",
+    "image": "1F4E6",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "laut",
+    "text": "laut",
+    "syllables": ["laut"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F4E2",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "loewe",
+    "text": "Löwe",
+    "syllables": ["Lö", "we"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Löwen",
+    "category": "tiere",
+    "image": "1F981",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "name",
+    "text": "Name",
+    "syllables": ["Na", "me"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Namen",
+    "category": "dinge",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "oma",
+    "text": "Oma",
+    "syllables": ["O", "ma"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Omas",
+    "category": "menschen",
+    "image": "1F475",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "opa",
+    "text": "Opa",
+    "syllables": ["O", "pa"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Opas",
+    "category": "menschen",
+    "image": "1F474",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "rabe",
+    "text": "Rabe",
+    "syllables": ["Ra", "be"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Raben",
+    "category": "tiere",
+    "image": "1F426-200D-2B1B",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "raupe",
+    "text": "Raupe",
+    "syllables": ["Rau", "pe"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Raupen",
+    "category": "tiere",
+    "image": "1F41B",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "rot",
+    "text": "rot",
+    "syllables": ["rot"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F534",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "salz",
+    "text": "Salz",
+    "syllables": ["Salz"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Salze",
+    "category": "essen",
+    "image": "1F9C2",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "schaf",
+    "text": "Schaf",
+    "syllables": ["Schaf"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Schafe",
+    "category": "tiere",
+    "image": "1F411",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "schere",
+    "text": "Schere",
+    "syllables": ["Sche", "re"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Scheren",
+    "category": "dinge",
+    "image": "2702",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "schoen",
+    "text": "schön",
+    "syllables": ["schön"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "schule",
+    "text": "Schule",
+    "syllables": ["Schu", "le"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Schulen",
+    "category": "dinge",
+    "image": "1F3EB",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "tante",
+    "text": "Tante",
+    "syllables": ["Tan", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Tanten",
+    "category": "menschen",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "telefon",
+    "text": "Telefon",
+    "syllables": ["Te", "le", "fon"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Telefone",
+    "category": "dinge",
+    "image": "260E",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "tomate",
+    "text": "Tomate",
+    "syllables": ["To", "ma", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Tomaten",
+    "category": "essen",
+    "image": "1F345",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "tun",
+    "text": "tun",
+    "syllables": ["tun"],
+    "wortart": "verb",
+    "er": "tut",
+    "category": "tun",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "weit",
+    "text": "weit",
+    "syllables": ["weit"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "wolf",
+    "text": "Wolf",
+    "syllables": ["Wolf"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Wölfe",
+    "category": "tiere",
+    "image": "1F43A",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "wolke",
+    "text": "Wolke",
+    "syllables": ["Wol", "ke"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Wolken",
+    "category": "natur",
+    "image": "2601",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "bruder",
+    "text": "Bruder",
+    "syllables": ["Bru", "der"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Brüder",
+    "category": "menschen",
+    "image": "1F466",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "feder",
+    "text": "Feder",
+    "syllables": ["Fe", "der"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Federn",
+    "category": "dinge",
+    "image": "1FAB6",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "fenster",
+    "text": "Fenster",
+    "syllables": ["Fens", "ter"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Fenster",
+    "category": "dinge",
+    "image": "1FA9F",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "schwester",
+    "text": "Schwester",
+    "syllables": ["Schwes", "ter"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Schwestern",
+    "category": "menschen",
+    "image": "1F467",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "winter",
+    "text": "Winter",
+    "syllables": ["Win", "ter"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Winter",
+    "category": "zeit",
+    "image": "2744",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "dunkel",
+    "text": "dunkel",
+    "syllables": ["dun", "kel"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "esel",
+    "text": "Esel",
+    "syllables": ["E", "sel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Esel",
+    "category": "tiere",
+    "image": "1FACF",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "gabel",
+    "text": "Gabel",
+    "syllables": ["Ga", "bel"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Gabeln",
+    "category": "dinge",
+    "image": "1F374",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "nadel",
+    "text": "Nadel",
+    "syllables": ["Na", "del"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Nadeln",
+    "category": "dinge",
+    "image": "1FAA1",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "nebel",
+    "text": "Nebel",
+    "syllables": ["Ne", "bel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Nebel",
+    "category": "natur",
+    "image": "1F32B",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "onkel",
+    "text": "Onkel",
+    "syllables": ["On", "kel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Onkel",
+    "category": "menschen",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "pinsel",
+    "text": "Pinsel",
+    "syllables": ["Pin", "sel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Pinsel",
+    "category": "dinge",
+    "image": "1F58C",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "wurzel",
+    "text": "Wurzel",
+    "syllables": ["Wur", "zel"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Wurzeln",
+    "category": "natur",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "baden",
+    "text": "baden",
+    "syllables": ["ba", "den"],
+    "wortart": "verb",
+    "er": "badet",
+    "category": "tun",
+    "image": "1F6C0",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "finden",
+    "text": "finden",
+    "syllables": ["fin", "den"],
+    "wortart": "verb",
+    "er": "findet",
+    "category": "tun",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "haben",
+    "text": "haben",
+    "syllables": ["ha", "ben"],
+    "wortart": "verb",
+    "er": "hat",
+    "category": "tun",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "holen",
+    "text": "holen",
+    "syllables": ["ho", "len"],
+    "wortart": "verb",
+    "er": "holt",
+    "category": "tun",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "hoeren",
+    "text": "hören",
+    "syllables": ["hö", "ren"],
+    "wortart": "verb",
+    "er": "hört",
+    "category": "tun",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "malen",
+    "text": "malen",
+    "syllables": ["ma", "len"],
+    "wortart": "verb",
+    "er": "malt",
+    "category": "tun",
+    "image": "1F3A8",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "rechnen",
+    "text": "rechnen",
+    "syllables": ["rech", "nen"],
+    "wortart": "verb",
+    "er": "rechnet",
+    "category": "tun",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "reden",
+    "text": "reden",
+    "syllables": ["re", "den"],
+    "wortart": "verb",
+    "er": "redet",
+    "category": "tun",
+    "image": "1F5E3",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "regen",
+    "text": "Regen",
+    "syllables": ["Re", "gen"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Regen",
+    "category": "natur",
+    "image": "1F327",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "rufen",
+    "text": "rufen",
+    "syllables": ["ru", "fen"],
+    "wortart": "verb",
+    "er": "ruft",
+    "category": "tun",
+    "image": "1F4E3",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "suchen",
+    "text": "suchen",
+    "syllables": ["su", "chen"],
+    "wortart": "verb",
+    "er": "sucht",
+    "category": "tun",
+    "image": "1F50D",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "wuenschen",
+    "text": "wünschen",
+    "syllables": ["wün", "schen"],
+    "wortart": "verb",
+    "er": "wünscht",
+    "category": "tun",
+    "schwerpunkt": "en"
+  },
+  {
+    "id": "ameise",
+    "text": "Ameise",
+    "syllables": ["A", "mei", "se"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Ameisen",
+    "category": "tiere",
+    "image": "1F41C",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "ei",
+    "text": "Ei",
+    "syllables": ["Ei"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Eier",
+    "category": "essen",
+    "image": "1F95A",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "eis",
+    "text": "Eis",
+    "syllables": ["Eis"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Eis",
+    "category": "essen",
+    "image": "1F366",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "fein",
+    "text": "fein",
+    "syllables": ["fein"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "klein",
+    "text": "klein",
+    "syllables": ["klein"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "leise",
+    "text": "leise",
+    "syllables": ["lei", "se"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F92B",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "reisen",
+    "text": "reisen",
+    "syllables": ["rei", "sen"],
+    "wortart": "verb",
+    "er": "reist",
+    "category": "tun",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "seife",
+    "text": "Seife",
+    "syllables": ["Sei", "fe"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Seifen",
+    "category": "dinge",
+    "image": "1F9FC",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "zeit",
+    "text": "Zeit",
+    "syllables": ["Zeit"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Zeiten",
+    "category": "zeit",
+    "image": "23F0",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "zwei",
+    "text": "zwei",
+    "syllables": ["zwei"],
+    "wortart": "klein",
+    "category": "woerter",
+    "image": "0032-FE0F-20E3",
+    "schwerpunkt": "ei"
+  },
+  {
+    "id": "euro",
+    "text": "Euro",
+    "syllables": ["Eu", "ro"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Euro",
+    "category": "dinge",
+    "image": "1F4B6",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "leute",
+    "text": "Leute",
+    "syllables": ["Leu", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Leute",
+    "category": "menschen",
+    "image": "1F465",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "neu",
+    "text": "neu",
+    "syllables": ["neu"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F195",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "bringen",
+    "text": "bringen",
+    "syllables": ["brin", "gen"],
+    "wortart": "verb",
+    "er": "bringt",
+    "category": "tun",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "eng",
+    "text": "eng",
+    "syllables": ["eng"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "junge",
+    "text": "Junge",
+    "syllables": ["Jun", "ge"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Jungen",
+    "category": "menschen",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "ring",
+    "text": "Ring",
+    "syllables": ["Ring"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Ringe",
+    "category": "dinge",
+    "image": "1F48D",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "singen",
+    "text": "singen",
+    "syllables": ["sin", "gen"],
+    "wortart": "verb",
+    "er": "singt",
+    "category": "tun",
+    "image": "1F3A4",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "bank",
+    "text": "Bank",
+    "syllables": ["Bank"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Bänke",
+    "category": "dinge",
+    "image": "1FA91",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "danken",
+    "text": "danken",
+    "syllables": ["dan", "ken"],
+    "wortart": "verb",
+    "er": "dankt",
+    "category": "tun",
+    "image": "1F64F",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "denken",
+    "text": "denken",
+    "syllables": ["den", "ken"],
+    "wortart": "verb",
+    "er": "denkt",
+    "category": "tun",
+    "image": "1F914",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "krank",
+    "text": "krank",
+    "syllables": ["krank"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F912",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "trinken",
+    "text": "trinken",
+    "syllables": ["trin", "ken"],
+    "wortart": "verb",
+    "er": "trinkt",
+    "category": "tun",
+    "image": "1F964",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "sparen",
+    "text": "sparen",
+    "syllables": ["spa", "ren"],
+    "wortart": "verb",
+    "er": "spart",
+    "category": "tun",
+    "image": "1F437",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "spielen",
+    "text": "spielen",
+    "syllables": ["spie", "len"],
+    "wortart": "verb",
+    "er": "spielt",
+    "category": "tun",
+    "image": "1F3B2",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "sport",
+    "text": "Sport",
+    "syllables": ["Sport"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Sport",
+    "category": "dinge",
+    "image": "26BD",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "sprechen",
+    "text": "sprechen",
+    "syllables": ["spre", "chen"],
+    "wortart": "verb",
+    "er": "spricht",
+    "category": "tun",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "stein",
+    "text": "Stein",
+    "syllables": ["Stein"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Steine",
+    "category": "natur",
+    "image": "1FAA8",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stern",
+    "text": "Stern",
+    "syllables": ["Stern"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Sterne",
+    "category": "natur",
+    "image": "2B50",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stunde",
+    "text": "Stunde",
+    "syllables": ["Stun", "de"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Stunden",
+    "category": "zeit",
+    "image": "231B",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "brauchen",
+    "text": "brauchen",
+    "syllables": ["brau", "chen"],
+    "wortart": "verb",
+    "er": "braucht",
+    "category": "tun",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "hoch",
+    "text": "hoch",
+    "syllables": ["hoch"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "leicht",
+    "text": "leicht",
+    "syllables": ["leicht"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "machen",
+    "text": "machen",
+    "syllables": ["ma", "chen"],
+    "wortart": "verb",
+    "er": "macht",
+    "category": "tun",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "woche",
+    "text": "Woche",
+    "syllables": ["Wo", "che"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Wochen",
+    "category": "zeit",
+    "image": "1F4C5",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "frisch",
+    "text": "frisch",
+    "syllables": ["frisch"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "scheinen",
+    "text": "scheinen",
+    "syllables": ["schei", "nen"],
+    "wortart": "verb",
+    "er": "scheint",
+    "category": "tun",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "schneiden",
+    "text": "schneiden",
+    "syllables": ["schnei", "den"],
+    "wortart": "verb",
+    "er": "schneidet",
+    "category": "tun",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "tasche",
+    "text": "Tasche",
+    "syllables": ["Ta", "sche"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Taschen",
+    "category": "dinge",
+    "image": "1F45C",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "tisch",
+    "text": "Tisch",
+    "syllables": ["Tisch"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Tische",
+    "category": "dinge",
+    "image": "fibel-tisch",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "kopf",
+    "text": "Kopf",
+    "syllables": ["Kopf"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Köpfe",
+    "category": "koerper",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "pflanze",
+    "text": "Pflanze",
+    "syllables": ["Pflan", "ze"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Pflanzen",
+    "category": "natur",
+    "image": "1FAB4",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "quelle",
+    "text": "Quelle",
+    "syllables": ["Quel", "le"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Quellen",
+    "category": "natur",
+    "image": "1F4A7",
+    "schwerpunkt": "qu"
+  },
+  {
+    "id": "quadrat",
+    "text": "Quadrat",
+    "syllables": ["Qua", "drat"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Quadrate",
+    "category": "dinge",
+    "image": "1F7E7",
+    "schwerpunkt": "qu"
+  },
+  {
+    "id": "quatsch",
+    "text": "Quatsch",
+    "syllables": ["Quatsch"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Quatsch",
+    "category": "dinge",
+    "image": "1F92A",
+    "schwerpunkt": "qu"
+  },
+  {
+    "id": "arbeiten",
+    "text": "arbeiten",
+    "syllables": ["ar", "bei", "ten"],
+    "wortart": "verb",
+    "er": "arbeitet",
+    "category": "tun",
+    "image": "1F477",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "antworten",
+    "text": "antworten",
+    "syllables": ["ant", "wor", "ten"],
+    "wortart": "verb",
+    "er": "antwortet",
+    "category": "tun",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "birne",
+    "text": "Birne",
+    "syllables": ["Bir", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Birnen",
+    "category": "essen",
+    "image": "1F350",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "duerfen",
+    "text": "dürfen",
+    "syllables": ["dür", "fen"],
+    "wortart": "verb",
+    "er": "darf",
+    "category": "tun",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "garten",
+    "text": "Garten",
+    "syllables": ["Gar", "ten"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Gärten",
+    "category": "natur",
+    "image": "1F3E1",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "lernen",
+    "text": "lernen",
+    "syllables": ["ler", "nen"],
+    "wortart": "verb",
+    "er": "lernt",
+    "category": "tun",
+    "image": "1F4DA",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "partner",
+    "text": "Partner",
+    "syllables": ["Part", "ner"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Partner",
+    "category": "menschen",
+    "image": "1F46B",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "schwarz",
+    "text": "schwarz",
+    "syllables": ["schwarz"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "26AB",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "turnen",
+    "text": "turnen",
+    "syllables": ["tur", "nen"],
+    "wortart": "verb",
+    "er": "turnt",
+    "category": "tun",
+    "image": "1F938",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "warten",
+    "text": "warten",
+    "syllables": ["war", "ten"],
+    "wortart": "verb",
+    "er": "wartet",
+    "category": "tun",
+    "image": "23F3",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "wort",
+    "text": "Wort",
+    "syllables": ["Wort"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Wörter",
+    "category": "dinge",
+    "image": "1F4AC",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "biene",
+    "text": "Biene",
+    "syllables": ["Bie", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Bienen",
+    "category": "tiere",
+    "image": "1F41D",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "lieben",
+    "text": "lieben",
+    "syllables": ["lie", "ben"],
+    "wortart": "verb",
+    "er": "liebt",
+    "category": "tun",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "liegen",
+    "text": "liegen",
+    "syllables": ["lie", "gen"],
+    "wortart": "verb",
+    "er": "liegt",
+    "category": "tun",
+    "image": "1F6CC",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "sieben",
+    "text": "sieben",
+    "syllables": ["sie", "ben"],
+    "wortart": "klein",
+    "category": "woerter",
+    "image": "0037-FE0F-20E3",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "wiese",
+    "text": "Wiese",
+    "syllables": ["Wie", "se"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Wiesen",
+    "category": "natur",
+    "image": "1F33E",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "ziege",
+    "text": "Ziege",
+    "syllables": ["Zie", "ge"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Ziegen",
+    "category": "tiere",
+    "image": "1F410",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "alle",
+    "text": "alle",
+    "syllables": ["al", "le"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "fueller",
+    "text": "Füller",
+    "syllables": ["Fül", "ler"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Füller",
+    "category": "dinge",
+    "image": "1F58B",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "himmel",
+    "text": "Himmel",
+    "syllables": ["Him", "mel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Himmel",
+    "category": "natur",
+    "image": "1F324",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "klasse",
+    "text": "Klasse",
+    "syllables": ["Klas", "se"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Klassen",
+    "category": "dinge",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "koennen",
+    "text": "können",
+    "syllables": ["kön", "nen"],
+    "wortart": "verb",
+    "er": "kann",
+    "category": "tun",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "muessen",
+    "text": "müssen",
+    "syllables": ["müs", "sen"],
+    "wortart": "verb",
+    "er": "muss",
+    "category": "tun",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "mutter",
+    "text": "Mutter",
+    "syllables": ["Mut", "ter"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Mütter",
+    "category": "menschen",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "rollen",
+    "text": "rollen",
+    "syllables": ["rol", "len"],
+    "wortart": "verb",
+    "er": "rollt",
+    "category": "tun",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "sollen",
+    "text": "sollen",
+    "syllables": ["sol", "len"],
+    "wortart": "verb",
+    "er": "soll",
+    "category": "tun",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "sommer",
+    "text": "Sommer",
+    "syllables": ["Som", "mer"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Sommer",
+    "category": "zeit",
+    "image": "1F3D6",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "sonne",
+    "text": "Sonne",
+    "syllables": ["Son", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Sonnen",
+    "category": "natur",
+    "image": "2600",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "wasser",
+    "text": "Wasser",
+    "syllables": ["Was", "ser"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Wasser",
+    "category": "natur",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "wollen",
+    "text": "wollen",
+    "syllables": ["wol", "len"],
+    "wortart": "verb",
+    "er": "will",
+    "category": "tun",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "apfel",
+    "text": "Apfel",
+    "syllables": ["Ap", "fel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Äpfel",
+    "category": "essen",
+    "image": "1F34E",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Äpfel",
+      "von": "Apfel"
+    }
+  },
+  {
+    "id": "baum",
+    "text": "Baum",
+    "syllables": ["Baum"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Bäume",
+    "category": "natur",
+    "image": "1F333",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Bäume",
+      "von": "Baum"
+    }
+  },
+  {
+    "id": "gras",
+    "text": "Gras",
+    "syllables": ["Gras"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Gräser",
+    "category": "natur",
+    "image": "1F33F",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Gräser",
+      "von": "Gras"
+    }
+  },
+  {
+    "id": "haus",
+    "text": "Haus",
+    "syllables": ["Haus"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Häuser",
+    "category": "dinge",
+    "image": "1F3E0",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Häuser",
+      "von": "Haus"
+    }
+  },
+  {
+    "id": "laufen",
+    "text": "laufen",
+    "syllables": ["lau", "fen"],
+    "wortart": "verb",
+    "er": "läuft",
+    "category": "tun",
+    "image": "1F3C3",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "läuft",
+      "von": "laufen"
+    }
+  },
+  {
+    "id": "maus",
+    "text": "Maus",
+    "syllables": ["Maus"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Mäuse",
+    "category": "tiere",
+    "image": "1F42D",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Mäuse",
+      "von": "Maus"
+    }
+  },
+  {
+    "id": "schlafen",
+    "text": "schlafen",
+    "syllables": ["schla", "fen"],
+    "wortart": "verb",
+    "er": "schläft",
+    "category": "tun",
+    "image": "1F634",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "schläft",
+      "von": "schlafen"
+    }
+  },
+  {
+    "id": "bild",
+    "text": "Bild",
+    "syllables": ["Bild"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Bilder",
+    "category": "dinge",
+    "image": "1F5BC",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Bild",
+      "von": "Bilder"
+    }
+  },
+  {
+    "id": "bleiben",
+    "text": "bleiben",
+    "syllables": ["blei", "ben"],
+    "wortart": "verb",
+    "er": "bleibt",
+    "category": "tun",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "bleibt",
+      "von": "bleiben"
+    }
+  },
+  {
+    "id": "bub",
+    "text": "Bub",
+    "syllables": ["Bub"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Buben",
+    "category": "menschen",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Bub",
+      "von": "Buben"
+    }
+  },
+  {
+    "id": "fragen",
+    "text": "fragen",
+    "syllables": ["fra", "gen"],
+    "wortart": "verb",
+    "er": "fragt",
+    "category": "tun",
+    "image": "2753",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "fragt",
+      "von": "fragen"
+    }
+  },
+  {
+    "id": "freund",
+    "text": "Freund",
+    "syllables": ["Freund"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Freunde",
+    "category": "menschen",
+    "image": "1F46C",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Freund",
+      "von": "Freunde"
+    }
+  },
+  {
+    "id": "geben",
+    "text": "geben",
+    "syllables": ["ge", "ben"],
+    "wortart": "verb",
+    "er": "gibt",
+    "category": "tun",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "gibt",
+      "von": "geben"
+    }
+  },
+  {
+    "id": "gelb",
+    "text": "gelb",
+    "syllables": ["gelb"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F7E1",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "gelb",
+      "von": "gelbe"
+    }
+  },
+  {
+    "id": "gesund",
+    "text": "gesund",
+    "syllables": ["ge", "sund"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F4AA",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "gesund",
+      "von": "gesunde"
+    }
+  },
+  {
+    "id": "hund",
+    "text": "Hund",
+    "syllables": ["Hund"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Hunde",
+    "category": "tiere",
+    "image": "1F415",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Hund",
+      "von": "Hunde"
+    }
+  },
+  {
+    "id": "kind",
+    "text": "Kind",
+    "syllables": ["Kind"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Kinder",
+    "category": "menschen",
+    "image": "1F9D2",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Kind",
+      "von": "Kinder"
+    }
+  },
+  {
+    "id": "kleid",
+    "text": "Kleid",
+    "syllables": ["Kleid"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Kleider",
+    "category": "dinge",
+    "image": "1F457",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Kleid",
+      "von": "Kleider"
+    }
+  },
+  {
+    "id": "leben",
+    "text": "leben",
+    "syllables": ["le", "ben"],
+    "wortart": "verb",
+    "er": "lebt",
+    "category": "tun",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "lebt",
+      "von": "leben"
+    }
+  },
+  {
+    "id": "legen",
+    "text": "legen",
+    "syllables": ["le", "gen"],
+    "wortart": "verb",
+    "er": "legt",
+    "category": "tun",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "legt",
+      "von": "legen"
+    }
+  },
+  {
+    "id": "pferd",
+    "text": "Pferd",
+    "syllables": ["Pferd"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Pferde",
+    "category": "tiere",
+    "image": "1F40E",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Pferd",
+      "von": "Pferde"
+    }
+  },
+  {
+    "id": "sagen",
+    "text": "sagen",
+    "syllables": ["sa", "gen"],
+    "wortart": "verb",
+    "er": "sagt",
+    "category": "tun",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "sagt",
+      "von": "sagen"
+    }
+  },
+  {
+    "id": "schreiben",
+    "text": "schreiben",
+    "syllables": ["schrei", "ben"],
+    "wortart": "verb",
+    "er": "schreibt",
+    "category": "tun",
+    "image": "270D",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "schreibt",
+      "von": "schreiben"
+    }
+  },
+  {
+    "id": "tag",
+    "text": "Tag",
+    "syllables": ["Tag"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Tage",
+    "category": "zeit",
+    "image": "1F305",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Tag",
+      "von": "Tage"
+    }
+  },
+  {
+    "id": "ueben",
+    "text": "üben",
+    "syllables": ["ü", "ben"],
+    "wortart": "verb",
+    "er": "übt",
+    "category": "tun",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "übt",
+      "von": "üben"
+    }
+  },
+  {
+    "id": "weg",
+    "text": "Weg",
+    "syllables": ["Weg"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Wege",
+    "category": "dinge",
+    "image": "1F6E4",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Weg",
+      "von": "Wege"
+    }
+  },
+  {
+    "id": "wind",
+    "text": "Wind",
+    "syllables": ["Wind"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Winde",
+    "category": "natur",
+    "image": "1F32C",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Wind",
+      "von": "Winde"
+    }
+  },
+  {
+    "id": "zeigen",
+    "text": "zeigen",
+    "syllables": ["zei", "gen"],
+    "wortart": "verb",
+    "er": "zeigt",
+    "category": "tun",
+    "image": "1F449",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "zeigt",
+      "von": "zeigen"
+    }
+  },
+  {
+    "id": "aber",
+    "text": "aber",
+    "syllables": ["a", "ber"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "als",
+    "text": "als",
+    "syllables": ["als"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "also",
+    "text": "also",
+    "syllables": ["al", "so"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "auf",
+    "text": "auf",
+    "syllables": ["auf"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "aus",
+    "text": "aus",
+    "syllables": ["aus"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "bei",
+    "text": "bei",
+    "syllables": ["bei"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "da",
+    "text": "da",
+    "syllables": ["da"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "das",
+    "text": "das",
+    "syllables": ["das"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "der",
+    "text": "der",
+    "syllables": ["der"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "des",
+    "text": "des",
+    "syllables": ["des"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "dir",
+    "text": "dir",
+    "syllables": ["dir"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "dich",
+    "text": "dich",
+    "syllables": ["dich"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "die",
+    "text": "die",
+    "syllables": ["die"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "doch",
+    "text": "doch",
+    "syllables": ["doch"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "du",
+    "text": "du",
+    "syllables": ["du"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "durch",
+    "text": "durch",
+    "syllables": ["durch"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "er",
+    "text": "er",
+    "syllables": ["er"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "es",
+    "text": "es",
+    "syllables": ["es"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "fuer",
+    "text": "für",
+    "syllables": ["für"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "her",
+    "text": "her",
+    "syllables": ["her"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "hinter",
+    "text": "hinter",
+    "syllables": ["hin", "ter"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "ich",
+    "text": "ich",
+    "syllables": ["ich"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "im",
+    "text": "im",
+    "syllables": ["im"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "in",
+    "text": "in",
+    "syllables": ["in"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "ist",
+    "text": "ist",
+    "syllables": ["ist"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "ja",
+    "text": "ja",
+    "syllables": ["ja"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "mit",
+    "text": "mit",
+    "syllables": ["mit"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "nach",
+    "text": "nach",
+    "syllables": ["nach"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "nein",
+    "text": "nein",
+    "syllables": ["nein"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "nicht",
+    "text": "nicht",
+    "syllables": ["nicht"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "nun",
+    "text": "nun",
+    "syllables": ["nun"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "oder",
+    "text": "oder",
+    "syllables": ["o", "der"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "schon",
+    "text": "schon",
+    "syllables": ["schon"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "sie",
+    "text": "sie",
+    "syllables": ["sie"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "sind",
+    "text": "sind",
+    "syllables": ["sind"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "so",
+    "text": "so",
+    "syllables": ["so"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "ueber",
+    "text": "über",
+    "syllables": ["ü", "ber"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "um",
+    "text": "um",
+    "syllables": ["um"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "und",
+    "text": "und",
+    "syllables": ["und"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "was",
+    "text": "was",
+    "syllables": ["was"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "weil",
+    "text": "weil",
+    "syllables": ["weil"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "weiter",
+    "text": "weiter",
+    "syllables": ["wei", "ter"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "wer",
+    "text": "wer",
+    "syllables": ["wer"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "wir",
+    "text": "wir",
+    "syllables": ["wir"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "wo",
+    "text": "wo",
+    "syllables": ["wo"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "haeufig"
+  },
+  {
+    "id": "fuss",
+    "text": "Fuß",
+    "syllables": ["Fuß"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Füße",
+    "category": "koerper",
+    "image": "1F9B6",
+    "schwerpunkt": "ss"
+  },
+  {
+    "id": "gross",
+    "text": "groß",
+    "syllables": ["groß"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ss"
+  },
+  {
+    "id": "sitzen",
+    "text": "sitzen",
+    "syllables": ["sit", "zen"],
+    "wortart": "verb",
+    "er": "sitzt",
+    "category": "tun",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "katze",
+    "text": "Katze",
+    "syllables": ["Kat", "ze"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Katzen",
+    "category": "tiere",
+    "image": "1F408",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "satz",
+    "text": "Satz",
+    "syllables": ["Satz"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Sätze",
+    "category": "dinge",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "dick",
+    "text": "dick",
+    "syllables": ["dick"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "backen",
+    "text": "backen",
+    "syllables": ["ba", "cken"],
+    "wortart": "verb",
+    "er": "backt",
+    "category": "tun",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "cent",
+    "text": "Cent",
+    "syllables": ["Cent"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Cent",
+    "category": "dinge",
+    "image": "1FA99",
+    "schwerpunkt": "c"
+  },
+  {
+    "id": "clown",
+    "text": "Clown",
+    "syllables": ["Clown"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Clowns",
+    "category": "menschen",
+    "image": "1F921",
+    "schwerpunkt": "c"
+  },
+  {
+    "id": "computer",
+    "text": "Computer",
+    "syllables": ["Com", "pu", "ter"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Computer",
+    "category": "dinge",
+    "image": "1F4BB",
+    "schwerpunkt": "c"
+  },
+  {
+    "id": "viel",
+    "text": "viel",
+    "syllables": ["viel"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "vase",
+    "text": "Vase",
+    "syllables": ["Va", "se"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Vasen",
+    "category": "dinge",
+    "image": "1F3FA",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "vater",
+    "text": "Vater",
+    "syllables": ["Va", "ter"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Väter",
+    "category": "menschen",
+    "image": "1F468",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "vogel",
+    "text": "Vogel",
+    "syllables": ["Vo", "gel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Vögel",
+    "category": "tiere",
+    "image": "1F426",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "vor",
+    "text": "vor",
+    "syllables": ["vor"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "baby",
+    "text": "Baby",
+    "syllables": ["Ba", "by"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Babys",
+    "category": "menschen",
+    "image": "1F476",
+    "schwerpunkt": "y"
+  },
+  {
+    "id": "hexe",
+    "text": "Hexe",
+    "syllables": ["He", "xe"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Hexen",
+    "category": "menschen",
+    "image": "1F9D9-200D-2640-FE0F",
+    "schwerpunkt": "x"
+  },
+  {
+    "id": "fruehling",
+    "text": "Frühling",
+    "syllables": ["Früh", "ling"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Frühling",
+    "category": "zeit",
+    "image": "1F337",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "gehen",
+    "text": "gehen",
+    "syllables": ["ge", "hen"],
+    "wortart": "verb",
+    "er": "geht",
+    "category": "tun",
+    "image": "1F6B6",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "jahr",
+    "text": "Jahr",
+    "syllables": ["Jahr"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Jahre",
+    "category": "zeit",
+    "image": "1F4C6",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "uhr",
+    "text": "Uhr",
+    "syllables": ["Uhr"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Uhren",
+    "category": "zeit",
+    "image": "1F570",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "zahl",
+    "text": "Zahl",
+    "syllables": ["Zahl"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Zahlen",
+    "category": "dinge",
+    "image": "1F522",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "zahlen",
+    "text": "zahlen",
+    "syllables": ["zah", "len"],
+    "wortart": "verb",
+    "er": "zahlt",
+    "category": "tun",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "zaehlen",
+    "text": "zählen",
+    "syllables": ["zäh", "len"],
+    "wortart": "verb",
+    "er": "zählt",
+    "category": "tun",
+    "image": "1F9EE",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "zahn",
+    "text": "Zahn",
+    "syllables": ["Zahn"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Zähne",
+    "category": "koerper",
+    "image": "1F9B7",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "maedchen",
+    "text": "Mädchen",
+    "syllables": ["Mäd", "chen"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Mädchen",
+    "category": "menschen",
+    "schwerpunkt": "ae"
+  },
+  {
+    "id": "hai",
+    "text": "Hai",
+    "syllables": ["Hai"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Haie",
+    "category": "tiere",
+    "image": "1F988",
+    "schwerpunkt": "ai"
+  },
+  {
+    "id": "kaiser",
+    "text": "Kaiser",
+    "syllables": ["Kai", "ser"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Kaiser",
+    "category": "menschen",
+    "image": "1F451",
+    "schwerpunkt": "ai"
+  },
+  {
+    "id": "mai",
+    "text": "Mai",
+    "syllables": ["Mai"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Mai",
+    "category": "zeit",
+    "schwerpunkt": "ai"
+  },
+  {
+    "id": "tiger",
+    "text": "Tiger",
+    "syllables": ["Ti", "ger"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Tiger",
+    "category": "tiere",
+    "image": "1F405",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "eimer",
+    "text": "Eimer",
+    "syllables": ["Ei", "mer"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Eimer",
+    "category": "dinge",
+    "image": "1FAA3",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "leiter",
+    "text": "Leiter",
+    "syllables": ["Lei", "ter"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Leitern",
+    "category": "dinge",
+    "image": "1FA9C",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "kinder",
+    "text": "Kinder",
+    "syllables": ["Kin", "der"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Kinder",
+    "category": "menschen",
+    "schwerpunkt": "er"
+  },
+  {
+    "id": "butter",
+    "text": "Butter",
+    "syllables": ["But", "ter"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Butter",
+    "category": "essen",
+    "image": "1F9C8",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "teller",
+    "text": "Teller",
+    "syllables": ["Tel", "ler"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Teller",
+    "category": "dinge",
+    "image": "1F37D",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "koffer",
+    "text": "Koffer",
+    "syllables": ["Kof", "fer"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Koffer",
+    "category": "dinge",
+    "image": "1F9F3",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "hammer",
+    "text": "Hammer",
+    "syllables": ["Ham", "mer"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Hammer",
+    "category": "dinge",
+    "image": "1F528",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "messer",
+    "text": "Messer",
+    "syllables": ["Mes", "ser"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Messer",
+    "category": "dinge",
+    "image": "1F52A",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "puppe",
+    "text": "Puppe",
+    "syllables": ["Pup", "pe"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Puppen",
+    "category": "dinge",
+    "image": "1FA86",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "brille",
+    "text": "Brille",
+    "syllables": ["Bril", "le"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Brillen",
+    "category": "dinge",
+    "image": "1F453",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "kamm",
+    "text": "Kamm",
+    "syllables": ["Kamm"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Kamm",
+    "category": "dinge",
+    "image": "1FAAE",
+    "schwerpunkt": "doppel"
+  },
+  {
+    "id": "loeffel",
+    "text": "Löffel",
+    "syllables": ["Löf", "fel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Löffel",
+    "category": "dinge",
+    "image": "1F944",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "igel",
+    "text": "Igel",
+    "syllables": ["I", "gel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Igel",
+    "category": "tiere",
+    "image": "1F994",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "kugel",
+    "text": "Kugel",
+    "syllables": ["Ku", "gel"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Kugeln",
+    "category": "dinge",
+    "image": "1F52E",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "schaufel",
+    "text": "Schaufel",
+    "syllables": ["Schau", "fel"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Schaufeln",
+    "category": "dinge",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "insel",
+    "text": "Insel",
+    "syllables": ["In", "sel"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Inseln",
+    "category": "natur",
+    "image": "1F3DD",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "mantel",
+    "text": "Mantel",
+    "syllables": ["Man", "tel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Mantel",
+    "category": "dinge",
+    "image": "1F9E5",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "nudel",
+    "text": "Nudel",
+    "syllables": ["Nu", "del"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Nudeln",
+    "category": "essen",
+    "image": "1F35D",
+    "schwerpunkt": "el"
+  },
+  {
+    "id": "kerze",
+    "text": "Kerze",
+    "syllables": ["Ker", "ze"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Kerzen",
+    "category": "dinge",
+    "image": "1F56F",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "karte",
+    "text": "Karte",
+    "syllables": ["Kar", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Karten",
+    "category": "dinge",
+    "image": "1F5FA",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "gurke",
+    "text": "Gurke",
+    "syllables": ["Gur", "ke"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Gurken",
+    "category": "essen",
+    "image": "1F952",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "torte",
+    "text": "Torte",
+    "syllables": ["Tor", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Torten",
+    "category": "essen",
+    "image": "1F382",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "herz",
+    "text": "Herz",
+    "syllables": ["Herz"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Herzen",
+    "category": "koerper",
+    "image": "2764",
+    "schwerpunkt": "r"
+  },
+  {
+    "id": "burg",
+    "text": "Burg",
+    "syllables": ["Burg"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Burgen",
+    "category": "dinge",
+    "image": "1F3F0",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Burg",
+      "von": "Burgen"
+    }
+  },
+  {
+    "id": "berg",
+    "text": "Berg",
+    "syllables": ["Berg"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Berge",
+    "category": "natur",
+    "image": "26F0",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Berg",
+      "von": "Berge"
+    }
+  },
+  {
+    "id": "zwerg",
+    "text": "Zwerg",
+    "syllables": ["Zwerg"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Zwerge",
+    "category": "menschen",
+    "image": "1F9D9",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Zwerg",
+      "von": "Zwerge"
+    }
+  },
+  {
+    "id": "korb",
+    "text": "Korb",
+    "syllables": ["Korb"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Körbe",
+    "category": "dinge",
+    "image": "1F9FA",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Korb",
+      "von": "Körbe"
+    }
+  },
+  {
+    "id": "mund",
+    "text": "Mund",
+    "syllables": ["Mund"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Münder",
+    "category": "koerper",
+    "image": "1F444",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Mund",
+      "von": "Münder"
+    }
+  },
+  {
+    "id": "zug",
+    "text": "Zug",
+    "syllables": ["Zug"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Züge",
+    "category": "fahrzeuge",
+    "image": "1F686",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Zug",
+      "von": "Züge"
+    }
+  },
+  {
+    "id": "schild",
+    "text": "Schild",
+    "syllables": ["Schild"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Schilder",
+    "category": "dinge",
+    "image": "1FAA7",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Schild",
+      "von": "Schilder"
+    }
+  },
+  {
+    "id": "hand",
+    "text": "Hand",
+    "syllables": ["Hand"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Hände",
+    "category": "koerper",
+    "image": "270B",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Hand",
+      "von": "Hände"
+    }
+  },
+  {
+    "id": "rad",
+    "text": "Rad",
+    "syllables": ["Rad"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Räder",
+    "category": "fahrzeuge",
+    "image": "1F6B2",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Rad",
+      "von": "Räder"
+    }
+  },
+  {
+    "id": "kalb",
+    "text": "Kalb",
+    "syllables": ["Kalb"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Kälber",
+    "category": "tiere",
+    "image": "1F404",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Kalb",
+      "von": "Kälber"
+    }
+  },
+  {
+    "id": "dieb",
+    "text": "Dieb",
+    "syllables": ["Dieb"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Diebe",
+    "category": "menschen",
+    "image": "1F977",
+    "schwerpunkt": "verhaertung",
+    "ableiten": {
+      "wort": "Dieb",
+      "von": "Diebe"
+    }
+  },
+  {
+    "id": "baecker",
+    "text": "Bäcker",
+    "syllables": ["Bä", "cker"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Bäcker",
+    "category": "menschen",
+    "image": "1F9D1-200D-1F373",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Bäcker",
+      "von": "backen"
+    }
+  },
+  {
+    "id": "ball",
+    "text": "Ball",
+    "syllables": ["Ball"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Bälle",
+    "category": "dinge",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Bälle",
+      "von": "Ball"
+    }
+  },
+  {
+    "id": "wald",
+    "text": "Wald",
+    "syllables": ["Wald"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Wälder",
+    "category": "natur",
+    "image": "1F332",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Wälder",
+      "von": "Wald"
+    }
+  },
+  {
+    "id": "glas",
+    "text": "Glas",
+    "syllables": ["Glas"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Gläser",
+    "category": "dinge",
+    "image": "1F95B",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Gläser",
+      "von": "Glas"
+    }
+  },
+  {
+    "id": "blatt",
+    "text": "Blatt",
+    "syllables": ["Blatt"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Blätter",
+    "category": "natur",
+    "image": "1F343",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Blätter",
+      "von": "Blatt"
+    }
+  },
+  {
+    "id": "zaun",
+    "text": "Zaun",
+    "syllables": ["Zaun"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Zäune",
+    "category": "dinge",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Zäune",
+      "von": "Zaun"
+    }
+  },
+  {
+    "id": "bauch",
+    "text": "Bauch",
+    "syllables": ["Bauch"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Bäuche",
+    "category": "koerper",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "Bäuche",
+      "von": "Bauch"
+    }
+  },
+  {
+    "id": "fahren",
+    "text": "fahren",
+    "syllables": ["fah", "ren"],
+    "wortart": "verb",
+    "er": "fährt",
+    "category": "tun",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "fährt",
+      "von": "fahren"
+    }
+  },
+  {
+    "id": "fallen",
+    "text": "fallen",
+    "syllables": ["fal", "len"],
+    "wortart": "verb",
+    "er": "fällt",
+    "category": "tun",
+    "image": "1F342",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "fällt",
+      "von": "fallen"
+    }
+  },
+  {
+    "id": "tragen",
+    "text": "tragen",
+    "syllables": ["tra", "gen"],
+    "wortart": "verb",
+    "er": "trägt",
+    "category": "tun",
+    "schwerpunkt": "umlaut",
+    "ableiten": {
+      "wort": "trägt",
+      "von": "tragen"
+    }
+  },
+  {
+    "id": "baer",
+    "text": "Bär",
+    "syllables": ["Bär"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Bären",
+    "category": "tiere",
+    "image": "1F43B",
+    "schwerpunkt": "ae"
+  },
+  {
+    "id": "kaese",
+    "text": "Käse",
+    "syllables": ["Kä", "se"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Käse",
+    "category": "essen",
+    "image": "1F9C0",
+    "schwerpunkt": "ae"
+  },
+  {
+    "id": "saege",
+    "text": "Säge",
+    "syllables": ["Sä", "ge"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Sägen",
+    "category": "dinge",
+    "image": "1FA9A",
+    "schwerpunkt": "ae"
+  },
+  {
+    "id": "kaefer",
+    "text": "Käfer",
+    "syllables": ["Kä", "fer"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Käfer",
+    "category": "tiere",
+    "image": "1FAB2",
+    "schwerpunkt": "ae"
+  },
+  {
+    "id": "schnecke",
+    "text": "Schnecke",
+    "syllables": ["Schne", "cke"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Schnecken",
+    "category": "tiere",
+    "image": "1F40C",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "jacke",
+    "text": "Jacke",
+    "syllables": ["Ja", "cke"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Jacken",
+    "category": "dinge",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "glocke",
+    "text": "Glocke",
+    "syllables": ["Glo", "cke"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Glocken",
+    "category": "dinge",
+    "image": "1F514",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "zucker",
+    "text": "Zucker",
+    "syllables": ["Zu", "cker"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Zucker",
+    "category": "essen",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "socke",
+    "text": "Socke",
+    "syllables": ["So", "cke"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Socken",
+    "category": "dinge",
+    "image": "1F9E6",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "rock",
+    "text": "Rock",
+    "syllables": ["Rock"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Röcke",
+    "category": "dinge",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "bruecke",
+    "text": "Brücke",
+    "syllables": ["Brü", "cke"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Brücken",
+    "category": "dinge",
+    "image": "1F309",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "stock",
+    "text": "Stock",
+    "syllables": ["Stock"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Stöcke",
+    "category": "dinge",
+    "schwerpunkt": "ck"
+  },
+  {
+    "id": "muetze",
+    "text": "Mütze",
+    "syllables": ["Müt", "ze"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Mützen",
+    "category": "dinge",
+    "image": "1F9E2",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "spitze",
+    "text": "Spitze",
+    "syllables": ["Spit", "ze"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Spitzen",
+    "category": "dinge",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "blitz",
+    "text": "Blitz",
+    "syllables": ["Blitz"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Blitze",
+    "category": "natur",
+    "image": "26A1",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "platz",
+    "text": "Platz",
+    "syllables": ["Platz"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Plätze",
+    "category": "dinge",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "pilz",
+    "text": "Pilz",
+    "syllables": ["Pilz"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Pilze",
+    "category": "essen",
+    "image": "1F344",
+    "schwerpunkt": "silben"
+  },
+  {
+    "id": "hitze",
+    "text": "Hitze",
+    "syllables": ["Hit", "ze"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Hitze",
+    "category": "natur",
+    "image": "1F975",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "spatz",
+    "text": "Spatz",
+    "syllables": ["Spatz"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Spatzen",
+    "category": "tiere",
+    "schwerpunkt": "tz"
+  },
+  {
+    "id": "strasse",
+    "text": "Straße",
+    "syllables": ["Stra", "ße"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Straßen",
+    "category": "dinge",
+    "image": "1F6E3",
+    "schwerpunkt": "ss"
+  },
+  {
+    "id": "strauss",
+    "text": "Strauß",
+    "syllables": ["Strauß"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Strauße",
+    "category": "dinge",
+    "image": "1F490",
+    "schwerpunkt": "ss"
+  },
+  {
+    "id": "heiss",
+    "text": "heiß",
+    "syllables": ["heiß"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ss"
+  },
+  {
+    "id": "suess",
+    "text": "süß",
+    "syllables": ["süß"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F36C",
+    "schwerpunkt": "ss"
+  },
+  {
+    "id": "weiss",
+    "text": "weiß",
+    "syllables": ["weiß"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "26AA",
+    "schwerpunkt": "ss"
+  },
+  {
+    "id": "fliege",
+    "text": "Fliege",
+    "syllables": ["Flie", "ge"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Fliegen",
+    "category": "tiere",
+    "image": "1FAB0",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "brief",
+    "text": "Brief",
+    "syllables": ["Brief"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Briefe",
+    "category": "dinge",
+    "image": "2709",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "riese",
+    "text": "Riese",
+    "syllables": ["Rie", "se"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Riese",
+    "category": "menschen",
+    "image": "1F9CC",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "spiegel",
+    "text": "Spiegel",
+    "syllables": ["Spie", "gel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Spiegel",
+    "category": "dinge",
+    "image": "1FA9E",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "tier",
+    "text": "Tier",
+    "syllables": ["Tier"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Tiere",
+    "category": "tiere",
+    "image": "1F43E",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "papier",
+    "text": "Papier",
+    "syllables": ["Pa", "pier"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Papier",
+    "category": "dinge",
+    "image": "1F4C4",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "fliegen",
+    "text": "fliegen",
+    "syllables": ["flie", "gen"],
+    "wortart": "verb",
+    "er": "fliegt",
+    "category": "tun",
+    "image": "2708",
+    "schwerpunkt": "ie"
+  },
+  {
+    "id": "fisch",
+    "text": "Fisch",
+    "syllables": ["Fisch"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Fische",
+    "category": "tiere",
+    "image": "1F41F",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "schuh",
+    "text": "Schuh",
+    "syllables": ["Schuh"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Schuhe",
+    "category": "dinge",
+    "image": "1F45F",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "schiff",
+    "text": "Schiff",
+    "syllables": ["Schiff"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Schiffe",
+    "category": "dinge",
+    "image": "1F6A2",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "schwein",
+    "text": "Schwein",
+    "syllables": ["Schwein"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Schweine",
+    "category": "tiere",
+    "image": "1F416",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "schnee",
+    "text": "Schnee",
+    "syllables": ["Schnee"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Schnee",
+    "category": "natur",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "busch",
+    "text": "Busch",
+    "syllables": ["Busch"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Büsche",
+    "category": "natur",
+    "schwerpunkt": "sch"
+  },
+  {
+    "id": "milch",
+    "text": "Milch",
+    "syllables": ["Milch"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Milch",
+    "category": "essen",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "kuchen",
+    "text": "Kuchen",
+    "syllables": ["Ku", "chen"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Kuchen",
+    "category": "essen",
+    "image": "1F370",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "drache",
+    "text": "Drache",
+    "syllables": ["Dra", "che"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Drache",
+    "category": "tiere",
+    "image": "1F409",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "lachen",
+    "text": "lachen",
+    "syllables": ["la", "chen"],
+    "wortart": "verb",
+    "er": "lacht",
+    "category": "tun",
+    "image": "1F602",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "kochen",
+    "text": "kochen",
+    "syllables": ["ko", "chen"],
+    "wortart": "verb",
+    "er": "kocht",
+    "category": "tun",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "licht",
+    "text": "Licht",
+    "syllables": ["Licht"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Licht",
+    "category": "dinge",
+    "image": "1F4A1",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "nacht",
+    "text": "Nacht",
+    "syllables": ["Nacht"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Nächte",
+    "category": "zeit",
+    "image": "1F303",
+    "schwerpunkt": "ch"
+  },
+  {
+    "id": "topf",
+    "text": "Topf",
+    "syllables": ["Topf"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Töpfe",
+    "category": "dinge",
+    "image": "1F372",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "pfanne",
+    "text": "Pfanne",
+    "syllables": ["Pfan", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Pfannen",
+    "category": "dinge",
+    "image": "1F373",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "pfeil",
+    "text": "Pfeil",
+    "syllables": ["Pfeil"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Pfeile",
+    "category": "dinge",
+    "image": "27A1",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "zopf",
+    "text": "Zopf",
+    "syllables": ["Zopf"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Zöpfe",
+    "category": "dinge",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "pfote",
+    "text": "Pfote",
+    "syllables": ["Pfo", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Pfoten",
+    "category": "dinge",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "pflaster",
+    "text": "Pflaster",
+    "syllables": ["Pflas", "ter"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Pflaster",
+    "category": "dinge",
+    "image": "1FA79",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "knopf",
+    "text": "Knopf",
+    "syllables": ["Knopf"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Knöpfe",
+    "category": "dinge",
+    "image": "1F518",
+    "schwerpunkt": "pf"
+  },
+  {
+    "id": "qualle",
+    "text": "Qualle",
+    "syllables": ["Qual", "le"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Quallen",
+    "category": "tiere",
+    "image": "1FABC",
+    "schwerpunkt": "qu"
+  },
+  {
+    "id": "quaken",
+    "text": "quaken",
+    "syllables": ["qua", "ken"],
+    "wortart": "verb",
+    "er": "quakt",
+    "category": "tun",
+    "image": "1F438",
+    "schwerpunkt": "qu"
+  },
+  {
+    "id": "quark",
+    "text": "Quark",
+    "syllables": ["Quark"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Quark",
+    "category": "essen",
+    "schwerpunkt": "qu"
+  },
+  {
+    "id": "bequem",
+    "text": "bequem",
+    "syllables": ["be", "quem"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "image": "1F6CB",
+    "schwerpunkt": "qu"
+  },
+  {
+    "id": "schlange",
+    "text": "Schlange",
+    "syllables": ["Schlan", "ge"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Schlangen",
+    "category": "tiere",
+    "image": "1F40D",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "zunge",
+    "text": "Zunge",
+    "syllables": ["Zun", "ge"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Zungen",
+    "category": "koerper",
+    "image": "1F445",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "lang",
+    "text": "lang",
+    "syllables": ["lang"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "finger",
+    "text": "Finger",
+    "syllables": ["Fin", "ger"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Finger",
+    "category": "koerper",
+    "image": "261D",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "angel",
+    "text": "Angel",
+    "syllables": ["An", "gel"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Angeln",
+    "category": "dinge",
+    "image": "1F3A3",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "springen",
+    "text": "springen",
+    "syllables": ["sprin", "gen"],
+    "wortart": "verb",
+    "er": "springt",
+    "category": "tun",
+    "image": "1F998",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "engel",
+    "text": "Engel",
+    "syllables": ["En", "gel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Engel",
+    "category": "menschen",
+    "image": "1F47C",
+    "schwerpunkt": "ng"
+  },
+  {
+    "id": "geschenk",
+    "text": "Geschenk",
+    "syllables": ["Ge", "schenk"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Geschenke",
+    "category": "dinge",
+    "image": "1F381",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "schrank",
+    "text": "Schrank",
+    "syllables": ["Schrank"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Schränke",
+    "category": "dinge",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "punkt",
+    "text": "Punkt",
+    "syllables": ["Punkt"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Punkt",
+    "category": "dinge",
+    "image": "23FA",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "enkel",
+    "text": "Enkel",
+    "syllables": ["En", "kel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Enkel",
+    "category": "menschen",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "anker",
+    "text": "Anker",
+    "syllables": ["An", "ker"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Anker",
+    "category": "dinge",
+    "image": "2693",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "winken",
+    "text": "winken",
+    "syllables": ["win", "ken"],
+    "wortart": "verb",
+    "er": "winkt",
+    "category": "tun",
+    "image": "1F44B",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "stinken",
+    "text": "stinken",
+    "syllables": ["stin", "ken"],
+    "wortart": "verb",
+    "er": "stinkt",
+    "category": "tun",
+    "schwerpunkt": "nk"
+  },
+  {
+    "id": "spinne",
+    "text": "Spinne",
+    "syllables": ["Spin", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Spinnen",
+    "category": "tiere",
+    "image": "1F577",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "spinat",
+    "text": "Spinat",
+    "syllables": ["Spi", "nat"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Spinat",
+    "category": "essen",
+    "image": "1F96C",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "spuelen",
+    "text": "spülen",
+    "syllables": ["spü", "len"],
+    "wortart": "verb",
+    "er": "spült",
+    "category": "tun",
+    "image": "1F9FD",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "spaten",
+    "text": "Spaten",
+    "syllables": ["Spa", "ten"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Spaten",
+    "category": "dinge",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "spur",
+    "text": "Spur",
+    "syllables": ["Spur"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Spuren",
+    "category": "dinge",
+    "schwerpunkt": "sp"
+  },
+  {
+    "id": "stift",
+    "text": "Stift",
+    "syllables": ["Stift"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Stifte",
+    "category": "dinge",
+    "image": "270F",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stuhl",
+    "text": "Stuhl",
+    "syllables": ["Stuhl"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Stühle",
+    "category": "dinge",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stadt",
+    "text": "Stadt",
+    "syllables": ["Stadt"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Städte",
+    "category": "dinge",
+    "image": "1F3D9",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stiefel",
+    "text": "Stiefel",
+    "syllables": ["Stie", "fel"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Stiefel",
+    "category": "dinge",
+    "image": "1F462",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stehen",
+    "text": "stehen",
+    "syllables": ["ste", "hen"],
+    "wortart": "verb",
+    "er": "steht",
+    "category": "tun",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stall",
+    "text": "Stall",
+    "syllables": ["Stall"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Ställe",
+    "category": "dinge",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "strand",
+    "text": "Strand",
+    "syllables": ["Strand"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Strand",
+    "category": "natur",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "stufe",
+    "text": "Stufe",
+    "syllables": ["Stu", "fe"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Stufen",
+    "category": "dinge",
+    "schwerpunkt": "st"
+  },
+  {
+    "id": "eule",
+    "text": "Eule",
+    "syllables": ["Eu", "le"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Eulen",
+    "category": "tiere",
+    "image": "1F989",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "feuer",
+    "text": "Feuer",
+    "syllables": ["Feu", "er"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Feuer",
+    "category": "natur",
+    "image": "1F525",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "heute",
+    "text": "heute",
+    "syllables": ["heu", "te"],
+    "wortart": "klein",
+    "category": "woerter",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "freude",
+    "text": "Freude",
+    "syllables": ["Freu", "de"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Freude",
+    "category": "dinge",
+    "image": "1F600",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "kreuz",
+    "text": "Kreuz",
+    "syllables": ["Kreuz"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Kreuz",
+    "category": "dinge",
+    "image": "274C",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "beule",
+    "text": "Beule",
+    "syllables": ["Beu", "le"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Beulen",
+    "category": "koerper",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "heu",
+    "text": "Heu",
+    "syllables": ["Heu"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Heu",
+    "category": "natur",
+    "schwerpunkt": "eu"
+  },
+  {
+    "id": "fahne",
+    "text": "Fahne",
+    "syllables": ["Fah", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Fahnen",
+    "category": "dinge",
+    "image": "1F3F3",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "kuh",
+    "text": "Kuh",
+    "syllables": ["Kuh"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Kühe",
+    "category": "tiere",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "huhn",
+    "text": "Huhn",
+    "syllables": ["Huhn"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Hühner",
+    "category": "tiere",
+    "image": "1F414",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "ohr",
+    "text": "Ohr",
+    "syllables": ["Ohr"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Ohren",
+    "category": "koerper",
+    "image": "1F442",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "bohne",
+    "text": "Bohne",
+    "syllables": ["Boh", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Bohnen",
+    "category": "essen",
+    "image": "1FAD8",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "sahne",
+    "text": "Sahne",
+    "syllables": ["Sah", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Sahne",
+    "category": "essen",
+    "schwerpunkt": "h"
+  },
+  {
+    "id": "vulkan",
+    "text": "Vulkan",
+    "syllables": ["Vul", "kan"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Vulkan",
+    "category": "natur",
+    "image": "1F30B",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "vampir",
+    "text": "Vampir",
+    "syllables": ["Vam", "pir"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Vampir",
+    "category": "menschen",
+    "image": "1F9DB",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "pullover",
+    "text": "Pullover",
+    "syllables": ["Pul", "lo", "ver"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Pullover",
+    "category": "dinge",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "voll",
+    "text": "voll",
+    "syllables": ["voll"],
+    "wortart": "adjektiv",
+    "category": "eigenschaften",
+    "schwerpunkt": "v"
+  },
+  {
+    "id": "box",
+    "text": "Box",
+    "syllables": ["Box"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Boxen",
+    "category": "dinge",
+    "schwerpunkt": "x"
+  },
+  {
+    "id": "taxi",
+    "text": "Taxi",
+    "syllables": ["Ta", "xi"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Taxis",
+    "category": "fahrzeuge",
+    "image": "1F695",
+    "schwerpunkt": "x"
+  },
+  {
+    "id": "axt",
+    "text": "Axt",
+    "syllables": ["Axt"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Äxte",
+    "category": "dinge",
+    "image": "1FA93",
+    "schwerpunkt": "x"
+  },
+  {
+    "id": "pony",
+    "text": "Pony",
+    "syllables": ["Po", "ny"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Ponys",
+    "category": "tiere",
+    "image": "1F434",
+    "schwerpunkt": "y"
+  },
+  {
+    "id": "teddy",
+    "text": "Teddy",
+    "syllables": ["Ted", "dy"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Teddys",
+    "category": "dinge",
+    "image": "1F9F8",
+    "schwerpunkt": "y"
+  },
+  {
+    "id": "handy",
+    "text": "Handy",
+    "syllables": ["Han", "dy"],
+    "wortart": "nomen",
+    "artikel": "das",
+    "plural": "Handys",
+    "category": "dinge",
+    "image": "1F4F1",
+    "schwerpunkt": "y"
+  },
+  {
+    "id": "comic",
+    "text": "Comic",
+    "syllables": ["Co", "mic"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Comics",
+    "category": "dinge",
+    "schwerpunkt": "c"
+  },
+  {
+    "id": "mais",
+    "text": "Mais",
+    "syllables": ["Mais"],
+    "wortart": "nomen",
+    "artikel": "der",
+    "plural": "Mais",
+    "category": "essen",
+    "image": "1F33D",
+    "schwerpunkt": "ai"
+  },
+  {
+    "id": "saite",
+    "text": "Saite",
+    "syllables": ["Sai", "te"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Saiten",
+    "category": "dinge",
+    "image": "1F3BB",
+    "schwerpunkt": "ai"
+  },
+  {
+    "id": "traene",
+    "text": "Träne",
+    "syllables": ["Trä", "ne"],
+    "wortart": "nomen",
+    "artikel": "die",
+    "plural": "Tränen",
+    "category": "dinge",
+    "image": "1F622",
+    "schwerpunkt": "ae"
+  }
+]

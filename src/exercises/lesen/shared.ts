@@ -7,6 +7,10 @@ import type { LearnerContext } from '../types'
 export interface LesenParams {
   /** Grade of the word list (default: the grade of the catalog entry). */
   wordGrade?: number
+  /** From grade 2: only words with one of these spelling phenomena (phenomena.ts). */
+  phenomena?: string[]
+  /** From grade 2: only these word types (e.g. no "klein" words with pictures). */
+  wortarten?: string[]
 }
 
 /** Settings key for a word level set by hand (0/missing = automatic). */
@@ -54,7 +58,12 @@ export function readingLevel(
  * if too few). Merkwörter have their own exercises.
  */
 export function readingPool(ctx: LearnerContext, params: LesenParams): Word[] {
-  const words = lauttreu(readableWords(ctx, params))
+  let words = lauttreu(readableWords(ctx, params))
+  if (params.phenomena)
+    words = words.filter((w) => w.phenomena.some((p) => params.phenomena!.includes(p)))
+  if (params.wortarten) words = words.filter((w) => params.wortarten!.includes(w.wortart))
+  // From grade 2 all letters are known: no word levels, the units choose the words.
+  if ((params.wordGrade ?? ctx.grade) >= 2) return words
   const level = readingLevel(words, ctx.settings, ctx.progress ?? new Map())
   let pool = words.filter((w) => w.level <= level)
   for (let l = level + 1; pool.length < MIN_POOL && l <= 4; l++) {

@@ -2,6 +2,7 @@
 import type { ExerciseModule, GeneratedTask, LearnerContext } from '@/exercises/types'
 import { pickItems, type Outcome } from './leitner'
 import { shuffle, type Rng } from './random'
+import { TOPICS } from './types'
 import type { CatalogEntry, ProgressRecord, SessionRecord, TaskResult, Topic } from './types'
 
 /** After this many wrong answers the solution is shown. */
@@ -171,13 +172,9 @@ export function rewardTotals(sessions: readonly SessionRecord[]): RewardTotals {
     stars: 0,
     crowns: 0,
     units: 0,
-    byTopic: {
-      lesen: { stars: 0, crowns: 0 },
-      schreiben: { stars: 0, crowns: 0 },
-      rechnen: { stars: 0, crowns: 0 },
-      uhr: { stars: 0, crowns: 0 },
-      sache: { stars: 0, crowns: 0 },
-    },
+    byTopic: Object.fromEntries(
+      TOPICS.map((t) => [t, { stars: 0, crowns: 0 }]),
+    ) as RewardTotals['byTopic'],
   }
   for (const s of sessions) {
     const crown = s.crown ? 1 : 0
