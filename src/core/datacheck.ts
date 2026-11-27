@@ -22,6 +22,8 @@ import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
 import texte from '@/data/basis/klasse-1/texte.json'
 import zusammensetzungen from '@/data/basis/klasse-1/zusammensetzungen.json'
 import { DIALOGE, WORDS as ENGLISH_WORDS } from '@/exercises/englisch/shared'
+import { SAETZE_4 } from '@/exercises/sprache/satzglieder'
+import { LUECKEN } from '@/exercises/sprache/luecke4'
 import { BEGRIFFE, THEMEN, unitOf } from '@/exercises/sache/shared'
 import { LUECKENSAETZE } from '@/exercises/lesen/satz-luecke'
 import { textsFor } from '@/exercises/lesen/text-fragen'
@@ -330,6 +332,24 @@ export function checkGrade3Texts(): string[] {
   return problems
 }
 
+/** Grade 4 language data (SP4-3, SP4-4): one subject and one verb second, distinct answers. */
+export function checkGrade4Sprache(): string[] {
+  const problems: string[] = []
+  for (const s of SAETZE_4) {
+    if (s.rollen!.filter((r) => r === 'subjekt').length !== 1 || s.praedikat !== 1)
+      problems.push(`Klasse 4, Satz ${s.id}: genau ein Subjekt, Prädikat an zweiter Stelle`)
+  }
+  for (const [art, list] of Object.entries(LUECKEN))
+    list.forEach((l, i) => {
+      const all = [l.richtig, ...l.falsch]
+      if (new Set(all).size !== all.length || l.falsch.length < 2)
+        problems.push(`Klasse 4, ${art} ${i + 1}: Antworten doppelt oder zu wenige`)
+      if (!/[.!?“]$/.test(l.erklaerung))
+        problems.push(`Klasse 4, ${art} ${i + 1}: Erklärung ohne Punkt`)
+    })
+  return problems
+}
+
 /** Phenomena that only grade 3 uses. */
 const LATER = new Set([
   'trennen',
@@ -550,7 +570,8 @@ export function checkData(images: ReadonlySet<string>): string[] {
         if (grade === 2) problems.push(...checkGrade2Words(words, land.name), ...checkGrade2Texts())
         if (grade === 3)
           problems.push(...checkGrade2Words(words, land.name, 3), ...checkGrade3Texts())
-        if (grade === 4) problems.push(...checkGrade2Words(words, land.name, 4))
+        if (grade === 4)
+          problems.push(...checkGrade2Words(words, land.name, 4), ...checkGrade4Sprache())
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

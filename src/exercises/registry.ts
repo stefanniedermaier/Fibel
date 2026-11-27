@@ -88,6 +88,7 @@ import { winkel } from './formen/winkel'
 import { ornament } from './formen/ornament'
 import { million } from './rechnen/million'
 import { malGeteilt } from './rechnen/schriftlich/malgeteilt'
+import { luecke4 } from './sprache/luecke4'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -193,6 +194,7 @@ register(winkel)
 register(ornament)
 register(million)
 register(malGeteilt)
+register(luecke4)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

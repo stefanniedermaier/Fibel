@@ -5,9 +5,12 @@
  */
 import type { Word } from '@/core/types'
 import diktatSaetze from '@/data/basis/klasse-3/diktat.json'
+import diktatSaetze4 from '@/data/basis/klasse-4/diktat.json'
 
 /** S3-8 Satz-Diktat: sentences made of words of the basic vocabulary 3/4. */
 export const DIKTAT_SAETZE: readonly { id: string; text: string }[] = diktatSaetze
+/** Grade 4 (S4-7): sentences with flexion and Präteritum forms of the basic vocabulary. */
+export const DIKTAT_SAETZE_4: readonly { id: string; text: string }[] = diktatSaetze4
 import type { ExerciseModule, LearnerContext } from '../../types'
 import { readableWords } from '../../lesen/shared'
 import { itemId } from '../shared'
@@ -48,7 +51,11 @@ interface DiktatWord {
 
 function words(ctx: LearnerContext, params: DiktatParams): DiktatWord[] {
   if (params.source === 'saetze')
-    return DIKTAT_SAETZE.map((s) => ({ key: s.id, text: s.text, spoken: s.text }))
+    return (ctx.grade >= 4 ? DIKTAT_SAETZE_4 : DIKTAT_SAETZE).map((s) => ({
+      key: s.id,
+      text: s.text,
+      spoken: s.text,
+    }))
   if (params.source === 'lernwoerter') {
     return cleanLernwoerter(ctx.settings.lernwoerter ?? []).map((w) => ({
       key: lernwortKey(w),

@@ -4,6 +4,7 @@
  * pick the sentence that is correctly rearranged – the verb always stays second.
  */
 import sprache3 from '@/data/basis/klasse-3/sprache.json'
+import sprache4 from '@/data/basis/klasse-4/sprache.json'
 import { pickOne, shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import SatzgliederTask from './SatzgliederTask.vue'
@@ -13,11 +14,38 @@ interface Satz {
   glieder: string[]
   subjekt: number
   praedikat: number
+  /** Grade 4: the role of every block. */
+  rollen?: Rolle[]
 }
 export const SAETZE: readonly Satz[] = sprache3.satzglieder
 
+/** SP4-3: Subjekt, Prädikat, Objekte (Wen? Wem?), Orts- und Zeitangaben. */
+export type Rolle = 'subjekt' | 'praedikat' | 'akk' | 'dat' | 'ort' | 'zeit'
+export const SAETZE_4: readonly Satz[] = sprache4.saetze.map((s) => {
+  const rollen = s.glieder.map((g) => g.rolle as Rolle)
+  return {
+    id: s.id,
+    glieder: s.glieder.map((g) => g.text),
+    subjekt: rollen.indexOf('subjekt'),
+    praedikat: rollen.indexOf('praedikat'),
+    rollen,
+  }
+})
+
+/** The question for each role, with both names used in schools. */
+export const FRAGEN: Record<Rolle, { frage: string; name: string }> = {
+  subjekt: { frage: 'Wer oder was?', name: 'das Subjekt (Satzgegenstand)' },
+  praedikat: { frage: 'Was tut jemand?', name: 'das Prädikat (Satzaussage)' },
+  akk: { frage: 'Wen oder was?', name: 'die Ergänzung im Wen-Fall (Akkusativ)' },
+  dat: { frage: 'Wem?', name: 'die Ergänzung im Wem-Fall (Dativ)' },
+  ort: { frage: 'Wo? Wohin?', name: 'die Ortsangabe' },
+  zeit: { frage: 'Wann?', name: 'die Zeitangabe' },
+}
+
 export interface SatzgliederParams {
-  mode: 'subjekt' | 'praedikat' | 'umstellen'
+  mode: 'subjekt' | 'praedikat' | 'umstellen' | 'frage'
+  /** Grade 4 sentences (with objects, place and time). */
+  klasse4?: boolean
 }
 
 export interface SatzgliederData {
@@ -29,7 +57,9 @@ export interface SatzgliederData {
 }
 
 const lowerFirst = (s: string) =>
-  /^(Der|Die|Das|Meine|Mein|Unser|Am|Im)\b/.test(s) ? s.charAt(0).toLowerCase() + s.slice(1) : s
+  /^(Der|Die|Das|Meine|Mein|Unser|Am|Im|In|Nach|Jeden|Morgen|Seine|Ihre)\b/.test(s)
+    ? s.charAt(0).toLowerCase() + s.slice(1)
+    : s
 const upperFirst = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
 /** Builds a sentence with `first` in front and the verb second. */
@@ -44,12 +74,32 @@ export const satzglieder: ExerciseModule<SatzgliederParams, SatzgliederData> = {
   topic: 'sprache',
 
   items(_ctx, params) {
-    return SAETZE.map((s) => `sprache.satzglieder:${params.mode}:${s.id}`)
+    const list = params.klasse4 || params.mode === 'frage' ? SAETZE_4 : SAETZE
+    return list.map((s) => `sprache.satzglieder:${params.mode}:${s.id}`)
   },
 
   generate(_ctx, params, itemKey, rng) {
-    const s = SAETZE.find((x) => x.id === itemKey.split(':')[2])!
+    const s = [...SAETZE, ...SAETZE_4].find((x) => x.id === itemKey.split(':')[2])!
     const blocks = s.glieder.map((g, i) => ({ key: String(i), label: g }))
+    if (params.mode === 'frage') {
+      const rolle = pickOne(
+        s.rollen!.filter((r) => r !== 'praedikat'),
+        rng,
+      )
+      const idx = s.rollen!.indexOf(rolle)
+      const f = FRAGEN[rolle]
+      const verb = s.glieder[s.praedikat]
+      return {
+        instruction: `Frag: ${f.frage} Tippe auf das passende Satzglied.`,
+        caption: `${f.frage} Tippe auf das Satzglied.`,
+        hint:
+          rolle === 'subjekt' || rolle === 'akk'
+            ? `Frag: ${f.frage.replace('?', '')} ${verb}?`
+            : `Frag mit dem Verb: ${f.frage.split(' ')[0]!.replace('?', '')} ${verb} …?`,
+        solution: `${s.glieder[idx]} ist ${f.name}.`,
+        data: { mode: 'subjekt', glieder: s.glieder, correctKey: String(idx), choices: blocks },
+      }
+    }
     if (params.mode === 'subjekt' || params.mode === 'praedikat') {
       const subj = params.mode === 'subjekt'
       const idx = subj ? s.subjekt : s.praedikat

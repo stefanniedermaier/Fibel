@@ -63,3 +63,33 @@ describe('Deutsch Klasse 3', () => {
     }
   })
 })
+
+describe('Deutsch Klasse 4', () => {
+  const ctx4 = { land: 'DE-BY', grade: 4, settings: resolveDefaults('DE-BY', 4) }
+  it('Satzglieder: die Frage passt zur Rolle', async () => {
+    const { satzglieder, SAETZE_4 } = await import('@/exercises/sprache/satzglieder')
+    for (const key of satzglieder.items(ctx4, { mode: 'frage' }))
+      for (let seed = 0; seed < 6; seed++) {
+        const t = satzglieder.generate(ctx4, { mode: 'frage' }, key, createRng(seed))
+        const s = SAETZE_4.find((x) => key.endsWith(`:${x.id}`))!
+        const rolle = s.rollen![Number(t.data.correctKey)]!
+        expect(rolle).not.toBe('praedikat')
+        const q = {
+          subjekt: 'Wer oder was?',
+          akk: 'Wen oder was?',
+          dat: 'Wem?',
+          ort: 'Wo?',
+          zeit: 'Wann?',
+        }[rolle as 'subjekt']
+        expect(t.instruction).toContain(q)
+      }
+  })
+  it('Lücken: Lösung unter den Antworten', async () => {
+    const { luecke4, LUECKEN } = await import('@/exercises/sprache/luecke4')
+    for (const art of Object.keys(LUECKEN))
+      for (const key of luecke4.items(ctx4, { art })) {
+        const t = luecke4.generate(ctx4, { art }, key, createRng(1))
+        expect(t.data.choices.map((c) => c.key)).toContain(t.data.correctKey)
+      }
+  })
+})

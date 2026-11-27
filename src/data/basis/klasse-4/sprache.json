@@ -1,0 +1,944 @@
+{
+  "saetze": [
+    {
+      "id": "k4s1",
+      "glieder": [
+        {
+          "text": "Am Morgen",
+          "rolle": "zeit"
+        },
+        {
+          "text": "füttert",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "Lena",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "die Katze",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s2",
+      "glieder": [
+        {
+          "text": "Der Opa",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "schenkt",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "dem Kind",
+          "rolle": "dat"
+        },
+        {
+          "text": "ein Buch",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s3",
+      "glieder": [
+        {
+          "text": "Die Kinder",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "spielen",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "im Garten",
+          "rolle": "ort"
+        }
+      ]
+    },
+    {
+      "id": "k4s4",
+      "glieder": [
+        {
+          "text": "Tim",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "hilft",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "seiner Schwester",
+          "rolle": "dat"
+        },
+        {
+          "text": "nach der Schule",
+          "rolle": "zeit"
+        }
+      ]
+    },
+    {
+      "id": "k4s5",
+      "glieder": [
+        {
+          "text": "Im Winter",
+          "rolle": "zeit"
+        },
+        {
+          "text": "baut",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "die Klasse",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "einen Schneemann",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s6",
+      "glieder": [
+        {
+          "text": "Die Lehrerin",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "erklärt",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "den Kindern",
+          "rolle": "dat"
+        },
+        {
+          "text": "die Aufgabe",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s7",
+      "glieder": [
+        {
+          "text": "Mein Bruder",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "liest",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "am Abend",
+          "rolle": "zeit"
+        },
+        {
+          "text": "ein Comicheft",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s8",
+      "glieder": [
+        {
+          "text": "Der Bäcker",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "verkauft",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "frische Brezen",
+          "rolle": "akk"
+        },
+        {
+          "text": "auf dem Markt",
+          "rolle": "ort"
+        }
+      ]
+    },
+    {
+      "id": "k4s9",
+      "glieder": [
+        {
+          "text": "Morgen",
+          "rolle": "zeit"
+        },
+        {
+          "text": "fahren",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "wir",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "nach München",
+          "rolle": "ort"
+        }
+      ]
+    },
+    {
+      "id": "k4s10",
+      "glieder": [
+        {
+          "text": "Die Katze",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "schläft",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "auf dem Sofa",
+          "rolle": "ort"
+        }
+      ]
+    },
+    {
+      "id": "k4s11",
+      "glieder": [
+        {
+          "text": "Papa",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "kauft",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "der Familie",
+          "rolle": "dat"
+        },
+        {
+          "text": "ein Eis",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s12",
+      "glieder": [
+        {
+          "text": "Im Zoo",
+          "rolle": "ort"
+        },
+        {
+          "text": "füttert",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "die Tierpflegerin",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "die Elefanten",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s13",
+      "glieder": [
+        {
+          "text": "Ben",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "schreibt",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "seiner Freundin",
+          "rolle": "dat"
+        },
+        {
+          "text": "eine Karte",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s14",
+      "glieder": [
+        {
+          "text": "Nach dem Essen",
+          "rolle": "zeit"
+        },
+        {
+          "text": "spült",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "Mama",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "das Geschirr",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s15",
+      "glieder": [
+        {
+          "text": "Der Hund",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "gräbt",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "im Sand",
+          "rolle": "ort"
+        },
+        {
+          "text": "ein Loch",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s16",
+      "glieder": [
+        {
+          "text": "Die Sonne",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "scheint",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "heute",
+          "rolle": "zeit"
+        }
+      ]
+    },
+    {
+      "id": "k4s17",
+      "glieder": [
+        {
+          "text": "Oma",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "erzählt",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "den Enkeln",
+          "rolle": "dat"
+        },
+        {
+          "text": "eine Geschichte",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s18",
+      "glieder": [
+        {
+          "text": "Am Wochenende",
+          "rolle": "zeit"
+        },
+        {
+          "text": "besuchen",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "wir",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "den Bauernhof",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s19",
+      "glieder": [
+        {
+          "text": "Der Schüler",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "gibt",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "dem Lehrer",
+          "rolle": "dat"
+        },
+        {
+          "text": "das Heft",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s20",
+      "glieder": [
+        {
+          "text": "Die Vögel",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "singen",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "im Wald",
+          "rolle": "ort"
+        }
+      ]
+    },
+    {
+      "id": "k4s21",
+      "glieder": [
+        {
+          "text": "Lisa",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "trifft",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "ihre Freundin",
+          "rolle": "akk"
+        },
+        {
+          "text": "auf dem Spielplatz",
+          "rolle": "ort"
+        }
+      ]
+    },
+    {
+      "id": "k4s22",
+      "glieder": [
+        {
+          "text": "In der Pause",
+          "rolle": "zeit"
+        },
+        {
+          "text": "essen",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "die Kinder",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "ihr Pausenbrot",
+          "rolle": "akk"
+        }
+      ]
+    },
+    {
+      "id": "k4s23",
+      "glieder": [
+        {
+          "text": "Der Arzt",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "hilft",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "dem kranken Kind",
+          "rolle": "dat"
+        }
+      ]
+    },
+    {
+      "id": "k4s24",
+      "glieder": [
+        {
+          "text": "Jeden Tag",
+          "rolle": "zeit"
+        },
+        {
+          "text": "gießt",
+          "rolle": "praedikat"
+        },
+        {
+          "text": "Paul",
+          "rolle": "subjekt"
+        },
+        {
+          "text": "die Blumen",
+          "rolle": "akk"
+        }
+      ]
+    }
+  ],
+  "luecken": {
+    "fall": [
+      {
+        "satz": "Ich gebe ___ Hund einen Knochen.",
+        "richtig": "dem",
+        "falsch": ["den", "der"],
+        "erklaerung": "Wem gebe ich den Knochen? Dem Hund."
+      },
+      {
+        "satz": "Wir sehen ___ Hund im Park.",
+        "richtig": "den",
+        "falsch": ["dem", "der"],
+        "erklaerung": "Wen sehen wir? Den Hund."
+      },
+      {
+        "satz": "Das Buch gehört ___ Lehrerin.",
+        "richtig": "der",
+        "falsch": ["die", "den"],
+        "erklaerung": "Wem gehört das Buch? Der Lehrerin."
+      },
+      {
+        "satz": "Sie gibt ___ kleinen Kind ein Buch.",
+        "richtig": "dem",
+        "falsch": ["das", "den"],
+        "erklaerung": "Wem gibt sie das Buch? Dem kleinen Kind."
+      },
+      {
+        "satz": "Ich besuche ___ Oma.",
+        "richtig": "meine",
+        "falsch": ["meiner", "meinem"],
+        "erklaerung": "Wen besuche ich? Meine Oma."
+      },
+      {
+        "satz": "Ich helfe ___ Oma.",
+        "richtig": "meiner",
+        "falsch": ["meine", "meinem"],
+        "erklaerung": "Wem helfe ich? Meiner Oma."
+      },
+      {
+        "satz": "Tom fährt mit ___ Fahrrad zur Schule.",
+        "richtig": "dem",
+        "falsch": ["den", "das"],
+        "erklaerung": "Nach „mit“ fragst du: mit wem oder was? Mit dem Fahrrad."
+      },
+      {
+        "satz": "Wir gehen ___ Kino.",
+        "richtig": "ins",
+        "falsch": ["im", "in den"],
+        "erklaerung": "Wohin? Ins Kino (in das Kino)."
+      },
+      {
+        "satz": "Wir sind ___ Kino.",
+        "richtig": "im",
+        "falsch": ["ins", "in das"],
+        "erklaerung": "Wo? Im Kino (in dem Kino)."
+      },
+      {
+        "satz": "Lena kommt ___ Schwimmbad.",
+        "richtig": "vom",
+        "falsch": ["von", "von der"],
+        "erklaerung": "Woher? Vom Schwimmbad (von dem Schwimmbad)."
+      },
+      {
+        "satz": "Ich gehe ___ Schule.",
+        "richtig": "zur",
+        "falsch": ["zum", "zu"],
+        "erklaerung": "Die Schule: zu der Schule wird zur Schule."
+      },
+      {
+        "satz": "Ich gehe ___ Bäcker.",
+        "richtig": "zum",
+        "falsch": ["zur", "zu der"],
+        "erklaerung": "Der Bäcker: zu dem Bäcker wird zum Bäcker."
+      },
+      {
+        "satz": "Kannst du ___ bitte helfen?",
+        "richtig": "mir",
+        "falsch": ["mich", "mein"],
+        "erklaerung": "Wem hilfst du? Mir."
+      },
+      {
+        "satz": "Kannst du ___ bitte abholen?",
+        "richtig": "mich",
+        "falsch": ["mir", "mein"],
+        "erklaerung": "Wen holst du ab? Mich."
+      },
+      {
+        "satz": "Ich rufe ___ an. Er freut sich.",
+        "richtig": "ihn",
+        "falsch": ["ihm", "ihnen"],
+        "erklaerung": "Wen rufe ich an? Ihn."
+      },
+      {
+        "satz": "Ich schenke ___ ein Bild. Er freut sich.",
+        "richtig": "ihm",
+        "falsch": ["ihn", "ihnen"],
+        "erklaerung": "Wem schenke ich das Bild? Ihm."
+      },
+      {
+        "satz": "Die Kinder warten. Ich bringe ___ den Ball.",
+        "richtig": "ihnen",
+        "falsch": ["ihn", "ihm"],
+        "erklaerung": "Wem bringe ich den Ball? Ihnen, den Kindern."
+      },
+      {
+        "satz": "Ich spiele mit ___ Freunden.",
+        "richtig": "meinen",
+        "falsch": ["meine", "meinem"],
+        "erklaerung": "Mit wem? Mit meinen Freunden."
+      },
+      {
+        "satz": "Hast du ___ Jacke gesehen?",
+        "richtig": "meine",
+        "falsch": ["meiner", "meinem"],
+        "erklaerung": "Wen oder was hast du gesehen? Meine Jacke."
+      },
+      {
+        "satz": "Seit ___ Woche regnet es.",
+        "richtig": "einer",
+        "falsch": ["eine", "einen"],
+        "erklaerung": "Seit wann? Seit einer Woche."
+      }
+    ],
+    "pronomen": [
+      {
+        "satz": "Lena spielt Fußball. ___ schießt ein Tor.",
+        "richtig": "Sie",
+        "falsch": ["Er", "Es"],
+        "erklaerung": "Lena ist ein Mädchen: sie."
+      },
+      {
+        "satz": "Der Hund bellt. ___ hat Hunger.",
+        "richtig": "Er",
+        "falsch": ["Sie", "Es"],
+        "erklaerung": "Der Hund: er."
+      },
+      {
+        "satz": "Das Baby schläft. ___ ist müde.",
+        "richtig": "Es",
+        "falsch": ["Er", "Sie"],
+        "erklaerung": "Das Baby: es."
+      },
+      {
+        "satz": "Tom und ich gehen ins Kino. ___ freuen uns.",
+        "richtig": "Wir",
+        "falsch": ["Ihr", "Sie"],
+        "erklaerung": "Tom und ich: wir."
+      },
+      {
+        "satz": "Die Kinder lachen. ___ haben Spaß.",
+        "richtig": "Sie",
+        "falsch": ["Wir", "Ihr"],
+        "erklaerung": "Die Kinder: sie (Mehrzahl)."
+      },
+      {
+        "satz": "Anna und du, habt ___ Hausaufgaben?",
+        "richtig": "ihr",
+        "falsch": ["wir", "sie"],
+        "erklaerung": "Anna und du: ihr."
+      },
+      {
+        "satz": "Die Blume blüht. ___ ist rot.",
+        "richtig": "Sie",
+        "falsch": ["Er", "Es"],
+        "erklaerung": "Die Blume: sie."
+      },
+      {
+        "satz": "Der Ball ist weg. Hast du ___ gesehen?",
+        "richtig": "ihn",
+        "falsch": ["sie", "es"],
+        "erklaerung": "Den Ball: ihn."
+      },
+      {
+        "satz": "Das Fahrrad ist neu. Papa hat ___ gekauft.",
+        "richtig": "es",
+        "falsch": ["ihn", "sie"],
+        "erklaerung": "Das Fahrrad: es."
+      },
+      {
+        "satz": "Mama ist krank. Wir bringen ___ Tee.",
+        "richtig": "ihr",
+        "falsch": ["sie", "ihm"],
+        "erklaerung": "Wem bringen wir Tee? Ihr, der Mama."
+      }
+    ],
+    "zeitform": [
+      {
+        "satz": "Morgen ___ wir einen Ausflug machen.",
+        "richtig": "werden",
+        "falsch": ["haben", "sind"],
+        "erklaerung": "Was noch kommt, steht im Futur: werden + Grundform."
+      },
+      {
+        "satz": "Gestern ___ ich im Schwimmbad.",
+        "richtig": "war",
+        "falsch": ["bin", "werde"],
+        "erklaerung": "Gestern: Vergangenheit, Präteritum: war."
+      },
+      {
+        "satz": "Ich ___ gestern einen Brief geschrieben.",
+        "richtig": "habe",
+        "falsch": ["werde", "bin"],
+        "erklaerung": "Perfekt: habe + geschrieben."
+      },
+      {
+        "satz": "Wir ___ letzte Woche nach Berlin gefahren.",
+        "richtig": "sind",
+        "falsch": ["haben", "werden"],
+        "erklaerung": "Bei „fahren“ bildet man das Perfekt mit sein: sind gefahren."
+      },
+      {
+        "satz": "Nächstes Jahr ___ ich in die fünfte Klasse gehen.",
+        "richtig": "werde",
+        "falsch": ["habe", "bin"],
+        "erklaerung": "Futur: werde + gehen."
+      },
+      {
+        "satz": "Jetzt ___ die Sonne.",
+        "richtig": "scheint",
+        "falsch": ["schien", "wird scheinen"],
+        "erklaerung": "Jetzt: Gegenwart, Präsens."
+      },
+      {
+        "satz": "Früher ___ hier ein Bauernhof.",
+        "richtig": "stand",
+        "falsch": ["steht", "wird stehen"],
+        "erklaerung": "Früher: Präteritum."
+      },
+      {
+        "satz": "Als ich klein war, ___ ich gern Bilderbücher.",
+        "richtig": "las",
+        "falsch": ["lese", "werde lesen"],
+        "erklaerung": "Erzählt man von früher, steht das Verb im Präteritum: las."
+      }
+    ],
+    "zeit-erkennen": [
+      {
+        "satz": "Ich werde morgen lesen.",
+        "richtig": "Futur",
+        "falsch": ["Präsens", "Präteritum"],
+        "erklaerung": "werde lesen: Futur, die Zukunft."
+      },
+      {
+        "satz": "Ich lese ein Buch.",
+        "richtig": "Präsens",
+        "falsch": ["Perfekt", "Futur"],
+        "erklaerung": "lese: Präsens, die Gegenwart."
+      },
+      {
+        "satz": "Ich las ein Buch.",
+        "richtig": "Präteritum",
+        "falsch": ["Präsens", "Perfekt"],
+        "erklaerung": "las: Präteritum, die Vergangenheit."
+      },
+      {
+        "satz": "Ich habe ein Buch gelesen.",
+        "richtig": "Perfekt",
+        "falsch": ["Präteritum", "Futur"],
+        "erklaerung": "habe gelesen: Perfekt, die Vergangenheit."
+      },
+      {
+        "satz": "Wir sind in den Wald gegangen.",
+        "richtig": "Perfekt",
+        "falsch": ["Präsens", "Futur"],
+        "erklaerung": "sind gegangen: Perfekt."
+      },
+      {
+        "satz": "Die Vögel flogen nach Süden.",
+        "richtig": "Präteritum",
+        "falsch": ["Präsens", "Perfekt"],
+        "erklaerung": "flogen: Präteritum."
+      },
+      {
+        "satz": "Es wird bald schneien.",
+        "richtig": "Futur",
+        "falsch": ["Präsens", "Perfekt"],
+        "erklaerung": "wird schneien: Futur."
+      },
+      {
+        "satz": "Der Hund spielt im Garten.",
+        "richtig": "Präsens",
+        "falsch": ["Präteritum", "Futur"],
+        "erklaerung": "spielt: Präsens."
+      }
+    ],
+    "rede": [
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Lena sagt: „Ich komme gleich.“",
+        "falsch": ["Lena sagt „Ich komme gleich.“", "Lena sagt: Ich komme gleich."],
+        "erklaerung": "Nach dem Begleitsatz steht ein Doppelpunkt, die Rede steht in Anführungszeichen."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "„Ich komme gleich“, sagt Lena.",
+        "falsch": ["„Ich komme gleich.“, sagt Lena.", "„Ich komme gleich“ sagt Lena."],
+        "erklaerung": "Steht der Begleitsatz hinten, kommt nach der Rede ein Komma, der Punkt fällt weg."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Tom fragt: „Spielst du mit?“",
+        "falsch": ["Tom fragt: „Spielst du mit“?", "Tom fragt „Spielst du mit?“"],
+        "erklaerung": "Das Fragezeichen gehört zur Rede und steht vor dem Anführungszeichen."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "„Spielst du mit?“, fragt Tom.",
+        "falsch": ["„Spielst du mit“, fragt Tom?", "„Spielst du mit?“ fragt Tom."],
+        "erklaerung": "Das Fragezeichen bleibt in der Rede, nach den Anführungszeichen kommt ein Komma."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Mama ruft: „Das Essen ist fertig!“",
+        "falsch": ["Mama ruft: „Das Essen ist fertig“!", "Mama ruft, „Das Essen ist fertig!“"],
+        "erklaerung": "Das Ausrufezeichen gehört zur Rede."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "„Wir gehen ins Kino“, sagt Papa.",
+        "falsch": ["„Wir gehen ins Kino“. sagt Papa.", "Wir gehen ins Kino, sagt Papa."],
+        "erklaerung": "Begleitsatz hinten: Komma nach dem Anführungszeichen."
+      }
+    ],
+    "bausteine": [
+      {
+        "satz": "un + auf + merk + sam = ?",
+        "richtig": "unaufmerksam",
+        "falsch": ["unmerksam", "aufmerkunsam"],
+        "erklaerung": "Die Bausteine stehen in dieser Reihenfolge: un-auf-merk-sam."
+      },
+      {
+        "satz": "un + freund + lich = ?",
+        "richtig": "unfreundlich",
+        "falsch": ["freundunlich", "unfreundig"],
+        "erklaerung": "un-freund-lich."
+      },
+      {
+        "satz": "ver + kauf + er = ?",
+        "richtig": "Verkäufer",
+        "falsch": ["Verkaufer", "Verkäufen"],
+        "erklaerung": "Aus kaufen wird mit -er der Verkäufer: au wird äu."
+      },
+      {
+        "satz": "be + spiel + bar = ?",
+        "richtig": "bespielbar",
+        "falsch": ["spielbebar", "bespielbär"],
+        "erklaerung": "be-spiel-bar."
+      },
+      {
+        "satz": "Aus „schnell“ wird ein Nomen: die ___",
+        "richtig": "Schnelligkeit",
+        "falsch": ["Schnellung", "Schnellheit"],
+        "erklaerung": "Nach -ig und -ell kommt oft -keit: Schnelligkeit."
+      },
+      {
+        "satz": "Aus „frei“ wird ein Nomen: die ___",
+        "richtig": "Freiheit",
+        "falsch": ["Freiung", "Freikeit"],
+        "erklaerung": "frei + heit = Freiheit."
+      },
+      {
+        "satz": "Aus „entscheiden“ wird ein Nomen: die ___",
+        "richtig": "Entscheidung",
+        "falsch": ["Entscheidheit", "Entscheidkeit"],
+        "erklaerung": "entscheiden + ung = Entscheidung."
+      },
+      {
+        "satz": "Aus „Wind“ wird ein Adjektiv: ___",
+        "richtig": "windig",
+        "falsch": ["windlich", "windbar"],
+        "erklaerung": "Wind + ig = windig."
+      },
+      {
+        "satz": "Aus „Freund“ wird ein Adjektiv: ___",
+        "richtig": "freundlich",
+        "falsch": ["freundig", "freundbar"],
+        "erklaerung": "Freund + lich = freundlich."
+      },
+      {
+        "satz": "Aus „essen“ wird ein Adjektiv: ___",
+        "richtig": "essbar",
+        "falsch": ["esslich", "essig"],
+        "erklaerung": "essen + bar = essbar: man kann es essen."
+      }
+    ],
+    "gross": [
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Das Lesen macht mir Spaß.",
+        "falsch": ["Das lesen macht mir Spaß.", "das Lesen macht mir Spaß."],
+        "erklaerung": "Mit „das“ davor wird das Verb zum Nomen: das Lesen."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Beim Schwimmen bin ich schnell.",
+        "falsch": ["Beim schwimmen bin ich schnell.", "beim Schwimmen bin ich schnell."],
+        "erklaerung": "„beim“ ist bei dem: das Schwimmen wird großgeschrieben."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Ich wünsche dir alles Gute.",
+        "falsch": ["Ich wünsche dir alles gute.", "Ich wünsche dir Alles Gute."],
+        "erklaerung": "Nach „alles“ wird das Adjektiv zum Nomen: alles Gute."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Wir spielen am Nachmittag.",
+        "falsch": ["Wir spielen am nachmittag.", "Wir Spielen am Nachmittag."],
+        "erklaerung": "„am Nachmittag“: der Nachmittag ist ein Nomen."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Sie hat etwas Schönes gemalt.",
+        "falsch": ["Sie hat etwas schönes gemalt.", "Sie hat Etwas Schönes gemalt."],
+        "erklaerung": "Nach „etwas“ wird das Adjektiv zum Nomen: etwas Schönes."
+      },
+      {
+        "satz": "Welcher Satz ist richtig?",
+        "richtig": "Der rote neue Ball liegt im Gras.",
+        "falsch": ["Der Rote neue Ball liegt im Gras.", "Der rote Neue Ball liegt im Gras."],
+        "erklaerung": "Erweitere die Wortgruppe: Das Nomen ist Ball, rot und neu bleiben klein."
+      }
+    ],
+    "textart": [
+      {
+        "satz": "Ein Text beantwortet die W-Fragen: Wer? Wo? Wann? Was? Er steht im Präteritum und ist sachlich.",
+        "richtig": "Bericht",
+        "falsch": ["Erzählung", "Beschreibung"],
+        "erklaerung": "Ein Bericht informiert genau und sachlich."
+      },
+      {
+        "satz": "Ein Text hat eine Einleitung, einen spannenden Höhepunkt und einen Schluss.",
+        "richtig": "Erzählung",
+        "falsch": ["Bericht", "Beschreibung"],
+        "erklaerung": "Eine Erzählung will unterhalten und spannend sein."
+      },
+      {
+        "satz": "Ein Text sagt genau, wie etwas aussieht: Farbe, Größe, Form. Er steht im Präsens.",
+        "richtig": "Beschreibung",
+        "falsch": ["Erzählung", "Bericht"],
+        "erklaerung": "Eine Beschreibung hilft, etwas wiederzuerkennen."
+      },
+      {
+        "satz": "Ein Text sagt Schritt für Schritt, was man tun muss.",
+        "richtig": "Anleitung",
+        "falsch": ["Erzählung", "Bericht"],
+        "erklaerung": "Eine Anleitung hat Schritte in der richtigen Reihenfolge."
+      },
+      {
+        "satz": "In einem Text stehen wörtliche Rede, Gefühle und spannende Wörter wie „plötzlich“.",
+        "richtig": "Erzählung",
+        "falsch": ["Bericht", "Anleitung"],
+        "erklaerung": "Gefühle und Spannung gehören in eine Erzählung, nicht in einen Bericht."
+      }
+    ]
+  }
+}

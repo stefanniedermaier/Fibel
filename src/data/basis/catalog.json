@@ -4486,5 +4486,323 @@
       "art": "geteilt"
     },
     "title": "9156 : 7"
+  },
+  {
+    "id": "k4.schreiben.flexion.fall",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.satz",
+    "unit": "k4.schreiben.flexion",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "fall"
+    },
+    "title": "dem oder den?"
+  },
+  {
+    "id": "k4.schreiben.flexion.diktat",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.satz",
+    "unit": "k4.schreiben.flexion",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "saetze"
+    },
+    "title": "Satz-Diktat",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.schreiben.praeteritum.formen",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.satz",
+    "unit": "k4.schreiben.praeteritum",
+    "exercise": "sprache.formen3",
+    "params": {
+      "mode": "praeteritum"
+    },
+    "title": "Wie heißt es in der Vergangenheit?"
+  },
+  {
+    "id": "k4.schreiben.praeteritum.schreibung",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.satz",
+    "unit": "k4.schreiben.praeteritum",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 4,
+      "phenomena": ["praeteritum"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k4.schreiben.ableiten.ableiten",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.stamm",
+    "unit": "k4.schreiben.ableiten",
+    "exercise": "schreiben.ableiten",
+    "params": {
+      "wordGrade": 4,
+      "phenomena": ["kombi", "umlaut", "verhaertung"]
+    },
+    "title": "Ableiten"
+  },
+  {
+    "id": "k4.schreiben.ableiten.schreibung",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.stamm",
+    "unit": "k4.schreiben.ableiten",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 4,
+      "phenomena": ["kombi", "umlaut", "verhaertung"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k4.schreiben.wortstamm.wortfamilie",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.stamm",
+    "unit": "k4.schreiben.wortstamm",
+    "exercise": "sprache.wortfamilie",
+    "params": {},
+    "title": "Was gehört zur Wortfamilie?"
+  },
+  {
+    "id": "k4.schreiben.wortstamm.zusammen",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.stamm",
+    "unit": "k4.schreiben.wortstamm",
+    "exercise": "sprache.artikel-zusammen",
+    "params": {},
+    "title": "Zusammengesetzte Wörter",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.schreiben.gross.gross",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.stamm",
+    "unit": "k4.schreiben.gross",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "gross"
+    },
+    "title": "Groß oder klein?"
+  },
+  {
+    "id": "k4.schreiben.gross.nachsilben",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.stamm",
+    "unit": "k4.schreiben.gross",
+    "exercise": "sprache.nachsilben",
+    "params": {},
+    "title": "-ung, -heit, -keit, -ig, -lich",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.schreiben.merkwoerter.schreibung",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.merk",
+    "unit": "k4.schreiben.merkwoerter",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 4,
+      "phenomena": ["ss", "v", "ks", "dt", "h", "doppelvokal", "ae", "istattie", "zz"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k4.schreiben.merkwoerter.tastatur",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.merk",
+    "unit": "k4.schreiben.merkwoerter",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 4,
+      "phenomena": ["ss", "v", "ks", "dt", "doppelvokal", "istattie"]
+    },
+    "title": "Schreib das Wort"
+  },
+  {
+    "id": "k4.schreiben.diktat.saetze",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.merk",
+    "unit": "k4.schreiben.diktat",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "saetze"
+    },
+    "title": "Satz-Diktat"
+  },
+  {
+    "id": "k4.schreiben.diktat.haeufig",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.merk",
+    "unit": "k4.schreiben.diktat",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "haeufig",
+      "wordGrade": 4
+    },
+    "title": "Häufige Wörter"
+  },
+  {
+    "id": "k4.schreiben.diktat.lernwoerter",
+    "grade": 4,
+    "topic": "schreiben",
+    "category": "schreiben.merk",
+    "unit": "k4.schreiben.diktat",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "lernwoerter"
+    },
+    "title": "Lernwörter"
+  },
+  {
+    "id": "k4.sprache.pronomen.pronomen",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.woerter4",
+    "unit": "k4.sprache.pronomen",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "pronomen"
+    },
+    "title": "Welches Fürwort passt?"
+  },
+  {
+    "id": "k4.sprache.pronomen.wortart",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.woerter4",
+    "unit": "k4.sprache.pronomen",
+    "exercise": "sprache.wortart",
+    "params": {
+      "mode": "wortart4"
+    },
+    "title": "Wortarten wiederholen",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.sprache.zeitformen.erkennen",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.woerter4",
+    "unit": "k4.sprache.zeitformen",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "zeit-erkennen"
+    },
+    "title": "Welche Zeitform?"
+  },
+  {
+    "id": "k4.sprache.zeitformen.einsetzen",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.woerter4",
+    "unit": "k4.sprache.zeitformen",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "zeitform"
+    },
+    "title": "Welche Form passt?"
+  },
+  {
+    "id": "k4.sprache.zeitformen.perfekt",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.woerter4",
+    "unit": "k4.sprache.zeitformen",
+    "exercise": "sprache.formen3",
+    "params": {
+      "mode": "perfekt"
+    },
+    "title": "Perfekt bilden",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.sprache.satzglieder.frage",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.satz4",
+    "unit": "k4.sprache.satzglieder",
+    "exercise": "sprache.satzglieder",
+    "params": {
+      "mode": "frage"
+    },
+    "title": "Wer? Wen? Wem? Wo? Wann?"
+  },
+  {
+    "id": "k4.sprache.satzglieder.umstellen",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.satz4",
+    "unit": "k4.sprache.satzglieder",
+    "exercise": "sprache.satzglieder",
+    "params": {
+      "mode": "umstellen",
+      "klasse4": true
+    },
+    "title": "Umstellprobe"
+  },
+  {
+    "id": "k4.sprache.faelle.fall",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.satz4",
+    "unit": "k4.sprache.faelle",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "fall"
+    },
+    "title": "Welche Form passt?"
+  },
+  {
+    "id": "k4.sprache.rede.rede",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.texte4",
+    "unit": "k4.sprache.rede",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "rede"
+    },
+    "title": "Welcher Satz ist richtig?"
+  },
+  {
+    "id": "k4.sprache.bausteine.bausteine",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.woerter4",
+    "unit": "k4.sprache.bausteine",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "bausteine"
+    },
+    "title": "Welches Wort entsteht?"
+  },
+  {
+    "id": "k4.sprache.textarten.textart",
+    "grade": 4,
+    "topic": "sprache",
+    "category": "sprache.texte4",
+    "unit": "k4.sprache.textarten",
+    "exercise": "sprache.luecke4",
+    "params": {
+      "art": "textart"
+    },
+    "title": "Welche Textart?"
   }
 ]

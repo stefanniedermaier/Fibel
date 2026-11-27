@@ -442,5 +442,41 @@
     "topic": "rechnen",
     "title": "Zahlen bis zur Million",
     "icon": "🔢"
+  },
+  {
+    "id": "schreiben.satz",
+    "topic": "schreiben",
+    "title": "Wörter im Satz",
+    "icon": "📝"
+  },
+  {
+    "id": "schreiben.stamm",
+    "topic": "schreiben",
+    "title": "Ableiten und Wortstamm",
+    "icon": "🔁"
+  },
+  {
+    "id": "schreiben.merk",
+    "topic": "schreiben",
+    "title": "Merkwörter und Diktat",
+    "icon": "⭐"
+  },
+  {
+    "id": "sprache.woerter4",
+    "topic": "sprache",
+    "title": "Wortarten, Zeitformen, Wortbildung",
+    "icon": "🏷️"
+  },
+  {
+    "id": "sprache.satz4",
+    "topic": "sprache",
+    "title": "Satzglieder und Fälle",
+    "icon": "🧱"
+  },
+  {
+    "id": "sprache.texte4",
+    "topic": "sprache",
+    "title": "Zeichen und Texte",
+    "icon": "📝"
   }
 ]

@@ -1265,5 +1265,103 @@
     "topic": "rechnen",
     "title": "Schriftlich dividieren, auch mit Rest",
     "term": 2
+  },
+  {
+    "id": "k4.schreiben.flexion",
+    "grade": 4,
+    "topic": "schreiben",
+    "title": "Gebeugte Wörter im Satz: dem, den, im, zum",
+    "term": 1
+  },
+  {
+    "id": "k4.schreiben.praeteritum",
+    "grade": 4,
+    "topic": "schreiben",
+    "title": "Präteritum richtig schreiben",
+    "term": 1
+  },
+  {
+    "id": "k4.schreiben.ableiten",
+    "grade": 4,
+    "topic": "schreiben",
+    "title": "Umlaut und Verhärtung kombiniert",
+    "term": 1
+  },
+  {
+    "id": "k4.schreiben.wortstamm",
+    "grade": 4,
+    "topic": "schreiben",
+    "title": "Wortstamm und Wortfamilie",
+    "term": 2
+  },
+  {
+    "id": "k4.schreiben.gross",
+    "grade": 4,
+    "topic": "schreiben",
+    "title": "Großschreibung erkennen: das Lesen, etwas Schönes",
+    "term": 2
+  },
+  {
+    "id": "k4.schreiben.merkwoerter",
+    "grade": 4,
+    "topic": "schreiben",
+    "title": "Merkwörter: ß, v, ks, dt, h, aa/ee, ä, i",
+    "term": 1
+  },
+  {
+    "id": "k4.schreiben.diktat",
+    "grade": 4,
+    "topic": "schreiben",
+    "title": "Häufige Wörter und Satz-Diktat",
+    "term": 1
+  },
+  {
+    "id": "k4.sprache.pronomen",
+    "grade": 4,
+    "topic": "sprache",
+    "title": "Pronomen ersetzen Nomen",
+    "term": 1
+  },
+  {
+    "id": "k4.sprache.zeitformen",
+    "grade": 4,
+    "topic": "sprache",
+    "title": "Alle Zeitformen: Präsens, Präteritum, Perfekt, Futur",
+    "term": 1
+  },
+  {
+    "id": "k4.sprache.satzglieder",
+    "grade": 4,
+    "topic": "sprache",
+    "title": "Satzglieder: Subjekt, Prädikat, Ergänzungen, Ort und Zeit",
+    "term": 1
+  },
+  {
+    "id": "k4.sprache.faelle",
+    "grade": 4,
+    "topic": "sprache",
+    "title": "Fälle: Artikel und Nomen ändern sich",
+    "term": 2
+  },
+  {
+    "id": "k4.sprache.rede",
+    "grade": 4,
+    "topic": "sprache",
+    "title": "Wörtliche Rede",
+    "term": 1
+  },
+  {
+    "id": "k4.sprache.bausteine",
+    "grade": 4,
+    "topic": "sprache",
+    "title": "Mehrfach zusammengesetzte Wörter, Wortart ändern",
+    "term": 2
+  },
+  {
+    "id": "k4.sprache.textarten",
+    "grade": 4,
+    "topic": "sprache",
+    "title": "Bericht, Erzählung, Beschreibung",
+    "term": 2
   }
 ]

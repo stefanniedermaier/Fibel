@@ -20,7 +20,14 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
   <div class="task">
     <EmojiPicture v-if="data.image" :code="data.image" :size="96" />
     <p v-if="data.helper" class="helper card">{{ data.helper }}</p>
-    <p v-if="data.prompt" class="prompt" aria-hidden="true">{{ data.prompt }}</p>
+    <p
+      v-if="data.prompt"
+      class="prompt"
+      :class="{ long: data.prompt.length > 24, text: data.prompt.length > 60 }"
+      aria-hidden="true"
+    >
+      {{ data.prompt }}
+    </p>
     <ChoiceButtons
       :options="data.choices"
       :correct-key="data.correctKey"
@@ -56,6 +63,21 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
   font-size: clamp(40px, 12vw, 64px);
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+/* Sentences (grade 4) and short texts are read, not looked at as a word picture. */
+.prompt.long {
+  max-width: 600px;
+  font-size: clamp(24px, 6.5vw, 34px);
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.prompt.text {
+  font-size: clamp(19px, 5vw, 24px);
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
 }
 
 .label {
