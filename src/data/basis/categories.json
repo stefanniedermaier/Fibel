@@ -316,5 +316,17 @@
     "topic": "sache",
     "title": "Berufe nach Arbeitsfeldern",
     "icon": "👩‍🔧"
+  },
+  {
+    "id": "rechnen.zahlen1000",
+    "topic": "rechnen",
+    "title": "Zahlen bis 1000",
+    "icon": "🔢"
+  },
+  {
+    "id": "rechnen.kopf",
+    "topic": "rechnen",
+    "title": "Kopfrechnen und Einmaleins",
+    "icon": "🧠"
   }
 ]

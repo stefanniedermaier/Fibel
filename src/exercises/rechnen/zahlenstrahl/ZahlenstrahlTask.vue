@@ -15,7 +15,8 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
     </p>
     <NumberLine
       :from="data.from"
-      :to="data.max > 20 ? data.from + 20 : data.max"
+      :to="data.max > 100 ? data.from + 200 : data.max > 20 ? data.from + 20 : data.max"
+      :step="data.max > 100 ? 10 : 1"
       :mark="data.mode === 'ablesen' ? data.n : undefined"
     />
     <ChoiceButtons

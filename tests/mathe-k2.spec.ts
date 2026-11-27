@@ -16,28 +16,33 @@ import { dauerText, zeitspanne } from '@/exercises/uhr/zeitspanne'
 const settings = resolveDefaults('DE-BY', 2)
 const ctx = { land: 'DE-BY', grade: 2, settings }
 
-describe('Klasse 2: alle Bereiche', () => {
-  it('jeder Katalog-Eintrag hat Aufgaben, die Lösung ist immer wählbar', () => {
-    const withLernwoerter = { ...ctx, settings: { ...settings, lernwoerter: ['Fahrrad'] } }
-    for (const topic of TOPICS)
-      for (const e of catalogFor('DE-BY', 2, topic)) {
-        const m = getExercise(e.exercise)!
-        const keys = m.items(withLernwoerter, e.params as never)
-        expect(keys.length, e.id).toBeGreaterThan(0)
-        for (const key of keys.filter((_, i) => i % 11 === 0).slice(0, 12))
-          for (let seed = 0; seed < 3; seed++) {
-            const d = m.generate(withLernwoerter, e.params as never, key, createRng(seed)).data as {
-              correctKey?: string
-              choices?: { key: string }[]
+describe('Klasse 2 und 3: alle Bereiche', () => {
+  it.each([2, 3])(
+    'Klasse %i: jeder Katalog-Eintrag hat Aufgaben, die Lösung ist wählbar',
+    (grade) => {
+      const base = { land: 'DE-BY', grade, settings: resolveDefaults('DE-BY', grade) }
+      const withLernwoerter = { ...base, settings: { ...base.settings, lernwoerter: ['Fahrrad'] } }
+      for (const topic of TOPICS)
+        for (const e of catalogFor('DE-BY', grade, topic)) {
+          const m = getExercise(e.exercise)!
+          const keys = m.items(withLernwoerter, e.params as never)
+          expect(keys.length, e.id).toBeGreaterThan(0)
+          for (const key of keys.filter((_, i) => i % 11 === 0).slice(0, 12))
+            for (let seed = 0; seed < 3; seed++) {
+              const d = m.generate(withLernwoerter, e.params as never, key, createRng(seed))
+                .data as {
+                correctKey?: string
+                choices?: { key: string }[]
+              }
+              if (d.choices && d.correctKey !== undefined && d.choices.length > 0) {
+                const keysOf = d.choices.map((c) => c.key)
+                expect(keysOf, `${e.id} ${key}`).toContain(d.correctKey)
+                expect(new Set(keysOf).size, `${e.id} ${key}`).toBe(keysOf.length)
+              }
             }
-            if (d.choices && d.correctKey !== undefined && d.choices.length > 0) {
-              const keysOf = d.choices.map((c) => c.key)
-              expect(keysOf, `${e.id} ${key}`).toContain(d.correctKey)
-              expect(new Set(keysOf).size, `${e.id} ${key}`).toBe(keysOf.length)
-            }
-          }
-      }
-  })
+        }
+    },
+  )
 })
 
 describe('Messen, Uhr, Sachaufgaben, Zufall, Formen', () => {

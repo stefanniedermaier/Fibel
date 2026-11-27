@@ -29,8 +29,13 @@ export interface ZahlenstrahlData {
 /** Up to 20 the whole line; up to 100 a section of 20 around the number. */
 export function section(n: number, max: number): number {
   if (max <= 20) return 0
+  if (max > 100)
+    return Math.max(0, Math.min(max - 200, Math.floor(n / 100) * 100 - (n % 100 < 50 ? 100 : 0)))
   return Math.max(0, Math.min(max - 20, Math.floor(n / 10) * 10 - (n % 10 < 5 ? 10 : 0)))
 }
+
+/** Step between ticks and between neighbours: 1, or 10 up to 1000. */
+export const stepOf = (max: number) => (max > 100 ? 10 : 1)
 
 export const zahlenstrahl: ExerciseModule<ZahlenstrahlParams, ZahlenstrahlData> = {
   id: 'rechnen.zahlenstrahl',
@@ -38,6 +43,15 @@ export const zahlenstrahl: ExerciseModule<ZahlenstrahlParams, ZahlenstrahlData> 
 
   items(_ctx, params) {
     const keys: string[] = []
+    if (params.max > 100) {
+      // Up to 1000 in steps of ten: read off tens, neighbouring tens (R3-2).
+      for (let n = 10; n < params.max; n += 10) {
+        if (params.mode === 'ablesen') {
+          if (n % 50 !== 0) keys.push(`rechnen.zahlenstrahl:ablesen:${n}`)
+        } else keys.push(`rechnen.zahlenstrahl:vor:${n}`, `rechnen.zahlenstrahl:nach:${n}`)
+      }
+      return keys
+    }
     if (params.mode === 'ablesen') {
       // Multiples of five are labelled – nothing to read off there.
       for (let n = 1; n < params.max; n++) {
@@ -73,17 +87,24 @@ export const zahlenstrahl: ExerciseModule<ZahlenstrahlParams, ZahlenstrahlData> 
           max: params.max,
           from: section(n, params.max),
           n,
-          choices: pick(n, [n - 1, n + 1, n - 2, n + 2]),
+          choices: pick(
+            n,
+            [1, -1, 2, -2].map((d) => n + d * stepOf(params.max)),
+          ),
           correctKey: String(n),
         },
       }
     }
     const side = kind as 'vor' | 'nach'
-    const answer = side === 'vor' ? n - 1 : n + 1
+    const st = stepOf(params.max)
+    const answer = side === 'vor' ? n - st : n + st
     const word = side === 'vor' ? 'vor' : 'nach'
     return {
-      instruction: `Welche Zahl kommt direkt ${word} ${numberWord(n)}?`,
-      caption: `Welche Zahl kommt direkt ${word} ${n}?`,
+      instruction:
+        st === 10
+          ? `Welcher Zehner kommt direkt ${word} ${numberWord(n)}?`
+          : `Welche Zahl kommt direkt ${word} ${numberWord(n)}?`,
+      caption: `${st === 10 ? 'Welcher Zehner' : 'Welche Zahl'} kommt direkt ${word} ${n}?`,
       hint: 'Schau auf den Zahlenstrahl.',
       solution: `Direkt ${word} ${numberWord(n)} kommt ${numberWord(answer)}.`,
       data: {
@@ -92,7 +113,7 @@ export const zahlenstrahl: ExerciseModule<ZahlenstrahlParams, ZahlenstrahlData> 
         from: section(n, params.max),
         n,
         side,
-        choices: pick(answer, [side === 'vor' ? n + 1 : n - 1, answer - 1, answer + 1, n]),
+        choices: pick(answer, [side === 'vor' ? n + st : n - st, answer - st, answer + st, n]),
         correctKey: String(answer),
       },
     }

@@ -213,6 +213,11 @@ export interface WordEntry {
   plural?: string
   /** Verbs: the form for er/sie/es ("spielt", "spricht"). */
   er?: string
+  /** Grade 3, verbs: Präteritum and Perfekt for er/sie/es ("sang", "hat gesungen"). */
+  praeteritum?: string
+  perfekt?: string
+  /** Grade 3, adjectives: comparative and superlative ("größer", "am größten"). */
+  steigerung?: [string, string]
   /** Umlaut and hardening: the form to practise and where it comes from (Hund ← Hunde). */
   ableiten?: { wort: string; von: string }
 }

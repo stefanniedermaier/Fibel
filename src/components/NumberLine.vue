@@ -4,16 +4,22 @@ import { computed } from 'vue'
 // Zahlenstrahl from `from` to `to` with a tick per number, labels every `labelEvery`,
 // and an arrow at `mark` (the number to read off).
 const props = withDefaults(
-  defineProps<{ from?: number; to: number; mark?: number; labelEvery?: number }>(),
-  { from: 0, mark: undefined, labelEvery: 5 },
+  defineProps<{ from?: number; to: number; mark?: number; labelEvery?: number; step?: number }>(),
+  { from: 0, mark: undefined, labelEvery: 5, step: 1 },
 )
 
 const W = 600
 const PAD = 34
 const x = (n: number) => PAD + ((n - props.from) / (props.to - props.from)) * (W - 2 * PAD)
+// A tick every `step` (10 up to 1000); labels every `labelEvery` ticks.
 const ticks = computed(() =>
-  Array.from({ length: props.to - props.from + 1 }, (_, i) => props.from + i),
+  Array.from(
+    { length: (props.to - props.from) / props.step + 1 },
+    (_, i) => props.from + i * props.step,
+  ),
 )
+const big = (n: number) => (n / props.step) % props.labelEvery === 0
+const strong = (n: number) => (n / props.step) % 10 === 0
 </script>
 
 <template>
@@ -24,12 +30,12 @@ const ticks = computed(() =>
       <line
         :x1="x(n)"
         :x2="x(n)"
-        :y1="n % labelEvery === 0 ? 46 : 52"
-        :y2="n % labelEvery === 0 ? 74 : 68"
+        :y1="big(n) ? 46 : 52"
+        :y2="big(n) ? 74 : 68"
         class="tick"
-        :class="{ strong: n % 10 === 0 }"
+        :class="{ strong: strong(n) }"
       />
-      <text v-if="n % labelEvery === 0" :x="x(n)" y="108" class="label">{{ n }}</text>
+      <text v-if="big(n)" :x="x(n)" y="108" class="label">{{ n }}</text>
     </g>
     <g v-if="mark !== undefined">
       <polygon :points="`${x(mark)},44 ${x(mark) - 11},18 ${x(mark) + 11},18`" class="mark" />

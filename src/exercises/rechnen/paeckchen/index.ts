@@ -13,7 +13,16 @@ import type { ExerciseModule } from '../../types'
 import { itemPart, shownOp, spokenArithmetic, type Arithmetic } from '../shared'
 import PaeckchenTask from './PaeckchenTask.vue'
 
-export type Strategie = 'verdoppeln' | 'halbieren' | 'nachbar' | 'tausch' | 'umkehr' | 'analog'
+export type Strategie =
+  | 'verdoppeln'
+  | 'halbieren'
+  | 'nachbar'
+  | 'tausch'
+  | 'umkehr'
+  | 'analog'
+  | 'analog100'
+  | 'analog10'
+  | 'analogmal'
 
 export interface PaeckchenParams {
   max: number
@@ -50,7 +59,18 @@ function tasks100(): string[] {
   return keys
 }
 
+/** Up to 1000 (R3-4): analogous tasks with tens and hundreds, also with times. */
+function tasks1000(): string[] {
+  const keys: string[] = []
+  for (let a = 1; a <= 9; a++) for (let b = 1; a + b <= 10; b++) keys.push(`analog100:${a}+${b}`)
+  for (const a of [12, 15, 23, 34, 41, 56, 62, 75])
+    for (const b of [3, 4, 5, 6]) if ((a % 10) + b < 10) keys.push(`analog10:${a}+${b}`)
+  for (let k = 2; k <= 9; k++) for (const r of [3, 4, 6, 7, 8]) keys.push(`analogmal:${k}x${r}`)
+  return keys
+}
+
 function tasks(max: number): string[] {
+  if (max > 100) return tasks1000()
   if (max > 20) return tasks100()
   const keys: string[] = []
   for (let a = 1; 2 * a <= max; a++) {
@@ -103,7 +123,28 @@ function strategie(
       hint: 'Es ist einer mehr als bei der Aufgabe darüber.',
     }
   }
+  if (kind === 'analogmal') {
+    const [k, r] = value.split('x').map(Number) as [number, number]
+    return {
+      helper: `${k} · ${r} = ${k * r}`,
+      task: `${k * 10} · ${r}`,
+      answer: k * r * 10,
+      spoken: `${numberWord(k)} mal ${numberWord(r)} ist ${numberWord(k * r)}. Wie viel ist ${numberWord(k * 10)} mal ${numberWord(r)}?`,
+      hint: 'Zehnmal so viel: hänge eine Null an.',
+    }
+  }
   const [a, b] = value.split('+').map(Number) as [number, number]
+  if (kind === 'analog100' || kind === 'analog10') {
+    const f = kind === 'analog100' ? 100 : 10
+    return {
+      helper: `${a} + ${b} = ${a + b}`,
+      task: `${a * f} + ${b * f}`,
+      answer: (a + b) * f,
+      spoken: `${numberWord(a)} plus ${numberWord(b)} ist ${numberWord(a + b)}. Wie viel ist ${numberWord(a * f)} plus ${numberWord(b * f)}?`,
+      hint:
+        f === 100 ? 'Rechne mit Hundertern wie mit Einern.' : 'Rechne mit Zehnern wie mit Einern.',
+    }
+  }
   if (kind === 'analog') {
     return {
       helper: `${a} + ${b} = ${a + b}`,

@@ -754,5 +754,40 @@
     "topic": "sache",
     "title": "Berufe nach Arbeitsfeldern",
     "term": 2
+  },
+  {
+    "id": "k3.rechnen.stellenwert",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Hunderter, Zehner, Einer",
+    "term": 1
+  },
+  {
+    "id": "k3.rechnen.orientierung",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Zahlenstrahl bis 1000, Zahlenfolgen",
+    "term": 1
+  },
+  {
+    "id": "k3.rechnen.vergleichen",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Vergleichen bis 1000",
+    "term": 1
+  },
+  {
+    "id": "k3.rechnen.kopfrechnen",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Kopfrechnen mit analogen Aufgaben",
+    "term": 1
+  },
+  {
+    "id": "k3.rechnen.einmaleins",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Einmaleins: alle Reihen",
+    "term": 1
   }
 ]

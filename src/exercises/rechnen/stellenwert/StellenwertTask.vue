@@ -12,7 +12,12 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 <template>
   <div class="task">
     <template v-if="data.mode === 'bild'">
-      <BaseTenBlocks :tens="data.tens" :ones="data.ones" />
+      <BaseTenBlocks
+        :hundreds="data.hundreds"
+        :tens="data.tens"
+        :ones="data.ones"
+        :size="data.hundreds ? 11 : 18"
+      />
       <ChoiceButtons
         :options="data.choices"
         :correct-key="data.correctKey"
@@ -27,10 +32,17 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
     </template>
     <template v-else>
       <p class="equation" aria-hidden="true">
-        {{ data.n }} = {{ data.tens * 10 }} + <span class="gap">?</span>
+        {{ data.n }} = <template v-if="data.hundreds">{{ data.hundreds * 100 }} + </template
+        >{{ data.tens * 10 }} + <span class="gap">?</span>
       </p>
       <TenFrame v-if="data.n <= 20" :count="data.n" :cells="20" />
-      <BaseTenBlocks v-else :tens="data.tens" :ones="data.ones" />
+      <BaseTenBlocks
+        v-else
+        :hundreds="data.hundreds"
+        :tens="data.tens"
+        :ones="data.ones"
+        :size="data.hundreds ? 10 : 18"
+      />
       <NumberInput
         :answer="data.ones"
         :revealed="revealed"

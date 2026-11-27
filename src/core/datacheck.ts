@@ -256,26 +256,31 @@ function checkScripts(): string[] {
  * shows in the word; umlaut and hardening words name their related form; nouns have
  * article and plural, verbs the er-form; every phenomenon has enough words.
  */
-export function checkGrade2Words(words: readonly Word[], label: string): string[] {
+export function checkGrade2Words(words: readonly Word[], label: string, grade = 2): string[] {
   const problems: string[] = []
   const count = new Map<string, number>()
   for (const w of words) {
-    const where = `${label}, Klasse 2, Wort „${w.text}“`
+    const where = `${label}, Klasse ${grade}, Wort „${w.text}“`
     const p = w.schwerpunkt
     if (!p || !(p in PHENOMENA)) problems.push(`${where}: unbekannter Schwerpunkt „${p}“`)
     else if (!showsPhenomenon(p as Phenomenon, w.text, w.syllables))
       problems.push(`${where}: „${p}“ kommt im Wort nicht vor`)
-    if ((p === 'umlaut' || p === 'verhaertung') && !w.ableiten)
+    if ((p === 'umlaut' || p === 'verhaertung' || p === 'kombi') && !w.ableiten)
       problems.push(`${where}: braucht eine Ableitung (ableiten)`)
-    if (w.ableiten && !/[äöü]|[bdg]/i.test(w.ableiten.wort))
+    if (w.ableiten && !/[äöü]|[bdg]/i.test(w.ableiten.wort) && p !== 'h')
       problems.push(`${where}: Ableitung „${w.ableiten.wort}“ ohne Umlaut oder b/d/g`)
     if (w.wortart === 'nomen' && (!w.artikel || !w.plural))
       problems.push(`${where}: Nomen ohne Artikel oder Mehrzahl`)
     if (w.wortart === 'verb' && !w.er) problems.push(`${where}: Verb ohne er-Form`)
     for (const ph of w.phenomena) count.set(ph, (count.get(ph) ?? 0) + 1)
   }
-  for (const p of Object.keys(PHENOMENA))
-    if ((count.get(p) ?? 0) < 4) problems.push(`${label}, Klasse 2: zu wenige Wörter mit „${p}“`)
+  // Every focus of the grade needs enough words (a unit filters by it).
+  const focuses = new Set(words.map((w) => w.schwerpunkt).filter((p): p is string => !!p))
+  for (const p of focuses)
+    if ((count.get(p) ?? 0) < 1) problems.push(`${label}, Klasse ${grade}: keine Wörter mit „${p}“`)
+  if (grade === 2)
+    for (const p of Object.keys(PHENOMENA).filter((x) => !LATER.has(x)))
+      if ((count.get(p) ?? 0) < 4) problems.push(`${label}, Klasse 2: zu wenige Wörter mit „${p}“`)
   return problems
 }
 
@@ -303,8 +308,21 @@ export function checkGrade2Texts(): string[] {
   return problems
 }
 
+/** Phenomena that only grade 3 uses. */
+const LATER = new Set([
+  'trennen',
+  'grammatik',
+  'praeteritum',
+  'kombi',
+  'ks',
+  'zz',
+  'dt',
+  'doppelvokal',
+  'istattie',
+])
+
 /** Grades that have content (folders under src/data/basis). */
-export const CONTENT_GRADES = [1, 2]
+export const CONTENT_GRADES = [1, 2, 3]
 
 function checkWords(
   words: readonly Word[],
@@ -490,6 +508,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
         problems.push(...checkSentences(grade, words, images))
         if (grade === 1) problems.push(...checkGrade1Extras(words, images), ...checkSache(images))
         if (grade === 2) problems.push(...checkGrade2Words(words, land.name), ...checkGrade2Texts())
+        if (grade === 3) problems.push(...checkGrade2Words(words, land.name, 3))
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

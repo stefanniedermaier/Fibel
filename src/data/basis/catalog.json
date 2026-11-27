@@ -2786,5 +2786,133 @@
       "thema": "arbeitsfelder"
     },
     "title": "Berufe nach Arbeitsfeldern: Stimmt das?"
+  },
+  {
+    "id": "k3.rechnen.stellenwert.bild",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen1000",
+    "unit": "k3.rechnen.stellenwert",
+    "exercise": "rechnen.stellenwert",
+    "params": {
+      "max": 1000,
+      "mode": "bild"
+    },
+    "title": "Hunderter, Zehner und Einer"
+  },
+  {
+    "id": "k3.rechnen.stellenwert.zerlegen",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen1000",
+    "unit": "k3.rechnen.stellenwert",
+    "exercise": "rechnen.stellenwert",
+    "params": {
+      "max": 1000,
+      "mode": "zerlegen"
+    },
+    "title": "Zahlen zerlegen"
+  },
+  {
+    "id": "k3.rechnen.orientierung.ablesen",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen1000",
+    "unit": "k3.rechnen.orientierung",
+    "exercise": "rechnen.zahlenstrahl",
+    "params": {
+      "max": 1000,
+      "mode": "ablesen"
+    },
+    "title": "Zahlenstrahl bis 1000"
+  },
+  {
+    "id": "k3.rechnen.orientierung.nachbarn",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen1000",
+    "unit": "k3.rechnen.orientierung",
+    "exercise": "rechnen.zahlenstrahl",
+    "params": {
+      "max": 1000,
+      "mode": "nachbarn"
+    },
+    "title": "Nachbarzehner"
+  },
+  {
+    "id": "k3.rechnen.orientierung.reihen",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen1000",
+    "unit": "k3.rechnen.orientierung",
+    "exercise": "rechnen.reihen",
+    "params": {
+      "levels": [7]
+    },
+    "title": "Zahlenfolgen bis 1000"
+  },
+  {
+    "id": "k3.rechnen.vergleichen.vergleichen",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen1000",
+    "unit": "k3.rechnen.vergleichen",
+    "exercise": "rechnen.vergleichen",
+    "params": {
+      "max": 1000
+    },
+    "title": "Größer, kleiner oder gleich?"
+  },
+  {
+    "id": "k3.rechnen.kopfrechnen.analog",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k3.rechnen.kopfrechnen",
+    "exercise": "rechnen.paeckchen",
+    "params": {
+      "max": 1000,
+      "mode": "strategie"
+    },
+    "title": "Analoge Aufgaben"
+  },
+  {
+    "id": "k3.rechnen.kopfrechnen.plus-minus",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k3.rechnen.kopfrechnen",
+    "exercise": "rechnen.plus-minus",
+    "params": {
+      "max": 100,
+      "forms": ["ZE+ZE"]
+    },
+    "title": "Plus und Minus bis 100"
+  },
+  {
+    "id": "k3.rechnen.einmaleins.einmaleins",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k3.rechnen.einmaleins",
+    "exercise": "rechnen.einmaleins",
+    "params": {
+      "mode": "rechnen",
+      "reihen": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "geteilt": true
+    },
+    "title": "Einmaleins und Umkehraufgaben"
+  },
+  {
+    "id": "k3.rechnen.einmaleins.rest",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k3.rechnen.einmaleins",
+    "exercise": "rechnen.einmaleins",
+    "params": {
+      "mode": "rest"
+    },
+    "title": "Teilen mit Rest"
   }
 ]

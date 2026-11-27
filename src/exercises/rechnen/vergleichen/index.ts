@@ -31,6 +31,22 @@ const WORDS: Record<Relation, string> = { '<': 'kleiner als', '=': 'gleich', '>'
  */
 function nearPairs(max: number): string[] {
   const keys = new Set<string>()
+  if (max > 100) {
+    for (let a = 101; a <= max; a += 7) {
+      const [h, z, e] = [Math.floor(a / 100), Math.floor((a % 100) / 10), a % 10]
+      for (const b of [
+        a,
+        a + 1,
+        a - 1,
+        a + 10,
+        a - 100,
+        h * 100 + e * 10 + z,
+        z * 100 + h * 10 + e,
+      ])
+        if (b >= 100 && b <= max) keys.add(`rechnen.vergleichen:${a}-${b}`)
+    }
+    return [...keys]
+  }
   for (let a = 10; a <= max; a++) {
     const swapped = (a % 10) * 10 + Math.floor(a / 10)
     for (const b of [a, a + 1, a - 1, a + 10, a - 10, swapped, a + 5])

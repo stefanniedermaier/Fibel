@@ -50,6 +50,8 @@ export const LEVEL_ITEMS: Record<number, string[]> = {
   5: ['5-+3', '5-+4', '5-+5', '5--2', '5--3'],
   // Grade 2: sequences up to 100 (R2-2, R2-12).
   6: ['6-+2', '6-+5', '6-+10', '6--10', '6--5'],
+  // Grade 3: up to 1000 (R3-2).
+  7: ['7-+10', '7-+50', '7-+100', '7--100', '7-+25'],
 }
 /** Levels of the automatic progression (grade 1); level 6 only via `levels`. */
 export const LEVELS = Object.keys(LEVEL_ITEMS)
@@ -194,7 +196,7 @@ export const reihen: ExerciseModule<ReihenParams, ReihenData> = {
     const level = Number(levelText)
     const isNumber = level >= 4
     const data = isNumber
-      ? numberTask(Number(rule), rng, level >= 6 ? 100 : 20)
+      ? numberTask(Number(rule), rng, level >= 7 ? 1000 : level >= 6 ? 100 : 20)
       : patternTask(level, rule, rng)
     const atEnd = data.gap === data.tokens.length - 1
     const answer = data.tokens[data.gap]!
