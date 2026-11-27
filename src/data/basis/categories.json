@@ -244,5 +244,11 @@
     "topic": "lesen",
     "title": "Texte und Geschichten",
     "icon": "📖"
+  },
+  {
+    "id": "uhr.zeit",
+    "topic": "uhr",
+    "title": "Zeitspanne und Kalender",
+    "icon": "📅"
   }
 ]

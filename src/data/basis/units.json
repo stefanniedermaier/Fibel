@@ -544,5 +544,26 @@
     "topic": "lesen",
     "title": "Was passiert zuerst?",
     "term": 2
+  },
+  {
+    "id": "k2.uhr.digital",
+    "grade": 2,
+    "topic": "uhr",
+    "title": "Digitale Uhrzeit",
+    "term": 2
+  },
+  {
+    "id": "k2.uhr.zeitspanne",
+    "grade": 2,
+    "topic": "uhr",
+    "title": "Zeitspannen",
+    "term": 2
+  },
+  {
+    "id": "k2.uhr.kalender",
+    "grade": 2,
+    "topic": "uhr",
+    "title": "Kalender",
+    "term": 1
   }
 ]

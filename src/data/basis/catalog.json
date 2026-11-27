@@ -2082,5 +2082,101 @@
       "saetze": true
     },
     "title": "Sätze ordnen"
+  },
+  {
+    "id": "k2.uhr.digital.tageszeit",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.uhrzeit",
+    "unit": "k2.uhr.digital",
+    "exercise": "uhr.digital",
+    "params": {
+      "mode": "tageszeit"
+    },
+    "title": "7:30 oder 19:30?"
+  },
+  {
+    "id": "k2.uhr.digital.analog",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.uhrzeit",
+    "unit": "k2.uhr.digital",
+    "exercise": "uhr.digital",
+    "params": {
+      "mode": "analog"
+    },
+    "title": "Digitaluhr und Zeigeruhr"
+  },
+  {
+    "id": "k2.uhr.zeitspanne.spaeter",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k2.uhr.zeitspanne",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "spaeter"
+    },
+    "title": "Wie spät ist es später?"
+  },
+  {
+    "id": "k2.uhr.zeitspanne.frueher",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k2.uhr.zeitspanne",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "frueher"
+    },
+    "title": "Wie spät war es vorher?"
+  },
+  {
+    "id": "k2.uhr.zeitspanne.dauer",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k2.uhr.zeitspanne",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "dauer"
+    },
+    "title": "Wie lange dauert es?"
+  },
+  {
+    "id": "k2.uhr.kalender.wochentage",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k2.uhr.kalender",
+    "exercise": "uhr.kalender",
+    "params": {
+      "mode": "wochentage"
+    },
+    "title": "Wochentage"
+  },
+  {
+    "id": "k2.uhr.kalender.monate",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k2.uhr.kalender",
+    "exercise": "uhr.kalender",
+    "params": {
+      "mode": "monate"
+    },
+    "title": "Monate"
+  },
+  {
+    "id": "k2.uhr.kalender.gestern",
+    "grade": 2,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k2.uhr.kalender",
+    "exercise": "uhr.kalender",
+    "params": {
+      "mode": "gestern"
+    },
+    "title": "Gestern, heute, morgen"
   }
 ]

@@ -20,6 +20,8 @@ import { schreibung } from './schreiben/schreibung'
 import { ableiten } from './schreiben/ableiten'
 import { abc } from './schreiben/abc'
 import { satzLuecke } from './lesen/satz-luecke'
+import { uhrDigital } from './uhr/digital'
+import { zeitspanne } from './uhr/zeitspanne'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -124,6 +126,8 @@ register(schreibung)
 register(ableiten)
 register(abc)
 register(satzLuecke)
+register(uhrDigital)
+register(zeitspanne)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)
