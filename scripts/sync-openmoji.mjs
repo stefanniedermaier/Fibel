@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Copies exactly the OpenMoji SVGs the app uses into public/img/openmoji/.
- * Collects every "image" value from the JSON files under src/data/.
+ * Collects every "image" value (and the codes in "scene" and "images" lists) from the
+ * JSON files under src/data/.
  * Usage: npm run data:openmoji
  */
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs'
@@ -21,11 +22,16 @@ function jsonFiles(dir) {
   })
 }
 
+/** Keys whose value is a list of OpenMoji codes (e.g. the picture of a sentence). */
+const IMAGE_LISTS = new Set(['scene', 'images'])
+
 function collectImages(value, found) {
   if (Array.isArray(value)) value.forEach((v) => collectImages(v, found))
   else if (value && typeof value === 'object') {
     for (const [key, v] of Object.entries(value)) {
       if (key === 'image' && typeof v === 'string') found.add(v)
+      else if (IMAGE_LISTS.has(key) && Array.isArray(v) && v.every((c) => typeof c === 'string'))
+        v.forEach((c) => found.add(c))
       else collectImages(v, found)
     }
   }

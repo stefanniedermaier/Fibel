@@ -5,5 +5,6 @@ import InstallHint from './components/InstallHint.vue'
 
 <template>
   <InstallHint />
-  <RouterView />
+  <!-- Keyed by path: a new unit or subject always starts fresh, also between categories. -->
+  <RouterView :key="$route.path" />
 </template>

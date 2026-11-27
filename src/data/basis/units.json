@@ -21,6 +21,13 @@
     "term": 1
   },
   {
+    "id": "k1.lesen.saetze",
+    "grade": 1,
+    "topic": "lesen",
+    "title": "Sätze lesen",
+    "term": 1
+  },
+  {
     "id": "k1.schreiben.buchstaben",
     "grade": 1,
     "topic": "schreiben",
@@ -32,6 +39,13 @@
     "grade": 1,
     "topic": "schreiben",
     "title": "Wörter schreiben",
+    "term": 1
+  },
+  {
+    "id": "k1.schreiben.merkwoerter",
+    "grade": 1,
+    "topic": "schreiben",
+    "title": "Merkwörter und Lernwörter",
     "term": 1
   },
   {

@@ -4,6 +4,58 @@
  */
 import { graphemes, isVowelGrapheme } from './graphemes'
 
+/**
+ * The frequent words of the ISB basic vocabulary 1/2 ("Häufigkeitswortschatz") – the only
+ * words that may be marked as Merkwort, i.e. learnt without the lauttreu rule.
+ */
+export const HAEUFIGKEITSWOERTER = new Set([
+  'aber',
+  'als',
+  'also',
+  'auf',
+  'aus',
+  'bei',
+  'da',
+  'das',
+  'der',
+  'des',
+  'dir',
+  'dich',
+  'die',
+  'doch',
+  'du',
+  'durch',
+  'er',
+  'es',
+  'für',
+  'her',
+  'hinter',
+  'ich',
+  'im',
+  'in',
+  'ist',
+  'ja',
+  'mit',
+  'nach',
+  'nein',
+  'nicht',
+  'nun',
+  'oder',
+  'schon',
+  'sie',
+  'sind',
+  'so',
+  'über',
+  'um',
+  'und',
+  'was',
+  'weil',
+  'weiter',
+  'wer',
+  'wir',
+  'wo',
+])
+
 export interface Violation {
   rule: string
   detail: string

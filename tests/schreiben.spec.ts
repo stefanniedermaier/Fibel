@@ -123,10 +123,12 @@ describe('S3 ABC-Tastatur', () => {
 })
 
 describe('Schreiben in Klasse 1', () => {
-  it('hat mit den Startbuchstaben alle fünf Übungen', () => {
+  it('hat mit den Startbuchstaben alle Wort- und Buchstabenübungen', () => {
     const entries = availableEntries(catalogFor('DE-BY', 1, 'schreiben'), start, getExercise)
+    // Merkwörter need letters like d and r; Lernwörter only exist once the parents add some.
     expect(entries.map((e) => e.exercise).sort()).toEqual([
       'schreiben.abc-tastatur',
+      'schreiben.abschreiben',
       'schreiben.buchstaben-legen',
       'schreiben.luecke',
       'schreiben.nachspuren',

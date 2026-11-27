@@ -36,6 +36,42 @@
     "title": "Bild ansehen, Wort finden"
   },
   {
+    "id": "k1.lesen.blitzlesen",
+    "grade": 1,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k1.lesen.woerter",
+    "exercise": "lesen.blitzlesen",
+    "params": {
+      "wordGrade": 1
+    },
+    "title": "Blitzlesen"
+  },
+  {
+    "id": "k1.lesen.satz-bild",
+    "grade": 1,
+    "topic": "lesen",
+    "category": "lesen.saetze",
+    "unit": "k1.lesen.saetze",
+    "exercise": "lesen.satz-bild",
+    "params": {
+      "mode": "waehlen"
+    },
+    "title": "Satz lesen, Bild finden"
+  },
+  {
+    "id": "k1.lesen.satz-stimmt",
+    "grade": 1,
+    "topic": "lesen",
+    "category": "lesen.saetze",
+    "unit": "k1.lesen.saetze",
+    "exercise": "lesen.satz-bild",
+    "params": {
+      "mode": "stimmt"
+    },
+    "title": "Passt der Satz zum Bild?"
+  },
+  {
     "id": "k1.lesen.anlaut",
     "grade": 1,
     "topic": "lesen",
@@ -94,6 +130,18 @@
       "wordGrade": 1
     },
     "title": "Welches fängt anders an?"
+  },
+  {
+    "id": "k1.lesen.lautposition",
+    "grade": 1,
+    "topic": "lesen",
+    "category": "lesen.hoeren",
+    "unit": "k1.lesen.laute",
+    "exercise": "lesen.lautposition",
+    "params": {
+      "wordGrade": 1
+    },
+    "title": "Wo hörst du den Laut?"
   },
   {
     "id": "k1.schreiben.silben-legen",
@@ -164,6 +212,43 @@
       "wordGrade": 1
     },
     "title": "Wort in Kästchen schreiben (Experiment)"
+  },
+  {
+    "id": "k1.schreiben.abschreiben",
+    "grade": 1,
+    "topic": "schreiben",
+    "category": "schreiben.merkwoerter",
+    "unit": "k1.schreiben.merkwoerter",
+    "exercise": "schreiben.abschreiben",
+    "params": {
+      "wordGrade": 1
+    },
+    "title": "Schau – merk – schreib"
+  },
+  {
+    "id": "k1.schreiben.merkwort-diktat",
+    "grade": 1,
+    "topic": "schreiben",
+    "category": "schreiben.merkwoerter",
+    "unit": "k1.schreiben.merkwoerter",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "merkwoerter",
+      "wordGrade": 1
+    },
+    "title": "Merkwörter schreiben"
+  },
+  {
+    "id": "k1.schreiben.lernwoerter",
+    "grade": 1,
+    "topic": "schreiben",
+    "category": "schreiben.merkwoerter",
+    "unit": "k1.schreiben.merkwoerter",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "lernwoerter"
+    },
+    "title": "Lernwörter der Woche"
   },
   {
     "id": "k1.rechnen.mengen-10",

@@ -1,0 +1,572 @@
+[
+  {
+    "id": "oma-malt",
+    "text": "Oma malt.",
+    "group": "tun",
+    "scene": ["1F475", "1F3A8"]
+  },
+  {
+    "id": "oma-badet",
+    "text": "Oma badet.",
+    "group": "tun",
+    "scene": ["1F475", "1F6C1"]
+  },
+  {
+    "id": "oma-rodelt",
+    "text": "Oma rodelt.",
+    "group": "tun",
+    "scene": ["1F475", "1F6F7"]
+  },
+  {
+    "id": "oma-bastelt",
+    "text": "Oma bastelt.",
+    "group": "tun",
+    "scene": ["1F475", "2702"]
+  },
+  {
+    "id": "oma-kocht",
+    "text": "Oma kocht.",
+    "group": "tun",
+    "scene": ["1F475", "1F373"]
+  },
+  {
+    "id": "oma-kauft",
+    "text": "Oma kauft.",
+    "group": "tun",
+    "scene": ["1F475", "1F6D2"]
+  },
+  {
+    "id": "oma-schlaeft",
+    "text": "Oma schläft.",
+    "group": "tun",
+    "scene": ["1F475", "1F6CF"]
+  },
+  {
+    "id": "oma-rechnet",
+    "text": "Oma rechnet.",
+    "group": "tun",
+    "scene": ["1F475", "1F9EE"]
+  },
+  {
+    "id": "oma-duscht",
+    "text": "Oma duscht.",
+    "group": "tun",
+    "scene": ["1F475", "1F6BF"]
+  },
+  {
+    "id": "oma-pustet",
+    "text": "Oma pustet.",
+    "group": "tun",
+    "scene": ["1F475", "1F56F"]
+  },
+  {
+    "id": "opa-malt",
+    "text": "Opa malt.",
+    "group": "tun",
+    "scene": ["1F474", "1F3A8"]
+  },
+  {
+    "id": "opa-badet",
+    "text": "Opa badet.",
+    "group": "tun",
+    "scene": ["1F474", "1F6C1"]
+  },
+  {
+    "id": "opa-rodelt",
+    "text": "Opa rodelt.",
+    "group": "tun",
+    "scene": ["1F474", "1F6F7"]
+  },
+  {
+    "id": "opa-bastelt",
+    "text": "Opa bastelt.",
+    "group": "tun",
+    "scene": ["1F474", "2702"]
+  },
+  {
+    "id": "opa-kocht",
+    "text": "Opa kocht.",
+    "group": "tun",
+    "scene": ["1F474", "1F373"]
+  },
+  {
+    "id": "opa-kauft",
+    "text": "Opa kauft.",
+    "group": "tun",
+    "scene": ["1F474", "1F6D2"]
+  },
+  {
+    "id": "opa-schlaeft",
+    "text": "Opa schläft.",
+    "group": "tun",
+    "scene": ["1F474", "1F6CF"]
+  },
+  {
+    "id": "opa-rechnet",
+    "text": "Opa rechnet.",
+    "group": "tun",
+    "scene": ["1F474", "1F9EE"]
+  },
+  {
+    "id": "opa-duscht",
+    "text": "Opa duscht.",
+    "group": "tun",
+    "scene": ["1F474", "1F6BF"]
+  },
+  {
+    "id": "opa-pustet",
+    "text": "Opa pustet.",
+    "group": "tun",
+    "scene": ["1F474", "1F56F"]
+  },
+  {
+    "id": "mama-malt",
+    "text": "Mama malt.",
+    "group": "tun",
+    "scene": ["1F469", "1F3A8"]
+  },
+  {
+    "id": "mama-badet",
+    "text": "Mama badet.",
+    "group": "tun",
+    "scene": ["1F469", "1F6C1"]
+  },
+  {
+    "id": "mama-rodelt",
+    "text": "Mama rodelt.",
+    "group": "tun",
+    "scene": ["1F469", "1F6F7"]
+  },
+  {
+    "id": "mama-bastelt",
+    "text": "Mama bastelt.",
+    "group": "tun",
+    "scene": ["1F469", "2702"]
+  },
+  {
+    "id": "mama-kocht",
+    "text": "Mama kocht.",
+    "group": "tun",
+    "scene": ["1F469", "1F373"]
+  },
+  {
+    "id": "mama-kauft",
+    "text": "Mama kauft.",
+    "group": "tun",
+    "scene": ["1F469", "1F6D2"]
+  },
+  {
+    "id": "mama-schlaeft",
+    "text": "Mama schläft.",
+    "group": "tun",
+    "scene": ["1F469", "1F6CF"]
+  },
+  {
+    "id": "mama-rechnet",
+    "text": "Mama rechnet.",
+    "group": "tun",
+    "scene": ["1F469", "1F9EE"]
+  },
+  {
+    "id": "mama-duscht",
+    "text": "Mama duscht.",
+    "group": "tun",
+    "scene": ["1F469", "1F6BF"]
+  },
+  {
+    "id": "mama-pustet",
+    "text": "Mama pustet.",
+    "group": "tun",
+    "scene": ["1F469", "1F56F"]
+  },
+  {
+    "id": "papa-malt",
+    "text": "Papa malt.",
+    "group": "tun",
+    "scene": ["1F468", "1F3A8"]
+  },
+  {
+    "id": "papa-badet",
+    "text": "Papa badet.",
+    "group": "tun",
+    "scene": ["1F468", "1F6C1"]
+  },
+  {
+    "id": "papa-rodelt",
+    "text": "Papa rodelt.",
+    "group": "tun",
+    "scene": ["1F468", "1F6F7"]
+  },
+  {
+    "id": "papa-bastelt",
+    "text": "Papa bastelt.",
+    "group": "tun",
+    "scene": ["1F468", "2702"]
+  },
+  {
+    "id": "papa-kocht",
+    "text": "Papa kocht.",
+    "group": "tun",
+    "scene": ["1F468", "1F373"]
+  },
+  {
+    "id": "papa-kauft",
+    "text": "Papa kauft.",
+    "group": "tun",
+    "scene": ["1F468", "1F6D2"]
+  },
+  {
+    "id": "papa-schlaeft",
+    "text": "Papa schläft.",
+    "group": "tun",
+    "scene": ["1F468", "1F6CF"]
+  },
+  {
+    "id": "papa-rechnet",
+    "text": "Papa rechnet.",
+    "group": "tun",
+    "scene": ["1F468", "1F9EE"]
+  },
+  {
+    "id": "papa-duscht",
+    "text": "Papa duscht.",
+    "group": "tun",
+    "scene": ["1F468", "1F6BF"]
+  },
+  {
+    "id": "papa-pustet",
+    "text": "Papa pustet.",
+    "group": "tun",
+    "scene": ["1F468", "1F56F"]
+  },
+  {
+    "id": "da-ist-ein-hase",
+    "text": "Da ist ein Hase.",
+    "group": "da-ist",
+    "scene": ["1F407"]
+  },
+  {
+    "id": "da-ist-eine-rose",
+    "text": "Da ist eine Rose.",
+    "group": "da-ist",
+    "scene": ["1F339"]
+  },
+  {
+    "id": "da-ist-eine-nase",
+    "text": "Da ist eine Nase.",
+    "group": "da-ist",
+    "scene": ["1F443"]
+  },
+  {
+    "id": "da-ist-eine-hose",
+    "text": "Da ist eine Hose.",
+    "group": "da-ist",
+    "scene": ["1F456"]
+  },
+  {
+    "id": "da-ist-eine-dose",
+    "text": "Da ist eine Dose.",
+    "group": "da-ist",
+    "scene": ["1F96B"]
+  },
+  {
+    "id": "da-ist-ein-esel",
+    "text": "Da ist ein Esel.",
+    "group": "da-ist",
+    "scene": ["1FACF"]
+  },
+  {
+    "id": "da-ist-ein-igel",
+    "text": "Da ist ein Igel.",
+    "group": "da-ist",
+    "scene": ["1F994"]
+  },
+  {
+    "id": "da-ist-ein-lama",
+    "text": "Da ist ein Lama.",
+    "group": "da-ist",
+    "scene": ["1F999"]
+  },
+  {
+    "id": "da-ist-ein-sofa",
+    "text": "Da ist ein Sofa.",
+    "group": "da-ist",
+    "scene": ["1F6CB"]
+  },
+  {
+    "id": "da-ist-eine-lupe",
+    "text": "Da ist eine Lupe.",
+    "group": "da-ist",
+    "scene": ["1F50D"]
+  },
+  {
+    "id": "da-ist-ein-wal",
+    "text": "Da ist ein Wal.",
+    "group": "da-ist",
+    "scene": ["1F40B"]
+  },
+  {
+    "id": "da-ist-eine-ente",
+    "text": "Da ist eine Ente.",
+    "group": "da-ist",
+    "scene": ["1F986"]
+  },
+  {
+    "id": "da-ist-eine-tomate",
+    "text": "Da ist eine Tomate.",
+    "group": "da-ist",
+    "scene": ["1F345"]
+  },
+  {
+    "id": "da-ist-eine-banane",
+    "text": "Da ist eine Banane.",
+    "group": "da-ist",
+    "scene": ["1F34C"]
+  },
+  {
+    "id": "da-ist-eine-melone",
+    "text": "Da ist eine Melone.",
+    "group": "da-ist",
+    "scene": ["1F349"]
+  },
+  {
+    "id": "da-ist-eine-rakete",
+    "text": "Da ist eine Rakete.",
+    "group": "da-ist",
+    "scene": ["1F680"]
+  },
+  {
+    "id": "da-ist-ein-kamel",
+    "text": "Da ist ein Kamel.",
+    "group": "da-ist",
+    "scene": ["1F42B"]
+  },
+  {
+    "id": "da-ist-eine-tulpe",
+    "text": "Da ist eine Tulpe.",
+    "group": "da-ist",
+    "scene": ["1F337"]
+  },
+  {
+    "id": "da-ist-eine-gabel",
+    "text": "Da ist eine Gabel.",
+    "group": "da-ist",
+    "scene": ["1F374"]
+  },
+  {
+    "id": "da-ist-ein-bus",
+    "text": "Da ist ein Bus.",
+    "group": "da-ist",
+    "scene": ["1F68C"]
+  },
+  {
+    "id": "da-ist-ein-pilz",
+    "text": "Da ist ein Pilz.",
+    "group": "da-ist",
+    "scene": ["1F344"]
+  },
+  {
+    "id": "da-ist-eine-eule",
+    "text": "Da ist eine Eule.",
+    "group": "da-ist",
+    "scene": ["1F989"]
+  },
+  {
+    "id": "da-ist-ein-apfel",
+    "text": "Da ist ein Apfel.",
+    "group": "da-ist",
+    "scene": ["1F34E"]
+  },
+  {
+    "id": "da-ist-eine-maus",
+    "text": "Da ist eine Maus.",
+    "group": "da-ist",
+    "scene": ["1F42D"]
+  },
+  {
+    "id": "da-ist-ein-fisch",
+    "text": "Da ist ein Fisch.",
+    "group": "da-ist",
+    "scene": ["1F41F"]
+  },
+  {
+    "id": "da-ist-ein-schaf",
+    "text": "Da ist ein Schaf.",
+    "group": "da-ist",
+    "scene": ["1F411"]
+  },
+  {
+    "id": "da-ist-ein-auto",
+    "text": "Da ist ein Auto.",
+    "group": "da-ist",
+    "scene": ["1F697"]
+  },
+  {
+    "id": "da-ist-eine-wolke",
+    "text": "Da ist eine Wolke.",
+    "group": "da-ist",
+    "scene": ["2601"]
+  },
+  {
+    "id": "da-sind-zwei-enten",
+    "text": "Da sind zwei Enten.",
+    "group": "anzahl",
+    "scene": ["1F986", "1F986"]
+  },
+  {
+    "id": "da-sind-drei-enten",
+    "text": "Da sind drei Enten.",
+    "group": "anzahl",
+    "scene": ["1F986", "1F986", "1F986"]
+  },
+  {
+    "id": "da-sind-fuenf-enten",
+    "text": "Da sind fünf Enten.",
+    "group": "anzahl",
+    "scene": ["1F986", "1F986", "1F986", "1F986", "1F986"]
+  },
+  {
+    "id": "da-sind-zwei-hasen",
+    "text": "Da sind zwei Hasen.",
+    "group": "anzahl",
+    "scene": ["1F407", "1F407"]
+  },
+  {
+    "id": "da-sind-drei-hasen",
+    "text": "Da sind drei Hasen.",
+    "group": "anzahl",
+    "scene": ["1F407", "1F407", "1F407"]
+  },
+  {
+    "id": "da-sind-fuenf-hasen",
+    "text": "Da sind fünf Hasen.",
+    "group": "anzahl",
+    "scene": ["1F407", "1F407", "1F407", "1F407", "1F407"]
+  },
+  {
+    "id": "da-sind-zwei-rosen",
+    "text": "Da sind zwei Rosen.",
+    "group": "anzahl",
+    "scene": ["1F339", "1F339"]
+  },
+  {
+    "id": "da-sind-drei-rosen",
+    "text": "Da sind drei Rosen.",
+    "group": "anzahl",
+    "scene": ["1F339", "1F339", "1F339"]
+  },
+  {
+    "id": "da-sind-fuenf-rosen",
+    "text": "Da sind fünf Rosen.",
+    "group": "anzahl",
+    "scene": ["1F339", "1F339", "1F339", "1F339", "1F339"]
+  },
+  {
+    "id": "da-sind-zwei-tomaten",
+    "text": "Da sind zwei Tomaten.",
+    "group": "anzahl",
+    "scene": ["1F345", "1F345"]
+  },
+  {
+    "id": "da-sind-drei-tomaten",
+    "text": "Da sind drei Tomaten.",
+    "group": "anzahl",
+    "scene": ["1F345", "1F345", "1F345"]
+  },
+  {
+    "id": "da-sind-fuenf-tomaten",
+    "text": "Da sind fünf Tomaten.",
+    "group": "anzahl",
+    "scene": ["1F345", "1F345", "1F345", "1F345", "1F345"]
+  },
+  {
+    "id": "da-sind-zwei-bananen",
+    "text": "Da sind zwei Bananen.",
+    "group": "anzahl",
+    "scene": ["1F34C", "1F34C"]
+  },
+  {
+    "id": "da-sind-drei-bananen",
+    "text": "Da sind drei Bananen.",
+    "group": "anzahl",
+    "scene": ["1F34C", "1F34C", "1F34C"]
+  },
+  {
+    "id": "da-sind-fuenf-bananen",
+    "text": "Da sind fünf Bananen.",
+    "group": "anzahl",
+    "scene": ["1F34C", "1F34C", "1F34C", "1F34C", "1F34C"]
+  },
+  {
+    "id": "da-sind-zwei-tulpen",
+    "text": "Da sind zwei Tulpen.",
+    "group": "anzahl",
+    "scene": ["1F337", "1F337"]
+  },
+  {
+    "id": "da-sind-drei-tulpen",
+    "text": "Da sind drei Tulpen.",
+    "group": "anzahl",
+    "scene": ["1F337", "1F337", "1F337"]
+  },
+  {
+    "id": "da-sind-fuenf-tulpen",
+    "text": "Da sind fünf Tulpen.",
+    "group": "anzahl",
+    "scene": ["1F337", "1F337", "1F337", "1F337", "1F337"]
+  },
+  {
+    "id": "da-sind-zwei-eulen",
+    "text": "Da sind zwei Eulen.",
+    "group": "anzahl",
+    "scene": ["1F989", "1F989"]
+  },
+  {
+    "id": "da-sind-drei-eulen",
+    "text": "Da sind drei Eulen.",
+    "group": "anzahl",
+    "scene": ["1F989", "1F989", "1F989"]
+  },
+  {
+    "id": "da-sind-fuenf-eulen",
+    "text": "Da sind fünf Eulen.",
+    "group": "anzahl",
+    "scene": ["1F989", "1F989", "1F989", "1F989", "1F989"]
+  },
+  {
+    "id": "da-sind-zwei-aepfel",
+    "text": "Da sind zwei Äpfel.",
+    "group": "anzahl",
+    "scene": ["1F34E", "1F34E"]
+  },
+  {
+    "id": "da-sind-drei-aepfel",
+    "text": "Da sind drei Äpfel.",
+    "group": "anzahl",
+    "scene": ["1F34E", "1F34E", "1F34E"]
+  },
+  {
+    "id": "da-sind-fuenf-aepfel",
+    "text": "Da sind fünf Äpfel.",
+    "group": "anzahl",
+    "scene": ["1F34E", "1F34E", "1F34E", "1F34E", "1F34E"]
+  },
+  {
+    "id": "da-sind-zwei-wolken",
+    "text": "Da sind zwei Wolken.",
+    "group": "anzahl",
+    "scene": ["2601", "2601"]
+  },
+  {
+    "id": "da-sind-drei-wolken",
+    "text": "Da sind drei Wolken.",
+    "group": "anzahl",
+    "scene": ["2601", "2601", "2601"]
+  },
+  {
+    "id": "da-sind-fuenf-wolken",
+    "text": "Da sind fünf Wolken.",
+    "group": "anzahl",
+    "scene": ["2601", "2601", "2601", "2601", "2601"]
+  }
+]

@@ -103,11 +103,24 @@ export function resolveWords(land: LandCode, grade: number): Word[] {
   return words
 }
 
-/** Only words whose graphemes are all unlocked (if the letter filter is on). */
+/**
+ * Only words whose graphemes are all unlocked (if the letter filter is on). A Merkwort
+ * is learnt as a whole: its single letters must be known (d, i, e for "die"), not the
+ * grapheme "ie".
+ */
 export function wordsForSettings(words: readonly Word[], settings: ProfileSettings): Word[] {
   if (!settings.letterFilter) return [...words]
   const unlocked = new Set(settings.letters)
-  return words.filter((w) => usesOnly(w.text, unlocked))
+  return words.filter((w) =>
+    w.merkwort
+      ? [...w.text.toLowerCase()].every((ch) => unlocked.has(ch))
+      : usesOnly(w.text, unlocked),
+  )
+}
+
+/** Without Merkwörter: words that can be read and written sound by sound. */
+export function lauttreu<W extends Word>(words: readonly W[]): W[] {
+  return words.filter((w) => !w.merkwort)
 }
 
 export function syllablesForSettings(

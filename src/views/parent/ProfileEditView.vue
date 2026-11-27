@@ -26,6 +26,8 @@ import {
   unitsFor,
 } from '@/core/content'
 import { plain } from '@/core/plain'
+import { readableSentences } from '@/core/saetze'
+import { cleanLernwoerter } from '@/exercises/schreiben/diktat'
 import { say } from '@/core/speech'
 import { loadVoices, rankGermanVoices } from '@/core/tts'
 import { TOPICS, TOPIC_INFO, type ProfileSettings } from '@/core/types'
@@ -85,6 +87,15 @@ const readableSyllables = computed(
   () => syllablesForSettings(baseSyllables(form.grade), settings.value).length,
 )
 const letterSet = computed(() => new Set(settings.value.letters))
+const readableSentenceCount = computed(
+  () => readableSentences(form.land, form.grade, settings.value).length,
+)
+
+// Lernwörter: one per line or separated by commas; cleaned when saved.
+const lernwoerterText = computed({
+  get: () => settings.value.lernwoerter.join('\n'),
+  set: (text: string) => (settings.value.lernwoerter = text.split(/[\n,;]+/)),
+})
 
 function toggleLetter(id: string) {
   const set = new Set(settings.value.letters)
@@ -175,6 +186,7 @@ async function save() {
   try {
     const s: ProfileSettings = {
       ...settings.value,
+      lernwoerter: cleanLernwoerter(settings.value.lernwoerter),
       unlockedGrades: settings.value.unlockedGrades.filter((g) => g > form.grade),
     }
     if (isNew.value) {
@@ -326,7 +338,8 @@ async function remove() {
       </template>
       <p class="count" :class="{ warn: readable.length < 3 }">
         Damit gibt es <strong>{{ readable.length }}</strong> Wörter und
-        <strong>{{ readableSyllables }}</strong> Silben zum Lesen.
+        <strong>{{ readableSyllables }}</strong> Silben und
+        <strong>{{ readableSentenceCount }}</strong> Sätze zum Lesen.
         <span v-if="readable.length < 3">Für alle Leseübungen braucht es mindestens 3 Wörter.</span>
       </p>
 
@@ -346,6 +359,16 @@ async function remove() {
           :size="44"
         />
       </p>
+
+      <label>
+        Blitzlesen: So lange ist das Wort zu sehen
+        <select v-model.number="settings.flashMs">
+          <option :value="1000">1 Sekunde</option>
+          <option :value="1500">1,5 Sekunden</option>
+          <option :value="2500">2,5 Sekunden</option>
+          <option :value="4000">4 Sekunden</option>
+        </select>
+      </label>
 
       <label>
         Wort-Level beim Lesen
@@ -416,6 +439,10 @@ async function remove() {
           <option :value="1">normal</option>
           <option :value="0.7">genau</option>
         </select>
+      </label>
+      <label>
+        Lernwörter der Woche (ein Wort pro Zeile, z. B. aus dem Heft der Schule)
+        <textarea v-model="lernwoerterText" rows="4" autocomplete="off" spellcheck="false" />
       </label>
       <label class="check">
         <input v-model="settings.kaestchen" type="checkbox" />
@@ -541,6 +568,15 @@ select {
   border: 2px solid var(--accent);
   border-radius: 12px;
   background: #fff;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  background: #fff;
+  font: inherit;
 }
 
 fieldset {

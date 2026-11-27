@@ -2737,5 +2737,354 @@
     "syllables": ["An", "ton"],
     "wortart": "name",
     "category": "namen"
+  },
+  {
+    "id": "aber",
+    "text": "aber",
+    "syllables": ["a", "ber"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Klein, aber fein."
+  },
+  {
+    "id": "der",
+    "text": "der",
+    "syllables": ["der"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "der Hase"
+  },
+  {
+    "id": "die",
+    "text": "die",
+    "syllables": ["die"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "die Rose"
+  },
+  {
+    "id": "dir",
+    "text": "dir",
+    "syllables": ["dir"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Ich helfe dir."
+  },
+  {
+    "id": "durch",
+    "text": "durch",
+    "syllables": ["durch"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "durch den Wald"
+  },
+  {
+    "id": "er",
+    "text": "er",
+    "syllables": ["er"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Er lacht."
+  },
+  {
+    "id": "fuer",
+    "text": "für",
+    "syllables": ["für"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "für dich"
+  },
+  {
+    "id": "her",
+    "text": "her",
+    "syllables": ["her"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Komm her!"
+  },
+  {
+    "id": "hinter",
+    "text": "hinter",
+    "syllables": ["hin", "ter"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "hinter dem Haus"
+  },
+  {
+    "id": "oder",
+    "text": "oder",
+    "syllables": ["o", "der"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Tee oder Saft?"
+  },
+  {
+    "id": "sie",
+    "text": "sie",
+    "syllables": ["sie"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Sie malt."
+  },
+  {
+    "id": "sind",
+    "text": "sind",
+    "syllables": ["sind"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Wir sind da."
+  },
+  {
+    "id": "ueber",
+    "text": "über",
+    "syllables": ["ü", "ber"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "über dem Haus"
+  },
+  {
+    "id": "und",
+    "text": "und",
+    "syllables": ["und"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Oma und Opa"
+  },
+  {
+    "id": "weiter",
+    "text": "weiter",
+    "syllables": ["wei", "ter"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Lauf weiter!"
+  },
+  {
+    "id": "wer",
+    "text": "wer",
+    "syllables": ["wer"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Wer ist da?"
+  },
+  {
+    "id": "wir",
+    "text": "wir",
+    "syllables": ["wir"],
+    "wortart": "klein",
+    "category": "woerter",
+    "merkwort": true,
+    "beispiel": "Wir malen."
+  },
+  {
+    "id": "das",
+    "text": "das",
+    "syllables": ["das"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "des",
+    "text": "des",
+    "syllables": ["des"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "dich",
+    "text": "dich",
+    "syllables": ["dich"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "zeit",
+    "text": "Zeit",
+    "syllables": ["Zeit"],
+    "wortart": "nomen",
+    "category": "zeit"
+  },
+  {
+    "id": "leute",
+    "text": "Leute",
+    "syllables": ["Leu", "te"],
+    "wortart": "nomen",
+    "category": "menschen"
+  },
+  {
+    "id": "zwei",
+    "text": "zwei",
+    "syllables": ["zwei"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "drei",
+    "text": "drei",
+    "syllables": ["drei"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "fuenf",
+    "text": "fünf",
+    "syllables": ["fünf"],
+    "wortart": "klein",
+    "category": "woerter"
+  },
+  {
+    "id": "malt",
+    "text": "malt",
+    "syllables": ["malt"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "badet",
+    "text": "badet",
+    "syllables": ["ba", "det"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "rodelt",
+    "text": "rodelt",
+    "syllables": ["ro", "delt"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "bastelt",
+    "text": "bastelt",
+    "syllables": ["bas", "telt"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "kocht",
+    "text": "kocht",
+    "syllables": ["kocht"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "kauft",
+    "text": "kauft",
+    "syllables": ["kauft"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "schlaeft",
+    "text": "schläft",
+    "syllables": ["schläft"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "rechnet",
+    "text": "rechnet",
+    "syllables": ["rech", "net"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "duscht",
+    "text": "duscht",
+    "syllables": ["duscht"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "pustet",
+    "text": "pustet",
+    "syllables": ["pus", "tet"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "enten",
+    "text": "Enten",
+    "syllables": ["En", "ten"],
+    "wortart": "nomen",
+    "category": "tiere"
+  },
+  {
+    "id": "hasen",
+    "text": "Hasen",
+    "syllables": ["Ha", "sen"],
+    "wortart": "nomen",
+    "category": "tiere"
+  },
+  {
+    "id": "rosen",
+    "text": "Rosen",
+    "syllables": ["Ro", "sen"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "tomaten",
+    "text": "Tomaten",
+    "syllables": ["To", "ma", "ten"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "bananen",
+    "text": "Bananen",
+    "syllables": ["Ba", "na", "nen"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "tulpen",
+    "text": "Tulpen",
+    "syllables": ["Tul", "pen"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "blumen",
+    "text": "Blumen",
+    "syllables": ["Blu", "men"],
+    "wortart": "nomen",
+    "category": "natur"
+  },
+  {
+    "id": "eulen",
+    "text": "Eulen",
+    "syllables": ["Eu", "len"],
+    "wortart": "nomen",
+    "category": "tiere"
+  },
+  {
+    "id": "aepfel",
+    "text": "Äpfel",
+    "syllables": ["Äp", "fel"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "wolken",
+    "text": "Wolken",
+    "syllables": ["Wol", "ken"],
+    "wortart": "nomen",
+    "category": "natur"
   }
 ]

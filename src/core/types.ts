@@ -66,6 +66,10 @@ export interface ProfileSettings {
    * entry follow their default: 1st half-year on, 2nd half-year off.
    */
   units: Record<string, boolean>
+  /** Blitzlesen: how long the word stays visible (ms). */
+  flashMs: number
+  /** Lernwörter of the week, typed in by the parents (stay on the device). */
+  lernwoerter: string[]
 }
 
 export type SettingsPatch = Partial<ProfileSettings>
@@ -158,6 +162,13 @@ export interface WordEntry {
   anlaut?: string
   /** Different text for the speech output if the TTS mispronounces the word. */
   say?: string
+  /**
+   * Merkwort: a frequent word of the official basic vocabulary that is not lauttreu
+   * (und, der, die …). Learnt as a whole, never written by ear (plaene, Q2).
+   */
+  merkwort?: boolean
+  /** Short example spoken together with the word, e.g. "der Hase" for "der". */
+  beispiel?: string
 }
 
 /** A word with derived data, as the exercises use it. */

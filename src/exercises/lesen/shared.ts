@@ -1,7 +1,7 @@
 /** Helpers shared by the reading exercises. */
 import { shuffle, type Rng } from '@/core/random'
 import type { ProfileSettings, ProgressRecord, Word } from '@/core/types'
-import { resolveWords, wordsForSettings } from '@/core/words'
+import { lauttreu, resolveWords, wordsForSettings } from '@/core/words'
 import type { LearnerContext } from '../types'
 
 export interface LesenParams {
@@ -49,9 +49,12 @@ export function readingLevel(
   return 4
 }
 
-/** Words to read: readable, up to the current level (extended if too few). */
+/**
+ * Words to read and write sound by sound: readable, up to the current level (extended
+ * if too few). Merkwörter have their own exercises.
+ */
 export function readingPool(ctx: LearnerContext, params: LesenParams): Word[] {
-  const words = readableWords(ctx, params)
+  const words = lauttreu(readableWords(ctx, params))
   const level = readingLevel(words, ctx.settings, ctx.progress ?? new Map())
   let pool = words.filter((w) => w.level <= level)
   for (let l = level + 1; pool.length < MIN_POOL && l <= 4; l++) {

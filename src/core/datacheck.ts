@@ -14,7 +14,8 @@ import {
 } from './content'
 import { graphemes } from './graphemes'
 import { MIN_ANLAUT_GROUP, groupBy, listenEntries, resolveListenWords } from './hoeren'
-import { checkLauttreu } from './lauttreue'
+import { HAEUFIGKEITSWOERTER, checkLauttreu } from './lauttreue'
+import { baseSentences, sceneKey, unknownWords } from './saetze'
 import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
 import { WORTARTEN, type LandCode, type Syllable, type Word } from './types'
 import { LETTERS, applyWordOverlay, baseSyllables, baseWordEntries, resolveWords } from './words'
@@ -58,6 +59,34 @@ export function checkCatalogStructure(catalog = BASE_CATALOG): string[] {
   }
   for (const u of UNITS) {
     if (!catalog.some((e) => e.unit === u.id)) problems.push(`Einheit ${u.id}: keine Übungen`)
+  }
+  return problems
+}
+
+/** Sentences: known words only, existing pictures, enough different pictures per group. */
+export function checkSentences(grade: number, words: readonly Word[], images: ReadonlySet<string>) {
+  const problems: string[] = []
+  const sentences = baseSentences(grade)
+  const ids = new Set<string>()
+  const scenes = new Map<string, Set<string>>()
+  for (const s of sentences) {
+    const where = `Klasse ${grade}, Satz „${s.text}“`
+    if (ids.has(s.id)) problems.push(`${where}: ID doppelt`)
+    ids.add(s.id)
+    if (!/^[A-ZÄÖÜ]/.test(s.text) || !/[.!?]$/.test(s.text))
+      problems.push(`${where}: groß anfangen und mit Satzzeichen enden`)
+    for (const w of unknownWords(s, words))
+      problems.push(`${where}: Wort „${w}“ fehlt im Wörterbuch`)
+    if (s.scene.length === 0) problems.push(`${where}: ohne Bild`)
+    for (const code of s.scene) if (!images.has(code)) problems.push(`${where}: Bild ${code} fehlt`)
+    const group = scenes.get(s.group) ?? new Set()
+    if (group.has(sceneKey(s)))
+      problems.push(`${where}: gleiches Bild wie ein anderer Satz der Gruppe`)
+    group.add(sceneKey(s))
+    scenes.set(s.group, group)
+  }
+  for (const [group, set] of scenes) {
+    if (set.size < 3) problems.push(`Klasse ${grade}, Satzgruppe „${group}“: weniger als 3 Bilder`)
   }
   return problems
 }
@@ -116,7 +145,14 @@ function checkWords(
     for (const g of w.graphemes) {
       if (!letterIds.has(g)) problems.push(`${where}: Graphem „${g}“ fehlt in letters.json`)
     }
-    if (grade === 1) {
+    if (w.merkwort) {
+      // Only frequent words of the official list, and only where really needed.
+      if (!HAEUFIGKEITSWOERTER.has(w.text.toLowerCase()))
+        problems.push(`${where}: Merkwort, steht aber nicht im Häufigkeitswortschatz`)
+      else if (checkLauttreu(w.text, w.syllables).length === 0)
+        problems.push(`${where}: ist lauttreu und braucht keine Markierung als Merkwort`)
+      if (!w.beispiel) problems.push(`${where}: Merkwort ohne Beispiel`)
+    } else if (grade === 1) {
       for (const v of checkLauttreu(w.text, w.syllables)) {
         problems.push(`${where}: nicht lauttreu (${v.rule}: ${v.detail})`)
       }
@@ -255,6 +291,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
       try {
         const words = applyWordOverlay(baseWordEntries(grade), grade, overlay)
         problems.push(...checkWords(words, grade, land.name, images))
+        problems.push(...checkSentences(grade, words, images))
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

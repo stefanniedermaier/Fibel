@@ -160,6 +160,13 @@ export function itemLabel(itemKey: string, wordText: (id: string) => string | un
     case 'lesen.silben-hoeren':
     case 'schreiben.nachspuren':
       return part
+    case 'lesen.satz-bild':
+    case 'schreiben.diktat':
+      return wordText(part.slice(part.indexOf(':') + 1)) ?? part.slice(part.indexOf(':') + 1)
+    case 'lesen.lautposition': {
+      const cut = part.lastIndexOf('-')
+      return `${part.slice(cut + 1).toUpperCase()} in ${wordText(part.slice(0, cut)) ?? part.slice(0, cut)}`
+    }
     default:
       return wordText(part) ?? part
   }

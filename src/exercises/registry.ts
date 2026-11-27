@@ -1,5 +1,8 @@
 /** All exercise modules. A new exercise = new module + entry here + catalog entries. */
 import { anlaut } from './lesen/anlaut'
+import { blitzlesen } from './lesen/blitzlesen'
+import { lautposition } from './lesen/lautposition'
+import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
 import { reimen } from './lesen/reimen'
 import { bildWort } from './lesen/bild-wort'
@@ -13,6 +16,8 @@ import { reihen } from './rechnen/reihen'
 import { vergleichen } from './rechnen/vergleichen'
 import { zahlenhaus } from './rechnen/zahlenhaus'
 import { abcTastatur } from './schreiben/abc-tastatur'
+import { abschreiben } from './schreiben/abschreiben'
+import { diktat } from './schreiben/diktat'
 import { buchstabenLegen, luecke } from './schreiben/buchstaben-legen'
 import { kaestchen } from './schreiben/kaestchen'
 import { nachspuren } from './schreiben/nachspuren'
@@ -36,6 +41,9 @@ register(silbenKlatschen)
 register(reimen)
 register(anlautGleich)
 register(anlautFremd)
+register(blitzlesen)
+register(satzBild)
+register(lautposition)
 register(mengen)
 register(mengeLegen)
 register(vergleichen)
@@ -50,6 +58,8 @@ register(buchstabenLegen)
 register(abcTastatur)
 register(nachspuren)
 register(kaestchen)
+register(abschreiben)
+register(diktat)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)
