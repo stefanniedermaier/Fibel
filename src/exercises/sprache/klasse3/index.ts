@@ -192,7 +192,7 @@ export const artikelZusammen: ExerciseModule<Record<string, never>, WahlData> = 
     return ZUSAMMEN3.map((z) => `sprache.artikel-zusammen:${z.wort}`)
   },
 
-  generate(_ctx, _params, itemKey, rng) {
+  generate(_ctx, _params, itemKey) {
     const z = ZUSAMMEN3.find((x) => x.wort === itemId(itemKey))!
     const parts = z.teile.map(([a, w]) => (w ? `${a} ${w}` : a))
     return {
