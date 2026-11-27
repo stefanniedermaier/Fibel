@@ -1,0 +1,907 @@
+[
+  {
+    "id": "geheimnis-dachboden",
+    "kind": "lesen",
+    "textart": "Geschichte",
+    "text": "Seit Tagen regnete es, und Jonas langweilte sich. Da schlug seine Schwester Mira vor, auf den Dachboden zu steigen. Oben war es staubig und ein wenig unheimlich. Zwischen alten Koffern entdeckten sie eine kleine Holzkiste mit einem verrosteten Schloss. Jonas wollte sie sofort aufbrechen, aber Mira hielt ihn zurück. Sie fragte lieber Opa, dem die Kiste gehörte. Opa lächelte, als er sie sah. Er holte einen winzigen Schlüssel aus seiner Geldbörse und öffnete das Schloss. In der Kiste lagen alte Fotos, ein Taschenmesser und ein Brief. Opa erzählte, dass er als Junge mit seinem besten Freund eine Schatzkarte gezeichnet hatte. Der Freund war später nach Kanada gezogen, und sie hatten sich aus den Augen verloren. Mira hatte eine Idee. Zusammen suchten sie im Internet nach dem Namen des Freundes. Zwei Wochen später kam ein Brief aus Kanada. Opa las ihn dreimal hintereinander und strahlte den ganzen Abend.",
+    "fragen": [
+      {
+        "frage": "Warum stiegen die Kinder auf den Dachboden?",
+        "choices": [
+          {
+            "text": "Es regnete und ihnen war langweilig."
+          },
+          {
+            "text": "Sie suchten ihre Katze."
+          },
+          {
+            "text": "Opa hatte sie geschickt."
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Warum brachen die Kinder die Kiste nicht auf?",
+        "choices": [
+          {
+            "text": "Mira wollte zuerst Opa fragen."
+          },
+          {
+            "text": "Sie hatten kein Werkzeug."
+          },
+          {
+            "text": "Die Kiste war zu schwer."
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Was war in der Kiste?",
+        "choices": [
+          {
+            "text": "Fotos, ein Taschenmesser und ein Brief"
+          },
+          {
+            "text": "Gold und Silber"
+          },
+          {
+            "text": "eine Puppe und Murmeln"
+          }
+        ],
+        "answer": 0,
+        "beleg": 8
+      },
+      {
+        "frage": "Wie fühlte sich Opa am Ende?",
+        "choices": [
+          {
+            "text": "Er war sehr froh."
+          },
+          {
+            "text": "Er war wütend."
+          },
+          {
+            "text": "Er war müde."
+          }
+        ],
+        "answer": 0,
+        "beleg": 14
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Fabel"
+          },
+          {
+            "text": "Märchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "wasserkraft",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Wasser kann Strom erzeugen. In einem Wasserkraftwerk fließt Wasser durch große Rohre nach unten. Dabei dreht es ein Rad, das Turbine heißt. Die Turbine ist mit einem Generator verbunden. Der Generator wandelt die Bewegung in elektrischen Strom um. Über Leitungen kommt der Strom zu uns nach Hause.\nIn Bayern gibt es viele Wasserkraftwerke, zum Beispiel an der Isar, am Lech und an der Donau. Wasserkraft ist eine erneuerbare Energie. Das bedeutet, dass das Wasser nicht verbraucht wird. Es fließt nach dem Kraftwerk einfach weiter. Allerdings verändern Staumauern die Flüsse. Fische können oft nicht mehr flussaufwärts schwimmen. Deshalb baut man Fischtreppen, über die die Fische das Kraftwerk umgehen können.",
+    "fragen": [
+      {
+        "frage": "Wie heißt das Rad, das sich im Kraftwerk dreht?",
+        "choices": [
+          {
+            "text": "Turbine"
+          },
+          {
+            "text": "Generator"
+          },
+          {
+            "text": "Leitung"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Warum ist Wasserkraft eine erneuerbare Energie?",
+        "choices": [
+          {
+            "text": "Das Wasser wird nicht verbraucht."
+          },
+          {
+            "text": "Das Wasser ist sauber."
+          },
+          {
+            "text": "Es gibt viel Regen in Bayern."
+          }
+        ],
+        "answer": 0,
+        "beleg": 8
+      },
+      {
+        "frage": "Wozu baut man Fischtreppen?",
+        "choices": [
+          {
+            "text": "Damit Fische am Kraftwerk vorbeikommen."
+          },
+          {
+            "text": "Damit man Fische fangen kann."
+          },
+          {
+            "text": "Damit das Wasser schneller fließt."
+          }
+        ],
+        "answer": 0,
+        "beleg": 12
+      },
+      {
+        "frage": "Was bedeutet hier das Wort „erneuerbar“?",
+        "choices": [
+          {
+            "text": "Es geht nicht zu Ende."
+          },
+          {
+            "text": "Es ist ganz neu."
+          },
+          {
+            "text": "Es ist teuer."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Gedicht"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "busfahrplan",
+    "kind": "lesen",
+    "textart": "Fahrplan",
+    "text": "Fahrplan Linie 7, Bahnhof bis Schulzentrum. Abfahrt am Bahnhof um 7:05 Uhr, 7:20 Uhr, 7:35 Uhr und 7:50 Uhr. Der Bus braucht vom Bahnhof bis zum Rathaus 6 Minuten. Vom Rathaus bis zum Schulzentrum braucht er noch einmal 9 Minuten. Am Samstag fährt der Bus nur jede halbe Stunde. Am Sonntag fährt die Linie 7 nicht.",
+    "fragen": [
+      {
+        "frage": "In welchem Abstand fährt der Bus an Werktagen?",
+        "choices": [
+          {
+            "text": "alle 15 Minuten"
+          },
+          {
+            "text": "alle 30 Minuten"
+          },
+          {
+            "text": "jede Stunde"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Wie lange fährt der Bus vom Bahnhof bis zum Schulzentrum?",
+        "choices": [
+          {
+            "text": "15 Minuten"
+          },
+          {
+            "text": "9 Minuten"
+          },
+          {
+            "text": "6 Minuten"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wann fährt die Linie 7 nicht?",
+        "choices": [
+          {
+            "text": "am Sonntag"
+          },
+          {
+            "text": "am Samstag"
+          },
+          {
+            "text": "am Montag"
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Fahrplan"
+          },
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Fabel"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "preisliste-kiosk",
+    "kind": "lesen",
+    "textart": "Preisliste",
+    "text": "Preisliste im Schwimmbad-Kiosk. Brezel: 1,20 Euro. Pommes: 2,50 Euro. Eis am Stiel: 1,50 Euro. Apfelschorle: 1,80 Euro. Wasser: 1,00 Euro. Wer Pommes und ein Getränk kauft, bekommt 50 Cent Rabatt. Mia hat 5 Euro dabei.",
+    "fragen": [
+      {
+        "frage": "Was ist am billigsten?",
+        "choices": [
+          {
+            "text": "Wasser"
+          },
+          {
+            "text": "Brezel"
+          },
+          {
+            "text": "Eis am Stiel"
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Wie viel kosten Pommes und Apfelschorle mit Rabatt?",
+        "choices": [
+          {
+            "text": "3,80 Euro"
+          },
+          {
+            "text": "4,30 Euro"
+          },
+          {
+            "text": "4,80 Euro"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wann gibt es Rabatt?",
+        "choices": [
+          {
+            "text": "bei Pommes mit einem Getränk"
+          },
+          {
+            "text": "bei zwei Eis"
+          },
+          {
+            "text": "am Wochenende"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Preisliste"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Geschichte"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "meldung-fluss",
+    "kind": "lesen",
+    "textart": "Meldung",
+    "text": "Kindernachrichten. Am Samstag haben 120 Kinder und Erwachsene das Ufer der Amper aufgeräumt. In vier Stunden sammelten sie 35 Säcke Müll. Am meisten fanden sie Plastikflaschen und Verpackungen. Der Bürgermeister bedankte sich bei allen Helfern. Ich finde, so eine Aktion sollte es jedes Jahr geben. Jetzt neu im Laden: die Supertrinkflasche, die nie ausläuft!",
+    "fragen": [
+      {
+        "frage": "Wie viele Säcke Müll wurden gesammelt?",
+        "choices": [
+          {
+            "text": "35"
+          },
+          {
+            "text": "120"
+          },
+          {
+            "text": "4"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Welcher Satz ist eine Meinung?",
+        "choices": [
+          {
+            "text": "Ich finde, so eine Aktion sollte es jedes Jahr geben."
+          },
+          {
+            "text": "Am Samstag haben 120 Kinder das Ufer aufgeräumt."
+          },
+          {
+            "text": "Am meisten fanden sie Plastikflaschen."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Welcher Satz ist Werbung?",
+        "choices": [
+          {
+            "text": "Jetzt neu im Laden: die Supertrinkflasche!"
+          },
+          {
+            "text": "Der Bürgermeister bedankte sich."
+          },
+          {
+            "text": "In vier Stunden sammelten sie viel Müll."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Meldung"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Geschichte"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "steckbrief-luchs",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Steckbrief: der Luchs. Der Luchs ist die größte Katze, die in Deutschland lebt. Er wird etwa so groß wie ein Schäferhund. Sein Fell ist gelbbraun mit dunklen Flecken. Typisch sind die schwarzen Haarbüschel an den Ohren, die Pinsel heißen. Der Luchs lebt allein in großen Wäldern, zum Beispiel im Bayerischen Wald. Er jagt in der Dämmerung, vor allem Rehe. Er schleicht sich an und springt dann blitzschnell auf seine Beute. Luchse waren in Bayern fast ausgestorben. Heute leben wieder einige Tiere dort, aber sie sind selten und streng geschützt.",
+    "fragen": [
+      {
+        "frage": "Wie heißen die Haarbüschel an den Ohren?",
+        "choices": [
+          {
+            "text": "Pinsel"
+          },
+          {
+            "text": "Bürsten"
+          },
+          {
+            "text": "Federn"
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Wann jagt der Luchs?",
+        "choices": [
+          {
+            "text": "in der Dämmerung"
+          },
+          {
+            "text": "am Mittag"
+          },
+          {
+            "text": "nur im Winter"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was frisst der Luchs vor allem?",
+        "choices": [
+          {
+            "text": "Rehe"
+          },
+          {
+            "text": "Fische"
+          },
+          {
+            "text": "Beeren"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was bedeutet „ausgestorben“?",
+        "choices": [
+          {
+            "text": "Es gibt keine Tiere mehr davon."
+          },
+          {
+            "text": "Die Tiere schlafen im Winter."
+          },
+          {
+            "text": "Die Tiere sind sehr alt."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Fabel"
+          },
+          {
+            "text": "Gedicht"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "klassenfahrt",
+    "kind": "lesen",
+    "textart": "Geschichte",
+    "text": "Endlich war der Tag der Klassenfahrt gekommen. Die 4a fuhr für drei Tage in eine Jugendherberge an einem See. Emil war aufgeregt, denn er hatte noch nie ohne seine Eltern woanders geschlafen. In der ersten Nacht konnte er lange nicht einschlafen. Er hörte die Frösche am See quaken und dachte an zu Hause. Sein Zimmernachbar Can merkte, dass Emil traurig war. Leise erzählte er ihm Witze, bis beide kichern mussten. Am nächsten Tag paddelten die Kinder mit Kanus über den See. Emil und Can saßen zusammen in einem Boot und gewannen sogar das Wettrennen. Am Abend gab es ein Lagerfeuer mit Stockbrot. Als der Bus am dritten Tag wieder vor der Schule hielt, sagte Emil: «Schade, dass es schon vorbei ist.»",
+    "fragen": [
+      {
+        "frage": "Warum konnte Emil in der ersten Nacht nicht schlafen?",
+        "choices": [
+          {
+            "text": "Er hatte Heimweh."
+          },
+          {
+            "text": "Das Bett war zu hart."
+          },
+          {
+            "text": "Es war zu laut im Zimmer."
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Wie half Can seinem Freund?",
+        "choices": [
+          {
+            "text": "Er erzählte ihm Witze."
+          },
+          {
+            "text": "Er holte die Lehrerin."
+          },
+          {
+            "text": "Er gab ihm seine Taschenlampe."
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Wie hat sich Emil verändert?",
+        "choices": [
+          {
+            "text": "Am Anfang war er traurig, am Ende wollte er bleiben."
+          },
+          {
+            "text": "Am Anfang war er froh, am Ende traurig."
+          },
+          {
+            "text": "Er war die ganze Zeit traurig."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was ist der Wendepunkt der Geschichte?",
+        "choices": [
+          {
+            "text": "Can hilft Emil in der Nacht."
+          },
+          {
+            "text": "Der Bus fährt los."
+          },
+          {
+            "text": "Es gibt Stockbrot."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Anleitung"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "maerchen-hase-igel",
+    "kind": "lesen",
+    "textart": "Märchen",
+    "text": "Eines Sonntagmorgens ging der Igel spazieren. Da traf er den Hasen, der über die kurzen, krummen Beine des Igels lachte. Der Igel ärgerte sich und sagte: «Wetten, dass ich schneller laufe als du?» Der Hase lachte noch lauter und nahm die Wette an. Der Igel lief nach Hause und holte seine Frau, die genauso aussah wie er. Er stellte sie an das Ende des Ackers. Dann begann das Rennen. Der Hase rannte, so schnell er konnte. Doch als er ankam, rief die Igelfrau: «Ich bin schon da!» Der Hase wollte es nicht glauben und rannte zurück. Am anderen Ende rief der Igel: «Ich bin schon da!» So ging es dreiundsiebzigmal, bis der Hase erschöpft liegen blieb.",
+    "fragen": [
+      {
+        "frage": "Warum ärgerte sich der Igel?",
+        "choices": [
+          {
+            "text": "Der Hase lachte über seine Beine."
+          },
+          {
+            "text": "Der Hase stahl seine Rüben."
+          },
+          {
+            "text": "Der Hase war schneller."
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Wie gewann der Igel?",
+        "choices": [
+          {
+            "text": "Mit einer List: Seine Frau wartete am Ende."
+          },
+          {
+            "text": "Er lief sehr schnell."
+          },
+          {
+            "text": "Er nahm eine Abkürzung."
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Was lernt man aus dem Märchen?",
+        "choices": [
+          {
+            "text": "Man soll andere nicht auslachen."
+          },
+          {
+            "text": "Hasen sind langsam."
+          },
+          {
+            "text": "Man soll nicht wetten."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Gedicht"
+          },
+          {
+            "text": "Fabel"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "anleitung-stromkreis",
+    "kind": "lesen",
+    "textart": "Anleitung",
+    "text": "So baust du einen einfachen Stromkreis. Du brauchst eine Flachbatterie, ein Lämpchen in einer Fassung und zwei Kabel. Verbinde zuerst das eine Kabel mit dem kurzen Pol der Batterie. Dann klemmst du das andere Ende an die Fassung. Nimm nun das zweite Kabel und verbinde es mit dem langen Pol. Zum Schluss klemmst du das freie Ende ebenfalls an die Fassung. Jetzt ist der Stromkreis geschlossen, und das Lämpchen leuchtet. Achtung: Experimentiere nie mit Strom aus der Steckdose!",
+    "fragen": [
+      {
+        "frage": "Wie viele Kabel brauchst du?",
+        "choices": [
+          {
+            "text": "zwei"
+          },
+          {
+            "text": "eins"
+          },
+          {
+            "text": "vier"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Wann leuchtet das Lämpchen?",
+        "choices": [
+          {
+            "text": "wenn der Stromkreis geschlossen ist"
+          },
+          {
+            "text": "wenn ein Kabel fehlt"
+          },
+          {
+            "text": "wenn die Batterie leer ist"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Womit darfst du nie experimentieren?",
+        "choices": [
+          {
+            "text": "mit Strom aus der Steckdose"
+          },
+          {
+            "text": "mit einer Flachbatterie"
+          },
+          {
+            "text": "mit einem Lämpchen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 7
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Märchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "gedicht-nebel",
+    "kind": "lesen",
+    "textart": "Gedicht",
+    "text": "Der Nebel kriecht durchs stille Feld, er hüllt in Grau die ganze Welt. Die Bäume stehen stumm und kalt, verschwunden ist der dunkle Wald. Doch mittags kommt die Sonne raus, dann ist der graue Spuk schnell aus. Die Wiese glitzert, nass und hell, der Nebel flieht, ganz leise, schnell.",
+    "fragen": [
+      {
+        "frage": "Welche Farbe hat der Nebel im Gedicht?",
+        "choices": [
+          {
+            "text": "grau"
+          },
+          {
+            "text": "weiß"
+          },
+          {
+            "text": "blau"
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Was vertreibt den Nebel?",
+        "choices": [
+          {
+            "text": "die Sonne"
+          },
+          {
+            "text": "der Wind"
+          },
+          {
+            "text": "der Regen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Was bedeutet „der graue Spuk ist aus“?",
+        "choices": [
+          {
+            "text": "Der Nebel ist weg."
+          },
+          {
+            "text": "Ein Gespenst kommt."
+          },
+          {
+            "text": "Es wird dunkel."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Gedicht"
+          },
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Märchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "kinderrechte",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Alle Kinder auf der Welt haben Rechte. Sie stehen in der UN-Kinderrechtskonvention, die fast alle Länder unterschrieben haben. Dazu gehören zum Beispiel das Recht auf Bildung, das Recht auf Spiel und Freizeit und das Recht, gesund aufzuwachsen. Kinder haben auch das Recht, ihre Meinung zu sagen, wenn es um sie geht. In vielen Gemeinden gibt es deshalb ein Kinderparlament. Dort können Kinder Vorschläge machen, zum Beispiel für einen neuen Spielplatz. Leider werden die Kinderrechte nicht überall eingehalten. In manchen Ländern müssen Kinder arbeiten, statt in die Schule zu gehen.",
+    "fragen": [
+      {
+        "frage": "Wo stehen die Kinderrechte?",
+        "choices": [
+          {
+            "text": "in der UN-Kinderrechtskonvention"
+          },
+          {
+            "text": "im Schulbuch"
+          },
+          {
+            "text": "im Gemeinderat"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Was können Kinder in einem Kinderparlament tun?",
+        "choices": [
+          {
+            "text": "Vorschläge machen"
+          },
+          {
+            "text": "Gesetze beschließen"
+          },
+          {
+            "text": "Noten geben"
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Welches Recht wird in manchen Ländern nicht eingehalten?",
+        "choices": [
+          {
+            "text": "das Recht auf Bildung"
+          },
+          {
+            "text": "das Recht auf Taschengeld"
+          },
+          {
+            "text": "das Recht auf ein Handy"
+          }
+        ],
+        "answer": 0,
+        "beleg": 7
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Märchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fabel-loewe-maus",
+    "kind": "lesen",
+    "textart": "Fabel",
+    "text": "Ein Löwe schlief im Schatten eines Baumes. Eine kleine Maus lief über seine Nase, und er wachte auf. Wütend packte er sie mit seiner Pranke. «Bitte lass mich frei», piepste die Maus. «Vielleicht kann ich dir eines Tages helfen.» Der Löwe lachte, aber er ließ sie laufen. Einige Wochen später geriet der Löwe in ein Netz von Jägern. Er brüllte laut, doch er kam nicht frei. Die Maus hörte ihn und eilte herbei. Sie nagte die Seile durch, bis der Löwe frei war. Da sagte die Maus: «Siehst du, auch eine kleine Maus kann einem großen Löwen helfen.»",
+    "fragen": [
+      {
+        "frage": "Warum wachte der Löwe auf?",
+        "choices": [
+          {
+            "text": "Eine Maus lief über seine Nase."
+          },
+          {
+            "text": "Ein Jäger kam."
+          },
+          {
+            "text": "Es fing an zu regnen."
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Wie half die Maus dem Löwen?",
+        "choices": [
+          {
+            "text": "Sie nagte die Seile durch."
+          },
+          {
+            "text": "Sie holte andere Löwen."
+          },
+          {
+            "text": "Sie verjagte die Jäger."
+          }
+        ],
+        "answer": 0,
+        "beleg": 9
+      },
+      {
+        "frage": "Was ist die Lehre der Fabel?",
+        "choices": [
+          {
+            "text": "Auch Kleine können Großen helfen."
+          },
+          {
+            "text": "Löwen sind gefährlich."
+          },
+          {
+            "text": "Mäuse sind schneller als Löwen."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Fabel"
+          },
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Geschichte"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  }
+]

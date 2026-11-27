@@ -1363,5 +1363,47 @@
     "topic": "sprache",
     "title": "Bericht, Erzählung, Beschreibung",
     "term": 2
+  },
+  {
+    "id": "k4.lesen.geschichten",
+    "grade": 4,
+    "topic": "lesen",
+    "title": "Längere Geschichten: Figuren und Wendepunkt",
+    "term": 1
+  },
+  {
+    "id": "k4.lesen.sachtexte",
+    "grade": 4,
+    "topic": "lesen",
+    "title": "Sachtexte: Informationen verbinden, Wörter klären",
+    "term": 1
+  },
+  {
+    "id": "k4.lesen.tabellen",
+    "grade": 4,
+    "topic": "lesen",
+    "title": "Fahrpläne und Preislisten",
+    "term": 1
+  },
+  {
+    "id": "k4.lesen.redewendungen",
+    "grade": 4,
+    "topic": "lesen",
+    "title": "Redewendungen und Sprichwörter",
+    "term": 2
+  },
+  {
+    "id": "k4.lesen.nachschlagen",
+    "grade": 4,
+    "topic": "lesen",
+    "title": "Wörter nachschlagen",
+    "term": 1
+  },
+  {
+    "id": "k4.lesen.meldungen",
+    "grade": 4,
+    "topic": "lesen",
+    "title": "Nachricht, Meinung oder Werbung?",
+    "term": 2
   }
 ]

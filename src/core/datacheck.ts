@@ -312,14 +312,16 @@ export function checkGrade2Texts(): string[] {
 }
 
 /** Grade 3 texts (L3-2 to L3-6): length, 3–4 questions, references inside the text. */
-export function checkGrade3Texts(): string[] {
+export function checkGrade3Texts(grade = 3): string[] {
   const problems: string[] = []
-  for (const t of textsFor(3)) {
-    const where = `Klasse 3, Text „${t.id}“`
+  const [min, max] = grade === 3 ? [40, 160] : [30, 320]
+  for (const t of textsFor(grade)) {
+    const where = `Klasse ${grade}, Text „${t.id}“`
     const n = wordsOf(t.text).length
-    if (n < 40 || n > 160) problems.push(`${where}: ${n} Wörter (40–160)`)
+    if (n < min || n > max) problems.push(`${where}: ${n} Wörter (${min}–${max})`)
     if (!t.textart) problems.push(`${where}: ohne Textart`)
-    if (t.fragen.length < 3 || t.fragen.length > 4) problems.push(`${where}: 3 oder 4 Fragen`)
+    if (t.fragen.length < 3 || t.fragen.length > grade + 1)
+      problems.push(`${where}: 3 bis ${grade + 1} Fragen`)
     const count = splitSentences(t.text).length
     for (const f of t.fragen) {
       if (f.beleg !== undefined && (f.beleg < 0 || f.beleg >= count))
@@ -571,7 +573,11 @@ export function checkData(images: ReadonlySet<string>): string[] {
         if (grade === 3)
           problems.push(...checkGrade2Words(words, land.name, 3), ...checkGrade3Texts())
         if (grade === 4)
-          problems.push(...checkGrade2Words(words, land.name, 4), ...checkGrade4Sprache())
+          problems.push(
+            ...checkGrade2Words(words, land.name, 4),
+            ...checkGrade4Sprache(),
+            ...checkGrade3Texts(4),
+          )
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

@@ -71,8 +71,15 @@ const store = useAppStore()
 .text.long {
   flex-direction: row;
   flex-wrap: wrap;
+  /* Long texts read like a page: lines start on the left. */
+  justify-content: flex-start;
   gap: 2px 8px;
   max-width: 680px;
+}
+
+/* The sentences flow into each other like a page in a book. */
+.text.long :deep(.sentence) {
+  display: contents;
 }
 
 .story {

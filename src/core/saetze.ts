@@ -71,7 +71,8 @@ export function sentenceTokens(sentence: Sentence, words: readonly Word[]): Sent
   const known = byText(words)
   const tokens = sentence.text.split(/\s+/)
   return tokens.map((raw) => {
-    const bare = raw.replace(/[.,!?;:]/g, '')
+    // Only punctuation at the end: 7:05 and 1,20 stay whole (grade 4 timetables, prices).
+    const bare = raw.replace(/[.,!?;:]+$/, '')
     const punct = raw.slice(bare.length)
     const word = known.get(bare.toLowerCase())
     const syllables = word ? syllablesIn(bare, word.syllables) : [bare]

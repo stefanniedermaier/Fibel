@@ -4804,5 +4804,136 @@
       "art": "textart"
     },
     "title": "Welche Textart?"
+  },
+  {
+    "id": "k4.lesen.geschichten.fragen",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.geschichten4",
+    "unit": "k4.lesen.geschichten",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Geschichte", "Märchen", "Fabel", "Gedicht"],
+      "fragen": "inhalt"
+    },
+    "title": "Fragen zur Geschichte"
+  },
+  {
+    "id": "k4.lesen.geschichten.textart",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.geschichten4",
+    "unit": "k4.lesen.geschichten",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "fragen": "textart"
+    },
+    "title": "Was für ein Text ist das?",
+    "weight": 0.4
+  },
+  {
+    "id": "k4.lesen.sachtexte.fragen",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.sachtexte4",
+    "unit": "k4.lesen.sachtexte",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Sachtext", "Anleitung"],
+      "fragen": "inhalt"
+    },
+    "title": "Fragen zum Sachtext"
+  },
+  {
+    "id": "k4.lesen.sachtexte.belegen",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.sachtexte4",
+    "unit": "k4.lesen.sachtexte",
+    "exercise": "lesen.textstelle",
+    "params": {},
+    "title": "Wo steht das?",
+    "weight": 0.6
+  },
+  {
+    "id": "k4.lesen.tabellen.fragen",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.sachtexte4",
+    "unit": "k4.lesen.tabellen",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Fahrplan", "Preisliste"],
+      "fragen": "inhalt"
+    },
+    "title": "Fahrplan und Preisliste lesen"
+  },
+  {
+    "id": "k4.lesen.redewendungen.redewendung",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.geschichten4",
+    "unit": "k4.lesen.redewendungen",
+    "exercise": "lesen.redewendung",
+    "params": {
+      "art": "redewendung"
+    },
+    "title": "Was bedeutet das?"
+  },
+  {
+    "id": "k4.lesen.redewendungen.sprichwort",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.geschichten4",
+    "unit": "k4.lesen.redewendungen",
+    "exercise": "lesen.redewendung",
+    "params": {
+      "art": "sprichwort"
+    },
+    "title": "Sprichwörter"
+  },
+  {
+    "id": "k4.lesen.nachschlagen.zweiter",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.sachtexte4",
+    "unit": "k4.lesen.nachschlagen",
+    "exercise": "schreiben.abc",
+    "params": {
+      "mode": "zweiter",
+      "wordGrade": 4
+    },
+    "title": "Was steht weiter vorn?"
+  },
+  {
+    "id": "k4.lesen.nachschlagen.grundform",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.sachtexte4",
+    "unit": "k4.lesen.nachschlagen",
+    "exercise": "schreiben.abc",
+    "params": {
+      "mode": "grundform",
+      "wordGrade": 4
+    },
+    "title": "Grundform suchen"
+  },
+  {
+    "id": "k4.lesen.meldungen.meldung",
+    "grade": 4,
+    "topic": "lesen",
+    "category": "lesen.sachtexte4",
+    "unit": "k4.lesen.meldungen",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Meldung"],
+      "fragen": "inhalt"
+    },
+    "title": "Kindernachrichten"
   }
 ]

@@ -478,5 +478,17 @@
     "topic": "sprache",
     "title": "Zeichen und Texte",
     "icon": "📝"
+  },
+  {
+    "id": "lesen.geschichten4",
+    "topic": "lesen",
+    "title": "Geschichten und Redewendungen",
+    "icon": "📖"
+  },
+  {
+    "id": "lesen.sachtexte4",
+    "topic": "lesen",
+    "title": "Sachtexte, Tabellen, Meldungen",
+    "icon": "🔎"
   }
 ]

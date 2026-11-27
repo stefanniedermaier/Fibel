@@ -1,0 +1,198 @@
+[
+  {
+    "id": "r1",
+    "art": "redewendung",
+    "text": "jemandem einen Bären aufbinden",
+    "bedeutung": "jemandem eine Lüge erzählen",
+    "falsch": ["jemandem ein Kuscheltier schenken", "jemandem beim Anziehen helfen"]
+  },
+  {
+    "id": "r2",
+    "art": "redewendung",
+    "text": "Tomaten auf den Augen haben",
+    "bedeutung": "etwas Offensichtliches nicht sehen",
+    "falsch": ["eine Brille brauchen", "sehr hungrig sein"]
+  },
+  {
+    "id": "r3",
+    "art": "redewendung",
+    "text": "auf dem Holzweg sein",
+    "bedeutung": "sich irren",
+    "falsch": ["im Wald spazieren gehen", "Holz sammeln"]
+  },
+  {
+    "id": "r4",
+    "art": "redewendung",
+    "text": "ins Fettnäpfchen treten",
+    "bedeutung": "etwas Peinliches sagen oder tun",
+    "falsch": ["in eine Pfütze treten", "beim Kochen helfen"]
+  },
+  {
+    "id": "r5",
+    "art": "redewendung",
+    "text": "die Daumen drücken",
+    "bedeutung": "jemandem Glück wünschen",
+    "falsch": ["jemandem wehtun", "Fingerübungen machen"]
+  },
+  {
+    "id": "r6",
+    "art": "redewendung",
+    "text": "Schwein haben",
+    "bedeutung": "Glück haben",
+    "falsch": ["ein Haustier besitzen", "unordentlich sein"]
+  },
+  {
+    "id": "r7",
+    "art": "redewendung",
+    "text": "jemandem die kalte Schulter zeigen",
+    "bedeutung": "jemanden nicht beachten",
+    "falsch": ["jemandem zeigen, dass man friert", "jemanden umarmen"]
+  },
+  {
+    "id": "r8",
+    "art": "redewendung",
+    "text": "zwei Fliegen mit einer Klappe schlagen",
+    "bedeutung": "zwei Dinge auf einmal erledigen",
+    "falsch": ["Insekten fangen", "laut Türen schließen"]
+  },
+  {
+    "id": "r9",
+    "art": "redewendung",
+    "text": "aus einer Mücke einen Elefanten machen",
+    "bedeutung": "etwas Kleines übertreiben",
+    "falsch": ["ein Tier malen", "im Zoo arbeiten"]
+  },
+  {
+    "id": "r10",
+    "art": "redewendung",
+    "text": "sich wie ein Fisch im Wasser fühlen",
+    "bedeutung": "sich sehr wohlfühlen",
+    "falsch": ["gern baden", "nass sein"]
+  },
+  {
+    "id": "r11",
+    "art": "redewendung",
+    "text": "den Nagel auf den Kopf treffen",
+    "bedeutung": "genau das Richtige sagen",
+    "falsch": ["gut hämmern können", "Kopfschmerzen haben"]
+  },
+  {
+    "id": "r12",
+    "art": "redewendung",
+    "text": "Hals über Kopf",
+    "bedeutung": "sehr schnell und ohne nachzudenken",
+    "falsch": ["einen Purzelbaum machen", "Halsschmerzen haben"]
+  },
+  {
+    "id": "r13",
+    "art": "redewendung",
+    "text": "etwas auf die leichte Schulter nehmen",
+    "bedeutung": "etwas nicht ernst nehmen",
+    "falsch": ["etwas Leichtes tragen", "einen Rucksack aufsetzen"]
+  },
+  {
+    "id": "r14",
+    "art": "redewendung",
+    "text": "mit dem falschen Fuß aufstehen",
+    "bedeutung": "schlechte Laune haben",
+    "falsch": ["über die eigenen Füße stolpern", "Schuhe vertauschen"]
+  },
+  {
+    "id": "r15",
+    "art": "redewendung",
+    "text": "jemandem auf der Nase herumtanzen",
+    "bedeutung": "machen, was man will, ohne zu gehorchen",
+    "falsch": ["mit jemandem tanzen", "jemanden kitzeln"]
+  },
+  {
+    "id": "r16",
+    "art": "redewendung",
+    "text": "ein Brett vor dem Kopf haben",
+    "bedeutung": "etwas nicht verstehen",
+    "falsch": ["beim Schreiner arbeiten", "einen Helm tragen"]
+  },
+  {
+    "id": "r17",
+    "art": "redewendung",
+    "text": "die Ohren spitzen",
+    "bedeutung": "genau zuhören",
+    "falsch": ["Ohrringe tragen", "die Ohren putzen"]
+  },
+  {
+    "id": "r18",
+    "art": "redewendung",
+    "text": "unter einer Decke stecken",
+    "bedeutung": "heimlich zusammenhalten",
+    "falsch": ["frieren", "Verstecken spielen"]
+  },
+  {
+    "id": "r19",
+    "art": "redewendung",
+    "text": "jemandem reinen Wein einschenken",
+    "bedeutung": "jemandem die Wahrheit sagen",
+    "falsch": ["jemandem etwas zu trinken geben", "Saft verschütten"]
+  },
+  {
+    "id": "r20",
+    "art": "redewendung",
+    "text": "das ist ein Kinderspiel",
+    "bedeutung": "das ist ganz leicht",
+    "falsch": ["das ist nur für Kinder", "das ist ein Brettspiel"]
+  },
+  {
+    "id": "s1",
+    "art": "sprichwort",
+    "text": "Morgenstund hat Gold im Mund.",
+    "bedeutung": "Wer früh anfängt, schafft viel.",
+    "falsch": ["Am Morgen soll man Gold suchen.", "Frühstück ist wichtig."]
+  },
+  {
+    "id": "s2",
+    "art": "sprichwort",
+    "text": "Übung macht den Meister.",
+    "bedeutung": "Wer viel übt, wird gut.",
+    "falsch": ["Nur Meister dürfen üben.", "Üben ist langweilig."]
+  },
+  {
+    "id": "s3",
+    "art": "sprichwort",
+    "text": "Wer anderen eine Grube gräbt, fällt selbst hinein.",
+    "bedeutung": "Wer anderen schaden will, schadet sich selbst.",
+    "falsch": ["Graben ist gefährlich.", "Man soll keine Löcher graben."]
+  },
+  {
+    "id": "s4",
+    "art": "sprichwort",
+    "text": "Ohne Fleiß kein Preis.",
+    "bedeutung": "Ohne Anstrengung gibt es keinen Erfolg.",
+    "falsch": ["Preise sind teuer.", "Man bekommt immer einen Preis."]
+  },
+  {
+    "id": "s5",
+    "art": "sprichwort",
+    "text": "Lügen haben kurze Beine.",
+    "bedeutung": "Lügen kommen schnell heraus.",
+    "falsch": ["Lügner sind klein.", "Lügen kann man nicht laufen."]
+  },
+  {
+    "id": "s6",
+    "art": "sprichwort",
+    "text": "Aller Anfang ist schwer.",
+    "bedeutung": "Am Anfang fällt etwas noch schwer.",
+    "falsch": ["Anfänge sind schwer zu tragen.", "Man soll nichts anfangen."]
+  },
+  {
+    "id": "s7",
+    "art": "sprichwort",
+    "text": "Viele Köche verderben den Brei.",
+    "bedeutung": "Wenn zu viele mitreden, wird es nichts.",
+    "falsch": ["Brei schmeckt nicht.", "In der Küche ist es eng."]
+  },
+  {
+    "id": "s8",
+    "art": "sprichwort",
+    "text": "Der Apfel fällt nicht weit vom Stamm.",
+    "bedeutung": "Kinder sind oft wie ihre Eltern.",
+    "falsch": ["Äpfel fallen im Herbst.", "Unter dem Baum liegen Äpfel."]
+  }
+]
