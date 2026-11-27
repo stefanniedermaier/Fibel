@@ -173,5 +173,68 @@
     "topic": "uhr",
     "title": "Viertelstunden und Minuten",
     "term": 1
+  },
+  {
+    "id": "k1.sache.obst-gemuese",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Obst und Gemüse",
+    "term": 1
+  },
+  {
+    "id": "k1.sache.sinne",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Meine Sinne",
+    "term": 1
+  },
+  {
+    "id": "k1.sache.jahreszeiten",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Zeit und Jahreszeiten",
+    "term": 1
+  },
+  {
+    "id": "k1.sache.feste",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Feste im Jahr",
+    "term": 1
+  },
+  {
+    "id": "k1.sache.wetter",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Wetter",
+    "term": 1
+  },
+  {
+    "id": "k1.sache.wiese",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Auf der Wiese",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.tiere",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Haustiere und Nutztiere",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.hecke",
+    "grade": 1,
+    "topic": "sache",
+    "title": "In der Hecke: Wer frisst wen?",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.berufe",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Berufe und Werkzeuge",
+    "term": 2
   }
 ]

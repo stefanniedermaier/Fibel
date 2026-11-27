@@ -13,13 +13,13 @@ export const router = createRouter({
       component: () => import('./views/ProfileSelectView.vue'),
     },
     {
-      path: '/einheit/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr)/:category?',
+      path: '/einheit/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr|sache)/:category?',
       name: 'session',
       component: () => import('./views/SessionView.vue'),
       meta: { needsProfile: true },
     },
     {
-      path: '/fach/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr)',
+      path: '/fach/:grade(\\d+)/:topic(lesen|schreiben|rechnen|uhr|sache)',
       name: 'topic',
       component: () => import('./views/TopicView.vue'),
       meta: { needsProfile: true },

@@ -20,6 +20,7 @@ import ablaeufe from '@/data/basis/klasse-1/ablaeufe.json'
 import fragesaetze from '@/data/basis/klasse-1/fragesaetze.json'
 import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
 import texte from '@/data/basis/klasse-1/texte.json'
+import { BEGRIFFE, THEMEN } from '@/exercises/sache/shared'
 import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
 import { WORTARTEN, type LandCode, type Syllable, type Word } from './types'
 import { LETTERS, applyWordOverlay, baseSyllables, baseWordEntries, resolveWords } from './words'
@@ -138,6 +139,55 @@ export function checkGrade1Extras(words: readonly Word[], images: ReadonlySet<st
     for (const text of [g.plus, g.minus])
       if (!text.includes('{a}') || !text.includes('{b}') || !text.endsWith('?'))
         problems.push(`${where}: braucht {a}, {b} und eine Frage am Ende`)
+  }
+  return problems
+}
+
+/** HSU (plaene/hsu-klasse-1.md): every theme, Begriff and picture must fit together. */
+export function checkSache(images: ReadonlySet<string>): string[] {
+  const problems: string[] = []
+  const begriffe = new Map<string, (typeof BEGRIFFE)[number]>()
+  for (const b of BEGRIFFE) {
+    if (begriffe.has(b.id)) problems.push(`HSU-Begriff „${b.id}“: ID doppelt`)
+    begriffe.set(b.id, b)
+    if (!images.has(b.image)) problems.push(`HSU-Begriff „${b.id}“: Bild ${b.image} fehlt`)
+    if (!/[.!]$/.test(b.merksatz)) problems.push(`HSU-Begriff „${b.id}“: Merksatz ohne Punkt`)
+  }
+  const ablaufIds = new Set(ablaeufe.map((a) => a.id))
+  const need = (where: string, id: string) => {
+    if (!begriffe.has(id)) problems.push(`${where}: Begriff „${id}“ fehlt`)
+  }
+  for (const t of THEMEN) {
+    const where = `HSU-Thema „${t.id}“`
+    if (!UNITS.some((u) => u.id === `k1.sache.${t.id}`)) problems.push(`${where}: Einheit fehlt`)
+    const pictures = t.erkennen.map((id) => begriffe.get(id)?.image)
+    if (new Set(pictures).size !== pictures.length) problems.push(`${where}: Bild doppelt`)
+    if (t.erkennen.length > 0 && t.erkennen.length < 4)
+      problems.push(`${where}: weniger als 4 Bilder zum Erkennen`)
+    for (const id of t.erkennen) need(where, id)
+    for (const s of t.sortieren) {
+      const groups = new Set(s.gruppen.map((g) => g.id))
+      for (const g of s.gruppen)
+        if (!images.has(g.image)) problems.push(`${where}, ${s.id}: Bild ${g.image} fehlt`)
+      for (const [id, group] of Object.entries(s.zuordnung)) {
+        need(where, id)
+        if (!groups.has(group)) problems.push(`${where}, ${s.id}: Gruppe „${group}“ fehlt`)
+      }
+      for (const g of groups)
+        if (!Object.values(s.zuordnung).includes(g))
+          problems.push(`${where}, ${s.id}: Gruppe „${g}“ ohne Begriff`)
+    }
+    for (const p of t.paare) {
+      const ids = [p.richtig, ...p.ablenker]
+      for (const id of [p.ziel, ...ids]) need(where, id)
+      if (ids.length < 3) problems.push(`${where}, „${p.frage}“: weniger als 3 Antworten`)
+      const pics = ids.map((id) => begriffe.get(id)?.image)
+      if (new Set(pics).size !== pics.length)
+        problems.push(`${where}, „${p.frage}“: gleiche Bilder`)
+      if (!p.frage.endsWith('?')) problems.push(`${where}, „${p.frage}“: ohne Fragezeichen`)
+    }
+    for (const id of t.ablaeufe)
+      if (!ablaufIds.has(id)) problems.push(`${where}: Ablauf „${id}“ fehlt`)
   }
   return problems
 }
@@ -343,7 +393,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
         const words = applyWordOverlay(baseWordEntries(grade), grade, overlay)
         problems.push(...checkWords(words, grade, land.name, images))
         problems.push(...checkSentences(grade, words, images))
-        if (grade === 1) problems.push(...checkGrade1Extras(words, images))
+        if (grade === 1) problems.push(...checkGrade1Extras(words, images), ...checkSache(images))
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

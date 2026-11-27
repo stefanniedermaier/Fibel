@@ -10,7 +10,7 @@ import {
 } from '@/core/practice'
 import { getDb, loadProgress } from '@/core/storage/db'
 import { stopSpeaking } from '@/core/speech'
-import { TOPIC_INFO, type Topic } from '@/core/types'
+import { TOPIC_INFO, topicLabel, type Topic } from '@/core/types'
 import { getExercise } from '@/exercises/registry'
 import { useAppStore } from '@/stores/app'
 
@@ -21,6 +21,9 @@ const store = useAppStore()
 const grade = Number(route.params.grade)
 const topic = route.params.topic as Topic
 const info = TOPIC_INFO[topic]
+const label = computed(() => topicLabel(topic, store.active?.land))
+// HSU themes are practised one by one (plaene/hsu-klasse-1.md): no "Alles gemischt".
+const mixed = topic !== 'sache'
 
 const revision = computed(() => !!store.active && grade < store.active.grade)
 
@@ -63,7 +66,7 @@ const showStumbles = computed(() => stumbleCount.value >= MIN_STUMBLES)
 /** "Alles gemischt, Hören oder Wörter lesen?" – the child cannot read the names yet. */
 const question = computed(() => {
   const names = [
-    'Alles gemischt',
+    ...(mixed ? ['Alles gemischt'] : []),
     ...categories.value.map((c) => c.title),
     ...(showStumbles.value ? ['Stolpersteine'] : []),
   ]
@@ -89,14 +92,18 @@ onUnmounted(stopSpeaking)
         🏠
       </RouterLink>
       <h1>
-        <span aria-hidden="true">{{ info.icon }}</span> {{ info.label }}
+        <span aria-hidden="true">{{ info.icon }}</span> {{ label }}
         <small v-if="grade !== store.active?.grade" class="muted">Klasse {{ grade }}</small>
       </h1>
       <button class="icon-btn" type="button" aria-label="Vorlesen" @click="speak">🔊</button>
     </header>
 
     <div class="tiles">
-      <RouterLink class="tile mixed" :to="{ name: 'session', params: { grade, topic } }">
+      <RouterLink
+        v-if="mixed"
+        class="tile mixed"
+        :to="{ name: 'session', params: { grade, topic } }"
+      >
         <span class="icon" aria-hidden="true">🎲</span>
         <span>Alles gemischt</span>
       </RouterLink>

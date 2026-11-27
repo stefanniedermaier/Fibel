@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
 import { visibleGrades } from '@/core/content'
 import { practiceEntries, topicRoute } from '@/core/practice'
-import { TOPICS, TOPIC_INFO } from '@/core/types'
+import { OPTIONAL_TOPICS, TOPICS, TOPIC_INFO, topicLabel } from '@/core/types'
 import { getExercise } from '@/exercises/registry'
 import { useAppStore } from '@/stores/app'
 
@@ -12,12 +12,17 @@ const store = useAppStore()
 const tiles = computed(() => {
   const ctx = store.context
   if (!ctx) return []
-  return TOPICS.map((topic) => ({
-    topic,
-    ...TOPIC_INFO[topic],
-    available: practiceEntries(ctx, topic, getExercise).length > 0,
-    to: topicRoute(ctx, topic, getExercise),
-  }))
+  return (
+    TOPICS.map((topic) => ({
+      topic,
+      ...TOPIC_INFO[topic],
+      label: topicLabel(topic, ctx.land),
+      available: practiceEntries(ctx, topic, getExercise).length > 0,
+      to: topicRoute(ctx, topic, getExercise),
+    }))
+      // HSU only shows up where there is content; the others say "kommt bald".
+      .filter((t) => t.available || !OPTIONAL_TOPICS.includes(t.topic))
+  )
 })
 
 const otherGrades = computed(() => {

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { visibleGrades } from '@/core/content'
 import { practiceEntries, topicRoute } from '@/core/practice'
-import { TOPICS, TOPIC_INFO } from '@/core/types'
+import { TOPICS, TOPIC_INFO, topicLabel } from '@/core/types'
 import { getExercise } from '@/exercises/registry'
 import { useAppStore } from '@/stores/app'
 
@@ -22,7 +22,12 @@ const groups = computed(() => {
       lower: grade < profile.grade,
       topics: TOPICS.filter(
         (t) => practiceEntries(ctx, t, getExercise, undefined, options).length > 0,
-      ).map((t) => ({ topic: t, ...TOPIC_INFO[t], to: topicRoute(ctx, t, getExercise, options) })),
+      ).map((t) => ({
+        topic: t,
+        ...TOPIC_INFO[t],
+        label: topicLabel(t, profile.land),
+        to: topicRoute(ctx, t, getExercise, options),
+      })),
     }
   })
 })

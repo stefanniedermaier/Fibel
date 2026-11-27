@@ -20,7 +20,7 @@ import { playCrown, playError, playSuccess } from '@/core/sounds'
 import { phrase, stopSpeaking } from '@/core/speech'
 import { getDb, loadProgress, saveProgress, saveSession } from '@/core/storage/db'
 import type { ProgressRecord, SessionRecord, TaskResult, Topic } from '@/core/types'
-import { TOPIC_INFO } from '@/core/types'
+import { TOPIC_INFO, topicLabel } from '@/core/types'
 import { getExercise } from '@/exercises/registry'
 import { useAppStore } from '@/stores/app'
 
@@ -150,6 +150,7 @@ async function onAnswer(correct: boolean) {
     if (star) starTrigger.value++
     await finishTask(star)
     await Promise.all([store.say(phrase('praise', rng), 3000), wait(1100)])
+    if (task.task.afterword) await store.say(task.task.afterword, 6000)
     await next()
     return
   }
@@ -260,7 +261,7 @@ onUnmounted(() => {
         <RouterLink class="btn" :to="{ name: 'home' }">Fertig</RouterLink>
       </div>
       <p class="muted">
-        {{ TOPIC_INFO[topic].icon }} {{ TOPIC_INFO[topic].label }}
+        {{ TOPIC_INFO[topic].icon }} {{ topicLabel(topic, store.active?.land) }}
         <template v-if="categoryInfo"> · {{ categoryInfo.icon }} {{ categoryInfo.title }}</template>
         · Klasse {{ grade }}
       </p>

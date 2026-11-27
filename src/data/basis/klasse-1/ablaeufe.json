@@ -70,5 +70,28 @@
     "title": "Der Geburtstag",
     "images": ["1F4E6", "1F381", "1F389"],
     "steps": ["die Schachtel", "das Geschenk", "die Feier"]
+  },
+  {
+    "id": "kette-amsel",
+    "title": "Wer frisst wen?",
+    "frage": "Fang mit dem an, was gefressen wird.",
+    "images": ["1F33F", "1F40C", "1F426-200D-2B1B"],
+    "steps": ["die Pflanze", "die Schnecke frisst die Pflanze", "die Amsel frisst die Schnecke"],
+    "sache": true
+  },
+  {
+    "id": "kette-eule",
+    "title": "Wer frisst wen?",
+    "frage": "Fang mit dem an, was gefressen wird.",
+    "images": ["1F33E", "1F42D", "1F989"],
+    "steps": ["die Körner", "die Maus frisst die Körner", "die Eule frisst die Maus"],
+    "sache": true
+  },
+  {
+    "id": "schmetterling-kurz",
+    "title": "Von der Raupe zum Schmetterling",
+    "images": ["1F33F", "1F41B", "1F98B"],
+    "steps": ["das Blatt", "die Raupe frisst und wächst", "der Schmetterling"],
+    "sache": true
   }
 ]

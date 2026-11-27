@@ -3,6 +3,9 @@ import { anlaut } from './lesen/anlaut'
 import { blitzlesen } from './lesen/blitzlesen'
 import { lautposition } from './lesen/lautposition'
 import { reihenfolge } from './lesen/reihenfolge'
+import { hoerenBild } from './sache/hoeren-bild'
+import { paare } from './sache/paare'
+import { sortieren } from './sache/sortieren'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -90,6 +93,9 @@ register(diktat)
 register(vokale)
 register(satzzeichen)
 register(grossKlein)
+register(hoerenBild)
+register(paare)
+register(sortieren)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

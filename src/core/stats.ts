@@ -1,5 +1,6 @@
 /** Statistics for the parent area – computed from sessions and progress, nothing stored. */
 import { BASE_CATALOG, getCategory } from './content'
+import { BEGRIFFE, THEMEN } from '@/exercises/sache/shared'
 import type { ProgressRecord, SessionRecord, Topic } from './types'
 
 const DAY_MS = 24 * 60 * 60 * 1000
@@ -167,7 +168,19 @@ export function itemLabel(itemKey: string, wordText: (id: string) => string | un
       const cut = part.lastIndexOf('-')
       return `${part.slice(cut + 1).toUpperCase()} in ${wordText(part.slice(0, cut)) ?? part.slice(0, cut)}`
     }
+    case 'sache.hoeren-bild':
+      return sacheLabel(part)
+    case 'sache.sortieren':
+      return sacheLabel(part.slice(part.indexOf(':') + 1))
+    case 'sache.paare': {
+      const [thema, i] = part.split(':')
+      return THEMEN.find((t) => t.id === thema)?.paare[Number(i)]?.frage ?? part
+    }
     default:
       return wordText(part) ?? part
   }
+}
+
+function sacheLabel(id: string): string {
+  return BEGRIFFE.find((b) => b.id === id)?.text ?? id
 }

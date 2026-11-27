@@ -1,15 +1,134 @@
 [
-  { "id": "lesen.hoeren", "topic": "lesen", "title": "Hören", "icon": "👂" },
-  { "id": "lesen.woerter", "topic": "lesen", "title": "Wörter lesen", "icon": "🔤" },
-  { "id": "lesen.saetze", "topic": "lesen", "title": "Sätze und Texte", "icon": "📄" },
-  { "id": "schreiben.buchstaben", "topic": "schreiben", "title": "Buchstaben", "icon": "✍️" },
-  { "id": "schreiben.woerter", "topic": "schreiben", "title": "Wörter bauen", "icon": "🧩" },
-  { "id": "schreiben.merkwoerter", "topic": "schreiben", "title": "Merkwörter", "icon": "⭐" },
-  { "id": "schreiben.saetze", "topic": "schreiben", "title": "Sätze schreiben", "icon": "✒️" },
-  { "id": "rechnen.zahlen", "topic": "rechnen", "title": "Zahlen", "icon": "🔢" },
-  { "id": "rechnen.rechnen", "topic": "rechnen", "title": "Rechnen", "icon": "➕" },
-  { "id": "rechnen.formen", "topic": "rechnen", "title": "Formen und Muster", "icon": "🔷" },
-  { "id": "rechnen.groessen", "topic": "rechnen", "title": "Geld und Längen", "icon": "💶" },
-  { "id": "uhr.uhrzeit", "topic": "uhr", "title": "Uhr lesen und stellen", "icon": "🕒" },
-  { "id": "uhr.kalender", "topic": "uhr", "title": "Kalender", "icon": "📅" }
+  {
+    "id": "lesen.hoeren",
+    "topic": "lesen",
+    "title": "Hören",
+    "icon": "👂"
+  },
+  {
+    "id": "lesen.woerter",
+    "topic": "lesen",
+    "title": "Wörter lesen",
+    "icon": "🔤"
+  },
+  {
+    "id": "lesen.saetze",
+    "topic": "lesen",
+    "title": "Sätze und Texte",
+    "icon": "📄"
+  },
+  {
+    "id": "schreiben.buchstaben",
+    "topic": "schreiben",
+    "title": "Buchstaben",
+    "icon": "✍️"
+  },
+  {
+    "id": "schreiben.woerter",
+    "topic": "schreiben",
+    "title": "Wörter bauen",
+    "icon": "🧩"
+  },
+  {
+    "id": "schreiben.merkwoerter",
+    "topic": "schreiben",
+    "title": "Merkwörter",
+    "icon": "⭐"
+  },
+  {
+    "id": "schreiben.saetze",
+    "topic": "schreiben",
+    "title": "Sätze schreiben",
+    "icon": "✒️"
+  },
+  {
+    "id": "rechnen.zahlen",
+    "topic": "rechnen",
+    "title": "Zahlen",
+    "icon": "🔢"
+  },
+  {
+    "id": "rechnen.rechnen",
+    "topic": "rechnen",
+    "title": "Rechnen",
+    "icon": "➕"
+  },
+  {
+    "id": "rechnen.formen",
+    "topic": "rechnen",
+    "title": "Formen und Muster",
+    "icon": "🔷"
+  },
+  {
+    "id": "rechnen.groessen",
+    "topic": "rechnen",
+    "title": "Geld und Längen",
+    "icon": "💶"
+  },
+  {
+    "id": "uhr.uhrzeit",
+    "topic": "uhr",
+    "title": "Uhr lesen und stellen",
+    "icon": "🕒"
+  },
+  {
+    "id": "uhr.kalender",
+    "topic": "uhr",
+    "title": "Kalender",
+    "icon": "📅"
+  },
+  {
+    "id": "sache.obst-gemuese",
+    "topic": "sache",
+    "title": "Obst und Gemüse",
+    "icon": "🍎"
+  },
+  {
+    "id": "sache.sinne",
+    "topic": "sache",
+    "title": "Meine Sinne",
+    "icon": "👂"
+  },
+  {
+    "id": "sache.jahreszeiten",
+    "topic": "sache",
+    "title": "Zeit und Jahreszeiten",
+    "icon": "🍂"
+  },
+  {
+    "id": "sache.feste",
+    "topic": "sache",
+    "title": "Feste im Jahr",
+    "icon": "🎄"
+  },
+  {
+    "id": "sache.wetter",
+    "topic": "sache",
+    "title": "Wetter",
+    "icon": "🌦️"
+  },
+  {
+    "id": "sache.wiese",
+    "topic": "sache",
+    "title": "Auf der Wiese",
+    "icon": "🐞"
+  },
+  {
+    "id": "sache.tiere",
+    "topic": "sache",
+    "title": "Haustiere und Nutztiere",
+    "icon": "🐄"
+  },
+  {
+    "id": "sache.hecke",
+    "topic": "sache",
+    "title": "In der Hecke: Wer frisst wen?",
+    "icon": "🦔"
+  },
+  {
+    "id": "sache.berufe",
+    "topic": "sache",
+    "title": "Berufe und Werkzeuge",
+    "icon": "🔨"
+  }
 ]

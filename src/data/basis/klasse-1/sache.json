@@ -1,0 +1,1340 @@
+{
+  "begriffe": [
+    {
+      "id": "apfel",
+      "text": "der Apfel",
+      "wen": "den Apfel",
+      "image": "1F34E",
+      "merksatz": "Äpfel werden im Herbst reif."
+    },
+    {
+      "id": "birne",
+      "text": "die Birne",
+      "wen": "die Birne",
+      "image": "1F350",
+      "merksatz": "Birnen werden im Herbst reif."
+    },
+    {
+      "id": "kirsche",
+      "text": "die Kirschen",
+      "wen": "die Kirschen",
+      "image": "1F352",
+      "merksatz": "Kirschen werden im Sommer reif."
+    },
+    {
+      "id": "erdbeere",
+      "text": "die Erdbeere",
+      "wen": "die Erdbeere",
+      "image": "1F353",
+      "merksatz": "Erdbeeren werden im Frühsommer reif."
+    },
+    {
+      "id": "trauben",
+      "text": "die Weintrauben",
+      "wen": "die Weintrauben",
+      "image": "1F347",
+      "merksatz": "Weintrauben werden im Herbst geerntet."
+    },
+    {
+      "id": "gurke",
+      "text": "die Gurke",
+      "wen": "die Gurke",
+      "image": "1F952",
+      "merksatz": "Gurken wachsen im Sommer."
+    },
+    {
+      "id": "kartoffel",
+      "text": "die Kartoffel",
+      "wen": "die Kartoffel",
+      "image": "1F954",
+      "merksatz": "Kartoffeln wachsen unter der Erde."
+    },
+    {
+      "id": "karotte",
+      "text": "die Karotte",
+      "wen": "die Karotte",
+      "image": "1F955",
+      "merksatz": "Die Karotte wächst unter der Erde."
+    },
+    {
+      "id": "brokkoli",
+      "text": "der Brokkoli",
+      "wen": "den Brokkoli",
+      "image": "1F966",
+      "merksatz": "Brokkoli ist ein Gemüse."
+    },
+    {
+      "id": "paprika",
+      "text": "die Paprika",
+      "wen": "die Paprika",
+      "image": "1FAD1",
+      "merksatz": "Paprika ist ein Gemüse."
+    },
+    {
+      "id": "mais",
+      "text": "der Mais",
+      "wen": "den Mais",
+      "image": "1F33D",
+      "merksatz": "Mais wächst auf dem Feld."
+    },
+    {
+      "id": "zwiebel",
+      "text": "die Zwiebel",
+      "wen": "die Zwiebel",
+      "image": "1F9C5",
+      "merksatz": "Zwiebeln wachsen in der Erde."
+    },
+    {
+      "id": "banane",
+      "text": "die Banane",
+      "wen": "die Banane",
+      "image": "1F34C",
+      "merksatz": "Bananen wachsen in warmen Ländern."
+    },
+    {
+      "id": "kastanie",
+      "text": "die Kastanie",
+      "wen": "die Kastanie",
+      "image": "1F330",
+      "merksatz": "Kastanien fallen im Herbst vom Baum."
+    },
+    {
+      "id": "auge",
+      "text": "das Auge",
+      "wen": "das Auge",
+      "image": "1F441",
+      "merksatz": "Mit den Augen sehen wir."
+    },
+    {
+      "id": "ohr",
+      "text": "das Ohr",
+      "wen": "das Ohr",
+      "image": "1F442",
+      "merksatz": "Mit den Ohren hören wir."
+    },
+    {
+      "id": "nase",
+      "text": "die Nase",
+      "wen": "die Nase",
+      "image": "1F443",
+      "merksatz": "Mit der Nase riechen wir."
+    },
+    {
+      "id": "zunge",
+      "text": "die Zunge",
+      "wen": "die Zunge",
+      "image": "1F445",
+      "merksatz": "Mit der Zunge schmecken wir."
+    },
+    {
+      "id": "hand",
+      "text": "die Hand",
+      "wen": "die Hand",
+      "image": "270B",
+      "merksatz": "Mit der Haut und den Händen fühlen wir."
+    },
+    {
+      "id": "glocke",
+      "text": "die Glocke",
+      "wen": "die Glocke",
+      "image": "1F514",
+      "merksatz": "Eine Glocke hören wir."
+    },
+    {
+      "id": "rose",
+      "text": "die Rose",
+      "wen": "die Rose",
+      "image": "1F339",
+      "merksatz": "Eine Rose duftet."
+    },
+    {
+      "id": "regenbogen",
+      "text": "der Regenbogen",
+      "wen": "den Regenbogen",
+      "image": "1F308",
+      "merksatz": "Einen Regenbogen sehen wir."
+    },
+    {
+      "id": "eis",
+      "text": "das Eis",
+      "wen": "das Eis",
+      "image": "1F366",
+      "merksatz": "Eis schmeckt süß."
+    },
+    {
+      "id": "zitrone",
+      "text": "die Zitrone",
+      "wen": "die Zitrone",
+      "image": "1F34B",
+      "merksatz": "Eine Zitrone schmeckt sauer."
+    },
+    {
+      "id": "igel",
+      "text": "der Igel",
+      "wen": "den Igel",
+      "image": "1F994",
+      "merksatz": "Der Igel hat Stacheln."
+    },
+    {
+      "id": "musik",
+      "text": "die Musik",
+      "wen": "die Musik",
+      "image": "1F3B5",
+      "merksatz": "Musik hören wir mit den Ohren."
+    },
+    {
+      "id": "eiswuerfel",
+      "text": "der Eiswürfel",
+      "wen": "den Eiswürfel",
+      "image": "1F9CA",
+      "merksatz": "Ein Eiswürfel fühlt sich kalt an."
+    },
+    {
+      "id": "mond",
+      "text": "der Mond",
+      "wen": "den Mond",
+      "image": "1F319",
+      "merksatz": "Den Mond sehen wir in der Nacht."
+    },
+    {
+      "id": "schneemann",
+      "text": "der Schneemann",
+      "wen": "den Schneemann",
+      "image": "26C4",
+      "merksatz": "Einen Schneemann bauen wir im Winter."
+    },
+    {
+      "id": "schlitten",
+      "text": "der Schlitten",
+      "wen": "den Schlitten",
+      "image": "1F6F7",
+      "merksatz": "Schlitten fahren wir im Winter."
+    },
+    {
+      "id": "handschuhe",
+      "text": "die Handschuhe",
+      "wen": "die Handschuhe",
+      "image": "1F9E4",
+      "merksatz": "Handschuhe wärmen im Winter."
+    },
+    {
+      "id": "badeanzug",
+      "text": "der Badeanzug",
+      "wen": "den Badeanzug",
+      "image": "1FA71",
+      "merksatz": "Baden gehen wir im Sommer."
+    },
+    {
+      "id": "sonnenbrille",
+      "text": "die Sonnenbrille",
+      "wen": "die Sonnenbrille",
+      "image": "1F576",
+      "merksatz": "Die Sonnenbrille schützt die Augen vor der Sonne."
+    },
+    {
+      "id": "drachen",
+      "text": "der Drachen",
+      "wen": "den Drachen",
+      "image": "1FA81",
+      "merksatz": "Drachen steigen lassen wir im Herbst, wenn es windig ist."
+    },
+    {
+      "id": "pilz",
+      "text": "der Pilz",
+      "wen": "den Pilz",
+      "image": "1F344",
+      "merksatz": "Viele Pilze wachsen im Herbst. Nie ohne Erwachsene sammeln!"
+    },
+    {
+      "id": "tulpe",
+      "text": "die Tulpe",
+      "wen": "die Tulpe",
+      "image": "1F337",
+      "merksatz": "Tulpen blühen im Frühling."
+    },
+    {
+      "id": "kueken",
+      "text": "das Küken",
+      "wen": "das Küken",
+      "image": "1F423",
+      "merksatz": "Im Frühling schlüpfen viele Küken."
+    },
+    {
+      "id": "bluete",
+      "text": "die Blüte",
+      "wen": "die Blüte",
+      "image": "1F338",
+      "merksatz": "Im Frühling blühen die Bäume."
+    },
+    {
+      "id": "weihnachten",
+      "text": "Weihnachten",
+      "wen": "Weihnachten",
+      "image": "1F384",
+      "merksatz": "Weihnachten feiern wir im Dezember."
+    },
+    {
+      "id": "nikolaus",
+      "text": "der Nikolaus",
+      "wen": "den Nikolaus",
+      "image": "1F385",
+      "merksatz": "Der Nikolaustag ist am 6. Dezember."
+    },
+    {
+      "id": "ostern",
+      "text": "Ostern",
+      "wen": "Ostern",
+      "image": "1F423",
+      "merksatz": "Ostern feiern wir im Frühling."
+    },
+    {
+      "id": "fasching",
+      "text": "der Fasching",
+      "wen": "den Fasching",
+      "image": "1F3AD",
+      "merksatz": "Fasching feiern wir im Winter, im Januar oder Februar."
+    },
+    {
+      "id": "martin",
+      "text": "Sankt Martin",
+      "wen": "Sankt Martin",
+      "image": "1F3EE",
+      "merksatz": "Am Martinstag im November gehen wir mit Laternen."
+    },
+    {
+      "id": "erntedank",
+      "text": "Erntedank",
+      "wen": "Erntedank",
+      "image": "1F33E",
+      "merksatz": "Erntedank feiern wir im Herbst."
+    },
+    {
+      "id": "silvester",
+      "text": "Silvester",
+      "wen": "Silvester",
+      "image": "1F386",
+      "merksatz": "An Silvester feiern wir das neue Jahr."
+    },
+    {
+      "id": "geburtstag",
+      "text": "der Geburtstag",
+      "wen": "den Geburtstag",
+      "image": "1F382",
+      "merksatz": "Geburtstag hat jeder einmal im Jahr."
+    },
+    {
+      "id": "sonne",
+      "text": "die Sonne",
+      "wen": "die Sonne",
+      "image": "2600",
+      "merksatz": "Die Sonne wärmt."
+    },
+    {
+      "id": "wolke",
+      "text": "die Wolke",
+      "wen": "die Wolke",
+      "image": "2601",
+      "merksatz": "Aus Wolken kann Regen fallen."
+    },
+    {
+      "id": "regen",
+      "text": "der Regen",
+      "wen": "den Regen",
+      "image": "1F327",
+      "merksatz": "Bei Regen brauchen wir eine Regenjacke oder einen Schirm."
+    },
+    {
+      "id": "gewitter",
+      "text": "das Gewitter",
+      "wen": "das Gewitter",
+      "image": "26C8",
+      "merksatz": "Bei Gewitter gehen wir ins Haus."
+    },
+    {
+      "id": "schnee",
+      "text": "der Schnee",
+      "wen": "den Schnee",
+      "image": "1F328",
+      "merksatz": "Schnee fällt, wenn es sehr kalt ist."
+    },
+    {
+      "id": "wind",
+      "text": "der Wind",
+      "wen": "den Wind",
+      "image": "1F32C",
+      "merksatz": "Wind bewegt die Blätter und die Wolken."
+    },
+    {
+      "id": "nebel",
+      "text": "der Nebel",
+      "wen": "den Nebel",
+      "image": "1F32B",
+      "merksatz": "Bei Nebel sieht man nicht weit."
+    },
+    {
+      "id": "schirm",
+      "text": "der Regenschirm",
+      "wen": "den Regenschirm",
+      "image": "2602",
+      "merksatz": "Der Regenschirm hält uns trocken."
+    },
+    {
+      "id": "jacke",
+      "text": "die Jacke",
+      "wen": "die Jacke",
+      "image": "1F9E5",
+      "merksatz": "Eine warme Jacke ziehen wir an, wenn es kalt ist."
+    },
+    {
+      "id": "kurze-hose",
+      "text": "die kurze Hose",
+      "wen": "die kurze Hose",
+      "image": "1FA73",
+      "merksatz": "Eine kurze Hose ziehen wir an, wenn es heiß ist."
+    },
+    {
+      "id": "kappe",
+      "text": "die Kappe",
+      "wen": "die Kappe",
+      "image": "1F9E2",
+      "merksatz": "Eine Kappe schützt vor der Sonne."
+    },
+    {
+      "id": "haus",
+      "text": "das Haus",
+      "wen": "das Haus",
+      "image": "1F3E0",
+      "merksatz": "Bei Gewitter sind wir im Haus sicher."
+    },
+    {
+      "id": "baum",
+      "text": "der Baum",
+      "wen": "den Baum",
+      "image": "1F333",
+      "merksatz": "Bei Gewitter nie unter einen Baum stellen!"
+    },
+    {
+      "id": "schwimmen",
+      "text": "das Schwimmen",
+      "wen": "das Schwimmen",
+      "image": "1F3CA",
+      "merksatz": "Bei Gewitter sofort aus dem Wasser gehen!"
+    },
+    {
+      "id": "marienkaefer",
+      "text": "der Marienkäfer",
+      "wen": "den Marienkäfer",
+      "image": "1F41E",
+      "merksatz": "Der Marienkäfer frisst Blattläuse."
+    },
+    {
+      "id": "biene",
+      "text": "die Biene",
+      "wen": "die Biene",
+      "image": "1F41D",
+      "merksatz": "Die Biene sammelt Nektar und macht Honig."
+    },
+    {
+      "id": "schmetterling",
+      "text": "der Schmetterling",
+      "wen": "den Schmetterling",
+      "image": "1F98B",
+      "merksatz": "Der Schmetterling war vorher eine Raupe."
+    },
+    {
+      "id": "raupe",
+      "text": "die Raupe",
+      "wen": "die Raupe",
+      "image": "1F41B",
+      "merksatz": "Aus der Raupe wird ein Schmetterling."
+    },
+    {
+      "id": "schnecke",
+      "text": "die Schnecke",
+      "wen": "die Schnecke",
+      "image": "1F40C",
+      "merksatz": "Die Schnecke trägt ihr Haus auf dem Rücken."
+    },
+    {
+      "id": "regenwurm",
+      "text": "der Regenwurm",
+      "wen": "den Regenwurm",
+      "image": "1FAB1",
+      "merksatz": "Der Regenwurm lockert die Erde."
+    },
+    {
+      "id": "ameise",
+      "text": "die Ameise",
+      "wen": "die Ameise",
+      "image": "1F41C",
+      "merksatz": "Ameisen leben in großen Gruppen."
+    },
+    {
+      "id": "grashuepfer",
+      "text": "der Grashüpfer",
+      "wen": "den Grashüpfer",
+      "image": "1F997",
+      "merksatz": "Der Grashüpfer kann weit springen."
+    },
+    {
+      "id": "gaensebluemchen",
+      "text": "die Blume",
+      "wen": "die Blume",
+      "image": "1F33C",
+      "merksatz": "Auf der Wiese blühen viele Blumen."
+    },
+    {
+      "id": "amsel",
+      "text": "die Amsel",
+      "wen": "die Amsel",
+      "image": "1F426-200D-2B1B",
+      "merksatz": "Die Amsel frisst Würmer und Schnecken."
+    },
+    {
+      "id": "maus",
+      "text": "die Maus",
+      "wen": "die Maus",
+      "image": "1F42D",
+      "merksatz": "Die Maus frisst Körner."
+    },
+    {
+      "id": "spinne",
+      "text": "die Spinne",
+      "wen": "die Spinne",
+      "image": "1F577",
+      "merksatz": "Die Spinne baut ein Netz."
+    },
+    {
+      "id": "eichhoernchen",
+      "text": "das Eichhörnchen",
+      "wen": "das Eichhörnchen",
+      "image": "1F43F",
+      "merksatz": "Das Eichhörnchen sammelt Nüsse für den Winter."
+    },
+    {
+      "id": "eule",
+      "text": "die Eule",
+      "wen": "die Eule",
+      "image": "1F989",
+      "merksatz": "Die Eule jagt in der Nacht Mäuse."
+    },
+    {
+      "id": "blatt",
+      "text": "die Pflanze",
+      "wen": "die Pflanze",
+      "image": "1F33F",
+      "merksatz": "Pflanzen sind Futter für viele Tiere."
+    },
+    {
+      "id": "salatblatt",
+      "text": "das Salatblatt",
+      "wen": "das Salatblatt",
+      "image": "1F96C",
+      "merksatz": "Schnecken fressen gern Blätter."
+    },
+    {
+      "id": "koerner",
+      "text": "die Körner",
+      "wen": "die Körner",
+      "image": "1F33E",
+      "merksatz": "Mäuse und Vögel fressen Körner."
+    },
+    {
+      "id": "hund",
+      "text": "der Hund",
+      "wen": "den Hund",
+      "image": "1F415",
+      "merksatz": "Ein Hund muss jeden Tag nach draußen."
+    },
+    {
+      "id": "katze",
+      "text": "die Katze",
+      "wen": "die Katze",
+      "image": "1F408",
+      "merksatz": "Katzen putzen sich selbst."
+    },
+    {
+      "id": "hamster",
+      "text": "der Hamster",
+      "wen": "den Hamster",
+      "image": "1F439",
+      "merksatz": "Der Hamster schläft am Tag und ist in der Nacht wach."
+    },
+    {
+      "id": "goldfisch",
+      "text": "der Fisch",
+      "wen": "den Fisch",
+      "image": "1F420",
+      "merksatz": "Fische brauchen sauberes Wasser."
+    },
+    {
+      "id": "kuh",
+      "text": "die Kuh",
+      "wen": "die Kuh",
+      "image": "1F404",
+      "merksatz": "Die Kuh gibt Milch."
+    },
+    {
+      "id": "schwein",
+      "text": "das Schwein",
+      "wen": "das Schwein",
+      "image": "1F416",
+      "merksatz": "Das Schwein lebt auf dem Bauernhof."
+    },
+    {
+      "id": "schaf",
+      "text": "das Schaf",
+      "wen": "das Schaf",
+      "image": "1F411",
+      "merksatz": "Das Schaf gibt Wolle."
+    },
+    {
+      "id": "huhn",
+      "text": "das Huhn",
+      "wen": "das Huhn",
+      "image": "1F414",
+      "merksatz": "Das Huhn legt Eier."
+    },
+    {
+      "id": "ziege",
+      "text": "die Ziege",
+      "wen": "die Ziege",
+      "image": "1F410",
+      "merksatz": "Aus Ziegenmilch macht man Käse."
+    },
+    {
+      "id": "milch",
+      "text": "die Milch",
+      "wen": "die Milch",
+      "image": "1F95B",
+      "merksatz": "Milch kommt von der Kuh."
+    },
+    {
+      "id": "ei",
+      "text": "das Ei",
+      "wen": "das Ei",
+      "image": "1F95A",
+      "merksatz": "Eier legt das Huhn."
+    },
+    {
+      "id": "wolle",
+      "text": "die Wolle",
+      "wen": "die Wolle",
+      "image": "1F9F6",
+      "merksatz": "Wolle kommt vom Schaf."
+    },
+    {
+      "id": "honig",
+      "text": "der Honig",
+      "wen": "den Honig",
+      "image": "1F36F",
+      "merksatz": "Honig machen die Bienen."
+    },
+    {
+      "id": "kaese",
+      "text": "der Käse",
+      "wen": "den Käse",
+      "image": "1F9C0",
+      "merksatz": "Käse macht man aus Milch."
+    },
+    {
+      "id": "feuerwehr",
+      "text": "die Feuerwehr",
+      "wen": "die Feuerwehr",
+      "image": "1F9D1-200D-1F692",
+      "merksatz": "Die Feuerwehr löscht Feuer und hilft bei Unfällen."
+    },
+    {
+      "id": "polizei",
+      "text": "die Polizei",
+      "wen": "die Polizei",
+      "image": "1F46E",
+      "merksatz": "Die Polizei hilft und sorgt für Sicherheit. Notruf 110."
+    },
+    {
+      "id": "aerztin",
+      "text": "die Ärztin",
+      "wen": "die Ärztin",
+      "image": "1F9D1-200D-2695-FE0F",
+      "merksatz": "Die Ärztin hilft, wenn wir krank sind."
+    },
+    {
+      "id": "landwirt",
+      "text": "der Landwirt",
+      "wen": "den Landwirt",
+      "image": "1F9D1-200D-1F33E",
+      "merksatz": "Der Landwirt arbeitet auf dem Bauernhof."
+    },
+    {
+      "id": "koechin",
+      "text": "die Köchin",
+      "wen": "die Köchin",
+      "image": "1F9D1-200D-1F373",
+      "merksatz": "Die Köchin kocht in der Küche."
+    },
+    {
+      "id": "lehrer",
+      "text": "der Lehrer",
+      "wen": "den Lehrer",
+      "image": "1F9D1-200D-1F3EB",
+      "merksatz": "Der Lehrer arbeitet in der Schule."
+    },
+    {
+      "id": "mechanikerin",
+      "text": "die Mechanikerin",
+      "wen": "die Mechanikerin",
+      "image": "1F9D1-200D-1F527",
+      "merksatz": "Die Mechanikerin repariert Autos."
+    },
+    {
+      "id": "bauarbeiter",
+      "text": "der Bauarbeiter",
+      "wen": "den Bauarbeiter",
+      "image": "1F477",
+      "merksatz": "Der Bauarbeiter baut Häuser und Straßen."
+    },
+    {
+      "id": "schere",
+      "text": "die Schere",
+      "wen": "die Schere",
+      "image": "2702",
+      "merksatz": "Mit der Schere schneiden wir."
+    },
+    {
+      "id": "hammer",
+      "text": "der Hammer",
+      "wen": "den Hammer",
+      "image": "1F528",
+      "merksatz": "Mit dem Hammer schlagen wir Nägel ein."
+    },
+    {
+      "id": "saege",
+      "text": "die Säge",
+      "wen": "die Säge",
+      "image": "1FA9A",
+      "merksatz": "Mit der Säge sägen wir Holz."
+    },
+    {
+      "id": "schraubenzieher",
+      "text": "der Schraubenzieher",
+      "wen": "den Schraubenzieher",
+      "image": "1FA9B",
+      "merksatz": "Mit dem Schraubenzieher drehen wir Schrauben."
+    },
+    {
+      "id": "lineal",
+      "text": "das Lineal",
+      "wen": "das Lineal",
+      "image": "1F4CF",
+      "merksatz": "Mit dem Lineal messen wir und ziehen gerade Striche."
+    },
+    {
+      "id": "papier",
+      "text": "das Papier",
+      "wen": "das Papier",
+      "image": "1F4C4",
+      "merksatz": "Papier kann man schneiden."
+    },
+    {
+      "id": "nagel",
+      "text": "die Schraube",
+      "wen": "die Schraube",
+      "image": "1F529",
+      "merksatz": "Eine Schraube dreht man mit dem Schraubenzieher."
+    },
+    {
+      "id": "holz",
+      "text": "das Holz",
+      "wen": "das Holz",
+      "image": "1FAB5",
+      "merksatz": "Holz sägt man mit der Säge."
+    },
+    {
+      "id": "feuerloescher",
+      "text": "der Feuerlöscher",
+      "wen": "den Feuerlöscher",
+      "image": "1F9EF",
+      "merksatz": "Mit dem Feuerlöscher löscht man kleine Feuer."
+    },
+    {
+      "id": "stethoskop",
+      "text": "das Stethoskop",
+      "wen": "das Stethoskop",
+      "image": "1FA7A",
+      "merksatz": "Mit dem Stethoskop hört die Ärztin das Herz ab."
+    },
+    {
+      "id": "pfanne",
+      "text": "die Pfanne",
+      "wen": "die Pfanne",
+      "image": "1F373",
+      "merksatz": "In der Pfanne brät man Essen."
+    },
+    {
+      "id": "traktor",
+      "text": "der Traktor",
+      "wen": "den Traktor",
+      "image": "1F69C",
+      "merksatz": "Mit dem Traktor arbeitet der Landwirt auf dem Feld."
+    },
+    {
+      "id": "polizeiauto",
+      "text": "das Polizeiauto",
+      "wen": "das Polizeiauto",
+      "image": "1F693",
+      "merksatz": "Mit dem Polizeiauto fährt die Polizei."
+    }
+  ],
+  "themen": [
+    {
+      "id": "obst-gemuese",
+      "title": "Obst und Gemüse",
+      "icon": "🍎",
+      "term": 1,
+      "lehrplan": "HSU 1/2 3.1, 2.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.1 („ordnen heimische Obst- und Gemüsesorten den typischen Zeiträumen ihrer Reife zu“)",
+      "erkennen": [
+        "apfel",
+        "birne",
+        "kirsche",
+        "erdbeere",
+        "trauben",
+        "gurke",
+        "kartoffel",
+        "karotte",
+        "brokkoli",
+        "paprika",
+        "mais",
+        "zwiebel",
+        "banane"
+      ],
+      "sortieren": [
+        {
+          "id": "obst-oder-gemuese",
+          "frage": "Ist das Obst oder Gemüse?",
+          "gruppen": [
+            {
+              "id": "obst",
+              "title": "Obst",
+              "image": "1F34F"
+            },
+            {
+              "id": "gemuese",
+              "title": "Gemüse",
+              "image": "1F96C"
+            }
+          ],
+          "zuordnung": {
+            "apfel": "obst",
+            "birne": "obst",
+            "kirsche": "obst",
+            "erdbeere": "obst",
+            "trauben": "obst",
+            "banane": "obst",
+            "karotte": "gemuese",
+            "brokkoli": "gemuese",
+            "paprika": "gemuese",
+            "zwiebel": "gemuese",
+            "kartoffel": "gemuese",
+            "gurke": "gemuese"
+          }
+        },
+        {
+          "id": "erntezeit",
+          "frage": "Wann wird das reif?",
+          "gruppen": [
+            {
+              "id": "sommer",
+              "title": "im Sommer",
+              "image": "2600"
+            },
+            {
+              "id": "herbst",
+              "title": "im Herbst",
+              "image": "1F342"
+            }
+          ],
+          "zuordnung": {
+            "kirsche": "sommer",
+            "erdbeere": "sommer",
+            "gurke": "sommer",
+            "apfel": "herbst",
+            "birne": "herbst",
+            "trauben": "herbst",
+            "kastanie": "herbst"
+          },
+          "optionen": true
+        }
+      ],
+      "paare": [],
+      "ablaeufe": ["apfel"]
+    },
+    {
+      "id": "sinne",
+      "title": "Meine Sinne",
+      "icon": "👂",
+      "term": 1,
+      "lehrplan": "HSU 1/2 2.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 2.1 („beschreiben die Bedeutung der Sinne“)",
+      "erkennen": ["auge", "ohr", "nase", "zunge", "hand"],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "Womit hörst du die Glocke?",
+          "ziel": "glocke",
+          "richtig": "ohr",
+          "ablenker": ["auge", "nase", "zunge"]
+        },
+        {
+          "frage": "Womit riechst du die Rose?",
+          "ziel": "rose",
+          "richtig": "nase",
+          "ablenker": ["ohr", "zunge", "auge"]
+        },
+        {
+          "frage": "Womit siehst du den Regenbogen?",
+          "ziel": "regenbogen",
+          "richtig": "auge",
+          "ablenker": ["ohr", "nase", "zunge"]
+        },
+        {
+          "frage": "Womit schmeckst du das Eis?",
+          "ziel": "eis",
+          "richtig": "zunge",
+          "ablenker": ["ohr", "auge", "hand"]
+        },
+        {
+          "frage": "Womit schmeckst du, dass die Zitrone sauer ist?",
+          "ziel": "zitrone",
+          "richtig": "zunge",
+          "ablenker": ["ohr", "auge", "hand"]
+        },
+        {
+          "frage": "Womit fühlst du die Stacheln vom Igel?",
+          "ziel": "igel",
+          "richtig": "hand",
+          "ablenker": ["ohr", "zunge", "nase"]
+        },
+        {
+          "frage": "Womit hörst du die Musik?",
+          "ziel": "musik",
+          "richtig": "ohr",
+          "ablenker": ["auge", "nase", "hand"]
+        },
+        {
+          "frage": "Womit fühlst du, dass der Eiswürfel kalt ist?",
+          "ziel": "eiswuerfel",
+          "richtig": "hand",
+          "ablenker": ["ohr", "auge", "nase"]
+        },
+        {
+          "frage": "Womit siehst du den Mond?",
+          "ziel": "mond",
+          "richtig": "auge",
+          "ablenker": ["ohr", "nase", "zunge"]
+        }
+      ],
+      "ablaeufe": [],
+      "merke": "richtig"
+    },
+    {
+      "id": "jahreszeiten",
+      "title": "Zeit und Jahreszeiten",
+      "icon": "🍂",
+      "term": 1,
+      "lehrplan": "HSU 1/2 4.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 4.1 (Tagesablauf und Jahresablauf)",
+      "erkennen": [],
+      "sortieren": [
+        {
+          "id": "jahreszeit",
+          "frage": "Zu welcher Jahreszeit passt das?",
+          "gruppen": [
+            {
+              "id": "fruehling",
+              "title": "im Frühling",
+              "image": "1F338"
+            },
+            {
+              "id": "sommer",
+              "title": "im Sommer",
+              "image": "2600"
+            },
+            {
+              "id": "herbst",
+              "title": "im Herbst",
+              "image": "1F342"
+            },
+            {
+              "id": "winter",
+              "title": "im Winter",
+              "image": "2744"
+            }
+          ],
+          "zuordnung": {
+            "schneemann": "winter",
+            "schlitten": "winter",
+            "handschuhe": "winter",
+            "badeanzug": "sommer",
+            "sonnenbrille": "sommer",
+            "eis": "sommer",
+            "drachen": "herbst",
+            "kastanie": "herbst",
+            "pilz": "herbst",
+            "tulpe": "fruehling",
+            "kueken": "fruehling",
+            "bluete": "fruehling"
+          },
+          "optionen": true
+        }
+      ],
+      "paare": [],
+      "ablaeufe": ["tag", "morgen"]
+    },
+    {
+      "id": "feste",
+      "title": "Feste im Jahr",
+      "icon": "🎄",
+      "term": 1,
+      "lehrplan": "HSU 1/2 4.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 4.1 („ordnen Feste ihrem Datum oder ihrer zeitlichen Lage im Jahreslauf zu“)",
+      "erkennen": [
+        "weihnachten",
+        "nikolaus",
+        "ostern",
+        "fasching",
+        "martin",
+        "erntedank",
+        "silvester",
+        "geburtstag"
+      ],
+      "sortieren": [
+        {
+          "id": "fest-jahreszeit",
+          "frage": "Wann feiern wir das?",
+          "gruppen": [
+            {
+              "id": "fruehling",
+              "title": "im Frühling",
+              "image": "1F338"
+            },
+            {
+              "id": "herbst",
+              "title": "im Herbst",
+              "image": "1F342"
+            },
+            {
+              "id": "winter",
+              "title": "im Winter",
+              "image": "2744"
+            }
+          ],
+          "zuordnung": {
+            "weihnachten": "winter",
+            "nikolaus": "winter",
+            "fasching": "winter",
+            "silvester": "winter",
+            "ostern": "fruehling",
+            "martin": "herbst",
+            "erntedank": "herbst"
+          },
+          "optionen": true
+        }
+      ],
+      "paare": [],
+      "ablaeufe": []
+    },
+    {
+      "id": "wetter",
+      "title": "Wetter",
+      "icon": "🌦️",
+      "term": 1,
+      "lehrplan": "HSU 1/2 3.3",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.3 („nutzen ihr Wissen über Wettererscheinungen, um sich angemessen zu verhalten (z. B. bei Gewitter)“)",
+      "erkennen": ["sonne", "wolke", "regen", "gewitter", "schnee", "wind", "nebel", "regenbogen"],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "Was nimmst du bei Regen mit?",
+          "ziel": "regen",
+          "richtig": "schirm",
+          "ablenker": ["sonnenbrille", "kurze-hose"]
+        },
+        {
+          "frage": "Was ziehst du an, wenn es schneit?",
+          "ziel": "schnee",
+          "richtig": "handschuhe",
+          "ablenker": ["kurze-hose", "badeanzug"]
+        },
+        {
+          "frage": "Was schützt dich vor der Sonne?",
+          "ziel": "sonne",
+          "richtig": "kappe",
+          "ablenker": ["handschuhe", "schirm"]
+        },
+        {
+          "frage": "Wo bist du bei Gewitter sicher?",
+          "ziel": "gewitter",
+          "richtig": "haus",
+          "ablenker": ["baum", "schwimmen"]
+        },
+        {
+          "frage": "Was ziehst du an, wenn es kalt ist?",
+          "ziel": "schneemann",
+          "richtig": "jacke",
+          "ablenker": ["kurze-hose", "badeanzug"],
+          "merke": "richtig"
+        }
+      ],
+      "ablaeufe": ["regen", "schneemann"]
+    },
+    {
+      "id": "wiese",
+      "title": "Auf der Wiese",
+      "icon": "🐞",
+      "term": 2,
+      "lehrplan": "HSU 1/2 3.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.1 (Tierarten aus den Lebensräumen Wiese oder Hecke, Artenkenntnis)",
+      "erkennen": [
+        "marienkaefer",
+        "biene",
+        "schmetterling",
+        "raupe",
+        "schnecke",
+        "regenwurm",
+        "ameise",
+        "grashuepfer",
+        "gaensebluemchen"
+      ],
+      "sortieren": [
+        {
+          "id": "fliegen",
+          "frage": "Kann das Tier fliegen?",
+          "gruppen": [
+            {
+              "id": "ja",
+              "title": "kann fliegen",
+              "image": "1F44D"
+            },
+            {
+              "id": "nein",
+              "title": "kann nicht fliegen",
+              "image": "1F44E"
+            }
+          ],
+          "zuordnung": {
+            "biene": "ja",
+            "marienkaefer": "ja",
+            "schmetterling": "ja",
+            "raupe": "nein",
+            "schnecke": "nein",
+            "regenwurm": "nein",
+            "ameise": "nein"
+          }
+        }
+      ],
+      "paare": [],
+      "ablaeufe": ["schmetterling-kurz", "blume"]
+    },
+    {
+      "id": "tiere",
+      "title": "Haustiere und Nutztiere",
+      "icon": "🐄",
+      "term": 2,
+      "lehrplan": "HSU 1/2 3.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.1 (Haustiere, Nutztiere und -pflanzen; Bedeutung von Nutztieren)",
+      "erkennen": [
+        "hund",
+        "katze",
+        "hamster",
+        "goldfisch",
+        "kuh",
+        "schwein",
+        "schaf",
+        "huhn",
+        "ziege"
+      ],
+      "sortieren": [
+        {
+          "id": "haustier-nutztier",
+          "frage": "Ist das ein Haustier oder ein Nutztier?",
+          "gruppen": [
+            {
+              "id": "haustier",
+              "title": "Haustier",
+              "image": "1F3E0"
+            },
+            {
+              "id": "nutztier",
+              "title": "Nutztier",
+              "image": "1F69C"
+            }
+          ],
+          "zuordnung": {
+            "hund": "haustier",
+            "katze": "haustier",
+            "hamster": "haustier",
+            "goldfisch": "haustier",
+            "kuh": "nutztier",
+            "schwein": "nutztier",
+            "schaf": "nutztier",
+            "huhn": "nutztier",
+            "ziege": "nutztier"
+          }
+        }
+      ],
+      "paare": [
+        {
+          "frage": "Was gibt uns die Kuh?",
+          "ziel": "kuh",
+          "richtig": "milch",
+          "ablenker": ["ei", "wolle", "honig"]
+        },
+        {
+          "frage": "Was legt das Huhn?",
+          "ziel": "huhn",
+          "richtig": "ei",
+          "ablenker": ["milch", "wolle", "honig"]
+        },
+        {
+          "frage": "Was gibt uns das Schaf?",
+          "ziel": "schaf",
+          "richtig": "wolle",
+          "ablenker": ["milch", "ei", "honig"]
+        },
+        {
+          "frage": "Was machen die Bienen?",
+          "ziel": "biene",
+          "richtig": "honig",
+          "ablenker": ["milch", "ei", "wolle"]
+        },
+        {
+          "frage": "Was macht man aus Ziegenmilch?",
+          "ziel": "ziege",
+          "richtig": "kaese",
+          "ablenker": ["ei", "wolle", "honig"]
+        }
+      ],
+      "ablaeufe": ["huhn"]
+    },
+    {
+      "id": "hecke",
+      "title": "In der Hecke: Wer frisst wen?",
+      "icon": "🦔",
+      "term": 2,
+      "lehrplan": "HSU 1/2 3.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.1 („einfache Nahrungsbeziehungen … (z. B. Pflanze – Schnecke – Amsel)“)",
+      "erkennen": ["igel", "amsel", "maus", "spinne", "eichhoernchen", "eule"],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "Was frisst die Amsel?",
+          "ziel": "amsel",
+          "richtig": "regenwurm",
+          "ablenker": ["kaese", "eis"]
+        },
+        {
+          "frage": "Was frisst die Maus?",
+          "ziel": "maus",
+          "richtig": "koerner",
+          "ablenker": ["honig", "eis"]
+        },
+        {
+          "frage": "Was frisst die Schnecke?",
+          "ziel": "schnecke",
+          "richtig": "salatblatt",
+          "ablenker": ["kaese", "ei"]
+        },
+        {
+          "frage": "Was frisst der Igel?",
+          "ziel": "igel",
+          "richtig": "schnecke",
+          "ablenker": ["eis", "kaese"]
+        },
+        {
+          "frage": "Was jagt die Eule in der Nacht?",
+          "ziel": "eule",
+          "richtig": "maus",
+          "ablenker": ["eis", "apfel"]
+        }
+      ],
+      "ablaeufe": ["kette-amsel", "kette-eule"]
+    },
+    {
+      "id": "berufe",
+      "title": "Berufe und Werkzeuge",
+      "icon": "🔨",
+      "term": 2,
+      "lehrplan": "HSU 1/2 6.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 6.1 (Werkzeuge und Geräte; Berufe)",
+      "erkennen": [
+        "feuerwehr",
+        "polizei",
+        "aerztin",
+        "landwirt",
+        "koechin",
+        "lehrer",
+        "mechanikerin",
+        "bauarbeiter",
+        "schere",
+        "hammer",
+        "saege",
+        "schraubenzieher",
+        "lineal"
+      ],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "Womit schneidest du Papier?",
+          "ziel": "papier",
+          "richtig": "schere",
+          "ablenker": ["hammer", "lineal"]
+        },
+        {
+          "frage": "Womit sägst du Holz?",
+          "ziel": "holz",
+          "richtig": "saege",
+          "ablenker": ["schere", "lineal"]
+        },
+        {
+          "frage": "Womit drehst du die Schraube?",
+          "ziel": "nagel",
+          "richtig": "schraubenzieher",
+          "ablenker": ["schere", "saege"]
+        },
+        {
+          "frage": "Was braucht die Feuerwehr?",
+          "ziel": "feuerwehr",
+          "richtig": "feuerloescher",
+          "ablenker": ["stethoskop", "traktor"]
+        },
+        {
+          "frage": "Was braucht die Ärztin?",
+          "ziel": "aerztin",
+          "richtig": "stethoskop",
+          "ablenker": ["feuerloescher", "hammer"]
+        },
+        {
+          "frage": "Womit arbeitet der Landwirt?",
+          "ziel": "landwirt",
+          "richtig": "traktor",
+          "ablenker": ["polizeiauto", "stethoskop"]
+        },
+        {
+          "frage": "Womit fährt die Polizei?",
+          "ziel": "polizei",
+          "richtig": "polizeiauto",
+          "ablenker": ["traktor", "feuerloescher"]
+        },
+        {
+          "frage": "Was braucht die Köchin?",
+          "ziel": "koechin",
+          "richtig": "pfanne",
+          "ablenker": ["saege", "lineal"]
+        }
+      ],
+      "ablaeufe": [],
+      "merke": "richtig"
+    }
+  ]
+}

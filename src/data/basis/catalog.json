@@ -702,5 +702,299 @@
       "minLevel": 3
     },
     "title": "Uhr stellen"
+  },
+  {
+    "id": "k1.sache.obst-gemuese.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.obst-gemuese",
+    "unit": "k1.sache.obst-gemuese",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "obst-gemuese"
+    },
+    "title": "Obst und Gemüse: Was ist das?"
+  },
+  {
+    "id": "k1.sache.obst-gemuese.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.obst-gemuese",
+    "unit": "k1.sache.obst-gemuese",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "obst-gemuese"
+    },
+    "title": "Obst und Gemüse: Sortieren"
+  },
+  {
+    "id": "k1.sache.obst-gemuese.reihenfolge",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.obst-gemuese",
+    "unit": "k1.sache.obst-gemuese",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["apfel"]
+    },
+    "title": "Obst und Gemüse: Was kommt zuerst?",
+    "weight": 0.4
+  },
+  {
+    "id": "k1.sache.sinne.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.sinne",
+    "unit": "k1.sache.sinne",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "sinne"
+    },
+    "title": "Meine Sinne: Was ist das?"
+  },
+  {
+    "id": "k1.sache.sinne.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.sinne",
+    "unit": "k1.sache.sinne",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "sinne"
+    },
+    "title": "Meine Sinne: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.jahreszeiten.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.jahreszeiten",
+    "unit": "k1.sache.jahreszeiten",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "jahreszeiten"
+    },
+    "title": "Zeit und Jahreszeiten: Sortieren"
+  },
+  {
+    "id": "k1.sache.jahreszeiten.reihenfolge",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.jahreszeiten",
+    "unit": "k1.sache.jahreszeiten",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["tag", "morgen"]
+    },
+    "title": "Zeit und Jahreszeiten: Was kommt zuerst?",
+    "weight": 0.4
+  },
+  {
+    "id": "k1.sache.feste.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.feste",
+    "unit": "k1.sache.feste",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "feste"
+    },
+    "title": "Feste im Jahr: Was ist das?"
+  },
+  {
+    "id": "k1.sache.feste.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.feste",
+    "unit": "k1.sache.feste",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "feste"
+    },
+    "title": "Feste im Jahr: Sortieren"
+  },
+  {
+    "id": "k1.sache.wetter.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wetter",
+    "unit": "k1.sache.wetter",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "wetter"
+    },
+    "title": "Wetter: Was ist das?"
+  },
+  {
+    "id": "k1.sache.wetter.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wetter",
+    "unit": "k1.sache.wetter",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "wetter"
+    },
+    "title": "Wetter: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.wetter.reihenfolge",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wetter",
+    "unit": "k1.sache.wetter",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["regen", "schneemann"]
+    },
+    "title": "Wetter: Was kommt zuerst?",
+    "weight": 0.4
+  },
+  {
+    "id": "k1.sache.wiese.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wiese",
+    "unit": "k1.sache.wiese",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "wiese"
+    },
+    "title": "Auf der Wiese: Was ist das?"
+  },
+  {
+    "id": "k1.sache.wiese.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wiese",
+    "unit": "k1.sache.wiese",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "wiese"
+    },
+    "title": "Auf der Wiese: Sortieren"
+  },
+  {
+    "id": "k1.sache.wiese.reihenfolge",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wiese",
+    "unit": "k1.sache.wiese",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["schmetterling-kurz", "blume"]
+    },
+    "title": "Auf der Wiese: Was kommt zuerst?",
+    "weight": 0.4
+  },
+  {
+    "id": "k1.sache.tiere.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.tiere",
+    "unit": "k1.sache.tiere",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "tiere"
+    },
+    "title": "Haustiere und Nutztiere: Was ist das?"
+  },
+  {
+    "id": "k1.sache.tiere.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.tiere",
+    "unit": "k1.sache.tiere",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "tiere"
+    },
+    "title": "Haustiere und Nutztiere: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.tiere.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.tiere",
+    "unit": "k1.sache.tiere",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "tiere"
+    },
+    "title": "Haustiere und Nutztiere: Sortieren"
+  },
+  {
+    "id": "k1.sache.tiere.reihenfolge",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.tiere",
+    "unit": "k1.sache.tiere",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["huhn"]
+    },
+    "title": "Haustiere und Nutztiere: Was kommt zuerst?",
+    "weight": 0.4
+  },
+  {
+    "id": "k1.sache.hecke.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.hecke",
+    "unit": "k1.sache.hecke",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "hecke"
+    },
+    "title": "In der Hecke: Wer frisst wen?: Was ist das?"
+  },
+  {
+    "id": "k1.sache.hecke.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.hecke",
+    "unit": "k1.sache.hecke",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "hecke"
+    },
+    "title": "In der Hecke: Wer frisst wen?: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.hecke.reihenfolge",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.hecke",
+    "unit": "k1.sache.hecke",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["kette-amsel", "kette-eule"]
+    },
+    "title": "In der Hecke: Wer frisst wen?: Was kommt zuerst?",
+    "weight": 0.4
+  },
+  {
+    "id": "k1.sache.berufe.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.berufe",
+    "unit": "k1.sache.berufe",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "berufe"
+    },
+    "title": "Berufe und Werkzeuge: Was ist das?"
+  },
+  {
+    "id": "k1.sache.berufe.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.berufe",
+    "unit": "k1.sache.berufe",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "berufe"
+    },
+    "title": "Berufe und Werkzeuge: Was gehört zusammen?"
   }
 ]

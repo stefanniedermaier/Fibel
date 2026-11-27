@@ -1,11 +1,21 @@
-export type Topic = 'lesen' | 'schreiben' | 'rechnen' | 'uhr'
-export const TOPICS: readonly Topic[] = ['lesen', 'schreiben', 'rechnen', 'uhr']
+export type Topic = 'lesen' | 'schreiben' | 'rechnen' | 'uhr' | 'sache'
+export const TOPICS: readonly Topic[] = ['lesen', 'schreiben', 'rechnen', 'uhr', 'sache']
 
 export const TOPIC_INFO: Record<Topic, { label: string; icon: string }> = {
   lesen: { label: 'Lesen', icon: '📖' },
   schreiben: { label: 'Schreiben', icon: '✏️' },
   rechnen: { label: 'Rechnen', icon: '🔢' },
   uhr: { label: 'Uhr', icon: '🕒' },
+  sache: { label: 'Sachunterricht', icon: '🔍' },
+}
+
+/** Subjects that only show a tile when the grade has content for them. */
+export const OPTIONAL_TOPICS: readonly Topic[] = ['sache']
+
+/** The subject's name in a state: in Bavaria it is "Heimat- und Sachunterricht" (HSU). */
+export function topicLabel(topic: Topic, land: LandCode | undefined): string {
+  if (topic === 'sache' && land === 'DE-BY') return 'HSU'
+  return TOPIC_INFO[topic].label
 }
 
 /** ISO 3166-2 code of a German state, e.g. 'DE-BY'. */

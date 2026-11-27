@@ -22,6 +22,8 @@ export interface GeneratedTask<D = unknown> {
   hint?: string
   /** Spoken when the solution is revealed after the second wrong answer. */
   solution: string
+  /** Spoken after the praise of a right answer, e.g. a fact to remember (HSU). */
+  afterword?: string
   data: D
 }
 
