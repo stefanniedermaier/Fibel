@@ -1,0 +1,18 @@
+{
+  "mitte": [
+    { "image": "1F333", "von": "vom Baum", "dem": "dem Baum" },
+    { "image": "1F3E0", "von": "vom Haus", "dem": "dem Haus" }
+  ],
+  "tiere": [
+    { "image": "1F407", "name": "der Hase", "dem": "dem Hasen" },
+    { "image": "1F994", "name": "der Igel", "dem": "dem Igel" },
+    { "image": "1F42D", "name": "die Maus", "dem": "der Maus" },
+    { "image": "1F986", "name": "die Ente", "dem": "der Ente" },
+    { "image": "1F438", "name": "der Frosch", "dem": "dem Frosch" },
+    { "image": "1F40C", "name": "die Schnecke", "dem": "der Schnecke" },
+    { "image": "1F41D", "name": "die Biene", "dem": "der Biene" },
+    { "image": "1F989", "name": "die Eule", "dem": "der Eule" },
+    { "image": "1F98A", "name": "der Fuchs", "dem": "dem Fuchs" },
+    { "image": "1F43B", "name": "der Bär", "dem": "dem Bären" }
+  ]
+}

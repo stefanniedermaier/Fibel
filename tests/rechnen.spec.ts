@@ -140,10 +140,14 @@ describe('R1 umgekehrt: Menge legen', () => {
 })
 
 describe('Rechnen in Klasse 1', () => {
-  it('hat mit den Startwerten sechs Übungen, mit Zahlenraum 20 sieben', () => {
+  it('Plus und Minus bis 20 erscheint erst mit Zahlenraum 20', () => {
     const entries = catalogFor('DE-BY', 1, 'rechnen')
-    expect(availableEntries(entries, ctxWith(), getExercise)).toHaveLength(6)
-    expect(availableEntries(entries, ctxWith({ numberRange: 20 }), getExercise)).toHaveLength(7)
+    const ids = (ctx: ReturnType<typeof ctxWith>) =>
+      availableEntries(entries, ctx, getExercise).map((e) => e.id)
+    expect(ids(ctxWith())).not.toContain('k1.rechnen.plus-minus-20')
+    expect(ids(ctxWith({ numberRange: 20 }))).toContain('k1.rechnen.plus-minus-20')
+    // Everything else of grade 1 is available from the start (units decide the rest).
+    expect(ids(ctxWith()).length).toBe(entries.length - 1)
   })
 
   it('plant eine Einheit, in der jede Aufgabe eine Anzeige-Zeile hat', () => {

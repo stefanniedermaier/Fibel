@@ -6,6 +6,8 @@ import VergleichenTask from './VergleichenTask.vue'
 
 export interface VergleichenParams {
   max: number
+  /** Only pairs with at least one number above this (e.g. 10 for the range up to 20). */
+  above?: number
 }
 
 export type Relation = '<' | '=' | '>'
@@ -31,7 +33,9 @@ export const vergleichen: ExerciseModule<VergleichenParams, VergleichenData> = {
     const keys: string[] = []
     // All pairs; about every tenth one is "=".
     for (let a = 1; a <= params.max; a++) {
-      for (let b = 1; b <= params.max; b++) keys.push(`rechnen.vergleichen:${a}-${b}`)
+      for (let b = 1; b <= params.max; b++) {
+        if (Math.max(a, b) > (params.above ?? 0)) keys.push(`rechnen.vergleichen:${a}-${b}`)
+      }
     }
     return keys
   },

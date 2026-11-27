@@ -24,14 +24,14 @@ function answer(correct: boolean) {
     <div class="compare">
       <div class="side">
         <span class="number">{{ data.a }}</span>
-        <TenFrame :count="data.a" small />
+        <TenFrame :count="data.a" :cells="data.a > 10 || data.b > 10 ? 20 : 10" small />
       </div>
       <span class="sign" :class="{ shown: solved || revealed }">
         {{ solved || revealed ? data.correctKey : '?' }}
       </span>
       <div class="side">
         <span class="number">{{ data.b }}</span>
-        <TenFrame :count="data.b" small />
+        <TenFrame :count="data.b" :cells="data.a > 10 || data.b > 10 ? 20 : 10" small />
       </div>
     </div>
     <ChoiceButtons

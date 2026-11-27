@@ -9,11 +9,17 @@ import { bildWort } from './lesen/bild-wort'
 import { silbenHoeren } from './lesen/silben-hoeren'
 import { silbenKlatschen } from './lesen/silben-klatschen'
 import { wortBild } from './lesen/wort-bild'
+import { formenErkennen } from './formen/erkennen'
+import { lageBegriffe } from './formen/lage'
 import { mengeLegen } from './rechnen/menge-legen'
 import { mengen } from './rechnen/mengen'
+import { paeckchen } from './rechnen/paeckchen'
 import { plusMinus } from './rechnen/plus-minus'
 import { reihen } from './rechnen/reihen'
+import { sachaufgabe } from './rechnen/sachaufgabe'
+import { stellenwert } from './rechnen/stellenwert'
 import { vergleichen } from './rechnen/vergleichen'
+import { zahlenstrahl } from './rechnen/zahlenstrahl'
 import { zahlenhaus } from './rechnen/zahlenhaus'
 import { abcTastatur } from './schreiben/abc-tastatur'
 import { abschreiben } from './schreiben/abschreiben'
@@ -50,6 +56,12 @@ register(vergleichen)
 register(zahlenhaus)
 register(plusMinus)
 register(reihen)
+register(stellenwert)
+register(zahlenstrahl)
+register(paeckchen)
+register(sachaufgabe)
+register(lageBegriffe)
+register(formenErkennen)
 register(uhrLesen)
 register(uhrStellen)
 register(silbenLegen)

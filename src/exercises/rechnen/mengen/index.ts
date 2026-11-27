@@ -8,6 +8,8 @@ import MengenTask from './MengenTask.vue'
 
 export interface MengenParams {
   max: number
+  /** Only counts above this (e.g. 10 for the Zwanzigerfeld unit). */
+  above?: number
 }
 
 export interface MengenData {
@@ -30,7 +32,8 @@ export const mengen: ExerciseModule<MengenParams, MengenData> = {
 
   items(_ctx, params) {
     const max = Math.min(params.max, 20)
-    return Array.from({ length: max }, (_, i) => `rechnen.mengen:${i + 1}`)
+    const above = params.above ?? 0
+    return Array.from({ length: max - above }, (_, i) => `rechnen.mengen:${above + i + 1}`)
   },
 
   generate(_ctx, params, itemKey, rng) {

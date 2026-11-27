@@ -56,6 +56,13 @@
     "term": 1
   },
   {
+    "id": "k1.rechnen.ziffern",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Ziffern schreiben",
+    "term": 1
+  },
+  {
     "id": "k1.rechnen.rechnen",
     "grade": 1,
     "topic": "rechnen",
@@ -63,10 +70,38 @@
     "term": 1
   },
   {
+    "id": "k1.rechnen.geschichten",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Rechengeschichten",
+    "term": 1
+  },
+  {
+    "id": "k1.rechnen.zahlen-20",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Zahlen bis 20",
+    "term": 2
+  },
+  {
+    "id": "k1.rechnen.strategien",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Rechenstrategien (Päckchen)",
+    "term": 2
+  },
+  {
     "id": "k1.rechnen.muster",
     "grade": 1,
     "topic": "rechnen",
     "title": "Muster und Reihen",
+    "term": 1
+  },
+  {
+    "id": "k1.rechnen.formen",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Lage und Formen",
     "term": 1
   },
   {

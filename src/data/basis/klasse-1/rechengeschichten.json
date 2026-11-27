@@ -1,0 +1,62 @@
+[
+  {
+    "id": "enten",
+    "image": "1F986",
+    "plus": "{a} Enten schwimmen im Teich. {b} Enten kommen dazu. Wie viele Enten sind es jetzt?",
+    "minus": "{a} Enten schwimmen im Teich. {b} Enten fliegen weg. Wie viele Enten sind noch da?"
+  },
+  {
+    "id": "aepfel",
+    "image": "1F34E",
+    "plus": "{a} Äpfel liegen im Korb. Oma legt {b} Äpfel dazu. Wie viele Äpfel sind jetzt im Korb?",
+    "minus": "{a} Äpfel liegen im Korb. Die Kinder essen {b} Äpfel. Wie viele Äpfel sind noch im Korb?"
+  },
+  {
+    "id": "voegel",
+    "image": "1F426",
+    "plus": "{a} Vögel sitzen auf dem Baum. {b} Vögel fliegen dazu. Wie viele Vögel sind es jetzt?",
+    "minus": "{a} Vögel sitzen auf dem Baum. {b} Vögel fliegen weg. Wie viele Vögel sitzen noch dort?"
+  },
+  {
+    "id": "kinder",
+    "image": "1F9D2",
+    "plus": "{a} Kinder spielen im Hof. {b} Kinder kommen dazu. Wie viele Kinder spielen jetzt?",
+    "minus": "{a} Kinder spielen im Hof. {b} Kinder gehen nach Hause. Wie viele Kinder spielen noch?"
+  },
+  {
+    "id": "autos",
+    "image": "1F697",
+    "plus": "{a} Autos stehen auf dem Parkplatz. {b} Autos parken dazu. Wie viele Autos sind es jetzt?",
+    "minus": "{a} Autos stehen auf dem Parkplatz. {b} Autos fahren weg. Wie viele Autos stehen noch da?"
+  },
+  {
+    "id": "ballons",
+    "image": "1F388",
+    "plus": "Mia hat {a} Luftballons. Sie bekommt {b} Luftballons dazu. Wie viele Luftballons hat sie jetzt?",
+    "minus": "Mia hat {a} Luftballons. {b} Luftballons platzen. Wie viele Luftballons hat sie noch?"
+  },
+  {
+    "id": "kekse",
+    "image": "1F36A",
+    "plus": "Auf dem Teller liegen {a} Kekse. Papa legt {b} Kekse dazu. Wie viele Kekse sind es jetzt?",
+    "minus": "Auf dem Teller liegen {a} Kekse. Leo isst {b} Kekse. Wie viele Kekse liegen noch auf dem Teller?"
+  },
+  {
+    "id": "fische",
+    "image": "1F41F",
+    "plus": "Im Aquarium schwimmen {a} Fische. {b} Fische kommen dazu. Wie viele Fische sind es jetzt?",
+    "minus": "Im Teich schwimmen {a} Fische. {b} Fische verstecken sich unter einem Stein. Wie viele Fische siehst du noch?"
+  },
+  {
+    "id": "blumen",
+    "image": "1F337",
+    "plus": "Im Garten blühen {a} Tulpen. Mama pflanzt {b} Tulpen dazu. Wie viele Tulpen sind es jetzt?",
+    "minus": "Im Garten blühen {a} Tulpen. Ela pflückt {b} Tulpen. Wie viele Tulpen blühen noch?"
+  },
+  {
+    "id": "bienen",
+    "image": "1F41D",
+    "plus": "{a} Bienen sitzen auf einer Blume. {b} Bienen fliegen dazu. Wie viele Bienen sind es jetzt?",
+    "minus": "{a} Bienen sitzen auf einer Blume. {b} Bienen fliegen weg. Wie viele Bienen sitzen noch dort?"
+  }
+]

@@ -287,6 +287,96 @@
     "title": "Zahlen vergleichen bis 10"
   },
   {
+    "id": "k1.rechnen.ziffern",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.ziffern",
+    "exercise": "schreiben.nachspuren",
+    "params": {
+      "zeichen": "ziffern"
+    },
+    "title": "Ziffern nachspuren"
+  },
+  {
+    "id": "k1.rechnen.mengen-20",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-20",
+    "exercise": "rechnen.mengen",
+    "params": {
+      "max": 20,
+      "above": 10
+    },
+    "title": "Mengen erkennen bis 20"
+  },
+  {
+    "id": "k1.rechnen.vergleichen-20",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-20",
+    "exercise": "rechnen.vergleichen",
+    "params": {
+      "max": 20,
+      "above": 10
+    },
+    "title": "Zahlen vergleichen bis 20"
+  },
+  {
+    "id": "k1.rechnen.zehner-einer",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-20",
+    "exercise": "rechnen.stellenwert",
+    "params": {
+      "max": 20,
+      "mode": "bild"
+    },
+    "title": "Zehner und Einer"
+  },
+  {
+    "id": "k1.rechnen.zerlegen-20",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-20",
+    "exercise": "rechnen.stellenwert",
+    "params": {
+      "max": 20,
+      "mode": "zerlegen"
+    },
+    "title": "Zehner und Einer zerlegen"
+  },
+  {
+    "id": "k1.rechnen.zahlenstrahl",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-20",
+    "exercise": "rechnen.zahlenstrahl",
+    "params": {
+      "max": 20,
+      "mode": "ablesen"
+    },
+    "title": "Zahlenstrahl bis 20"
+  },
+  {
+    "id": "k1.rechnen.nachbarzahlen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-20",
+    "exercise": "rechnen.zahlenstrahl",
+    "params": {
+      "max": 20,
+      "mode": "nachbarn"
+    },
+    "title": "Nachbarzahlen"
+  },
+  {
     "id": "k1.rechnen.zahlenhaus-10",
     "grade": 1,
     "topic": "rechnen",
@@ -324,6 +414,44 @@
     "title": "Plus und Minus bis 20"
   },
   {
+    "id": "k1.rechnen.paeckchen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.rechnen",
+    "unit": "k1.rechnen.strategien",
+    "exercise": "rechnen.paeckchen",
+    "params": {
+      "max": 20,
+      "mode": "strategie"
+    },
+    "title": "Verdoppeln, Tausch- und Nachbaraufgaben"
+  },
+  {
+    "id": "k1.rechnen.pruefen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.rechnen",
+    "unit": "k1.rechnen.strategien",
+    "exercise": "rechnen.paeckchen",
+    "params": {
+      "max": 20,
+      "mode": "pruefen"
+    },
+    "title": "Stimmt die Rechnung?"
+  },
+  {
+    "id": "k1.rechnen.rechengeschichten",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.rechnen",
+    "unit": "k1.rechnen.geschichten",
+    "exercise": "rechnen.sachaufgabe",
+    "params": {
+      "max": 20
+    },
+    "title": "Rechengeschichten"
+  },
+  {
     "id": "k1.rechnen.reihen",
     "grade": 1,
     "topic": "rechnen",
@@ -332,6 +460,54 @@
     "exercise": "rechnen.reihen",
     "params": {},
     "title": "Reihen erkennen"
+  },
+  {
+    "id": "k1.rechnen.lage-kreuz",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.formen",
+    "unit": "k1.rechnen.formen",
+    "exercise": "formen.lage",
+    "params": {
+      "mode": "kreuz"
+    },
+    "title": "Links, rechts, über, unter"
+  },
+  {
+    "id": "k1.rechnen.lage-reihe",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.formen",
+    "unit": "k1.rechnen.formen",
+    "exercise": "formen.lage",
+    "params": {
+      "mode": "reihe"
+    },
+    "title": "Neben und zwischen"
+  },
+  {
+    "id": "k1.rechnen.formen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.formen",
+    "unit": "k1.rechnen.formen",
+    "exercise": "formen.erkennen",
+    "params": {
+      "mode": "name"
+    },
+    "title": "Formen erkennen"
+  },
+  {
+    "id": "k1.rechnen.ecken",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.formen",
+    "unit": "k1.rechnen.formen",
+    "exercise": "formen.erkennen",
+    "params": {
+      "mode": "ecken"
+    },
+    "title": "Ecken zählen"
   },
   {
     "id": "k1.uhr.lesen",
