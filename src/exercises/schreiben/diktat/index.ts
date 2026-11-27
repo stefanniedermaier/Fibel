@@ -4,6 +4,10 @@
  * `source: 'lernwoerter'` – the words of the week the parents typed in (D9).
  */
 import type { Word } from '@/core/types'
+import diktatSaetze from '@/data/basis/klasse-3/diktat.json'
+
+/** S3-8 Satz-Diktat: sentences made of words of the basic vocabulary 3/4. */
+export const DIKTAT_SAETZE: readonly { id: string; text: string }[] = diktatSaetze
 import type { ExerciseModule, LearnerContext } from '../../types'
 import { readableWords } from '../../lesen/shared'
 import { itemId } from '../shared'
@@ -12,7 +16,7 @@ import TippenTask from '../tippen/TippenTask.vue'
 
 export interface DiktatParams {
   /** 'haeufig': the frequent words of grade 2 (S2-9), with an example phrase. */
-  source: 'merkwoerter' | 'lernwoerter' | 'haeufig'
+  source: 'merkwoerter' | 'lernwoerter' | 'haeufig' | 'saetze'
   wordGrade?: number
 }
 
@@ -43,6 +47,8 @@ interface DiktatWord {
 }
 
 function words(ctx: LearnerContext, params: DiktatParams): DiktatWord[] {
+  if (params.source === 'saetze')
+    return DIKTAT_SAETZE.map((s) => ({ key: s.id, text: s.text, spoken: s.text }))
   if (params.source === 'lernwoerter') {
     return cleanLernwoerter(ctx.settings.lernwoerter ?? []).map((w) => ({
       key: lernwortKey(w),
@@ -75,17 +81,24 @@ export const diktat: ExerciseModule<DiktatParams, TippenData> = {
     if (!word) throw new Error(`Unbekanntes Wort im Diktat: ${itemKey}`)
     const capital = word.text.charAt(0) !== word.text.charAt(0).toLowerCase()
     return {
-      instruction: `Schreibe: ${word.spoken}`,
-      caption: 'Hör zu und schreibe das Wort.',
+      instruction:
+        params.source === 'saetze'
+          ? `Schreibe den Satz: ${word.spoken}`
+          : `Schreibe: ${word.spoken}`,
+      caption:
+        params.source === 'saetze'
+          ? 'Hör zu und schreibe den Satz. Denk an Großschreibung und Satzzeichen.'
+          : 'Hör zu und schreibe das Wort.',
       hint:
         params.source === 'lernwoerter' ? undefined : 'Das ist ein Merkwort. Denk an das Wortbild.',
       solution: `So schreibt man ${word.text}.`,
       data: {
         spoken: word.spoken,
         target: word.text,
-        strictCase: ctx.settings.strictCase,
-        autoCapitalize: !ctx.settings.strictCase && capital,
+        strictCase: params.source === 'saetze' || ctx.settings.strictCase,
+        autoCapitalize: params.source !== 'saetze' && !ctx.settings.strictCase && capital,
         slots: false,
+        sentence: params.source === 'saetze',
       },
     }
   },

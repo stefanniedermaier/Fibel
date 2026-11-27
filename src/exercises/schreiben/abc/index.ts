@@ -11,7 +11,8 @@ import WahlTask, { type WahlData } from '../schreibung/WahlTask.vue'
 export const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 export interface AbcParams extends SchreibenParams {
-  mode: 'nach' | 'vor' | 'zuerst'
+  /** Grade 3 (S3-7): 'zweiter' – same first letter, sort by the second; 'grundform'. */
+  mode: 'nach' | 'vor' | 'zuerst' | 'zweiter' | 'grundform'
 }
 
 const plainFirst = (t: string) =>
@@ -22,6 +23,22 @@ export const abc: ExerciseModule<AbcParams, WahlData> = {
   topic: 'schreiben',
 
   items(ctx, params) {
+    if (params.mode === 'grundform')
+      return gradeWords(ctx, params)
+        .filter((w) => w.wortart === 'verb' && w.er && w.er !== w.text && w.er.length > 2)
+        .map((w) => `schreiben.abc:grundform:${w.id}`)
+    if (params.mode === 'zweiter') {
+      const words = gradeWords(ctx, params).filter((w) => w.wortart === 'nomen')
+      return words
+        .filter(
+          (w) =>
+            words.filter(
+              (o) =>
+                plainFirst(o.text) === plainFirst(w.text) && o.text.charAt(1) > w.text.charAt(1),
+            ).length >= 2,
+        )
+        .map((w) => `schreiben.abc:zweiter:${w.id}`)
+    }
     if (params.mode === 'zuerst')
       return gradeWords(ctx, params)
         .filter((w) => w.wortart === 'nomen' && plainFirst(w.text) < 'W')
@@ -32,6 +49,46 @@ export const abc: ExerciseModule<AbcParams, WahlData> = {
 
   generate(ctx, params, itemKey, rng) {
     const [mode, value] = itemId(itemKey).split(':') as [AbcParams['mode'], string]
+    if (mode === 'grundform') {
+      const verb = gradeWords(ctx, params).find((w) => w.id === value)!
+      const er = verb.er!
+      // Typical mistakes: the inflected form with -en, without the vowel change.
+      const wrong = [`${er.replace(/t$/, '')}en`, er, `${er}en`]
+        .filter((x, i, all) => x !== verb.text && all.indexOf(x) === i)
+        .slice(0, 2)
+      return {
+        instruction: `Du suchst ${er} im Wörterbuch. Unter welchem Wort findest du es?`,
+        caption: `Wo steht „${er}“ im Wörterbuch?`,
+        hint: 'Im Wörterbuch stehen Verben in der Grundform: ich …, wir …, sie … en.',
+        solution: `${er} findest du unter ${verb.text}.`,
+        data: {
+          prompt: er,
+          correctKey: verb.text,
+          choices: shuffle([verb.text, ...wrong], rng).map((t) => ({ key: t, label: t })),
+        },
+      }
+    }
+    if (mode === 'zweiter') {
+      const words = gradeWords(ctx, params).filter((w) => w.wortart === 'nomen')
+      const first = words.find((w) => w.id === value)!
+      const later = shuffle(
+        words.filter(
+          (o) =>
+            plainFirst(o.text) === plainFirst(first.text) &&
+            o.text.charAt(1) > first.text.charAt(1),
+        ),
+        rng,
+      ).slice(0, 2)
+      return {
+        instruction: 'Alle Wörter fangen gleich an. Welches steht im ABC zuerst?',
+        hint: 'Schau auf den zweiten Buchstaben.',
+        solution: `${first.text} steht zuerst: ${first.text.charAt(1)} kommt im ABC früher.`,
+        data: {
+          correctKey: first.text,
+          choices: shuffle([first, ...later], rng).map((w) => ({ key: w.text, label: w.text })),
+        },
+      }
+    }
     if (mode === 'zuerst') {
       const words = gradeWords(ctx, params).filter((w) => w.wortart === 'nomen')
       const first = words.find((w) => w.id === value)!

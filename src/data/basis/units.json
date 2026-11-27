@@ -824,5 +824,61 @@
     "topic": "rechnen",
     "title": "Überschlag",
     "term": 2
+  },
+  {
+    "id": "k3.schreiben.trennen",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Silbentrennung am Zeilenende",
+    "term": 1
+  },
+  {
+    "id": "k3.schreiben.r",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "r nach einem Selbstlaut",
+    "term": 1
+  },
+  {
+    "id": "k3.schreiben.ie",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Wörter mit ie, auch Verbformen",
+    "term": 1
+  },
+  {
+    "id": "k3.schreiben.doppel",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Doppelte Mitlaute, tz und ck",
+    "term": 1
+  },
+  {
+    "id": "k3.schreiben.h",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Silbentrennendes h",
+    "term": 2
+  },
+  {
+    "id": "k3.schreiben.ableiten",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Verlängern und Umlaute ableiten",
+    "term": 2
+  },
+  {
+    "id": "k3.schreiben.nachschlagen",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Nachschlagen: ABC und Grundform",
+    "term": 2
+  },
+  {
+    "id": "k3.schreiben.diktat",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Satz-Diktat, Lernwörter und Merkwörter",
+    "term": 2
   }
 ]

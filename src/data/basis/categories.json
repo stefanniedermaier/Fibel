@@ -334,5 +334,17 @@
     "topic": "rechnen",
     "title": "Halbschriftlich und schriftlich",
     "icon": "✍️"
+  },
+  {
+    "id": "schreiben.trennen",
+    "topic": "schreiben",
+    "title": "Hinhören und trennen",
+    "icon": "👂"
+  },
+  {
+    "id": "schreiben.nachschlagen",
+    "topic": "schreiben",
+    "title": "Nachschlagen und Diktat",
+    "icon": "📚"
   }
 ]

@@ -16,10 +16,21 @@ export interface TippenData {
   autoCapitalize: boolean
   /** One box per letter: the child sees how long the word is (easier variant). */
   slots: boolean
+  /** Satz-Diktat (grade 3): spaces and punctuation are typed too, capitals count. */
+  sentence?: boolean
 }
+
+/** A typed sentence: letters, spaces and punctuation only. */
+export function cleanSentence(text: string): string {
+  return text.replace(/[^\p{L} .,!?-]/gu, '')
+}
+
+/** Sentences compare without extra spaces. */
+export const normalSentence = (text: string) => text.trim().replace(/\s+/g, ' ')
 
 /** Compares the typed word with the target. */
 export function matches(typed: string, target: string, strictCase: boolean): boolean {
+  if (target.includes(' ')) return normalSentence(typed) === normalSentence(target)
   return strictCase ? typed === target : typed.toLowerCase() === target.toLowerCase()
 }
 

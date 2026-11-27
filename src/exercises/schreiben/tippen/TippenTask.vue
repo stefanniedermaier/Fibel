@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import WordPrompt from '@/components/WordPrompt.vue'
-import { display, marks, matches, onlyLetters, type TippenData } from './index'
+import { cleanSentence, display, marks, matches, onlyLetters, type TippenData } from './index'
 
 // The word is typed on the device's own keyboard. A transparent <input> lies over our
 // big letter display: tapping the display opens the keyboard, and the display (not the
@@ -73,7 +73,10 @@ watch(disabled, (off) => {
 
 function onInput(e: Event) {
   const el = e.target as HTMLInputElement
-  const clean = onlyLetters(el.value).slice(0, maxLength.value)
+  const clean = (props.data.sentence ? cleanSentence(el.value) : onlyLetters(el.value)).slice(
+    0,
+    maxLength.value,
+  )
   // Never rewrite the field while the keyboard is still composing a word (Gboard):
   // that would duplicate letters.
   if (!(e as InputEvent).isComposing && clean !== el.value) el.value = clean

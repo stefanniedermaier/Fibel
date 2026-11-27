@@ -2987,5 +2987,223 @@
       "mode": "pruefen"
     },
     "title": "Kann das stimmen?"
+  },
+  {
+    "id": "k3.schreiben.trennen.trennen",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.trennen",
+    "exercise": "schreiben.trennen",
+    "params": {
+      "wordGrade": 3
+    },
+    "title": "Wie trennt man das Wort?"
+  },
+  {
+    "id": "k3.schreiben.r.schreibung",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.r",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["r"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k3.schreiben.r.tastatur",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.r",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["r"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k3.schreiben.ie.schreibung",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.ie",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["ie"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k3.schreiben.ie.tastatur",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.ie",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["ie"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k3.schreiben.doppel.schreibung",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.doppel",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["doppel", "tz", "ck"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k3.schreiben.doppel.tastatur",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.doppel",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["doppel", "tz", "ck"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k3.schreiben.doppel.trennen",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.trennen",
+    "unit": "k3.schreiben.doppel",
+    "exercise": "schreiben.trennen",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["doppel", "tz", "ck"]
+    },
+    "title": "Trennen am Silbengelenk"
+  },
+  {
+    "id": "k3.schreiben.h.ableiten",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.ableiten",
+    "unit": "k3.schreiben.h",
+    "exercise": "schreiben.ableiten",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["h"]
+    },
+    "title": "Verlängern: h oder nicht?"
+  },
+  {
+    "id": "k3.schreiben.h.schreibung",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.ableiten",
+    "unit": "k3.schreiben.h",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["h"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k3.schreiben.ableiten.ableiten",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.ableiten",
+    "unit": "k3.schreiben.ableiten",
+    "exercise": "schreiben.ableiten",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["verhaertung", "umlaut", "kombi"]
+    },
+    "title": "Verlängern und ableiten"
+  },
+  {
+    "id": "k3.schreiben.ableiten.schreibung",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.ableiten",
+    "unit": "k3.schreiben.ableiten",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 3,
+      "phenomena": ["verhaertung", "umlaut", "kombi"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k3.schreiben.nachschlagen.zweiter",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.nachschlagen",
+    "unit": "k3.schreiben.nachschlagen",
+    "exercise": "schreiben.abc",
+    "params": {
+      "mode": "zweiter",
+      "wordGrade": 3
+    },
+    "title": "Nach dem zweiten Buchstaben ordnen"
+  },
+  {
+    "id": "k3.schreiben.nachschlagen.grundform",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.nachschlagen",
+    "unit": "k3.schreiben.nachschlagen",
+    "exercise": "schreiben.abc",
+    "params": {
+      "mode": "grundform",
+      "wordGrade": 3
+    },
+    "title": "Wo steht das Wort?"
+  },
+  {
+    "id": "k3.schreiben.diktat.saetze",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.nachschlagen",
+    "unit": "k3.schreiben.diktat",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "saetze"
+    },
+    "title": "Satz-Diktat"
+  },
+  {
+    "id": "k3.schreiben.diktat.haeufig",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.nachschlagen",
+    "unit": "k3.schreiben.diktat",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "haeufig",
+      "wordGrade": 3
+    },
+    "title": "Häufige Wörter"
+  },
+  {
+    "id": "k3.schreiben.diktat.lernwoerter",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.nachschlagen",
+    "unit": "k3.schreiben.diktat",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "lernwoerter"
+    },
+    "title": "Lernwörter"
   }
 ]

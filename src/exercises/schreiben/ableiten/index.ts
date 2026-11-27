@@ -22,6 +22,11 @@ export interface Luecke {
 export function lueckeOf(word: Word): Luecke | undefined {
   const w = word.ableiten?.wort
   if (!w) return undefined
+  // Silbentrennendes h (grade 3): Schuh because of Schu-he – the h can be heard there.
+  if (word.schwerpunkt === 'h') {
+    const i = word.text.lastIndexOf('h')
+    return { before: word.text.slice(0, i), right: 'h', wrong: '–', after: word.text.slice(i + 1) }
+  }
   if (word.phenomena.includes('verhaertung')) {
     const m = /[bdg](?=[^aeiouäöü]*$)/.exec(w)
     if (!m) return undefined
@@ -53,6 +58,26 @@ export const ableiten: ExerciseModule<SchreibenParams, WahlData> = {
     const l = lueckeOf(word)!
     const { wort, von } = word.ableiten!
     const hard = word.phenomena.includes('verhaertung')
+    if (word.schwerpunkt === 'h')
+      return {
+        instruction: `${word.text}. Verlängere das Wort: ${wort}. Hört man das h?`,
+        caption: 'Verlängere das Wort. Schreibt man ein h?',
+        hint: `Sprich ${wort} in Silben: ${wort.replace(/h/, '-h')}.`,
+        solution: `${word.text} schreibt man mit h, wegen ${wort}.`,
+        data: {
+          image: word.image,
+          helper: `${wort} → ?`,
+          prompt: `${l.before}_${l.after}`,
+          correctKey: 'h',
+          choices: shuffle(
+            [
+              { key: 'h', label: 'h' },
+              { key: '–', label: 'kein h' },
+            ],
+            rng,
+          ),
+        },
+      }
     return {
       instruction: hard
         ? `${wort}. Verlängere das Wort: ${von}. Schreibt man ${l.right} oder ${l.wrong}?`
