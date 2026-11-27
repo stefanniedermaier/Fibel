@@ -21,7 +21,7 @@ import fragesaetze from '@/data/basis/klasse-1/fragesaetze.json'
 import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
 import texte from '@/data/basis/klasse-1/texte.json'
 import zusammensetzungen from '@/data/basis/klasse-1/zusammensetzungen.json'
-import { BEGRIFFE, THEMEN } from '@/exercises/sache/shared'
+import { BEGRIFFE, THEMEN, unitOf } from '@/exercises/sache/shared'
 import { LUECKENSAETZE } from '@/exercises/lesen/satz-luecke'
 import { textsFor } from '@/exercises/lesen/text-fragen'
 import { PHENOMENA, showsPhenomenon, type Phenomenon } from './phenomena'
@@ -174,7 +174,7 @@ export function checkSache(images: ReadonlySet<string>): string[] {
   }
   for (const t of THEMEN) {
     const where = `HSU-Thema „${t.id}“`
-    if (!UNITS.some((u) => u.id === `k1.sache.${t.id}`)) problems.push(`${where}: Einheit fehlt`)
+    if (!UNITS.some((u) => u.id === unitOf(t))) problems.push(`${where}: Einheit fehlt`)
     const pictures = t.erkennen.map((id) => begriffe.get(id)?.image)
     if (new Set(pictures).size !== pictures.length) problems.push(`${where}: Bild doppelt`)
     if (t.erkennen.length > 0 && t.erkennen.length < 4)

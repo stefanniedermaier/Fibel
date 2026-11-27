@@ -8,7 +8,10 @@ import { reihenfolge } from '@/exercises/lesen/reihenfolge'
 import { getExercise } from '@/exercises/registry'
 import { hoerenBild } from '@/exercises/sache/hoeren-bild'
 import { paare } from '@/exercises/sache/paare'
-import { getBegriff, THEMEN } from '@/exercises/sache/shared'
+import { getBegriff, THEMEN as ALLE_THEMEN } from '@/exercises/sache/shared'
+
+// Grade-1 themes; grade 2 has its own (Stoffe, Arbeitsfelder).
+const THEMEN = ALLE_THEMEN.filter((t) => (t.klasse ?? 1) === 1)
 import { sortieren } from '@/exercises/sache/sortieren'
 import { stimmtDas } from '@/exercises/sache/stimmt-das'
 import { suchbild } from '@/exercises/sache/suchbild'
@@ -238,5 +241,26 @@ describe('HSU Stufe 3', () => {
   it('alle 19 Themen haben Übungen', () => {
     expect(THEMEN).toHaveLength(19)
     expect(practiceCategories(allUnits, 'sache', getExercise)).toHaveLength(19)
+  })
+})
+
+describe('HSU Klasse 2', () => {
+  it('Stoffe und Arbeitsfelder haben Übungen in Klasse 2', () => {
+    const ctx2 = {
+      land: 'DE-BY',
+      grade: 2,
+      settings: { ...resolveDefaults('DE-BY', 2), units: { 'k2.sache.arbeitsfelder': true } },
+    }
+    expect(practiceCategories(ctx2, 'sache', getExercise).map((c) => c.id)).toEqual([
+      'sache.stoffe',
+      'sache.arbeitsfelder',
+    ])
+    const t = sortieren.generate(
+      ctx2,
+      { thema: 'stoffe' },
+      'sache.sortieren:schwimmt:stein-hsu',
+      createRng(1),
+    )
+    expect(t.data.correctKey).toBe('sinkt')
   })
 })

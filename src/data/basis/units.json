@@ -514,7 +514,7 @@
     "id": "k2.lesen.endungen",
     "grade": 2,
     "topic": "lesen",
-    "title": "Wortbausteine: -er, -el, -en",
+    "title": "Wortbausteine: ver-, vor-, un-, -er, -el, -en",
     "term": 1
   },
   {
@@ -738,7 +738,21 @@
     "id": "k2.formen.flaeche",
     "grade": 2,
     "topic": "formen",
-    "title": "Flächen vergleichen",
+    "title": "Flächen vergleichen, Umfang",
+    "term": 2
+  },
+  {
+    "id": "k2.sache.stoffe",
+    "grade": 2,
+    "topic": "sache",
+    "title": "Stoffe und ihre Eigenschaften",
+    "term": 1
+  },
+  {
+    "id": "k2.sache.arbeitsfelder",
+    "grade": 2,
+    "topic": "sache",
+    "title": "Berufe nach Arbeitsfeldern",
     "term": 2
   }
 ]

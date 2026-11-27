@@ -42,6 +42,16 @@ const pos = (c: string) => c.split('-').map((v) => Number(v) * S + 4) as [number
             stroke="#000"
             stroke-width="1.5"
           />
+          <rect
+            v-if="f.border"
+            x="4"
+            y="4"
+            :width="(Math.max(...f.cells.map((c) => Number(c.split('-')[0]))) + 1) * S"
+            :height="(Math.max(...f.cells.map((c) => Number(c.split('-')[1]))) + 1) * S"
+            fill="none"
+            stroke="#D22F27"
+            stroke-width="5"
+          />
         </svg>
         <figcaption v-if="f.label">{{ f.label }}</figcaption>
       </figure>

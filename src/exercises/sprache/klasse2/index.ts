@@ -301,3 +301,61 @@ export const zusammensetzen: ExerciseModule<Record<string, never>, WahlData> = {
 
   component: WahlTask,
 }
+
+// --- L2-3: Wortbausteine ver-, vor-, un- ----------------------------------------
+
+interface Bausteine {
+  baustein: string
+  woerter: string[]
+}
+export const BAUSTEINE: readonly Bausteine[] = sprache.bausteine
+
+/** "verlaufen" → "ver" + "laufen" (case kept for nouns: "Vorsicht" → "Vor" + "sicht"). */
+export function splitBaustein(wort: string, baustein: string): [string, string] {
+  return [wort.slice(0, baustein.length), wort.slice(baustein.length)]
+}
+
+export interface BausteinParams {
+  /** 'erkennen': which part is at the front? 'schreiben': ver-/vor- always with v. */
+  mode: 'erkennen' | 'schreiben'
+}
+
+export const bausteine: ExerciseModule<BausteinParams, WahlData> = {
+  id: 'lesen.bausteine',
+  topic: 'lesen',
+
+  items(_ctx, params) {
+    return BAUSTEINE.filter((b) => params.mode === 'erkennen' || b.baustein !== 'un').flatMap((b) =>
+      b.woerter.map((w) => `lesen.bausteine:${params.mode}:${b.baustein}-${w}`),
+    )
+  },
+
+  generate(_ctx, params, itemKey, rng) {
+    const [baustein, wort] = itemKey.split(':')[2]!.split('-') as [string, string]
+    const [front, rest] = splitBaustein(wort, baustein)
+    if (params.mode === 'schreiben') {
+      // The typical mistake: f instead of v (ferlaufen, Forsicht).
+      const f = front.replace(/^v/, 'f').replace(/^V/, 'F')
+      const wrong = [`${f}${rest}`, `${front}r${rest}`]
+      return {
+        instruction: `Wie schreibt man ${wort}? Tippe auf das richtige Wort.`,
+        caption: 'Welches Wort ist richtig geschrieben?',
+        hint: 'Ver- und vor- schreibt man immer mit v.',
+        solution: `Richtig ist ${wort}: ${front} mit v.`,
+        data: { correctKey: wort, choices: choices([wort, ...wrong], rng) },
+      }
+    }
+    return {
+      instruction: 'Lies das Wort. Welcher Baustein steht vorne?',
+      hint: 'Deck den Anfang mit dem Finger ab. Was bleibt übrig?',
+      solution: `${wort} ist ${front} und ${rest}.`,
+      data: {
+        prompt: wort,
+        correctKey: baustein,
+        choices: ['ver', 'vor', 'un'].map((b) => ({ key: b, label: `${b}-` })),
+      },
+    }
+  },
+
+  component: WahlTask,
+}

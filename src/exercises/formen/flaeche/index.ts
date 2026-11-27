@@ -32,11 +32,13 @@ export function figure(n: number, rng: Rng): string[] {
 }
 
 export interface FlaecheParams {
-  mode: 'zaehlen' | 'vergleichen'
+  /** 'umfang': how many square sides long is the border of a rectangle? */
+  mode: 'zaehlen' | 'vergleichen' | 'umfang'
 }
 
 export interface FlaecheData {
-  figures: { cells: string[]; color: string; label?: string }[]
+  /** `border`: the outline is drawn thick (perimeter). */
+  figures: { cells: string[]; color: string; label?: string; border?: boolean }[]
   correctKey: string
   choices: { key: string; label: string }[]
 }
@@ -48,12 +50,39 @@ export const flaeche: ExerciseModule<FlaecheParams, FlaecheData> = {
   topic: 'formen',
 
   items(_ctx, params) {
+    if (params.mode === 'umfang') {
+      const keys: string[] = []
+      for (let w = 1; w <= 4; w++)
+        for (let h = 1; h <= 4; h++) if (w * h > 1) keys.push(`formen.flaeche:umfang:${w}x${h}`)
+      return keys
+    }
     if (params.mode === 'vergleichen')
       return ['a', 'b', 'c', 'd', 'e', 'f'].map((k) => `formen.flaeche:vergleichen:${k}`)
     return Array.from({ length: 9 }, (_, i) => `formen.flaeche:zaehlen:${i + 4}`)
   },
 
   generate(_ctx, params, itemKey, rng) {
+    if (params.mode === 'umfang') {
+      const [w, h] = itemKey.split(':')[2]!.split('x').map(Number) as [number, number]
+      const u = 2 * (w + h)
+      const cells: string[] = []
+      for (let x = 0; x < w; x++) for (let y = 0; y < h; y++) cells.push(`${x}-${y}`)
+      const wrong = shuffle(
+        [w * h, u - 2, u + 2, w + h].filter((v, i, all) => v !== u && all.indexOf(v) === i),
+        rng,
+      ).slice(0, 2)
+      return {
+        instruction: 'Wie lang ist der Rand der Fläche? Zähle die Kästchenseiten rundherum.',
+        caption: 'Wie viele Kästchenseiten lang ist der Rand?',
+        hint: 'Fahre mit dem Finger einmal um die Fläche herum und zähle jede Seite.',
+        solution: `Der Rand ist ${u} Kästchenseiten lang: ${w} + ${h} + ${w} + ${h}.`,
+        data: {
+          figures: [{ cells, color: COLORS[2]!, border: true }],
+          correctKey: String(u),
+          choices: shuffle([u, ...wrong], rng).map((x) => ({ key: String(x), label: String(x) })),
+        },
+      }
+    }
     if (params.mode === 'zaehlen') {
       const n = Number(itemKey.split(':')[2])
       const wrong = shuffle([n - 1, n + 1, n + 2, n - 2], rng).slice(0, 2)

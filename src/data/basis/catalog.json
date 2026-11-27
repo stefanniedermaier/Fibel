@@ -2678,5 +2678,113 @@
       "mode": "vergleichen"
     },
     "title": "Welche Fläche ist größer?"
+  },
+  {
+    "id": "k2.lesen.endungen.vorsilben",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k2.lesen.endungen",
+    "exercise": "lesen.bausteine",
+    "params": {
+      "mode": "erkennen"
+    },
+    "title": "Welcher Baustein steht vorne?"
+  },
+  {
+    "id": "k2.lesen.endungen.mit-v",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k2.lesen.endungen",
+    "exercise": "lesen.bausteine",
+    "params": {
+      "mode": "schreiben"
+    },
+    "title": "ver- und vor- mit v"
+  },
+  {
+    "id": "k2.formen.flaeche.umfang",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k2.formen.flaeche",
+    "exercise": "formen.flaeche",
+    "params": {
+      "mode": "umfang"
+    },
+    "title": "Wie lang ist der Rand?"
+  },
+  {
+    "id": "k2.sache.stoffe.erkennen",
+    "grade": 2,
+    "topic": "sache",
+    "category": "sache.stoffe",
+    "unit": "k2.sache.stoffe",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "stoffe"
+    },
+    "title": "Stoffe und ihre Eigenschaften: Was ist das?"
+  },
+  {
+    "id": "k2.sache.stoffe.sortieren",
+    "grade": 2,
+    "topic": "sache",
+    "category": "sache.stoffe",
+    "unit": "k2.sache.stoffe",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "stoffe"
+    },
+    "title": "Stoffe und ihre Eigenschaften: Sortieren"
+  },
+  {
+    "id": "k2.sache.stoffe.stimmt-das",
+    "grade": 2,
+    "topic": "sache",
+    "category": "sache.stoffe",
+    "unit": "k2.sache.stoffe",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "stoffe"
+    },
+    "title": "Stoffe und ihre Eigenschaften: Stimmt das?"
+  },
+  {
+    "id": "k2.sache.arbeitsfelder.erkennen",
+    "grade": 2,
+    "topic": "sache",
+    "category": "sache.arbeitsfelder",
+    "unit": "k2.sache.arbeitsfelder",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "arbeitsfelder"
+    },
+    "title": "Berufe nach Arbeitsfeldern: Was ist das?"
+  },
+  {
+    "id": "k2.sache.arbeitsfelder.sortieren",
+    "grade": 2,
+    "topic": "sache",
+    "category": "sache.arbeitsfelder",
+    "unit": "k2.sache.arbeitsfelder",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "arbeitsfelder"
+    },
+    "title": "Berufe nach Arbeitsfeldern: Sortieren"
+  },
+  {
+    "id": "k2.sache.arbeitsfelder.stimmt-das",
+    "grade": 2,
+    "topic": "sache",
+    "category": "sache.arbeitsfelder",
+    "unit": "k2.sache.arbeitsfelder",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "arbeitsfelder"
+    },
+    "title": "Berufe nach Arbeitsfeldern: Stimmt das?"
   }
 ]

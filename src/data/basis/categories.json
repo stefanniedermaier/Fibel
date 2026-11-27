@@ -304,5 +304,17 @@
     "topic": "formen",
     "title": "Symmetrie und Muster",
     "icon": "🪞"
+  },
+  {
+    "id": "sache.stoffe",
+    "topic": "sache",
+    "title": "Stoffe und ihre Eigenschaften",
+    "icon": "🧲"
+  },
+  {
+    "id": "sache.arbeitsfelder",
+    "topic": "sache",
+    "title": "Berufe nach Arbeitsfeldern",
+    "icon": "👩‍🔧"
   }
 ]

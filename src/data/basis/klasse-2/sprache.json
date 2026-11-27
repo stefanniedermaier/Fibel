@@ -224,5 +224,46 @@
       "teile": ["Wasser", "Glas"],
       "text": "Wasserglas"
     }
+  ],
+  "bausteine": [
+    {
+      "baustein": "ver",
+      "woerter": [
+        "verlaufen",
+        "verstecken",
+        "verkaufen",
+        "verlieren",
+        "vergessen",
+        "verpacken",
+        "verschenken",
+        "Verband"
+      ]
+    },
+    {
+      "baustein": "vor",
+      "woerter": [
+        "vorlesen",
+        "vorsingen",
+        "vormachen",
+        "vorbei",
+        "Vorsicht",
+        "vorne",
+        "Vorhang",
+        "Vormittag"
+      ]
+    },
+    {
+      "baustein": "un",
+      "woerter": [
+        "unklar",
+        "unruhig",
+        "ungesund",
+        "unfair",
+        "unglücklich",
+        "unhöflich",
+        "Unfall",
+        "Unsinn"
+      ]
+    }
   ]
 }

@@ -28,7 +28,7 @@ import {
 import { plain } from '@/core/plain'
 import { readableSentences } from '@/core/saetze'
 import { cleanLernwoerter } from '@/exercises/schreiben/diktat'
-import { MUELLTONNEN, THEMEN } from '@/exercises/sache/shared'
+import { MUELLTONNEN, THEMEN, unitOf } from '@/exercises/sache/shared'
 import { say } from '@/core/speech'
 import { loadVoices, rankGermanVoices } from '@/core/tts'
 import { TOPICS, TOPIC_INFO, type ProfileSettings, type Topic } from '@/core/types'
@@ -180,7 +180,7 @@ function setFocus(topic: Topic, unit: string, days = 7) {
 
 // HSU: a task to do together per theme, and the waste bins at home.
 function forscherauftrag(unitId: string): string | undefined {
-  return THEMEN.find((t) => `k1.sache.${t.id}` === unitId)?.forscherauftrag
+  return THEMEN.find((t) => unitOf(t) === unitId)?.forscherauftrag
 }
 function toggleTonne(id: string, on: boolean) {
   const set = new Set(settings.value.muelltonnen)

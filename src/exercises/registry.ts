@@ -29,6 +29,7 @@ import {
   wortfamilie,
   wortfeld,
   zusammensetzen,
+  bausteine,
 } from './sprache/klasse2'
 import { lineal, schaetzen, umrechnen } from './messen/laenge'
 import { sachaufgaben } from './rechnen/sachaufgaben'
@@ -148,6 +149,7 @@ register(sprachFormen)
 register(wortfamilie)
 register(wortfeld)
 register(zusammensetzen)
+register(bausteine)
 register(lineal)
 register(umrechnen)
 register(schaetzen)

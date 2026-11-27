@@ -1441,6 +1441,104 @@
       "wen": "das Feuer",
       "image": "1F525",
       "merksatz": "Wenn es brennt: raus, Tür zu und einen Erwachsenen rufen."
+    },
+    {
+      "id": "stein-hsu",
+      "text": "der Stein",
+      "wen": "den Stein",
+      "image": "1FAA8",
+      "merksatz": "Steine sind hart und schwer. Sie gehen im Wasser unter."
+    },
+    {
+      "id": "loeffel",
+      "text": "der Löffel",
+      "wen": "den Löffel",
+      "image": "1F944",
+      "merksatz": "Viele Löffel sind aus Metall."
+    },
+    {
+      "id": "muenze",
+      "text": "die Münze",
+      "wen": "die Münze",
+      "image": "1FA99",
+      "merksatz": "Münzen sind aus Metall."
+    },
+    {
+      "id": "magnet",
+      "text": "der Magnet",
+      "wen": "den Magneten",
+      "image": "1F9F2",
+      "merksatz": "Ein Magnet zieht Dinge aus Eisen an."
+    },
+    {
+      "id": "bueroklammer",
+      "text": "die Büroklammer",
+      "wen": "die Büroklammer",
+      "image": "1F4CE",
+      "merksatz": "Eine Büroklammer ist aus Eisen. Der Magnet zieht sie an."
+    },
+    {
+      "id": "bleistift",
+      "text": "der Bleistift",
+      "wen": "den Bleistift",
+      "image": "270F",
+      "merksatz": "Ein Bleistift ist aus Holz."
+    },
+    {
+      "id": "holzstuhl",
+      "text": "der Holzstuhl",
+      "wen": "den Holzstuhl",
+      "image": "1FA91",
+      "merksatz": "Viele Stühle sind aus Holz."
+    },
+    {
+      "id": "herbstblatt",
+      "text": "das Blatt",
+      "wen": "das Blatt",
+      "image": "1F343",
+      "merksatz": "Ein Blatt ist leicht und schwimmt."
+    },
+    {
+      "id": "baeckerin",
+      "text": "die Bäckerin",
+      "wen": "die Bäckerin",
+      "image": "1F35E",
+      "merksatz": "Die Bäckerin backt Brot und Brezen."
+    },
+    {
+      "id": "zahnaerztin",
+      "text": "die Zahnärztin",
+      "wen": "die Zahnärztin",
+      "image": "1F9B7",
+      "merksatz": "Die Zahnärztin kümmert sich um unsere Zähne."
+    },
+    {
+      "id": "apothekerin",
+      "text": "die Apothekerin",
+      "wen": "die Apothekerin",
+      "image": "1F3E5",
+      "merksatz": "Die Apothekerin gibt Medikamente aus."
+    },
+    {
+      "id": "schreinerin",
+      "text": "die Schreinerin",
+      "wen": "die Schreinerin",
+      "image": "1FAB5",
+      "merksatz": "Die Schreinerin baut Möbel aus Holz."
+    },
+    {
+      "id": "informatikerin",
+      "text": "die Informatikerin",
+      "wen": "die Informatikerin",
+      "image": "1F9D1-200D-1F4BB",
+      "merksatz": "Die Informatikerin schreibt Programme für Computer."
+    },
+    {
+      "id": "forscherin",
+      "text": "die Forscherin",
+      "wen": "die Forscherin",
+      "image": "1F9D1-200D-1F52C",
+      "merksatz": "Die Forscherin will herausfinden, wie die Welt funktioniert."
     }
   ],
   "themen": [
@@ -3083,6 +3181,235 @@
       ],
       "ablaeufe": [],
       "suchbilder": []
+    },
+    {
+      "id": "stoffe",
+      "klasse": 2,
+      "title": "Stoffe und ihre Eigenschaften",
+      "icon": "🧲",
+      "term": 1,
+      "lehrplan": "HSU 1/2 3.2",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.2 (Stoffe benennen, nach Eigenschaften ordnen: schwimmt/sinkt, magnetisch)",
+      "forscherauftrag": "Füllt eine Schüssel mit Wasser: Was schwimmt, was geht unter? Testet mit einem Magneten, was er anzieht.",
+      "erkennen": ["holz", "stein-hsu", "loeffel", "glasflasche", "papier", "wolle", "magnet"],
+      "sortieren": [
+        {
+          "id": "material",
+          "frage": "Woraus ist das?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "holz",
+              "title": "aus Holz",
+              "image": "1FAB5"
+            },
+            {
+              "id": "metall",
+              "title": "aus Metall",
+              "image": "1F529"
+            },
+            {
+              "id": "glas",
+              "title": "aus Glas",
+              "image": "1F95B"
+            },
+            {
+              "id": "papier",
+              "title": "aus Papier",
+              "image": "1F4C4"
+            }
+          ],
+          "zuordnung": {
+            "bleistift": "holz",
+            "holzstuhl": "holz",
+            "muenze": "metall",
+            "loeffel": "metall",
+            "bueroklammer": "metall",
+            "marmeladenglas": "glas",
+            "glasflasche": "glas",
+            "zeitung": "papier",
+            "karton": "papier"
+          }
+        },
+        {
+          "id": "schwimmt",
+          "frage": "Schwimmt das, oder geht es unter?",
+          "gruppen": [
+            {
+              "id": "schwimmt",
+              "title": "schwimmt",
+              "image": "1F30A"
+            },
+            {
+              "id": "sinkt",
+              "title": "geht unter",
+              "image": "2B07"
+            }
+          ],
+          "zuordnung": {
+            "holz": "schwimmt",
+            "herbstblatt": "schwimmt",
+            "apfel": "schwimmt",
+            "ball": "schwimmt",
+            "stein-hsu": "sinkt",
+            "muenze": "sinkt",
+            "loeffel": "sinkt",
+            "nagel": "sinkt"
+          }
+        },
+        {
+          "id": "magnet",
+          "frage": "Zieht der Magnet das an?",
+          "gruppen": [
+            {
+              "id": "ja",
+              "title": "zieht an",
+              "image": "1F9F2"
+            },
+            {
+              "id": "nein",
+              "title": "zieht nicht an",
+              "image": "274C"
+            }
+          ],
+          "zuordnung": {
+            "nagel": "ja",
+            "bueroklammer": "ja",
+            "schere": "ja",
+            "holz": "nein",
+            "papier": "nein",
+            "glasflasche": "nein",
+            "wolle": "nein",
+            "apfel": "nein"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Holz schwimmt auf dem Wasser.",
+          "image": "1FAB5",
+          "richtig": true,
+          "regel": "Holz ist leichter als Wasser und schwimmt."
+        },
+        {
+          "text": "Ein Magnet zieht Holz an.",
+          "image": "1F9F2",
+          "richtig": false,
+          "regel": "Ein Magnet zieht nur Dinge aus Eisen an, kein Holz."
+        },
+        {
+          "text": "Glas kann zerbrechen.",
+          "image": "1F95B",
+          "richtig": true,
+          "regel": "Glas ist hart, aber es zerbricht leicht. Vorsicht mit Scherben!"
+        },
+        {
+          "text": "Aus Wolle kann man Pullover stricken.",
+          "image": "1F9F6",
+          "richtig": true,
+          "regel": "Wolle ist weich und warm."
+        },
+        {
+          "text": "Ein Stein schwimmt auf dem Wasser.",
+          "image": "1FAA8",
+          "richtig": false,
+          "regel": "Ein Stein ist schwer und geht unter."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": []
+    },
+    {
+      "id": "arbeitsfelder",
+      "klasse": 2,
+      "title": "Berufe nach Arbeitsfeldern",
+      "icon": "👩‍🔧",
+      "term": 2,
+      "lehrplan": "HSU 1/2 6.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 6.1 (Berufe und Arbeitsfelder, Arbeit in der Region)",
+      "forscherauftrag": "Sprecht über die Berufe in eurer Familie und bei Freunden: In welchem Arbeitsfeld arbeiten sie?",
+      "erkennen": [
+        "aerztin",
+        "landwirt",
+        "koechin",
+        "mechanikerin",
+        "bauarbeiter",
+        "feuerwehr",
+        "polizei",
+        "informatikerin",
+        "forscherin"
+      ],
+      "sortieren": [
+        {
+          "id": "arbeitsfeld",
+          "frage": "In welchem Bereich arbeitet sie oder er?",
+          "gruppen": [
+            {
+              "id": "gesundheit",
+              "title": "Gesundheit",
+              "image": "1F3E5"
+            },
+            {
+              "id": "essen",
+              "title": "Essen",
+              "image": "1F33E"
+            },
+            {
+              "id": "handwerk",
+              "title": "Bauen und Reparieren",
+              "image": "1F527"
+            },
+            {
+              "id": "sicherheit",
+              "title": "Sicherheit",
+              "image": "1F6A8"
+            }
+          ],
+          "zuordnung": {
+            "aerztin": "gesundheit",
+            "zahnaerztin": "gesundheit",
+            "apothekerin": "gesundheit",
+            "landwirt": "essen",
+            "koechin": "essen",
+            "baeckerin": "essen",
+            "mechanikerin": "handwerk",
+            "bauarbeiter": "handwerk",
+            "schreinerin": "handwerk",
+            "feuerwehr": "sicherheit",
+            "polizei": "sicherheit"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Die Zahnärztin hilft, wenn ein Zahn wehtut.",
+          "image": "1F9B7",
+          "richtig": true,
+          "regel": "Die Zahnärztin kümmert sich um unsere Zähne."
+        },
+        {
+          "text": "Die Bäckerin repariert Autos.",
+          "image": "1F35E",
+          "richtig": false,
+          "regel": "Die Bäckerin backt Brot. Autos repariert die Mechanikerin."
+        },
+        {
+          "text": "Viele Menschen arbeiten, damit wir genug zu essen haben.",
+          "image": "1F33E",
+          "richtig": true,
+          "regel": "Landwirte, Bäcker und Köche sorgen für unser Essen."
+        },
+        {
+          "text": "Nur Männer können bei der Polizei arbeiten.",
+          "image": "1F46E",
+          "richtig": false,
+          "regel": "Alle Berufe können Frauen und Männer lernen."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": []
     }
   ]
 }

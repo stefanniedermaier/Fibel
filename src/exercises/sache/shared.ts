@@ -70,6 +70,8 @@ export interface Paar {
 
 export interface Thema {
   id: string
+  /** Grade of the theme (default 1); grade 2 continues HSU 1/2. */
+  klasse?: number
   title: string
   icon: string
   term: 1 | 2
@@ -90,6 +92,9 @@ export interface Thema {
   /** Something to do together, shown to the parents (not rated by the app). */
   forscherauftrag: string
 }
+
+/** Teaching unit of a theme: k1.sache.wiese, k2.sache.stoffe. */
+export const unitOf = (t: Pick<Thema, 'id' | 'klasse'>) => `k${t.klasse ?? 1}.sache.${t.id}`
 
 /** Waste bins a family can have; Bavaria differs from place to place. */
 export const MUELLTONNEN = [
