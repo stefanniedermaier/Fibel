@@ -830,5 +830,421 @@
         "answer": 0
       }
     ]
+  },
+  {
+    "id": "eichhoernchen",
+    "kind": "lesen",
+    "text": "Das Eichhörnchen lebt im Wald und in Parks. Es hat einen buschigen Schwanz. Im Herbst sammelt es Nüsse und versteckt sie in der Erde. Manchmal vergisst es die Verstecke. Dann wachsen dort neue Bäume.",
+    "fragen": [
+      {
+        "frage": "Was sammelt das Eichhörnchen?",
+        "choices": [
+          {
+            "text": "Nüsse"
+          },
+          {
+            "text": "Blätter"
+          },
+          {
+            "text": "Steine"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wo versteckt es die Nüsse?",
+        "choices": [
+          {
+            "text": "in der Erde"
+          },
+          {
+            "text": "im Wasser"
+          },
+          {
+            "text": "auf dem Dach"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was passiert mit vergessenen Nüssen?",
+        "choices": [
+          {
+            "text": "Es wachsen neue Bäume."
+          },
+          {
+            "text": "Sie werden zu Steinen."
+          },
+          {
+            "text": "Ein Vogel holt sie."
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "flohmarkt",
+    "kind": "lesen",
+    "text": "Am Samstag ist Flohmarkt in der Schule. Mia verkauft ihre alten Bücher. Ein Buch kostet einen Euro. Am Ende hat sie acht Euro. Davon kauft sie sich ein neues Puzzle.",
+    "fragen": [
+      {
+        "frage": "Wann ist der Flohmarkt?",
+        "choices": [
+          {
+            "text": "am Samstag"
+          },
+          {
+            "text": "am Montag"
+          },
+          {
+            "text": "am Sonntag"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was kostet ein Buch?",
+        "choices": [
+          {
+            "text": "einen Euro"
+          },
+          {
+            "text": "zwei Euro"
+          },
+          {
+            "text": "zehn Euro"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was kauft sich Mia?",
+        "choices": [
+          {
+            "text": "ein Puzzle"
+          },
+          {
+            "text": "ein Eis"
+          },
+          {
+            "text": "einen Ball"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "wasser",
+    "kind": "lesen",
+    "text": "Wasser brauchen alle Menschen, Tiere und Pflanzen. Wir trinken es und waschen uns damit. Im Winter wird Wasser zu Eis. Wenn es sehr heiß ist, wird es zu Dampf. Wasser ist kostbar, darum sollen wir es nicht verschwenden.",
+    "fragen": [
+      {
+        "frage": "Wer braucht Wasser?",
+        "choices": [
+          {
+            "text": "Menschen, Tiere und Pflanzen"
+          },
+          {
+            "text": "nur die Fische"
+          },
+          {
+            "text": "nur die Menschen"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was wird im Winter aus Wasser?",
+        "choices": [
+          {
+            "text": "Eis"
+          },
+          {
+            "text": "Sand"
+          },
+          {
+            "text": "Dampf"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was sollen wir nicht tun?",
+        "choices": [
+          {
+            "text": "Wasser verschwenden"
+          },
+          {
+            "text": "Wasser trinken"
+          },
+          {
+            "text": "uns waschen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "drachen",
+    "kind": "lesen",
+    "text": "Im Herbst bastelt Ben mit Papa einen Drachen. Er ist rot und hat einen langen Schwanz. Auf dem Feld weht ein starker Wind. Der Drachen steigt hoch in den Himmel. Ben hält die Schnur ganz fest.",
+    "fragen": [
+      {
+        "frage": "Mit wem bastelt Ben?",
+        "choices": [
+          {
+            "text": "mit Papa"
+          },
+          {
+            "text": "mit Oma"
+          },
+          {
+            "text": "mit Mia"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Welche Farbe hat der Drachen?",
+        "choices": [
+          {
+            "text": "rot"
+          },
+          {
+            "text": "blau"
+          },
+          {
+            "text": "grün"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was hält Ben fest?",
+        "choices": [
+          {
+            "text": "die Schnur"
+          },
+          {
+            "text": "den Wind"
+          },
+          {
+            "text": "das Feld"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "pinguin",
+    "kind": "lesen",
+    "text": "Pinguine sind Vögel, aber sie können nicht fliegen. Dafür schwimmen sie sehr schnell. Sie leben dort, wo es kalt ist. Ein dickes Fett unter der Haut hält sie warm. Pinguine fressen gern Fische.",
+    "fragen": [
+      {
+        "frage": "Was können Pinguine nicht?",
+        "choices": [
+          {
+            "text": "fliegen"
+          },
+          {
+            "text": "schwimmen"
+          },
+          {
+            "text": "laufen"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was hält sie warm?",
+        "choices": [
+          {
+            "text": "dickes Fett"
+          },
+          {
+            "text": "eine Jacke"
+          },
+          {
+            "text": "die Sonne"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was fressen Pinguine gern?",
+        "choices": [
+          {
+            "text": "Fische"
+          },
+          {
+            "text": "Nüsse"
+          },
+          {
+            "text": "Gras"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "bastelanleitung",
+    "kind": "lesen",
+    "text": "So bastelst du eine Laterne: Nimm ein Glas und klebe buntes Papier außen herum. Male Sterne und Monde darauf. Binde einen Draht um den Rand. Stelle ein Teelicht hinein. Das Licht zündet ein Erwachsener an.",
+    "fragen": [
+      {
+        "frage": "Was klebst du um das Glas?",
+        "choices": [
+          {
+            "text": "buntes Papier"
+          },
+          {
+            "text": "Blätter"
+          },
+          {
+            "text": "Stoff"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was malst du darauf?",
+        "choices": [
+          {
+            "text": "Sterne und Monde"
+          },
+          {
+            "text": "Autos"
+          },
+          {
+            "text": "Blumen"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wer zündet das Licht an?",
+        "choices": [
+          {
+            "text": "ein Erwachsener"
+          },
+          {
+            "text": "das Kind"
+          },
+          {
+            "text": "niemand"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "schwimmbad",
+    "kind": "hoeren",
+    "text": "Lena und ihr Bruder gehen ins Schwimmbad. Zuerst duschen sie. Dann springt Lena vom Startblock ins Wasser. Ihr Bruder rutscht lieber die Rutsche hinunter. Danach essen sie Pommes.",
+    "fragen": [
+      {
+        "frage": "Was machen die Kinder zuerst?",
+        "choices": [
+          {
+            "text": "Sie duschen."
+          },
+          {
+            "text": "Sie essen Pommes."
+          },
+          {
+            "text": "Sie rutschen."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was macht der Bruder lieber?",
+        "choices": [
+          {
+            "text": "rutschen"
+          },
+          {
+            "text": "springen"
+          },
+          {
+            "text": "tauchen"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was essen sie danach?",
+        "choices": [
+          {
+            "text": "Pommes"
+          },
+          {
+            "text": "Eis"
+          },
+          {
+            "text": "Brezen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "baustelle",
+    "kind": "hoeren",
+    "text": "Vor dem Haus ist eine Baustelle. Ein großer Bagger gräbt ein tiefes Loch. Ein Kran hebt schwere Steine. Die Bauarbeiter tragen Helme. Bald steht dort ein neues Haus.",
+    "fragen": [
+      {
+        "frage": "Wer gräbt das Loch?",
+        "choices": [
+          {
+            "text": "ein Bagger"
+          },
+          {
+            "text": "ein Kran"
+          },
+          {
+            "text": "ein Traktor"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was tragen die Bauarbeiter?",
+        "choices": [
+          {
+            "text": "Helme"
+          },
+          {
+            "text": "Kronen"
+          },
+          {
+            "text": "Mützen"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was entsteht dort?",
+        "choices": [
+          {
+            "text": "ein neues Haus"
+          },
+          {
+            "text": "ein See"
+          },
+          {
+            "text": "ein Park"
+          }
+        ],
+        "answer": 0
+      }
+    ]
   }
 ]

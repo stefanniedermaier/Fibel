@@ -158,5 +158,85 @@
     "op": "·",
     "a": 2,
     "b": 7
+  },
+  {
+    "id": "kino",
+    "image": "1F3AC",
+    "text": "Im Kino sind {a} Plätze. {b} Plätze sind schon besetzt. Wie viele Plätze sind noch frei?",
+    "op": "-",
+    "a": 60,
+    "b": 45
+  },
+  {
+    "id": "saft-flaschen",
+    "image": "1F37E",
+    "text": "Ein Kasten hat {a} Flaschen. Wie viele Flaschen haben {b} Kästen?",
+    "op": "·",
+    "a": 6,
+    "b": 4
+  },
+  {
+    "id": "rad-km",
+    "image": "1F6B2",
+    "text": "Tim fährt am Montag {a} Kilometer Rad und am Dienstag {b} Kilometer. Wie weit fährt er zusammen?",
+    "op": "+",
+    "a": 15,
+    "b": 18
+  },
+  {
+    "id": "aepfel-teilen",
+    "image": "1F34E",
+    "text": "{a} Äpfel werden in {b} Körbe verteilt. In jedem Korb sind gleich viele. Wie viele Äpfel sind in einem Korb?",
+    "op": ":",
+    "a": 18,
+    "b": 3
+  },
+  {
+    "id": "bus-stationen",
+    "image": "1F68C",
+    "text": "Im Bus sitzen {a} Leute. An der Haltestelle steigen {b} aus. Wie viele sitzen noch im Bus?",
+    "op": "-",
+    "a": 53,
+    "b": 21
+  },
+  {
+    "id": "sticker-album",
+    "image": "1F4D2",
+    "text": "In ein Album passen {a} Sticker. Leon hat schon {b} eingeklebt. Wie viele fehlen noch?",
+    "op": "-",
+    "a": 100,
+    "b": 64
+  },
+  {
+    "id": "beete",
+    "image": "1F337",
+    "text": "In ein Beet passen {a} Tulpen in jede Reihe. Es gibt {b} Reihen. Wie viele Tulpen sind es?",
+    "op": "·",
+    "a": 5,
+    "b": 8
+  },
+  {
+    "id": "mannschaft",
+    "image": "26BD",
+    "text": "{a} Kinder wollen Fußball spielen. Sie bilden {b} gleich große Mannschaften. Wie viele Kinder sind in jeder Mannschaft?",
+    "op": ":",
+    "a": 16,
+    "b": 2
+  },
+  {
+    "id": "geburtstag-gaeste",
+    "image": "1F382",
+    "text": "Zum Fest kommen {a} Kinder und {b} Erwachsene. Wie viele Gäste sind es?",
+    "op": "+",
+    "a": 27,
+    "b": 14
+  },
+  {
+    "id": "briefmarken",
+    "image": "2709",
+    "text": "Eine Briefmarke kostet {a} Euro. Wie viel kosten {b} Briefmarken?",
+    "op": "·",
+    "a": 1,
+    "b": 9
   }
 ]

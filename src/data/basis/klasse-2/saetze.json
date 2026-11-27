@@ -238,5 +238,125 @@
     "text": "Die Sterne funkeln am Himmel.",
     "group": "nacht",
     "scene": ["2B50", "2B50", "2B50"]
+  },
+  {
+    "id": "sport-1",
+    "text": "Das Mädchen fährt Ski.",
+    "group": "sport",
+    "scene": ["1F467", "26F7"]
+  },
+  {
+    "id": "sport-2",
+    "text": "Der Junge spielt Basketball.",
+    "group": "sport",
+    "scene": ["1F466", "1F3C0"]
+  },
+  {
+    "id": "sport-3",
+    "text": "Die Kinder fahren Schlitten.",
+    "group": "sport",
+    "scene": ["1F9D2", "1F6F7"]
+  },
+  {
+    "id": "sport-4",
+    "text": "Lea spielt Tennis.",
+    "group": "sport",
+    "scene": ["1F467", "1F3BE"]
+  },
+  {
+    "id": "garten-1",
+    "text": "Opa gießt die Blumen.",
+    "group": "garten",
+    "scene": ["1F474", "1F337"]
+  },
+  {
+    "id": "garten-2",
+    "text": "Oma pflückt Äpfel.",
+    "group": "garten",
+    "scene": ["1F475", "1F34E"]
+  },
+  {
+    "id": "garten-3",
+    "text": "Der Igel schläft unter dem Busch.",
+    "group": "garten",
+    "scene": ["1F994", "1F33F"]
+  },
+  {
+    "id": "garten-4",
+    "text": "Die Biene fliegt zur Blüte.",
+    "group": "garten",
+    "scene": ["1F41D", "1F338"]
+  },
+  {
+    "id": "zuhause-1",
+    "text": "Papa wäscht das Auto.",
+    "group": "zuhause",
+    "scene": ["1F468", "1F697"]
+  },
+  {
+    "id": "zuhause-2",
+    "text": "Mama liest die Zeitung.",
+    "group": "zuhause",
+    "scene": ["1F469", "1F4F0"]
+  },
+  {
+    "id": "zuhause-3",
+    "text": "Die Katze trinkt Milch.",
+    "group": "zuhause",
+    "scene": ["1F408", "1F95B"]
+  },
+  {
+    "id": "zuhause-4",
+    "text": "Der Hund schläft im Korb.",
+    "group": "zuhause",
+    "scene": ["1F415", "1F9FA"]
+  },
+  {
+    "id": "feste-1",
+    "text": "Zum Geburtstag gibt es Kuchen.",
+    "group": "feste",
+    "scene": ["1F382"]
+  },
+  {
+    "id": "feste-2",
+    "text": "An Weihnachten steht ein Baum im Zimmer.",
+    "group": "feste",
+    "scene": ["1F384"]
+  },
+  {
+    "id": "feste-3",
+    "text": "An Ostern suchen die Kinder Eier.",
+    "group": "feste",
+    "scene": ["1F95A", "1F9D2"]
+  },
+  {
+    "id": "feste-4",
+    "text": "An Silvester gibt es Feuerwerk.",
+    "group": "feste",
+    "scene": ["1F386"]
+  },
+  {
+    "id": "wetter2-1",
+    "text": "Heute scheint die Sonne den ganzen Tag.",
+    "group": "wetter2",
+    "scene": ["2600"]
+  },
+  {
+    "id": "wetter2-2",
+    "text": "Heute regnet es sehr stark.",
+    "group": "wetter2",
+    "scene": ["1F327"]
+  },
+  {
+    "id": "wetter2-3",
+    "text": "Heute fällt viel Schnee.",
+    "group": "wetter2",
+    "scene": ["1F328"]
+  },
+  {
+    "id": "wetter2-4",
+    "text": "Heute gibt es ein Gewitter.",
+    "group": "wetter2",
+    "scene": ["26C8"]
   }
 ]
