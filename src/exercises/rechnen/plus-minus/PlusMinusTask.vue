@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import NumberInput from '@/components/NumberInput.vue'
+import BaseTenBlocks from '@/components/BaseTenBlocks.vue'
 import TenFrame from '@/components/TenFrame.vue'
 import { shownOp } from '../shared'
 import type { PlusMinusData } from './index'
@@ -23,16 +24,21 @@ function answer(correct: boolean) {
     </p>
 
     <div class="help">
+      <div v-if="data.cells === 0 && (showHelp || revealed)" class="blocks">
+        <BaseTenBlocks :tens="Math.floor(data.a / 10)" :ones="data.a % 10" :size="12" />
+        <span class="sign">{{ shownOp(data.op) }}</span>
+        <BaseTenBlocks :tens="Math.floor(data.b / 10)" :ones="data.b % 10" :size="12" />
+      </div>
       <TenFrame
-        v-if="showHelp || revealed"
-        :cells="data.cells"
+        v-else-if="data.cells > 0 && (showHelp || revealed)"
+        :cells="data.cells === 10 ? 10 : 20"
         :small="data.cells === 10"
         :count="data.a"
         :extra="data.op === '+' ? data.b : 0"
         :crossed="data.op === '-' ? data.b : 0"
       />
       <button v-else type="button" class="btn help-btn" @click="showHelp = true">
-        🔴 Plättchen zeigen
+        {{ data.cells === 0 ? '🧱 Zehner und Einer zeigen' : '🔴 Plättchen zeigen' }}
       </button>
     </div>
 
@@ -64,6 +70,17 @@ function answer(correct: boolean) {
   display: flex;
   justify-content: center;
   min-height: 64px;
+}
+
+.blocks {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.sign {
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .help-btn {

@@ -13,7 +13,7 @@ import type { ExerciseModule } from '../../types'
 import { itemPart, shownOp, spokenArithmetic, type Arithmetic } from '../shared'
 import PaeckchenTask from './PaeckchenTask.vue'
 
-export type Strategie = 'verdoppeln' | 'halbieren' | 'nachbar' | 'tausch' | 'umkehr'
+export type Strategie = 'verdoppeln' | 'halbieren' | 'nachbar' | 'tausch' | 'umkehr' | 'analog'
 
 export interface PaeckchenParams {
   max: number
@@ -33,7 +33,25 @@ export interface PaeckchenData {
 
 const show = (t: Arithmetic) => `${t.a} ${shownOp(t.op)} ${t.b}`
 
+/** Up to 100 (R2-7): doubling bigger numbers, swap, inverse and analogous tasks. */
+function tasks100(): string[] {
+  const keys: string[] = []
+  for (const a of [11, 12, 13, 14, 15, 20, 25, 30, 35, 40, 45, 50]) {
+    keys.push(`verdoppeln:${a}`, `halbieren:${2 * a}`)
+    if (2 * a + 1 <= 100) keys.push(`nachbar:${a}`)
+  }
+  for (let a = 1; a <= 9; a++) {
+    for (let b = 1; a + b <= 10; b++) keys.push(`analog:${a}+${b}`)
+    for (const b of [23, 35, 46, 52, 64, 71]) keys.push(`tausch:${a}+${b}`)
+  }
+  for (const a of [24, 37, 45, 56, 63, 78]) {
+    for (let b = 3; b <= 9; b += 2) keys.push(`umkehr:${a}+${b}`)
+  }
+  return keys
+}
+
 function tasks(max: number): string[] {
+  if (max > 20) return tasks100()
   const keys: string[] = []
   for (let a = 1; 2 * a <= max; a++) {
     keys.push(`verdoppeln:${a}`, `halbieren:${2 * a}`)
@@ -86,6 +104,15 @@ function strategie(
     }
   }
   const [a, b] = value.split('+').map(Number) as [number, number]
+  if (kind === 'analog') {
+    return {
+      helper: `${a} + ${b} = ${a + b}`,
+      task: `${10 * a} + ${10 * b}`,
+      answer: 10 * (a + b),
+      spoken: `${numberWord(a)} plus ${numberWord(b)} ist ${numberWord(a + b)}. Wie viel ist ${numberWord(10 * a)} plus ${numberWord(10 * b)}?`,
+      hint: 'Mit Zehnern rechnest du wie mit Einern: drei Zehner plus vier Zehner.',
+    }
+  }
   if (kind === 'tausch') {
     return {
       helper: `${a} + ${b} = ${a + b}`,

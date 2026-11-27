@@ -14,6 +14,11 @@ import { wortbildung } from './sprache/wortbildung'
 import { pfeilweg } from './formen/pfeilweg'
 import { symmetrie } from './formen/symmetrie'
 import { daten } from './rechnen/daten'
+import { einmaleins } from './rechnen/einmaleins'
+import { hunderter } from './rechnen/hunderter'
+import { schreibung } from './schreiben/schreibung'
+import { ableiten } from './schreiben/ableiten'
+import { abc } from './schreiben/abc'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -112,6 +117,11 @@ register(wortbildung)
 register(pfeilweg)
 register(symmetrie)
 register(daten)
+register(einmaleins)
+register(hunderter)
+register(schreibung)
+register(ableiten)
+register(abc)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

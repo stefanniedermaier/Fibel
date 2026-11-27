@@ -1825,7 +1825,8 @@
     "syllables": ["a", "ber"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Klein, aber fein."
   },
   {
     "id": "als",
@@ -1833,7 +1834,8 @@
     "syllables": ["als"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "größer als ich"
   },
   {
     "id": "also",
@@ -1841,7 +1843,8 @@
     "syllables": ["al", "so"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Also los!"
   },
   {
     "id": "auf",
@@ -1849,7 +1852,8 @@
     "syllables": ["auf"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "auf dem Tisch"
   },
   {
     "id": "aus",
@@ -1857,7 +1861,8 @@
     "syllables": ["aus"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "aus dem Haus"
   },
   {
     "id": "bei",
@@ -1865,7 +1870,8 @@
     "syllables": ["bei"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "bei Oma"
   },
   {
     "id": "da",
@@ -1873,7 +1879,8 @@
     "syllables": ["da"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Da ist er."
   },
   {
     "id": "das",
@@ -1881,7 +1888,8 @@
     "syllables": ["das"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "das Haus"
   },
   {
     "id": "der",
@@ -1889,7 +1897,8 @@
     "syllables": ["der"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "der Hase"
   },
   {
     "id": "des",
@@ -1897,7 +1906,8 @@
     "syllables": ["des"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "die Farbe des Hauses"
   },
   {
     "id": "dir",
@@ -1905,7 +1915,8 @@
     "syllables": ["dir"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Ich helfe dir."
   },
   {
     "id": "dich",
@@ -1913,7 +1924,8 @@
     "syllables": ["dich"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Ich mag dich."
   },
   {
     "id": "die",
@@ -1921,7 +1933,8 @@
     "syllables": ["die"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "die Rose"
   },
   {
     "id": "doch",
@@ -1929,7 +1942,8 @@
     "syllables": ["doch"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Komm doch!"
   },
   {
     "id": "du",
@@ -1937,7 +1951,8 @@
     "syllables": ["du"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Du bist dran."
   },
   {
     "id": "durch",
@@ -1945,7 +1960,8 @@
     "syllables": ["durch"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "durch den Wald"
   },
   {
     "id": "er",
@@ -1953,7 +1969,8 @@
     "syllables": ["er"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Er lacht."
   },
   {
     "id": "es",
@@ -1961,7 +1978,8 @@
     "syllables": ["es"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Es regnet."
   },
   {
     "id": "fuer",
@@ -1969,7 +1987,8 @@
     "syllables": ["für"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "für dich"
   },
   {
     "id": "her",
@@ -1977,7 +1996,8 @@
     "syllables": ["her"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Komm her!"
   },
   {
     "id": "hinter",
@@ -1985,7 +2005,8 @@
     "syllables": ["hin", "ter"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "hinter dem Haus"
   },
   {
     "id": "ich",
@@ -1993,7 +2014,8 @@
     "syllables": ["ich"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Ich male."
   },
   {
     "id": "im",
@@ -2001,7 +2023,8 @@
     "syllables": ["im"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "im Garten"
   },
   {
     "id": "in",
@@ -2009,7 +2032,8 @@
     "syllables": ["in"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "in der Schule"
   },
   {
     "id": "ist",
@@ -2017,7 +2041,8 @@
     "syllables": ["ist"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Das ist gut."
   },
   {
     "id": "ja",
@@ -2025,7 +2050,8 @@
     "syllables": ["ja"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Ja, gern!"
   },
   {
     "id": "mit",
@@ -2033,7 +2059,8 @@
     "syllables": ["mit"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "mit Mama"
   },
   {
     "id": "nach",
@@ -2041,7 +2068,8 @@
     "syllables": ["nach"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "nach Hause"
   },
   {
     "id": "nein",
@@ -2049,7 +2077,8 @@
     "syllables": ["nein"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Nein, danke."
   },
   {
     "id": "nicht",
@@ -2057,7 +2086,8 @@
     "syllables": ["nicht"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Das ist nicht schwer."
   },
   {
     "id": "nun",
@@ -2065,7 +2095,8 @@
     "syllables": ["nun"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Nun geht es los."
   },
   {
     "id": "oder",
@@ -2073,7 +2104,8 @@
     "syllables": ["o", "der"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Tee oder Saft?"
   },
   {
     "id": "schon",
@@ -2081,7 +2113,8 @@
     "syllables": ["schon"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Ich kann das schon."
   },
   {
     "id": "sie",
@@ -2089,7 +2122,8 @@
     "syllables": ["sie"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Sie malt."
   },
   {
     "id": "sind",
@@ -2097,7 +2131,8 @@
     "syllables": ["sind"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Wir sind da."
   },
   {
     "id": "so",
@@ -2105,7 +2140,8 @@
     "syllables": ["so"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "So geht das."
   },
   {
     "id": "ueber",
@@ -2113,7 +2149,8 @@
     "syllables": ["ü", "ber"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "über dem Haus"
   },
   {
     "id": "um",
@@ -2121,7 +2158,8 @@
     "syllables": ["um"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "um acht Uhr"
   },
   {
     "id": "und",
@@ -2129,7 +2167,8 @@
     "syllables": ["und"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Oma und Opa"
   },
   {
     "id": "was",
@@ -2137,7 +2176,8 @@
     "syllables": ["was"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Was ist das?"
   },
   {
     "id": "weil",
@@ -2145,7 +2185,8 @@
     "syllables": ["weil"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "weil es regnet"
   },
   {
     "id": "weiter",
@@ -2153,7 +2194,8 @@
     "syllables": ["wei", "ter"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Lauf weiter!"
   },
   {
     "id": "wer",
@@ -2161,7 +2203,8 @@
     "syllables": ["wer"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Wer ist da?"
   },
   {
     "id": "wir",
@@ -2169,7 +2212,8 @@
     "syllables": ["wir"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Wir malen."
   },
   {
     "id": "wo",
@@ -2177,7 +2221,8 @@
     "syllables": ["wo"],
     "wortart": "klein",
     "category": "woerter",
-    "schwerpunkt": "haeufig"
+    "schwerpunkt": "haeufig",
+    "beispiel": "Wo bist du?"
   },
   {
     "id": "fuss",

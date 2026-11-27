@@ -334,5 +334,89 @@
     "topic": "rechnen",
     "title": "Strichlisten (Zusatz)",
     "term": 2
+  },
+  {
+    "id": "k2.rechnen.stellenwert",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Zehner und Einer",
+    "term": 1
+  },
+  {
+    "id": "k2.rechnen.orientierung",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Zahlen bis 100: Zahlenstrahl und Nachbarzahlen",
+    "term": 1
+  },
+  {
+    "id": "k2.rechnen.vergleichen",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Zahlen vergleichen bis 100",
+    "term": 1
+  },
+  {
+    "id": "k2.rechnen.zerlegen",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Zahlen zerlegen",
+    "term": 1
+  },
+  {
+    "id": "k2.rechnen.einspluseins",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Einspluseins bis 20",
+    "term": 1
+  },
+  {
+    "id": "k2.rechnen.plusminus",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Plus und Minus bis 100",
+    "term": 1
+  },
+  {
+    "id": "k2.rechnen.strategien",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Rechenstrategien",
+    "term": 1
+  },
+  {
+    "id": "k2.rechnen.muster",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Zahlenmuster fortsetzen",
+    "term": 2
+  },
+  {
+    "id": "k2.rechnen.malnehmen",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Malnehmen verstehen",
+    "term": 2
+  },
+  {
+    "id": "k2.rechnen.kernaufgaben",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Einmaleins: Kernaufgaben",
+    "term": 2
+  },
+  {
+    "id": "k2.rechnen.einmaleins",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Einmaleins: alle Reihen",
+    "term": 2
+  },
+  {
+    "id": "k2.rechnen.teilen",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Teilen mit Rest",
+    "term": 2
   }
 ]

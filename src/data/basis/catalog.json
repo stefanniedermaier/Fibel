@@ -1421,5 +1421,248 @@
       "mode": "meiste"
     },
     "title": "Wovon am meisten?"
+  },
+  {
+    "id": "k2.rechnen.stellenwert.bild",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen100",
+    "unit": "k2.rechnen.stellenwert",
+    "exercise": "rechnen.stellenwert",
+    "params": {
+      "max": 100,
+      "mode": "bild"
+    },
+    "title": "Zehner und Einer"
+  },
+  {
+    "id": "k2.rechnen.stellenwert.zerlegen",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen100",
+    "unit": "k2.rechnen.stellenwert",
+    "exercise": "rechnen.stellenwert",
+    "params": {
+      "max": 100,
+      "mode": "zerlegen"
+    },
+    "title": "In Zehner und Einer zerlegen"
+  },
+  {
+    "id": "k2.rechnen.orientierung.ablesen",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen100",
+    "unit": "k2.rechnen.orientierung",
+    "exercise": "rechnen.zahlenstrahl",
+    "params": {
+      "max": 100,
+      "mode": "ablesen"
+    },
+    "title": "Zahlenstrahl bis 100"
+  },
+  {
+    "id": "k2.rechnen.orientierung.nachbarn",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen100",
+    "unit": "k2.rechnen.orientierung",
+    "exercise": "rechnen.zahlenstrahl",
+    "params": {
+      "max": 100,
+      "mode": "nachbarn"
+    },
+    "title": "Nachbarzahlen bis 100"
+  },
+  {
+    "id": "k2.rechnen.orientierung.hunderter",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen100",
+    "unit": "k2.rechnen.orientierung",
+    "exercise": "rechnen.hunderter",
+    "params": {},
+    "title": "Hundertertafel, gerade und ungerade"
+  },
+  {
+    "id": "k2.rechnen.vergleichen.vergleichen",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen100",
+    "unit": "k2.rechnen.vergleichen",
+    "exercise": "rechnen.vergleichen",
+    "params": {
+      "max": 100
+    },
+    "title": "Größer, kleiner oder gleich?"
+  },
+  {
+    "id": "k2.rechnen.zerlegen.zahlenhaus",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen100",
+    "unit": "k2.rechnen.zerlegen",
+    "exercise": "rechnen.zahlenhaus",
+    "params": {
+      "max": 100,
+      "zehner": true
+    },
+    "title": "Zahlenhaus mit Zehnern"
+  },
+  {
+    "id": "k2.rechnen.einspluseins.plus-minus",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.einspluseins",
+    "exercise": "rechnen.plus-minus",
+    "params": {
+      "max": 20,
+      "above": 10
+    },
+    "title": "Plus und Minus bis 20"
+  },
+  {
+    "id": "k2.rechnen.plusminus.zz",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.plusminus",
+    "exercise": "rechnen.plus-minus",
+    "params": {
+      "max": 100,
+      "forms": ["ZZ"]
+    },
+    "title": "Zehner plus Zehner"
+  },
+  {
+    "id": "k2.rechnen.plusminus.ze-e",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.plusminus",
+    "exercise": "rechnen.plus-minus",
+    "params": {
+      "max": 100,
+      "forms": ["ZE+E"]
+    },
+    "title": "Zahl plus Einer"
+  },
+  {
+    "id": "k2.rechnen.plusminus.ze-z",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.plusminus",
+    "exercise": "rechnen.plus-minus",
+    "params": {
+      "max": 100,
+      "forms": ["ZE+Z"]
+    },
+    "title": "Zahl plus Zehner"
+  },
+  {
+    "id": "k2.rechnen.plusminus.ze-ze",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.plusminus",
+    "exercise": "rechnen.plus-minus",
+    "params": {
+      "max": 100,
+      "forms": ["ZE+ZE"]
+    },
+    "title": "Zahl plus Zahl"
+  },
+  {
+    "id": "k2.rechnen.strategien.strategie",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.strategien",
+    "exercise": "rechnen.paeckchen",
+    "params": {
+      "max": 100,
+      "mode": "strategie"
+    },
+    "title": "Geschickt rechnen"
+  },
+  {
+    "id": "k2.rechnen.strategien.pruefen",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.strategien",
+    "exercise": "rechnen.paeckchen",
+    "params": {
+      "max": 100,
+      "mode": "pruefen"
+    },
+    "title": "Stimmt die Rechnung?"
+  },
+  {
+    "id": "k2.rechnen.muster.reihen",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.plusminus",
+    "unit": "k2.rechnen.muster",
+    "exercise": "rechnen.reihen",
+    "params": {
+      "levels": [6]
+    },
+    "title": "Zahlenreihen bis 100"
+  },
+  {
+    "id": "k2.rechnen.malnehmen.bild",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.einmaleins",
+    "unit": "k2.rechnen.malnehmen",
+    "exercise": "rechnen.einmaleins",
+    "params": {
+      "mode": "bild"
+    },
+    "title": "Punktefeld und Malaufgabe"
+  },
+  {
+    "id": "k2.rechnen.kernaufgaben.einmaleins",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.einmaleins",
+    "unit": "k2.rechnen.kernaufgaben",
+    "exercise": "rechnen.einmaleins",
+    "params": {
+      "mode": "rechnen",
+      "reihen": [1, 2, 5, 10],
+      "quadrat": true,
+      "geteilt": true
+    },
+    "title": "Kernaufgaben mit 1, 2, 5 und 10"
+  },
+  {
+    "id": "k2.rechnen.einmaleins.einmaleins",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.einmaleins",
+    "unit": "k2.rechnen.einmaleins",
+    "exercise": "rechnen.einmaleins",
+    "params": {
+      "mode": "rechnen",
+      "reihen": [3, 4, 6, 7, 8, 9],
+      "geteilt": true
+    },
+    "title": "Einmaleins ableiten"
+  },
+  {
+    "id": "k2.rechnen.teilen.rest",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.einmaleins",
+    "unit": "k2.rechnen.teilen",
+    "exercise": "rechnen.einmaleins",
+    "params": {
+      "mode": "rest"
+    },
+    "title": "Verteilen mit Rest"
   }
 ]

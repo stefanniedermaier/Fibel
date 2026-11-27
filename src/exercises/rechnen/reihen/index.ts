@@ -48,12 +48,16 @@ export const LEVEL_ITEMS: Record<number, string[]> = {
   3: ['3-AB', '3-AAB', '3-ABB', '3-ABC', '3-AABB'],
   4: ['4-+1', '4-+2', '4--1'],
   5: ['5-+3', '5-+4', '5-+5', '5--2', '5--3'],
+  // Grade 2: sequences up to 100 (R2-2, R2-12).
+  6: ['6-+2', '6-+5', '6-+10', '6--10', '6--5'],
 }
-export const LEVELS = Object.keys(LEVEL_ITEMS).map(Number)
+/** Levels of the automatic progression (grade 1); level 6 only via `levels`. */
+export const LEVELS = Object.keys(LEVEL_ITEMS)
+  .map(Number)
+  .filter((l) => l <= 5)
 export const LEVEL_KEY = 'rechnen.reihen'
 const MASTERY_SHARE = 0.8
 const MASTERY_BOX = 3
-const MAX = 20
 
 const itemKeyOf = (part: string) => `rechnen.reihen:${part}`
 
@@ -129,9 +133,9 @@ function patternTask(level: number, unit: string, rng: Rng): ReihenData {
   }
 }
 
-function numberTask(step: number, rng: Rng): ReihenData {
+function numberTask(step: number, rng: Rng, MAX = 20): ReihenData {
   const LENGTH = 5
-  // Start so that every number stays within 0–20.
+  // Start so that every number stays within 0–MAX.
   const span = step * (LENGTH - 1)
   const start = step > 0 ? randomInt(rng, 0, MAX - span) : randomInt(rng, -span, MAX)
   const values = Array.from({ length: LENGTH }, (_, i) => start + i * step)
@@ -163,9 +167,12 @@ const spokenSequence = (data: ReihenData) =>
 export interface ReihenParams {
   /** Highest level offered (default: all). */
   maxLevel?: number
+  /** Exactly these levels, without the automatic progression (grade 2). */
+  levels?: number[]
 }
 
 function itemsFor(ctx: LearnerContext, params: ReihenParams): string[] {
+  if (params.levels) return params.levels.flatMap((l) => LEVEL_ITEMS[l] ?? [])
   const level = Math.min(
     reihenLevel(ctx.settings.levels, ctx.progress ?? new Map()),
     params.maxLevel ?? LEVELS.at(-1)!,
@@ -186,7 +193,9 @@ export const reihen: ExerciseModule<ReihenParams, ReihenData> = {
     const [levelText, rule] = [part.slice(0, part.indexOf('-')), part.slice(part.indexOf('-') + 1)]
     const level = Number(levelText)
     const isNumber = level >= 4
-    const data = isNumber ? numberTask(Number(rule), rng) : patternTask(level, rule, rng)
+    const data = isNumber
+      ? numberTask(Number(rule), rng, level >= 6 ? 100 : 20)
+      : patternTask(level, rule, rng)
     const atEnd = data.gap === data.tokens.length - 1
     const answer = data.tokens[data.gap]!
     const step = Number(rule)

@@ -11,7 +11,8 @@ import { type TippenData } from '../tippen'
 import TippenTask from '../tippen/TippenTask.vue'
 
 export interface DiktatParams {
-  source: 'merkwoerter' | 'lernwoerter'
+  /** 'haeufig': the frequent words of grade 2 (S2-9), with an example phrase. */
+  source: 'merkwoerter' | 'lernwoerter' | 'haeufig'
   wordGrade?: number
 }
 
@@ -49,7 +50,11 @@ function words(ctx: LearnerContext, params: DiktatParams): DiktatWord[] {
       spoken: w,
     }))
   }
-  return merkwoerter(ctx, params).map((w) => ({
+  const list =
+    params.source === 'haeufig'
+      ? readableWords(ctx, params).filter((w) => w.schwerpunkt === 'haeufig')
+      : merkwoerter(ctx, params)
+  return list.map((w) => ({
     key: w.id,
     text: w.text,
     spoken: w.beispiel ? `${w.text}. ${w.beispiel}` : w.text,
@@ -73,7 +78,7 @@ export const diktat: ExerciseModule<DiktatParams, TippenData> = {
       instruction: `Schreibe: ${word.spoken}`,
       caption: 'Hör zu und schreibe das Wort.',
       hint:
-        params.source === 'merkwoerter' ? 'Das ist ein Merkwort. Denk an das Wortbild.' : undefined,
+        params.source === 'lernwoerter' ? undefined : 'Das ist ein Merkwort. Denk an das Wortbild.',
       solution: `So schreibt man ${word.text}.`,
       data: {
         spoken: word.spoken,

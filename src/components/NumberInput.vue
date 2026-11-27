@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { cleanNumber } from '@/core/numbers'
 
 // Number answers on the device's own number keyboard. A transparent <input> lies over
@@ -7,9 +7,12 @@ import { cleanNumber } from '@/core/numbers'
 // green, wrong → shakes and clears. When the solution is revealed it is shown.
 const props = withDefaults(
   defineProps<{ answer: number; revealed: boolean; locked: boolean; maxDigits?: number }>(),
-  { maxDigits: 2 },
+  { maxDigits: undefined },
 )
 const emit = defineEmits<{ answer: [correct: boolean] }>()
+
+// At least two digits, more when the answer needs them (100, 1000).
+const digits = computed(() => props.maxDigits ?? Math.max(2, String(props.answer).length))
 
 const field = ref<HTMLInputElement>()
 const input = ref('')
@@ -48,7 +51,7 @@ watch(
 
 function onInput(e: Event) {
   state.value = 'idle'
-  setInput(cleanNumber((e.target as HTMLInputElement).value, props.maxDigits))
+  setInput(cleanNumber((e.target as HTMLInputElement).value, digits.value))
 }
 
 function submit() {
@@ -83,7 +86,7 @@ function submit() {
         enterkeyhint="done"
         autocomplete="off"
         aria-label="Ergebnis"
-        :maxlength="maxDigits"
+        :maxlength="digits"
         :disabled="disabled()"
         @input="onInput"
         @focus="focused = true"

@@ -9,7 +9,7 @@ const props = withDefaults(
 )
 
 const W = 600
-const PAD = 24
+const PAD = 34
 const x = (n: number) => PAD + ((n - props.from) / (props.to - props.from)) * (W - 2 * PAD)
 const ticks = computed(() =>
   Array.from({ length: props.to - props.from + 1 }, (_, i) => props.from + i),

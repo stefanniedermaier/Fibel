@@ -190,5 +190,23 @@
     "topic": "sache",
     "title": "Früher und heute",
     "icon": "🕯️"
+  },
+  {
+    "id": "rechnen.zahlen100",
+    "topic": "rechnen",
+    "title": "Zahlen bis 100",
+    "icon": "🔢"
+  },
+  {
+    "id": "rechnen.plusminus",
+    "topic": "rechnen",
+    "title": "Plus und Minus",
+    "icon": "➕"
+  },
+  {
+    "id": "rechnen.einmaleins",
+    "topic": "rechnen",
+    "title": "Einmaleins und Teilen",
+    "icon": "✖️"
   }
 ]

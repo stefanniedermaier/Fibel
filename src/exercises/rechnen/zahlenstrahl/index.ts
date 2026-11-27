@@ -17,11 +17,19 @@ export interface ZahlenstrahlParams {
 export interface ZahlenstrahlData {
   mode: 'ablesen' | 'nachbarn'
   max: number
+  /** Up to 100 only a section of 20 is shown, starting here. */
+  from: number
   /** ablesen: the marked number; nachbarn: the given number. */
   n: number
   side?: 'vor' | 'nach'
   choices: { key: string; label: string }[]
   correctKey: string
+}
+
+/** Up to 20 the whole line; up to 100 a section of 20 around the number. */
+export function section(n: number, max: number): number {
+  if (max <= 20) return 0
+  return Math.max(0, Math.min(max - 20, Math.floor(n / 10) * 10 - (n % 10 < 5 ? 10 : 0)))
 }
 
 export const zahlenstrahl: ExerciseModule<ZahlenstrahlParams, ZahlenstrahlData> = {
@@ -63,6 +71,7 @@ export const zahlenstrahl: ExerciseModule<ZahlenstrahlParams, ZahlenstrahlData> 
         data: {
           mode: 'ablesen',
           max: params.max,
+          from: section(n, params.max),
           n,
           choices: pick(n, [n - 1, n + 1, n - 2, n + 2]),
           correctKey: String(n),
@@ -80,6 +89,7 @@ export const zahlenstrahl: ExerciseModule<ZahlenstrahlParams, ZahlenstrahlData> 
       data: {
         mode: 'nachbarn',
         max: params.max,
+        from: section(n, params.max),
         n,
         side,
         choices: pick(answer, [side === 'vor' ? n + 1 : n - 1, answer - 1, answer + 1, n]),

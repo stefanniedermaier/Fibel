@@ -13,7 +13,11 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
       <template v-if="data.side === 'vor'"><span class="gap">?</span> , {{ data.n }}</template>
       <template v-else>{{ data.n }} , <span class="gap">?</span></template>
     </p>
-    <NumberLine :to="data.max" :mark="data.mode === 'ablesen' ? data.n : undefined" />
+    <NumberLine
+      :from="data.from"
+      :to="data.max > 20 ? data.from + 20 : data.max"
+      :mark="data.mode === 'ablesen' ? data.n : undefined"
+    />
     <ChoiceButtons
       :options="data.choices"
       :correct-key="data.correctKey"

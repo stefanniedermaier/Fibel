@@ -25,11 +25,26 @@ export function relationOf(a: number, b: number): Relation {
 
 const WORDS: Record<Relation, string> = { '<': 'kleiner als', '=': 'gleich', '>': 'größer als' }
 
+/**
+ * Up to 100 not every pair (that would be 10 000), but the interesting ones: neighbours,
+ * one ten apart, swapped digits (34 and 43) and equal numbers.
+ */
+function nearPairs(max: number): string[] {
+  const keys = new Set<string>()
+  for (let a = 10; a <= max; a++) {
+    const swapped = (a % 10) * 10 + Math.floor(a / 10)
+    for (const b of [a, a + 1, a - 1, a + 10, a - 10, swapped, a + 5])
+      if (b >= 1 && b <= max) keys.add(`rechnen.vergleichen:${a}-${b}`)
+  }
+  return [...keys]
+}
+
 export const vergleichen: ExerciseModule<VergleichenParams, VergleichenData> = {
   id: 'rechnen.vergleichen',
   topic: 'rechnen',
 
   items(_ctx, params) {
+    if (params.max > 20) return nearPairs(params.max)
     const keys: string[] = []
     // All pairs; about every tenth one is "=".
     for (let a = 1; a <= params.max; a++) {
