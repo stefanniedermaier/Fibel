@@ -4450,5 +4450,41 @@
       "mode": "wahl"
     },
     "title": "Im Kopf oder schriftlich?"
+  },
+  {
+    "id": "k4.rechnen.mal1.mal1",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k4.rechnen.mal1",
+    "exercise": "rechnen.schriftlich-malgeteilt",
+    "params": {
+      "art": "mal1"
+    },
+    "title": "3487 · 6"
+  },
+  {
+    "id": "k4.rechnen.mal2.mal2",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k4.rechnen.mal2",
+    "exercise": "rechnen.schriftlich-malgeteilt",
+    "params": {
+      "art": "mal2"
+    },
+    "title": "256 · 37"
+  },
+  {
+    "id": "k4.rechnen.geteilt.geteilt",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k4.rechnen.geteilt",
+    "exercise": "rechnen.schriftlich-malgeteilt",
+    "params": {
+      "art": "geteilt"
+    },
+    "title": "9156 : 7"
   }
 ]

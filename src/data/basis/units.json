@@ -1244,5 +1244,26 @@
     "topic": "rechnen",
     "title": "Rechenart wählen: Kopf oder schriftlich?",
     "term": 2
+  },
+  {
+    "id": "k4.rechnen.mal1",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Schriftlich multiplizieren mit einer Ziffer",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.mal2",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Schriftlich multiplizieren mit zwei Ziffern",
+    "term": 2
+  },
+  {
+    "id": "k4.rechnen.geteilt",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Schriftlich dividieren, auch mit Rest",
+    "term": 2
   }
 ]

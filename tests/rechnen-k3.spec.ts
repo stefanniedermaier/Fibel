@@ -261,3 +261,51 @@ describe('Rechnen Klasse 4', () => {
         }
   })
 })
+
+describe('Schriftlich mal und geteilt', () => {
+  const ctx4 = { land: 'DE-BY', grade: 4, settings: resolveDefaults('DE-BY', 4) }
+  const check = async (a: number, b: number, mal: boolean) => {
+    const { malLayout, geteiltLayout } = await import('@/exercises/rechnen/schriftlich/malgeteilt')
+    const l = mal ? malLayout(a, b) : geteiltLayout(a, b)
+    const used = new Set<string>()
+    for (const f of [...l.fixed, ...l.steps, ...l.steps.flatMap((s) => s.show ?? [])]) {
+      expect(f.col, `${a} ${b}`).toBeGreaterThanOrEqual(0)
+      expect(f.col, `${a} ${b}`).toBeLessThan(l.cols)
+      expect(f.row).toBeLessThan(l.rows)
+      const k = `${f.row}:${f.col}`
+      expect(used.has(k), `${a} ${mal ? '·' : ':'} ${b}: Feld ${k} doppelt`).toBe(false)
+      used.add(k)
+    }
+    if (mal) {
+      const last = Math.max(...l.steps.map((s) => s.row))
+      const digits = l.steps.filter((s) => s.row === last).sort((x, y) => x.col - y.col)
+      expect(Number(digits.map((s) => s.digit).join(''))).toBe(a * b)
+    } else {
+      const q = l.steps.filter((s) => !l.fixed.some((f) => f.text === 'R' && f.col < s.col))
+      expect(Number(q.map((s) => s.digit).join(''))).toBe(Math.floor(a / b))
+    }
+  }
+
+  it('Beispiele aus dem Plan', async () => {
+    await check(3487, 6, true)
+    await check(256, 37, true)
+    await check(9156, 7, false)
+    await check(23, 7, false)
+    await check(1001, 9, true)
+    const { geteiltLayout } = await import('@/exercises/rechnen/schriftlich/malgeteilt')
+    expect(geteiltLayout(9156, 7).result).toBe('1308')
+    expect(geteiltLayout(100, 7).result).toBe('14 R 2')
+    expect(geteiltLayout(9156, 7).steps[0]!.explanation).toContain('Wie oft passt sieben in neun?')
+  })
+
+  it('alle Aufgaben des Moduls', async () => {
+    const { malGeteilt, aufgabe } = await import('@/exercises/rechnen/schriftlich/malgeteilt')
+    for (const art of ['mal1', 'mal2', 'geteilt'] as const)
+      for (const key of malGeteilt.items(ctx4, { art }))
+        for (let seed = 0; seed < 15; seed++) {
+          const kind = key.split(':')[1]!.split('-')[1]!
+          const [a, b] = aufgabe(art, kind, createRng(seed))
+          await check(a, b, art !== 'geteilt')
+        }
+  })
+})
