@@ -502,5 +502,17 @@
     "topic": "messen",
     "title": "Sachrechnen mit Größen",
     "icon": "💬"
+  },
+  {
+    "id": "formen.plaene",
+    "topic": "formen",
+    "title": "Maßstab und Pläne",
+    "icon": "🗺️"
+  },
+  {
+    "id": "formen.kippen",
+    "topic": "formen",
+    "title": "Kippen und Parkette",
+    "icon": "🧊"
   }
 ]

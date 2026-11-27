@@ -1468,5 +1468,33 @@
     "topic": "uhr",
     "title": "Fahrpläne lesen",
     "term": 2
+  },
+  {
+    "id": "k4.formen.massstab",
+    "grade": 4,
+    "topic": "formen",
+    "title": "Vergrößern und verkleinern im Gitter",
+    "term": 1
+  },
+  {
+    "id": "k4.formen.plaene",
+    "grade": 4,
+    "topic": "formen",
+    "title": "Lagepläne und Maßstab",
+    "term": 2
+  },
+  {
+    "id": "k4.formen.kippen",
+    "grade": 4,
+    "topic": "formen",
+    "title": "Würfel kippen",
+    "term": 2
+  },
+  {
+    "id": "k4.formen.parkett",
+    "grade": 4,
+    "topic": "formen",
+    "title": "Parkettierungen und Ornamente",
+    "term": 2
   }
 ]

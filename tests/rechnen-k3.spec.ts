@@ -346,3 +346,33 @@ describe('Sachaufgaben und Muster Klasse 4', () => {
         }
   })
 })
+
+describe('Formen Klasse 4', () => {
+  const ctx4 = { land: 'DE-BY', grade: 4, settings: resolveDefaults('DE-BY', 4) }
+  it('Würfel kippen: Gegenseiten bleiben bei 7, viermal kippen führt zurück', async () => {
+    const { kippen } = await import('@/exercises/formen/kippen')
+    const w = { oben: 1, vorne: 2, rechts: 3 }
+    expect(kippen(w, 'rechts').oben).toBe(4)
+    expect(kippen(w, 'vorne').oben).toBe(5)
+    for (const r of ['rechts', 'links', 'vorne', 'hinten'] as const) {
+      let x = w
+      for (let i = 0; i < 4; i++) x = kippen(x, r)
+      expect(x).toEqual(w)
+      const y = kippen(w, r)
+      expect(new Set([y.oben, y.vorne, y.rechts, 7 - y.oben, 7 - y.vorne, 7 - y.rechts]).size).toBe(
+        6,
+      )
+    }
+    expect(kippen(kippen(w, 'rechts'), 'links')).toEqual(w)
+  })
+  it('Maßstab: doppelt so groß hat viermal so viele Kästchen', async () => {
+    const { skalieren, FIGUREN, massstab } = await import('@/exercises/formen/massstab')
+    const n = (f: string[]) => f.join('').split('#').length - 1
+    for (const f of Object.values(FIGUREN)) expect(n(skalieren(f, 2))).toBe(4 * n(f))
+    for (const mode of ['vergroessern', 'verkleinern', 'plan'] as const)
+      for (const key of massstab.items(ctx4, { mode })) {
+        const t = massstab.generate(ctx4, { mode }, key, createRng(1))
+        expect(t.data.choices.map((c) => c.key)).toContain(t.data.correctKey)
+      }
+  })
+})

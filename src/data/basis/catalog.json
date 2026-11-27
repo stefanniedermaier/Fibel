@@ -5164,5 +5164,112 @@
       "minuten": true
     },
     "title": "Wann kommt der Bus an?"
+  },
+  {
+    "id": "k4.formen.massstab.gross",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.plaene",
+    "unit": "k4.formen.massstab",
+    "exercise": "formen.massstab",
+    "params": {
+      "mode": "vergroessern"
+    },
+    "title": "Doppelt so groß (2 : 1)"
+  },
+  {
+    "id": "k4.formen.massstab.klein",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.plaene",
+    "unit": "k4.formen.massstab",
+    "exercise": "formen.massstab",
+    "params": {
+      "mode": "verkleinern"
+    },
+    "title": "Halb so groß (1 : 2)"
+  },
+  {
+    "id": "k4.formen.plaene.plan",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.plaene",
+    "unit": "k4.formen.plaene",
+    "exercise": "formen.massstab",
+    "params": {
+      "mode": "plan"
+    },
+    "title": "Wie weit ist es wirklich?"
+  },
+  {
+    "id": "k4.formen.plaene.lage",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.plaene",
+    "unit": "k4.formen.plaene",
+    "exercise": "formen.pfeilweg",
+    "params": {},
+    "title": "Wege beschreiben",
+    "weight": 0.4
+  },
+  {
+    "id": "k4.formen.kippen.einmal",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.kippen",
+    "unit": "k4.formen.kippen",
+    "exercise": "formen.kippen",
+    "params": {},
+    "title": "Einmal kippen"
+  },
+  {
+    "id": "k4.formen.kippen.zweimal",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.kippen",
+    "unit": "k4.formen.kippen",
+    "exercise": "formen.kippen",
+    "params": {
+      "zwei": true
+    },
+    "title": "Zweimal kippen"
+  },
+  {
+    "id": "k4.formen.kippen.gegenueber",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.kippen",
+    "unit": "k4.formen.kippen",
+    "exercise": "formen.netz",
+    "params": {
+      "mode": "gegenueber"
+    },
+    "title": "Würfelnetze wiederholen",
+    "weight": 0.4
+  },
+  {
+    "id": "k4.formen.parkett.parkett",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.kippen",
+    "unit": "k4.formen.parkett",
+    "exercise": "formen.winkel",
+    "params": {
+      "mode": "parkett"
+    },
+    "title": "Ohne Lücken auslegen"
+  },
+  {
+    "id": "k4.formen.parkett.ornament",
+    "grade": 4,
+    "topic": "formen",
+    "category": "formen.kippen",
+    "unit": "k4.formen.parkett",
+    "exercise": "formen.ornament",
+    "params": {
+      "regeln": ["kippen", "vier"]
+    },
+    "title": "Bandornamente",
+    "weight": 0.5
   }
 ]

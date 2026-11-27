@@ -91,6 +91,8 @@ import { malGeteilt } from './rechnen/schriftlich/malgeteilt'
 import { luecke4 } from './sprache/luecke4'
 import { redewendung } from './lesen/redewendung'
 import { teilerModul } from './rechnen/teiler'
+import { massstab } from './formen/massstab'
+import { kippenModul } from './formen/kippen'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -199,6 +201,8 @@ register(malGeteilt)
 register(luecke4)
 register(redewendung)
 register(teilerModul)
+register(massstab)
+register(kippenModul)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)
