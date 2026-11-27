@@ -31,6 +31,9 @@ import {
   zusammensetzen,
 } from './sprache/klasse2'
 import { lineal, schaetzen, umrechnen } from './messen/laenge'
+import { sachaufgaben } from './rechnen/sachaufgaben'
+import { zufall } from './rechnen/zufall'
+import { kombinatorik } from './rechnen/kombinatorik'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -146,6 +149,9 @@ register(zusammensetzen)
 register(lineal)
 register(umrechnen)
 register(schaetzen)
+register(sachaufgaben)
+register(zufall)
+register(kombinatorik)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

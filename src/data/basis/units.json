@@ -670,5 +670,33 @@
     "topic": "messen",
     "title": "Längen schätzen",
     "term": 2
+  },
+  {
+    "id": "k2.rechnen.sachaufgaben",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Sachaufgaben",
+    "term": 2
+  },
+  {
+    "id": "k2.rechnen.kombinatorik",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Kombinieren: Wie viele Möglichkeiten?",
+    "term": 2
+  },
+  {
+    "id": "k2.rechnen.daten",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Strichliste, Tabelle und Schaubild",
+    "term": 2
+  },
+  {
+    "id": "k2.rechnen.zufall",
+    "grade": 2,
+    "topic": "rechnen",
+    "title": "Zufall: sicher, möglich, unmöglich",
+    "term": 2
   }
 ]

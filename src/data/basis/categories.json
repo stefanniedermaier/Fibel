@@ -280,5 +280,11 @@
     "topic": "messen",
     "title": "Längen",
     "icon": "📏"
+  },
+  {
+    "id": "rechnen.sachaufgaben",
+    "topic": "rechnen",
+    "title": "Sachaufgaben und Daten",
+    "icon": "💬"
   }
 ]

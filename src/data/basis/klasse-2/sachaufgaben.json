@@ -1,0 +1,162 @@
+[
+  {
+    "id": "bus",
+    "image": "1F68C",
+    "text": "In einem Bus sitzen {a} Kinder. An der Haltestelle steigen {b} Kinder ein. Wie viele Kinder sitzen jetzt im Bus?",
+    "op": "+",
+    "a": 34,
+    "b": 12
+  },
+  {
+    "id": "kuchen",
+    "image": "1F370",
+    "text": "Mama backt {a} Muffins. Die Kinder essen {b} Muffins. Wie viele Muffins sind noch übrig?",
+    "op": "-",
+    "a": 24,
+    "b": 9
+  },
+  {
+    "id": "sticker",
+    "image": "2B50",
+    "text": "Lea hat {a} Sticker. Sie bekommt {b} neue dazu. Wie viele Sticker hat sie jetzt?",
+    "op": "+",
+    "a": 47,
+    "b": 25
+  },
+  {
+    "id": "buch",
+    "image": "1F4D6",
+    "text": "Ein Buch hat {a} Seiten. Tim hat schon {b} Seiten gelesen. Wie viele Seiten muss er noch lesen?",
+    "op": "-",
+    "a": 80,
+    "b": 35
+  },
+  {
+    "id": "aepfel",
+    "image": "1F34E",
+    "text": "Opa pflückt {a} Äpfel. Er schenkt dem Nachbarn {b} Äpfel. Wie viele Äpfel bleiben übrig?",
+    "op": "-",
+    "a": 56,
+    "b": 20
+  },
+  {
+    "id": "klasse",
+    "image": "1F3EB",
+    "text": "In der Klasse 2a sind {a} Kinder, in der 2b sind {b} Kinder. Wie viele Kinder sind es zusammen?",
+    "op": "+",
+    "a": 24,
+    "b": 26
+  },
+  {
+    "id": "geld",
+    "image": "1FA99",
+    "text": "Paul hat {a} Euro gespart. Er kauft ein Spiel für {b} Euro. Wie viel Geld hat er noch?",
+    "op": "-",
+    "a": 45,
+    "b": 18
+  },
+  {
+    "id": "murmeln",
+    "image": "1F535",
+    "text": "Ben hat {a} Murmeln. Er gewinnt {b} Murmeln dazu. Wie viele Murmeln hat er jetzt?",
+    "op": "+",
+    "a": 38,
+    "b": 7
+  },
+  {
+    "id": "zug",
+    "image": "1F686",
+    "text": "Im Zug sitzen {a} Leute. {b} Leute steigen aus. Wie viele Leute sind noch im Zug?",
+    "op": "-",
+    "a": 90,
+    "b": 40
+  },
+  {
+    "id": "stifte",
+    "image": "270F",
+    "text": "In einer Packung sind {a} Stifte. Wie viele Stifte sind in {b} Packungen?",
+    "op": "·",
+    "a": 6,
+    "b": 5
+  },
+  {
+    "id": "raeder",
+    "image": "1F6B2",
+    "text": "Ein Fahrrad hat {a} Räder. Wie viele Räder haben {b} Fahrräder?",
+    "op": "·",
+    "a": 2,
+    "b": 9
+  },
+  {
+    "id": "beine",
+    "image": "1F415",
+    "text": "Ein Hund hat {a} Beine. Wie viele Beine haben {b} Hunde?",
+    "op": "·",
+    "a": 4,
+    "b": 6
+  },
+  {
+    "id": "eier",
+    "image": "1F95A",
+    "text": "In einen Karton passen {a} Eier. Wie viele Eier sind in {b} Kartons?",
+    "op": "·",
+    "a": 10,
+    "b": 4
+  },
+  {
+    "id": "teilen-bonbons",
+    "image": "1F36C",
+    "text": "{a} Bonbons werden an {b} Kinder verteilt. Jedes Kind bekommt gleich viele. Wie viele bekommt jedes Kind?",
+    "op": ":",
+    "a": 20,
+    "b": 4
+  },
+  {
+    "id": "teilen-tische",
+    "image": "fibel-tisch",
+    "text": "{a} Kinder sitzen an Tischen. An jeden Tisch passen {b} Kinder. Wie viele Tische braucht man?",
+    "op": ":",
+    "a": 24,
+    "b": 6
+  },
+  {
+    "id": "teilen-blumen",
+    "image": "1F337",
+    "text": "Lena hat {a} Tulpen. Sie stellt in jede Vase {b} Tulpen. Wie viele Vasen braucht sie?",
+    "op": ":",
+    "a": 15,
+    "b": 5
+  },
+  {
+    "id": "teilen-kekse",
+    "image": "1F36A",
+    "text": "{a} Kekse werden auf {b} Teller verteilt. Wie viele Kekse liegen auf jedem Teller?",
+    "op": ":",
+    "a": 30,
+    "b": 10
+  },
+  {
+    "id": "pause",
+    "image": "23F0",
+    "text": "Die Pause dauert {a} Minuten. {b} Minuten sind schon vorbei. Wie viele Minuten dauert die Pause noch?",
+    "op": "-",
+    "a": 20,
+    "b": 8
+  },
+  {
+    "id": "baum",
+    "image": "1F333",
+    "text": "Ein Baum ist {a} Meter hoch. Ein Haus ist {b} Meter höher. Wie hoch ist das Haus?",
+    "op": "+",
+    "a": 12,
+    "b": 6
+  },
+  {
+    "id": "saft",
+    "image": "1F9C3",
+    "text": "Ein Saft kostet {a} Euro. Wie viel kosten {b} Säfte?",
+    "op": "·",
+    "a": 2,
+    "b": 7
+  }
+]

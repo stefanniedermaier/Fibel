@@ -2404,5 +2404,115 @@
     "exercise": "messen.schaetzen",
     "params": {},
     "title": "Schätzen"
+  },
+  {
+    "id": "k2.rechnen.sachaufgaben.rechnen",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.sachaufgaben",
+    "exercise": "rechnen.sachaufgaben",
+    "params": {
+      "mode": "rechnen"
+    },
+    "title": "Sachaufgaben lösen"
+  },
+  {
+    "id": "k2.rechnen.sachaufgaben.pruefen",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.sachaufgaben",
+    "exercise": "rechnen.sachaufgaben",
+    "params": {
+      "mode": "pruefen"
+    },
+    "title": "Kann das stimmen?"
+  },
+  {
+    "id": "k2.rechnen.kombinatorik.kombinatorik",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.kombinatorik",
+    "exercise": "rechnen.kombinatorik",
+    "params": {},
+    "title": "Wie viele Möglichkeiten?"
+  },
+  {
+    "id": "k2.rechnen.daten.striche",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "zaehlen",
+      "display": "striche"
+    },
+    "title": "Strichliste"
+  },
+  {
+    "id": "k2.rechnen.daten.tabelle",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "unterschied",
+      "display": "tabelle"
+    },
+    "title": "Tabelle: Wie viele mehr?"
+  },
+  {
+    "id": "k2.rechnen.daten.balken",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "zaehlen",
+      "display": "balken"
+    },
+    "title": "Schaubild lesen"
+  },
+  {
+    "id": "k2.rechnen.daten.balken-meiste",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "meiste",
+      "display": "balken"
+    },
+    "title": "Schaubild: Wovon am meisten?"
+  },
+  {
+    "id": "k2.rechnen.zufall.sicher",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.zufall",
+    "exercise": "rechnen.zufall",
+    "params": {
+      "mode": "sicher"
+    },
+    "title": "Sicher, möglich oder unmöglich?"
+  },
+  {
+    "id": "k2.rechnen.zufall.chance",
+    "grade": 2,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k2.rechnen.zufall",
+    "exercise": "rechnen.zufall",
+    "params": {
+      "mode": "chance"
+    },
+    "title": "Wo ist die Chance größer?"
   }
 ]

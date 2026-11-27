@@ -20,7 +20,16 @@ function bundles(count: number): number[] {
       <tbody>
         <tr v-for="r in data.rows" :key="r.key" :class="{ asked: r.key === data.asked }">
           <td><EmojiPicture :code="r.image" :size="48" /></td>
-          <td class="marks">
+          <td v-if="data.display === 'tabelle'" class="value">{{ r.count }}</td>
+          <td v-else-if="data.display === 'balken'" class="bar-cell">
+            <span class="bar" :style="{ width: `${r.count * 18}px` }" />
+            <span class="scale" aria-hidden="true">
+              <span v-for="t in 15" :key="t" class="tick" :class="{ five: t % 5 === 0 }">{{
+                t % 5 === 0 ? t : ''
+              }}</span>
+            </span>
+          </td>
+          <td v-else class="marks">
             <svg
               v-for="(n, i) in bundles(r.count)"
               :key="i"
@@ -91,6 +100,45 @@ function bundles(count: number): number[] {
 
 .marks {
   min-width: 140px;
+}
+
+.value {
+  min-width: 80px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bar-cell {
+  position: relative;
+  width: 280px;
+}
+
+.bar {
+  display: block;
+  height: 26px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  background: #61b2e4;
+}
+
+.scale {
+  display: flex;
+  margin-top: 2px;
+}
+
+.tick {
+  width: 18px;
+  height: 6px;
+  border-right: 1px solid #999;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: right;
+}
+
+.tick.five {
+  height: 10px;
+  border-right: 2px solid #333;
 }
 
 .number {
