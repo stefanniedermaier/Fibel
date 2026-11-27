@@ -2914,5 +2914,78 @@
       "mode": "rest"
     },
     "title": "Teilen mit Rest"
+  },
+  {
+    "id": "k3.rechnen.halbschriftlich-plus.plus-minus",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k3.rechnen.halbschriftlich-plus",
+    "exercise": "rechnen.halbschriftlich",
+    "params": {
+      "ops": ["+", "-"]
+    },
+    "title": "In Schritten rechnen"
+  },
+  {
+    "id": "k3.rechnen.halbschriftlich-mal.mal-geteilt",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k3.rechnen.halbschriftlich-mal",
+    "exercise": "rechnen.halbschriftlich",
+    "params": {
+      "ops": ["·", ":"]
+    },
+    "title": "Mal und geteilt in Schritten"
+  },
+  {
+    "id": "k3.rechnen.schriftlich-plus.plus",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k3.rechnen.schriftlich-plus",
+    "exercise": "rechnen.schriftlich",
+    "params": {
+      "op": "+"
+    },
+    "title": "Schriftlich addieren"
+  },
+  {
+    "id": "k3.rechnen.schriftlich-minus.minus",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k3.rechnen.schriftlich-minus",
+    "exercise": "rechnen.schriftlich",
+    "params": {
+      "op": "-",
+      "verfahren": "abziehen-entbuendeln"
+    },
+    "title": "Schriftlich subtrahieren"
+  },
+  {
+    "id": "k3.rechnen.ueberschlag.ungefaehr",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k3.rechnen.ueberschlag",
+    "exercise": "rechnen.ueberschlag",
+    "params": {
+      "mode": "ungefaehr"
+    },
+    "title": "Ungefähr wie viel?"
+  },
+  {
+    "id": "k3.rechnen.ueberschlag.pruefen",
+    "grade": 3,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k3.rechnen.ueberschlag",
+    "exercise": "rechnen.ueberschlag",
+    "params": {
+      "mode": "pruefen"
+    },
+    "title": "Kann das stimmen?"
   }
 ]

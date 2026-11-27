@@ -789,5 +789,40 @@
     "topic": "rechnen",
     "title": "Einmaleins: alle Reihen",
     "term": 1
+  },
+  {
+    "id": "k3.rechnen.halbschriftlich-plus",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Halbschriftlich addieren und subtrahieren",
+    "term": 1
+  },
+  {
+    "id": "k3.rechnen.halbschriftlich-mal",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Halbschriftlich multiplizieren und dividieren",
+    "term": 2
+  },
+  {
+    "id": "k3.rechnen.schriftlich-plus",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Schriftliche Addition",
+    "term": 2
+  },
+  {
+    "id": "k3.rechnen.schriftlich-minus",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Schriftliche Subtraktion (Abziehen mit Entbündeln)",
+    "term": 2
+  },
+  {
+    "id": "k3.rechnen.ueberschlag",
+    "grade": 3,
+    "topic": "rechnen",
+    "title": "Überschlag",
+    "term": 2
   }
 ]

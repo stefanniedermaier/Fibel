@@ -37,6 +37,9 @@ import { zufall } from './rechnen/zufall'
 import { kombinatorik } from './rechnen/kombinatorik'
 import { koerper } from './formen/koerper'
 import { flaeche } from './formen/flaeche'
+import { halbschriftlich } from './rechnen/halbschriftlich'
+import { ueberschlag } from './rechnen/ueberschlag'
+import { schriftlich } from './rechnen/schriftlich'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -158,6 +161,9 @@ register(zufall)
 register(kombinatorik)
 register(koerper)
 register(flaeche)
+register(halbschriftlich)
+register(ueberschlag)
+register(schriftlich)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

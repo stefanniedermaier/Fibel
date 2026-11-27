@@ -1,0 +1,89 @@
+/**
+ * R3-10 "Überschlag" (Mathematik 3/4, 1.2: "überprüfen Ergebnisse durch Überschlag"):
+ * - 'ungefaehr': 398 + 207 is about …? (round to hundreds)
+ * - 'pruefen': 398 + 207 = 905 – can that be right?
+ */
+import { numberWord } from '@/core/numbers'
+import { shuffle, type Rng } from '@/core/random'
+import type { ExerciseModule } from '../../types'
+import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
+import { itemPart } from '../shared'
+
+const round100 = (n: number) => Math.round(n / 100) * 100
+const rnd = (rng: Rng, lo: number, hi: number) => lo + Math.floor(rng() * (hi - lo + 1))
+
+export interface UeberschlagParams {
+  mode: 'ungefaehr' | 'pruefen'
+}
+
+export const ueberschlag: ExerciseModule<UeberschlagParams, WahlData> = {
+  id: 'rechnen.ueberschlag',
+  topic: 'rechnen',
+
+  items(_ctx, params) {
+    return ['+a', '+b', '+c', '-a', '-b', '-c'].map((k) => `rechnen.ueberschlag:${params.mode}${k}`)
+  },
+
+  generate(_ctx, params, itemKey, rng) {
+    const plus = itemPart(itemKey).includes('+')
+    // Numbers near a hundred, so rounding is easy: 398, 207, 612 …
+    const near = () => rnd(rng, 1, 8) * 100 + (rng() < 0.5 ? rnd(rng, 1, 15) : -rnd(rng, 1, 15))
+    let a = near()
+    let b = near()
+    if (plus) while (a + b > 1000) b = near()
+    else {
+      if (a < b) [a, b] = [b, a]
+      // Different hundreds, so the estimate is not zero.
+      while (round100(a) <= round100(b)) {
+        a = near()
+        b = near()
+        if (a < b) [a, b] = [b, a]
+      }
+    }
+    const exact = plus ? a + b : a - b
+    const estimate = plus ? round100(a) + round100(b) : round100(a) - round100(b)
+    const task = `${a} ${plus ? '+' : '−'} ${b}`
+    const how = `${round100(a)} ${plus ? '+' : '−'} ${round100(b)} = ${estimate}`
+    if (params.mode === 'ungefaehr') {
+      const wrong = [estimate + 100, estimate - 100, estimate + 200]
+        .filter((x) => x >= 0)
+        .slice(0, 2)
+      return {
+        instruction: `Überschlage: Wie viel ist ${numberWord(a)} ${plus ? 'plus' : 'minus'} ${numberWord(b)} ungefähr?`,
+        caption: `${task} ist ungefähr …`,
+        hint: 'Runde beide Zahlen auf volle Hunderter.',
+        solution: `Ungefähr ${estimate}: ${how}. Genau sind es ${exact}.`,
+        data: {
+          prompt: `${task} ≈ ?`,
+          correctKey: String(estimate),
+          choices: shuffle([estimate, ...wrong], rng).map((x) => ({
+            key: String(x),
+            label: String(x),
+          })),
+        },
+      }
+    }
+    // Plausible: the exact result. Not plausible: off by about a hundred or more.
+    const right = rng() < 0.5
+    const off = rnd(rng, 2, 4) * 100
+    const shown = right ? exact : exact - off >= 0 && rng() < 0.5 ? exact - off : exact + off
+    return {
+      instruction: `${task} = ${shown}. Kann das stimmen? Mach einen Überschlag.`,
+      caption: 'Kann das stimmen?',
+      hint: 'Runde beide Zahlen auf volle Hunderter und rechne.',
+      solution: right
+        ? `Das kann stimmen: ${how}.`
+        : `Das kann nicht stimmen: ${how}. Genau sind es ${exact}.`,
+      data: {
+        prompt: `${task} = ${shown}`,
+        correctKey: right ? 'ja' : 'nein',
+        choices: [
+          { key: 'ja', label: '👍 kann stimmen' },
+          { key: 'nein', label: '👎 kann nicht stimmen' },
+        ],
+      },
+    }
+  },
+
+  component: WahlTask,
+}

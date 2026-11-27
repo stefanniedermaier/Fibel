@@ -328,5 +328,11 @@
     "topic": "rechnen",
     "title": "Kopfrechnen und Einmaleins",
     "icon": "🧠"
+  },
+  {
+    "id": "rechnen.schriftlich",
+    "topic": "rechnen",
+    "title": "Halbschriftlich und schriftlich",
+    "icon": "✍️"
   }
 ]
