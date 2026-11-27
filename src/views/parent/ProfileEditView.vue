@@ -30,7 +30,7 @@ import { readableSentences } from '@/core/saetze'
 import { cleanLernwoerter } from '@/exercises/schreiben/diktat'
 import { say } from '@/core/speech'
 import { loadVoices, rankGermanVoices } from '@/core/tts'
-import { TOPICS, TOPIC_INFO, type ProfileSettings } from '@/core/types'
+import { TOPICS, TOPIC_INFO, type ProfileSettings, type Topic } from '@/core/types'
 import { useAppStore } from '@/stores/app'
 
 const props = defineProps<{ id?: string }>()
@@ -154,6 +154,28 @@ const unitGroups = computed(() =>
     units: unitsFor(form.grade, topic),
   })).filter((g) => g.units.length > 0),
 )
+
+// Focus of the week: one unit per subject gets about half of the mixed tasks.
+const DAY = 24 * 60 * 60 * 1000
+function focusOf(topic: Topic): string {
+  const f = settings.value.focus?.[topic]
+  return f && f.until > Date.now() ? f.unit : ''
+}
+function focusDays(topic: Topic): string {
+  const f = settings.value.focus?.[topic]
+  if (!f || f.until <= Date.now()) return ''
+  return new Date(f.until).toLocaleDateString('de-DE', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+  })
+}
+function setFocus(topic: Topic, unit: string, days = 7) {
+  const focus = { ...settings.value.focus }
+  if (unit) focus[topic] = { unit, until: Date.now() + days * DAY }
+  else delete focus[topic]
+  settings.value.focus = focus
+}
 
 function toggleUnit(id: string, on: boolean) {
   settings.value.units = { ...settings.value.units, [id]: on }
@@ -306,6 +328,28 @@ async function remove() {
           />
           {{ u.title }} <small class="muted">{{ u.term }}. Halbjahr</small>
         </label>
+        <label class="focus">
+          🚩 Schwerpunkt (kommt in „Alles gemischt“ etwa in jeder zweiten Aufgabe)
+          <select
+            :value="focusOf(g.topic)"
+            @change="setFocus(g.topic, ($event.target as HTMLSelectElement).value)"
+          >
+            <option value="">kein Schwerpunkt</option>
+            <option
+              v-for="u in g.units.filter((x) => unitEnabled(x.id, settings))"
+              :key="u.id"
+              :value="u.id"
+            >
+              {{ u.title }}
+            </option>
+          </select>
+        </label>
+        <p v-if="focusOf(g.topic)" class="muted small">
+          Gilt bis {{ focusDays(g.topic) }}.
+          <button type="button" class="link" @click="setFocus(g.topic, focusOf(g.topic), 14)">
+            Auf 2 Wochen verlängern
+          </button>
+        </p>
       </fieldset>
     </section>
 
@@ -568,6 +612,23 @@ select {
   border: 2px solid var(--accent);
   border-radius: 12px;
   background: #fff;
+}
+
+.focus {
+  margin-top: 8px;
+}
+
+.small {
+  font-size: 15px;
+}
+
+button.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent-strong);
+  font: inherit;
+  text-decoration: underline;
 }
 
 textarea {

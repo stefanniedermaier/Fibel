@@ -18,6 +18,8 @@ export interface LageParams {
 
 export interface LageData {
   mode: 'kreuz' | 'reihe'
+  /** reihe: a start flag before the first animal (for counting places). */
+  start?: boolean
   centre?: string
   /** kreuz: image per place; reihe: images from left to right. */
   places: { key: string; image: string; place: string }[]

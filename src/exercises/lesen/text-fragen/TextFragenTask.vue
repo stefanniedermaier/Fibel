@@ -1,0 +1,69 @@
+<script setup lang="ts">
+import ChoiceButtons from '@/components/ChoiceButtons.vue'
+import ScenePicture from '@/components/ScenePicture.vue'
+import SentenceText from '@/components/SentenceText.vue'
+import { useAppStore } from '@/stores/app'
+import type { TextFragenData } from './index'
+
+defineProps<{ data: TextFragenData; revealed: boolean; locked: boolean }>()
+const emit = defineEmits<{ answer: [correct: boolean] }>()
+const store = useAppStore()
+</script>
+
+<template>
+  <div class="task">
+    <div v-if="data.kind === 'lesen'" class="text card">
+      <SentenceText
+        v-for="(s, i) in data.sentences"
+        :key="i"
+        :tokens="s"
+        :coloring="data.coloring"
+        :size="34"
+      />
+    </div>
+    <button
+      v-else
+      type="button"
+      class="btn story"
+      aria-label="Geschichte nochmal hören"
+      @click="store.say(data.story)"
+    >
+      📖🔊 Geschichte nochmal hören
+    </button>
+    <ChoiceButtons
+      label-prefix="Bild"
+      :options="data.choices"
+      :correct-key="data.correctKey"
+      :revealed="revealed"
+      :locked="locked"
+      :min-width="110"
+      @answer="emit('answer', $event)"
+    >
+      <template #default="{ option }">
+        <ScenePicture :scene="option.scene" :size="64" />
+      </template>
+    </ChoiceButtons>
+  </div>
+</template>
+
+<style scoped>
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 20px;
+  max-width: 100%;
+}
+
+.story {
+  font-size: 22px;
+}
+</style>

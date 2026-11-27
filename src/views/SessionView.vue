@@ -6,7 +6,7 @@ import StarBurst from '@/components/StarBurst.vue'
 import { getCategory } from '@/core/content'
 import { updateProgress } from '@/core/leitner'
 import { numberWord } from '@/core/numbers'
-import { practiceEntries } from '@/core/practice'
+import { activeFocus, planFocused, planStumbles, practiceEntries } from '@/core/practice'
 import { createId, createRng } from '@/core/random'
 import {
   MAX_WRONG,
@@ -14,7 +14,6 @@ import {
   earnsCrown,
   earnsStar,
   outcomeOf,
-  planSession,
   type PlannedTask,
 } from '@/core/session'
 import { playCrown, playError, playSuccess } from '@/core/sounds'
@@ -29,9 +28,15 @@ const route = useRoute()
 const store = useAppStore()
 const grade = Number(route.params.grade)
 const topic = route.params.topic as Topic
-/** Chosen category; empty = everything mixed. */
+/** Chosen category; empty = everything mixed; 'stolpersteine' = what often went wrong. */
+const STUMBLES = 'stolpersteine'
 const category = (route.params.category as string | undefined) || undefined
-const categoryInfo = category ? getCategory(category) : undefined
+const stumbleUnit = category === STUMBLES
+const categoryInfo = stumbleUnit
+  ? { icon: '💪', title: 'Stolpersteine' }
+  : category
+    ? getCategory(category)
+    : undefined
 const rng = createRng()
 
 type Phase = 'loading' | 'empty' | 'running' | 'done'
@@ -59,15 +64,19 @@ async function start() {
   const settings = store.settings
   if (!profile || !settings) return
   const ctx = { land: profile.land, grade, settings }
-  const entries = practiceEntries(ctx, topic, getExercise, category, {
-    revision: grade < profile.grade,
-  })
+  const revision = grade < profile.grade
+  const chosen = stumbleUnit ? undefined : category
+  const entries = practiceEntries(ctx, topic, getExercise, chosen, { revision })
+  // The parents' focus of the week only shapes "Alles gemischt" of the own grade.
+  const focus = !category && !revision ? activeFocus(settings, topic) : undefined
   if (entries.length === 0) {
     phase.value = 'empty'
     return
   }
   progress = await loadProgress(await getDb(), profile.id)
-  tasks.value = planSession(entries, ctx, progress, settings.tasksPerUnit, rng, getExercise)
+  tasks.value = stumbleUnit
+    ? planStumbles(entries, ctx, progress, settings.tasksPerUnit, rng, getExercise)
+    : planFocused(entries, focus, ctx, progress, settings.tasksPerUnit, rng, getExercise)
   record = {
     id: createId(),
     profileId: profile.id,

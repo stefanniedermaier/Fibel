@@ -90,3 +90,26 @@ function syllablesIn(token: string, syllables: readonly string[]): string[] {
 }
 
 export const sceneKey = (s: Sentence) => s.scene.join(' ')
+
+/** "Oma malt. Opa kocht." → ["Oma malt.", "Opa kocht."] */
+export function splitSentences(text: string): string[] {
+  return text.match(/[^.!?]+[.!?]/g)?.map((s) => s.trim()) ?? [text]
+}
+
+/** Is every word of the text readable with the unlocked letters? */
+export function textReadable(
+  text: string,
+  land: LandCode,
+  grade: number,
+  settings: ProfileSettings,
+): boolean {
+  const readable = byText(wordsForSettings(resolveWords(land, grade), settings))
+  return wordsOf(text).every((t) => readable.has(t.toLowerCase()))
+}
+
+/** Tokens of a whole text, sentence by sentence (for SentenceText). */
+export function textTokens(text: string, words: readonly Word[]): SentenceToken[][] {
+  return splitSentences(text).map((s) =>
+    sentenceTokens({ id: '', text: s, group: '', scene: [] }, words),
+  )
+}

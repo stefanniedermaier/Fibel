@@ -2,6 +2,8 @@
 import { anlaut } from './lesen/anlaut'
 import { blitzlesen } from './lesen/blitzlesen'
 import { lautposition } from './lesen/lautposition'
+import { reihenfolge } from './lesen/reihenfolge'
+import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
 import { reimen } from './lesen/reimen'
@@ -11,7 +13,10 @@ import { silbenKlatschen } from './lesen/silben-klatschen'
 import { wortBild } from './lesen/wort-bild'
 import { formenErkennen } from './formen/erkennen'
 import { lageBegriffe } from './formen/lage'
+import { geld } from './messen/geld'
+import { laengenVergleichen } from './messen/vergleichen'
 import { mengeLegen } from './rechnen/menge-legen'
+import { ordnungszahl } from './rechnen/ordnungszahl'
 import { mengen } from './rechnen/mengen'
 import { paeckchen } from './rechnen/paeckchen'
 import { plusMinus } from './rechnen/plus-minus'
@@ -28,6 +33,10 @@ import { buchstabenLegen, luecke } from './schreiben/buchstaben-legen'
 import { kaestchen } from './schreiben/kaestchen'
 import { nachspuren } from './schreiben/nachspuren'
 import { silbenLegen } from './schreiben/silben-legen'
+import { grossKlein } from './sprache/gross-klein'
+import { satzzeichen } from './sprache/satzzeichen'
+import { vokale } from './sprache/vokale'
+import { kalender } from './uhr/kalender'
 import { uhrLesen } from './uhr/lesen'
 import { uhrStellen } from './uhr/stellen'
 import type { ExerciseModule } from './types'
@@ -50,6 +59,8 @@ register(anlautFremd)
 register(blitzlesen)
 register(satzBild)
 register(lautposition)
+register(textFragen)
+register(reihenfolge)
 register(mengen)
 register(mengeLegen)
 register(vergleichen)
@@ -62,6 +73,10 @@ register(paeckchen)
 register(sachaufgabe)
 register(lageBegriffe)
 register(formenErkennen)
+register(ordnungszahl)
+register(geld)
+register(laengenVergleichen)
+register(kalender)
 register(uhrLesen)
 register(uhrStellen)
 register(silbenLegen)
@@ -72,6 +87,9 @@ register(nachspuren)
 register(kaestchen)
 register(abschreiben)
 register(diktat)
+register(vokale)
+register(satzzeichen)
+register(grossKlein)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

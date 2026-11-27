@@ -3086,5 +3086,26 @@
     "syllables": ["Wol", "ken"],
     "wortart": "nomen",
     "category": "natur"
+  },
+  {
+    "id": "hat",
+    "text": "hat",
+    "syllables": ["hat"],
+    "wortart": "verb",
+    "category": "tun"
+  },
+  {
+    "id": "nudeln",
+    "text": "Nudeln",
+    "syllables": ["Nu", "deln"],
+    "wortart": "nomen",
+    "category": "essen"
+  },
+  {
+    "id": "den",
+    "text": "den",
+    "syllables": ["den"],
+    "wortart": "klein",
+    "category": "woerter"
   }
 ]

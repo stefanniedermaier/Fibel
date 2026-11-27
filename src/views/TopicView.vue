@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { practiceCategories } from '@/core/practice'
+import {
+  MIN_STUMBLES,
+  activeFocus,
+  practiceCategories,
+  practiceEntries,
+  stumbleItems,
+} from '@/core/practice'
+import { getDb, loadProgress } from '@/core/storage/db'
 import { stopSpeaking } from '@/core/speech'
 import { TOPIC_INFO, type Topic } from '@/core/types'
 import { getExercise } from '@/exercises/registry'
@@ -25,9 +32,41 @@ const categories = computed(() => {
   return practiceCategories(ctx, topic, getExercise, { revision: revision.value })
 })
 
+// Categories that contain the parents' focus of the week get a flag.
+const focusCategories = computed(() => {
+  const profile = store.active
+  const settings = store.settings
+  if (!profile || !settings || revision.value) return new Set<string>()
+  const unit = activeFocus(settings, topic)
+  if (!unit) return new Set<string>()
+  const ctx = { land: profile.land, grade, settings }
+  return new Set(
+    practiceEntries(ctx, topic, getExercise)
+      .filter((e) => e.unit === unit)
+      .map((e) => e.category),
+  )
+})
+
+// "Stolpersteine": only shown when enough tasks often went wrong.
+const stumbleCount = ref(0)
+async function countStumbles() {
+  const profile = store.active
+  const settings = store.settings
+  if (!profile || !settings) return
+  const ctx = { land: profile.land, grade, settings }
+  const entries = practiceEntries(ctx, topic, getExercise, undefined, { revision: revision.value })
+  const progress = await loadProgress(await getDb(), profile.id)
+  stumbleCount.value = stumbleItems(ctx, entries, progress, getExercise).length
+}
+const showStumbles = computed(() => stumbleCount.value >= MIN_STUMBLES)
+
 /** "Alles gemischt, Hören oder Wörter lesen?" – the child cannot read the names yet. */
 const question = computed(() => {
-  const names = ['Alles gemischt', ...categories.value.map((c) => c.title)]
+  const names = [
+    'Alles gemischt',
+    ...categories.value.map((c) => c.title),
+    ...(showStumbles.value ? ['Stolpersteine'] : []),
+  ]
   const last = names.pop()
   return `Was möchtest du üben? ${names.join(', ')} oder ${last}?`
 })
@@ -36,7 +75,10 @@ function speak() {
   void store.say(question.value)
 }
 
-onMounted(speak)
+onMounted(async () => {
+  await countStumbles()
+  speak()
+})
 onUnmounted(stopSpeaking)
 </script>
 
@@ -66,6 +108,15 @@ onUnmounted(stopSpeaking)
       >
         <span class="icon" aria-hidden="true">{{ c.icon }}</span>
         <span>{{ c.title }}</span>
+        <span v-if="focusCategories.has(c.id)" class="flag" title="Schwerpunkt">🚩</span>
+      </RouterLink>
+      <RouterLink
+        v-if="showStumbles"
+        class="tile stumbles"
+        :to="{ name: 'session', params: { grade, topic, category: 'stolpersteine' } }"
+      >
+        <span class="icon" aria-hidden="true">💪</span>
+        <span>Stolpersteine</span>
       </RouterLink>
     </div>
   </main>
@@ -121,6 +172,21 @@ h1 small {
 .tile:active {
   transform: translateY(4px);
   box-shadow: 0 2px 0 var(--accent-strong);
+}
+
+.tile {
+  position: relative;
+}
+
+.flag {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 28px;
+}
+
+.tile.stumbles {
+  border-style: dashed;
 }
 
 .tile.mixed {

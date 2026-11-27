@@ -15,7 +15,11 @@ import {
 import { graphemes } from './graphemes'
 import { MIN_ANLAUT_GROUP, groupBy, listenEntries, resolveListenWords } from './hoeren'
 import { HAEUFIGKEITSWOERTER, checkLauttreu } from './lauttreue'
-import { baseSentences, sceneKey, unknownWords } from './saetze'
+import { baseSentences, sceneKey, unknownWords, wordsOf } from './saetze'
+import ablaeufe from '@/data/basis/klasse-1/ablaeufe.json'
+import fragesaetze from '@/data/basis/klasse-1/fragesaetze.json'
+import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
+import texte from '@/data/basis/klasse-1/texte.json'
 import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
 import { WORTARTEN, type LandCode, type Syllable, type Word } from './types'
 import { LETTERS, applyWordOverlay, baseSyllables, baseWordEntries, resolveWords } from './words'
@@ -87,6 +91,53 @@ export function checkSentences(grade: number, words: readonly Word[], images: Re
   }
   for (const [group, set] of scenes) {
     if (set.size < 3) problems.push(`Klasse ${grade}, Satzgruppe „${group}“: weniger als 3 Bilder`)
+  }
+  return problems
+}
+
+/** Texts, questions, picture sequences and story problems of grade 1. */
+export function checkGrade1Extras(words: readonly Word[], images: ReadonlySet<string>) {
+  const problems: string[] = []
+  const known = new Set(words.map((w) => w.text.toLowerCase()))
+  const unknown = (text: string) => wordsOf(text).filter((w) => !known.has(w.toLowerCase()))
+  const ids = new Set<string>()
+  for (const t of texte) {
+    const where = `Text „${t.id}“`
+    if (ids.has(t.id)) problems.push(`${where}: ID doppelt`)
+    ids.add(t.id)
+    if (t.kind === 'lesen')
+      for (const w of unknown(t.text)) problems.push(`${where}: Wort „${w}“ fehlt im Wörterbuch`)
+    if (t.fragen.length === 0) problems.push(`${where}: ohne Frage`)
+    for (const f of t.fragen) {
+      if (f.choices.length !== 3) problems.push(`${where}, „${f.frage}“: nicht genau 3 Antworten`)
+      if (!f.choices[f.answer]) problems.push(`${where}, „${f.frage}“: richtige Antwort fehlt`)
+      const scenes = new Set(f.choices.map((c) => c.scene.join(' ')))
+      if (scenes.size !== f.choices.length) problems.push(`${where}, „${f.frage}“: gleiche Bilder`)
+      for (const c of f.choices)
+        for (const code of c.scene)
+          if (!images.has(code)) problems.push(`${where}: Bild ${code} fehlt`)
+    }
+  }
+  for (const s of fragesaetze) {
+    if (!s.text.endsWith('?')) problems.push(`Fragesatz „${s.text}“: ohne Fragezeichen`)
+    for (const w of unknown(s.text))
+      problems.push(`Fragesatz „${s.text}“: Wort „${w}“ fehlt im Wörterbuch`)
+  }
+  for (const a of ablaeufe) {
+    const where = `Ablauf „${a.id}“`
+    if (a.images.length < 3) problems.push(`${where}: weniger als 3 Bilder`)
+    if (a.images.length !== a.steps.length)
+      problems.push(`${where}: Bilder und Schritte passen nicht`)
+    if (new Set(a.images).size !== a.images.length) problems.push(`${where}: Bild doppelt`)
+    for (const code of a.images)
+      if (!images.has(code)) problems.push(`${where}: Bild ${code} fehlt`)
+  }
+  for (const g of rechengeschichten) {
+    const where = `Rechengeschichte „${g.id}“`
+    if (!images.has(g.image)) problems.push(`${where}: Bild ${g.image} fehlt`)
+    for (const text of [g.plus, g.minus])
+      if (!text.includes('{a}') || !text.includes('{b}') || !text.endsWith('?'))
+        problems.push(`${where}: braucht {a}, {b} und eine Frage am Ende`)
   }
   return problems
 }
@@ -292,6 +343,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
         const words = applyWordOverlay(baseWordEntries(grade), grade, overlay)
         problems.push(...checkWords(words, grade, land.name, images))
         problems.push(...checkSentences(grade, words, images))
+        if (grade === 1) problems.push(...checkGrade1Extras(words, images))
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

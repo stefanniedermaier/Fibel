@@ -21,7 +21,8 @@
     "levels": {},
     "units": {},
     "flashMs": 1500,
-    "lernwoerter": []
+    "lernwoerter": [],
+    "focus": {}
   },
   "grades": {
     "1": {

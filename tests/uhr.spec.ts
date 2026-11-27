@@ -193,10 +193,12 @@ describe('Uhr stellen', () => {
 })
 
 describe('Uhr als eigener Bereich', () => {
-  it('hat in Klasse 1 und 2 genau „Uhr lesen“ und „Uhr stellen“', () => {
+  it('hat in Klasse 1 und 2 „Uhr lesen“ und „Uhr stellen“ (Klasse 1 dazu den Kalender)', () => {
     for (const grade of [1, 2]) {
       const ids = availableEntries(catalogFor('DE-BY', grade, 'uhr'), ctxFor(grade), getExercise)
-      expect(ids.map((e) => e.id)).toEqual([`k${grade}.uhr.lesen`, `k${grade}.uhr.stellen`])
+        .filter((e) => e.category === 'uhr.uhrzeit')
+        .map((e) => e.id)
+      expect(ids).toEqual([`k${grade}.uhr.lesen`, `k${grade}.uhr.stellen`])
     }
   })
 

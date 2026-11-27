@@ -1,0 +1,74 @@
+[
+  {
+    "id": "huhn",
+    "title": "Vom Ei zum Huhn",
+    "images": ["1F95A", "1F423", "1F424", "1F414"],
+    "steps": ["das Ei", "das Küken schlüpft", "das Küken", "das Huhn"]
+  },
+  {
+    "id": "blume",
+    "title": "Vom Samen zur Blume",
+    "images": ["1F330", "1F331", "1F33F", "1F33B"],
+    "steps": ["der Samen", "der Keim", "die Pflanze", "die Blume"]
+  },
+  {
+    "id": "apfel",
+    "title": "Vom Apfelbaum",
+    "images": ["1F338", "1F34F", "1F34E"],
+    "steps": ["die Blüte", "der grüne Apfel", "der rote Apfel"]
+  },
+  {
+    "id": "tag",
+    "title": "Ein Tag",
+    "images": ["1F305", "2600", "1F307", "1F319"],
+    "steps": ["der Morgen", "der Mittag", "der Abend", "die Nacht"]
+  },
+  {
+    "id": "leben",
+    "title": "Vom Baby zum alten Menschen",
+    "images": ["1F476", "1F9D2", "1F9D1", "1F9D3"],
+    "steps": ["das Baby", "das Kind", "der Erwachsene", "der alte Mensch"]
+  },
+  {
+    "id": "schneemann",
+    "title": "Der Schneemann",
+    "images": ["2744", "26C4", "2600", "1F4A7"],
+    "steps": ["es schneit", "der Schneemann", "die Sonne scheint", "er schmilzt"]
+  },
+  {
+    "id": "morgen",
+    "title": "Am Morgen",
+    "images": ["1F634", "23F0", "1FAA5", "1F392"],
+    "steps": ["schlafen", "der Wecker klingelt", "Zähne putzen", "zur Schule gehen"]
+  },
+  {
+    "id": "regen",
+    "title": "Nach dem Regen",
+    "images": ["2601", "1F327", "1F308"],
+    "steps": ["Wolken ziehen auf", "es regnet", "der Regenbogen"]
+  },
+  {
+    "id": "haende",
+    "title": "Hände waschen",
+    "images": ["1F6B0", "1F9FC", "1F9FB"],
+    "steps": ["Wasser an", "einseifen", "abtrocknen"]
+  },
+  {
+    "id": "kuchen",
+    "title": "Kuchen backen",
+    "images": ["1F95A", "1F963", "1F382", "1F370"],
+    "steps": ["die Zutaten", "den Teig rühren", "der Kuchen", "ein Stück Kuchen"]
+  },
+  {
+    "id": "brot",
+    "title": "Ein Pausenbrot",
+    "images": ["1F35E", "1F9C8", "1F96A"],
+    "steps": ["das Brot", "die Butter", "das fertige Brot"]
+  },
+  {
+    "id": "geschenk",
+    "title": "Der Geburtstag",
+    "images": ["1F4E6", "1F381", "1F389"],
+    "steps": ["die Schachtel", "das Geschenk", "die Feier"]
+  }
+]

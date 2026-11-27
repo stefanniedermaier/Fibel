@@ -14,6 +14,13 @@
     "term": 1
   },
   {
+    "id": "k1.lesen.zuhoeren",
+    "grade": 1,
+    "topic": "lesen",
+    "title": "Zuhören",
+    "term": 1
+  },
+  {
     "id": "k1.lesen.woerter",
     "grade": 1,
     "topic": "lesen",
@@ -26,6 +33,20 @@
     "topic": "lesen",
     "title": "Sätze lesen",
     "term": 1
+  },
+  {
+    "id": "k1.lesen.geschichten",
+    "grade": 1,
+    "topic": "lesen",
+    "title": "Bildergeschichten ordnen",
+    "term": 1
+  },
+  {
+    "id": "k1.lesen.texte",
+    "grade": 1,
+    "topic": "lesen",
+    "title": "Kurze Texte lesen",
+    "term": 2
   },
   {
     "id": "k1.schreiben.buchstaben",
@@ -47,6 +68,20 @@
     "topic": "schreiben",
     "title": "Merkwörter und Lernwörter",
     "term": 1
+  },
+  {
+    "id": "k1.schreiben.vokale",
+    "grade": 1,
+    "topic": "schreiben",
+    "title": "Selbstlaute",
+    "term": 2
+  },
+  {
+    "id": "k1.schreiben.saetze",
+    "grade": 1,
+    "topic": "schreiben",
+    "title": "Satzanfang und Satzzeichen",
+    "term": 2
   },
   {
     "id": "k1.rechnen.zahlen-10",
@@ -105,11 +140,32 @@
     "term": 1
   },
   {
+    "id": "k1.rechnen.geld",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Geld bis 20 €",
+    "term": 2
+  },
+  {
+    "id": "k1.rechnen.laengen",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Länger und kürzer",
+    "term": 2
+  },
+  {
     "id": "k1.uhr.uhrzeit",
     "grade": 1,
     "topic": "uhr",
     "title": "Volle und halbe Stunden",
     "term": 1
+  },
+  {
+    "id": "k1.uhr.kalender",
+    "grade": 1,
+    "topic": "uhr",
+    "title": "Wochentage und Monate",
+    "term": 2
   },
   {
     "id": "k2.uhr.uhrzeit",

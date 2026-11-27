@@ -1,0 +1,756 @@
+[
+  {
+    "id": "oma-opa-mama",
+    "kind": "lesen",
+    "text": "Oma malt. Opa kocht. Mama badet.",
+    "fragen": [
+      {
+        "frage": "Wer kocht?",
+        "choices": [
+          {
+            "scene": ["1F475"]
+          },
+          {
+            "scene": ["1F474"]
+          },
+          {
+            "scene": ["1F469"]
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "frage": "Was macht Oma?",
+        "choices": [
+          {
+            "scene": ["1F3A8"]
+          },
+          {
+            "scene": ["1F373"]
+          },
+          {
+            "scene": ["1F6C1"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "einkauf",
+    "kind": "lesen",
+    "text": "Mama kauft eine Melone. Opa kauft eine Banane. Oma kauft Tomaten.",
+    "fragen": [
+      {
+        "frage": "Was kauft Opa?",
+        "choices": [
+          {
+            "scene": ["1F349"]
+          },
+          {
+            "scene": ["1F34C"]
+          },
+          {
+            "scene": ["1F345"]
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "frage": "Was kauft Mama?",
+        "choices": [
+          {
+            "scene": ["1F349"]
+          },
+          {
+            "scene": ["1F34C"]
+          },
+          {
+            "scene": ["1F345"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "rodeln",
+    "kind": "lesen",
+    "text": "Opa ist alt. Er rodelt. Es ist kalt.",
+    "fragen": [
+      {
+        "frage": "Was macht Opa?",
+        "choices": [
+          {
+            "scene": ["1F6F7"]
+          },
+          {
+            "scene": ["1F6C1"]
+          },
+          {
+            "scene": ["1F3A8"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "enten-esel",
+    "kind": "lesen",
+    "text": "Da sind drei Enten. Da ist ein Esel. Der Esel ist grau.",
+    "fragen": [
+      {
+        "frage": "Wie viele Enten sind da?",
+        "choices": [
+          {
+            "scene": ["1F986", "1F986"]
+          },
+          {
+            "scene": ["1F986", "1F986", "1F986"]
+          },
+          {
+            "scene": ["1F986", "1F986", "1F986", "1F986", "1F986"]
+          }
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "mila-leo-ela",
+    "kind": "lesen",
+    "text": "Mila hat eine Rakete. Leo hat ein Auto. Ela hat ein Ufo.",
+    "fragen": [
+      {
+        "frage": "Was hat Leo?",
+        "choices": [
+          {
+            "scene": ["1F697"]
+          },
+          {
+            "scene": ["1F680"]
+          },
+          {
+            "scene": ["1F6F8"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was hat Mila?",
+        "choices": [
+          {
+            "scene": ["1F697"]
+          },
+          {
+            "scene": ["1F680"]
+          },
+          {
+            "scene": ["1F6F8"]
+          }
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "nudeln",
+    "kind": "lesen",
+    "text": "Oma kocht Nudeln. Opa rechnet. Mama duscht.",
+    "fragen": [
+      {
+        "frage": "Was kocht Oma?",
+        "choices": [
+          {
+            "scene": ["1F35D"]
+          },
+          {
+            "scene": ["1F957"]
+          },
+          {
+            "scene": ["1F35E"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wer duscht?",
+        "choices": [
+          {
+            "scene": ["1F475"]
+          },
+          {
+            "scene": ["1F474"]
+          },
+          {
+            "scene": ["1F469"]
+          }
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "rose-tulpe",
+    "kind": "lesen",
+    "text": "Leo malt eine Rose. Sie ist rot. Mila malt eine Tulpe.",
+    "fragen": [
+      {
+        "frage": "Was malt Mila?",
+        "choices": [
+          {
+            "scene": ["1F339"]
+          },
+          {
+            "scene": ["1F337"]
+          },
+          {
+            "scene": ["1F33B"]
+          }
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "zelt",
+    "kind": "lesen",
+    "text": "Ole ist im Zelt. Ela ist im Haus. Tim ist im Bus.",
+    "fragen": [
+      {
+        "frage": "Wo ist Ole?",
+        "choices": [
+          {
+            "scene": ["26FA"]
+          },
+          {
+            "scene": ["1F3E0"]
+          },
+          {
+            "scene": ["1F68C"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wo ist Tim?",
+        "choices": [
+          {
+            "scene": ["26FA"]
+          },
+          {
+            "scene": ["1F3E0"]
+          },
+          {
+            "scene": ["1F68C"]
+          }
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": "hase-igel",
+    "kind": "lesen",
+    "text": "Da ist ein Hase. Er hat eine Rose. Da ist ein Igel. Er hat eine Melone.",
+    "fragen": [
+      {
+        "frage": "Was hat der Igel?",
+        "choices": [
+          {
+            "scene": ["1F349"]
+          },
+          {
+            "scene": ["1F339"]
+          },
+          {
+            "scene": ["1F34C"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "salat",
+    "kind": "lesen",
+    "text": "Mama kocht. Lina malt. Papa kauft Salat.",
+    "fragen": [
+      {
+        "frage": "Was kauft Papa?",
+        "choices": [
+          {
+            "scene": ["1F957"]
+          },
+          {
+            "scene": ["1F35D"]
+          },
+          {
+            "scene": ["1F370"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wer kocht?",
+        "choices": [
+          {
+            "scene": ["1F469"]
+          },
+          {
+            "scene": ["1F468"]
+          },
+          {
+            "scene": ["1F474"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "garten",
+    "kind": "hoeren",
+    "text": "Lena geht in den Garten. Sie gießt die Blumen. Plötzlich sieht sie einen Igel unter dem Busch.",
+    "fragen": [
+      {
+        "frage": "Was sieht Lena?",
+        "choices": [
+          {
+            "scene": ["1F994"]
+          },
+          {
+            "scene": ["1F407"]
+          },
+          {
+            "scene": ["1F42D"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wo ist Lena?",
+        "choices": [
+          {
+            "scene": ["1F3E1"]
+          },
+          {
+            "scene": ["1F3EB"]
+          },
+          {
+            "scene": ["1F6D2"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "kuchen",
+    "kind": "hoeren",
+    "text": "Tom backt mit Papa einen Kuchen. Zuerst rühren sie den Teig. Dann kommt der Kuchen in den Ofen. Am Ende essen sie ihn mit Oma.",
+    "fragen": [
+      {
+        "frage": "Was backen Tom und Papa?",
+        "choices": [
+          {
+            "scene": ["1F382"]
+          },
+          {
+            "scene": ["1F35E"]
+          },
+          {
+            "scene": ["1F355"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Mit wem essen sie den Kuchen?",
+        "choices": [
+          {
+            "scene": ["1F475"]
+          },
+          {
+            "scene": ["1F46E"]
+          },
+          {
+            "scene": ["1F476"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "regen",
+    "kind": "hoeren",
+    "text": "Es regnet. Mia zieht ihre Gummistiefel an und nimmt den Regenschirm. Draußen springt sie in jede Pfütze.",
+    "fragen": [
+      {
+        "frage": "Wie ist das Wetter?",
+        "choices": [
+          {
+            "scene": ["1F327"]
+          },
+          {
+            "scene": ["2600"]
+          },
+          {
+            "scene": ["2744"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was nimmt Mia mit?",
+        "choices": [
+          {
+            "scene": ["2602"]
+          },
+          {
+            "scene": ["1F576"]
+          },
+          {
+            "scene": ["26BD"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "morgen",
+    "kind": "hoeren",
+    "text": "Am Morgen klingelt der Wecker. Ben putzt sich die Zähne und isst ein Müsli. Dann geht er mit seinem Hund spazieren.",
+    "fragen": [
+      {
+        "frage": "Was isst Ben?",
+        "choices": [
+          {
+            "scene": ["1F963"]
+          },
+          {
+            "scene": ["1F355"]
+          },
+          {
+            "scene": ["1F366"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Mit wem geht Ben spazieren?",
+        "choices": [
+          {
+            "scene": ["1F415"]
+          },
+          {
+            "scene": ["1F41F"]
+          },
+          {
+            "scene": ["1F426"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "zoo",
+    "kind": "hoeren",
+    "text": "Im Zoo sieht Emma einen Elefanten. Er trinkt Wasser mit seinem Rüssel. Daneben schläft ein Löwe.",
+    "fragen": [
+      {
+        "frage": "Wer trinkt Wasser?",
+        "choices": [
+          {
+            "scene": ["1F418"]
+          },
+          {
+            "scene": ["1F981"]
+          },
+          {
+            "scene": ["1F992"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was macht der Löwe?",
+        "choices": [
+          {
+            "scene": ["1F634"]
+          },
+          {
+            "scene": ["1F3C3"]
+          },
+          {
+            "scene": ["1F356"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "meer",
+    "kind": "hoeren",
+    "text": "Opa und Lisa fahren mit dem Zug ans Meer. Am Strand bauen sie eine Sandburg. Dann essen sie ein Eis.",
+    "fragen": [
+      {
+        "frage": "Womit fahren sie?",
+        "choices": [
+          {
+            "scene": ["1F686"]
+          },
+          {
+            "scene": ["1F697"]
+          },
+          {
+            "scene": ["2708"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was essen sie am Strand?",
+        "choices": [
+          {
+            "scene": ["1F366"]
+          },
+          {
+            "scene": ["1F34E"]
+          },
+          {
+            "scene": ["1F968"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "herbst",
+    "kind": "hoeren",
+    "text": "Im Herbst fallen die Blätter von den Bäumen. Paul sammelt Kastanien. Daraus bastelt er ein Tier.",
+    "fragen": [
+      {
+        "frage": "Was sammelt Paul?",
+        "choices": [
+          {
+            "scene": ["1F330"]
+          },
+          {
+            "scene": ["1F353"]
+          },
+          {
+            "scene": ["1F41A"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Welche Jahreszeit ist es?",
+        "choices": [
+          {
+            "scene": ["1F342"]
+          },
+          {
+            "scene": ["1F338"]
+          },
+          {
+            "scene": ["26C4"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "nest",
+    "kind": "hoeren",
+    "text": "Ein Vogel baut ein Nest im Baum. Bald liegen drei Eier darin. Dann schlüpfen die Küken.",
+    "fragen": [
+      {
+        "frage": "Wo baut der Vogel sein Nest?",
+        "choices": [
+          {
+            "scene": ["1F333"]
+          },
+          {
+            "scene": ["1F3E0"]
+          },
+          {
+            "scene": ["1F697"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wie viele Eier liegen im Nest?",
+        "choices": [
+          {
+            "scene": ["1F95A", "1F95A"]
+          },
+          {
+            "scene": ["1F95A", "1F95A", "1F95A"]
+          },
+          {
+            "scene": ["1F95A", "1F95A", "1F95A", "1F95A"]
+          }
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "geburtstag",
+    "kind": "hoeren",
+    "text": "Nina hat Geburtstag. Sie wird sieben Jahre alt. Ihre Freunde bringen Geschenke mit, und es gibt Kuchen mit Kerzen.",
+    "fragen": [
+      {
+        "frage": "Was feiert Nina?",
+        "choices": [
+          {
+            "scene": ["1F382"]
+          },
+          {
+            "scene": ["1F384"]
+          },
+          {
+            "scene": ["1F423"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was bringen die Freunde mit?",
+        "choices": [
+          {
+            "scene": ["1F381"]
+          },
+          {
+            "scene": ["2602"]
+          },
+          {
+            "scene": ["1F4DA"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "schneemann",
+    "kind": "hoeren",
+    "text": "Es schneit. Jonas und Mama bauen einen Schneemann. Er bekommt eine Karotte als Nase.",
+    "fragen": [
+      {
+        "frage": "Was bauen sie?",
+        "choices": [
+          {
+            "scene": ["26C4"]
+          },
+          {
+            "scene": ["1F3F0"]
+          },
+          {
+            "scene": ["1F680"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was ist die Nase?",
+        "choices": [
+          {
+            "scene": ["1F955"]
+          },
+          {
+            "scene": ["1F34C"]
+          },
+          {
+            "scene": ["1F34E"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "feuerwehr",
+    "kind": "hoeren",
+    "text": "Die Feuerwehr fährt mit Blaulicht durch die Stadt. Bei einem Haus brennt es. Die Feuerwehrleute löschen das Feuer mit Wasser.",
+    "fragen": [
+      {
+        "frage": "Wer kommt?",
+        "choices": [
+          {
+            "scene": ["1F692"]
+          },
+          {
+            "scene": ["1F68C"]
+          },
+          {
+            "scene": ["1F69C"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Womit löschen sie das Feuer?",
+        "choices": [
+          {
+            "scene": ["1F4A7"]
+          },
+          {
+            "scene": ["1F342"]
+          },
+          {
+            "scene": ["1F9F8"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "hamster",
+    "kind": "hoeren",
+    "text": "Lea hat einen Hamster. Er wohnt in einem Käfig. Jeden Tag gibt Lea ihm frisches Wasser und Körner.",
+    "fragen": [
+      {
+        "frage": "Welches Tier hat Lea?",
+        "choices": [
+          {
+            "scene": ["1F439"]
+          },
+          {
+            "scene": ["1F430"]
+          },
+          {
+            "scene": ["1F422"]
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was gibt Lea dem Hamster?",
+        "choices": [
+          {
+            "scene": ["1F4A7"]
+          },
+          {
+            "scene": ["1F36B"]
+          },
+          {
+            "scene": ["1F35F"]
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  }
+]

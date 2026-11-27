@@ -29,7 +29,8 @@ function choose(key: string) {
 </script>
 
 <template>
-  <div class="task" :class="data.mode">
+  <div class="task" :class="[data.mode, { many: data.places.length > 4 }]">
+    <span v-if="data.start" class="flag" aria-hidden="true">🏁</span>
     <template v-if="data.mode === 'kreuz'">
       <span class="centre" aria-hidden="true"
         ><EmojiPicture :code="data.centre!" :size="110"
@@ -102,6 +103,24 @@ function choose(key: string) {
 .reihe .animal :deep(img) {
   width: clamp(48px, 17vw, 72px);
   height: auto;
+}
+
+.reihe.many {
+  gap: 4px;
+}
+
+.reihe.many .animal {
+  padding: 3px;
+  border-width: 4px;
+}
+
+.reihe.many .animal :deep(img) {
+  width: clamp(36px, 11vw, 64px);
+}
+
+.flag {
+  align-self: center;
+  font-size: clamp(28px, 8vw, 44px);
 }
 
 .animal.wrong {

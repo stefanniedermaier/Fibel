@@ -91,10 +91,12 @@ export function weightedShares(count: number, weights: readonly number[], rng: R
   if (total <= 0) return sharesOf(count, weights.length, rng)
   const exact = weights.map((w) => (Math.max(0, w) / total) * count)
   const shares = exact.map(Math.floor)
+  // Remainders rounded, so floating-point noise does not decide ties (random instead).
+  const remainder = (i: number) => Math.round(((exact[i] ?? 0) - (shares[i] ?? 0)) * 1e6)
   const order = shuffle(
     weights.map((_, i) => i),
     rng,
-  ).sort((a, b) => (exact[b] ?? 0) - (shares[b] ?? 0) - ((exact[a] ?? 0) - (shares[a] ?? 0)))
+  ).sort((a, b) => remainder(b) - remainder(a))
   let rest = count - shares.reduce((sum, s) => sum + s, 0)
   for (const i of order) {
     if (rest <= 0) break

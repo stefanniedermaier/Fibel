@@ -72,6 +72,28 @@
     "title": "Passt der Satz zum Bild?"
   },
   {
+    "id": "k1.lesen.texte",
+    "grade": 1,
+    "topic": "lesen",
+    "category": "lesen.saetze",
+    "unit": "k1.lesen.texte",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen"
+    },
+    "title": "Kurze Texte lesen"
+  },
+  {
+    "id": "k1.lesen.bildergeschichten",
+    "grade": 1,
+    "topic": "lesen",
+    "category": "lesen.saetze",
+    "unit": "k1.lesen.geschichten",
+    "exercise": "lesen.reihenfolge",
+    "params": {},
+    "title": "Was passiert zuerst?"
+  },
+  {
     "id": "k1.lesen.anlaut",
     "grade": 1,
     "topic": "lesen",
@@ -144,6 +166,18 @@
     "title": "Wo hörst du den Laut?"
   },
   {
+    "id": "k1.lesen.zuhoeren",
+    "grade": 1,
+    "topic": "lesen",
+    "category": "lesen.hoeren",
+    "unit": "k1.lesen.zuhoeren",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "hoeren"
+    },
+    "title": "Geschichten hören"
+  },
+  {
     "id": "k1.schreiben.silben-legen",
     "grade": 1,
     "topic": "schreiben",
@@ -202,6 +236,16 @@
     "title": "Buchstaben nachspuren"
   },
   {
+    "id": "k1.schreiben.vokale",
+    "grade": 1,
+    "topic": "schreiben",
+    "category": "schreiben.buchstaben",
+    "unit": "k1.schreiben.vokale",
+    "exercise": "sprache.vokale",
+    "params": {},
+    "title": "Selbstlaute finden"
+  },
+  {
     "id": "k1.schreiben.kaestchen",
     "grade": 1,
     "topic": "schreiben",
@@ -251,6 +295,26 @@
     "title": "Lernwörter der Woche"
   },
   {
+    "id": "k1.schreiben.satzzeichen",
+    "grade": 1,
+    "topic": "schreiben",
+    "category": "schreiben.saetze",
+    "unit": "k1.schreiben.saetze",
+    "exercise": "sprache.satzzeichen",
+    "params": {},
+    "title": "Punkt oder Fragezeichen?"
+  },
+  {
+    "id": "k1.schreiben.gross-klein",
+    "grade": 1,
+    "topic": "schreiben",
+    "category": "schreiben.saetze",
+    "unit": "k1.schreiben.saetze",
+    "exercise": "sprache.gross-klein",
+    "params": {},
+    "title": "Groß oder klein?"
+  },
+  {
     "id": "k1.rechnen.mengen-10",
     "grade": 1,
     "topic": "rechnen",
@@ -285,6 +349,16 @@
       "max": 10
     },
     "title": "Zahlen vergleichen bis 10"
+  },
+  {
+    "id": "k1.rechnen.ordnungszahl",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.zahlen",
+    "unit": "k1.rechnen.zahlen-10",
+    "exercise": "rechnen.ordnungszahl",
+    "params": {},
+    "title": "Der Wievielte?"
   },
   {
     "id": "k1.rechnen.ziffern",
@@ -510,6 +584,42 @@
     "title": "Ecken zählen"
   },
   {
+    "id": "k1.rechnen.geld-erkennen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.groessen",
+    "unit": "k1.rechnen.geld",
+    "exercise": "messen.geld",
+    "params": {
+      "max": 20,
+      "mode": "erkennen"
+    },
+    "title": "Wie viel Geld ist das?"
+  },
+  {
+    "id": "k1.rechnen.geld-legen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.groessen",
+    "unit": "k1.rechnen.geld",
+    "exercise": "messen.geld",
+    "params": {
+      "max": 20,
+      "mode": "legen"
+    },
+    "title": "Geld legen"
+  },
+  {
+    "id": "k1.rechnen.laengen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.groessen",
+    "unit": "k1.rechnen.laengen",
+    "exercise": "messen.vergleichen",
+    "params": {},
+    "title": "Länger oder kürzer?"
+  },
+  {
     "id": "k1.uhr.lesen",
     "grade": 1,
     "topic": "uhr",
@@ -532,6 +642,42 @@
       "maxLevel": 2
     },
     "title": "Uhr stellen"
+  },
+  {
+    "id": "k1.uhr.wochentage",
+    "grade": 1,
+    "topic": "uhr",
+    "category": "uhr.kalender",
+    "unit": "k1.uhr.kalender",
+    "exercise": "uhr.kalender",
+    "params": {
+      "mode": "wochentage"
+    },
+    "title": "Wochentage"
+  },
+  {
+    "id": "k1.uhr.monate",
+    "grade": 1,
+    "topic": "uhr",
+    "category": "uhr.kalender",
+    "unit": "k1.uhr.kalender",
+    "exercise": "uhr.kalender",
+    "params": {
+      "mode": "monate"
+    },
+    "title": "Monate"
+  },
+  {
+    "id": "k1.uhr.gestern-morgen",
+    "grade": 1,
+    "topic": "uhr",
+    "category": "uhr.kalender",
+    "unit": "k1.uhr.kalender",
+    "exercise": "uhr.kalender",
+    "params": {
+      "mode": "gestern"
+    },
+    "title": "Gestern, heute, morgen"
   },
   {
     "id": "k2.uhr.lesen",
