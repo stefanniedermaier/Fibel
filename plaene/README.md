@@ -1,14 +1,15 @@
-# Pläne nach Lehrplan: Klassen 2–4 und HSU in Klasse 1
+# Pläne nach Lehrplan: Abgleich Klasse 1, Klassen 2–4 und HSU
 
 Stand: 27.11.2026. Grundlage ist der **LehrplanPLUS Grundschule Bayern** (abgerufen am 27.11.2026) mit den „Ergänzenden Informationen“ des ISB zum Grundwortschatz. Bayern ist das Standard-Bundesland der App (PLAN.md, Abschnitt 4).
 
-| Datei                              | Inhalt                                                                          |
-| ---------------------------------- | ------------------------------------------------------------------------------- |
-| [klasse-2.md](klasse-2.md)         | Fächer und Unterrichtseinheiten für Klasse 2                                    |
-| [klasse-3.md](klasse-3.md)         | Fächer und Unterrichtseinheiten für Klasse 3                                    |
-| [klasse-4.md](klasse-4.md)         | Fächer und Unterrichtseinheiten für Klasse 4                                    |
-| [hsu-klasse-1.md](hsu-klasse-1.md) | Machbarkeits- und Umsetzungsplan für Heimat- und Sachunterricht (HSU), Klasse 1 |
-| diese Datei                        | was für alle Klassen gilt: Lehrplan-Aufbau, Bereiche, Bausteine, Reihenfolge    |
+| Datei                                        | Inhalt                                                                                         |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [klasse-2.md](klasse-2.md)                   | Fächer und Unterrichtseinheiten für Klasse 2                                                   |
+| [klasse-3.md](klasse-3.md)                   | Fächer und Unterrichtseinheiten für Klasse 3                                                   |
+| [klasse-4.md](klasse-4.md)                   | Fächer und Unterrichtseinheiten für Klasse 4                                                   |
+| [klasse-1-abgleich.md](klasse-1-abgleich.md) | Abgleich der heutigen App mit dem Lehrplan 1/2 und Plan für die fehlenden Inhalte der Klasse 1 |
+| [hsu-klasse-1.md](hsu-klasse-1.md)           | Machbarkeits- und Umsetzungsplan für Heimat- und Sachunterricht (HSU), Klasse 1                |
+| diese Datei                                  | was für alle Klassen gilt: Lehrplan-Aufbau, Bereiche, Bausteine, Reihenfolge                   |
 
 ---
 
@@ -90,15 +91,17 @@ Aufwand wie in PLAN.md: S = klein, M = mittel, L = groß.
 
 ### Lesen
 
-| Modul               | Ablauf                                                                                       | Klassen | Aufwand |
-| ------------------- | -------------------------------------------------------------------------------------------- | ------- | ------- |
-| `lesen.blitzlesen`  | Wort erscheint kurz (Dauer einstellbar), dann Bild oder Wort wählen. Übt den Sichtwortschatz | 2–3     | S       |
-| `lesen.satz-bild`   | Satz lesen, passendes Bild wählen; Ablenker unterscheiden sich in einem Wort (auf/unter)     | 2       | M       |
-| `lesen.satz-luecke` | Lückensatz, passendes Wort wählen (auch Bindewörter in Klasse 3)                             | 2–3     | S       |
-| `lesen.reihenfolge` | Bilder oder Sätze einer Geschichte bzw. Anleitung in die richtige Reihenfolge tippen         | 2–3     | S       |
-| `lesen.text-fragen` | kurzer Text, danach 3 Fragen mit Auswahl; auch Tabellen und Schaubilder                      | 2–4     | M       |
-| `lesen.textstelle`  | Frage lesen, im Text den Satz antippen, der die Antwort enthält („am Text belegen“)          | 3–4     | M       |
-| `lesen.redewendung` | Redewendung oder Sprichwort, passende Bedeutung wählen                                       | 3–4     | S       |
+| Modul                | Ablauf                                                                                                                     | Klassen | Aufwand |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
+| `lesen.blitzlesen`   | Wort erscheint kurz (Dauer einstellbar), dann Bild oder Wort wählen. Übt den Sichtwortschatz                               | 1–3     | S       |
+| `lesen.satz-bild`    | Satz lesen, passendes Bild wählen; Ablenker unterscheiden sich in einem Wort (auf/unter); Modus „Passt der Satz zum Bild?“ | 1–2     | M       |
+| `lesen.satz-luecke`  | Lückensatz, passendes Wort wählen (auch Bindewörter in Klasse 3)                                                           | 2–3     | S       |
+| `lesen.reihenfolge`  | Bilder oder Sätze einer Geschichte bzw. Anleitung in die richtige Reihenfolge tippen                                       | 1–3     | S       |
+| `lesen.text-fragen`  | kurzer Text, danach 3 Fragen mit Auswahl; auch Tabellen und Schaubilder                                                    | 1–4     | M       |
+| `lesen.zuhoeren`     | kurze Geschichte wird vorgelesen, danach Fragen mit Bildern als Antwort                                                    | 1–2     | M       |
+| `lesen.lautposition` | Wo hörst du den Laut? Am Anfang, in der Mitte oder am Ende                                                                 | 1       | S       |
+| `lesen.textstelle`   | Frage lesen, im Text den Satz antippen, der die Antwort enthält („am Text belegen“)                                        | 3–4     | M       |
+| `lesen.redewendung`  | Redewendung oder Sprichwort, passende Bedeutung wählen                                                                     | 3–4     | S       |
 
 ### Schreiben und Sprache
 
@@ -107,17 +110,19 @@ Aufwand wie in PLAN.md: S = klein, M = mittel, L = groß.
 | vorhandene Schreib-Module                    | Silben legen, Buchstaben legen, Lückenwort, ABC-Tastatur mit Wortlisten der Klasse und Filter `phenomena`                             | 2–4     | S       |
 | `schreiben.schreibung`                       | Welche Schreibung stimmt? (Biene / Bine / Bihne); Ablenker aus typischen Fehlern des Phänomens                                        | 2–4     | M       |
 | `schreiben.ableiten`                         | Verlängern und ableiten: „Hund – d oder t? → Hunde“, „Bäume – ä oder e? → Baum“                                                       | 2–4     | M       |
-| `schreiben.diktat`                           | Wort oder Satz hören und tippen (Lernwörter-Diktat); Großschreibung und Satzzeichen zählen in Klasse 3–4                              | 2–4     | M       |
+| `schreiben.diktat`                           | Wort oder Satz hören und tippen (Lernwörter-Diktat); Großschreibung und Satzzeichen zählen in Klasse 3–4                              | 1–4     | M       |
 | `schreiben.abc`                              | Alphabet ordnen, „Welches Wort steht im Wörterbuch weiter vorn?“, ab Klasse 3 nach 2./3. Buchstaben, Grundform suchen (lief → laufen) | 2–4     | M       |
 | `schreiben.trennen`                          | Wort am Zeilenende trennen (Was-ser, di-cke)                                                                                          | 3–4     | S       |
+| `schreiben.abschreiben`                      | Wort ansehen, verdecken, tippen (Schau – merk – schreib; in Englisch „Read, look up and write down“)                                  | 1–4     | S       |
+| `schreiben.nachspuren` (neu: Ziffern)        | Ziffern 0–9 nachspuren, Katalog-Eintrag im Bereich Rechnen                                                                            | 1       | S–M     |
 | `schreiben.nachspuren` (neu: Schreibschrift) | Nachspuren in Vereinfachter Ausgangsschrift oder Schulausgangsschrift, mit Verbindungen                                               | 2       | L       |
-| `sprache.wortart`                            | Wort (allein oder im Satz) einer Wortart zuordnen; Kategorien je Klasse: Nomen/Verb/Adjektiv, später Artikel, Pronomen                | 2–4     | M       |
+| `sprache.wortart`                            | Wort (allein oder im Satz) einer Wortart zuordnen; Kategorien je Klasse: Nomen/Verb/Adjektiv, später Artikel, Pronomen                | 1–4     | M       |
 | `sprache.artikel`                            | der, die oder das?                                                                                                                    | 2       | S       |
 | `sprache.formen`                             | Wortform bilden: Mehrzahl, Personalform (ich male, du malst), Steigerung (alt – älter), Zeitform                                      | 2–4     | M       |
-| `sprache.gross-klein`                        | im Satz alle Wörter antippen, die großgeschrieben werden                                                                              | 2–3     | M       |
-| `sprache.satzzeichen`                        | passendes Satzschlusszeichen setzen; in Klasse 4 die Zeichen der wörtlichen Rede                                                      | 2–4     | M       |
+| `sprache.gross-klein`                        | im Satz alle Wörter antippen, die großgeschrieben werden                                                                              | 1–3     | M       |
+| `sprache.satzzeichen`                        | passendes Satzschlusszeichen setzen; in Klasse 4 die Zeichen der wörtlichen Rede                                                      | 1–4     | M       |
 | `sprache.wortfamilie`                        | Welches Wort gehört nicht zur Familie? Wortstamm antippen                                                                             | 2–4     | S       |
-| `sprache.wortbildung`                        | zusammensetzen (Haus + Tür), Vorsilben und Nachsilben (lernen – verlernen, klug – Klugheit)                                           | 2–4     | M       |
+| `sprache.wortbildung`                        | zusammensetzen (Haus + Tür), Vorsilben und Nachsilben (lernen – verlernen, klug – Klugheit)                                           | 1–4     | M       |
 | `sprache.wortfeld`                           | passendes Wort aus einem Wortfeld wählen (sagen: flüstern, rufen)                                                                     | 2–4     | S       |
 | `sprache.satzglieder`                        | Umstellprobe, Subjekt und Prädikat, Objekte, Orts- und Zeitangaben antippen                                                           | 3–4     | L       |
 | `sprache.fall`                               | Artikel und Endung im Satz wählen (dem/den, ein/einen)                                                                                | 4       | M       |
@@ -127,31 +132,33 @@ Aufwand wie in PLAN.md: S = klein, M = mittel, L = groß.
 | Modul                     | Ablauf                                                                                                                                                           | Klassen | Aufwand |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
 | vorhandene Rechen-Module  | Mengen, Vergleichen, Zahlenhaus, Plus/Minus, Reihen mit größerem Zahlenraum                                                                                      | 2–4     | S       |
-| `rechnen.stellenwert`     | Zahl ↔ Zehnerstangen/Einerwürfel/Hunderterplatten ↔ Stufenschrift (3Z 4E) ↔ Zahlwort; Stellenwerttafel bis zur Million                                           | 2–4     | M       |
-| `rechnen.zahlenstrahl`    | Zahl am Zahlenstrahl ablesen oder einordnen; Nachbarzahlen, -zehner, -hunderter                                                                                  | 2–4     | M       |
+| `rechnen.stellenwert`     | Zahl ↔ Zehnerstangen/Einerwürfel/Hunderterplatten ↔ Stufenschrift (3Z 4E) ↔ Zahlwort; Stellenwerttafel bis zur Million                                           | 1–4     | M       |
+| `rechnen.zahlenstrahl`    | Zahl am Zahlenstrahl ablesen oder einordnen; Nachbarzahlen, -zehner, -hunderter                                                                                  | 1–4     | M       |
 | `rechnen.einmaleins`      | Mal und Geteilt, Kernaufgaben oder alle Reihen, mit Punktefeld als Hilfe; Division mit Rest                                                                      | 2–4     | M       |
-| `rechnen.paeckchen`       | strukturierte Päckchen: Tausch-, Umkehr-, Nachbaraufgaben; Muster fortsetzen                                                                                     | 2–4     | S       |
+| `rechnen.paeckchen`       | strukturierte Päckchen: Tausch-, Umkehr-, Nachbaraufgaben; Muster fortsetzen                                                                                     | 1–4     | S       |
 | `rechnen.halbschriftlich` | Rechenweg in Schritten mit Zwischenergebnissen (schrittweise, stellenweise, 7 · 34 = 7 · 30 + 7 · 4)                                                             | 3–4     | M       |
 | `rechnen.schriftlich`     | schriftliche Verfahren in der Stellenwerttafel, Ziffer für Ziffer mit Übertrag: Addition, Subtraktion (Abziehverfahren mit Entbündeln), Multiplikation, Division | 3–4     | L       |
 | `rechnen.ueberschlag`     | Welches Ergebnis kann stimmen? Überschlag wählen                                                                                                                 | 3–4     | S       |
-| `rechnen.sachaufgabe`     | Sachaufgabe mit Bild, wird vorgelesen: Rechnung wählen, dann Ergebnis; „Kann das stimmen?“                                                                       | 2–4     | M       |
-| `rechnen.daten`           | Strichliste, Tabelle, Säulen- und Balkendiagramm, Fahrplan ablesen                                                                                               | 2–4     | M       |
+| `rechnen.sachaufgabe`     | Sachaufgabe mit Bild, wird vorgelesen: Rechnung wählen, dann Ergebnis; „Kann das stimmen?“                                                                       | 1–4     | M       |
+| `rechnen.daten`           | Strichliste, Tabelle, Säulen- und Balkendiagramm, Fahrplan ablesen                                                                                               | 1–4     | M       |
 | `rechnen.zufall`          | sicher, möglich, unmöglich; wo ist die Chance größer? (Säckchen, Glücksrad, Würfel)                                                                              | 2–4     | S       |
 | `rechnen.kombinatorik`    | Wie viele Möglichkeiten gibt es? (2 T-Shirts, 3 Hosen)                                                                                                           | 2–4     | S       |
-| `formen.lage`             | Lagebegriffe: links/rechts, über/unter, vor/hinter, zwischen                                                                                                     | (1) 2   | S       |
-| `formen.erkennen`         | Flächen- und Körperformen benennen, Ecken/Kanten/Flächen zählen, rechter Winkel                                                                                  | 2–3     | M       |
-| `formen.symmetrie`        | Ist die Figur achsensymmetrisch? Spiegelhälfte im Gitter ergänzen                                                                                                | 2–4     | M       |
+| `rechnen.ordnungszahl`    | Das wievielte Tier in der Reihe ist der Hase?                                                                                                                    | 1       | S       |
+| `messen.vergleichen`      | länger, kürzer, gleich lang (ohne Maßeinheit)                                                                                                                    | 1       | S       |
+| `formen.lage`             | Lagebegriffe: links/rechts, über/unter, vor/hinter, zwischen                                                                                                     | 1–2     | S       |
+| `formen.erkennen`         | Flächen- und Körperformen benennen, Ecken/Kanten/Flächen zählen, rechter Winkel                                                                                  | 1–3     | M       |
+| `formen.symmetrie`        | Ist die Figur achsensymmetrisch? Spiegelhälfte im Gitter ergänzen                                                                                                | 1–4     | M       |
 | `formen.flaeche`          | Flächen durch Auslegen vergleichen, Umfang an Kästchen zählen                                                                                                    | 2–4     | S       |
 | `formen.netz`             | Ist das ein Würfelnetz? Welche Fläche liegt gegenüber?                                                                                                           | 3–4     | M       |
 | `formen.wuerfelgebaeude`  | Bauplan ↔ Würfelgebäude, Würfel zählen (Rauminhalt)                                                                                                              | 3–4     | L       |
 | `formen.massstab`         | Figur im Gitter vergrößern/verkleinern (2 : 1), Länge im Plan ↔ Wirklichkeit                                                                                     | 4       | M       |
-| `messen.geld`             | Münzen und Scheine erkennen, Betrag legen, wechseln, vergleichen, Rückgeld                                                                                       | 2–4     | M       |
+| `messen.geld`             | Münzen und Scheine erkennen, Betrag legen, wechseln, vergleichen, Rückgeld                                                                                       | 1–4     | M       |
 | `messen.ablesen`          | Lineal, Waage, Messbecher ablesen (je eigene SVG-Anzeige)                                                                                                        | 2–4     | M       |
 | `messen.umrechnen`        | Einheiten umwandeln und gemischte Schreibweise (2 m 15 cm, 1,25 m, ½ l = 500 ml)                                                                                 | 2–4     | S       |
 | `messen.schaetzen`        | Bezugsgrößen: Wie hoch ist eine Tür? 2 m / 20 cm / 20 m                                                                                                          | 2–4     | S       |
 | `uhr.digital`             | analoge ↔ digitale Uhrzeit (14:30 = halb drei am Nachmittag)                                                                                                     | 2–3     | S       |
 | `uhr.zeitspanne`          | Anfang, Ende, Dauer; ab Klasse 3 mit Minuten und Sekunden, gemischte Schreibweise                                                                                | 2–4     | M       |
-| `uhr.kalender`            | Wochentage, Monate, Datum ablesen, gestern/heute/morgen                                                                                                          | 2       | S       |
+| `uhr.kalender`            | Wochentage, Monate, Datum ablesen, gestern/heute/morgen                                                                                                          | 1–2     | S       |
 
 ### Englisch und HSU
 
@@ -160,7 +167,7 @@ Aufwand wie in PLAN.md: S = klein, M = mittel, L = groß.
 | `englisch.hoeren`                                                  | englisches Wort oder classroom phrase hören, Bild wählen (nutzt `ListenPictureTask`) | 3–4     | S       |
 | `englisch.lesen`                                                   | Bild sehen, englisches Wort wählen                                                   | 3–4     | S       |
 | `englisch.dialog`                                                  | Satz hören („How are you?“), passende Antwort wählen                                 | 3–4     | M       |
-| `englisch.abschreiben`                                             | Wort ansehen, verdecken, tippen („Read, look up and write down“)                     | 4       | S       |
+| `englisch.abschreiben`                                             | `schreiben.abschreiben` mit englischen Wörtern                                       | 4       | –       |
 | `sache.*` (hoeren-bild, paare, sortieren, reihenfolge, stimmt-das) | siehe [hsu-klasse-1.md](hsu-klasse-1.md), ab Klasse 2 mit mehr Text                  | 1–4     | M–L     |
 
 **Englisch braucht eine englische Stimme.** `tts.ts` wählt heute nur deutsche Stimmen. Es braucht eine Sprache pro Satz (`lang: 'en-GB'`), eine zweite Stimmenauswahl im Elternbereich und eine Prüfung im Gerätetest („englische Offline-Stimme installiert?“).
@@ -180,7 +187,8 @@ Das Kind ist jetzt in Klasse 1. Daraus ergibt sich die Reihenfolge:
 | Schritt | Inhalt                                                                                | Wann gebraucht                 | Aufwand |
 | ------- | ------------------------------------------------------------------------------------- | ------------------------------ | ------- |
 | 1       | Querschnitt: neue Bereiche, Kacheln pro Klasse, Einheiten-Freischaltung, Thema wählen | vor allem anderen              | M       |
-| 2       | HSU Klasse 1, Stufe 1 ([hsu-klasse-1.md](hsu-klasse-1.md))                            | sofort, im laufenden Schuljahr | M–L     |
+| 2a      | Lücken der Klasse 1 schließen ([klasse-1-abgleich.md](klasse-1-abgleich.md))          | sofort, im laufenden Schuljahr | XL      |
+| 2b      | HSU Klasse 1, Stufe 1 ([hsu-klasse-1.md](hsu-klasse-1.md)), parallel zu 2a            | sofort, im laufenden Schuljahr | M–L     |
 | 3       | Klasse 2 ([klasse-2.md](klasse-2.md))                                                 | ab September 2027              | XL      |
 | 4       | Klasse 3 ([klasse-3.md](klasse-3.md)), mit Englisch                                   | ab September 2028              | XL      |
 | 5       | Klasse 4 ([klasse-4.md](klasse-4.md))                                                 | ab September 2029              | L       |

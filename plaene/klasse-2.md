@@ -4,6 +4,8 @@ Stand: 27.11.2026. Lehrplan: LehrplanPLUS Bayern, **Deutsch 1/2, Mathematik 1/2,
 
 Allgemeines (Bereiche, Einheiten-Freischaltung, Module, Quellen) steht in [README.md](README.md). Die Halbjahres-Zuordnung (HJ) ist ein Vorschlag; die Eltern schalten Einheiten frei, sobald die Schule sie behandelt.
 
+**Vorgezogen:** 16 der hier als „neu“ bezeichneten Module entstehen schon für Klasse 1, mit Zahlenraum 20 und lauttreuen Wörtern ([klasse-1-abgleich.md](klasse-1-abgleich.md), Abschnitt 7). Für Klasse 2 brauchen sie dann nur neue Parameter und Inhalte.
+
 ---
 
 ## 1. Überblick
