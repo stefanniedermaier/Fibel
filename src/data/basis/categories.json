@@ -490,5 +490,17 @@
     "topic": "lesen",
     "title": "Sachtexte, Tabellen, Meldungen",
     "icon": "🔎"
+  },
+  {
+    "id": "messen.umwandeln",
+    "topic": "messen",
+    "title": "Umwandeln und vergleichen",
+    "icon": "🧮"
+  },
+  {
+    "id": "messen.sachrechnen",
+    "topic": "messen",
+    "title": "Sachrechnen mit Größen",
+    "icon": "💬"
   }
 ]

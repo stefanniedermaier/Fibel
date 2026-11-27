@@ -109,7 +109,9 @@ export const umrechnen: ExerciseModule<UmrechnenParams, WahlData> = {
       return {
         instruction: x.frage,
         hint: x.hilfe ?? HILFE[params.art],
-        solution: `${sayUnits(solved(x))}.`,
+        solution: x.prompt.includes('?')
+          ? `${sayUnits(solved(x))}.`
+          : `Richtig ist: ${sayUnits(x.richtig)}${x.hilfe ? ` ${x.hilfe}` : ''}`,
         data: {
           prompt: x.prompt,
           correctKey: x.richtig,

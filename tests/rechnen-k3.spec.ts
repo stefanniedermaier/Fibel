@@ -309,3 +309,40 @@ describe('Schriftlich mal und geteilt', () => {
         }
   })
 })
+
+describe('Sachaufgaben und Muster Klasse 4', () => {
+  const ctx4 = { land: 'DE-BY', grade: 4, settings: resolveDefaults('DE-BY', 4) }
+  /** Evaluates "(26 + 24) · 6" with the signs used in school. */
+  const rechne = (term: string): number =>
+    Function(`return ${term.replace(/·/g, '*').replace(/:/g, '/').replace(/−/g, '-')}`)() as number
+
+  it('jede Rechnung ergibt das Ergebnis, die falschen nicht', async () => {
+    const { MEHRSCHRITT } = await import('@/exercises/rechnen/sachaufgaben')
+    for (const m of MEHRSCHRITT) {
+      expect(rechne(m.richtig), m.id).toBe(m.ergebnis)
+      for (const f of m.falsch) expect(rechne(f), `${m.id}: ${f}`).not.toBe(m.ergebnis)
+    }
+  })
+
+  it('Teiler, Vielfache, Folgen und ANNA-Zahlen', async () => {
+    const { teilerModul } = await import('@/exercises/rechnen/teiler')
+    for (const mode of ['teiler', 'vielfache', 'folge', 'anna'] as const)
+      for (const key of teilerModul.items(ctx4, { mode }))
+        for (let seed = 0; seed < 8; seed++) {
+          const t = teilerModul.generate(ctx4, { mode }, key, createRng(seed))
+          const keys = t.data.choices.map((c) => c.key)
+          expect(new Set(keys).size, key).toBe(keys.length)
+          expect(keys.length).toBeGreaterThanOrEqual(3)
+          expect(keys).toContain(t.data.correctKey)
+          const n = Number(key.split(':')[2])
+          if (mode === 'teiler')
+            expect(keys.filter((k) => n % Number(k) === 0)).toEqual([t.data.correctKey])
+          if (mode === 'vielfache')
+            expect(keys.filter((k) => Number(k) % n === 0)).toEqual([t.data.correctKey])
+          if (mode === 'anna')
+            expect(keys.filter((k) => k === k.split('').reverse().join(''))).toEqual([
+              t.data.correctKey,
+            ])
+        }
+  })
+})

@@ -23,7 +23,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
     <p
       v-if="data.prompt"
       class="prompt"
-      :class="{ long: data.prompt.length > 24, text: data.prompt.length > 60 }"
+      :class="{ long: data.prompt.length > 18, text: data.prompt.length > 60 }"
       aria-hidden="true"
     >
       {{ data.prompt }}

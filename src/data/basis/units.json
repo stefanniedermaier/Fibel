@@ -1405,5 +1405,68 @@
     "topic": "lesen",
     "title": "Nachricht, Meinung oder Werbung?",
     "term": 2
+  },
+  {
+    "id": "k4.rechnen.teiler",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Teiler, Vielfache und Zahlenmuster",
+    "term": 2
+  },
+  {
+    "id": "k4.rechnen.sachaufgaben",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Sachaufgaben mit mehreren Schritten, rückwärts rechnen",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.daten",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Diagramme, Tabellen und Zufall",
+    "term": 2
+  },
+  {
+    "id": "k4.messen.umwandeln",
+    "grade": 4,
+    "topic": "messen",
+    "title": "Umwandeln in allen Größenbereichen",
+    "term": 1
+  },
+  {
+    "id": "k4.messen.vergleichen",
+    "grade": 4,
+    "topic": "messen",
+    "title": "Größen vergleichen und schätzen",
+    "term": 1
+  },
+  {
+    "id": "k4.messen.preis",
+    "grade": 4,
+    "topic": "messen",
+    "title": "Preis und Menge",
+    "term": 2
+  },
+  {
+    "id": "k4.messen.genau",
+    "grade": 4,
+    "topic": "messen",
+    "title": "Genau rechnen oder überschlagen?",
+    "term": 2
+  },
+  {
+    "id": "k4.uhr.zeitspannen",
+    "grade": 4,
+    "topic": "uhr",
+    "title": "Zeitspannen über Mitternacht und mehrere Tage",
+    "term": 1
+  },
+  {
+    "id": "k4.uhr.fahrplan",
+    "grade": 4,
+    "topic": "uhr",
+    "title": "Fahrpläne lesen",
+    "term": 2
   }
 ]

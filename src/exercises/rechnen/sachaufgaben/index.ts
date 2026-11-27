@@ -5,6 +5,7 @@
  */
 import aufgaben from '@/data/basis/klasse-2/sachaufgaben.json'
 import zweischritt from '@/data/basis/klasse-3/sachaufgaben.json'
+import mehrschritt from '@/data/basis/klasse-4/sachaufgaben.json'
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemPart } from '../shared'
@@ -53,8 +54,20 @@ export function term(ops: readonly [SachOp, SachOp], a: number, b: number, c: nu
 const zweiErgebnis = (ops: readonly [SachOp, SachOp], a: number, b: number, c: number) =>
   rechne(ops[1], rechne(ops[0], a, b), c)
 
+/** R4-11: several steps and working backwards; the terms are written out in the data. */
+export interface Mehrschritt {
+  id: string
+  image: string
+  text: string
+  richtig: string
+  falsch: string[]
+  ergebnis: number
+  erklaerung: string
+}
+export const MEHRSCHRITT: readonly Mehrschritt[] = mehrschritt
+
 export interface SachaufgabenParams {
-  mode: 'rechnen' | 'pruefen' | 'zweischritt'
+  mode: 'rechnen' | 'pruefen' | 'zweischritt' | 'mehrschritt'
 }
 
 export interface SachaufgabenData {
@@ -76,11 +89,31 @@ export const sachaufgaben: ExerciseModule<SachaufgabenParams, SachaufgabenData> 
   items(_ctx, params) {
     if (params.mode === 'zweischritt')
       return ZWEISCHRITT.map((s) => `rechnen.sachaufgaben:zweischritt:${s.id}`)
+    if (params.mode === 'mehrschritt')
+      return MEHRSCHRITT.map((s) => `rechnen.sachaufgaben:mehrschritt:${s.id}`)
     return SACHAUFGABEN.map((s) => `rechnen.sachaufgaben:${params.mode}:${s.id}`)
   },
 
   generate(_ctx, params, itemKey, rng) {
     const id = itemPart(itemKey).split(':')[1]
+    if (params.mode === 'mehrschritt') {
+      const m = MEHRSCHRITT.find((x) => x.id === id)
+      if (!m) throw new Error(`Unbekannte Sachaufgabe: ${itemKey}`)
+      return {
+        instruction: m.text,
+        caption: 'Lies die Aufgabe. Welche Rechnung passt?',
+        hint: 'Was weißt du? Was ist gesucht? Was rechnest du zuerst?',
+        solution: m.erklaerung,
+        data: {
+          mode: 'rechnen',
+          image: m.image,
+          text: m.text,
+          result: m.ergebnis,
+          correctKey: m.richtig,
+          choices: shuffle([m.richtig, ...m.falsch], rng).map((l) => ({ key: l, label: l })),
+        },
+      }
+    }
     if (params.mode === 'zweischritt') {
       const z = ZWEISCHRITT.find((x) => x.id === id)
       if (!z) throw new Error(`Unbekannte Sachaufgabe: ${itemKey}`)

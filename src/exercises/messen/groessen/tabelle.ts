@@ -3,7 +3,18 @@
  * the new units, the decimal comma with money and lengths, simple fractions of sizes.
  * Each task: prompt as shown, the spoken question, the answer and typical mistakes.
  */
-export type GroessenArt = 'geld' | 'laenge' | 'gewicht' | 'hohlmass' | 'brueche' | 'zeit'
+export type GroessenArt =
+  | 'geld'
+  | 'laenge'
+  | 'gewicht'
+  | 'hohlmass'
+  | 'brueche'
+  | 'zeit'
+  | 'gemischt'
+  | 'vergleich'
+  | 'preis'
+  | 'genau'
+  | 'zeit4'
 
 export interface Umrechnung {
   id: string
@@ -32,9 +43,243 @@ export const HILFE: Record<GroessenArt, string> = {
   hohlmass: 'Ein Liter hat tausend Milliliter.',
   brueche: 'Ein halb heißt: in zwei gleiche Teile teilen. Ein Viertel: in vier gleiche Teile.',
   zeit: 'Eine Stunde hat sechzig Minuten, eine Minute sechzig Sekunden, ein Tag vierundzwanzig Stunden.',
+  gemischt: 'Überlege zuerst: Wie viele kleine Einheiten hat eine große Einheit?',
+  vergleich: 'Rechne beide in dieselbe Einheit um, dann vergleiche.',
+  preis: 'Doppelte Menge, doppelter Preis: Rechne erst den Preis für eins aus.',
+  genau: 'Runde die Preise und rechne ungefähr. Reicht das, oder musst du genau rechnen?',
+  zeit4: 'Rechne bis Mitternacht oder bis zur vollen Stunde, dann weiter.',
 }
 
 export const UMRECHNUNGEN: Record<GroessenArt, Umrechnung[]> = {
+  // Grade 4 (M4-1 to M4-4, U4-1, U4-2).
+  gemischt: [
+    u('km-cm', '1 km = ? cm', 'Wie viele Zentimeter sind ein Kilometer?', '100000 cm', [
+      '1000 cm',
+      '10000 cm',
+    ]),
+    u('m-mm', '3 m = ? mm', 'Wie viele Millimeter sind 3 Meter?', '3000 mm', ['300 mm', '30 mm']),
+    u('kg-g-gem', '5 kg 250 g = ? g', 'Wie viele Gramm sind 5 Kilogramm und 250 Gramm?', '5250 g', [
+      '5025 g',
+      '525 g',
+    ]),
+    u(
+      't-kg',
+      '1 t = ? kg',
+      'Wie viele Kilogramm sind eine Tonne?',
+      '1000 kg',
+      ['100 kg', '10 kg'],
+      'Eine Tonne hat tausend Kilogramm, so schwer wie ein kleines Auto.',
+    ),
+    u('l-ml-gem', '2,5 l = ? ml', 'Wie viele Milliliter sind zweieinhalb Liter?', '2500 ml', [
+      '250 ml',
+      '2005 ml',
+    ]),
+    u('eur-ct', '12,05 € = ? ct', 'Wie viele Cent sind 12 Euro 5?', '1205 ct', [
+      '1250 ct',
+      '125 ct',
+    ]),
+    u(
+      'h-s',
+      '1 h = ? s',
+      'Wie viele Sekunden hat eine Stunde?',
+      '3600 s',
+      ['60 s', '360 s'],
+      'Eine Stunde hat sechzig Minuten, jede Minute sechzig Sekunden.',
+    ),
+    u('min-h-gem', '150 min = ?', 'Wie viele Stunden und Minuten sind 150 Minuten?', '2 h 30 min', [
+      '1 h 50 min',
+      '15 h',
+    ]),
+    u('m-km-gem', '4250 m = ?', 'Wie viele Kilometer und Meter sind 4250 Meter?', '4 km 250 m', [
+      '42 km 50 m',
+      '4 km 25 m',
+    ]),
+  ],
+  vergleich: [
+    u('kg-g-v', '1,5 kg ○ 1200 g', 'Was ist schwerer: 1 Kilogramm 500 oder 1200 Gramm?', '1,5 kg', [
+      '1200 g',
+      'gleich schwer',
+    ]),
+    u(
+      'l-ml-v',
+      '750 ml ○ ¾ l',
+      'Was ist mehr: 750 Milliliter oder ein Dreiviertelliter?',
+      'gleich viel',
+      ['750 ml', '¾ l'],
+    ),
+    u('m-cm-v', '2,05 m ○ 250 cm', 'Was ist länger: 2 Meter 5 oder 250 Zentimeter?', '250 cm', [
+      '2,05 m',
+      'gleich lang',
+    ]),
+    u(
+      'h-min-v',
+      '1 h 20 min ○ 90 min',
+      'Was dauert länger: 1 Stunde 20 Minuten oder 90 Minuten?',
+      '90 min',
+      ['1 h 20 min', 'gleich lang'],
+    ),
+    u('km-m-v', '3 km ○ 2999 m', 'Was ist weiter: 3 Kilometer oder 2999 Meter?', '3 km', [
+      '2999 m',
+      'gleich weit',
+    ]),
+    u('eur-ct-v', '4,50 € ○ 405 ct', 'Was ist mehr: 4 Euro 50 oder 405 Cent?', '4,50 €', [
+      '405 ct',
+      'gleich viel',
+    ]),
+    u(
+      'g-kg-v',
+      '500 g ○ ½ kg',
+      'Was ist schwerer: 500 Gramm oder ein halbes Kilogramm?',
+      'gleich schwer',
+      ['500 g', '½ kg'],
+    ),
+  ],
+  preis: [
+    u(
+      'aepfel',
+      '1 kg → 3 €, 4 kg → ?',
+      'Ein Kilogramm Äpfel kostet 3 Euro. Wie viel kosten 4 Kilogramm?',
+      '12 €',
+      ['7 €', '4 €'],
+    ),
+    u(
+      'hefte',
+      '3 Hefte → 2,40 €, 1 Heft → ?',
+      'Drei Hefte kosten 2 Euro 40. Wie viel kostet ein Heft?',
+      '0,80 €',
+      ['0,60 €', '1,20 €'],
+      'Teile den Preis durch drei.',
+    ),
+    u(
+      'saft',
+      '2 l → 3 €, 6 l → ?',
+      'Zwei Liter Saft kosten 3 Euro. Wie viel kosten 6 Liter?',
+      '9 €',
+      ['18 €', '6 €'],
+      'Sechs Liter sind dreimal so viel wie zwei Liter.',
+    ),
+    u(
+      'kaese',
+      '100 g → 2 €, 250 g → ?',
+      '100 Gramm Käse kosten 2 Euro. Wie viel kosten 250 Gramm?',
+      '5 €',
+      ['4 €', '50 €'],
+    ),
+    u(
+      'eintritt',
+      '1 Kind → 4,50 €, 4 Kinder → ?',
+      'Der Eintritt kostet 4 Euro 50 pro Kind. Wie viel zahlen 4 Kinder?',
+      '18,00 €',
+      ['16,50 €', '8,50 €'],
+    ),
+    u(
+      'benzin',
+      '10 l → 18 €, 5 l → ?',
+      'Zehn Liter kosten 18 Euro. Wie viel kosten 5 Liter?',
+      '9 €',
+      ['13 €', '3,60 €'],
+      'Die halbe Menge kostet den halben Preis.',
+    ),
+  ],
+  genau: [
+    u(
+      'reicht1',
+      '2,95 € + 4,10 € + 1,99 € ○ 10 €',
+      'Lena kauft ein Buch für 2 Euro 95, Stifte für 4 Euro 10 und einen Block für 1 Euro 99. Reichen 10 Euro?',
+      'Ja, ungefähr 9 €.',
+      ['Nein, ungefähr 12 €.', 'Nein, ungefähr 15 €.'],
+      'Runde: 3 + 4 + 2 sind ungefähr 9 Euro.',
+    ),
+    u(
+      'reicht2',
+      '3 · 4,90 € ○ 15 €',
+      'Drei Kinokarten kosten je 4 Euro 90. Reichen 15 Euro?',
+      'Ja, knapp.',
+      ['Nein.', 'Ja, es bleiben 5 € übrig.'],
+      '4 Euro 90 ist fast 5 Euro. Dreimal 5 sind 15: Es reicht knapp.',
+    ),
+    u(
+      'reicht3',
+      '19,99 € + 9,99 € ○ 25 €',
+      'Ein Spiel kostet 19 Euro 99, ein Ball 9 Euro 99. Reichen 25 Euro?',
+      'Nein, ungefähr 30 €.',
+      ['Ja, ungefähr 20 €.', 'Ja, genau 25 €.'],
+    ),
+    u(
+      'genau1',
+      'Kassenzettel',
+      'An der Kasse: Muss die Verkäuferin genau rechnen oder reicht ein Überschlag?',
+      'genau rechnen',
+      ['Überschlag reicht', 'gar nicht rechnen'],
+      'An der Kasse muss jeder Cent stimmen.',
+    ),
+    u(
+      'genau2',
+      'Einkaufszettel',
+      'Du willst wissen, ob dein Geld für den Einkauf reicht. Was genügt?',
+      'Überschlag reicht',
+      ['genau rechnen', 'gar nicht rechnen'],
+      'Zum Planen reicht es, ungefähr zu rechnen.',
+    ),
+  ],
+  zeit4: [
+    u(
+      'nacht1',
+      '22:30 → 1:15',
+      'Die Fahrt beginnt um 22 Uhr 30 und endet um 1 Uhr 15 in der Nacht. Wie lange dauert sie?',
+      '2 h 45 min',
+      ['3 h 15 min', '21 h 15 min'],
+      'Bis Mitternacht sind es 1 Stunde 30, dann noch 1 Stunde 15.',
+    ),
+    u('nacht2', '23:40 + 50 min', 'Es ist 23 Uhr 40. Wie spät ist es in 50 Minuten?', '0:30', [
+      '24:30',
+      '23:90',
+    ]),
+    u(
+      'tage1',
+      'Mo 18 Uhr → Di 6 Uhr',
+      'Von Montag 18 Uhr bis Dienstag 6 Uhr. Wie viele Stunden sind das?',
+      '12 h',
+      ['24 h', '6 h'],
+    ),
+    u(
+      'tage2',
+      'Fr 15 Uhr → So 15 Uhr',
+      'Von Freitag 15 Uhr bis Sonntag 15 Uhr. Wie viele Stunden sind das?',
+      '48 h',
+      ['24 h', '36 h'],
+    ),
+    u('tage3', '3 Tage = ? h', 'Wie viele Stunden haben drei Tage?', '72 h', ['36 h', '60 h']),
+    u(
+      'fahrplan1',
+      'ab 7:05, an 7:47',
+      'Der Zug fährt um 7 Uhr 5 ab und kommt um 7 Uhr 47 an. Wie lange fährt er?',
+      '42 min',
+      ['52 min', '47 min'],
+    ),
+    u(
+      'fahrplan2',
+      'ab 8:50, an 10:05',
+      'Abfahrt 8 Uhr 50, Ankunft 10 Uhr 5. Wie lange dauert die Fahrt?',
+      '1 h 15 min',
+      ['2 h 15 min', '1 h 55 min'],
+    ),
+    u(
+      'takt',
+      '7:10, 7:25, 7:40, ?',
+      'Der Bus fährt um 7 Uhr 10, 7 Uhr 25 und 7 Uhr 40. Wann fährt der nächste Bus?',
+      '7:55',
+      ['7:50', '8:10'],
+      'Der Bus fährt alle 15 Minuten.',
+    ),
+    u(
+      'takt2',
+      'Takt?',
+      'Ein Bus fährt um 6 Uhr 20, 6 Uhr 50 und 7 Uhr 20. In welchem Abstand fährt er?',
+      'alle 30 min',
+      ['alle 20 min', 'jede Stunde'],
+    ),
+  ],
   geld: [
     u('350ct', '3,50 € = ? ct', 'Wie viele Cent sind 3 Euro 50?', '350 ct', ['35 ct', '3050 ct']),
     u('125ct', '1,25 € = ? ct', 'Wie viele Cent sind 1 Euro 25?', '125 ct', ['12 ct', '1025 ct']),

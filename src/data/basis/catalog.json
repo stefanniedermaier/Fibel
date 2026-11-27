@@ -4935,5 +4935,234 @@
       "fragen": "inhalt"
     },
     "title": "Kindernachrichten"
+  },
+  {
+    "id": "k4.rechnen.teiler.teiler",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.teiler",
+    "exercise": "rechnen.teiler",
+    "params": {
+      "mode": "teiler"
+    },
+    "title": "Teiler finden"
+  },
+  {
+    "id": "k4.rechnen.teiler.vielfache",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.teiler",
+    "exercise": "rechnen.teiler",
+    "params": {
+      "mode": "vielfache"
+    },
+    "title": "Vielfache"
+  },
+  {
+    "id": "k4.rechnen.teiler.folge",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.teiler",
+    "exercise": "rechnen.teiler",
+    "params": {
+      "mode": "folge"
+    },
+    "title": "Zahlenfolgen"
+  },
+  {
+    "id": "k4.rechnen.teiler.anna",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.teiler",
+    "exercise": "rechnen.teiler",
+    "params": {
+      "mode": "anna"
+    },
+    "title": "ANNA-Zahlen",
+    "weight": 0.4
+  },
+  {
+    "id": "k4.rechnen.sachaufgaben.mehrschritt",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k4.rechnen.sachaufgaben",
+    "exercise": "rechnen.sachaufgaben",
+    "params": {
+      "mode": "mehrschritt"
+    },
+    "title": "Welche Rechnung passt?"
+  },
+  {
+    "id": "k4.rechnen.daten.balken",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k4.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "zaehlen",
+      "display": "balken",
+      "faktor": 100
+    },
+    "title": "Diagramm ablesen"
+  },
+  {
+    "id": "k4.rechnen.daten.unterschied",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k4.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "unterschied",
+      "display": "tabelle",
+      "faktor": 100
+    },
+    "title": "Wie viel mehr?"
+  },
+  {
+    "id": "k4.rechnen.daten.zufall",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.sachaufgaben",
+    "unit": "k4.rechnen.daten",
+    "exercise": "rechnen.zufall",
+    "params": {
+      "mode": "chance"
+    },
+    "title": "Wahrscheinlich oder unmöglich?",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.messen.umwandeln.gemischt",
+    "grade": 4,
+    "topic": "messen",
+    "category": "messen.umwandeln",
+    "unit": "k4.messen.umwandeln",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "gemischt"
+    },
+    "title": "Umwandeln"
+  },
+  {
+    "id": "k4.messen.umwandeln.wiederholen",
+    "grade": 4,
+    "topic": "messen",
+    "category": "messen.umwandeln",
+    "unit": "k4.messen.umwandeln",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "laenge"
+    },
+    "title": "Längen wiederholen",
+    "weight": 0.4
+  },
+  {
+    "id": "k4.messen.vergleichen.vergleich",
+    "grade": 4,
+    "topic": "messen",
+    "category": "messen.umwandeln",
+    "unit": "k4.messen.vergleichen",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "vergleich"
+    },
+    "title": "Was ist mehr?"
+  },
+  {
+    "id": "k4.messen.vergleichen.schaetzen",
+    "grade": 4,
+    "topic": "messen",
+    "category": "messen.umwandeln",
+    "unit": "k4.messen.vergleichen",
+    "exercise": "messen.schaetzen",
+    "params": {
+      "art": "gewicht"
+    },
+    "title": "Schätzen",
+    "weight": 0.4
+  },
+  {
+    "id": "k4.messen.preis.preis",
+    "grade": 4,
+    "topic": "messen",
+    "category": "messen.sachrechnen",
+    "unit": "k4.messen.preis",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "preis"
+    },
+    "title": "Doppelte Menge, doppelter Preis"
+  },
+  {
+    "id": "k4.messen.genau.genau",
+    "grade": 4,
+    "topic": "messen",
+    "category": "messen.sachrechnen",
+    "unit": "k4.messen.genau",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "genau"
+    },
+    "title": "Reicht das Geld?"
+  },
+  {
+    "id": "k4.uhr.zeitspannen.zeit4",
+    "grade": 4,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k4.uhr.zeitspannen",
+    "exercise": "messen.umrechnen",
+    "params": {
+      "art": "zeit4"
+    },
+    "title": "Wie lange dauert es?"
+  },
+  {
+    "id": "k4.uhr.zeitspannen.minuten",
+    "grade": 4,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k4.uhr.zeitspannen",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "dauer",
+      "minuten": true
+    },
+    "title": "Zeitspannen wiederholen",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.uhr.fahrplan.fahrplan",
+    "grade": 4,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k4.uhr.fahrplan",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Fahrplan"],
+      "fragen": "inhalt"
+    },
+    "title": "Fahrplan lesen"
+  },
+  {
+    "id": "k4.uhr.fahrplan.spaeter",
+    "grade": 4,
+    "topic": "uhr",
+    "category": "uhr.zeit",
+    "unit": "k4.uhr.fahrplan",
+    "exercise": "uhr.zeitspanne",
+    "params": {
+      "mode": "spaeter",
+      "minuten": true
+    },
+    "title": "Wann kommt der Bus an?"
   }
 ]

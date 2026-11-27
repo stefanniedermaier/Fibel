@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ausflug",
+    "image": "1F68C",
+    "text": "Die Klasse 4a mit 26 Kindern und die 4b mit 24 Kindern fahren in den Zoo. Der Eintritt kostet 6 € pro Kind. Wie viel kostet der Eintritt für alle?",
+    "richtig": "(26 + 24) · 6",
+    "falsch": ["26 + 24 · 6", "26 · 6 + 24"],
+    "ergebnis": 300,
+    "erklaerung": "Erst alle Kinder: 26 + 24 = 50. Dann 50 · 6 = 300 Euro."
+  },
+  {
+    "id": "taschengeld4",
+    "image": "1F4B0",
+    "text": "Tim bekommt jede Woche 4 € Taschengeld. Er spart 6 Wochen lang und kauft dann ein Buch für 13 €. Wie viel Geld bleibt ihm?",
+    "richtig": "6 · 4 − 13",
+    "falsch": ["4 + 6 − 13", "6 · 13 − 4"],
+    "ergebnis": 11,
+    "erklaerung": "Erst 6 · 4 = 24 Euro, dann 24 − 13 = 11 Euro."
+  },
+  {
+    "id": "kisten",
+    "image": "1F4E6",
+    "text": "Ein Lieferwagen bringt 8 Kisten mit je 24 Flaschen. 15 Flaschen sind kaputt. Wie viele Flaschen sind heil?",
+    "richtig": "8 · 24 − 15",
+    "falsch": ["8 + 24 − 15", "(8 + 24) · 15"],
+    "ergebnis": 177,
+    "erklaerung": "8 · 24 = 192 Flaschen, davon 15 kaputt: 192 − 15 = 177."
+  },
+  {
+    "id": "rueck-geld",
+    "image": "1F4B6",
+    "text": "Lena hat nach dem Einkauf noch 7 €. Sie hat 12 € für ein Spiel und 6 € für ein Buch bezahlt. Wie viel Geld hatte sie vorher?",
+    "richtig": "7 + 12 + 6",
+    "falsch": ["12 + 6 − 7", "12 − 6 + 7"],
+    "ergebnis": 25,
+    "erklaerung": "Rückwärts rechnen: Was sie ausgegeben hat, kommt wieder dazu: 7 + 12 + 6 = 25."
+  },
+  {
+    "id": "rueck-zahl",
+    "image": "1F914",
+    "text": "Ich denke mir eine Zahl. Ich multipliziere sie mit 4 und addiere 10. Heraus kommt 50. Welche Zahl habe ich mir gedacht?",
+    "richtig": "(50 − 10) : 4",
+    "falsch": ["50 : 4 + 10", "(50 + 10) : 4"],
+    "ergebnis": 10,
+    "erklaerung": "Rückwärts: 50 − 10 = 40, dann 40 : 4 = 10."
+  },
+  {
+    "id": "rueck-murmeln",
+    "image": "1F7E2",
+    "text": "Paul verschenkt 15 Murmeln an Ben. Dann gewinnt er 8 Murmeln dazu. Jetzt hat er 40 Murmeln. Wie viele hatte er am Anfang?",
+    "richtig": "40 − 8 + 15",
+    "falsch": ["40 + 8 − 15", "40 − 15 − 8"],
+    "ergebnis": 47,
+    "erklaerung": "Rückwärts: Die gewonnenen 8 abziehen, die verschenkten 15 wieder dazuzählen: 40 − 8 + 15 = 47."
+  },
+  {
+    "id": "fahrrad",
+    "image": "1F6B2",
+    "text": "Ein Fahrrad kostet 420 €. Mia hat schon 180 € gespart. Sie spart jeden Monat 30 € dazu. Wie viele Monate muss sie noch sparen?",
+    "richtig": "(420 − 180) : 30",
+    "falsch": ["420 : 30 − 180", "420 − 180 : 30"],
+    "ergebnis": 8,
+    "erklaerung": "Es fehlen 420 − 180 = 240 Euro. 240 : 30 = 8 Monate."
+  },
+  {
+    "id": "garten",
+    "image": "1F33B",
+    "text": "Ein Beet ist 8 m lang und 5 m breit. Um das Beet soll ein Zaun. Ein Meter Zaun kostet 7 €. Wie viel kostet der Zaun?",
+    "richtig": "(8 + 5 + 8 + 5) · 7",
+    "falsch": ["8 · 5 · 7", "(8 + 5) · 7"],
+    "ergebnis": 182,
+    "erklaerung": "Der Umfang: 8 + 5 + 8 + 5 = 26 m. 26 · 7 = 182 Euro."
+  },
+  {
+    "id": "pizza4",
+    "image": "1F355",
+    "text": "Familie Weber bestellt 3 Pizzen zu je 9 € und 4 Getränke zu je 2 €. Sie bezahlt mit 50 €. Wie viel Geld bekommt sie zurück?",
+    "richtig": "50 − (3 · 9 + 4 · 2)",
+    "falsch": ["50 − 3 · 9 + 4 · 2", "3 · 9 + 4 · 2 − 50"],
+    "ergebnis": 15,
+    "erklaerung": "Pizza 27 € und Getränke 8 € sind 35 €. 50 − 35 = 15 Euro."
+  },
+  {
+    "id": "buecher",
+    "image": "1F4DA",
+    "text": "In der Bücherei stehen 6 Regale mit je 5 Brettern. Auf jedem Brett stehen 40 Bücher. Wie viele Bücher sind es?",
+    "richtig": "6 · 5 · 40",
+    "falsch": ["6 + 5 + 40", "6 · 5 + 40"],
+    "ergebnis": 1200,
+    "erklaerung": "6 · 5 = 30 Bretter, 30 · 40 = 1200 Bücher."
+  },
+  {
+    "id": "zug4",
+    "image": "1F686",
+    "text": "Ein Zug hat 7 Wagen mit je 64 Sitzplätzen. 390 Fahrgäste sitzen schon. Wie viele Plätze sind noch frei?",
+    "richtig": "7 · 64 − 390",
+    "falsch": ["390 − 7 · 64", "7 + 64 − 390"],
+    "ergebnis": 58,
+    "erklaerung": "7 · 64 = 448 Plätze. 448 − 390 = 58 Plätze sind frei."
+  },
+  {
+    "id": "kuchenverkauf",
+    "image": "1F370",
+    "text": "Beim Schulfest werden 12 Kuchen in je 16 Stücke geschnitten. Ein Stück kostet 1 €. Am Ende sind 17 Stücke übrig. Wie viel Geld wurde eingenommen?",
+    "richtig": "12 · 16 − 17",
+    "falsch": ["12 + 16 − 17", "12 · 16 + 17"],
+    "ergebnis": 175,
+    "erklaerung": "12 · 16 = 192 Stücke, 192 − 17 = 175 verkauft, also 175 Euro."
+  }
+]
