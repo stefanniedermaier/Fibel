@@ -198,7 +198,11 @@ describe('Uhr als eigener Bereich', () => {
       const ids = availableEntries(catalogFor('DE-BY', grade, 'uhr'), ctxFor(grade), getExercise)
         .filter((e) => e.category === 'uhr.uhrzeit')
         .map((e) => e.id)
-      expect(ids).toEqual([`k${grade}.uhr.lesen`, `k${grade}.uhr.stellen`])
+      expect(ids.slice(0, 2)).toEqual([`k${grade}.uhr.lesen`, `k${grade}.uhr.stellen`])
+      // Grade 2 adds the digital clock (U2-3).
+      expect(ids.slice(2)).toEqual(
+        grade === 2 ? ['k2.uhr.digital.tageszeit', 'k2.uhr.digital.analog'] : [],
+      )
     }
   })
 
