@@ -19,6 +19,13 @@ export const MULTIGRAPHS = [
   'tz',
 ] as const
 
+/**
+ * St and Sp at the start of a word are spoken "scht" and "schp". Grade 1 teaches them
+ * as letter groups (plaene/klasse-1-abgleich.md, D13), so there they are one unit;
+ * inside a word (ist, Wespe) they stay two letters.
+ */
+export const INITIAL_GROUPS = ['st', 'sp'] as const
+
 export const VOWELS = new Set(['a', 'e', 'i', 'o', 'u', 'ä', 'ö', 'ü'])
 
 /** Graphemes that stand for a vowel sound (incl. diphthongs). */
@@ -29,7 +36,9 @@ export function graphemes(word: string): string[] {
   const result: string[] = []
   let i = 0
   while (i < text.length) {
-    const multi = MULTIGRAPHS.find((g) => text.startsWith(g, i))
+    const multi =
+      (i === 0 ? INITIAL_GROUPS.find((g) => text.startsWith(g)) : undefined) ??
+      MULTIGRAPHS.find((g) => text.startsWith(g, i))
     const unit = multi ?? (text[i] as string)
     result.push(unit)
     i += unit.length

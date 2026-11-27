@@ -181,6 +181,16 @@ export function itemLabel(itemKey: string, wordText: (id: string) => string | un
       const b = THEMEN.flatMap((t) => t.suchbilder).find((x) => x.id === bild)
       return b?.fragen[Number(i)]?.frage ?? part
     }
+    case 'sprache.wortbildung':
+      return part
+    case 'formen.pfeilweg':
+      return `Pfeilweg mit ${part} Pfeilen`
+    case 'formen.symmetrie':
+      return 'Symmetrisch oder nicht?'
+    case 'rechnen.daten':
+      return part.startsWith('zaehlen')
+        ? `Strichliste: ${part.split(':')[1]}`
+        : 'Strichliste: am meisten'
     case 'sache.turm':
       return `Turm: ${part}`
     case 'sache.jahreskreis':

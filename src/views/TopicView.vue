@@ -68,6 +68,7 @@ const question = computed(() => {
   const names = [
     ...(mixed ? ['Alles gemischt'] : []),
     ...categories.value.map((c) => c.title),
+    ...(topic === 'schreiben' && store.settings?.schreibwerkstatt ? ['Schreibwerkstatt'] : []),
     ...(showStumbles.value ? ['Stolpersteine'] : []),
   ]
   const last = names.pop()
@@ -116,6 +117,14 @@ onUnmounted(stopSpeaking)
         <span class="icon" aria-hidden="true">{{ c.icon }}</span>
         <span>{{ c.title }}</span>
         <span v-if="focusCategories.has(c.id)" class="flag" title="Schwerpunkt">🚩</span>
+      </RouterLink>
+      <RouterLink
+        v-if="topic === 'schreiben' && store.settings?.schreibwerkstatt"
+        class="tile werkstatt"
+        :to="{ name: 'werkstatt' }"
+      >
+        <span class="icon" aria-hidden="true">📝</span>
+        <span>Schreibwerkstatt</span>
       </RouterLink>
       <RouterLink
         v-if="showStumbles"
@@ -190,6 +199,10 @@ h1 small {
   top: 8px;
   right: 10px;
   font-size: 28px;
+}
+
+.tile.werkstatt {
+  border-style: dotted;
 }
 
 .tile.stumbles {

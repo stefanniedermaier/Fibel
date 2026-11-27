@@ -63,15 +63,6 @@
     "reim": "ein"
   },
   {
-    "id": "stein",
-    "text": "Stein",
-    "syllables": ["Stein"],
-    "wortart": "nomen",
-    "image": "1FAA8",
-    "category": "natur",
-    "reim": "ein"
-  },
-  {
     "id": "vase",
     "text": "Vase",
     "syllables": ["Va", "se"],

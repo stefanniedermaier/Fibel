@@ -80,6 +80,8 @@ export interface ProfileSettings {
   flashMs: number
   /** Lernwörter of the week, typed in by the parents (stay on the device). */
   lernwoerter: string[]
+  /** D15 Schreibwerkstatt (experiment): free typing, the app reads it out. */
+  schreibwerkstatt: boolean
   /** HSU "Müll trennen": the bins the family has at home. */
   muelltonnen: string[]
   /**

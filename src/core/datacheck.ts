@@ -14,12 +14,13 @@ import {
 } from './content'
 import { graphemes } from './graphemes'
 import { MIN_ANLAUT_GROUP, groupBy, listenEntries, resolveListenWords } from './hoeren'
-import { HAEUFIGKEITSWOERTER, checkLauttreu } from './lauttreue'
+import { HAEUFIGKEITSWOERTER, ST_SP_RULE, checkLauttreu } from './lauttreue'
 import { baseSentences, sceneKey, unknownWords, wordsOf } from './saetze'
 import ablaeufe from '@/data/basis/klasse-1/ablaeufe.json'
 import fragesaetze from '@/data/basis/klasse-1/fragesaetze.json'
 import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
 import texte from '@/data/basis/klasse-1/texte.json'
+import zusammensetzungen from '@/data/basis/klasse-1/zusammensetzungen.json'
 import { BEGRIFFE, THEMEN } from '@/exercises/sache/shared'
 import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
 import { WORTARTEN, type LandCode, type Syllable, type Word } from './types'
@@ -131,6 +132,15 @@ export function checkGrade1Extras(words: readonly Word[], images: ReadonlySet<st
       problems.push(`${where}: Bilder und Schritte passen nicht`)
     if (new Set(a.images).size !== a.images.length) problems.push(`${where}: Bild doppelt`)
     for (const code of a.images)
+      if (!images.has(code)) problems.push(`${where}: Bild ${code} fehlt`)
+  }
+  for (const z of zusammensetzungen) {
+    const where = `Zusammensetzung „${z.id}“`
+    const [a, b] = z.teile
+    if (!a || !b || z.teile.length !== 2) problems.push(`${where}: braucht genau zwei Teile`)
+    else if (!z.text.startsWith(a.text.slice(0, 3)))
+      problems.push(`${where}: fängt nicht mit „${a.text}“ an`)
+    for (const code of [z.image, ...z.teile.map((t) => t.image)])
       if (!images.has(code)) problems.push(`${where}: Bild ${code} fehlt`)
   }
   for (const g of rechengeschichten) {
@@ -282,6 +292,7 @@ function checkWords(
       if (!w.beispiel) problems.push(`${where}: Merkwort ohne Beispiel`)
     } else if (grade === 1) {
       for (const v of checkLauttreu(w.text, w.syllables)) {
+        if (v.rule === ST_SP_RULE) continue
         problems.push(`${where}: nicht lauttreu (${v.rule}: ${v.detail})`)
       }
     }

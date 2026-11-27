@@ -25,6 +25,12 @@ export const router = createRouter({
       meta: { needsProfile: true },
     },
     {
+      path: '/schreibwerkstatt',
+      name: 'werkstatt',
+      component: () => import('./views/WerkstattView.vue'),
+      meta: { needsProfile: true },
+    },
+    {
       path: '/klassen',
       name: 'grades',
       component: () => import('./views/GradesView.vue'),

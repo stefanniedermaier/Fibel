@@ -10,6 +10,10 @@ import { stimmtDas } from './sache/stimmt-das'
 import { suchbild } from './sache/suchbild'
 import { turm } from './sache/turm'
 import { jahreskreis } from './sache/jahreskreis'
+import { wortbildung } from './sprache/wortbildung'
+import { pfeilweg } from './formen/pfeilweg'
+import { symmetrie } from './formen/symmetrie'
+import { daten } from './rechnen/daten'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -104,6 +108,10 @@ register(stimmtDas)
 register(suchbild)
 register(turm)
 register(jahreskreis)
+register(wortbildung)
+register(pfeilweg)
+register(symmetrie)
+register(daten)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

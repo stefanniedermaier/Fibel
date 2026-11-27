@@ -520,6 +520,11 @@ async function remove() {
         <textarea v-model="lernwoerterText" rows="4" autocomplete="off" spellcheck="false" />
       </label>
       <label class="check">
+        <input v-model="settings.schreibwerkstatt" type="checkbox" />
+        Experiment: Schreibwerkstatt – frei tippen, die App liest vor, was dasteht (ohne Bewertung,
+        nichts wird gespeichert)
+      </label>
+      <label class="check">
         <input v-model="settings.kaestchen" type="checkbox" />
         Experiment: Wörter frei in Kästchen schreiben (die App erkennt die Buchstaben)
       </label>

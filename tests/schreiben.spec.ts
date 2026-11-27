@@ -134,6 +134,7 @@ describe('Schreiben in Klasse 1', () => {
       'schreiben.nachspuren',
       'schreiben.silben-legen',
       'sprache.vokale',
+      'sprache.wortbildung',
     ])
     const tasks = planSession(entries, start, new Map(), 8, createRng(7), getExercise)
     expect(tasks).toHaveLength(8)

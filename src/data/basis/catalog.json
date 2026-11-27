@@ -1367,5 +1367,59 @@
       "thema": "frueher"
     },
     "title": "Früher und heute: Stimmt das?"
+  },
+  {
+    "id": "k1.schreiben.wortbildung",
+    "grade": 1,
+    "topic": "schreiben",
+    "category": "schreiben.woerter",
+    "unit": "k1.schreiben.wortbildung",
+    "exercise": "sprache.wortbildung",
+    "params": {},
+    "title": "Wörter zusammensetzen"
+  },
+  {
+    "id": "k1.rechnen.pfeilweg",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.formen",
+    "unit": "k1.rechnen.pfeilwege",
+    "exercise": "formen.pfeilweg",
+    "params": {},
+    "title": "Wege nach Pfeilen"
+  },
+  {
+    "id": "k1.rechnen.symmetrie",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.formen",
+    "unit": "k1.rechnen.symmetrie",
+    "exercise": "formen.symmetrie",
+    "params": {},
+    "title": "Symmetrisch oder nicht?"
+  },
+  {
+    "id": "k1.rechnen.daten-zaehlen",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.groessen",
+    "unit": "k1.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "zaehlen"
+    },
+    "title": "Strichliste zählen"
+  },
+  {
+    "id": "k1.rechnen.daten-meiste",
+    "grade": 1,
+    "topic": "rechnen",
+    "category": "rechnen.groessen",
+    "unit": "k1.rechnen.daten",
+    "exercise": "rechnen.daten",
+    "params": {
+      "mode": "meiste"
+    },
+    "title": "Wovon am meisten?"
   }
 ]

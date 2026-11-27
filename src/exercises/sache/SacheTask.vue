@@ -9,8 +9,14 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 
 <template>
   <div class="task">
-    <div v-if="data.prompt" class="prompt card">
+    <div v-if="typeof data.prompt === 'string'" class="prompt card">
       <EmojiPicture :code="data.prompt" :size="120" />
+    </div>
+    <div v-else-if="data.prompt" class="prompt card parts">
+      <template v-for="(code, i) in data.prompt" :key="i">
+        <span v-if="i > 0" class="plus" aria-hidden="true">+</span>
+        <EmojiPicture :code="code" :size="96" />
+      </template>
     </div>
     <ChoiceButtons
       label-prefix="Bild"
@@ -42,6 +48,17 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 
 .prompt {
   padding: 16px 32px;
+}
+
+.parts {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.plus {
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .option {

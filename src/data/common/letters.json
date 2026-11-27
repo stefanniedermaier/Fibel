@@ -318,5 +318,21 @@
     "example": "Katze",
     "image": "1F408",
     "position": "inlaut"
+  },
+  {
+    "id": "st",
+    "upper": "St",
+    "type": "mehrgraph",
+    "example": "Stein",
+    "image": "1FAA8",
+    "position": "anlaut"
+  },
+  {
+    "id": "sp",
+    "upper": "Sp",
+    "type": "mehrgraph",
+    "example": "Spinat",
+    "image": "1F96C",
+    "position": "anlaut"
   }
 ]

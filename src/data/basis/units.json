@@ -306,5 +306,33 @@
     "topic": "sache",
     "title": "Früher und heute",
     "term": 2
+  },
+  {
+    "id": "k1.schreiben.wortbildung",
+    "grade": 1,
+    "topic": "schreiben",
+    "title": "Wörter zusammensetzen (Zusatz)",
+    "term": 2
+  },
+  {
+    "id": "k1.rechnen.pfeilwege",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Wege nach Pfeilen (Zusatz)",
+    "term": 2
+  },
+  {
+    "id": "k1.rechnen.symmetrie",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Symmetrie (Zusatz)",
+    "term": 2
+  },
+  {
+    "id": "k1.rechnen.daten",
+    "grade": 1,
+    "topic": "rechnen",
+    "title": "Strichlisten (Zusatz)",
+    "term": 2
   }
 ]

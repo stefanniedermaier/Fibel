@@ -3107,5 +3107,53 @@
     "syllables": ["den"],
     "wortart": "klein",
     "category": "woerter"
+  },
+  {
+    "id": "stein",
+    "text": "Stein",
+    "syllables": ["Stein"],
+    "image": "1FAA8",
+    "category": "natur",
+    "wortart": "nomen",
+    "reim": "ein"
+  },
+  {
+    "id": "stift",
+    "text": "Stift",
+    "syllables": ["Stift"],
+    "image": "270F",
+    "category": "dinge",
+    "wortart": "nomen"
+  },
+  {
+    "id": "spinat",
+    "text": "Spinat",
+    "syllables": ["Spi", "nat"],
+    "image": "1F96C",
+    "category": "essen",
+    "wortart": "nomen"
+  },
+  {
+    "id": "stunde",
+    "text": "Stunde",
+    "syllables": ["Stun", "de"],
+    "image": "231B",
+    "category": "zeit",
+    "wortart": "nomen"
+  },
+  {
+    "id": "stufe",
+    "text": "Stufe",
+    "syllables": ["Stu", "fe"],
+    "category": "dinge",
+    "wortart": "nomen"
+  },
+  {
+    "id": "spuken",
+    "text": "spuken",
+    "syllables": ["spu", "ken"],
+    "image": "1F47B",
+    "category": "tun",
+    "wortart": "verb"
   }
 ]

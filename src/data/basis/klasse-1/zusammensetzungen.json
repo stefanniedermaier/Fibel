@@ -1,0 +1,122 @@
+[
+  {
+    "id": "schneemann",
+    "text": "Schneemann",
+    "image": "26C4",
+    "teile": [
+      {
+        "text": "Schnee",
+        "image": "1F328"
+      },
+      {
+        "text": "Mann",
+        "image": "1F468"
+      }
+    ]
+  },
+  {
+    "id": "sonnenblume",
+    "text": "Sonnenblume",
+    "image": "1F33B",
+    "teile": [
+      {
+        "text": "Sonne",
+        "image": "2600"
+      },
+      {
+        "text": "Blume",
+        "image": "1F33C"
+      }
+    ]
+  },
+  {
+    "id": "eisbaer",
+    "text": "Eisbär",
+    "image": "1F43B-200D-2744-FE0F",
+    "teile": [
+      {
+        "text": "Eis",
+        "image": "1F9CA"
+      },
+      {
+        "text": "Bär",
+        "image": "1F43B"
+      }
+    ]
+  },
+  {
+    "id": "regenbogen",
+    "text": "Regenbogen",
+    "image": "1F308",
+    "teile": [
+      {
+        "text": "Regen",
+        "image": "1F327"
+      },
+      {
+        "text": "Bogen",
+        "image": "1F3F9"
+      }
+    ]
+  },
+  {
+    "id": "sonnenbrille",
+    "text": "Sonnenbrille",
+    "image": "1F576",
+    "teile": [
+      {
+        "text": "Sonne",
+        "image": "2600"
+      },
+      {
+        "text": "Brille",
+        "image": "1F453"
+      }
+    ]
+  },
+  {
+    "id": "handschuh",
+    "text": "Handschuh",
+    "image": "1F9E4",
+    "teile": [
+      {
+        "text": "Hand",
+        "image": "270B"
+      },
+      {
+        "text": "Schuh",
+        "image": "1F45F"
+      }
+    ]
+  },
+  {
+    "id": "regenschirm",
+    "text": "Regenschirm",
+    "image": "2602",
+    "teile": [
+      {
+        "text": "Regen",
+        "image": "1F327"
+      },
+      {
+        "text": "Schirm",
+        "image": "1F302"
+      }
+    ]
+  },
+  {
+    "id": "fussball",
+    "text": "Fußball",
+    "image": "26BD",
+    "teile": [
+      {
+        "text": "Fuß",
+        "image": "1F9B6"
+      },
+      {
+        "text": "Ball",
+        "image": "1F3D0"
+      }
+    ]
+  }
+]

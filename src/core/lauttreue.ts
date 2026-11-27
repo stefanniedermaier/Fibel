@@ -74,10 +74,14 @@ const WORD_RULES: { rule: string; pattern: RegExp }[] = [
   { rule: 'c ohne ch/sch', pattern: /c(?!h)/ },
   { rule: 'ph/th', pattern: /ph|th/ },
   { rule: 'ai', pattern: /ai/ },
+  // Allowed in the dictionary as an unlockable letter group (D13), see ST_SP_RULE.
   { rule: 'st/sp am Anfang', pattern: /^s[tp]/ },
   { rule: 'ng/nk', pattern: /n[gk]/ },
   { rule: 'chs', pattern: /chs/ },
 ]
+
+/** St/Sp are unlocked like Sch (D13); words with them are not rejected for it. */
+export const ST_SP_RULE = 'st/sp am Anfang'
 
 /** Syllable-level patterns (lower case). */
 const SYLLABLE_RULES: { rule: string; pattern: RegExp }[] = [
@@ -106,7 +110,20 @@ export function checkLauttreu(text: string, syllables: readonly string[]): Viola
 }
 
 /** Graphemes that make a word level 4 (taught later in grade 1). */
-const LEVEL4_GRAPHEMES = new Set(['sch', 'ch', 'ei', 'au', 'eu', 'äu', 'ä', 'ö', 'ü', 'pf'])
+const LEVEL4_GRAPHEMES = new Set([
+  'sch',
+  'ch',
+  'ei',
+  'au',
+  'eu',
+  'äu',
+  'ä',
+  'ö',
+  'ü',
+  'pf',
+  'st',
+  'sp',
+])
 
 /** Open syllable with at most one consonant before the vowel: "o", "ma", "se". */
 function isOpenSimple(syllable: string): boolean {

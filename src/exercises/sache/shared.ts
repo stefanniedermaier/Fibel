@@ -128,7 +128,8 @@ export const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
 /** Data shared by the HSU components: an optional picture and picture answers. */
 export interface SacheData {
-  prompt?: string
+  /** One picture, or two shown with a plus (Schnee + Mann). */
+  prompt?: string | string[]
   correctKey: string
   choices: { key: string; image: string; label?: string }[]
 }
