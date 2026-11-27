@@ -20,6 +20,36 @@ In Bayern ist Klasse 4 das Jahr des Übertritts; die Noten in Deutsch, Mathemati
 | Englisch 🇬🇧  | Freizeit und Feste, Einkaufen, Uhrzeiten, kurze bildgestützte Texte, Wörter abschreiben                                                   | 6         |
 | HSU 🔍       | Themen aus HSU 3/4 (zweiter Teil)                                                                                                         | 8         |
 
+### Kategorien
+
+Jedes Fach zeigt „Alles gemischt“, darunter diese Kategorien und bei Bedarf „Stolpersteine“; der Wochenschwerpunkt der Eltern wirkt auf „Alles gemischt“ (README, Abschnitt 4). Ein Fach mit höchstens zwei Einheiten bekommt keine Kategorien. Die Kategorien von Schreiben folgen den Prinzipien des ISB-Grundwortschatzes (hinhören, ableiten, merken).
+
+| Fach         | Kategorie                                     | Einheiten               |
+| ------------ | --------------------------------------------- | ----------------------- |
+| Lesen 📖     | 📖 Geschichten und Redewendungen              | L4-1, L4-4              |
+|              | 🔎 Sachtexte, Tabellen, Meldungen             | L4-2, L4-3, L4-5, L4-6  |
+| Schreiben ✏️ | 📝 Wörter im Satz                             | S4-1, S4-2              |
+|              | 🔁 Ableiten und Wortstamm                     | S4-3, S4-4, S4-5        |
+|              | ⭐ Merkwörter und Diktat                      | S4-6, S4-7              |
+| Sprache 🧩   | 🏷️ Wörter: Wortarten, Zeitformen, Wortbildung | SP4-1, SP4-2, SP4-6     |
+|              | 🧱 Satzglieder und Fälle                      | SP4-3, SP4-4, SP4-7     |
+|              | 📝 Zeichen und Texte                          | SP4-5, SP4-8            |
+| Rechnen 🔢   | 🔢 Zahlen bis zur Million                     | R4-1, R4-2, R4-3, R4-10 |
+|              | 🧠 Kopfrechnen und Rechenart wählen           | R4-4, R4-9              |
+|              | ✍️ Schriftlich rechnen                        | R4-5 bis R4-8           |
+|              | 💬 Sachaufgaben und Daten                     | R4-11, R4-12            |
+| Formen 🔷    | 🗺️ Maßstab und Pläne                          | F4-1, F4-2              |
+|              | 🧊 Kippen und Parkette                        | F4-3, F4-4              |
+| Messen 📏    | 🧮 Umwandeln und vergleichen                  | M4-1, M4-2              |
+|              | 💬 Sachrechnen mit Größen                     | M4-3, M4-4              |
+| Uhr 🕒       | keine (zwei Einheiten)                        | U4-1, U4-2              |
+| Englisch 🇬🇧  | 🏫 Schule (4.2)                               | E4-3                    |
+|              | 🎉 Freizeit und Feste (4.3)                   | E4-1, E4-2              |
+|              | 🛒 Einkaufen (4.4)                            | E4-4                    |
+| HSU 🔍       | je Thema eine Kategorie                       | H4-1 bis H4-8           |
+
+Englisch: Die Kategorien sind die Themengebiete des Lehrplans. Lesen (E3-6, E4-5) und Abschreiben (E4-6) sind Übungsformen innerhalb jedes Themas, keine eigene Kategorie. Kategorien mit nur einem Thema-Eintrag haben trotzdem mehrere Übungen (Hören, Lesen, Dialog).
+
 ## 2. Startwerte
 
 | Einstellung          | Klasse 4                        | heute in der Datei | Begründung          |

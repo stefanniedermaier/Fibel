@@ -20,6 +20,37 @@ Neu in Klasse 3 ist **Englisch**.
 | Englisch 🇬🇧  | Wortschatz hören und lesen zu Schule, Familie, Tieren, Farben, Zahlen; classroom phrases; einfache Dialoge                                    | 6         |
 | HSU 🔍       | Themen aus HSU 3/4 (erster Teil)                                                                                                              | 8         |
 
+### Kategorien
+
+Jedes Fach zeigt „Alles gemischt“, darunter diese Kategorien und bei Bedarf „Stolpersteine“; der Wochenschwerpunkt der Eltern wirkt auf „Alles gemischt“ (README, Abschnitt 4). Ein Fach mit höchstens zwei Einheiten bekommt keine Kategorien. Die Kategorien von Schreiben folgen den Prinzipien des ISB-Grundwortschatzes (hinhören, ableiten, merken).
+
+| Fach         | Kategorie                           | Einheiten              |
+| ------------ | ----------------------------------- | ---------------------- |
+| Lesen 📖     | 📖 Geschichten und Textarten        | L3-1, L3-2, L3-6       |
+|              | 🔎 Sachtexte, Tabellen, Anleitungen | L3-3, L3-4, L3-5       |
+| Schreiben ✏️ | 👂 Hinhören und trennen             | S3-1 bis S3-4          |
+|              | 🔁 Verlängern und ableiten          | S3-5, S3-6             |
+|              | 📚 Nachschlagen und Diktat          | S3-7, S3-8             |
+| Sprache 🧩   | 🏷️ Wortarten und Zeitformen         | SP3-1, SP3-2, SP3-3    |
+|              | 🧩 Wörter bilden                    | SP3-4, SP3-5, SP3-6    |
+|              | 📝 Sätze                            | SP3-7, SP3-8, SP3-9    |
+| Rechnen 🔢   | 🔢 Zahlen bis 1000                  | R3-1, R3-2, R3-3       |
+|              | 🧠 Kopfrechnen und Einmaleins       | R3-4, R3-5             |
+|              | ✍️ Halbschriftlich und schriftlich  | R3-6 bis R3-10         |
+|              | 💬 Sachaufgaben und Daten           | R3-11, R3-12           |
+| Formen 🔷    | 🔷 Formen und Körper                | F3-1, F3-2             |
+|              | 🧊 Netze und Würfelgebäude          | F3-3, F3-4             |
+|              | 🪞 Symmetrie und Muster             | F3-5, F3-6             |
+| Messen 📏    | 💶 Geld und Längen                  | M3-1, M3-2             |
+|              | ⚖️ Gewicht und Hohlmaß              | M3-3, M3-4             |
+|              | 🧮 Umrechnen und Schätzen           | M3-5, M3-6             |
+| Uhr 🕒       | keine (zwei Einheiten)              | U3-1, U3-2             |
+| Englisch 🇬🇧  | 🏫 Schule (Lehrplan 4.2)            | E3-1, E3-2, E3-3, E3-5 |
+|              | 👪 Freunde und Familie (4.1)        | E3-4                   |
+| HSU 🔍       | je Thema eine Kategorie             | H3-1 bis H3-8          |
+
+Englisch: Die Kategorien sind die Themengebiete des Lehrplans. Lesen (E3-6, E4-5) und Abschreiben (E4-6) sind Übungsformen innerhalb jedes Themas, keine eigene Kategorie. Kategorien mit nur einem Thema-Eintrag haben trotzdem mehrere Übungen (Hören, Lesen, Dialog).
+
 ## 2. Startwerte
 
 | Einstellung                  | Klasse 3                                                                      | heute in der Datei | Begründung                          |

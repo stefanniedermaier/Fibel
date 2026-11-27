@@ -15,7 +15,7 @@ Stand: 27.11.2026, App-Version 0.5.1. Grundlage: LehrplanPLUS Bayern, **Deutsch 
   5. **Größen außer der Uhr fehlen** (Geld, länger und kürzer, Wochentage und Monate).
   6. **HSU fehlt ganz**; dafür gibt es den eigenen Plan.
 - **In Zahlen** (Anhang A und B): Von den 112 Kompetenzerwartungen in Deutsch 1/2 deckt die App 2 ab und 12 teilweise. 29 fehlen, ließen sich aber in der App üben; 8 davon gehören in Klasse 1, 2 beginnen dort, 19 kommen erst in Klasse 2. 69 sind nichts für eine App (Gespräche, Vortragen, eigene Texte schreiben und überarbeiten). Von den 55 in Mathematik 1/2 sind 4 abgedeckt und 9 teilweise; 35 fehlen (12 für Klasse 1, 7 beginnen dort, 16 für Klasse 2); 7 sind nichts für eine App. Mathematik hat damit für Klasse 1 die größeren Lücken, Deutsch die wichtigere (Sätze lesen).
-- **Der Plan** umfasst 3 Grundlagen und 32 Ergänzungen in 5 Phasen. Fast alle Übungen sind Module, die [klasse-2.md](klasse-2.md) ohnehin vorsieht; sie entstehen jetzt mit den Parametern der Klasse 1 und laufen in Klasse 2 mit größerem Zahlenraum und schwierigeren Wörtern weiter. Der Plan für Klasse 2 wird dadurch kleiner.
+- **Der Plan** umfasst 6 Grundlagen und 32 Ergänzungen in 5 Phasen. Zu den Grundlagen gehört eine neue Struktur in jedem Fach: „Alles gemischt“, höchstens vier Kategorien zum gezielten Üben und „Stolpersteine“; dazu ein Wochenschwerpunkt der Eltern (Abschnitt 6, README Abschnitt 4). Fast alle Übungen sind Module, die [klasse-2.md](klasse-2.md) ohnehin vorsieht; sie entstehen jetzt mit den Parametern der Klasse 1 und laufen in Klasse 2 mit größerem Zahlenraum und schwierigeren Wörtern weiter. Der Plan für Klasse 2 wird dadurch kleiner.
 
 ## 1. Was „Klasse 1“ im Lehrplan bedeutet
 
@@ -97,8 +97,8 @@ Die einzelnen Kompetenzerwartungen stehen in **Anhang B**.
 - **Anlaut ja, In- und Auslaut nein:** Die Anlaut-Übungen sind gut ausgebaut (drei Übungen). Das Fachprofil verlangt aber, Wörter „nach Lauten“ zu gliedern, also auch Laute in der Mitte und am Ende zu finden (D7).
 - **Buchstabengruppen St/st und Sp/sp:** Der Grundwortschatz 1/2 behandelt sie wie Ei/ei als „Verschiedenheit von Aussprache und Schreibung bei Buchstabengruppen“. Die App schließt sie in Klasse 1 aus, lässt Ei/ei aber in Level 4 zu. Sie können als freischaltbare Buchstabengruppen dazukommen (D13); passende lauttreue Wörter gibt es nur wenige (Stein, Stunde, sparen).
 - **Zahlenraum 20 nur nach Freischaltung:** Das ist richtig so, aber das Einspluseins bis 20 ist Kernstoff des 2. Halbjahres. Mit der Einheiten-Freischaltung (Q1) wird es eine Einheit des 2. Halbjahrs statt einer versteckten Einstellung.
-- **Zu viele Übungen pro Bereich:** Lesen hat schon acht Übungen, und eine Einheit hat acht Aufgaben (PLAN.md, E4). Mit den Ergänzungen hätte Lesen 15 Katalog-Einträge und Rechnen über 20. Ohne Einheiten und Gewichtung (Q1) bekäme jede Übung höchstens eine Aufgabe pro Einheit.
-- **Geometrie und Größen in Klasse 1 ohne neue Kachel:** Ein Katalog-Eintrag legt seinen Bereich selbst fest (`topic`); er muss nicht dem Bereich des Moduls entsprechen. In Klasse 1 stehen die neuen Übungen zu Formen und Geld deshalb im Bereich Rechnen, wie im Schulbuch „Mathematik“. Eigene Kacheln „Formen“ und „Messen“ gibt es erst ab Klasse 2 (README, Abschnitt 3).
+- **Zu viele Übungen pro Bereich:** Lesen hat schon acht Übungen, und eine Einheit hat acht Aufgaben (PLAN.md, E4). Mit den Ergänzungen hätte Lesen 15 Katalog-Einträge und Rechnen über 20. Ohne Einheiten und Gewichtung (Q1) bekäme jede Übung höchstens eine Aufgabe pro Einheit, und gezieltes Üben (nur Hören, nur Plus und Minus) wäre nicht möglich. Deshalb bekommt jedes Fach Kategorien (Q4).
+- **Geometrie und Größen in Klasse 1 ohne neue Kachel:** Ein Katalog-Eintrag legt seinen Bereich selbst fest (`topic`); er muss nicht dem Bereich des Moduls entsprechen. In Klasse 1 stehen die neuen Übungen zu Formen und Geld deshalb als Kategorien im Bereich Rechnen, wie im Schulbuch „Mathematik“. Eigene Kacheln „Formen“ und „Messen“ gibt es erst ab Klasse 2 (README, Abschnitt 3).
 
 ## 6. Plan: fehlende Inhalte ergänzen
 
@@ -111,6 +111,32 @@ Priorität: **A** = Kernstoff der Klasse 1, jetzt nutzbar · **B** = eher 2. Hal
 | Q1  | **Einheiten und Gewichtung im Katalog:** Felder `unit`, `term` und `weight`, Einheiten-Raster im Elternbereich (README, Abschnitt 4). Bestehende Einträge bekommen Einheiten, z. B. „Plus und Minus bis 20“ = 2. Halbjahr                                                                                  | M       | A    |
 | Q2  | **Merkwörter:** Feld `merkwort: true` für die Häufigkeitswörter des Grundwortschatzes 1/2. `data:check` erlaubt nur diese Ausnahme von der Lauttreue und nur aus der ISB-Liste. Der Buchstaben-Filter gilt weiter (_der_ erscheint erst mit d, e und r). In der App erkennt man Merkwörter an einem Symbol | S       | A    |
 | Q3  | **Sätze:** `basis/klasse-1/saetze.json`. `data:check` prüft, dass jedes Wort im Wörterbuch steht oder ein Merkwort ist. Ein Satz kommt erst dran, wenn alle seine Wörter lesbar sind (Buchstaben und Level), genau wie bei den Wörtern. Ein Test zeigt, ab welchen Buchstaben es genug Sätze gibt          | S–M     | A    |
+| Q4  | **Kategorien:** Feld `category` für jeden Katalog-Eintrag, Kategorien-Liste pro Fach (Name, Symbol, Klassen). Im Fach: „Alles gemischt“, darunter die Kategorien aus der Tabelle unten; Route mit optionaler Kategorie; Statistik pro Kategorie (README, Abschnitt 4)                                      | M       | A    |
+| Q5  | **Schwerpunkt:** Die Eltern wählen pro Fach eine freigeschaltete Einheit als Schwerpunkt für 1 oder 2 Wochen; in „Alles gemischt“ kommt dann etwa die Hälfte der Aufgaben daraus                                                                                                                           | S       | B    |
+| Q6  | **Stolpersteine:** Kachel im Fach, sobald es mindestens 4 Aufgaben gibt, die oft danebengehen; gemischt mit sicheren Aufgaben etwa 1 : 1                                                                                                                                                                   | S       | B    |
+
+### Kategorien in Klasse 1
+
+Mit den Ergänzungen dieses Plans (neue Übungen kursiv). Die Kategorie „Hören“ braucht keine Buchstaben und ist deshalb vom ersten Tag an voll verfügbar.
+
+| Fach         | Kategorie                | Übungen                                                                                                                                   |
+| ------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Lesen 📖     | 👂 Hören                 | Silben hören, Silben klatschen, Was reimt sich?, Gleicher Anfang, Welches fängt anders an?, _Lautposition (D7)_, _Zuhören (D5)_           |
+|              | 🔤 Wörter lesen          | Wort → Bild, Bild → Wort, Anlaut, _Blitzlesen (D1)_                                                                                       |
+|              | 📄 Sätze und Texte       | _Satz → Bild (D2)_, _Passt der Satz? (D3)_, _kurze Texte (D4)_, _Bildergeschichten (D6)_                                                  |
+| Schreiben ✏️ | ✍️ Buchstaben            | Buchstaben nachspuren, _Vokale (D10)_                                                                                                     |
+|              | 🧩 Wörter bauen          | Silben legen, Lückenwort, Buchstaben legen, ABC-Tastatur, Wort in Kästchen (Experiment)                                                   |
+|              | ⭐ Merkwörter            | _Schau – merk – schreib (D8)_, _Lernwörter (D9)_                                                                                          |
+|              | ✒️ Sätze schreiben       | _Satzanfang und Satzzeichen (D11)_ – erst, wenn D11 da ist; vorher drei Kategorien                                                        |
+| Rechnen 🔢   | 🔢 Zahlen                | Mengen erkennen, Menge legen, Vergleichen, _Zehner und Einer (M2)_, _Zahlenstrahl (M3)_, _Ordnungszahlen (M8)_, _Ziffern nachspuren (M1)_ |
+|              | ➕ Rechnen               | Zahlenhaus, Plus und Minus bis 10 und 20, _Päckchen (M5, M7)_, _Rechengeschichten (M6)_                                                   |
+|              | 🔷 Formen und Muster     | Reihen erkennen, _Lagebegriffe (M9)_, _Flächenformen (M10)_, _Pfeilwege (M11)_, _Symmetrie (M12)_                                         |
+|              | 💶 Größen und Daten      | _Geld (M13)_, _länger und kürzer (M14)_, _Strichliste (M15)_                                                                              |
+| Uhr 🕒       | 🕒 Uhr lesen und stellen | Uhr lesen, Uhr stellen                                                                                                                    |
+|              | 📅 Kalender              | _Wochentage, Monate, Tageszeiten (M16, drei Katalog-Einträge)_; bis dahin hat Uhr keine Kategorien                                        |
+| HSU 🔍       | je Thema eine Kategorie  | siehe [hsu-klasse-1.md](hsu-klasse-1.md), Abschnitt 4                                                                                     |
+
+Bis die neuen Übungen da sind, hat Rechnen nur zwei Kategorien mit Inhalt (Zahlen, Rechnen) plus „Formen und Muster“ mit einer Übung. Nach der Regel „keine Kategorie mit nur einer Übung“ steht „Reihen erkennen“ so lange in „Rechnen“; die Zuordnung ist ein Feld im Katalog und lässt sich ohne Code ändern.
 
 ### Lesen 📖
 
@@ -175,15 +201,15 @@ Priorität: **A** = Kernstoff der Klasse 1, jetzt nutzbar · **B** = eher 2. Hal
 
 Das laufende Schuljahr endet im Sommer 2027. Die Phasen folgen dem, was in der Schule üblicherweise wann kommt: Sätze lesen, sobald genug Buchstaben bekannt sind; Zahlenraum 20 und Zehnerübergang im 2. Halbjahr; Geld und Kalender eher im Frühjahr.
 
-| Phase | Inhalt                                              | Fertig, wenn …                                                                                                                                               | Umfang |
-| ----- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-| 1     | Q1, Q2, Q3, D14; Lesen D1, D2, D3, D7; Schreiben D8 | … Einheiten freischaltbar sind und mit den ersten zwölf Buchstaben der Schulreihenfolge (M, A, I, O, L, E, U, S, R, N, T, F) mindestens 20 Sätze lesbar sind | L      |
-| 2     | Rechnen M1–M6, M9, M10                              | … der Zahlenraum 20 strukturiert geübt wird und Formen und Lage in Rechnen-Einheiten vorkommen                                                               | L      |
-| 3     | HSU Stufe 1 (H1), parallel zu Phase 2 möglich       | siehe [hsu-klasse-1.md](hsu-klasse-1.md), Abschnitt 8                                                                                                        | M–L    |
-| 4     | D4, D5, D6, D9, D10, D11; M7, M8, M13, M14, M16     | … Zuhören, kurze Texte, Lernwörter, Geld und Kalender spielbar sind                                                                                          | L      |
-| 5     | optional: D12, D13, D15, M11, M12, M15              | … nach der Testrunde mit dem Kind entschieden ist, was davon sinnvoll ist                                                                                    | M      |
+| Phase | Inhalt                                                  | Fertig, wenn …                                                                                                                                                                                  | Umfang |
+| ----- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| 1     | Q1–Q4, D14; Lesen D1, D2, D3, D7; Schreiben D8          | … Einheiten freischaltbar sind, jedes Fach seine Kategorien zeigt und mit den ersten zwölf Buchstaben der Schulreihenfolge (M, A, I, O, L, E, U, S, R, N, T, F) mindestens 20 Sätze lesbar sind | L      |
+| 2     | Rechnen M1–M6, M9, M10                                  | … der Zahlenraum 20 strukturiert geübt wird und Formen und Lage in Rechnen-Einheiten vorkommen                                                                                                  | L      |
+| 3     | HSU Stufe 1 (H1), parallel zu Phase 2 möglich           | siehe [hsu-klasse-1.md](hsu-klasse-1.md), Abschnitt 8                                                                                                                                           | M–L    |
+| 4     | Q5, Q6; D4, D5, D6, D9, D10, D11; M7, M8, M13, M14, M16 | … Zuhören, kurze Texte, Lernwörter, Geld und Kalender spielbar sind                                                                                                                             | L      |
+| 5     | optional: D12, D13, D15, M11, M12, M15                  | … nach der Testrunde mit dem Kind entschieden ist, was davon sinnvoll ist                                                                                                                       | M      |
 
-**Abhängigkeiten:** Q2 und Q3 brauchen D2, D3 und D4. Q1 kommt vor allem anderen, weil sonst jede neue Übung die vorhandenen verdrängt. Rechnen (Phase 2) hängt nur von Q1 ab und kann parallel zu Phase 1 entstehen.
+**Abhängigkeiten:** D2, D3 und D4 brauchen Q2 und Q3. Q1 und Q4 kommen vor allem anderen, weil sonst jede neue Übung die vorhandenen verdrängt; Q4 lässt sich schon mit den heutigen Übungen bauen und testen. Q6 braucht nur die vorhandene Statistik. Rechnen (Phase 2) hängt nur von Q1 ab und kann parallel zu Phase 1 entstehen.
 
 **Wirkung auf Klasse 2:** Mit den Phasen 1, 2 und 4 entstehen 16 der Module aus [klasse-2.md](klasse-2.md) schon jetzt: `lesen.blitzlesen`, `lesen.satz-bild`, `lesen.text-fragen`, `lesen.reihenfolge`, `schreiben.diktat`, `sprache.wortart`, `sprache.satzzeichen`, `sprache.gross-klein`, `rechnen.stellenwert`, `rechnen.zahlenstrahl`, `rechnen.paeckchen`, `rechnen.sachaufgabe`, `formen.lage`, `formen.erkennen`, `messen.geld` und `uhr.kalender`. In Klasse 2 brauchen sie dann nur neue Parameter und Inhalte.
 
@@ -207,7 +233,7 @@ Das laufende Schuljahr endet im Sommer 2027. Die Phasen folgen dem, was in der S
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Mit wenigen Buchstaben gibt es kaum Sätze     | Sätze erst anbieten, wenn mindestens 8 davon lesbar sind; der Elternbereich zeigt die Zahl wie bei den Wörtern |
 | Merkwörter weichen die Lauttreue auf          | nur die ISB-Liste, sichtbares Symbol, `data:check` lässt nichts anderes durch                                  |
-| Zu viele Übungen pro Einheit                  | Q1 vor allen neuen Übungen                                                                                     |
+| Zu viele Übungen pro Einheit                  | Q1 und Q4 vor allen neuen Übungen                                                                              |
 | Hörgeschichten zu lang für die Sprachausgabe  | höchstens 5 Sätze, Sätze einzeln sprechen, 🔊 wiederholt die Geschichte                                        |
 | Ziffern-Schreibweise weicht von der Schule ab | Vorlagen vor dem Freischalten mit dem Heft der Schule vergleichen (wie bei den Buchstaben, PLAN.md, Phase 6)   |
 | Geld-Abbildungen                              | stilisiert zeichnen, keine echten Münz- und Scheinmotive (README, Abschnitt 6)                                 |

@@ -21,6 +21,35 @@ Allgemeines (Bereiche, Einheiten-Freischaltung, Module, Quellen) steht in [READM
 | Uhr 🕒       | Viertelstunden bis Minuten (vorhanden), digitale Uhrzeit, Zeitspannen, Kalender                                                           | 5         |
 | HSU 🔍       | Fortsetzung des HSU-Bereichs aus Klasse 1 mit den übrigen Themen aus HSU 1/2                                                              | –         |
 
+### Kategorien
+
+Jedes Fach zeigt „Alles gemischt“, darunter diese Kategorien und bei Bedarf „Stolpersteine“; der Wochenschwerpunkt der Eltern wirkt auf „Alles gemischt“ (README, Abschnitt 4). Ein Fach mit höchstens zwei Einheiten bekommt keine Kategorien. Die Kategorien von Schreiben folgen den Prinzipien des ISB-Grundwortschatzes (hinhören, ableiten, merken).
+
+| Fach         | Kategorie                    | Einheiten                                                                        |
+| ------------ | ---------------------------- | -------------------------------------------------------------------------------- |
+| Lesen 📖     | 🔤 Wörter lesen              | L2-1, L2-2, L2-3                                                                 |
+|              | 📄 Sätze                     | L2-4, L2-5                                                                       |
+|              | 📖 Texte und Geschichten     | L2-6, L2-7                                                                       |
+| Schreiben ✏️ | 👂 Genau hinhören            | S2-1 bis S2-5 (Endungen, Buchstabengruppen, r nach Vokal, ie, Doppelkonsonanten) |
+|              | 🔁 Verlängern und ableiten   | S2-6, S2-7                                                                       |
+|              | ⭐ Merkwörter und Lernwörter | S2-8, S2-9, S2-10                                                                |
+|              | 🔤 ABC und Schrift           | S2-11, S2-12                                                                     |
+| Sprache 🧩   | 🏷️ Wortarten                 | SP2-1, SP2-2, SP2-3, SP2-5, SP2-6                                                |
+|              | 📝 Sätze                     | SP2-4, SP2-7                                                                     |
+|              | 🧩 Wörter bilden             | SP2-8, SP2-9, SP2-10                                                             |
+| Rechnen 🔢   | 🔢 Zahlen bis 100            | R2-1 bis R2-4                                                                    |
+|              | ➕ Plus und Minus            | R2-5, R2-6, R2-7, R2-12                                                          |
+|              | ✖️ Einmaleins und Teilen     | R2-8 bis R2-11                                                                   |
+|              | 💬 Sachaufgaben und Daten    | R2-13 bis R2-16                                                                  |
+| Formen 🔷    | 🧭 Lage und Flächen          | F2-1, F2-6                                                                       |
+|              | 🔷 Formen und Körper         | F2-2, F2-3                                                                       |
+|              | 🪞 Symmetrie und Muster      | F2-4, F2-5                                                                       |
+| Messen 📏    | 💶 Geld                      | M2-1, M2-2, M2-3                                                                 |
+|              | 📏 Längen                    | M2-4, M2-5                                                                       |
+| Uhr 🕒       | 🕒 Uhrzeit                   | U2-1, U2-2, U2-3                                                                 |
+|              | 📅 Zeitspanne und Kalender   | U2-4, U2-5                                                                       |
+| HSU 🔍       | je Thema eine Kategorie      | hsu-klasse-1.md, Abschnitt 4                                                     |
+
 ## 2. Startwerte (`basis/grade-defaults.json`)
 
 | Einstellung                  | Klasse 2                                                                                        | heute in der Datei | Begründung                                                       |

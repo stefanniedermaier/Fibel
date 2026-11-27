@@ -8,7 +8,7 @@ Stand: 27.11.2026. Lehrplan: LehrplanPLUS Bayern, **Fachlehrplan Heimat- und Sac
 
 - **Machbar, mit klarer Grenze.** Die App kann das Wissen, die Begriffe und das Ordnen üben, die im HSU entstehen: Tiere und Pflanzen erkennen, Obst und Gemüse der Jahreszeit zuordnen, Müll trennen, Verkehrsregeln für Fußgänger, Wetter, Tagesablauf und Jahreslauf, Sinne, gesunde Ernährung, Berufe und Werkzeuge. Den eigentlichen HSU kann und soll sie nicht ersetzen: beobachten, untersuchen, bauen, Gespräche, Unterrichtsgänge.
 - **Abdeckung:** Von den 59 Kompetenzerwartungen in HSU 1/2 kann die App 14 in einem wesentlichen Teil unterstützen, 25 in einem kleinen Teil (meist die Begriffe) und 20 gar nicht (Anhang). Keine Kompetenzerwartung erfüllt die App allein.
-- **Technik:** HSU passt ohne Umbau in die Architektur: ein neuer Bereich `sache`, fünf neue Übungsmodule, die zum Teil vorhandene Komponenten nutzen, eine neue Datendatei mit Bildbegriffen und Themen, ein Themen-Raster im Elternbereich. Kein Server, keine Kamera, kein Mikrofon.
+- **Technik:** HSU passt ohne Umbau in die Architektur: ein neuer Bereich `sache`, fünf neue Übungsmodule, die zum Teil vorhandene Komponenten nutzen, eine neue Datendatei mit Bildbegriffen und Themen, ein Themen-Raster im Elternbereich. Die Themen sind die Kategorien des Fachs (README, Abschnitt 4). Kein Server, keine Kamera, kein Mikrofon.
 - **Bilder:** OpenMoji enthält fast alles, was Klasse 1 braucht (geprüft, Abschnitt 6). Es fehlen deutsche Verkehrszeichen, Zebrastreifen, einige Pflanzen (Löwenzahn, Gänseblümchen) und Mülltonnen; diese werden als eigene SVGs gezeichnet oder weggelassen.
 - **Hauptaufwand sind die Inhalte:** etwa 250 Bildbegriffe in 16 Themen, fachlich geprüft, mit Prüfung der Aussprache.
 - **Größtes Risiko:** fachlich falsche oder regional unpassende Inhalte, vor allem bei Verkehr und Mülltrennung. Dagegen helfen eindeutige Inhalte, eine Quelle pro Thema und die Freigabe der Themen durch die Eltern.
@@ -186,15 +186,15 @@ OpenMoji 17 (im Projekt vorhanden) wurde auf die Motive der Stufe 1 und 2 geprü
 
 ## 7. Technische Umsetzung
 
-| Baustein            | Änderung                                                                                                                             | Aufwand |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Bereich             | `Topic` um `'sache'` erweitern; Name aus der Länderanpassung (Bayern: „HSU“, sonst „Sachunterricht“), Symbol 🔍                      | S       |
-| Startseite          | HSU-Kachel nur, wenn mindestens ein Thema freigeschaltet ist; Kacheln nur für Bereiche der eigenen Klasse (README, Abschnitt 3)      | S       |
-| Themenwahl          | Nach dem Tipp auf HSU wählt das Kind ein Thema (Bildkachel, Name wird vorgelesen); die Einheit mischt nur die Aufgaben dieses Themas | M       |
-| Module              | `sache.hoeren-bild`, `sache.paare`, `sache.sortieren`, `sache.reihenfolge`, `sache.stimmt-das` (Abschnitt 5)                         | M       |
-| Daten               | `basis/klasse-1/sache.json`, Typen, Laden in `content.ts`, Länderanpassung (Feste, Namen)                                            | M       |
-| Elternbereich       | „HSU“: Themen-Raster zum Freischalten, Mülltonnen zu Hause, Forscheraufträge zum Vorlesen                                            | S–M     |
-| Prüfungen und Tests | `data:check`-Regeln (Abschnitt 6), Unit-Tests der Generatoren (keine Dopplungen, eindeutige Lösung), E2E: eine HSU-Einheit           | S–M     |
+| Baustein            | Änderung                                                                                                                                                                                                                                                                        | Aufwand |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Bereich             | `Topic` um `'sache'` erweitern; Name aus der Länderanpassung (Bayern: „HSU“, sonst „Sachunterricht“), Symbol 🔍                                                                                                                                                                 | S       |
+| Startseite          | HSU-Kachel nur, wenn mindestens ein Thema freigeschaltet ist; Kacheln nur für Bereiche der eigenen Klasse (README, Abschnitt 3)                                                                                                                                                 | S       |
+| Themenwahl          | Die Themen sind die Kategorien des Fachs (README, Abschnitt 4): Nach dem Tipp auf HSU wählt das Kind ein Thema (Bildkachel, Name wird vorgelesen); die Einheit mischt nur die Aufgaben dieses Themas. Kein „Alles gemischt“; „Stolpersteine“ gibt es wie in den anderen Fächern | M       |
+| Module              | `sache.hoeren-bild`, `sache.paare`, `sache.sortieren`, `sache.reihenfolge`, `sache.stimmt-das` (Abschnitt 5)                                                                                                                                                                    | M       |
+| Daten               | `basis/klasse-1/sache.json`, Typen, Laden in `content.ts`, Länderanpassung (Feste, Namen)                                                                                                                                                                                       | M       |
+| Elternbereich       | „HSU“: Themen-Raster zum Freischalten, Mülltonnen zu Hause, Forscheraufträge zum Vorlesen                                                                                                                                                                                       | S–M     |
+| Prüfungen und Tests | `data:check`-Regeln (Abschnitt 6), Unit-Tests der Generatoren (keine Dopplungen, eindeutige Lösung), E2E: eine HSU-Einheit                                                                                                                                                      | S–M     |
 
 Session-Engine, Leitner, Sterne, Kronen und Statistik bleiben unverändert; die Statistik zeigt HSU als eigenes Fach.
 

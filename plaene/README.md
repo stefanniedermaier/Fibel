@@ -2,14 +2,14 @@
 
 Stand: 27.11.2026. Grundlage ist der **LehrplanPLUS Grundschule Bayern** (abgerufen am 27.11.2026) mit den „Ergänzenden Informationen“ des ISB zum Grundwortschatz. Bayern ist das Standard-Bundesland der App (PLAN.md, Abschnitt 4).
 
-| Datei                                        | Inhalt                                                                                         |
-| -------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [klasse-2.md](klasse-2.md)                   | Fächer und Unterrichtseinheiten für Klasse 2                                                   |
-| [klasse-3.md](klasse-3.md)                   | Fächer und Unterrichtseinheiten für Klasse 3                                                   |
-| [klasse-4.md](klasse-4.md)                   | Fächer und Unterrichtseinheiten für Klasse 4                                                   |
-| [klasse-1-abgleich.md](klasse-1-abgleich.md) | Abgleich der heutigen App mit dem Lehrplan 1/2 und Plan für die fehlenden Inhalte der Klasse 1 |
-| [hsu-klasse-1.md](hsu-klasse-1.md)           | Machbarkeits- und Umsetzungsplan für Heimat- und Sachunterricht (HSU), Klasse 1                |
-| diese Datei                                  | was für alle Klassen gilt: Lehrplan-Aufbau, Bereiche, Bausteine, Reihenfolge                   |
+| Datei                                        | Inhalt                                                                                                         |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [klasse-2.md](klasse-2.md)                   | Fächer und Unterrichtseinheiten für Klasse 2                                                                   |
+| [klasse-3.md](klasse-3.md)                   | Fächer und Unterrichtseinheiten für Klasse 3                                                                   |
+| [klasse-4.md](klasse-4.md)                   | Fächer und Unterrichtseinheiten für Klasse 4                                                                   |
+| [klasse-1-abgleich.md](klasse-1-abgleich.md) | Abgleich der heutigen App mit dem Lehrplan 1/2 und Plan für die fehlenden Inhalte der Klasse 1                 |
+| [hsu-klasse-1.md](hsu-klasse-1.md)           | Machbarkeits- und Umsetzungsplan für Heimat- und Sachunterricht (HSU), Klasse 1                                |
+| diese Datei                                  | was für alle Klassen gilt: Lehrplan-Aufbau, Bereiche, Struktur (Einheiten, Kategorien), Bausteine, Reihenfolge |
 
 ---
 
@@ -66,22 +66,73 @@ Zwei Anpassungen sind nötig, weil es mehr Bereiche werden:
 - **Kacheln pro Klasse:** Die Startseite zeigt heute für jeden Bereich ohne Übungen eine ausgegraute Kachel „kommt bald“. Bei neun Bereichen wären das in Klasse 1 vier graue Kacheln. Künftig erscheinen nur Bereiche, die der Katalog für die Klasse des Profils vorsieht.
 - **Name pro Land:** „HSU“ ist der bayerische Name. Andere Länder sagen „Sachunterricht“. Der Anzeigename kommt deshalb aus der Länderanpassung (`overlay.json`), mit „Sachunterricht“ als Standard.
 
-## 4. Unterrichtseinheiten und Freischaltung
+## 4. Struktur: Einheiten, Kategorien, Schwerpunkt, Stolpersteine
 
-Bisher sind die Katalog-Einträge Übungen ohne Bezug zum Schuljahr. Ab Klasse 2 werden sie zu **Unterrichtseinheiten** gruppiert:
+Bisher gibt es nur zwei Ebenen: Fach und Übung. Eine Einheit mischt alle verfügbaren Übungen eines Fachs. Mit den geplanten Ergänzungen hätte Lesen in Klasse 1 schon 15 Übungen; gezieltes Üben wäre nicht möglich, und jede Übung käme pro Einheit höchstens einmal dran. Deshalb bekommt der Katalog vier Ordnungen, die verschiedene Fragen beantworten:
+
+| Ordnung           | Frage                                | Wer entscheidet            | Sichtbar für das Kind                      |
+| ----------------- | ------------------------------------ | -------------------------- | ------------------------------------------ |
+| **Einheit**       | Was ist freigeschaltet?              | Eltern, passend zur Schule | nein                                       |
+| **Kategorie**     | Was will ich gerade üben?            | Kind                       | ja, als Kacheln im Fach                    |
+| **Schwerpunkt**   | Was kommt gerade in der Schule dran? | Eltern, für eine Zeit      | nein, wirkt als Gewichtung                 |
+| **Stolpersteine** | Was hakt?                            | automatisch (Statistik)    | ja, als eigene Kachel, wenn es welche gibt |
 
 ```ts
 interface CatalogEntry {
   // … wie bisher
   unit?: string // Unterrichtseinheit, z. B. 'k2.rechnen.einmaleins-kern'
   term?: 1 | 2 // Halbjahr, in dem die Einheit üblicherweise kommt
+  category: string // Kategorie im Fach, z. B. 'lesen.hoeren'
+  weight?: number // Grundgewicht in gemischten Einheiten (Standard 1)
+}
+
+interface Category {
+  id: string // 'lesen.hoeren'
+  topic: Topic
+  title: string // „Hören“ – wird vorgelesen
+  icon: string // OpenMoji-Code
+  grades: number[] // Klassen, in denen es die Kategorie gibt
 }
 ```
 
+### Einheiten (Eltern)
+
 - **Elternbereich „Einheiten“:** pro Fach ein Raster zum Abhaken, wie die Buchstaben in Klasse 1. Startwert: Einheiten des 1. Halbjahrs an, des 2. Halbjahrs aus. So kommt nichts dran, was die Schule noch nicht behandelt hat (z. B. schriftliches Dividieren), und die Eltern stellen um, sobald die Schule so weit ist. Es gibt keinen Automatismus nach Datum; das passt zum Klassenwechsel, der auch nur von Hand geht.
-- **Thema wählen (optional pro Bereich):** Bei HSU und Englisch wählt das Kind vor der Einheit ein Thema (Kachel mit Bild, der Name wird vorgelesen), damit eine Einheit nicht zwischen Mülltrennung, Wetter und Gefühlen springt. Die Session-Route bekommt dafür einen optionalen Parameter `unit`.
 - **Level innerhalb einer Einheit** steigen wie bisher automatisch (Leitner, 80 % sicher).
 - **Länderanpassung:** Ein Land kann Einheiten verschieben, entfernen oder mit anderen Parametern versehen, z. B. ein anderes Verfahren der schriftlichen Subtraktion.
+
+### Kategorien (Kind)
+
+- **Ablauf:** Startseite → Fach → Kategorie → Einheit. Im Fach steht oben eine große Kachel **„Alles gemischt“**, darunter höchstens vier Kategorien und, falls vorhanden, „Stolpersteine“. Vom Start bis zur ersten Aufgabe sind es höchstens zwei Tipps.
+- **„Alles gemischt“ ist der Standard.** Gemischtes Üben bleibt besser im Gedächtnis als blockweises; die Kategorien sind für das gezielte Üben da, wenn etwas neu ist oder hakt.
+- **Innerhalb einer Kategorie** mischt die Einheit nur deren Übungen, gleichmäßig verteilt wie heute (keine Übung zweimal hintereinander).
+- **Kategorien sind fachlich, nicht nach Lehrplan-Nummern.** Die Kinder sollen sie an Bild und Namen erkennen („Hören“, „Wörter bauen“, „Zahlen“). Die Lehrplan-Zuordnung steht im Elternbereich und in der Statistik.
+- **Eine Kategorie erscheint nur, wenn sie verfügbare Übungen hat** (Einheit freigeschaltet, genug Wörter mit den freigeschalteten Buchstaben).
+- **Ein Katalog-Eintrag legt Fach und Kategorie selbst fest** (`topic`, `category`); er muss nicht zum Fach des Moduls passen. So können z. B. Formen und Geld in Klasse 1 als Kategorien im Fach Rechnen stehen und ab Klasse 2 eigene Fächer werden.
+- **HSU:** Hier sind die Kategorien die Themen (Wiese, Wetter, Feste …). Es kann mehr als vier geben; sie erscheinen nur, wenn die Eltern das Thema freigeschaltet haben. „Alles gemischt“ gibt es in HSU nicht, damit eine Einheit nicht zwischen Mülltrennung und Gefühlen springt.
+- **Englisch:** Die Kategorien sind die vier Themengebiete des Lehrplans (Freunde und Familie, Schule, Freizeit und Feste, Einkaufen). „Alles gemischt“ gibt es hier, weil gemischter Wortschatz beim Wiederholen hilft.
+- **Route:** `/einheit/:grade/:topic/:category?` – ohne Kategorie „Alles gemischt“.
+- **Statistik:** Trefferquote zusätzlich pro Kategorie; Sterne und Kronen zählen weiter pro Fach.
+
+### Schwerpunkt (Eltern)
+
+- Die Eltern wählen im Elternbereich pro Fach **einen Schwerpunkt** aus den freigeschalteten Einheiten, z. B. „Zehnerübergang“ oder „Wörter mit W“, mit Dauer (1 oder 2 Wochen, danach läuft er von selbst aus).
+- Wirkung: In „Alles gemischt“ kommt etwa die Hälfte der Aufgaben aus dem Schwerpunkt; die Kategorie des Schwerpunkts trägt ein kleines Fähnchen. Das Kind wird nicht umgeleitet.
+- So folgt die App dem Unterricht der Woche, ohne dass die Eltern Einheiten aus- und wieder einschalten müssen.
+
+### Stolpersteine (automatisch)
+
+- Die Statistik kennt schon Aufgaben, die oft danebengehen und noch nicht sitzen (PLAN.md, Phase 7). Daraus wird eine Kachel „Stolpersteine“ im Fach, die nur erscheint, wenn es mindestens 4 solche Aufgaben gibt.
+- Die Einheit mischt die Stolpersteine mit einigen sicheren Aufgaben (etwa 1 : 1), damit sie sich nicht wie eine Strafrunde anfühlt. Wer einen Stolperstein zweimal richtig löst, nimmt ihn aus der Liste.
+
+### Bewusst nicht
+
+- keine Gruppierung nach Lehrplan-Nummern für das Kind
+- nicht mehr als vier Kategorien pro Fach (außer HSU und Englisch)
+- keine Pflicht, eine Kategorie zu wählen
+- keine Kategorie, die nur eine einzige Übung enthält; dann gehört die Übung in eine Nachbarkategorie
+
+Die Kategorien pro Klasse stehen jeweils in Abschnitt 1 der Klassenpläne und in [klasse-1-abgleich.md](klasse-1-abgleich.md), Abschnitt 6.
 
 ## 5. Neue Übungsbausteine
 
@@ -184,14 +235,14 @@ Aufwand wie in PLAN.md: S = klein, M = mittel, L = groß.
 
 Das Kind ist jetzt in Klasse 1. Daraus ergibt sich die Reihenfolge:
 
-| Schritt | Inhalt                                                                                | Wann gebraucht                 | Aufwand |
-| ------- | ------------------------------------------------------------------------------------- | ------------------------------ | ------- |
-| 1       | Querschnitt: neue Bereiche, Kacheln pro Klasse, Einheiten-Freischaltung, Thema wählen | vor allem anderen              | M       |
-| 2a      | Lücken der Klasse 1 schließen ([klasse-1-abgleich.md](klasse-1-abgleich.md))          | sofort, im laufenden Schuljahr | XL      |
-| 2b      | HSU Klasse 1, Stufe 1 ([hsu-klasse-1.md](hsu-klasse-1.md)), parallel zu 2a            | sofort, im laufenden Schuljahr | M–L     |
-| 3       | Klasse 2 ([klasse-2.md](klasse-2.md))                                                 | ab September 2027              | XL      |
-| 4       | Klasse 3 ([klasse-3.md](klasse-3.md)), mit Englisch                                   | ab September 2028              | XL      |
-| 5       | Klasse 4 ([klasse-4.md](klasse-4.md))                                                 | ab September 2029              | L       |
+| Schritt | Inhalt                                                                                                          | Wann gebraucht                 | Aufwand |
+| ------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------- |
+| 1       | Querschnitt: neue Bereiche, Kacheln pro Klasse, Einheiten, Kategorien, Schwerpunkt, Stolpersteine (Abschnitt 4) | vor allem anderen              | M–L     |
+| 2a      | Lücken der Klasse 1 schließen ([klasse-1-abgleich.md](klasse-1-abgleich.md))                                    | sofort, im laufenden Schuljahr | XL      |
+| 2b      | HSU Klasse 1, Stufe 1 ([hsu-klasse-1.md](hsu-klasse-1.md)), parallel zu 2a                                      | sofort, im laufenden Schuljahr | M–L     |
+| 3       | Klasse 2 ([klasse-2.md](klasse-2.md))                                                                           | ab September 2027              | XL      |
+| 4       | Klasse 3 ([klasse-3.md](klasse-3.md)), mit Englisch                                                             | ab September 2028              | XL      |
+| 5       | Klasse 4 ([klasse-4.md](klasse-4.md))                                                                           | ab September 2029              | L       |
 
 Jede Klasse entsteht wie in PLAN.md (Abschnitt 11) beschrieben: Wörterbuch und Inhalte, Katalog-Einträge, neue Module nur dort, wo die vorhandenen nicht reichen. Vor jeder Klasse wird der Lehrplan erneut abgeglichen (PLAN.md, Abschnitt 13), denn Bayern überarbeitet einzelne Fachlehrpläne (zuletzt Englisch zur Flexibilisierung der Stundentafel).
 
