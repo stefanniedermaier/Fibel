@@ -85,6 +85,7 @@ import { ablesen } from './messen/groessen'
 import { netz } from './formen/netz'
 import { gebaeude } from './formen/gebaeude'
 import { winkel } from './formen/winkel'
+import { ornament } from './formen/ornament'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -187,6 +188,7 @@ register(ablesen)
 register(netz)
 register(gebaeude)
 register(winkel)
+register(ornament)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

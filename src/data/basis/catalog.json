@@ -4248,5 +4248,42 @@
     },
     "title": "Zeit und Zeitleiste: Was kommt zuerst?",
     "weight": 0.5
+  },
+  {
+    "id": "k3.formen.ornamente.einfach",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.symmetrie",
+    "unit": "k3.formen.ornamente",
+    "exercise": "formen.ornament",
+    "params": {
+      "regeln": ["schieben", "spiegeln", "drehen"]
+    },
+    "title": "Verschieben, spiegeln, drehen"
+  },
+  {
+    "id": "k3.formen.ornamente.schwer",
+    "grade": 3,
+    "topic": "formen",
+    "category": "formen.symmetrie",
+    "unit": "k3.formen.ornamente",
+    "exercise": "formen.ornament",
+    "params": {
+      "regeln": ["kippen", "vier"]
+    },
+    "title": "Geklappt und vier Lagen",
+    "weight": 0.5
+  },
+  {
+    "id": "k3.sache.auge.teile",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.auge",
+    "unit": "k3.sache.auge",
+    "exercise": "sache.suchbild",
+    "params": {
+      "thema": "auge"
+    },
+    "title": "Das Auge: Teile finden"
   }
 ]

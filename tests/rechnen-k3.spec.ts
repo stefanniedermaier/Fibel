@@ -206,3 +206,16 @@ describe('Uhr und Daten Klasse 3', () => {
     expect(t.data.correctKey).toBe('70')
   })
 })
+
+describe('Bandornamente', () => {
+  it('die Lösung folgt der Regel und ist unter drei verschiedenen Lagen', async () => {
+    const { ornament, REGELN } = await import('@/exercises/formen/ornament')
+    for (const key of ornament.items(ctx, {})) {
+      const t = ornament.generate(ctx, {}, key, createRng(6))
+      const regel = REGELN[key.split(':')[1]!.split('-')[0]!]!
+      expect(t.data.correctKey).toBe(regel.lagen[t.data.band.length % regel.lagen.length])
+      expect(new Set(t.data.choices.map((c) => c.key)).size).toBe(3)
+      expect(t.data.choices.map((c) => c.key)).toContain(t.data.correctKey)
+    }
+  })
+})

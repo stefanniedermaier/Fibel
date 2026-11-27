@@ -166,5 +166,71 @@
     "frage": "Can I go to the toilet, please?",
     "antwort": "Yes, you can.",
     "falsch": ["It's red.", "I'm fine."]
+  },
+  {
+    "id": "d29",
+    "frage": "What's the weather like?",
+    "antwort": "It's sunny.",
+    "falsch": ["It's a cat.", "I'm nine."]
+  },
+  {
+    "id": "d30",
+    "frage": "Where are you from?",
+    "antwort": "I'm from Germany.",
+    "falsch": ["I'm fine.", "It's blue."]
+  },
+  {
+    "id": "d31",
+    "frage": "Can you play football?",
+    "antwort": "Yes, I can.",
+    "falsch": ["It's red.", "Good night."]
+  },
+  {
+    "id": "d32",
+    "frage": "Is it a cat?",
+    "antwort": "No, it isn't. It's a dog.",
+    "falsch": ["Yes, please.", "I'm happy."]
+  },
+  {
+    "id": "d33",
+    "frage": "How many pencils have you got?",
+    "antwort": "I've got five pencils.",
+    "falsch": ["It's yellow.", "Goodbye."]
+  },
+  {
+    "id": "d34",
+    "frage": "What's your teacher's name?",
+    "antwort": "Her name is Mrs Miller.",
+    "falsch": ["It's Monday.", "I'm sad."]
+  },
+  {
+    "id": "d35",
+    "frage": "Do you like bananas?",
+    "antwort": "Yes, I do. They're yummy!",
+    "falsch": ["It's green.", "Bye-bye."]
+  },
+  {
+    "id": "d36",
+    "frage": "Are you hungry?",
+    "antwort": "Yes, I am.",
+    "falsch": ["It's a book.", "I'm from Germany."]
+  },
+  {
+    "id": "d37",
+    "frage": "Let's play!",
+    "antwort": "Okay, great idea!",
+    "falsch": ["I'm eight.", "It's a pen."]
+  },
+  {
+    "id": "d38",
+    "frage": "What's in your schoolbag?",
+    "antwort": "A book and a ruler.",
+    "falsch": ["I'm fine.", "It's sunny."]
+  },
+  {
+    "id": "d39",
+    "frage": "Merry Christmas!",
+    "antwort": "Merry Christmas to you too!",
+    "falsch": ["Good morning.", "I can swim."]
   }
 ]

@@ -40,13 +40,13 @@ export interface SuchStelle {
   box: [number, number, number, number]
   bilder?: { image: string; x: number; y: number; size: number }[]
   /** Drawn by the component: zebra crossing, crossing at the lights, socket. */
-  form?: 'zebra' | 'furt' | 'steckdose'
+  form?: 'zebra' | 'furt' | 'steckdose' | 'teil'
 }
 
 export interface Suchbild {
   id: string
   /** Background drawn by the component. */
-  hintergrund: 'strasse' | 'kueche' | 'zimmer'
+  hintergrund: 'strasse' | 'kueche' | 'zimmer' | 'auge'
   stellen: SuchStelle[]
   fragen: { frage: string; richtig: string[]; regel: string }[]
 }

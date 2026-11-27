@@ -71,6 +71,41 @@ const stripes = (box: SuchStelle['box']) =>
           stroke-width="1.5"
         />
       </template>
+      <template v-else-if="data.scene.hintergrund === 'auge'">
+        <!-- An eye seen from the front; the places are parts of it ('teil'). -->
+        <rect width="400" height="270" fill="#F7D9C4" />
+        <path
+          d="M92 66C150 30 250 30 308 66"
+          stroke="#6A462F"
+          stroke-width="16"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <path
+          d="M100 150C150 92 250 92 300 150C250 208 150 208 100 150Z"
+          fill="#fff"
+          stroke="#000"
+          stroke-width="3"
+        />
+        <circle cx="200" cy="150" r="42" fill="#61B2E4" stroke="#1E5F8C" stroke-width="3" />
+        <path
+          d="M200 150m-42 0a42 42 0 0 1 84 0"
+          stroke="#1E5F8C"
+          stroke-width="1.5"
+          stroke-dasharray="3 5"
+          fill="none"
+        />
+        <circle cx="200" cy="150" r="17" fill="#000" />
+        <circle cx="208" cy="141" r="5" fill="#fff" />
+        <path
+          v-for="x in [128, 148, 168, 188, 208, 228, 248, 268]"
+          :key="x"
+          :d="`M${x} ${x < 200 ? 114 - (x - 120) / 8 : 104 + (x - 200) / 8}l${(x - 200) / 10} -16`"
+          stroke="#000"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+      </template>
       <template v-else>
         <rect width="400" height="270" fill="#FFF8EE" />
         <rect

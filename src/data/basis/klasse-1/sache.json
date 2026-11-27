@@ -4060,7 +4060,71 @@
           "regel": "Auch das Blinzeln und die Tränen halten das Auge sauber."
         }
       ],
-      "suchbilder": [],
+      "suchbilder": [
+        {
+          "id": "auge-teile",
+          "hintergrund": "auge",
+          "stellen": [
+            {
+              "key": "braue",
+              "box": [86, 34, 228, 46],
+              "form": "teil"
+            },
+            {
+              "key": "wimpern",
+              "box": [120, 84, 160, 28],
+              "form": "teil"
+            },
+            {
+              "key": "weiss-l",
+              "box": [104, 126, 52, 48],
+              "form": "teil"
+            },
+            {
+              "key": "weiss-r",
+              "box": [244, 126, 52, 48],
+              "form": "teil"
+            },
+            {
+              "key": "iris",
+              "box": [160, 110, 80, 80],
+              "form": "teil"
+            },
+            {
+              "key": "pupille",
+              "box": [184, 134, 32, 32],
+              "form": "teil"
+            }
+          ],
+          "fragen": [
+            {
+              "frage": "Wo ist die Pupille? Tippe sie an.",
+              "richtig": ["pupille"],
+              "regel": "Die Pupille ist das schwarze Loch in der Mitte. Durch sie fällt Licht ins Auge."
+            },
+            {
+              "frage": "Wo ist die Iris, die Regenbogenhaut? Tippe sie an.",
+              "richtig": ["iris"],
+              "regel": "Die Iris gibt dem Auge seine Farbe. Sie macht die Pupille größer oder kleiner."
+            },
+            {
+              "frage": "Wo ist die Lederhaut, das Weiße im Auge? Tippe sie an.",
+              "richtig": ["weiss-l", "weiss-r"],
+              "regel": "Die Lederhaut ist fest und schützt das Auge."
+            },
+            {
+              "frage": "Wo sind die Wimpern? Tippe sie an.",
+              "richtig": ["wimpern"],
+              "regel": "Die Wimpern halten Staub vom Auge fern."
+            },
+            {
+              "frage": "Wo ist die Augenbraue? Tippe sie an.",
+              "richtig": ["braue"],
+              "regel": "Die Augenbraue hält Schweiß und Regen vom Auge fern."
+            }
+          ]
+        }
+      ],
       "ablaeufe": [],
       "id": "auge",
       "title": "Das Auge",

@@ -851,5 +851,571 @@
         "answer": 0
       }
     ]
+  },
+  {
+    "id": "schulfest",
+    "kind": "lesen",
+    "textart": "Geschichte",
+    "text": "Beim Schulfest hatte die Klasse 3b einen eigenen Stand. Die Kinder verkauften Waffeln und selbst gemachte Limonade. Mia rührte den Teig, und Ben backte die Waffeln im Waffeleisen. Plötzlich roch es angebrannt. Eine Waffel war ganz schwarz geworden. Alle mussten lachen, auch Ben. Danach passte er besser auf. Am Ende des Tages zählten sie das Geld in der Kasse. Es waren 86 Euro. Davon kaufte die Klasse neue Bälle für die Pause.",
+    "fragen": [
+      {
+        "frage": "Was verkaufte die Klasse?",
+        "choices": [
+          {
+            "text": "Waffeln und Limonade"
+          },
+          {
+            "text": "Kuchen und Kakao"
+          },
+          {
+            "text": "Brezen und Saft"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Warum mussten alle lachen?",
+        "choices": [
+          {
+            "text": "Eine Waffel war schwarz geworden."
+          },
+          {
+            "text": "Ben war hingefallen."
+          },
+          {
+            "text": "Mia hatte Teig im Gesicht."
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Was kaufte die Klasse von dem Geld?",
+        "choices": [
+          {
+            "text": "neue Bälle"
+          },
+          {
+            "text": "ein Klassentier"
+          },
+          {
+            "text": "Bücher"
+          }
+        ],
+        "answer": 0,
+        "beleg": 9
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Fabel"
+          },
+          {
+            "text": "Märchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "honigbiene",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Honigbienen leben in einem großen Volk zusammen. In einem Bienenstock wohnen im Sommer bis zu 50000 Bienen. Es gibt nur eine Königin. Sie legt jeden Tag viele Eier. Die meisten Bienen sind Arbeiterinnen. Sie sammeln Nektar und Blütenstaub von den Blüten. Dabei bestäuben sie die Pflanzen, damit Früchte wachsen können. Aus dem Nektar machen die Bienen Honig. Den Honig brauchen sie als Futter für den Winter. Die männlichen Bienen heißen Drohnen.",
+    "fragen": [
+      {
+        "frage": "Wie viele Königinnen gibt es in einem Bienenvolk?",
+        "choices": [
+          {
+            "text": "eine"
+          },
+          {
+            "text": "zwei"
+          },
+          {
+            "text": "hundert"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Was machen die Bienen aus dem Nektar?",
+        "choices": [
+          {
+            "text": "Honig"
+          },
+          {
+            "text": "Wachs"
+          },
+          {
+            "text": "Blütenstaub"
+          }
+        ],
+        "answer": 0,
+        "beleg": 7
+      },
+      {
+        "frage": "Wie heißen die männlichen Bienen?",
+        "choices": [
+          {
+            "text": "Drohnen"
+          },
+          {
+            "text": "Arbeiterinnen"
+          },
+          {
+            "text": "Könige"
+          }
+        ],
+        "answer": 0,
+        "beleg": 9
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Gedicht"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "papierflieger",
+    "kind": "lesen",
+    "textart": "Anleitung",
+    "text": "So faltest du einen Papierflieger. Du brauchst ein Blatt Papier in der Größe A4. Falte das Blatt zuerst der Länge nach in der Mitte und öffne es wieder. Dann knickst du die beiden oberen Ecken zur Mittellinie. Jetzt faltest du die neuen Kanten noch einmal zur Mitte. Klappe den Flieger an der Mittellinie zusammen. Zum Schluss faltest du beide Flügel nach unten. Halte den Flieger unten fest und wirf ihn mit Schwung nach vorne.",
+    "fragen": [
+      {
+        "frage": "Was brauchst du?",
+        "choices": [
+          {
+            "text": "ein Blatt Papier"
+          },
+          {
+            "text": "eine Schere"
+          },
+          {
+            "text": "Kleber"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Was machst du ganz zuerst?",
+        "choices": [
+          {
+            "text": "das Blatt in der Mitte falten"
+          },
+          {
+            "text": "die Flügel nach unten falten"
+          },
+          {
+            "text": "den Flieger werfen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Was machst du zum Schluss, bevor du wirfst?",
+        "choices": [
+          {
+            "text": "beide Flügel nach unten falten"
+          },
+          {
+            "text": "die Ecken zur Mitte knicken"
+          },
+          {
+            "text": "das Blatt öffnen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Geschichte"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "ameise-grille",
+    "kind": "lesen",
+    "textart": "Fabel",
+    "text": "Den ganzen Sommer lang sammelte die Ameise Körner für den Winter. Die Grille saß in der Sonne und spielte auf ihrer Geige. «Warum arbeitest du so viel?», fragte sie die Ameise. «Es ist doch so schönes Wetter.» Die Ameise antwortete: «Ich denke an den Winter.» Als der Winter kam, lag Schnee auf den Wiesen. Die Grille fand nichts mehr zu essen. Hungrig klopfte sie bei der Ameise an. Die Ameise teilte ihre Körner mit ihr und sagte: «Im nächsten Sommer sorgst du auch vor.»",
+    "fragen": [
+      {
+        "frage": "Was machte die Grille im Sommer?",
+        "choices": [
+          {
+            "text": "Sie spielte Geige."
+          },
+          {
+            "text": "Sie sammelte Körner."
+          },
+          {
+            "text": "Sie baute ein Haus."
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Warum klopfte die Grille bei der Ameise an?",
+        "choices": [
+          {
+            "text": "Sie hatte Hunger."
+          },
+          {
+            "text": "Ihr war langweilig."
+          },
+          {
+            "text": "Sie wollte Geige spielen."
+          }
+        ],
+        "answer": 0,
+        "beleg": 8
+      },
+      {
+        "frage": "Was will die Fabel uns sagen?",
+        "choices": [
+          {
+            "text": "Man soll vorsorgen."
+          },
+          {
+            "text": "Man soll viel Musik machen."
+          },
+          {
+            "text": "Ameisen sind gefährlich."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Fabel"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Geschichte"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "froschkoenig",
+    "kind": "lesen",
+    "textart": "Märchen",
+    "text": "Es war einmal eine Königstochter, die spielte gern mit einer goldenen Kugel. Eines Tages fiel die Kugel in einen tiefen Brunnen. Die Prinzessin weinte laut. Da streckte ein Frosch seinen Kopf aus dem Wasser. «Ich hole dir die Kugel, wenn du mich zu deinem Freund machst», sagte er. Die Prinzessin versprach es. Der Frosch tauchte hinab und brachte die Kugel herauf. Doch die Prinzessin lief schnell davon. Am nächsten Tag klopfte der Frosch am Schloss an. Der König sagte: «Was du versprochen hast, musst du halten.»",
+    "fragen": [
+      {
+        "frage": "Was fiel in den Brunnen?",
+        "choices": [
+          {
+            "text": "eine goldene Kugel"
+          },
+          {
+            "text": "eine Krone"
+          },
+          {
+            "text": "ein Ring"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Wer holte die Kugel heraus?",
+        "choices": [
+          {
+            "text": "der Frosch"
+          },
+          {
+            "text": "der König"
+          },
+          {
+            "text": "ein Fisch"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was sagte der König?",
+        "choices": [
+          {
+            "text": "Versprechen muss man halten."
+          },
+          {
+            "text": "Frösche gehören in den Brunnen."
+          },
+          {
+            "text": "Die Kugel ist nicht wichtig."
+          }
+        ],
+        "answer": 0,
+        "beleg": 9
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Fabel"
+          },
+          {
+            "text": "Gedicht"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "maulwurf",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Der Maulwurf lebt fast immer unter der Erde. Mit seinen breiten Vorderpfoten gräbt er lange Gänge. Die Erde schiebt er nach oben, so entstehen die Maulwurfshügel auf der Wiese. Der Maulwurf sieht sehr schlecht. Dafür kann er gut riechen und fühlen. Er frisst vor allem Regenwürmer und Insektenlarven. Im Winter hält er keinen Winterschlaf. Er gräbt dann einfach tiefer, wo der Boden nicht gefroren ist. Der Maulwurf steht unter Naturschutz.",
+    "fragen": [
+      {
+        "frage": "Womit gräbt der Maulwurf?",
+        "choices": [
+          {
+            "text": "mit den Vorderpfoten"
+          },
+          {
+            "text": "mit der Nase"
+          },
+          {
+            "text": "mit den Zähnen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Was frisst der Maulwurf vor allem?",
+        "choices": [
+          {
+            "text": "Regenwürmer"
+          },
+          {
+            "text": "Gras"
+          },
+          {
+            "text": "Wurzeln"
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Was macht der Maulwurf im Winter?",
+        "choices": [
+          {
+            "text": "Er gräbt tiefer."
+          },
+          {
+            "text": "Er hält Winterschlaf."
+          },
+          {
+            "text": "Er zieht in den Süden."
+          }
+        ],
+        "answer": 0,
+        "beleg": 7
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Geschichte"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "regenbogen-gedicht",
+    "kind": "lesen",
+    "textart": "Gedicht",
+    "text": "Erst kommt der Regen, grau und schwer, die Straßen werden nass und leer. Dann lacht die Sonne durch den Regen, und bunte Bögen sich bewegen. Rot und Gelb und Grün und Blau, so leuchtet es im Himmelsgrau. Ich schau hinauf und staune sehr, ein Regenbogen, bitte mehr!",
+    "fragen": [
+      {
+        "frage": "Was kommt zuerst?",
+        "choices": [
+          {
+            "text": "der Regen"
+          },
+          {
+            "text": "die Sonne"
+          },
+          {
+            "text": "der Schnee"
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Welche Farbe wird im Gedicht genannt?",
+        "choices": [
+          {
+            "text": "Grün"
+          },
+          {
+            "text": "Lila"
+          },
+          {
+            "text": "Schwarz"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Woran erkennst du, dass es ein Gedicht ist?",
+        "choices": [
+          {
+            "text": "Die Zeilen reimen sich."
+          },
+          {
+            "text": "Es gibt eine Tabelle."
+          },
+          {
+            "text": "Es steht eine Liste darin."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Gedicht"
+          },
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Märchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "busfahrt",
+    "kind": "lesen",
+    "textart": "Geschichte",
+    "text": "Jeden Morgen fährt Leon mit dem Bus zur Schule. Heute war der Bus besonders voll. Eine alte Frau stieg ein und suchte einen Platz. Leon stand sofort auf und bot ihr seinen Sitz an. Die Frau lächelte und bedankte sich. Sie erzählte, dass sie früher selbst Lehrerin war. An der Haltestelle vor der Schule stieg Leon aus. Die Frau winkte ihm zu. Leon fühlte sich den ganzen Tag gut.",
+    "fragen": [
+      {
+        "frage": "Wie kommt Leon zur Schule?",
+        "choices": [
+          {
+            "text": "mit dem Bus"
+          },
+          {
+            "text": "mit dem Fahrrad"
+          },
+          {
+            "text": "zu Fuß"
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Was machte Leon, als die Frau einstieg?",
+        "choices": [
+          {
+            "text": "Er bot ihr seinen Platz an."
+          },
+          {
+            "text": "Er schaute aus dem Fenster."
+          },
+          {
+            "text": "Er stieg aus."
+          }
+        ],
+        "answer": 0,
+        "beleg": 3
+      },
+      {
+        "frage": "Was war die Frau früher?",
+        "choices": [
+          {
+            "text": "Lehrerin"
+          },
+          {
+            "text": "Busfahrerin"
+          },
+          {
+            "text": "Ärztin"
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Gedicht"
+          },
+          {
+            "text": "Märchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
   }
 ]
