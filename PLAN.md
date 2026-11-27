@@ -339,7 +339,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 1. **Start:** Das Kind wählt sein Profil (Avatar, Name und Klasse) und wird per TTS begrüßt. Dieser erste Tipp schaltet zugleich die Sprachausgabe frei, denn Chrome verlangt dafür eine Nutzeraktion.
 2. **Startseite:** drei große Kacheln für Lesen 📖, Schreiben ✏️ und Rechnen 🔢 der eigenen Klasse, darüber die Zähler für Sterne und Kronen. Ab Klasse 2 kommt eine Kachel „Wiederholen“ 🔁 für die niedrigeren Klassen dazu.
-3. **Einheit:** 8 Aufgaben aus dem gewählten Fach und der gewählten Klasse. Geplant: Im Fach wählt das Kind „Alles gemischt“, eine Kategorie (z. B. „Hören“, „Plus und Minus“) oder „Stolpersteine“; die Eltern können einen Wochenschwerpunkt setzen ([plaene/README.md](plaene/README.md), Abschnitt 4). Eine Fortschrittsleiste zeigt sie als Perlenkette, ohne Timer.
+3. **Einheit:** 8 Aufgaben aus dem gewählten Fach und der gewählten Klasse. Im Fach wählt das Kind „Alles gemischt“, eine Kategorie (z. B. „Hören“, „Plus und Minus“) oder „Stolpersteine“; die Eltern können einen Wochenschwerpunkt setzen ([plaene/README.md](plaene/README.md), Abschnitt 4). Eine Fortschrittsleiste zeigt sie als Perlenkette, ohne Timer.
 4. **Feedback:**
    - Richtig im 1. oder 2. Versuch: Ein ⭐ fliegt in den Zähler, dazu ein Erfolgston und ein wechselnder Lobsatz.
    - Falsch: Die Antwort wackelt sanft, und es heißt „Versuch's nochmal“. Nach dem 2. Fehler wird die Lösung gezeigt bzw. vorgelesen. Dafür gibt es keinen Stern, aber Lob fürs Weitermachen.
@@ -377,7 +377,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 - **Einheit:** Aufgaben pro Einheit, Kronen-Schwelle, Ton
 - **Stimme:** Auswahl unter den deutschen Stimmen, Tempo, Testsatz. Ist keine Offline-Stimme installiert, erscheint eine Warnung.
 - **Statistik:** Einheiten der letzten 14 Tage, Trefferquote pro Klasse und Fach, „Stolperwörter“ (geplant: auch pro Kategorie)
-- **Geplant: Einheiten und Schwerpunkt:** Unterrichtseinheiten pro Fach freischalten, einen Schwerpunkt für 1–2 Wochen setzen ([plaene/README.md](plaene/README.md), Abschnitt 4)
+- **Einheiten und Schwerpunkt:** Unterrichtseinheiten pro Fach freischalten, einen Schwerpunkt für 1–2 Wochen setzen ([plaene/README.md](plaene/README.md), Abschnitt 4)
 - **Backup und Update:** Export und Import; ein bereitstehendes App-Update hier einspielen
 - **Info:** Lizenzen (OpenMoji CC BY-SA 4.0, Andika OFL)
 
@@ -432,6 +432,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
   - **Version und Deployment** (aus ToDo.md): Die Version kommt aus `package.json` und `version.json` liegt neben der App. Im Elternbereich stehen die installierte und die neueste Version, jeweils mit Build-Zeitpunkt. Veröffentlicht wird nur bei Versions-Tags `v*`; Pushes auf `main` werden nur geprüft (während der Testrunden wurde zeitweise auch `main` veröffentlicht). Ablauf siehe README.
   - **Lighthouse** (Version 12, ohne die entfernte PWA-Kategorie): Performance 99, Barrierefreiheit 100, Best Practices 100 für den Produktions-Build.
   - **Offen:** Version 1.0 taggen und veröffentlichen, die Testrunde mit dem Kind und das Anhören aller Wörter im Sprachtest auf dem Gerät.
+- **Klasse 1 nach Lehrplan ergänzt (Version 0.6.0):** Die Phasen 1–4 aus [plaene/klasse-1-abgleich.md](plaene/klasse-1-abgleich.md) und HSU Stufe 1 aus [plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md) sind umgesetzt: Einheiten, Kategorien, Wochenschwerpunkt und Stolpersteine; Sätze, Texte, Zuhören, Diktate und Sprache; Zahlen bis 20, Formen, Geld, Längen und Kalender; das Fach HSU mit neun Themen. Der Stand steht in den beiden Plänen.
 
 | Phase                          | Inhalt                                                                                                                                                                                                                                                                                                                                                                    | Fertig, wenn …                                                                                               | Umfang |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
@@ -487,7 +488,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 ## 14. Später (nicht in Version 1)
 
 - Inhalte für die Klassen 2–4 nach den Plänen in [plaene/](plaene/README.md)
-- Heimat- und Sachunterricht ab Klasse 1 ([plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md))
+- Heimat- und Sachunterricht: Stufe 1 ist umgesetzt; Stufen 2 und 3 folgen ([plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md))
 - Weitere Bundesländer: jeweils eine Länderanpassung, danach das Land in der Länderliste aktivieren
 - Laute, die die Eltern selbst aufnehmen (Mikrofon, lokal gespeichert)
 - Sticker-Album oder Welten zum Freischalten mit Kronen

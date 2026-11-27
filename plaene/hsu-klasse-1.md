@@ -206,6 +206,16 @@ Session-Engine, Leitner, Sterne, Kronen und Statistik bleiben unverändert; die 
 | **2** | Modul `stimmt-das`; Themen Sicher zu Fuß und Gut sichtbar (mit eigenen Verkehrszeichen-SVGs), Müll trennen (mit Elterneinstellung), Gesund essen und Zähne, Gefühle, Gibt es das wirklich?, Früher und heute                     | … die Verkehrsinhalte gegen die Quellen geprüft sind                                              | M      |
 | **3** | Suchbilder (sicherer Übergang, Gefahren im Haushalt), Draufsicht und einfache Pläne, Turm-Standfestigkeit, Jahreskreis als eigene Komponente                                                                                     | … die Grafiken auf dem Handy gut erkennbar sind                                                   | L      |
 
+**Stand (27.11.2026, Version 0.6.0):** Stufe 1 ist umgesetzt.
+
+- Das Fach heißt in Bayern „HSU“, sonst „Sachunterricht“ (🔍). Die Kachel erscheint nur in Klassen mit Inhalten.
+- Die neun Themen sind die Kategorien, ohne „Alles gemischt“. Halbjahr 1: Obst und Gemüse, Sinne, Jahreszeiten, Feste, Wetter. Halbjahr 2 (anfangs aus): Wiese, Haus- und Nutztiere, Hecke, Berufe und Werkzeuge.
+- Module: `sache.hoeren-bild` („Tippe auf den Apfel.“), `sache.paare` („Was gibt uns die Kuh?“), `sache.sortieren` (Obst/Gemüse, Erntezeit, Jahreszeit, Feste, Haus-/Nutztier, „Kann es fliegen?“) und `lesen.reihenfolge` mit eigenen Abläufen (Nahrungsketten Pflanze – Schnecke – Amsel und Körner – Maus – Eule, Raupe – Schmetterling).
+- Nach jeder richtigen Antwort spricht die App den Merksatz des Begriffs.
+- Inhalte: `src/data/basis/klasse-1/sache.json` mit 112 Begriffen; `data:check` prüft Begriffe, Bilder, Gruppen, Paare und Abläufe.
+- **Abweichungen:** „Zeit“ heißt „Zeit und Jahreszeiten“ und übt Jahreszeiten und Tagesabläufe; die Uhr selbst bleibt im Fach Uhr. Abläufe zählen im HSU weniger (Gewicht 0,4), damit sich zwei Abläufe in einer Einheit nicht ständig wiederholen.
+- **Offen:** alle Begriffe und Merksätze auf dem Gerät anhören, Testrunde mit dem Kind.
+
 **Zeitlich:** Stufe 1 lässt sich noch im laufenden Schuljahr nutzen; die Themen ab Frühling (Wiese, Tiere, Hecke, Berufe) liegen dann genau im Zeitraum der Schule. Das Verkehrsthema gehört an den Schuljahresanfang und kommt deshalb mit Stufe 2 rechtzeitig vor September 2027. Ab Klasse 2 läuft der Bereich weiter ([klasse-2.md](klasse-2.md), Abschnitt 10).
 
 **Testrunde mit dem Kind** nach Stufe 1, wie in PLAN.md (Abschnitt 12): Erkennt es die Bilder? Versteht es die Merksätze? Sind die Einheiten zu lang?
