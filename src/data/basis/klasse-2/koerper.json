@@ -1,0 +1,65 @@
+{
+  "koerper": [
+    {
+      "id": "wuerfel",
+      "name": "der Würfel",
+      "wen": "den Würfel",
+      "image": "fibel-koerper-wuerfel",
+      "rollt": false,
+      "ecken": 8,
+      "kanten": 12,
+      "flaechen": 6
+    },
+    {
+      "id": "quader",
+      "name": "der Quader",
+      "wen": "den Quader",
+      "image": "fibel-koerper-quader",
+      "rollt": false,
+      "ecken": 8,
+      "kanten": 12,
+      "flaechen": 6
+    },
+    {
+      "id": "pyramide",
+      "name": "die Pyramide",
+      "wen": "die Pyramide",
+      "image": "fibel-koerper-pyramide",
+      "rollt": false,
+      "ecken": 5,
+      "kanten": 8,
+      "flaechen": 5
+    },
+    {
+      "id": "kugel",
+      "name": "die Kugel",
+      "wen": "die Kugel",
+      "image": "fibel-koerper-kugel",
+      "rollt": true
+    },
+    {
+      "id": "zylinder",
+      "name": "der Zylinder",
+      "wen": "den Zylinder",
+      "image": "fibel-koerper-zylinder",
+      "rollt": true
+    },
+    {
+      "id": "kegel",
+      "name": "der Kegel",
+      "wen": "den Kegel",
+      "image": "fibel-koerper-kegel",
+      "rollt": true
+    }
+  ],
+  "dinge": [
+    { "id": "ball", "text": "der Ball", "image": "26BD", "koerper": "kugel" },
+    { "id": "dose", "text": "die Dose", "image": "1F96B", "koerper": "zylinder" },
+    { "id": "spielwuerfel", "text": "der Spielwürfel", "image": "1F3B2", "koerper": "wuerfel" },
+    { "id": "geschenk", "text": "das Geschenk", "image": "1F381", "koerper": "quader" },
+    { "id": "kerze", "text": "die Kerze", "image": "1F56F", "koerper": "zylinder" },
+    { "id": "orange", "text": "die Orange", "image": "1F34A", "koerper": "kugel" },
+    { "id": "milchkarton", "text": "der Milchkarton", "image": "1F9C3", "koerper": "quader" },
+    { "id": "huetchen", "text": "das Partyhütchen", "image": "1F973", "koerper": "kegel" }
+  ]
+}

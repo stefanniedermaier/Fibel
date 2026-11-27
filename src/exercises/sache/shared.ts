@@ -131,5 +131,6 @@ export interface SacheData {
   /** One picture, or two shown with a plus (Schnee + Mann). */
   prompt?: string | string[]
   correctKey: string
-  choices: { key: string; image: string; label?: string }[]
+  /** Without a picture the label is shown big (numbers). */
+  choices: { key: string; image?: string; label?: string }[]
 }

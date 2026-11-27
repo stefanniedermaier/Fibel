@@ -29,8 +29,10 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
     >
       <template #default="{ option }">
         <span class="option">
-          <EmojiPicture :code="option.image" :size="80" />
-          <span v-if="option.label" class="label">{{ option.label }}</span>
+          <EmojiPicture v-if="option.image" :code="option.image" :size="80" />
+          <span v-if="option.label" class="label" :class="{ big: !option.image }">{{
+            option.label
+          }}</span>
         </span>
       </template>
     </ChoiceButtons>
@@ -71,5 +73,9 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 .label {
   font-size: 20px;
   font-weight: 700;
+}
+
+.label.big {
+  font-size: 40px;
 }
 </style>

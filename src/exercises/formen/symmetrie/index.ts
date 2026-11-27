@@ -2,7 +2,7 @@
  * M12 "Symmetrisch oder nicht?" (Mathematik 1/2, 2.3, only recognising): a figure of
  * squares with a dashed mirror line; does one half fit exactly onto the other?
  */
-import type { Rng } from '@/core/random'
+import { shuffle, type Rng } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import SymmetrieTask from './SymmetrieTask.vue'
 
@@ -10,10 +10,14 @@ export const COLS = 6
 export const ROWS = 6
 
 export interface SymmetrieData {
+  /** 'ergaenzen' (grade 2, F2-4): only the left half is shown; pick the right half. */
+  mode: 'erkennen' | 'ergaenzen'
   /** Filled cells as "x-y". */
   cells: string[]
+  /** ergaenzen: right halves to choose from. */
+  options?: { key: string; cells: string[] }[]
   color: string
-  correctKey: 'ja' | 'nein'
+  correctKey: string
   choices: { key: string; image: string; label: string }[]
 }
 
@@ -52,15 +56,84 @@ export function makeFigure(symmetric: boolean, rng: Rng): string[] {
   }
 }
 
-export const symmetrie: ExerciseModule<Record<string, never>, SymmetrieData> = {
+export interface SymmetrieParams {
+  mode?: 'erkennen' | 'ergaenzen'
+}
+
+const mirror = (cells: readonly string[]) =>
+  cells.map((c) => {
+    const [x, y] = c.split('-').map(Number) as [number, number]
+    return `${COLS - 1 - x}-${y}`
+  })
+const shift = (cells: readonly string[]) =>
+  cells.map((c) => {
+    const [x, y] = c.split('-').map(Number) as [number, number]
+    return `${x + COLS / 2}-${y}`
+  })
+const same = (a: readonly string[], b: readonly string[]) =>
+  a.length === b.length && a.every((c) => b.includes(c))
+
+/** Left half, the right (mirrored) half and two wrong halves – all different. */
+export function halves(rng: Rng): { left: string[]; right: string[]; wrong: string[][] } {
+  for (;;) {
+    const left = makeFigure(true, rng).filter((c) => Number(c.split('-')[0]) < COLS / 2)
+    const right = mirror(left)
+    const shifted = shift(left)
+    const changed = [...right]
+    const key = `${COLS / 2 + Math.floor(rng() * (COLS / 2))}-${Math.floor(rng() * ROWS)}`
+    if (changed.includes(key)) changed.splice(changed.indexOf(key), 1)
+    else changed.push(key)
+    if (
+      !same(shifted, right) &&
+      !same(changed, right) &&
+      !same(changed, shifted) &&
+      changed.length > 0
+    )
+      return { left, right, wrong: [shifted, changed] }
+  }
+}
+
+export const symmetrie: ExerciseModule<SymmetrieParams, SymmetrieData> = {
   id: 'formen.symmetrie',
   topic: 'rechnen',
 
-  items() {
-    return ['a', 'b', 'c', 'd', 'e', 'f'].map((id) => `formen.symmetrie:${id}`)
+  items(_ctx, params) {
+    const ids = ['a', 'b', 'c', 'd', 'e', 'f']
+    return params.mode === 'ergaenzen'
+      ? ids.map((id) => `formen.symmetrie:ergaenzen-${id}`)
+      : ids.map((id) => `formen.symmetrie:${id}`)
   },
 
-  generate(_ctx, _params, _itemKey, rng) {
+  generate(_ctx, params, _itemKey, rng) {
+    if (params.mode === 'ergaenzen') {
+      const h = halves(rng)
+      const options = shuffle(
+        [
+          { key: 'richtig', cells: h.right },
+          { key: 'verschoben', cells: h.wrong[0]! },
+          { key: 'anders', cells: h.wrong[1]! },
+        ],
+        rng,
+      )
+      return {
+        instruction: 'Ergänze die Figur, sodass sie symmetrisch ist. Welche Hälfte passt rechts?',
+        caption: 'Welche Hälfte passt rechts?',
+        hint: 'Die rechte Hälfte ist wie im Spiegel: was links außen ist, ist rechts außen.',
+        solution: 'Die passende Hälfte ist das Spiegelbild der linken Hälfte.',
+        data: {
+          mode: 'ergaenzen',
+          cells: h.left,
+          options,
+          color: COLORS[Math.floor(rng() * COLORS.length)]!,
+          correctKey: 'richtig',
+          choices: options.map((o, i) => ({
+            key: o.key,
+            image: '',
+            label: String.fromCharCode(65 + i),
+          })),
+        },
+      }
+    }
     const symmetric = rng() < 0.5
     const answer = symmetric ? 'ja' : 'nein'
     return {
@@ -72,6 +145,7 @@ export const symmetrie: ExerciseModule<Record<string, never>, SymmetrieData> = {
         ? 'Die Figur ist symmetrisch. Beide Hälften sind gleich.'
         : 'Die Figur ist nicht symmetrisch. Links und rechts sind verschieden.',
       data: {
+        mode: 'erkennen',
         cells: makeFigure(symmetric, rng),
         color: COLORS[Math.floor(rng() * COLORS.length)]!,
         correctKey: answer,

@@ -286,5 +286,23 @@
     "topic": "rechnen",
     "title": "Sachaufgaben und Daten",
     "icon": "💬"
+  },
+  {
+    "id": "formen.lage",
+    "topic": "formen",
+    "title": "Lage und Flächen",
+    "icon": "🧭"
+  },
+  {
+    "id": "formen.koerper",
+    "topic": "formen",
+    "title": "Formen und Körper",
+    "icon": "🔷"
+  },
+  {
+    "id": "formen.symmetrie",
+    "topic": "formen",
+    "title": "Symmetrie und Muster",
+    "icon": "🪞"
   }
 ]

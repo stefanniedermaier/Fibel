@@ -34,6 +34,8 @@ import { lineal, schaetzen, umrechnen } from './messen/laenge'
 import { sachaufgaben } from './rechnen/sachaufgaben'
 import { zufall } from './rechnen/zufall'
 import { kombinatorik } from './rechnen/kombinatorik'
+import { koerper } from './formen/koerper'
+import { flaeche } from './formen/flaeche'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -152,6 +154,8 @@ register(schaetzen)
 register(sachaufgaben)
 register(zufall)
 register(kombinatorik)
+register(koerper)
+register(flaeche)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

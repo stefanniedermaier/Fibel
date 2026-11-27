@@ -2514,5 +2514,169 @@
       "mode": "chance"
     },
     "title": "Wo ist die Chance größer?"
+  },
+  {
+    "id": "k2.formen.lage.kreuz",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k2.formen.lage",
+    "exercise": "formen.lage",
+    "params": {
+      "mode": "kreuz"
+    },
+    "title": "Links, rechts, oben, unten"
+  },
+  {
+    "id": "k2.formen.lage.reihe",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k2.formen.lage",
+    "exercise": "formen.lage",
+    "params": {
+      "mode": "reihe"
+    },
+    "title": "Neben, zwischen"
+  },
+  {
+    "id": "k2.formen.lage.pfeilweg",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k2.formen.lage",
+    "exercise": "formen.pfeilweg",
+    "params": {},
+    "title": "Wege nach Pfeilen"
+  },
+  {
+    "id": "k2.formen.flaechenformen.name",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k2.formen.flaechenformen",
+    "exercise": "formen.erkennen",
+    "params": {
+      "mode": "name"
+    },
+    "title": "Welche Form ist das?"
+  },
+  {
+    "id": "k2.formen.flaechenformen.ecken",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k2.formen.flaechenformen",
+    "exercise": "formen.erkennen",
+    "params": {
+      "mode": "ecken"
+    },
+    "title": "Wie viele Ecken?"
+  },
+  {
+    "id": "k2.formen.koerper.name",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k2.formen.koerper",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "name"
+    },
+    "title": "Welcher Körper ist das?"
+  },
+  {
+    "id": "k2.formen.koerper.ding",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k2.formen.koerper",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "ding"
+    },
+    "title": "Welche Form hat das?"
+  },
+  {
+    "id": "k2.formen.koerper.rollt",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k2.formen.koerper",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "rollt"
+    },
+    "title": "Rollt oder kippt?"
+  },
+  {
+    "id": "k2.formen.koerper.ecken",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.koerper",
+    "unit": "k2.formen.koerper",
+    "exercise": "formen.koerper",
+    "params": {
+      "mode": "ecken"
+    },
+    "title": "Wie viele Ecken?"
+  },
+  {
+    "id": "k2.formen.symmetrie.erkennen",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.symmetrie",
+    "unit": "k2.formen.symmetrie",
+    "exercise": "formen.symmetrie",
+    "params": {},
+    "title": "Symmetrisch oder nicht?"
+  },
+  {
+    "id": "k2.formen.symmetrie.ergaenzen",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.symmetrie",
+    "unit": "k2.formen.symmetrie",
+    "exercise": "formen.symmetrie",
+    "params": {
+      "mode": "ergaenzen"
+    },
+    "title": "Hälfte ergänzen"
+  },
+  {
+    "id": "k2.formen.muster.reihen",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.symmetrie",
+    "unit": "k2.formen.muster",
+    "exercise": "rechnen.reihen",
+    "params": {
+      "levels": [2, 3]
+    },
+    "title": "Muster fortsetzen"
+  },
+  {
+    "id": "k2.formen.flaeche.zaehlen",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k2.formen.flaeche",
+    "exercise": "formen.flaeche",
+    "params": {
+      "mode": "zaehlen"
+    },
+    "title": "Wie viele Kästchen?"
+  },
+  {
+    "id": "k2.formen.flaeche.vergleichen",
+    "grade": 2,
+    "topic": "formen",
+    "category": "formen.lage",
+    "unit": "k2.formen.flaeche",
+    "exercise": "formen.flaeche",
+    "params": {
+      "mode": "vergleichen"
+    },
+    "title": "Welche Fläche ist größer?"
   }
 ]

@@ -698,5 +698,47 @@
     "topic": "rechnen",
     "title": "Zufall: sicher, möglich, unmöglich",
     "term": 2
+  },
+  {
+    "id": "k2.formen.lage",
+    "grade": 2,
+    "topic": "formen",
+    "title": "Lagebegriffe und Wege",
+    "term": 1
+  },
+  {
+    "id": "k2.formen.flaechenformen",
+    "grade": 2,
+    "topic": "formen",
+    "title": "Flächenformen: Ecken und Seiten",
+    "term": 1
+  },
+  {
+    "id": "k2.formen.koerper",
+    "grade": 2,
+    "topic": "formen",
+    "title": "Körper: Würfel, Quader, Kugel, Zylinder, Kegel, Pyramide",
+    "term": 2
+  },
+  {
+    "id": "k2.formen.symmetrie",
+    "grade": 2,
+    "topic": "formen",
+    "title": "Achsensymmetrie",
+    "term": 2
+  },
+  {
+    "id": "k2.formen.muster",
+    "grade": 2,
+    "topic": "formen",
+    "title": "Muster fortsetzen",
+    "term": 1
+  },
+  {
+    "id": "k2.formen.flaeche",
+    "grade": 2,
+    "topic": "formen",
+    "title": "Flächen vergleichen",
+    "term": 2
   }
 ]

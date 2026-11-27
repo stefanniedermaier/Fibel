@@ -92,7 +92,9 @@ export const geld: ExerciseModule<GeldParams, GeldData> = {
       const [big, small] = itemKey.split(':')[2]!.split('-').map(Number) as [number, number]
       const n = big / small
       const near = shuffle(
-        [n - 1, n + 1, n + 2, n * 2].filter((x) => x > 0 && x !== n),
+        [n - 1, n + 1, n + 2, n * 2].filter(
+          (x, i, all) => x > 0 && x !== n && all.indexOf(x) === i,
+        ),
         rng,
       ).slice(0, 2)
       const name = (v: number) => (v >= 5 ? `${v}-Euro-Schein` : `${v}-Euro-Münze`)
