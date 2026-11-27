@@ -346,5 +346,17 @@
     "topic": "schreiben",
     "title": "Nachschlagen und Diktat",
     "icon": "📚"
+  },
+  {
+    "id": "lesen.geschichten",
+    "topic": "lesen",
+    "title": "Geschichten und Textarten",
+    "icon": "📖"
+  },
+  {
+    "id": "lesen.sachtexte",
+    "topic": "lesen",
+    "title": "Sachtexte, Tabellen, Anleitungen",
+    "icon": "🔎"
   }
 ]

@@ -17,11 +17,15 @@ export interface Frage {
   /** Pictures (grade 1) or short text answers (from grade 2). */
   choices: { scene?: string[]; text?: string }[]
   answer: number
+  /** Grade 3: the sentence (0-based) where the answer stands (L3-4 "Wo steht das?"). */
+  beleg?: number
 }
 
 export interface Text {
   id: string
   kind: 'lesen' | 'hoeren'
+  /** Grade 3 (L3-6): Geschichte, Sachtext, Anleitung, Märchen, Fabel, Gedicht. */
+  textart?: string
   text: string
   fragen: Frage[]
 }
@@ -40,6 +44,10 @@ export function textsFor(grade: number): readonly Text[] {
 
 export interface TextFragenParams {
   kind: 'lesen' | 'hoeren'
+  /** Only texts of these kinds (grade 3). */
+  textarten?: string[]
+  /** 'textart': only the question "Was für ein Text ist das?"; 'inhalt': all others. */
+  fragen?: 'textart' | 'inhalt'
 }
 
 export interface TextFragenData {
@@ -58,13 +66,20 @@ export const textFragen: ExerciseModule<TextFragenParams, TextFragenData> = {
   topic: 'lesen',
 
   items(ctx, params) {
+    const isArt = (f: Frage) => f.frage === 'Was für ein Text ist das?'
     return textsFor(ctx.grade)
       .filter(
         (t) =>
           t.kind === params.kind &&
+          (!params.textarten || params.textarten.includes(t.textart ?? '')) &&
           (t.kind === 'hoeren' || textReadable(t.text, ctx.land, ctx.grade, ctx.settings)),
       )
-      .flatMap((t) => t.fragen.map((_, i) => `lesen.text-fragen:${t.id}:${i}`))
+      .flatMap((t) =>
+        t.fragen
+          .map((f, i) => ({ f, i }))
+          .filter(({ f }) => !params.fragen || (params.fragen === 'textart') === isArt(f))
+          .map(({ i }) => `lesen.text-fragen:${t.id}:${i}`),
+      )
   },
 
   generate(ctx, params, itemKey, rng) {
@@ -87,7 +102,8 @@ export const textFragen: ExerciseModule<TextFragenParams, TextFragenData> = {
       data: {
         kind: params.kind,
         sentences: listen ? [] : textTokens(text.text, resolveWords(ctx.land, ctx.grade)),
-        coloring: ctx.settings.syllableColoring,
+        // From grade 3 the texts are read fluently: no syllable colours (plaene/klasse-3.md).
+        coloring: ctx.settings.syllableColoring && ctx.grade < 3,
         story: text.text,
         question: frage.frage,
         choices,

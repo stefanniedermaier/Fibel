@@ -880,5 +880,47 @@
     "topic": "schreiben",
     "title": "Satz-Diktat, Lernwörter und Merkwörter",
     "term": 2
+  },
+  {
+    "id": "k3.lesen.blitz",
+    "grade": 3,
+    "topic": "lesen",
+    "title": "Lange Wörter auf einen Blick",
+    "term": 1
+  },
+  {
+    "id": "k3.lesen.geschichten",
+    "grade": 3,
+    "topic": "lesen",
+    "title": "Geschichten verstehen",
+    "term": 1
+  },
+  {
+    "id": "k3.lesen.sachtexte",
+    "grade": 3,
+    "topic": "lesen",
+    "title": "Sachtexte verstehen",
+    "term": 1
+  },
+  {
+    "id": "k3.lesen.belegen",
+    "grade": 3,
+    "topic": "lesen",
+    "title": "Am Text belegen: Wo steht das?",
+    "term": 2
+  },
+  {
+    "id": "k3.lesen.anleitungen",
+    "grade": 3,
+    "topic": "lesen",
+    "title": "Anleitungen und Rezepte",
+    "term": 2
+  },
+  {
+    "id": "k3.lesen.textarten",
+    "grade": 3,
+    "topic": "lesen",
+    "title": "Textarten erkennen",
+    "term": 2
   }
 ]

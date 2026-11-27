@@ -24,6 +24,9 @@ export const CHOICES = 3
 
 export function blitzPool(ctx: LearnerContext, params: LesenParams): Word[] {
   const merk = readableWords(ctx, params).filter((w) => w.merkwort)
+  // Grade 3 (L3-1): long words at a glance instead of short ones.
+  if (params.minLetters)
+    return readingPool(ctx, params).filter((w) => w.text.length >= params.minLetters!)
   const short = readingPool(ctx, params).filter((w) => w.text.length <= MAX_LETTERS)
   return [...merk, ...short]
 }

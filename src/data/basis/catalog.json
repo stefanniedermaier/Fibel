@@ -3205,5 +3205,95 @@
       "source": "lernwoerter"
     },
     "title": "Lernwörter"
+  },
+  {
+    "id": "k3.lesen.blitz.blitzlesen",
+    "grade": 3,
+    "topic": "lesen",
+    "category": "lesen.geschichten",
+    "unit": "k3.lesen.blitz",
+    "exercise": "lesen.blitzlesen",
+    "params": {
+      "wordGrade": 3,
+      "minLetters": 8
+    },
+    "title": "Blitzlesen: lange Wörter"
+  },
+  {
+    "id": "k3.lesen.geschichten.fragen",
+    "grade": 3,
+    "topic": "lesen",
+    "category": "lesen.geschichten",
+    "unit": "k3.lesen.geschichten",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Geschichte", "Märchen", "Fabel", "Gedicht"],
+      "fragen": "inhalt"
+    },
+    "title": "Fragen zur Geschichte"
+  },
+  {
+    "id": "k3.lesen.sachtexte.fragen",
+    "grade": 3,
+    "topic": "lesen",
+    "category": "lesen.sachtexte",
+    "unit": "k3.lesen.sachtexte",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Sachtext"],
+      "fragen": "inhalt"
+    },
+    "title": "Fragen zum Sachtext"
+  },
+  {
+    "id": "k3.lesen.belegen.textstelle",
+    "grade": 3,
+    "topic": "lesen",
+    "category": "lesen.sachtexte",
+    "unit": "k3.lesen.belegen",
+    "exercise": "lesen.textstelle",
+    "params": {},
+    "title": "Wo steht das?"
+  },
+  {
+    "id": "k3.lesen.anleitungen.fragen",
+    "grade": 3,
+    "topic": "lesen",
+    "category": "lesen.sachtexte",
+    "unit": "k3.lesen.anleitungen",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "textarten": ["Anleitung"],
+      "fragen": "inhalt"
+    },
+    "title": "Fragen zur Anleitung"
+  },
+  {
+    "id": "k3.lesen.anleitungen.reihenfolge",
+    "grade": 3,
+    "topic": "lesen",
+    "category": "lesen.sachtexte",
+    "unit": "k3.lesen.anleitungen",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "saetze": true
+    },
+    "title": "Schritte ordnen"
+  },
+  {
+    "id": "k3.lesen.textarten.textart",
+    "grade": 3,
+    "topic": "lesen",
+    "category": "lesen.geschichten",
+    "unit": "k3.lesen.textarten",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen",
+      "fragen": "textart"
+    },
+    "title": "Was für ein Text ist das?"
   }
 ]

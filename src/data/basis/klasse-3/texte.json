@@ -1,0 +1,855 @@
+[
+  {
+    "id": "baumhaus",
+    "kind": "lesen",
+    "textart": "Geschichte",
+    "text": "Lukas und Emma wollten schon lange ein Baumhaus bauen. Am Samstag holte Opa Bretter, Nägel und einen Hammer aus dem Keller. Zuerst suchten sie einen dicken Ast in der alten Eiche. Dann sägte Opa die Bretter zurecht. Emma hielt die Leiter fest, und Lukas schlug die Nägel ein. Am Nachmittag fing es plötzlich an zu regnen. Alle drei rannten ins Haus und tranken heißen Kakao. Am Sonntag war das Wetter wieder schön. Nun bauten sie noch ein Dach aus alten Brettern. Am Abend saßen die Kinder stolz in ihrem neuen Baumhaus und schauten in den Sonnenuntergang.",
+    "fragen": [
+      {
+        "frage": "Wer half den Kindern beim Bauen?",
+        "choices": [
+          {
+            "text": "Opa"
+          },
+          {
+            "text": "Mama"
+          },
+          {
+            "text": "der Nachbar"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "In welchem Baum bauten sie das Baumhaus?",
+        "choices": [
+          {
+            "text": "in einer Eiche"
+          },
+          {
+            "text": "in einer Tanne"
+          },
+          {
+            "text": "in einem Apfelbaum"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Warum rannten alle ins Haus?",
+        "choices": [
+          {
+            "text": "Es fing an zu regnen."
+          },
+          {
+            "text": "Es wurde dunkel."
+          },
+          {
+            "text": "Sie hatten Hunger."
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Anleitung"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "biber",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Der Biber ist das größte Nagetier in Europa. Er lebt an Flüssen und Seen. Mit seinen starken Zähnen kann er sogar dicke Bäume fällen. Aus Ästen und Schlamm baut er einen Damm. So staut er das Wasser zu einem kleinen See. Der Eingang zu seiner Burg liegt unter Wasser. Dort ist der Biber vor Feinden sicher. Sein breiter, flacher Schwanz heißt Kelle. Er hilft ihm beim Schwimmen und Steuern. Im Winter frisst der Biber Rinde, die er im Herbst gesammelt hat.",
+    "fragen": [
+      {
+        "frage": "Wo lebt der Biber?",
+        "choices": [
+          {
+            "text": "an Flüssen und Seen"
+          },
+          {
+            "text": "in Höhlen im Gebirge"
+          },
+          {
+            "text": "auf Wiesen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Was baut der Biber aus Ästen und Schlamm?",
+        "choices": [
+          {
+            "text": "einen Damm"
+          },
+          {
+            "text": "ein Nest"
+          },
+          {
+            "text": "eine Brücke"
+          }
+        ],
+        "answer": 0,
+        "beleg": 3
+      },
+      {
+        "frage": "Was bedeutet hier „Kelle“?",
+        "choices": [
+          {
+            "text": "der Schwanz des Bibers"
+          },
+          {
+            "text": "ein Löffel zum Kochen"
+          },
+          {
+            "text": "ein Werkzeug"
+          }
+        ],
+        "answer": 0,
+        "beleg": 7
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Gedicht"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "pfannkuchen",
+    "kind": "lesen",
+    "textart": "Anleitung",
+    "text": "So backst du Pfannkuchen. Du brauchst zwei Eier, 250 Gramm Mehl, einen halben Liter Milch und eine Prise Salz. Verrühre zuerst die Eier mit der Milch. Gib dann nach und nach das Mehl dazu, bis der Teig glatt ist. Lass den Teig zehn Minuten stehen. Ein Erwachsener erhitzt etwas Öl in der Pfanne. Gib eine Kelle Teig hinein und verteile ihn gleichmäßig. Wenn der Rand braun ist, wird der Pfannkuchen gewendet. Fülle ihn mit Marmelade oder Apfelmus.",
+    "fragen": [
+      {
+        "frage": "Wie viel Milch brauchst du?",
+        "choices": [
+          {
+            "text": "einen halben Liter"
+          },
+          {
+            "text": "einen Liter"
+          },
+          {
+            "text": "250 Gramm"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Was machst du zuerst?",
+        "choices": [
+          {
+            "text": "die Eier mit der Milch verrühren"
+          },
+          {
+            "text": "das Öl erhitzen"
+          },
+          {
+            "text": "das Mehl abwiegen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Wann wird der Pfannkuchen gewendet?",
+        "choices": [
+          {
+            "text": "wenn der Rand braun ist"
+          },
+          {
+            "text": "nach einer Stunde"
+          },
+          {
+            "text": "sofort"
+          }
+        ],
+        "answer": 0,
+        "beleg": 7
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fuchs-rabe",
+    "kind": "lesen",
+    "textart": "Fabel",
+    "text": "Ein Rabe saß auf einem Ast und hielt ein großes Stück Käse im Schnabel. Ein Fuchs kam vorbei und roch den Käse. Er wollte ihn unbedingt haben. Darum sagte er: „Lieber Rabe, du hast so schöne Federn! Bestimmt singst du auch wunderschön.“ Der Rabe freute sich über das Lob. Er öffnete den Schnabel, um zu singen. Da fiel der Käse hinunter. Der Fuchs schnappte ihn und lief lachend davon. Die Lehre: Wer sich gern loben lässt, wird leicht hereingelegt.",
+    "fragen": [
+      {
+        "frage": "Was hielt der Rabe im Schnabel?",
+        "choices": [
+          {
+            "text": "ein Stück Käse"
+          },
+          {
+            "text": "eine Nuss"
+          },
+          {
+            "text": "einen Wurm"
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Warum lobte der Fuchs den Raben?",
+        "choices": [
+          {
+            "text": "Er wollte den Käse haben."
+          },
+          {
+            "text": "Er wollte sein Freund sein."
+          },
+          {
+            "text": "Er fand ihn wirklich schön."
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Warum fiel der Käse hinunter?",
+        "choices": [
+          {
+            "text": "Der Rabe öffnete den Schnabel."
+          },
+          {
+            "text": "Der Ast brach ab."
+          },
+          {
+            "text": "Der Wind war zu stark."
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Fabel"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "wasserkreislauf",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Das Wasser auf der Erde ist immer unterwegs. Die Sonne erwärmt das Wasser in Meeren, Seen und Flüssen. Dabei verdunstet es und steigt als Wasserdampf in die Luft. Hoch oben ist es kalt. Dort bilden sich aus dem Dampf winzige Tröpfchen. Viele Tröpfchen zusammen sind eine Wolke. Werden die Tropfen zu schwer, fallen sie als Regen oder Schnee herunter. Das Wasser fließt in Bäche und Flüsse und schließlich wieder ins Meer. Dann beginnt alles von vorn. Man nennt das den Wasserkreislauf.",
+    "fragen": [
+      {
+        "frage": "Was erwärmt das Wasser?",
+        "choices": [
+          {
+            "text": "die Sonne"
+          },
+          {
+            "text": "der Wind"
+          },
+          {
+            "text": "der Mond"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Woraus besteht eine Wolke?",
+        "choices": [
+          {
+            "text": "aus vielen Tröpfchen"
+          },
+          {
+            "text": "aus Rauch"
+          },
+          {
+            "text": "aus Staub"
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Was bedeutet hier „verdunstet“?",
+        "choices": [
+          {
+            "text": "Es wird zu Dampf."
+          },
+          {
+            "text": "Es wird zu Eis."
+          },
+          {
+            "text": "Es wird schmutzig."
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Wie nennt man das alles?",
+        "choices": [
+          {
+            "text": "Wasserkreislauf"
+          },
+          {
+            "text": "Wetterbericht"
+          },
+          {
+            "text": "Regenbogen"
+          }
+        ],
+        "answer": 0,
+        "beleg": 9
+      }
+    ]
+  },
+  {
+    "id": "sterntaler",
+    "kind": "lesen",
+    "textart": "Märchen",
+    "text": "Es war einmal ein armes Mädchen. Es hatte keine Eltern und kein Zuhause mehr. Alles, was es besaß, war ein Stück Brot und die Kleider, die es trug. Unterwegs traf es einen hungrigen Mann. Das Mädchen schenkte ihm sein Brot. Später fror ein Kind, und das Mädchen gab ihm seine Mütze. Einem anderen Kind schenkte es sein Hemd. Als es ganz allein im dunklen Wald stand, fielen plötzlich Sterne vom Himmel. Es waren lauter blanke Taler. Von da an war das Mädchen reich für sein Leben lang.",
+    "fragen": [
+      {
+        "frage": "Was schenkte das Mädchen dem hungrigen Mann?",
+        "choices": [
+          {
+            "text": "sein Brot"
+          },
+          {
+            "text": "seine Mütze"
+          },
+          {
+            "text": "sein Hemd"
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Was fiel vom Himmel?",
+        "choices": [
+          {
+            "text": "Sterne, die Taler waren"
+          },
+          {
+            "text": "Schnee"
+          },
+          {
+            "text": "Blätter"
+          }
+        ],
+        "answer": 0,
+        "beleg": 7
+      },
+      {
+        "frage": "Wie fängt der Text an?",
+        "choices": [
+          {
+            "text": "Es war einmal …"
+          },
+          {
+            "text": "Heute will ich …"
+          },
+          {
+            "text": "So geht es: …"
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fahrradtour",
+    "kind": "lesen",
+    "textart": "Geschichte",
+    "text": "Familie Berger plante eine Fahrradtour an den See. Mama packte Wasser, Äpfel und belegte Brote in den Rucksack. Papa pumpte die Reifen auf. Nach einer Stunde Fahrt machten sie eine Pause auf einer Wiese. Plötzlich bemerkte Ben, dass sein Hinterrad platt war. Zum Glück hatte Papa Flickzeug dabei. Gemeinsam suchten sie das Loch im Schlauch und klebten einen Flicken darauf. Nach einer halben Stunde ging es weiter. Am See angekommen, sprangen alle ins kühle Wasser. Ben sagte: „Das war der beste Ausflug!“",
+    "fragen": [
+      {
+        "frage": "Wohin fuhr Familie Berger?",
+        "choices": [
+          {
+            "text": "an den See"
+          },
+          {
+            "text": "in die Stadt"
+          },
+          {
+            "text": "in den Zoo"
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Was war mit Bens Fahrrad passiert?",
+        "choices": [
+          {
+            "text": "Das Hinterrad war platt."
+          },
+          {
+            "text": "Die Kette war gerissen."
+          },
+          {
+            "text": "Die Bremse ging nicht."
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Was bedeutet hier „Flickzeug“?",
+        "choices": [
+          {
+            "text": "Sachen zum Reparieren eines Reifens"
+          },
+          {
+            "text": "Kleidung zum Wechseln"
+          },
+          {
+            "text": "ein Spiel"
+          }
+        ],
+        "answer": 0,
+        "beleg": 5
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Anleitung"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "igel-winter",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Im Herbst frisst der Igel besonders viel. Er braucht ein dickes Fettpolster für den Winter. Wenn es kalt wird, sucht er sich einen geschützten Platz. Oft ist das ein Laubhaufen oder ein Holzstapel. Dort rollt er sich zusammen und hält Winterschlaf. Sein Herz schlägt dann ganz langsam. Auch seine Körpertemperatur sinkt stark. So verbraucht er wenig Energie. Erst im Frühling wacht der Igel wieder auf. Dann ist er sehr hungrig und sucht sofort nach Käfern und Würmern.",
+    "fragen": [
+      {
+        "frage": "Warum frisst der Igel im Herbst so viel?",
+        "choices": [
+          {
+            "text": "Er braucht ein Fettpolster."
+          },
+          {
+            "text": "Er ist müde."
+          },
+          {
+            "text": "Es gibt viele Äpfel."
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Wo hält der Igel oft Winterschlaf?",
+        "choices": [
+          {
+            "text": "in einem Laubhaufen"
+          },
+          {
+            "text": "im Wasser"
+          },
+          {
+            "text": "auf einem Baum"
+          }
+        ],
+        "answer": 0,
+        "beleg": 3
+      },
+      {
+        "frage": "Wann wacht der Igel wieder auf?",
+        "choices": [
+          {
+            "text": "im Frühling"
+          },
+          {
+            "text": "im Winter"
+          },
+          {
+            "text": "im Sommer"
+          }
+        ],
+        "answer": 0,
+        "beleg": 8
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Gedicht"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "herbstgedicht",
+    "kind": "lesen",
+    "textart": "Gedicht",
+    "text": "Der Herbst ist da, der Herbst ist da, die Blätter fallen, hopsassa. Sie tanzen rot und gelb und braun, so schön ist es, sie anzuschaun. Der Wind, der pustet kräftig los, die Drachen steigen hoch und groß. Und abends wird es früh schon kalt, dann ruft die Mama: Komm nach Haus bald!",
+    "fragen": [
+      {
+        "frage": "Welche Farben haben die Blätter?",
+        "choices": [
+          {
+            "text": "rot, gelb und braun"
+          },
+          {
+            "text": "blau und grün"
+          },
+          {
+            "text": "weiß und schwarz"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Was steigt hoch und groß?",
+        "choices": [
+          {
+            "text": "die Drachen"
+          },
+          {
+            "text": "die Vögel"
+          },
+          {
+            "text": "die Wolken"
+          }
+        ],
+        "answer": 0,
+        "beleg": 2
+      },
+      {
+        "frage": "Was reimt sich im Text auf „da“?",
+        "choices": [
+          {
+            "text": "hopsassa"
+          },
+          {
+            "text": "Blätter"
+          },
+          {
+            "text": "Wind"
+          }
+        ],
+        "answer": 0,
+        "beleg": 0
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Gedicht"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "stundenplan3",
+    "kind": "lesen",
+    "textart": "Sachtext",
+    "text": "Die Klasse 3b hat einen neuen Stundenplan. Am Montag beginnt der Unterricht um acht Uhr mit Mathematik. In der zweiten Stunde ist Deutsch. Nach der großen Pause haben die Kinder zwei Stunden Sport in der Turnhalle. Am Dienstag beginnt der Tag mit Englisch. Danach folgen HSU und Musik. Am Mittwoch haben die Kinder schon um elf Uhr fünfzig Schulschluss. Am Donnerstag gibt es Kunst in der fünften und sechsten Stunde. Der Freitag endet mit einer Stunde Religion.",
+    "fragen": [
+      {
+        "frage": "Womit beginnt der Montag?",
+        "choices": [
+          {
+            "text": "mit Mathematik"
+          },
+          {
+            "text": "mit Deutsch"
+          },
+          {
+            "text": "mit Sport"
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Wo haben die Kinder Sport?",
+        "choices": [
+          {
+            "text": "in der Turnhalle"
+          },
+          {
+            "text": "auf dem Schulhof"
+          },
+          {
+            "text": "im Klassenzimmer"
+          }
+        ],
+        "answer": 0,
+        "beleg": 3
+      },
+      {
+        "frage": "An welchem Tag ist schon um elf Uhr fünfzig Schluss?",
+        "choices": [
+          {
+            "text": "am Mittwoch"
+          },
+          {
+            "text": "am Montag"
+          },
+          {
+            "text": "am Freitag"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Märchen"
+          },
+          {
+            "text": "Gedicht"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "verloren-im-zoo",
+    "kind": "lesen",
+    "textart": "Geschichte",
+    "text": "Mia war mit ihrer Klasse im Tierpark. Bei den Affen blieb sie lange stehen, weil ein kleines Äffchen Grimassen schnitt. Als sie sich umdrehte, war ihre Klasse verschwunden. Mia bekam einen Schreck. Doch dann erinnerte sie sich an die Regel ihrer Lehrerin: „Wenn du uns verlierst, geh zum Eingang.“ Sie fragte eine Tierpflegerin nach dem Weg. Die Frau brachte sie zum Eingang. Dort wartete schon Frau Huber mit der ganzen Klasse. Alle waren froh, dass Mia so klug gehandelt hatte.",
+    "fragen": [
+      {
+        "frage": "Warum blieb Mia bei den Affen stehen?",
+        "choices": [
+          {
+            "text": "Ein Äffchen schnitt Grimassen."
+          },
+          {
+            "text": "Sie war müde."
+          },
+          {
+            "text": "Sie suchte ihre Jacke."
+          }
+        ],
+        "answer": 0,
+        "beleg": 1
+      },
+      {
+        "frage": "Was war die Regel der Lehrerin?",
+        "choices": [
+          {
+            "text": "zum Eingang gehen"
+          },
+          {
+            "text": "laut rufen"
+          },
+          {
+            "text": "stehen bleiben"
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Wer brachte Mia zum Eingang?",
+        "choices": [
+          {
+            "text": "eine Tierpflegerin"
+          },
+          {
+            "text": "ein Polizist"
+          },
+          {
+            "text": "ihre Freundin"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          },
+          {
+            "text": "Anleitung"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "kresse3",
+    "kind": "lesen",
+    "textart": "Anleitung",
+    "text": "So machst du ein kleines Experiment mit Kresse. Lege zwei Teller mit nasser Watte bereit. Streue auf beide Teller Kressesamen. Stelle einen Teller ans helle Fenster. Den anderen Teller stellst du in einen dunklen Schrank. Gieße beide Teller jeden Tag ein wenig. Schau nach fünf Tagen nach. Die Kresse am Fenster ist grün und gerade gewachsen. Die Kresse im Schrank ist blass und gelb. Daran siehst du: Pflanzen brauchen Licht, um grün zu werden.",
+    "fragen": [
+      {
+        "frage": "Wo steht der zweite Teller?",
+        "choices": [
+          {
+            "text": "in einem dunklen Schrank"
+          },
+          {
+            "text": "im Kühlschrank"
+          },
+          {
+            "text": "auf dem Balkon"
+          }
+        ],
+        "answer": 0,
+        "beleg": 4
+      },
+      {
+        "frage": "Wann schaust du nach?",
+        "choices": [
+          {
+            "text": "nach fünf Tagen"
+          },
+          {
+            "text": "nach einer Stunde"
+          },
+          {
+            "text": "nach einem Monat"
+          }
+        ],
+        "answer": 0,
+        "beleg": 6
+      },
+      {
+        "frage": "Was lernst du aus dem Experiment?",
+        "choices": [
+          {
+            "text": "Pflanzen brauchen Licht."
+          },
+          {
+            "text": "Pflanzen brauchen Dunkelheit."
+          },
+          {
+            "text": "Kresse braucht kein Wasser."
+          }
+        ],
+        "answer": 0,
+        "beleg": 9
+      },
+      {
+        "frage": "Was für ein Text ist das?",
+        "choices": [
+          {
+            "text": "Anleitung"
+          },
+          {
+            "text": "Geschichte"
+          },
+          {
+            "text": "Sachtext"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  }
+]

@@ -15,7 +15,7 @@ import {
 import { graphemes } from './graphemes'
 import { MIN_ANLAUT_GROUP, groupBy, listenEntries, resolveListenWords } from './hoeren'
 import { HAEUFIGKEITSWOERTER, ST_SP_RULE, checkLauttreu } from './lauttreue'
-import { baseSentences, sceneKey, unknownWords, wordsOf } from './saetze'
+import { baseSentences, sceneKey, splitSentences, unknownWords, wordsOf } from './saetze'
 import ablaeufe from '@/data/basis/klasse-1/ablaeufe.json'
 import fragesaetze from '@/data/basis/klasse-1/fragesaetze.json'
 import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
@@ -308,6 +308,27 @@ export function checkGrade2Texts(): string[] {
   return problems
 }
 
+/** Grade 3 texts (L3-2 to L3-6): length, 3–4 questions, references inside the text. */
+export function checkGrade3Texts(): string[] {
+  const problems: string[] = []
+  for (const t of textsFor(3)) {
+    const where = `Klasse 3, Text „${t.id}“`
+    const n = wordsOf(t.text).length
+    if (n < 40 || n > 160) problems.push(`${where}: ${n} Wörter (40–160)`)
+    if (!t.textart) problems.push(`${where}: ohne Textart`)
+    if (t.fragen.length < 3 || t.fragen.length > 4) problems.push(`${where}: 3 oder 4 Fragen`)
+    const count = splitSentences(t.text).length
+    for (const f of t.fragen) {
+      if (f.beleg !== undefined && (f.beleg < 0 || f.beleg >= count))
+        problems.push(`${where}, „${f.frage}“: Beleg außerhalb des Textes`)
+      const labels = f.choices.map((c) => c.text)
+      if (new Set(labels).size !== labels.length)
+        problems.push(`${where}, „${f.frage}“: Antworten doppelt`)
+    }
+  }
+  return problems
+}
+
 /** Phenomena that only grade 3 uses. */
 const LATER = new Set([
   'trennen',
@@ -508,7 +529,8 @@ export function checkData(images: ReadonlySet<string>): string[] {
         problems.push(...checkSentences(grade, words, images))
         if (grade === 1) problems.push(...checkGrade1Extras(words, images), ...checkSache(images))
         if (grade === 2) problems.push(...checkGrade2Words(words, land.name), ...checkGrade2Texts())
-        if (grade === 3) problems.push(...checkGrade2Words(words, land.name, 3))
+        if (grade === 3)
+          problems.push(...checkGrade2Words(words, land.name, 3), ...checkGrade3Texts())
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

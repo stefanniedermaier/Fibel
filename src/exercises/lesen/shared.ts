@@ -11,6 +11,8 @@ export interface LesenParams {
   phenomena?: string[]
   /** From grade 2: only these word types (e.g. no "klein" words with pictures). */
   wortarten?: string[]
+  /** Grade 3, Blitzlesen (L3-1): long words, at least this many letters. */
+  minLetters?: number
 }
 
 /** Settings key for a word level set by hand (0/missing = automatic). */

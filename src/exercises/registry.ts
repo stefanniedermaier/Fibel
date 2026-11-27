@@ -41,6 +41,7 @@ import { halbschriftlich } from './rechnen/halbschriftlich'
 import { ueberschlag } from './rechnen/ueberschlag'
 import { schriftlich } from './rechnen/schriftlich'
 import { trennen } from './schreiben/trennen'
+import { textstelle } from './lesen/textstelle'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -166,6 +167,7 @@ register(halbschriftlich)
 register(ueberschlag)
 register(schriftlich)
 register(trennen)
+register(textstelle)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

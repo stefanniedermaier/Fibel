@@ -12,13 +12,17 @@ const store = useAppStore()
 
 <template>
   <div class="task">
-    <div v-if="data.kind === 'lesen'" class="text card">
+    <div
+      v-if="data.kind === 'lesen'"
+      class="text card"
+      :class="{ long: data.sentences.length > 5 }"
+    >
       <SentenceText
         v-for="(s, i) in data.sentences"
         :key="i"
         :tokens="s"
         :coloring="data.coloring"
-        :size="34"
+        :size="data.sentences.length > 5 ? 21 : 34"
       />
     </div>
     <button
@@ -62,6 +66,13 @@ const store = useAppStore()
   gap: 6px;
   padding: 12px 20px;
   max-width: 100%;
+}
+
+.text.long {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  max-width: 680px;
 }
 
 .story {
