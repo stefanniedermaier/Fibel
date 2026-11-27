@@ -41,6 +41,15 @@ const groups = computed<{ title: string; items: Item[] }[]>(() => [
       .map((w) => ({ key: `hoer:${w.id}`, label: w.text, speak: w.say ?? w.text, image: w.image })),
   },
   {
+    title: 'Wörter Klasse 2',
+    items: resolveWords(land.value, 2).map((w) => ({
+      key: `wort2:${w.id}`,
+      label: w.text,
+      speak: w.beispiel ? `${w.say ?? w.text}. ${w.beispiel}` : (w.say ?? w.text),
+      image: w.image,
+    })),
+  },
+  {
     title: 'HSU: Begriffe und Merksätze',
     items: BEGRIFFE.map((b) => ({
       key: `hsu:${b.id}`,
@@ -119,7 +128,7 @@ const copied = ref(false)
 async function copyList() {
   const text = flagged.value.map(
     (i) =>
-      `${({ wort: 'Wort', hoer: 'Hörwort', silbe: 'Silbe', hsu: 'HSU', 'hsu-aussage': 'HSU-Aussage' } as Record<string, string>)[i.key.split(':')[0]!]}: ${i.label}`,
+      `${({ wort: 'Wort', wort2: 'Wort Klasse 2', hoer: 'Hörwort', silbe: 'Silbe', hsu: 'HSU', 'hsu-aussage': 'HSU-Aussage' } as Record<string, string>)[i.key.split(':')[0]!]}: ${i.label}`,
   )
   await navigator.clipboard?.writeText(text.join('\n'))
   copied.value = true

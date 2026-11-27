@@ -436,6 +436,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 - **HSU Stufe 2 (Version 0.7.0):** „Stimmt das?“, sieben weitere Themen (Verkehr, Sichtbarkeit, Ernährung und Zähne, Gefühle, Müll, Wirklichkeit und Fantasie, Früher und heute), eigene Bilder für Verkehrszeichen und Mülltonnen, Mülltonnen und Forscheraufträge im Elternbereich.
 - **HSU Stufe 3 (Version 0.8.0):** Suchbilder (Straße, Küche, Zimmer von oben), Draufsicht, „Welcher Turm steht sicherer?“, Jahreskreis; neue Themen Sicher zu Hause, Von oben gesehen, Bauen.
 - **Klasse 1, Phase 5 (Version 0.9.0):** Zusätze, anfangs aus: Wörter zusammensetzen, St/Sp als Buchstabengruppen, Schreibwerkstatt (Experiment), Pfeilwege, Symmetrie, Strichlisten.
+- **Klasse 2 (Version 0.10.0):** K2-0 bis K2-10 aus [plaene/klasse-2.md](plaene/klasse-2.md) sind umgesetzt: neue Bereiche Sprache, Formen und Messen, Wörterbuch mit dem ISB-Grundwortschatz 1/2, Rechnen bis 100 und Einmaleins, Rechtschreiben nach Phänomenen, Sätze und Texte, digitale Uhr und Zeitspannen, Geld und Längen, Sachaufgaben, Daten und Zufall, Körper und Symmetrie. Offen ist die verbundene Schrift (K2-11).
 
 | Phase                          | Inhalt                                                                                                                                                                                                                                                                                                                                                                    | Fertig, wenn …                                                                                               | Umfang |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
@@ -490,7 +491,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 ## 14. Später (nicht in Version 1)
 
-- Inhalte für die Klassen 2–4 nach den Plänen in [plaene/](plaene/README.md)
+- Inhalte für die Klassen 3 und 4 nach den Plänen in [plaene/](plaene/README.md); in Klasse 2 fehlt noch die verbundene Schrift
 - Heimat- und Sachunterricht: Stufen 1 bis 3 sind umgesetzt ([plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md))
 - Weitere Bundesländer: jeweils eine Länderanpassung, danach das Land in der Länderliste aktivieren
 - Laute, die die Eltern selbst aufnehmen (Mikrofon, lokal gespeichert)
