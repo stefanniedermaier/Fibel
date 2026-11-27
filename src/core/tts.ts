@@ -17,6 +17,8 @@ export interface SpeakOptions {
   /** 0.1–10, 1 = normal. Slightly slower suits young children. */
   rate?: number
   pitch?: number
+  /** Used when there is no voice: e.g. 'en-GB'. */
+  lang?: string
 }
 
 export const DEFAULT_RATE = 0.85
@@ -32,6 +34,20 @@ function normalizedLang(voice: VoiceInfo): string {
 
 export function isGerman(voice: VoiceInfo): boolean {
   return normalizedLang(voice).startsWith('de')
+}
+
+export function isEnglish(voice: VoiceInfo): boolean {
+  return normalizedLang(voice).startsWith('en')
+}
+
+/** English voices: the preferred one, then offline, then British English (as at school). */
+export function rankEnglishVoices<T extends VoiceInfo>(voices: T[], preferredURI?: string): T[] {
+  const score = (v: T): number =>
+    (v.voiceURI === preferredURI ? 100 : 0) +
+    (v.localService ? 10 : 0) +
+    (normalizedLang(v) === 'en-gb' ? 5 : 0) +
+    (v.default ? 1 : 0)
+  return voices.filter(isEnglish).sort((a, b) => score(b) - score(a))
 }
 
 /**
@@ -106,7 +122,7 @@ function speakOnce(text: string, options: SpeakOptions, retry: boolean): Promise
   // A paused engine (Chrome after the tab was in the background) would queue silently.
   if (synth.paused) synth.resume()
   const utterance = new SpeechSynthesisUtterance(text)
-  utterance.lang = options.voice?.lang ?? 'de-DE'
+  utterance.lang = options.voice?.lang ?? options.lang ?? 'de-DE'
   if (options.voice) utterance.voice = options.voice
   utterance.rate = options.rate ?? DEFAULT_RATE
   utterance.pitch = options.pitch ?? DEFAULT_PITCH

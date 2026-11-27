@@ -1,0 +1,617 @@
+{
+  "quelle": "Eigene Auswahl nach den Themengebieten des LehrplanPLUS Englisch 3/4 (4.1 Freunde und Familie, 4.2 Schule). Die verbindliche ISB-Wortliste war nicht verfügbar; mit der Liste der Schule abgleichen.",
+  "woerter": [
+    {
+      "id": "classroom-stand-up",
+      "en": "Stand up",
+      "de": "Steh auf",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1F9CD"
+    },
+    {
+      "id": "classroom-sit-down",
+      "en": "Sit down",
+      "de": "Setz dich",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1FA91"
+    },
+    {
+      "id": "classroom-open-your-book",
+      "en": "Open your book",
+      "de": "Öffne dein Buch",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1F4D6"
+    },
+    {
+      "id": "classroom-close-your-book",
+      "en": "Close your book",
+      "de": "Schließ dein Buch",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1F4D5"
+    },
+    {
+      "id": "classroom-listen",
+      "en": "Listen",
+      "de": "Hör zu",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1F442"
+    },
+    {
+      "id": "classroom-look",
+      "en": "Look",
+      "de": "Schau",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1F440"
+    },
+    {
+      "id": "classroom-be-quiet",
+      "en": "Be quiet",
+      "de": "Sei leise",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1F92B"
+    },
+    {
+      "id": "classroom-put-up-your-hand",
+      "en": "Put up your hand",
+      "de": "Heb die Hand",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "270B"
+    },
+    {
+      "id": "classroom-write",
+      "en": "Write",
+      "de": "Schreib",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "270D"
+    },
+    {
+      "id": "classroom-colour",
+      "en": "Colour",
+      "de": "Mal an",
+      "thema": "classroom",
+      "klasse": 3,
+      "image": "1F58D"
+    },
+    {
+      "id": "farben-red",
+      "en": "red",
+      "de": "rot",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1F534"
+    },
+    {
+      "id": "farben-blue",
+      "en": "blue",
+      "de": "blau",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1F535"
+    },
+    {
+      "id": "farben-green",
+      "en": "green",
+      "de": "grün",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1F7E2"
+    },
+    {
+      "id": "farben-yellow",
+      "en": "yellow",
+      "de": "gelb",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1F7E1"
+    },
+    {
+      "id": "farben-orange",
+      "en": "orange",
+      "de": "orange",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1F7E0"
+    },
+    {
+      "id": "farben-purple",
+      "en": "purple",
+      "de": "lila",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1F7E3"
+    },
+    {
+      "id": "farben-brown",
+      "en": "brown",
+      "de": "braun",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1F7E4"
+    },
+    {
+      "id": "farben-black",
+      "en": "black",
+      "de": "schwarz",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "26AB"
+    },
+    {
+      "id": "farben-white",
+      "en": "white",
+      "de": "weiß",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "26AA"
+    },
+    {
+      "id": "farben-pink",
+      "en": "pink",
+      "de": "rosa",
+      "thema": "farben",
+      "klasse": 3,
+      "image": "1FA77"
+    },
+    {
+      "id": "zahlen-one",
+      "en": "one",
+      "de": "1",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-two",
+      "en": "two",
+      "de": "2",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-three",
+      "en": "three",
+      "de": "3",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-four",
+      "en": "four",
+      "de": "4",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-five",
+      "en": "five",
+      "de": "5",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-six",
+      "en": "six",
+      "de": "6",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-seven",
+      "en": "seven",
+      "de": "7",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-eight",
+      "en": "eight",
+      "de": "8",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-nine",
+      "en": "nine",
+      "de": "9",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-ten",
+      "en": "ten",
+      "de": "10",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-eleven",
+      "en": "eleven",
+      "de": "11",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-twelve",
+      "en": "twelve",
+      "de": "12",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-thirteen",
+      "en": "thirteen",
+      "de": "13",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-fourteen",
+      "en": "fourteen",
+      "de": "14",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-fifteen",
+      "en": "fifteen",
+      "de": "15",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-sixteen",
+      "en": "sixteen",
+      "de": "16",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-seventeen",
+      "en": "seventeen",
+      "de": "17",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-eighteen",
+      "en": "eighteen",
+      "de": "18",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-nineteen",
+      "en": "nineteen",
+      "de": "19",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "zahlen-twenty",
+      "en": "twenty",
+      "de": "20",
+      "thema": "zahlen",
+      "klasse": 3
+    },
+    {
+      "id": "familie-mother",
+      "en": "mother",
+      "de": "Mutter",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F469"
+    },
+    {
+      "id": "familie-father",
+      "en": "father",
+      "de": "Vater",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F468"
+    },
+    {
+      "id": "familie-sister",
+      "en": "sister",
+      "de": "Schwester",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F467"
+    },
+    {
+      "id": "familie-brother",
+      "en": "brother",
+      "de": "Bruder",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F466"
+    },
+    {
+      "id": "familie-grandma",
+      "en": "grandma",
+      "de": "Oma",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F475"
+    },
+    {
+      "id": "familie-grandpa",
+      "en": "grandpa",
+      "de": "Opa",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F474"
+    },
+    {
+      "id": "familie-baby",
+      "en": "baby",
+      "de": "Baby",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F476"
+    },
+    {
+      "id": "familie-family",
+      "en": "family",
+      "de": "Familie",
+      "thema": "familie",
+      "klasse": 3,
+      "image": "1F46A"
+    },
+    {
+      "id": "tiere-dog",
+      "en": "dog",
+      "de": "Hund",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F436"
+    },
+    {
+      "id": "tiere-cat",
+      "en": "cat",
+      "de": "Katze",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F431"
+    },
+    {
+      "id": "tiere-rabbit",
+      "en": "rabbit",
+      "de": "Hase",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F407"
+    },
+    {
+      "id": "tiere-mouse",
+      "en": "mouse",
+      "de": "Maus",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F42D"
+    },
+    {
+      "id": "tiere-bird",
+      "en": "bird",
+      "de": "Vogel",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F426"
+    },
+    {
+      "id": "tiere-fish",
+      "en": "fish",
+      "de": "Fisch",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F41F"
+    },
+    {
+      "id": "tiere-horse",
+      "en": "horse",
+      "de": "Pferd",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F40E"
+    },
+    {
+      "id": "tiere-cow",
+      "en": "cow",
+      "de": "Kuh",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F404"
+    },
+    {
+      "id": "tiere-pig",
+      "en": "pig",
+      "de": "Schwein",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F416"
+    },
+    {
+      "id": "tiere-sheep",
+      "en": "sheep",
+      "de": "Schaf",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F411"
+    },
+    {
+      "id": "tiere-duck",
+      "en": "duck",
+      "de": "Ente",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F986"
+    },
+    {
+      "id": "tiere-hamster",
+      "en": "hamster",
+      "de": "Hamster",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F439"
+    },
+    {
+      "id": "tiere-elephant",
+      "en": "elephant",
+      "de": "Elefant",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F418"
+    },
+    {
+      "id": "tiere-lion",
+      "en": "lion",
+      "de": "Löwe",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F981"
+    },
+    {
+      "id": "tiere-monkey",
+      "en": "monkey",
+      "de": "Affe",
+      "thema": "tiere",
+      "klasse": 3,
+      "image": "1F412"
+    },
+    {
+      "id": "schule-pen",
+      "en": "pen",
+      "de": "Füller",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1F58A"
+    },
+    {
+      "id": "schule-pencil",
+      "en": "pencil",
+      "de": "Bleistift",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "270F"
+    },
+    {
+      "id": "schule-ruler",
+      "en": "ruler",
+      "de": "Lineal",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1F4CF"
+    },
+    {
+      "id": "schule-book",
+      "en": "book",
+      "de": "Buch",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1F4D6"
+    },
+    {
+      "id": "schule-schoolbag",
+      "en": "schoolbag",
+      "de": "Schulranzen",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1F392"
+    },
+    {
+      "id": "schule-scissors",
+      "en": "scissors",
+      "de": "Schere",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "2702"
+    },
+    {
+      "id": "schule-crayon",
+      "en": "crayon",
+      "de": "Wachsmalstift",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1F58D"
+    },
+    {
+      "id": "schule-chair",
+      "en": "chair",
+      "de": "Stuhl",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1FA91"
+    },
+    {
+      "id": "schule-teacher",
+      "en": "teacher",
+      "de": "Lehrerin",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1F9D1-200D-1F3EB"
+    },
+    {
+      "id": "schule-computer",
+      "en": "computer",
+      "de": "Computer",
+      "thema": "schule",
+      "klasse": 3,
+      "image": "1F4BB"
+    },
+    {
+      "id": "faecher-maths",
+      "en": "Maths",
+      "de": "Mathe",
+      "thema": "faecher",
+      "klasse": 3,
+      "image": "1F522"
+    },
+    {
+      "id": "faecher-english",
+      "en": "English",
+      "de": "Englisch",
+      "thema": "faecher",
+      "klasse": 3,
+      "image": "1F1EC-1F1E7"
+    },
+    {
+      "id": "faecher-german",
+      "en": "German",
+      "de": "Deutsch",
+      "thema": "faecher",
+      "klasse": 3,
+      "image": "1F1E9-1F1EA"
+    },
+    {
+      "id": "faecher-art",
+      "en": "Art",
+      "de": "Kunst",
+      "thema": "faecher",
+      "klasse": 3,
+      "image": "1F3A8"
+    },
+    {
+      "id": "faecher-music",
+      "en": "Music",
+      "de": "Musik",
+      "thema": "faecher",
+      "klasse": 3,
+      "image": "1F3B5"
+    },
+    {
+      "id": "faecher-pe",
+      "en": "PE",
+      "de": "Sport",
+      "thema": "faecher",
+      "klasse": 3,
+      "image": "26BD"
+    }
+  ]
+}

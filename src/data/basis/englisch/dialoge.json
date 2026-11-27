@@ -1,0 +1,170 @@
+[
+  {
+    "id": "d1",
+    "frage": "Hello! What's your name?",
+    "antwort": "My name is Tom.",
+    "falsch": ["I'm fine, thank you.", "I'm eight."]
+  },
+  {
+    "id": "d2",
+    "frage": "How are you?",
+    "antwort": "I'm fine, thank you.",
+    "falsch": ["My name is Lisa.", "Goodbye!"]
+  },
+  {
+    "id": "d3",
+    "frage": "How old are you?",
+    "antwort": "I'm eight.",
+    "falsch": ["I'm fine.", "Yes, please."]
+  },
+  {
+    "id": "d4",
+    "frage": "Goodbye!",
+    "antwort": "Bye-bye! See you!",
+    "falsch": ["Hello!", "Thank you."]
+  },
+  {
+    "id": "d5",
+    "frage": "Good morning!",
+    "antwort": "Good morning!",
+    "falsch": ["Good night!", "I'm nine."]
+  },
+  {
+    "id": "d6",
+    "frage": "Do you like apples?",
+    "antwort": "Yes, I do.",
+    "falsch": ["I'm fine.", "My name is Anna."]
+  },
+  {
+    "id": "d7",
+    "frage": "Thank you!",
+    "antwort": "You're welcome.",
+    "falsch": ["Goodbye.", "I'm ten."]
+  },
+  {
+    "id": "d8",
+    "frage": "Can I have a pencil, please?",
+    "antwort": "Here you are.",
+    "falsch": ["Good night.", "I'm sad."]
+  },
+  {
+    "id": "d9",
+    "frage": "Sorry!",
+    "antwort": "That's okay.",
+    "falsch": ["Thank you.", "Hello."]
+  },
+  {
+    "id": "d10",
+    "frage": "Have you got a pet?",
+    "antwort": "Yes, I've got a dog.",
+    "falsch": ["I'm fine, thank you.", "It's blue."]
+  },
+  {
+    "id": "d11",
+    "frage": "What's your favourite colour?",
+    "antwort": "My favourite colour is blue.",
+    "falsch": ["I'm eight.", "Yes, please."]
+  },
+  {
+    "id": "d12",
+    "frage": "Happy birthday!",
+    "antwort": "Thank you!",
+    "falsch": ["Sorry!", "Goodbye!"]
+  },
+  {
+    "id": "d13",
+    "frage": "Hi! I'm Ben. And you?",
+    "antwort": "I'm Mia.",
+    "falsch": ["I'm fine, thank you.", "Yes, I do."]
+  },
+  {
+    "id": "d14",
+    "frage": "Good night!",
+    "antwort": "Good night! Sleep well.",
+    "falsch": ["Good morning!", "Here you are."]
+  },
+  {
+    "id": "d15",
+    "frage": "How are you today?",
+    "antwort": "I'm happy.",
+    "falsch": ["I'm eight.", "It's red."]
+  },
+  {
+    "id": "d16",
+    "frage": "Who is this?",
+    "antwort": "This is my sister.",
+    "falsch": ["It's a dog.", "I'm fine."]
+  },
+  {
+    "id": "d17",
+    "frage": "Is this your mum?",
+    "antwort": "Yes, it is.",
+    "falsch": ["I'm nine.", "Thank you."]
+  },
+  {
+    "id": "d18",
+    "frage": "Have you got a brother?",
+    "antwort": "No, I haven't.",
+    "falsch": ["It's green.", "Good night."]
+  },
+  {
+    "id": "d19",
+    "frage": "What's this?",
+    "antwort": "It's a pencil.",
+    "falsch": ["This is my dad.", "I'm fine."]
+  },
+  {
+    "id": "d20",
+    "frage": "What colour is it?",
+    "antwort": "It's green.",
+    "falsch": ["It's a ruler.", "I'm ten."]
+  },
+  {
+    "id": "d21",
+    "frage": "How many cats?",
+    "antwort": "Three cats.",
+    "falsch": ["Blue cats.", "Yes, please."]
+  },
+  {
+    "id": "d22",
+    "frage": "Do you like pizza?",
+    "antwort": "No, I don't.",
+    "falsch": ["It's yellow.", "My name is Paul."]
+  },
+  {
+    "id": "d23",
+    "frage": "Can you swim?",
+    "antwort": "Yes, I can.",
+    "falsch": ["It's a fish.", "Goodbye."]
+  },
+  {
+    "id": "d24",
+    "frage": "What's your favourite animal?",
+    "antwort": "My favourite animal is the lion.",
+    "falsch": ["It's Monday.", "I'm sad."]
+  },
+  {
+    "id": "d25",
+    "frage": "Where is my book?",
+    "antwort": "It's on the table.",
+    "falsch": ["It's blue.", "Yes, I do."]
+  },
+  {
+    "id": "d26",
+    "frage": "Do you like Maths?",
+    "antwort": "Yes, I do. It's great!",
+    "falsch": ["It's a pen.", "Good night."]
+  },
+  {
+    "id": "d27",
+    "frage": "Would you like an apple?",
+    "antwort": "Yes, please.",
+    "falsch": ["I'm eight.", "My name is Tim."]
+  },
+  {
+    "id": "d28",
+    "frage": "Can I go to the toilet, please?",
+    "antwort": "Yes, you can.",
+    "falsch": ["It's red.", "I'm fine."]
+  }
+]

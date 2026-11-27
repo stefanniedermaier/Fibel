@@ -17,7 +17,7 @@ import {
   type PlannedTask,
 } from '@/core/session'
 import { playCrown, playError, playSuccess } from '@/core/sounds'
-import { phrase, stopSpeaking } from '@/core/speech'
+import { phrase, shownText, stopSpeaking } from '@/core/speech'
 import { getDb, loadProgress, saveProgress, saveSession } from '@/core/storage/db'
 import type { ProgressRecord, SessionRecord, TaskResult, Topic } from '@/core/types'
 import { TOPIC_INFO, topicLabel } from '@/core/types'
@@ -228,7 +228,7 @@ onUnmounted(() => {
     </header>
 
     <div v-if="phase === 'running' && current" class="instruction">
-      <p>{{ current.task.caption ?? current.task.instruction }}</p>
+      <p>{{ shownText(current.task.caption ?? current.task.instruction) }}</p>
       <button class="icon-btn speak" aria-label="Nochmal vorlesen" @click="speakInstruction">
         🔊
       </button>

@@ -1,5 +1,5 @@
 export type Topic =
-  'lesen' | 'schreiben' | 'sprache' | 'rechnen' | 'formen' | 'messen' | 'uhr' | 'sache'
+  'lesen' | 'schreiben' | 'sprache' | 'rechnen' | 'formen' | 'messen' | 'uhr' | 'sache' | 'englisch'
 export const TOPICS: readonly Topic[] = [
   'lesen',
   'schreiben',
@@ -9,6 +9,7 @@ export const TOPICS: readonly Topic[] = [
   'messen',
   'uhr',
   'sache',
+  'englisch',
 ]
 
 export const TOPIC_INFO: Record<Topic, { label: string; icon: string }> = {
@@ -20,6 +21,7 @@ export const TOPIC_INFO: Record<Topic, { label: string; icon: string }> = {
   messen: { label: 'Messen', icon: '📏' },
   uhr: { label: 'Uhr', icon: '🕒' },
   sache: { label: 'Sachunterricht', icon: '🔍' },
+  englisch: { label: 'Englisch', icon: '🇬🇧' },
 }
 
 /**
@@ -27,7 +29,13 @@ export const TOPIC_INFO: Record<Topic, { label: string; icon: string }> = {
  * section 3): Sprache, Formen and Messen start in grade 2; in grade 1 they are part of
  * Schreiben and Rechnen.
  */
-export const OPTIONAL_TOPICS: readonly Topic[] = ['sprache', 'formen', 'messen', 'sache']
+export const OPTIONAL_TOPICS: readonly Topic[] = [
+  'sprache',
+  'formen',
+  'messen',
+  'sache',
+  'englisch',
+]
 
 /** The subject's name in a state: in Bavaria it is "Heimat- und Sachunterricht" (HSU). */
 export function topicLabel(topic: Topic, land: LandCode | undefined): string {
@@ -85,6 +93,8 @@ export interface ProfileSettings {
   /** How strict the recognition is (0.8 strict, 1 normal, 1.25 easy). */
   recognitionTolerance: number
   voiceURI: string | null
+  /** From grade 3: the voice for English words (plaene/klasse-3.md, section 10). */
+  voiceURIEn: string | null
   speechRate: number
   /** Levels set by hand, per catalog entry id. */
   levels: Record<string, number>

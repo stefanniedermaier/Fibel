@@ -21,6 +21,7 @@ import fragesaetze from '@/data/basis/klasse-1/fragesaetze.json'
 import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
 import texte from '@/data/basis/klasse-1/texte.json'
 import zusammensetzungen from '@/data/basis/klasse-1/zusammensetzungen.json'
+import { DIALOGE, WORDS as ENGLISH_WORDS } from '@/exercises/englisch/shared'
 import { BEGRIFFE, THEMEN, unitOf } from '@/exercises/sache/shared'
 import { LUECKENSAETZE } from '@/exercises/lesen/satz-luecke'
 import { textsFor } from '@/exercises/lesen/text-fragen'
@@ -480,8 +481,26 @@ function checkListening(land: LandCode, grade: number, images: ReadonlySet<strin
   return problems
 }
 
+/** Englisch: unique ids and words, pictures exist, dialogue answers differ. */
+export function checkEnglisch(images: ReadonlySet<string>): string[] {
+  const problems: string[] = []
+  const ids = new Set<string>()
+  for (const w of ENGLISH_WORDS) {
+    if (ids.has(w.id)) problems.push(`Englisch: Wort-Id ${w.id} doppelt`)
+    ids.add(w.id)
+    if (w.image && !images.has(w.image)) problems.push(`Englisch „${w.en}“: Bild ${w.image} fehlt`)
+    if (!w.image && w.thema !== 'zahlen') problems.push(`Englisch „${w.en}“: ohne Bild`)
+  }
+  for (const d of DIALOGE) {
+    const all = [d.antwort, ...d.falsch]
+    if (new Set(all).size !== all.length || d.falsch.length < 2)
+      problems.push(`Englisch-Dialog ${d.id}: Antworten doppelt oder zu wenige`)
+  }
+  return problems
+}
+
 export function checkData(images: ReadonlySet<string>): string[] {
-  const problems: string[] = [...checkLetters(images), ...checkScripts()]
+  const problems: string[] = [...checkLetters(images), ...checkScripts(), ...checkEnglisch(images)]
 
   for (const a of avatars) {
     if (!images.has(a.image)) problems.push(`Avatar „${a.label}“: Bild ${a.image} fehlt`)

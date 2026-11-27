@@ -30,7 +30,7 @@ import { readableSentences } from '@/core/saetze'
 import { cleanLernwoerter } from '@/exercises/schreiben/diktat'
 import { MUELLTONNEN, THEMEN, unitOf } from '@/exercises/sache/shared'
 import { say } from '@/core/speech'
-import { loadVoices, rankGermanVoices } from '@/core/tts'
+import { loadVoices, rankEnglishVoices, rankGermanVoices } from '@/core/tts'
 import { TOPICS, TOPIC_INFO, type ProfileSettings, type Topic } from '@/core/types'
 import { useAppStore } from '@/stores/app'
 
@@ -65,7 +65,11 @@ watch(
   () => [form.land, form.grade] as const,
   ([land, grade]) => {
     if (isNew.value) {
-      const keep = { voiceURI: settings.value.voiceURI, speechRate: settings.value.speechRate }
+      const keep = {
+        voiceURI: settings.value.voiceURI,
+        voiceURIEn: settings.value.voiceURIEn,
+        speechRate: settings.value.speechRate,
+      }
       settings.value = { ...resolveDefaults(land, grade), ...keep }
     }
   },
@@ -206,6 +210,12 @@ function toggleGrade(g: number, on: boolean) {
 // Voices
 const voices = ref<SpeechSynthesisVoice[]>([])
 const germanVoices = computed(() => rankGermanVoices(voices.value))
+const englishVoices = computed(() => rankEnglishVoices(voices.value))
+/** English starts in grade 3 (plaene/klasse-3.md, section 10). */
+const showEnglish = computed(() => form.grade >= 3)
+function testEnglish() {
+  void say('So klingt Englisch: [[en:Hello! How are you? I am fine, thank you.]]', settings.value)
+}
 onMounted(async () => (voices.value = await loadVoices()))
 
 function testVoice() {
@@ -242,7 +252,14 @@ async function save() {
       await store.updateProfile({ ...before, ...form, name }, applyDefaults)
       await store.updateSettings(
         before.id,
-        applyDefaults ? { sound: s.sound, voiceURI: s.voiceURI, speechRate: s.speechRate } : s,
+        applyDefaults
+          ? {
+              sound: s.sound,
+              voiceURI: s.voiceURI,
+              voiceURIEn: s.voiceURIEn,
+              speechRate: s.speechRate,
+            }
+          : s,
       )
     }
     await router.push({ name: 'parent' })
@@ -589,6 +606,23 @@ async function remove() {
         <input v-model.number="settings.speechRate" type="range" min="0.5" max="1.3" step="0.05" />
       </label>
       <button type="button" class="btn" @click="testVoice">🔊 Stimme testen</button>
+      <template v-if="showEnglish">
+        <label v-if="englishVoices.length > 0">
+          Englische Stimme
+          <select v-model="settings.voiceURIEn">
+            <option :value="null">automatisch (britisches Englisch bevorzugt)</option>
+            <option v-for="v in englishVoices" :key="v.voiceURI" :value="v.voiceURI">
+              {{ v.name }} ({{ v.lang }}){{ v.localService ? '' : ' – nur online' }}
+            </option>
+          </select>
+        </label>
+        <p v-else class="voice-warn">
+          Keine englische Stimme gefunden. Die Englisch-Übungen brauchen eine: In den Einstellungen
+          des Geräts unter „Sprachausgabe“ eine englische Stimme laden (wie für Deutsch, siehe
+          Gerätetest). Sonst liest die deutsche Stimme die englischen Wörter.
+        </p>
+        <button type="button" class="btn" @click="testEnglish">🔊 Englisch testen</button>
+      </template>
     </section>
 
     <p v-if="error" class="error">{{ error }}</p>
@@ -606,6 +640,10 @@ async function remove() {
 </template>
 
 <style scoped>
+.voice-warn {
+  color: var(--error);
+}
+
 .top {
   display: flex;
   align-items: center;

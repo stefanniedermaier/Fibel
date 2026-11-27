@@ -364,5 +364,17 @@
     "topic": "sprache",
     "title": "Wortarten und Zeitformen",
     "icon": "🏷️"
+  },
+  {
+    "id": "englisch.schule",
+    "topic": "englisch",
+    "title": "Schule",
+    "icon": "🏫"
+  },
+  {
+    "id": "englisch.familie",
+    "topic": "englisch",
+    "title": "Freunde und Familie",
+    "icon": "👪"
   }
 ]

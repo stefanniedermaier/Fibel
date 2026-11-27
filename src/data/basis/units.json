@@ -985,5 +985,47 @@
     "topic": "sprache",
     "title": "Sätze verknüpfen, Wortfelder",
     "term": 2
+  },
+  {
+    "id": "k3.englisch.hello",
+    "grade": 3,
+    "topic": "englisch",
+    "title": "Hello! Begrüßen und sich vorstellen",
+    "term": 1
+  },
+  {
+    "id": "k3.englisch.classroom",
+    "grade": 3,
+    "topic": "englisch",
+    "title": "Classroom phrases",
+    "term": 1
+  },
+  {
+    "id": "k3.englisch.farben-zahlen",
+    "grade": 3,
+    "topic": "englisch",
+    "title": "Colours and numbers 1–20",
+    "term": 1
+  },
+  {
+    "id": "k3.englisch.familie",
+    "grade": 3,
+    "topic": "englisch",
+    "title": "My family, pets and animals",
+    "term": 2
+  },
+  {
+    "id": "k3.englisch.schulsachen",
+    "grade": 3,
+    "topic": "englisch",
+    "title": "School things and subjects",
+    "term": 2
+  },
+  {
+    "id": "k3.englisch.lesen",
+    "grade": 3,
+    "topic": "englisch",
+    "title": "Bekannte Wörter lesen",
+    "term": 2
   }
 ]

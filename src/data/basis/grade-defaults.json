@@ -17,6 +17,7 @@
     "recognitionTolerance": 1,
     "rewardDays": 14,
     "voiceURI": null,
+    "voiceURIEn": null,
     "speechRate": 0.85,
     "levels": {},
     "units": {},

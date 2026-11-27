@@ -80,6 +80,7 @@ import { vokale } from './sprache/vokale'
 import { kalender } from './uhr/kalender'
 import { uhrLesen } from './uhr/lesen'
 import { uhrStellen } from './uhr/stellen'
+import { dialog, hoeren, lesen } from './englisch'
 import type { ExerciseModule } from './types'
 
 const modules = new Map<string, ExerciseModule>()
@@ -175,6 +176,9 @@ register(nachsilben)
 register(artikelZusammen)
 register(satzglieder)
 register(satzart)
+register(hoeren)
+register(lesen)
+register(dialog)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

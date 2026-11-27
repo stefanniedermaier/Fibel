@@ -3449,5 +3449,153 @@
     "exercise": "sprache.wortfeld",
     "params": {},
     "title": "Wortfelder"
+  },
+  {
+    "id": "k3.englisch.hello.dialog",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.familie",
+    "unit": "k3.englisch.hello",
+    "exercise": "englisch.dialog",
+    "params": {},
+    "title": "Was antwortest du?"
+  },
+  {
+    "id": "k3.englisch.classroom.hoeren",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.classroom",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["classroom"]
+    },
+    "title": "Stand up! Hören"
+  },
+  {
+    "id": "k3.englisch.farben-zahlen.farben",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.farben-zahlen",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["farben"]
+    },
+    "title": "Colours hören"
+  },
+  {
+    "id": "k3.englisch.farben-zahlen.zahlen",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.farben-zahlen",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["zahlen"]
+    },
+    "title": "Numbers hören"
+  },
+  {
+    "id": "k3.englisch.farben-zahlen.farben-lesen",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.farben-zahlen",
+    "exercise": "englisch.lesen",
+    "params": {
+      "themen": ["farben"],
+      "richtung": "wort-bild"
+    },
+    "title": "Colours lesen",
+    "weight": 0.5
+  },
+  {
+    "id": "k3.englisch.familie.familie",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.familie",
+    "unit": "k3.englisch.familie",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["familie"]
+    },
+    "title": "Family hören"
+  },
+  {
+    "id": "k3.englisch.familie.tiere",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.familie",
+    "unit": "k3.englisch.familie",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["tiere"]
+    },
+    "title": "Animals hören"
+  },
+  {
+    "id": "k3.englisch.familie.tiere-lesen",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.familie",
+    "unit": "k3.englisch.familie",
+    "exercise": "englisch.lesen",
+    "params": {
+      "themen": ["familie", "tiere"],
+      "richtung": "wort-bild"
+    },
+    "title": "Family and animals lesen",
+    "weight": 0.5
+  },
+  {
+    "id": "k3.englisch.schulsachen.sachen",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.schulsachen",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["schule"]
+    },
+    "title": "School things hören"
+  },
+  {
+    "id": "k3.englisch.schulsachen.faecher",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.schulsachen",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["faecher"]
+    },
+    "title": "Subjects hören"
+  },
+  {
+    "id": "k3.englisch.lesen.wort-bild",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.lesen",
+    "exercise": "englisch.lesen",
+    "params": {
+      "themen": ["farben", "schule", "faecher", "tiere", "familie"],
+      "richtung": "wort-bild"
+    },
+    "title": "Wort → Bild"
+  },
+  {
+    "id": "k3.englisch.lesen.bild-wort",
+    "grade": 3,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k3.englisch.lesen",
+    "exercise": "englisch.lesen",
+    "params": {
+      "themen": ["farben", "zahlen", "schule", "tiere", "familie"],
+      "richtung": "bild-wort"
+    },
+    "title": "Bild → Wort"
   }
 ]

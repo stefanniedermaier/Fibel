@@ -132,7 +132,11 @@ export const useAppStore = defineStore('app', () => {
     const s = settings.value
     return sayWith(
       text,
-      { voiceURI: s?.voiceURI ?? null, speechRate: s?.speechRate ?? 0.85 },
+      {
+        voiceURI: s?.voiceURI ?? null,
+        voiceURIEn: s?.voiceURIEn ?? null,
+        speechRate: s?.speechRate ?? 0.85,
+      },
       maxMs,
     )
   }
