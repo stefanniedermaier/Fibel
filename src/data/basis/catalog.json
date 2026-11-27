@@ -1664,5 +1664,423 @@
       "mode": "rest"
     },
     "title": "Verteilen mit Rest"
+  },
+  {
+    "id": "k2.schreiben.endungen.schreibung",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.endungen",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["er", "el", "en"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k2.schreiben.endungen.tastatur",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.endungen",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["er", "el", "en"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k2.schreiben.endungen.legen",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.endungen",
+    "exercise": "schreiben.buchstaben-legen",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["er", "el", "en"]
+    },
+    "title": "Buchstaben legen"
+  },
+  {
+    "id": "k2.schreiben.gruppen.schreibung",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.gruppen",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ei", "eu", "sp", "st", "ch", "sch", "pf", "qu", "ng", "nk"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k2.schreiben.gruppen.tastatur",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.gruppen",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ei", "eu", "sp", "st", "ch", "sch", "pf", "qu", "ng", "nk"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k2.schreiben.r.schreibung",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.r",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["r"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k2.schreiben.r.tastatur",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.r",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["r"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k2.schreiben.ie.schreibung",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.ie",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ie"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k2.schreiben.ie.tastatur",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.ie",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ie"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k2.schreiben.doppel.schreibung",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.doppel",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["doppel"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k2.schreiben.doppel.tastatur",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.doppel",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["doppel"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k2.schreiben.doppel.silben",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.hinhoeren",
+    "unit": "k2.schreiben.doppel",
+    "exercise": "schreiben.silben-legen",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["doppel"]
+    },
+    "title": "Silben legen"
+  },
+  {
+    "id": "k2.schreiben.umlaut.ableiten",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.ableiten",
+    "unit": "k2.schreiben.umlaut",
+    "exercise": "schreiben.ableiten",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["umlaut"]
+    },
+    "title": "Ableiten: ä oder e?"
+  },
+  {
+    "id": "k2.schreiben.verlaengern.ableiten",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.ableiten",
+    "unit": "k2.schreiben.verlaengern",
+    "exercise": "schreiben.ableiten",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["verhaertung"]
+    },
+    "title": "Verlängern"
+  },
+  {
+    "id": "k2.schreiben.verlaengern.schreibung",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.ableiten",
+    "unit": "k2.schreiben.verlaengern",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["verhaertung"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k2.schreiben.besonderheiten.schreibung",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.merken",
+    "unit": "k2.schreiben.besonderheiten",
+    "exercise": "schreiben.schreibung",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ss", "tz", "ck", "c", "v", "y", "x", "h", "ae", "ai"]
+    },
+    "title": "Wie schreibt man das?"
+  },
+  {
+    "id": "k2.schreiben.besonderheiten.tastatur",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.merken",
+    "unit": "k2.schreiben.besonderheiten",
+    "exercise": "schreiben.abc-tastatur",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ss", "tz", "ck", "c", "v", "y", "x", "h", "ae", "ai"]
+    },
+    "title": "Wort schreiben"
+  },
+  {
+    "id": "k2.schreiben.haeufig.diktat",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.merken",
+    "unit": "k2.schreiben.haeufig",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "haeufig",
+      "wordGrade": 2
+    },
+    "title": "Diktat: häufige Wörter"
+  },
+  {
+    "id": "k2.schreiben.lernwoerter.diktat",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.merken",
+    "unit": "k2.schreiben.lernwoerter",
+    "exercise": "schreiben.diktat",
+    "params": {
+      "source": "lernwoerter"
+    },
+    "title": "Diktat: Lernwörter"
+  },
+  {
+    "id": "k2.schreiben.abc.nach",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.abc",
+    "unit": "k2.schreiben.abc",
+    "exercise": "schreiben.abc",
+    "params": {
+      "mode": "nach"
+    },
+    "title": "Welcher Buchstabe kommt danach?"
+  },
+  {
+    "id": "k2.schreiben.abc.vor",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.abc",
+    "unit": "k2.schreiben.abc",
+    "exercise": "schreiben.abc",
+    "params": {
+      "mode": "vor"
+    },
+    "title": "Welcher Buchstabe kommt davor?"
+  },
+  {
+    "id": "k2.schreiben.abc.zuerst",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.abc",
+    "unit": "k2.schreiben.abc",
+    "exercise": "schreiben.abc",
+    "params": {
+      "mode": "zuerst",
+      "wordGrade": 2
+    },
+    "title": "Welches Wort steht zuerst?"
+  },
+  {
+    "id": "k2.lesen.woerter.wort-bild",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k2.lesen.woerter",
+    "exercise": "lesen.wort-bild",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ie", "doppel", "sp", "st", "ng", "nk", "ei", "eu", "sch", "ch", "pf", "qu"]
+    },
+    "title": "Wort lesen, Bild finden"
+  },
+  {
+    "id": "k2.lesen.woerter.bild-wort",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k2.lesen.woerter",
+    "exercise": "lesen.bild-wort",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["ie", "doppel", "sp", "st", "ng", "nk", "ei", "eu", "sch", "ch", "pf", "qu"]
+    },
+    "title": "Bild ansehen, Wort finden"
+  },
+  {
+    "id": "k2.lesen.blitz.blitzlesen",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k2.lesen.blitz",
+    "exercise": "lesen.blitzlesen",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["haeufig"]
+    },
+    "title": "Blitzlesen"
+  },
+  {
+    "id": "k2.lesen.endungen.wort-bild",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k2.lesen.endungen",
+    "exercise": "lesen.wort-bild",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["er", "el", "en"]
+    },
+    "title": "Wort lesen, Bild finden"
+  },
+  {
+    "id": "k2.lesen.endungen.bild-wort",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.woerter",
+    "unit": "k2.lesen.endungen",
+    "exercise": "lesen.bild-wort",
+    "params": {
+      "wordGrade": 2,
+      "phenomena": ["er", "el", "en"]
+    },
+    "title": "Bild ansehen, Wort finden"
+  },
+  {
+    "id": "k2.lesen.satz-bild.waehlen",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.saetze2",
+    "unit": "k2.lesen.satz-bild",
+    "exercise": "lesen.satz-bild",
+    "params": {
+      "mode": "waehlen"
+    },
+    "title": "Welches Bild passt zum Satz?"
+  },
+  {
+    "id": "k2.lesen.satz-bild.stimmt",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.saetze2",
+    "unit": "k2.lesen.satz-bild",
+    "exercise": "lesen.satz-bild",
+    "params": {
+      "mode": "stimmt"
+    },
+    "title": "Stimmt der Satz?"
+  },
+  {
+    "id": "k2.lesen.satz-luecke.luecke",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.saetze2",
+    "unit": "k2.lesen.satz-luecke",
+    "exercise": "lesen.satz-luecke",
+    "params": {},
+    "title": "Welches Wort passt?"
+  },
+  {
+    "id": "k2.lesen.texte.lesen",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.texte",
+    "unit": "k2.lesen.texte",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "lesen"
+    },
+    "title": "Text lesen und Fragen beantworten"
+  },
+  {
+    "id": "k2.lesen.texte.hoeren",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.texte",
+    "unit": "k2.lesen.texte",
+    "exercise": "lesen.text-fragen",
+    "params": {
+      "kind": "hoeren"
+    },
+    "title": "Geschichte hören"
+  },
+  {
+    "id": "k2.lesen.reihenfolge.saetze",
+    "grade": 2,
+    "topic": "lesen",
+    "category": "lesen.texte",
+    "unit": "k2.lesen.reihenfolge",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "saetze": true
+    },
+    "title": "Sätze ordnen"
   }
 ]

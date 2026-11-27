@@ -4209,17 +4209,6 @@
     "schwerpunkt": "ai"
   },
   {
-    "id": "saite",
-    "text": "Saite",
-    "syllables": ["Sai", "te"],
-    "wortart": "nomen",
-    "artikel": "die",
-    "plural": "Saiten",
-    "category": "dinge",
-    "image": "1F3BB",
-    "schwerpunkt": "ai"
-  },
-  {
     "id": "traene",
     "text": "Träne",
     "syllables": ["Trä", "ne"],

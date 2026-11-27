@@ -1,0 +1,834 @@
+[
+  {
+    "id": "igel",
+    "kind": "lesen",
+    "text": "Der Igel hat viele Stacheln auf dem Rücken. Am Tag schläft er unter einer Hecke. In der Nacht sucht er Futter. Er frisst gern Käfer, Würmer und Schnecken. Im Winter hält der Igel Winterschlaf.",
+    "fragen": [
+      {
+        "frage": "Wann schläft der Igel?",
+        "choices": [
+          {
+            "text": "am Tag"
+          },
+          {
+            "text": "in der Nacht"
+          },
+          {
+            "text": "am Abend"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was frisst der Igel gern?",
+        "choices": [
+          {
+            "text": "Käfer und Würmer"
+          },
+          {
+            "text": "Äpfel und Birnen"
+          },
+          {
+            "text": "Nudeln"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was macht der Igel im Winter?",
+        "choices": [
+          {
+            "text": "Er hält Winterschlaf."
+          },
+          {
+            "text": "Er baut ein Nest."
+          },
+          {
+            "text": "Er fliegt weg."
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "kuchen",
+    "kind": "lesen",
+    "text": "Lea und Opa backen einen Kuchen. Zuerst rühren sie Butter und Zucker. Dann kommen Eier und Mehl dazu. Opa schiebt die Form in den Ofen. Nach einer Stunde ist der Kuchen fertig.",
+    "fragen": [
+      {
+        "frage": "Wer backt mit Lea?",
+        "choices": [
+          {
+            "text": "Opa"
+          },
+          {
+            "text": "Oma"
+          },
+          {
+            "text": "Papa"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was machen sie zuerst?",
+        "choices": [
+          {
+            "text": "Butter und Zucker rühren"
+          },
+          {
+            "text": "den Ofen putzen"
+          },
+          {
+            "text": "Eier kaufen"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wie lange bleibt der Kuchen im Ofen?",
+        "choices": [
+          {
+            "text": "eine Stunde"
+          },
+          {
+            "text": "zwei Minuten"
+          },
+          {
+            "text": "einen Tag"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "ausflug",
+    "kind": "lesen",
+    "text": "Die Klasse 2a macht einen Ausflug in den Wald. Die Kinder sammeln Blätter und Zapfen. Tim findet einen großen Pilz. Die Lehrerin sagt: „Pilze nie essen!“ Am Mittag essen alle ihr Brot auf einer Bank.",
+    "fragen": [
+      {
+        "frage": "Wohin geht die Klasse?",
+        "choices": [
+          {
+            "text": "in den Wald"
+          },
+          {
+            "text": "in den Zoo"
+          },
+          {
+            "text": "ins Schwimmbad"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was findet Tim?",
+        "choices": [
+          {
+            "text": "einen Pilz"
+          },
+          {
+            "text": "einen Ball"
+          },
+          {
+            "text": "eine Feder"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wo essen die Kinder?",
+        "choices": [
+          {
+            "text": "auf einer Bank"
+          },
+          {
+            "text": "im Bus"
+          },
+          {
+            "text": "in der Schule"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "hamster",
+    "kind": "lesen",
+    "text": "Ben hat einen Hamster. Er heißt Krümel. Krümel wohnt in einem Käfig mit einem Laufrad. Am Tag schläft er in seinem Häuschen. Abends rennt er im Rad und frisst Körner.",
+    "fragen": [
+      {
+        "frage": "Wie heißt der Hamster?",
+        "choices": [
+          {
+            "text": "Krümel"
+          },
+          {
+            "text": "Ben"
+          },
+          {
+            "text": "Flocke"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was macht Krümel am Tag?",
+        "choices": [
+          {
+            "text": "Er schläft."
+          },
+          {
+            "text": "Er rennt im Rad."
+          },
+          {
+            "text": "Er spielt Ball."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was frisst Krümel?",
+        "choices": [
+          {
+            "text": "Körner"
+          },
+          {
+            "text": "Fisch"
+          },
+          {
+            "text": "Kuchen"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "kresse",
+    "kind": "lesen",
+    "text": "So wächst Kresse: Lege nasse Watte auf einen Teller. Streue die Samen darauf. Stelle den Teller an ein helles Fenster. Halte die Watte immer feucht. Nach einer Woche kannst du die Kresse ernten.",
+    "fragen": [
+      {
+        "frage": "Was legst du auf den Teller?",
+        "choices": [
+          {
+            "text": "nasse Watte"
+          },
+          {
+            "text": "trockenen Sand"
+          },
+          {
+            "text": "ein Blatt Papier"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wo soll der Teller stehen?",
+        "choices": [
+          {
+            "text": "an einem hellen Fenster"
+          },
+          {
+            "text": "im dunklen Keller"
+          },
+          {
+            "text": "im Kühlschrank"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wann kannst du ernten?",
+        "choices": [
+          {
+            "text": "nach einer Woche"
+          },
+          {
+            "text": "nach einer Stunde"
+          },
+          {
+            "text": "nach einem Jahr"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "marienkaefer",
+    "kind": "lesen",
+    "text": "Der Marienkäfer ist ein Käfer. Er hat rote Flügel mit schwarzen Punkten. Unter den Flügeln hat er noch zwei dünne Flügel zum Fliegen. Marienkäfer fressen Blattläuse. Darum freuen sich die Gärtner über sie.",
+    "fragen": [
+      {
+        "frage": "Welche Farbe haben die Flügel?",
+        "choices": [
+          {
+            "text": "rot mit schwarzen Punkten"
+          },
+          {
+            "text": "grün mit Streifen"
+          },
+          {
+            "text": "blau"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was fressen Marienkäfer?",
+        "choices": [
+          {
+            "text": "Blattläuse"
+          },
+          {
+            "text": "Blumen"
+          },
+          {
+            "text": "Honig"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wer freut sich über Marienkäfer?",
+        "choices": [
+          {
+            "text": "die Gärtner"
+          },
+          {
+            "text": "die Fische"
+          },
+          {
+            "text": "die Bäcker"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "schnee",
+    "kind": "lesen",
+    "text": "Heute Nacht hat es geschneit. Mia zieht ihre warme Jacke, die Mütze und die Handschuhe an. Mit ihrem Bruder baut sie einen Schneemann. Er bekommt eine Karotte als Nase. Danach trinken beide einen heißen Kakao.",
+    "fragen": [
+      {
+        "frage": "Was ist in der Nacht passiert?",
+        "choices": [
+          {
+            "text": "Es hat geschneit."
+          },
+          {
+            "text": "Es hat gedonnert."
+          },
+          {
+            "text": "Es war heiß."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was bekommt der Schneemann als Nase?",
+        "choices": [
+          {
+            "text": "eine Karotte"
+          },
+          {
+            "text": "einen Stein"
+          },
+          {
+            "text": "einen Apfel"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was trinken die Kinder danach?",
+        "choices": [
+          {
+            "text": "Kakao"
+          },
+          {
+            "text": "Saft"
+          },
+          {
+            "text": "Wasser"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "stundenplan",
+    "kind": "lesen",
+    "text": "Am Montag hat die Klasse zuerst Deutsch. Dann kommt Mathe. Nach der Pause haben die Kinder Sport. In der letzten Stunde ist Kunst. Am Montag gibt es keine Musik.",
+    "fragen": [
+      {
+        "frage": "Was hat die Klasse am Montag zuerst?",
+        "choices": [
+          {
+            "text": "Deutsch"
+          },
+          {
+            "text": "Sport"
+          },
+          {
+            "text": "Kunst"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was kommt nach der Pause?",
+        "choices": [
+          {
+            "text": "Sport"
+          },
+          {
+            "text": "Mathe"
+          },
+          {
+            "text": "Musik"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Welches Fach gibt es am Montag nicht?",
+        "choices": [
+          {
+            "text": "Musik"
+          },
+          {
+            "text": "Kunst"
+          },
+          {
+            "text": "Mathe"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "biene",
+    "kind": "lesen",
+    "text": "Bienen leben in einem Bienenstock. Die Königin legt die Eier. Die Arbeiterinnen fliegen zu den Blüten. Sie sammeln Nektar und machen daraus Honig. Ein Bienenvolk kann sehr groß sein.",
+    "fragen": [
+      {
+        "frage": "Wo leben die Bienen?",
+        "choices": [
+          {
+            "text": "in einem Bienenstock"
+          },
+          {
+            "text": "in einer Höhle"
+          },
+          {
+            "text": "im Wasser"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wer legt die Eier?",
+        "choices": [
+          {
+            "text": "die Königin"
+          },
+          {
+            "text": "die Arbeiterinnen"
+          },
+          {
+            "text": "der Imker"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was machen die Bienen aus Nektar?",
+        "choices": [
+          {
+            "text": "Honig"
+          },
+          {
+            "text": "Wachs"
+          },
+          {
+            "text": "Zucker"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "geburtstag",
+    "kind": "lesen",
+    "text": "Paul hat heute Geburtstag. Er wird acht Jahre alt. Am Nachmittag kommen fünf Freunde. Sie spielen Topfschlagen und essen Pizza. Zum Schluss gibt es einen Kuchen mit acht Kerzen.",
+    "fragen": [
+      {
+        "frage": "Wie alt wird Paul?",
+        "choices": [
+          {
+            "text": "acht Jahre"
+          },
+          {
+            "text": "sieben Jahre"
+          },
+          {
+            "text": "zehn Jahre"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wie viele Freunde kommen?",
+        "choices": [
+          {
+            "text": "fünf"
+          },
+          {
+            "text": "acht"
+          },
+          {
+            "text": "zwei"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was gibt es zum Schluss?",
+        "choices": [
+          {
+            "text": "einen Kuchen"
+          },
+          {
+            "text": "Eis"
+          },
+          {
+            "text": "Suppe"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "herbst",
+    "kind": "lesen",
+    "text": "Im Herbst werden die Tage kürzer. Die Blätter werden gelb, rot und braun. Viele Vögel fliegen in den Süden. Das Eichhörnchen sammelt Nüsse für den Winter. Die Kinder lassen Drachen steigen.",
+    "fragen": [
+      {
+        "frage": "Welche Farben haben die Blätter?",
+        "choices": [
+          {
+            "text": "gelb, rot und braun"
+          },
+          {
+            "text": "blau und lila"
+          },
+          {
+            "text": "schwarz und weiß"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wohin fliegen viele Vögel?",
+        "choices": [
+          {
+            "text": "in den Süden"
+          },
+          {
+            "text": "in den Norden"
+          },
+          {
+            "text": "in die Stadt"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was sammelt das Eichhörnchen?",
+        "choices": [
+          {
+            "text": "Nüsse"
+          },
+          {
+            "text": "Blätter"
+          },
+          {
+            "text": "Steine"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "zaehne",
+    "kind": "lesen",
+    "text": "Damit die Zähne gesund bleiben, putzt du sie morgens und abends. Putze drei Minuten lang. Vergiss die Zähne hinten nicht. Iss nicht zu viele Süßigkeiten. Zweimal im Jahr gehst du zur Zahnärztin.",
+    "fragen": [
+      {
+        "frage": "Wann putzt du die Zähne?",
+        "choices": [
+          {
+            "text": "morgens und abends"
+          },
+          {
+            "text": "nur mittags"
+          },
+          {
+            "text": "einmal in der Woche"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wie lange putzt du?",
+        "choices": [
+          {
+            "text": "drei Minuten"
+          },
+          {
+            "text": "eine Stunde"
+          },
+          {
+            "text": "zehn Sekunden"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wie oft gehst du zur Zahnärztin?",
+        "choices": [
+          {
+            "text": "zweimal im Jahr"
+          },
+          {
+            "text": "jeden Tag"
+          },
+          {
+            "text": "nie"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "zoo",
+    "kind": "hoeren",
+    "text": "Lena ist mit Mama im Zoo. Zuerst sehen sie die Affen. Die Affen klettern und schaukeln. Dann gehen sie zu den Pinguinen. Die Pinguine schwimmen schnell. Zum Schluss isst Lena ein Eis.",
+    "fragen": [
+      {
+        "frage": "Wen sehen sie zuerst?",
+        "choices": [
+          {
+            "text": "die Affen"
+          },
+          {
+            "text": "die Pinguine"
+          },
+          {
+            "text": "die Löwen"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was machen die Pinguine?",
+        "choices": [
+          {
+            "text": "Sie schwimmen."
+          },
+          {
+            "text": "Sie klettern."
+          },
+          {
+            "text": "Sie schlafen."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was isst Lena zum Schluss?",
+        "choices": [
+          {
+            "text": "ein Eis"
+          },
+          {
+            "text": "eine Brezel"
+          },
+          {
+            "text": "einen Apfel"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "verloren",
+    "kind": "hoeren",
+    "text": "Max sucht seinen Teddy. Er schaut unter dem Bett. Da ist er nicht. Er schaut im Schrank. Da ist er auch nicht. Endlich findet er ihn im Garten unter einem Busch.",
+    "fragen": [
+      {
+        "frage": "Was sucht Max?",
+        "choices": [
+          {
+            "text": "seinen Teddy"
+          },
+          {
+            "text": "seinen Ball"
+          },
+          {
+            "text": "seine Mütze"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wo sucht er zuerst?",
+        "choices": [
+          {
+            "text": "unter dem Bett"
+          },
+          {
+            "text": "im Schrank"
+          },
+          {
+            "text": "im Garten"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wo findet er ihn?",
+        "choices": [
+          {
+            "text": "im Garten"
+          },
+          {
+            "text": "in der Küche"
+          },
+          {
+            "text": "im Auto"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "regen",
+    "kind": "hoeren",
+    "text": "Es regnet. Anna zieht ihre Gummistiefel an und springt in die Pfützen. Das spritzt! Ihr Hund Bello läuft mit. Zu Hause sind beide nass. Mama gibt Anna ein Handtuch und Bello auch.",
+    "fragen": [
+      {
+        "frage": "Was zieht Anna an?",
+        "choices": [
+          {
+            "text": "Gummistiefel"
+          },
+          {
+            "text": "Sandalen"
+          },
+          {
+            "text": "Hausschuhe"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wie heißt der Hund?",
+        "choices": [
+          {
+            "text": "Bello"
+          },
+          {
+            "text": "Rex"
+          },
+          {
+            "text": "Struppi"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was gibt Mama den beiden?",
+        "choices": [
+          {
+            "text": "ein Handtuch"
+          },
+          {
+            "text": "ein Eis"
+          },
+          {
+            "text": "einen Ball"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "bauernhof",
+    "kind": "hoeren",
+    "text": "Auf dem Bauernhof steht Bäuerin Maier früh auf. Zuerst melkt sie die Kühe. Dann füttert sie die Hühner und sammelt die Eier ein. Am Nachmittag fährt sie mit dem Traktor aufs Feld.",
+    "fragen": [
+      {
+        "frage": "Was macht die Bäuerin zuerst?",
+        "choices": [
+          {
+            "text": "Sie melkt die Kühe."
+          },
+          {
+            "text": "Sie fährt Traktor."
+          },
+          {
+            "text": "Sie backt Brot."
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Was sammelt sie bei den Hühnern?",
+        "choices": [
+          {
+            "text": "die Eier"
+          },
+          {
+            "text": "die Federn"
+          },
+          {
+            "text": "die Körner"
+          }
+        ],
+        "answer": 0
+      },
+      {
+        "frage": "Wohin fährt sie am Nachmittag?",
+        "choices": [
+          {
+            "text": "aufs Feld"
+          },
+          {
+            "text": "in die Stadt"
+          },
+          {
+            "text": "zum See"
+          }
+        ],
+        "answer": 0
+      }
+    ]
+  }
+]

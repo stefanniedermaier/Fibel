@@ -31,7 +31,7 @@ const store = useAppStore()
       📖🔊 Geschichte nochmal hören
     </button>
     <ChoiceButtons
-      label-prefix="Bild"
+      :label-prefix="data.choices[0]?.text ? undefined : 'Bild'"
       :options="data.choices"
       :correct-key="data.correctKey"
       :revealed="revealed"
@@ -40,7 +40,8 @@ const store = useAppStore()
       @answer="emit('answer', $event)"
     >
       <template #default="{ option }">
-        <ScenePicture :scene="option.scene" :size="64" />
+        <span v-if="option.text" class="answer">{{ option.text }}</span>
+        <ScenePicture v-else :scene="option.scene ?? []" :size="64" />
       </template>
     </ChoiceButtons>
   </div>
@@ -65,5 +66,9 @@ const store = useAppStore()
 
 .story {
   font-size: 22px;
+}
+.answer {
+  font-size: 22px;
+  font-weight: 700;
 }
 </style>

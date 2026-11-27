@@ -25,7 +25,7 @@ const MISTAKES: Record<string, (t: string) => string[]> = {
   nk: (t) => [t.replace('nk', 'ng')],
   sp: (t) => [t.replace(/^(S|s)p/, '$1chp')],
   st: (t) => [t.replace(/^(S|s)t/, '$1cht')],
-  ch: (t) => [t.replace(/([^s])ch/, '$1sch')],
+  ch: (t) => [t.replace(/([^s])ch/, '$1k')],
   sch: (t) => [t.replace('sch', 'sh').replace(/^Sch/, 'Sh')],
   pf: (t) => [t.replace('pf', 'f').replace(/^Pf/, 'F')],
   qu: (t) => [t.replace('qu', 'kw').replace(/^Qu/, 'Kw')],
@@ -45,17 +45,24 @@ const MISTAKES: Record<string, (t: string) => string[]> = {
   ],
 }
 
-/** Two to three wrong spellings of the word (also a small first letter for nouns). */
-export function misspellings(word: Word): string[] {
+/**
+ * Two to three wrong spellings of the word (also a small first letter for nouns). A
+ * "mistake" that is a real word of the dictionary (Buch → Busch) is never offered.
+ */
+export function misspellings(word: Word, real: ReadonlySet<string> = new Set()): string[] {
   const wrong = new Set<string>()
   for (const p of word.phenomena)
-    for (const w of MISTAKES[p]?.(word.text) ?? []) if (w !== word.text) wrong.add(w)
+    for (const w of MISTAKES[p]?.(word.text) ?? [])
+      if (w !== word.text && !real.has(w.toLowerCase())) wrong.add(w)
   if (word.wortart === 'nomen') wrong.add(word.text.charAt(0).toLowerCase() + word.text.slice(1))
   return [...wrong]
 }
 
+const realWords = (words: readonly Word[]) => new Set(words.map((w) => w.text.toLowerCase()))
+
 function candidates(ctx: Parameters<typeof writingPool>[0], params: SchreibenParams): Word[] {
-  return writingPool(ctx, params).filter((w) => misspellings(w).length >= 2)
+  const real = realWords(gradeWords(ctx, params))
+  return writingPool(ctx, params).filter((w) => misspellings(w, real).length >= 2)
 }
 
 export const schreibung: ExerciseModule<SchreibenParams, WahlData> = {
@@ -67,22 +74,25 @@ export const schreibung: ExerciseModule<SchreibenParams, WahlData> = {
   },
 
   generate(ctx, params, itemKey, rng) {
-    const word = findWord(gradeWords(ctx, params), itemId(itemKey))
+    const all = gradeWords(ctx, params)
+    const real = realWords(all)
+    const word = findWord(all, itemId(itemKey))
     // Mistakes of the unit's phenomenon first, then the others.
     const own = params.phenomena
-      ? misspellings({
-          ...word,
-          phenomena: word.phenomena.filter((p) => params.phenomena!.includes(p)),
-        })
+      ? misspellings(
+          { ...word, phenomena: word.phenomena.filter((p) => params.phenomena!.includes(p)) },
+          real,
+        )
       : []
     const rest = shuffle(
-      misspellings(word).filter((w) => !own.includes(w)),
+      misspellings(word, real).filter((w) => !own.includes(w)),
       rng,
     )
     const wrong = [...shuffle(own, rng), ...rest].slice(0, 2)
     const say = word.artikel ? `${word.artikel} ${spoken(word)}` : spoken(word)
+    const example = word.artikel ? ` ${say.charAt(0).toUpperCase()}${say.slice(1)}.` : ''
     return {
-      instruction: `Wie schreibt man ${say}? Tippe auf das richtige Wort.`,
+      instruction: `Wie schreibt man ${spoken(word)}?${example} Tippe auf das richtige Wort.`,
       caption: 'Welches Wort ist richtig geschrieben?',
       hint: 'Sprich das Wort langsam und deutlich. Was weißt du über solche Wörter?',
       solution: `Richtig ist ${word.text}.`,

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "tun-1",
+    "text": "Der Junge spielt Fußball.",
+    "group": "tun",
+    "scene": ["1F466", "26BD"]
+  },
+  {
+    "id": "tun-2",
+    "text": "Das Mädchen liest ein Buch.",
+    "group": "tun",
+    "scene": ["1F467", "1F4D6"]
+  },
+  {
+    "id": "tun-3",
+    "text": "Der Vater kocht Nudeln.",
+    "group": "tun",
+    "scene": ["1F468", "1F35D"]
+  },
+  {
+    "id": "tun-4",
+    "text": "Die Mutter trinkt Tee.",
+    "group": "tun",
+    "scene": ["1F469", "2615"]
+  },
+  {
+    "id": "tiere-1",
+    "text": "Die Katze schläft auf dem Sofa.",
+    "group": "tiere",
+    "scene": ["1F408", "1F6CB"]
+  },
+  {
+    "id": "tiere-2",
+    "text": "Der Hund spielt mit dem Ball.",
+    "group": "tiere",
+    "scene": ["1F415", "26BD"]
+  },
+  {
+    "id": "tiere-3",
+    "text": "Der Vogel sitzt auf dem Baum.",
+    "group": "tiere",
+    "scene": ["1F426", "1F333"]
+  },
+  {
+    "id": "tiere-4",
+    "text": "Die Kuh frisst Gras.",
+    "group": "tiere",
+    "scene": ["1F404", "1F33F"]
+  },
+  {
+    "id": "anzahl-1",
+    "text": "Auf dem Tisch liegen drei Äpfel.",
+    "group": "anzahl",
+    "scene": ["1F34E", "1F34E", "1F34E"]
+  },
+  {
+    "id": "anzahl-2",
+    "text": "Auf dem Tisch liegen zwei Birnen.",
+    "group": "anzahl",
+    "scene": ["1F350", "1F350"]
+  },
+  {
+    "id": "anzahl-3",
+    "text": "Auf dem Tisch liegt eine Banane.",
+    "group": "anzahl",
+    "scene": ["1F34C"]
+  },
+  {
+    "id": "anzahl-4",
+    "text": "Auf dem Tisch liegen vier Erdbeeren.",
+    "group": "anzahl",
+    "scene": ["1F353", "1F353", "1F353", "1F353"]
+  },
+  {
+    "id": "wetter-1",
+    "text": "Es regnet, und Tim hat einen Schirm.",
+    "group": "wetter",
+    "scene": ["1F327", "2602"]
+  },
+  {
+    "id": "wetter-2",
+    "text": "Die Sonne scheint, und Lea trägt eine Kappe.",
+    "group": "wetter",
+    "scene": ["2600", "1F9E2"]
+  },
+  {
+    "id": "wetter-3",
+    "text": "Es schneit, und Ben baut einen Schneemann.",
+    "group": "wetter",
+    "scene": ["1F328", "26C4"]
+  },
+  {
+    "id": "wetter-4",
+    "text": "Es ist windig, und der Drachen fliegt hoch.",
+    "group": "wetter",
+    "scene": ["1F32C", "1FA81"]
+  },
+  {
+    "id": "farbe-1",
+    "text": "Ich male ein rotes Herz.",
+    "group": "farbe",
+    "scene": ["2764"]
+  },
+  {
+    "id": "farbe-2",
+    "text": "Ich male ein blaues Herz.",
+    "group": "farbe",
+    "scene": ["1F499"]
+  },
+  {
+    "id": "farbe-3",
+    "text": "Ich male ein grünes Herz.",
+    "group": "farbe",
+    "scene": ["1F49A"]
+  },
+  {
+    "id": "farbe-4",
+    "text": "Ich male ein gelbes Herz.",
+    "group": "farbe",
+    "scene": ["1F49B"]
+  },
+  {
+    "id": "fahrzeuge-1",
+    "text": "Der Bus hält an der Haltestelle.",
+    "group": "fahrzeuge",
+    "scene": ["1F68C", "1F68F"]
+  },
+  {
+    "id": "fahrzeuge-2",
+    "text": "Das Flugzeug fliegt über die Wolken.",
+    "group": "fahrzeuge",
+    "scene": ["2708", "2601"]
+  },
+  {
+    "id": "fahrzeuge-3",
+    "text": "Das Schiff fährt auf dem Meer.",
+    "group": "fahrzeuge",
+    "scene": ["1F6A2", "1F30A"]
+  },
+  {
+    "id": "fahrzeuge-4",
+    "text": "Der Zug fährt über die Brücke.",
+    "group": "fahrzeuge",
+    "scene": ["1F686", "1F309"]
+  },
+  {
+    "id": "essen-1",
+    "text": "Oma backt einen Kuchen.",
+    "group": "essen",
+    "scene": ["1F475", "1F370"]
+  },
+  {
+    "id": "essen-2",
+    "text": "Opa isst eine Suppe.",
+    "group": "essen",
+    "scene": ["1F474", "1F372"]
+  },
+  {
+    "id": "essen-3",
+    "text": "Mama schneidet Brot.",
+    "group": "essen",
+    "scene": ["1F469", "1F35E"]
+  },
+  {
+    "id": "essen-4",
+    "text": "Papa trinkt Kaffee.",
+    "group": "essen",
+    "scene": ["1F468", "2615"]
+  },
+  {
+    "id": "freizeit-1",
+    "text": "Die Kinder spielen im Sand.",
+    "group": "freizeit",
+    "scene": ["1F9D2", "1F3D6"]
+  },
+  {
+    "id": "freizeit-2",
+    "text": "Ben fährt Fahrrad.",
+    "group": "freizeit",
+    "scene": ["1F466", "1F6B2"]
+  },
+  {
+    "id": "freizeit-3",
+    "text": "Lea schwimmt im See.",
+    "group": "freizeit",
+    "scene": ["1F467", "1F30A"]
+  },
+  {
+    "id": "freizeit-4",
+    "text": "Tim spielt Gitarre.",
+    "group": "freizeit",
+    "scene": ["1F466", "1F3B8"]
+  },
+  {
+    "id": "schule-1",
+    "text": "Die Lehrerin schreibt an die Tafel.",
+    "group": "schule",
+    "scene": ["1F469-200D-1F3EB"]
+  },
+  {
+    "id": "schule-2",
+    "text": "Der Junge rechnet im Heft.",
+    "group": "schule",
+    "scene": ["1F466", "1F4D2"]
+  },
+  {
+    "id": "schule-3",
+    "text": "Das Mädchen malt ein Bild.",
+    "group": "schule",
+    "scene": ["1F467", "1F3A8"]
+  },
+  {
+    "id": "schule-4",
+    "text": "Die Kinder packen ihre Schultaschen.",
+    "group": "schule",
+    "scene": ["1F9D2", "1F392"]
+  },
+  {
+    "id": "nacht-1",
+    "text": "Der Mond scheint hell.",
+    "group": "nacht",
+    "scene": ["1F319"]
+  },
+  {
+    "id": "nacht-2",
+    "text": "Die Eule ist in der Nacht wach.",
+    "group": "nacht",
+    "scene": ["1F989", "1F303"]
+  },
+  {
+    "id": "nacht-3",
+    "text": "Das Kind schläft in seinem Bett.",
+    "group": "nacht",
+    "scene": ["1F9D2", "1F6CF"]
+  },
+  {
+    "id": "nacht-4",
+    "text": "Die Sterne funkeln am Himmel.",
+    "group": "nacht",
+    "scene": ["2B50", "2B50", "2B50"]
+  }
+]

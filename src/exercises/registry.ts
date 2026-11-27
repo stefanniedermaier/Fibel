@@ -19,6 +19,7 @@ import { hunderter } from './rechnen/hunderter'
 import { schreibung } from './schreiben/schreibung'
 import { ableiten } from './schreiben/ableiten'
 import { abc } from './schreiben/abc'
+import { satzLuecke } from './lesen/satz-luecke'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -122,6 +123,7 @@ register(hunderter)
 register(schreibung)
 register(ableiten)
 register(abc)
+register(satzLuecke)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

@@ -58,6 +58,8 @@ export function readableSentences(
   grade: number,
   settings: ProfileSettings,
 ): Sentence[] {
+  // From grade 2 all letters are known and the sentences are not tied to the dictionary.
+  if (grade >= 2) return baseSentences(grade)
   const readable = byText(wordsForSettings(resolveWords(land, grade), settings))
   return baseSentences(grade).filter((s) =>
     wordsOf(s.text).every((t) => readable.has(t.toLowerCase())),
@@ -103,6 +105,7 @@ export function textReadable(
   grade: number,
   settings: ProfileSettings,
 ): boolean {
+  if (grade >= 2) return true
   const readable = byText(wordsForSettings(resolveWords(land, grade), settings))
   return wordsOf(text).every((t) => readable.has(t.toLowerCase()))
 }

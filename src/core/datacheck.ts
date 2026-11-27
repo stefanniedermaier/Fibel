@@ -22,6 +22,8 @@ import rechengeschichten from '@/data/basis/klasse-1/rechengeschichten.json'
 import texte from '@/data/basis/klasse-1/texte.json'
 import zusammensetzungen from '@/data/basis/klasse-1/zusammensetzungen.json'
 import { BEGRIFFE, THEMEN } from '@/exercises/sache/shared'
+import { LUECKENSAETZE } from '@/exercises/lesen/satz-luecke'
+import { textsFor } from '@/exercises/lesen/text-fragen'
 import { PHENOMENA, showsPhenomenon, type Phenomenon } from './phenomena'
 import { SCRIPTS, glyphProblems, lettersNeeded } from './strokes'
 import { WORTARTEN, type LandCode, type Syllable, type Word } from './types'
@@ -82,8 +84,10 @@ export function checkSentences(grade: number, words: readonly Word[], images: Re
     ids.add(s.id)
     if (!/^[A-ZÄÖÜ]/.test(s.text) || !/[.!?]$/.test(s.text))
       problems.push(`${where}: groß anfangen und mit Satzzeichen enden`)
-    for (const w of unknownWords(s, words))
-      problems.push(`${where}: Wort „${w}“ fehlt im Wörterbuch`)
+    if (grade === 1)
+      for (const w of unknownWords(s, words))
+        problems.push(`${where}: Wort „${w}“ fehlt im Wörterbuch`)
+    else if (wordsOf(s.text).length > 10) problems.push(`${where}: mehr als 10 Wörter`)
     if (s.scene.length === 0) problems.push(`${where}: ohne Bild`)
     for (const code of s.scene) if (!images.has(code)) problems.push(`${where}: Bild ${code} fehlt`)
     const group = scenes.get(s.group) ?? new Set()
@@ -275,6 +279,30 @@ export function checkGrade2Words(words: readonly Word[], label: string): string[
   return problems
 }
 
+/** Texts and gap sentences of grade 2 (L2-5, L2-6): one right answer each. */
+export function checkGrade2Texts(): string[] {
+  const problems: string[] = []
+  for (const t of textsFor(2)) {
+    const where = `Klasse 2, Text „${t.id}“`
+    const n = wordsOf(t.text).length
+    if (n < 20 || n > 60) problems.push(`${where}: ${n} Wörter (20–60)`)
+    if (t.fragen.length !== 3) problems.push(`${where}: nicht genau 3 Fragen`)
+    for (const f of t.fragen) {
+      const labels = f.choices.map((c) => c.text ?? c.scene?.join(' '))
+      if (f.choices.length !== 3 || new Set(labels).size !== 3)
+        problems.push(`${where}, „${f.frage}“: nicht 3 verschiedene Antworten`)
+      if (!f.choices[f.answer]) problems.push(`${where}, „${f.frage}“: richtige Antwort fehlt`)
+    }
+  }
+  for (const l of LUECKENSAETZE) {
+    const where = `Klasse 2, Lückensatz „${l.text}“`
+    if (!l.text.includes('___')) problems.push(`${where}: ohne Lücke`)
+    if (l.ablenker.includes(l.answer) || l.ablenker.length !== 2)
+      problems.push(`${where}: braucht zwei andere Wörter`)
+  }
+  return problems
+}
+
 /** Grades that have content (folders under src/data/basis). */
 export const CONTENT_GRADES = [1, 2]
 
@@ -461,7 +489,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
         problems.push(...checkWords(words, grade, land.name, images))
         problems.push(...checkSentences(grade, words, images))
         if (grade === 1) problems.push(...checkGrade1Extras(words, images), ...checkSache(images))
-        if (grade === 2) problems.push(...checkGrade2Words(words, land.name))
+        if (grade === 2) problems.push(...checkGrade2Words(words, land.name), ...checkGrade2Texts())
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

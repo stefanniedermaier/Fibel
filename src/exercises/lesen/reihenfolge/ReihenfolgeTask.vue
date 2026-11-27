@@ -48,7 +48,8 @@ function tap(index: number) {
         :aria-label="`Bild ${i + 1}`"
         @click="tap(p.index)"
       >
-        <EmojiPicture :code="p.image" :size="80" />
+        <EmojiPicture :code="p.image" :size="data.texts ? 48 : 80" />
+        <span v-if="data.texts" class="sentence">{{ data.texts[p.index] }}</span>
         <span v-if="p.number" class="number">{{ p.number }}</span>
       </button>
     </div>
@@ -79,6 +80,13 @@ function tap(index: number) {
 .picture.done {
   border-color: var(--ok);
   box-shadow: 0 5px 0 var(--ok);
+}
+
+.sentence {
+  display: block;
+  max-width: 220px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .number {

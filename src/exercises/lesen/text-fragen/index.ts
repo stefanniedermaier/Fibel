@@ -14,7 +14,8 @@ import TextFragenTask from './TextFragenTask.vue'
 
 export interface Frage {
   frage: string
-  choices: { scene: string[] }[]
+  /** Pictures (grade 1) or short text answers (from grade 2). */
+  choices: { scene?: string[]; text?: string }[]
   answer: number
 }
 
@@ -27,6 +28,16 @@ export interface Text {
 
 export const TEXTE: readonly Text[] = texte as Text[]
 
+const FILES = import.meta.glob<Text[]>('../../../data/basis/klasse-*/texte.json', {
+  eager: true,
+  import: 'default',
+})
+
+/** The texts of a grade (grade 1: TEXTE). */
+export function textsFor(grade: number): readonly Text[] {
+  return FILES[`../../../data/basis/klasse-${grade}/texte.json`] ?? []
+}
+
 export interface TextFragenParams {
   kind: 'lesen' | 'hoeren'
 }
@@ -38,7 +49,7 @@ export interface TextFragenData {
   coloring: boolean
   story: string
   question: string
-  choices: { key: string; scene: string[] }[]
+  choices: { key: string; scene?: string[]; text?: string }[]
   correctKey: string
 }
 
@@ -47,20 +58,22 @@ export const textFragen: ExerciseModule<TextFragenParams, TextFragenData> = {
   topic: 'lesen',
 
   items(ctx, params) {
-    return TEXTE.filter(
-      (t) =>
-        t.kind === params.kind &&
-        (t.kind === 'hoeren' || textReadable(t.text, ctx.land, ctx.grade, ctx.settings)),
-    ).flatMap((t) => t.fragen.map((_, i) => `lesen.text-fragen:${t.id}:${i}`))
+    return textsFor(ctx.grade)
+      .filter(
+        (t) =>
+          t.kind === params.kind &&
+          (t.kind === 'hoeren' || textReadable(t.text, ctx.land, ctx.grade, ctx.settings)),
+      )
+      .flatMap((t) => t.fragen.map((_, i) => `lesen.text-fragen:${t.id}:${i}`))
   },
 
   generate(ctx, params, itemKey, rng) {
     const [, id, q] = itemKey.split(':') as [string, string, string]
-    const text = TEXTE.find((t) => t.id === id)
+    const text = textsFor(ctx.grade).find((t) => t.id === id)
     const frage = text?.fragen[Number(q)]
     if (!text || !frage) throw new Error(`Unbekannter Text: ${itemKey}`)
     const choices = shuffle(
-      frage.choices.map((c, i) => ({ key: String(i), scene: c.scene })),
+      frage.choices.map((c, i) => ({ key: String(i), scene: c.scene, text: c.text })),
       rng,
     )
     const listen = params.kind === 'hoeren'

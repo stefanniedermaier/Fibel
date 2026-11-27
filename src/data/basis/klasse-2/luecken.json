@@ -1,0 +1,146 @@
+[
+  {
+    "id": "l1",
+    "text": "Die Katze ___ Milch.",
+    "answer": "trinkt",
+    "ablenker": ["singt", "fliegt"]
+  },
+  {
+    "id": "l2",
+    "text": "Der Vogel ___ ein Nest.",
+    "answer": "baut",
+    "ablenker": ["liest", "kocht"]
+  },
+  {
+    "id": "l3",
+    "text": "Im Winter fällt ___.",
+    "answer": "Schnee",
+    "ablenker": ["Sand", "Saft"]
+  },
+  {
+    "id": "l4",
+    "text": "Ich putze mir die ___.",
+    "answer": "Zähne",
+    "ablenker": ["Bäume", "Steine"]
+  },
+  {
+    "id": "l5",
+    "text": "Der Hund ___ laut.",
+    "answer": "bellt",
+    "ablenker": ["malt", "näht"]
+  },
+  {
+    "id": "l6",
+    "text": "Am Morgen geht die Sonne ___.",
+    "answer": "auf",
+    "ablenker": ["zu", "ab"]
+  },
+  {
+    "id": "l7",
+    "text": "Wir schreiben mit einem ___.",
+    "answer": "Stift",
+    "ablenker": ["Löffel", "Kamm"]
+  },
+  {
+    "id": "l8",
+    "text": "Die Blume braucht ___.",
+    "answer": "Wasser",
+    "ablenker": ["Kekse", "Socken"]
+  },
+  {
+    "id": "l9",
+    "text": "Im Herbst fallen die ___ vom Baum.",
+    "answer": "Blätter",
+    "ablenker": ["Schuhe", "Teller"]
+  },
+  {
+    "id": "l10",
+    "text": "Der Bäcker backt ___.",
+    "answer": "Brot",
+    "ablenker": ["Steine", "Autos"]
+  },
+  {
+    "id": "l11",
+    "text": "Ich trinke ein Glas ___.",
+    "answer": "Milch",
+    "ablenker": ["Holz", "Sand"]
+  },
+  {
+    "id": "l12",
+    "text": "Die Biene sammelt ___.",
+    "answer": "Nektar",
+    "ablenker": ["Nudeln", "Nägel"]
+  },
+  {
+    "id": "l13",
+    "text": "Mit der Schere kann man ___.",
+    "answer": "schneiden",
+    "ablenker": ["kochen", "singen"]
+  },
+  {
+    "id": "l14",
+    "text": "Der Fisch lebt im ___.",
+    "answer": "Wasser",
+    "ablenker": ["Baum", "Bett"]
+  },
+  {
+    "id": "l15",
+    "text": "Wenn es regnet, nehme ich einen ___ mit.",
+    "answer": "Schirm",
+    "ablenker": ["Ball", "Löffel"]
+  },
+  {
+    "id": "l16",
+    "text": "Die Uhr zeigt die ___.",
+    "answer": "Zeit",
+    "ablenker": ["Farbe", "Straße"]
+  },
+  {
+    "id": "l17",
+    "text": "Ein Jahr hat zwölf ___.",
+    "answer": "Monate",
+    "ablenker": ["Wochen", "Stunden"]
+  },
+  {
+    "id": "l18",
+    "text": "Der Zug fährt auf den ___.",
+    "answer": "Schienen",
+    "ablenker": ["Wolken", "Bäumen"]
+  },
+  {
+    "id": "l19",
+    "text": "Das Eis ist sehr ___.",
+    "answer": "kalt",
+    "ablenker": ["laut", "heiß"]
+  },
+  {
+    "id": "l20",
+    "text": "Nach dem Montag kommt der ___.",
+    "answer": "Dienstag",
+    "ablenker": ["Sonntag", "Freitag"]
+  },
+  {
+    "id": "l21",
+    "text": "Im Sommer ist es meistens ___.",
+    "answer": "warm",
+    "ablenker": ["eisig", "dunkel"]
+  },
+  {
+    "id": "l22",
+    "text": "Der Arzt hilft, wenn wir ___ sind.",
+    "answer": "krank",
+    "ablenker": ["groß", "satt"]
+  },
+  {
+    "id": "l23",
+    "text": "Die Maus hat Angst vor der ___.",
+    "answer": "Katze",
+    "ablenker": ["Blume", "Wolke"]
+  },
+  {
+    "id": "l24",
+    "text": "Mein Bruder ist älter ___ ich.",
+    "answer": "als",
+    "ablenker": ["wie", "wenn"]
+  }
+]

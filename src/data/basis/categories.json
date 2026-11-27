@@ -208,5 +208,41 @@
     "topic": "rechnen",
     "title": "Einmaleins und Teilen",
     "icon": "✖️"
+  },
+  {
+    "id": "schreiben.hinhoeren",
+    "topic": "schreiben",
+    "title": "Genau hinhören",
+    "icon": "👂"
+  },
+  {
+    "id": "schreiben.ableiten",
+    "topic": "schreiben",
+    "title": "Verlängern und ableiten",
+    "icon": "🔁"
+  },
+  {
+    "id": "schreiben.merken",
+    "topic": "schreiben",
+    "title": "Merkwörter und Lernwörter",
+    "icon": "⭐"
+  },
+  {
+    "id": "schreiben.abc",
+    "topic": "schreiben",
+    "title": "ABC und Schrift",
+    "icon": "🔤"
+  },
+  {
+    "id": "lesen.saetze2",
+    "topic": "lesen",
+    "title": "Sätze",
+    "icon": "📄"
+  },
+  {
+    "id": "lesen.texte",
+    "topic": "lesen",
+    "title": "Texte und Geschichten",
+    "icon": "📖"
   }
 ]

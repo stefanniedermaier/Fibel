@@ -418,5 +418,131 @@
     "topic": "rechnen",
     "title": "Teilen mit Rest",
     "term": 2
+  },
+  {
+    "id": "k2.schreiben.endungen",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Endungen -er, -el, -en",
+    "term": 1
+  },
+  {
+    "id": "k2.schreiben.gruppen",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Buchstabengruppen: ei, eu, sp, st, ch, sch, pf, qu, ng, nk",
+    "term": 1
+  },
+  {
+    "id": "k2.schreiben.r",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "r nach einem Selbstlaut",
+    "term": 1
+  },
+  {
+    "id": "k2.schreiben.ie",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Wörter mit ie",
+    "term": 1
+  },
+  {
+    "id": "k2.schreiben.doppel",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Doppelte Mitlaute",
+    "term": 2
+  },
+  {
+    "id": "k2.schreiben.umlaut",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Umlaute ableiten",
+    "term": 2
+  },
+  {
+    "id": "k2.schreiben.verlaengern",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Verlängern: d oder t, b oder p, g oder k?",
+    "term": 2
+  },
+  {
+    "id": "k2.schreiben.besonderheiten",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Wörter mit ß, tz, ck, C, V, y, x, h, ä, ai",
+    "term": 2
+  },
+  {
+    "id": "k2.schreiben.haeufig",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Häufige Wörter richtig schreiben",
+    "term": 1
+  },
+  {
+    "id": "k2.schreiben.lernwoerter",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Lernwörter-Diktat",
+    "term": 1
+  },
+  {
+    "id": "k2.schreiben.abc",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Alphabet und Nachschlagen",
+    "term": 2
+  },
+  {
+    "id": "k2.lesen.woerter",
+    "grade": 2,
+    "topic": "lesen",
+    "title": "Wörter mit Besonderheiten lesen",
+    "term": 1
+  },
+  {
+    "id": "k2.lesen.blitz",
+    "grade": 2,
+    "topic": "lesen",
+    "title": "Blitzlesen: häufige Wörter",
+    "term": 1
+  },
+  {
+    "id": "k2.lesen.endungen",
+    "grade": 2,
+    "topic": "lesen",
+    "title": "Wortbausteine: -er, -el, -en",
+    "term": 1
+  },
+  {
+    "id": "k2.lesen.satz-bild",
+    "grade": 2,
+    "topic": "lesen",
+    "title": "Satz lesen, Bild finden",
+    "term": 1
+  },
+  {
+    "id": "k2.lesen.satz-luecke",
+    "grade": 2,
+    "topic": "lesen",
+    "title": "Lückensätze",
+    "term": 2
+  },
+  {
+    "id": "k2.lesen.texte",
+    "grade": 2,
+    "topic": "lesen",
+    "title": "Kurze Texte verstehen",
+    "term": 2
+  },
+  {
+    "id": "k2.lesen.reihenfolge",
+    "grade": 2,
+    "topic": "lesen",
+    "title": "Was passiert zuerst?",
+    "term": 2
   }
 ]

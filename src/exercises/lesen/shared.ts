@@ -29,6 +29,8 @@ export function gradeWords(ctx: LearnerContext, params: LesenParams): Word[] {
 
 /** Words whose letters the child already knows (if the letter filter is on). */
 export function readableWords(ctx: LearnerContext, params: LesenParams): Word[] {
+  // From grade 2 all letters are known: the letter filter of grade 1 no longer applies.
+  if ((params.wordGrade ?? ctx.grade) >= 2) return gradeWords(ctx, params)
   return wordsForSettings(gradeWords(ctx, params), ctx.settings)
 }
 

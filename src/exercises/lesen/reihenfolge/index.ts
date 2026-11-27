@@ -24,6 +24,8 @@ export interface Ablauf {
 /** HSU picks its sequences by id; without ids all of them (Deutsch). */
 export interface ReihenfolgeParams {
   ids?: string[]
+  /** Grade 2 (L2-7): the steps as sentences to read, with the pictures. */
+  saetze?: boolean
 }
 
 export const ABLAEUFE: readonly Ablauf[] = ablaeufe
@@ -33,6 +35,8 @@ export interface ReihenfolgeData {
   images: string[]
   order: number[]
   steps: string[]
+  /** Read and order sentences instead of pictures. */
+  texts?: string[]
 }
 
 export const reihenfolge: ExerciseModule<ReihenfolgeParams, ReihenfolgeData> = {
@@ -45,7 +49,7 @@ export const reihenfolge: ExerciseModule<ReihenfolgeParams, ReihenfolgeData> = {
     )
   },
 
-  generate(_ctx, _params, itemKey, rng) {
+  generate(_ctx, params, itemKey, rng) {
     const ablauf = ABLAEUFE.find((a) => a.id === itemId(itemKey))
     if (!ablauf) throw new Error(`Unbekannter Ablauf: ${itemKey}`)
     const indices = ablauf.images.map((_, i) => i)
@@ -53,11 +57,20 @@ export const reihenfolge: ExerciseModule<ReihenfolgeParams, ReihenfolgeData> = {
     let order = shuffle(indices, rng)
     while (order.every((v, i) => v === i)) order = shuffle(indices, rng)
     return {
-      instruction: `${ablauf.title}. ${ablauf.frage ?? 'Was passiert zuerst?'} Tippe die Bilder der Reihe nach an.`,
-      caption: 'Tippe die Bilder der Reihe nach an.',
+      instruction: `${ablauf.title}. ${ablauf.frage ?? 'Was passiert zuerst?'} Tippe ${params.saetze ? 'die Sätze' : 'die Bilder'} der Reihe nach an.`,
+      caption: params.saetze
+        ? 'Lies die Sätze. Tippe sie der Reihe nach an.'
+        : 'Tippe die Bilder der Reihe nach an.',
       hint: 'Was war ganz am Anfang?',
       solution: `Die Reihenfolge ist: ${ablauf.steps.join(', ')}.`,
-      data: { images: ablauf.images, order, steps: ablauf.steps },
+      data: {
+        images: ablauf.images,
+        order,
+        steps: ablauf.steps,
+        texts: params.saetze
+          ? ablauf.steps.map((s) => `${s.charAt(0).toUpperCase()}${s.slice(1)}.`)
+          : undefined,
+      },
     }
   },
 
