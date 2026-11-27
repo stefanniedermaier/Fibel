@@ -1539,6 +1539,111 @@
       "wen": "die Forscherin",
       "image": "1F9D1-200D-1F52C",
       "merksatz": "Die Forscherin will herausfinden, wie die Welt funktioniert."
+    },
+    {
+      "id": "reh",
+      "text": "das Reh",
+      "wen": "das Reh",
+      "image": "1F98C",
+      "merksatz": "Rehe fressen Gras, Kräuter und Knospen. Sie sind Pflanzenfresser."
+    },
+    {
+      "id": "wildschwein",
+      "text": "das Wildschwein",
+      "wen": "das Wildschwein",
+      "image": "1F417",
+      "merksatz": "Wildschweine wühlen mit der Schnauze im Boden. Sie fressen fast alles."
+    },
+    {
+      "id": "dachs",
+      "text": "der Dachs",
+      "wen": "den Dachs",
+      "image": "1F9A1",
+      "merksatz": "Der Dachs gräbt sich einen Bau unter der Erde. Er kommt nachts heraus."
+    },
+    {
+      "id": "fuchs",
+      "text": "der Fuchs",
+      "wen": "den Fuchs",
+      "image": "1F98A",
+      "merksatz": "Der Fuchs jagt Mäuse, frisst aber auch Beeren und Obst."
+    },
+    {
+      "id": "nadelbaum",
+      "text": "der Nadelbaum",
+      "wen": "den Nadelbaum",
+      "image": "1F332",
+      "merksatz": "Nadelbäume wie Fichte und Tanne behalten im Winter ihre Nadeln."
+    },
+    {
+      "id": "laubbaum",
+      "text": "der Laubbaum",
+      "wen": "den Laubbaum",
+      "image": "1F333",
+      "merksatz": "Laubbäume wie Buche und Eiche verlieren im Herbst ihre Blätter."
+    },
+    {
+      "id": "wolf",
+      "text": "der Wolf",
+      "wen": "den Wolf",
+      "image": "1F43A",
+      "merksatz": "Wölfe leben in Rudeln und jagen gemeinsam."
+    },
+    {
+      "id": "frosch",
+      "text": "der Frosch",
+      "wen": "den Frosch",
+      "image": "1F438",
+      "merksatz": "Frösche leben im Wasser und an Land. Sie legen ihre Eier ins Wasser."
+    },
+    {
+      "id": "kaulquappe",
+      "text": "die Kaulquappe",
+      "wen": "die Kaulquappe",
+      "image": "fibel-kaulquappe",
+      "merksatz": "Kaulquappen leben im Wasser und atmen mit Kiemen. Später wachsen ihnen Beine."
+    },
+    {
+      "id": "kaefer-larve",
+      "text": "die Larve",
+      "wen": "die Larve",
+      "image": "fibel-kaefer-larve",
+      "merksatz": "Aus dem Ei des Marienkäfers schlüpft eine Larve. Sie frisst viele Blattläuse."
+    },
+    {
+      "id": "butter",
+      "text": "die Butter",
+      "wen": "die Butter",
+      "image": "1F9C8",
+      "merksatz": "Butter wird aus dem Rahm der Milch gemacht."
+    },
+    {
+      "id": "ananas",
+      "text": "die Ananas",
+      "wen": "die Ananas",
+      "image": "1F34D",
+      "merksatz": "Ananas wachsen in warmen Ländern und kommen mit dem Schiff zu uns."
+    },
+    {
+      "id": "dampf",
+      "text": "der Wasserdampf",
+      "wen": "den Wasserdampf",
+      "image": "2668",
+      "merksatz": "Wenn Wasser kocht, wird es zu Wasserdampf. Er ist ein Gas."
+    },
+    {
+      "id": "feuerwehrauto",
+      "text": "das Feuerwehrauto",
+      "wen": "das Feuerwehrauto",
+      "image": "1F692",
+      "merksatz": "Die Feuerwehr erreichst du unter der Nummer 112."
+    },
+    {
+      "id": "schutzbrille",
+      "text": "die Schutzbrille",
+      "wen": "die Schutzbrille",
+      "image": "1F97D",
+      "merksatz": "Eine Schutzbrille schützt die Augen beim Werken."
     }
   ],
   "themen": [
@@ -3410,6 +3515,613 @@
       ],
       "suchbilder": [],
       "ablaeufe": []
+    },
+    {
+      "klasse": 3,
+      "erkennen": [
+        "reh",
+        "wildschwein",
+        "dachs",
+        "fuchs",
+        "eule",
+        "eichhoernchen",
+        "igel",
+        "nadelbaum",
+        "laubbaum",
+        "pilz"
+      ],
+      "sortieren": [
+        {
+          "id": "nahrung",
+          "frage": "Was frisst das Tier?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "pflanzen",
+              "title": "Pflanzenfresser",
+              "image": "1F33F"
+            },
+            {
+              "id": "fleisch",
+              "title": "Fleischfresser",
+              "image": "1F357"
+            },
+            {
+              "id": "alles",
+              "title": "Allesfresser",
+              "image": "1F374"
+            }
+          ],
+          "zuordnung": {
+            "reh": "pflanzen",
+            "eichhoernchen": "pflanzen",
+            "eule": "fleisch",
+            "igel": "fleisch",
+            "wildschwein": "alles",
+            "dachs": "alles",
+            "fuchs": "alles"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Nadelbäume behalten im Winter meistens ihre Nadeln.",
+          "image": "1F332",
+          "richtig": true,
+          "regel": "Fichte und Tanne sind auch im Winter grün. Nur die Lärche verliert ihre Nadeln."
+        },
+        {
+          "text": "Laubbäume verlieren im Herbst ihre Blätter.",
+          "image": "1F342",
+          "richtig": true,
+          "regel": "So sparen sie im Winter Wasser und Kraft."
+        },
+        {
+          "text": "Pilze sind Pflanzen.",
+          "image": "1F344",
+          "richtig": false,
+          "regel": "Pilze sind keine Pflanzen. Sie sind eine eigene Gruppe von Lebewesen."
+        },
+        {
+          "text": "Die Eule jagt vor allem nachts.",
+          "image": "1F989",
+          "richtig": true,
+          "regel": "Eulen sehen und hören im Dunkeln sehr gut."
+        },
+        {
+          "text": "Im Wald darf man ein Feuer machen.",
+          "image": "1F525",
+          "richtig": false,
+          "regel": "Feuer im Wald ist verboten: Es kann ein Waldbrand entstehen."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["kette-wald", "laubbaum-jahr"],
+      "id": "wald",
+      "title": "Lebensraum Wald",
+      "icon": "🌲",
+      "term": 1,
+      "lehrplan": "HSU 3/4 3.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.1 Natur und Umwelt: Lebensraum Wald, Tiere und Pflanzen, Nahrungsbeziehungen",
+      "forscherauftrag": "Geht im Wald spazieren: Sammelt drei verschiedene Blätter und findet heraus, von welchem Baum sie sind."
+    },
+    {
+      "klasse": 3,
+      "erkennen": [],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "Was wird aus der Kaulquappe?",
+          "ziel": "kaulquappe",
+          "richtig": "frosch",
+          "ablenker": ["schmetterling", "marienkaefer"]
+        },
+        {
+          "frage": "Was wird aus der Raupe?",
+          "ziel": "raupe",
+          "richtig": "schmetterling",
+          "ablenker": ["frosch", "marienkaefer"]
+        },
+        {
+          "frage": "Was wird aus der Larve?",
+          "ziel": "kaefer-larve",
+          "richtig": "marienkaefer",
+          "ablenker": ["frosch", "schmetterling"]
+        },
+        {
+          "frage": "Was wird aus dem Küken?",
+          "ziel": "kueken",
+          "richtig": "huhn",
+          "ablenker": ["frosch", "schmetterling"]
+        }
+      ],
+      "aussagen": [
+        {
+          "text": "Frösche legen ihre Eier ins Wasser.",
+          "image": "1F438",
+          "richtig": true,
+          "regel": "Die Eier heißen Froschlaich."
+        },
+        {
+          "text": "Kaulquappen atmen zuerst mit Kiemen.",
+          "image": "fibel-kaulquappe",
+          "richtig": true,
+          "regel": "Sie leben im Wasser. Später atmet der Frosch mit der Lunge."
+        },
+        {
+          "text": "Die Larve sieht genauso aus wie ein Marienkäfer.",
+          "image": "fibel-kaefer-larve",
+          "richtig": false,
+          "regel": "Die Larve ist länglich und dunkel. Erst nach der Puppe wird ein Marienkäfer daraus."
+        },
+        {
+          "text": "Aus der Raupe wird ein Schmetterling.",
+          "image": "1F98B",
+          "richtig": true,
+          "regel": "Zuerst verpuppt sich die Raupe. Aus der Puppe schlüpft der Schmetterling."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["frosch", "marienkaefer", "schmetterling-kurz"],
+      "id": "entwicklung",
+      "title": "Wie Tiere groß werden",
+      "icon": "🐸",
+      "term": 1,
+      "lehrplan": "HSU 3/4 3.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.1 Natur und Umwelt: Entwicklung von Tieren (z. B. Frosch, Marienkäfer)",
+      "forscherauftrag": "Sucht im Frühling an einem Teich nach Froschlaich – nur anschauen, nicht mitnehmen: Frösche stehen unter Naturschutz.",
+      "merke": "richtig"
+    },
+    {
+      "klasse": 3,
+      "erkennen": [],
+      "sortieren": [
+        {
+          "id": "wild-haus",
+          "frage": "Ist das ein Wildtier oder ein Haustier?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "wild",
+              "title": "Wildtier",
+              "image": "1F332"
+            },
+            {
+              "id": "haus",
+              "title": "Haustier",
+              "image": "1F3E0"
+            }
+          ],
+          "zuordnung": {
+            "wolf": "wild",
+            "fuchs": "wild",
+            "reh": "wild",
+            "wildschwein": "wild",
+            "hund": "haus",
+            "katze": "haus",
+            "hamster": "haus",
+            "goldfisch": "haus"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Der Hund stammt vom Wolf ab.",
+          "image": "1F415",
+          "richtig": true,
+          "regel": "Vor sehr langer Zeit haben Menschen Wölfe gezähmt. Daraus wurden unsere Hunde."
+        },
+        {
+          "text": "Wölfe leben in Rudeln.",
+          "image": "1F43A",
+          "richtig": true,
+          "regel": "Ein Rudel ist eine Wolfsfamilie. Sie jagt gemeinsam."
+        },
+        {
+          "text": "Ein Wolf frisst Gras.",
+          "image": "1F43A",
+          "richtig": false,
+          "regel": "Der Wolf ist ein Fleischfresser. Er jagt zum Beispiel Rehe und Wildschweine."
+        },
+        {
+          "text": "Hunde und Wölfe haben eine sehr feine Nase.",
+          "image": "1F443",
+          "richtig": true,
+          "regel": "Sie riechen viel besser als wir Menschen."
+        },
+        {
+          "text": "In Bayern leben wieder Wölfe.",
+          "image": "1F43A",
+          "richtig": true,
+          "regel": "Seit einigen Jahren gibt es wieder Wölfe in Bayern, zum Beispiel im Bayerischen Wald."
+        },
+        {
+          "text": "Alle Hunde sehen gleich aus.",
+          "image": "1F415",
+          "richtig": false,
+          "regel": "Es gibt viele Hunderassen: große und kleine, mit langem und kurzem Fell."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": [],
+      "id": "wolf-hund",
+      "title": "Wolf und Hund",
+      "icon": "🐺",
+      "term": 2,
+      "lehrplan": "HSU 3/4 3.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.1 Natur und Umwelt: Wildtier und Haustier vergleichen (Wolf und Hund)",
+      "forscherauftrag": "Beobachtet einen Hund: Wie zeigt er, dass er sich freut oder Angst hat? Wölfe verständigen sich genauso mit Schwanz, Ohren und Lauten."
+    },
+    {
+      "klasse": 3,
+      "erkennen": [],
+      "sortieren": [
+        {
+          "id": "herkunft",
+          "frage": "Wächst das bei uns, oder kommt es von weit her?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "hier",
+              "title": "wächst bei uns",
+              "image": "1F69C"
+            },
+            {
+              "id": "weit",
+              "title": "kommt von weit her",
+              "image": "1F6A2"
+            }
+          ],
+          "zuordnung": {
+            "apfel": "hier",
+            "kartoffel": "hier",
+            "karotte": "hier",
+            "erdbeere": "hier",
+            "kirsche": "hier",
+            "banane": "weit",
+            "ananas": "weit",
+            "zitrone": "weit"
+          }
+        },
+        {
+          "id": "saison",
+          "frage": "Wann wird das bei uns reif?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "sommer",
+              "title": "im Sommer",
+              "image": "2600"
+            },
+            {
+              "id": "herbst",
+              "title": "im Herbst",
+              "image": "1F342"
+            }
+          ],
+          "zuordnung": {
+            "erdbeere": "sommer",
+            "kirsche": "sommer",
+            "gurke": "sommer",
+            "apfel": "herbst",
+            "birne": "herbst",
+            "trauben": "herbst",
+            "kartoffel": "herbst"
+          }
+        }
+      ],
+      "paare": [
+        {
+          "frage": "Woraus wird Butter gemacht?",
+          "ziel": "butter",
+          "richtig": "milch",
+          "ablenker": ["ei", "koerner"]
+        },
+        {
+          "frage": "Woraus wird Brot gebacken?",
+          "ziel": "brot",
+          "richtig": "koerner",
+          "ablenker": ["milch", "kartoffel"]
+        },
+        {
+          "frage": "Woraus werden Pommes gemacht?",
+          "ziel": "pommes",
+          "richtig": "kartoffel",
+          "ablenker": ["apfel", "karotte"]
+        },
+        {
+          "frage": "Woraus wird Käse gemacht?",
+          "ziel": "kaese",
+          "richtig": "milch",
+          "ablenker": ["ei", "koerner"]
+        },
+        {
+          "frage": "Welches Tier gibt uns die Milch?",
+          "ziel": "milch",
+          "richtig": "kuh",
+          "ablenker": ["huhn", "schwein"]
+        }
+      ],
+      "aussagen": [
+        {
+          "text": "Bananen wachsen auf den Feldern in Bayern.",
+          "image": "1F34C",
+          "richtig": false,
+          "regel": "Bananen brauchen es warm. Sie kommen mit dem Schiff aus fernen Ländern."
+        },
+        {
+          "text": "Erdbeeren aus Bayern gibt es im Winter frisch vom Feld.",
+          "image": "1F353",
+          "richtig": false,
+          "regel": "Erdbeeren werden bei uns im Frühsommer reif. Im Winter kommen sie von weit her."
+        },
+        {
+          "text": "Obst aus der Region hat einen kurzen Weg zu uns.",
+          "image": "1F34E",
+          "richtig": true,
+          "regel": "Kurze Wege sparen Energie, und das Obst ist frisch."
+        },
+        {
+          "text": "Kartoffeln wachsen unter der Erde.",
+          "image": "1F954",
+          "richtig": true,
+          "regel": "Im Herbst werden sie ausgegraben."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": [],
+      "id": "essen",
+      "title": "Woher kommt unser Essen?",
+      "icon": "🧺",
+      "term": 2,
+      "lehrplan": "HSU 3/4 3.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.1: Lebensmittel aus der Region und von weit her, Jahreszeiten",
+      "forscherauftrag": "Schaut beim Einkaufen auf die Schilder: Woher kommen Äpfel, Tomaten und Bananen? Sucht die Länder auf einer Karte.",
+      "merke": "richtig"
+    },
+    {
+      "klasse": 3,
+      "erkennen": ["eiswuerfel", "wasser", "dampf", "wolke", "regen", "schnee"],
+      "sortieren": [
+        {
+          "id": "zustand",
+          "frage": "Ist das Wasser fest, flüssig oder gasförmig?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "fest",
+              "title": "fest",
+              "image": "1F9CA"
+            },
+            {
+              "id": "fluessig",
+              "title": "flüssig",
+              "image": "1F4A7"
+            },
+            {
+              "id": "gas",
+              "title": "gasförmig",
+              "image": "2668"
+            }
+          ],
+          "zuordnung": {
+            "eiswuerfel": "fest",
+            "schnee": "fest",
+            "wasser": "fluessig",
+            "regen": "fluessig",
+            "dampf": "gas"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Eis ist gefrorenes Wasser.",
+          "image": "1F9CA",
+          "richtig": true,
+          "regel": "Unter null Grad gefriert Wasser zu Eis."
+        },
+        {
+          "text": "Wasser kocht bei hundert Grad.",
+          "image": "2668",
+          "richtig": true,
+          "regel": "Dann wird es zu Wasserdampf."
+        },
+        {
+          "text": "Wolken bestehen aus Rauch.",
+          "image": "2601",
+          "richtig": false,
+          "regel": "Wolken bestehen aus winzigen Wassertröpfchen."
+        },
+        {
+          "text": "Beim Zähneputzen soll das Wasser die ganze Zeit laufen.",
+          "image": "1FAA5",
+          "richtig": false,
+          "regel": "Dreh den Hahn zu, solange du putzt. Ein Becher Wasser reicht."
+        },
+        {
+          "text": "Duschen braucht meist weniger Wasser als ein Vollbad.",
+          "image": "1F6BF",
+          "richtig": true,
+          "regel": "So kannst du Wasser sparen."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["wasserkreislauf", "schmelzen"],
+      "id": "wasser",
+      "title": "Wasser",
+      "icon": "💧",
+      "term": 1,
+      "lehrplan": "HSU 3/4 3.3",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.3 Natur und Umwelt: Wasser (Zustandsformen, Wasserkreislauf, sparsamer Umgang)",
+      "forscherauftrag": "Legt einen Eiswürfel auf einen Teller: Wie lange dauert es, bis er geschmolzen ist? Und wo ist das Wasser nach ein paar Tagen?"
+    },
+    {
+      "klasse": 3,
+      "erkennen": ["feuer", "kerze", "feuerloescher", "feuerwehrauto", "feuerwehr"],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Ein Feuer braucht Brennstoff, Luft und Wärme.",
+          "image": "1F525",
+          "richtig": true,
+          "regel": "Fehlt eins davon, geht das Feuer aus."
+        },
+        {
+          "text": "Brennendes Fett löscht man mit Wasser.",
+          "image": "1F373",
+          "richtig": false,
+          "regel": "Niemals Wasser auf brennendes Fett! Deckel drauf, dann fehlt dem Feuer die Luft."
+        },
+        {
+          "text": "Die Feuerwehr erreicht man unter der Nummer 112.",
+          "image": "260E",
+          "richtig": true,
+          "regel": "Die 112 ist kostenlos, auch vom Handy."
+        },
+        {
+          "text": "Wenn es brennt, fährt man mit dem Aufzug nach unten.",
+          "image": "1F525",
+          "richtig": false,
+          "regel": "Bei Feuer nie den Aufzug nehmen. Ist das Treppenhaus voller Rauch: in der Wohnung bleiben, Tür zu, am Fenster um Hilfe rufen."
+        },
+        {
+          "text": "Ein Rauchmelder piept, wenn es brennt.",
+          "image": "1F6A8",
+          "richtig": true,
+          "regel": "Er warnt uns, auch wenn wir schlafen."
+        },
+        {
+          "text": "Kinder dürfen allein mit Streichhölzern spielen.",
+          "image": "1F525",
+          "richtig": false,
+          "regel": "Feuer nur zusammen mit Erwachsenen anzünden."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["notruf"],
+      "id": "feuer",
+      "title": "Feuer",
+      "icon": "🔥",
+      "term": 2,
+      "lehrplan": "HSU 3/4 3.2",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.2 Natur und Umwelt: Verbrennung, Löschen, Brandschutz, Notruf",
+      "forscherauftrag": "Übt zusammen einen Notruf mit dem Telefon (ohne zu wählen!): Wo, was, wie viele? Schaut nach, wo bei euch der Rauchmelder hängt."
+    },
+    {
+      "klasse": 3,
+      "erkennen": [],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Man darf nie direkt in die Sonne schauen.",
+          "image": "2600",
+          "richtig": true,
+          "regel": "Das grelle Licht kann die Augen für immer schädigen."
+        },
+        {
+          "text": "Eine Sonnenbrille schützt die Augen vor grellem Licht.",
+          "image": "1F576",
+          "richtig": true,
+          "regel": "Im Schnee und am Wasser ist das Licht besonders hell."
+        },
+        {
+          "text": "Beim Werken schützt eine Schutzbrille die Augen.",
+          "image": "1F97D",
+          "richtig": true,
+          "regel": "So fliegen keine Späne ins Auge."
+        },
+        {
+          "text": "Stundenlang auf den Bildschirm schauen ist gut für die Augen.",
+          "image": "1F4F1",
+          "richtig": false,
+          "regel": "Mach Pausen und schau in die Ferne. Das entspannt die Augen."
+        },
+        {
+          "text": "Im Dunkeln wird die Pupille größer.",
+          "image": "1F441",
+          "richtig": true,
+          "regel": "Dann kommt mehr Licht ins Auge."
+        },
+        {
+          "text": "Die Augen sehen auch ganz ohne Licht.",
+          "image": "1F440",
+          "richtig": false,
+          "regel": "Ohne Licht sehen wir nichts."
+        },
+        {
+          "text": "Die Wimpern schützen das Auge vor Staub.",
+          "image": "1F441",
+          "richtig": true,
+          "regel": "Auch das Blinzeln und die Tränen halten das Auge sauber."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": [],
+      "id": "auge",
+      "title": "Das Auge",
+      "icon": "👁️",
+      "term": 1,
+      "lehrplan": "HSU 3/4 2.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 2.1 Körper und Gesundheit: Sinnesorgan Auge, Schutz der Augen",
+      "forscherauftrag": "Schaut euch im Spiegel die Augen an: Macht das Licht aus und wieder an. Was passiert mit dem schwarzen Punkt in der Mitte, der Pupille?"
+    },
+    {
+      "klasse": 3,
+      "erkennen": [],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Ein Jahrzehnt hat zehn Jahre.",
+          "image": "1F4C5",
+          "richtig": true,
+          "regel": "Jahrzehnt kommt von zehn Jahren."
+        },
+        {
+          "text": "Ein Jahrhundert hat hundert Jahre.",
+          "image": "23F3",
+          "richtig": true,
+          "regel": "Hundert Jahre sind ein Jahrhundert."
+        },
+        {
+          "text": "Ein Jahrtausend hat hundert Jahre.",
+          "image": "23F3",
+          "richtig": false,
+          "regel": "Ein Jahrtausend hat tausend Jahre."
+        },
+        {
+          "text": "Morgen liegt in der Vergangenheit.",
+          "image": "1F4C5",
+          "richtig": false,
+          "regel": "Morgen liegt in der Zukunft, gestern in der Vergangenheit."
+        },
+        {
+          "text": "Als Opa ein Kind war, ist Vergangenheit.",
+          "image": "1F474",
+          "richtig": true,
+          "regel": "Was schon passiert ist, gehört zur Vergangenheit."
+        },
+        {
+          "text": "Die Dinosaurier lebten vor den ersten Menschen.",
+          "image": "1F996",
+          "richtig": true,
+          "regel": "Die Dinosaurier starben vor sehr langer Zeit aus, lange bevor es Menschen gab."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["zeitleiste"],
+      "id": "zeit",
+      "title": "Zeit und Zeitleiste",
+      "icon": "⏳",
+      "term": 2,
+      "lehrplan": "HSU 3/4 4.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 4.1 Zeit und Wandel: Zeiteinheiten, Zeitleiste, Vergangenheit, Gegenwart und Zukunft",
+      "forscherauftrag": "Macht eine Zeitleiste von deinem Leben: Geburt, erster Zahn, Kindergarten, Schule. Fragt Oma und Opa, wie es war, als sie in die dritte Klasse gingen."
     }
   ]
 }

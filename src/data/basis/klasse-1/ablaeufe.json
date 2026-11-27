@@ -93,5 +93,90 @@
     "images": ["1F33F", "1F41B", "1F98B"],
     "steps": ["das Blatt", "die Raupe frisst und wächst", "der Schmetterling"],
     "sache": true
+  },
+  {
+    "id": "kette-wald",
+    "title": "Eine Nahrungskette im Wald",
+    "images": ["1F330", "1F42D", "1F98A"],
+    "steps": ["die Samen", "die Maus frisst die Samen", "der Fuchs frisst die Maus"],
+    "sache": true,
+    "frage": "Wer frisst wen? Fang bei der Pflanze an."
+  },
+  {
+    "id": "laubbaum-jahr",
+    "title": "Ein Laubbaum im Jahr",
+    "images": ["1F331", "1F333", "1F342", "1FABE"],
+    "steps": [
+      "im Frühling treiben die Blätter aus",
+      "im Sommer ist der Baum grün",
+      "im Herbst werden die Blätter bunt und fallen ab",
+      "im Winter ist der Baum kahl"
+    ],
+    "sache": true,
+    "frage": "Was kommt zuerst? Fang beim Frühling an."
+  },
+  {
+    "id": "frosch",
+    "title": "Vom Laich zum Frosch",
+    "images": ["fibel-froschlaich", "fibel-kaulquappe", "fibel-jungfrosch", "1F438"],
+    "steps": ["der Froschlaich", "die Kaulquappe", "der junge Frosch mit Schwanz", "der Frosch"],
+    "sache": true
+  },
+  {
+    "id": "marienkaefer",
+    "title": "Vom Ei zum Marienkäfer",
+    "images": ["fibel-kaefer-eier", "fibel-kaefer-larve", "fibel-kaefer-puppe", "1F41E"],
+    "steps": ["die Eier", "die Larve", "die Puppe", "der Marienkäfer"],
+    "sache": true
+  },
+  {
+    "id": "wasserkreislauf",
+    "title": "Der Wasserkreislauf",
+    "images": ["2600", "2668", "2601", "1F327", "1F30A"],
+    "steps": [
+      "die Sonne wärmt das Wasser im Meer",
+      "das Wasser verdunstet und steigt auf",
+      "oben bilden sich Wolken",
+      "aus den Wolken fällt Regen",
+      "das Wasser fließt zurück ins Meer"
+    ],
+    "sache": true,
+    "frage": "Was passiert zuerst? Fang bei der Sonne an."
+  },
+  {
+    "id": "schmelzen",
+    "title": "Vom Eis zum Dampf",
+    "images": ["1F9CA", "1F4A7", "2668"],
+    "steps": ["das Eis", "das Eis schmilzt zu Wasser", "das Wasser kocht und wird zu Dampf"],
+    "sache": true,
+    "frage": "Was passiert, wenn es immer wärmer wird?"
+  },
+  {
+    "id": "notruf",
+    "title": "Der Notruf 112",
+    "images": ["260E", "1F4CD", "1F525", "1F465", "1F442"],
+    "steps": [
+      "112 wählen",
+      "sagen, wo es passiert ist",
+      "sagen, was passiert ist",
+      "sagen, wie viele Verletzte es gibt",
+      "warten, ob es noch Fragen gibt"
+    ],
+    "sache": true,
+    "frage": "Was machst du zuerst?"
+  },
+  {
+    "id": "zeitleiste",
+    "title": "Eine Zeitleiste",
+    "images": ["1F996", "1F9A3", "1F3F0", "1F682", "1F4F1"],
+    "steps": [
+      "die Dinosaurier",
+      "die Mammuts in der Eiszeit",
+      "die Ritter auf der Burg",
+      "die ersten Eisenbahnen",
+      "das Handy"
+    ],
+    "sache": true,
+    "frage": "Was war zuerst? Ordne von ganz früher bis heute."
   }
 ]

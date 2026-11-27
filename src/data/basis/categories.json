@@ -388,5 +388,53 @@
     "topic": "messen",
     "title": "Zeit umrechnen",
     "icon": "⏱️"
+  },
+  {
+    "id": "sache.wald",
+    "topic": "sache",
+    "title": "Lebensraum Wald",
+    "icon": "🌲"
+  },
+  {
+    "id": "sache.entwicklung",
+    "topic": "sache",
+    "title": "Wie Tiere groß werden",
+    "icon": "🐸"
+  },
+  {
+    "id": "sache.wolf-hund",
+    "topic": "sache",
+    "title": "Wolf und Hund",
+    "icon": "🐺"
+  },
+  {
+    "id": "sache.essen",
+    "topic": "sache",
+    "title": "Woher kommt unser Essen?",
+    "icon": "🧺"
+  },
+  {
+    "id": "sache.wasser",
+    "topic": "sache",
+    "title": "Wasser",
+    "icon": "💧"
+  },
+  {
+    "id": "sache.feuer",
+    "topic": "sache",
+    "title": "Feuer",
+    "icon": "🔥"
+  },
+  {
+    "id": "sache.auge",
+    "topic": "sache",
+    "title": "Das Auge",
+    "icon": "👁️"
+  },
+  {
+    "id": "sache.zeit",
+    "topic": "sache",
+    "title": "Zeit und Zeitleiste",
+    "icon": "⏳"
   }
 ]

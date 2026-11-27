@@ -3979,5 +3979,274 @@
       "faktor": 10
     },
     "title": "Tabelle lesen"
+  },
+  {
+    "id": "k3.sache.wald.erkennen",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wald",
+    "unit": "k3.sache.wald",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "wald"
+    },
+    "title": "Lebensraum Wald: Was ist das?"
+  },
+  {
+    "id": "k3.sache.wald.sortieren",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wald",
+    "unit": "k3.sache.wald",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "wald"
+    },
+    "title": "Lebensraum Wald: Sortieren"
+  },
+  {
+    "id": "k3.sache.wald.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wald",
+    "unit": "k3.sache.wald",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "wald"
+    },
+    "title": "Lebensraum Wald: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.wald.reihenfolge",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wald",
+    "unit": "k3.sache.wald",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["kette-wald", "laubbaum-jahr"]
+    },
+    "title": "Lebensraum Wald: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k3.sache.entwicklung.paare",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.entwicklung",
+    "unit": "k3.sache.entwicklung",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "entwicklung"
+    },
+    "title": "Wie Tiere groß werden: Was passt?"
+  },
+  {
+    "id": "k3.sache.entwicklung.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.entwicklung",
+    "unit": "k3.sache.entwicklung",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "entwicklung"
+    },
+    "title": "Wie Tiere groß werden: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.entwicklung.reihenfolge",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.entwicklung",
+    "unit": "k3.sache.entwicklung",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["frosch", "marienkaefer", "schmetterling-kurz"]
+    },
+    "title": "Wie Tiere groß werden: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k3.sache.wolf-hund.sortieren",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wolf-hund",
+    "unit": "k3.sache.wolf-hund",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "wolf-hund"
+    },
+    "title": "Wolf und Hund: Sortieren"
+  },
+  {
+    "id": "k3.sache.wolf-hund.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wolf-hund",
+    "unit": "k3.sache.wolf-hund",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "wolf-hund"
+    },
+    "title": "Wolf und Hund: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.essen.sortieren",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.essen",
+    "unit": "k3.sache.essen",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "essen"
+    },
+    "title": "Woher kommt unser Essen?: Sortieren"
+  },
+  {
+    "id": "k3.sache.essen.paare",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.essen",
+    "unit": "k3.sache.essen",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "essen"
+    },
+    "title": "Woher kommt unser Essen?: Was passt?"
+  },
+  {
+    "id": "k3.sache.essen.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.essen",
+    "unit": "k3.sache.essen",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "essen"
+    },
+    "title": "Woher kommt unser Essen?: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.wasser.erkennen",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wasser",
+    "unit": "k3.sache.wasser",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "wasser"
+    },
+    "title": "Wasser: Was ist das?"
+  },
+  {
+    "id": "k3.sache.wasser.sortieren",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wasser",
+    "unit": "k3.sache.wasser",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "wasser"
+    },
+    "title": "Wasser: Sortieren"
+  },
+  {
+    "id": "k3.sache.wasser.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wasser",
+    "unit": "k3.sache.wasser",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "wasser"
+    },
+    "title": "Wasser: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.wasser.reihenfolge",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.wasser",
+    "unit": "k3.sache.wasser",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["wasserkreislauf", "schmelzen"]
+    },
+    "title": "Wasser: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k3.sache.feuer.erkennen",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.feuer",
+    "unit": "k3.sache.feuer",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "feuer"
+    },
+    "title": "Feuer: Was ist das?"
+  },
+  {
+    "id": "k3.sache.feuer.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.feuer",
+    "unit": "k3.sache.feuer",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "feuer"
+    },
+    "title": "Feuer: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.feuer.reihenfolge",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.feuer",
+    "unit": "k3.sache.feuer",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["notruf"]
+    },
+    "title": "Feuer: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k3.sache.auge.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.auge",
+    "unit": "k3.sache.auge",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "auge"
+    },
+    "title": "Das Auge: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.zeit.stimmt-das",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.zeit",
+    "unit": "k3.sache.zeit",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "zeit"
+    },
+    "title": "Zeit und Zeitleiste: Stimmt das?"
+  },
+  {
+    "id": "k3.sache.zeit.reihenfolge",
+    "grade": 3,
+    "topic": "sache",
+    "category": "sache.zeit",
+    "unit": "k3.sache.zeit",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["zeitleiste"]
+    },
+    "title": "Zeit und Zeitleiste: Was kommt zuerst?",
+    "weight": 0.5
   }
 ]

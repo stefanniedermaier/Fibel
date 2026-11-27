@@ -1132,5 +1132,61 @@
     "topic": "rechnen",
     "title": "Tabellen und Säulendiagramme",
     "term": 2
+  },
+  {
+    "id": "k3.sache.wald",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Lebensraum Wald",
+    "term": 1
+  },
+  {
+    "id": "k3.sache.entwicklung",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Wie Tiere groß werden",
+    "term": 1
+  },
+  {
+    "id": "k3.sache.wolf-hund",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Wolf und Hund",
+    "term": 2
+  },
+  {
+    "id": "k3.sache.essen",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Woher kommt unser Essen?",
+    "term": 2
+  },
+  {
+    "id": "k3.sache.wasser",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Wasser",
+    "term": 1
+  },
+  {
+    "id": "k3.sache.feuer",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Feuer",
+    "term": 2
+  },
+  {
+    "id": "k3.sache.auge",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Das Auge",
+    "term": 1
+  },
+  {
+    "id": "k3.sache.zeit",
+    "grade": 3,
+    "topic": "sache",
+    "title": "Zeit und Zeitleiste",
+    "term": 2
   }
 ]
