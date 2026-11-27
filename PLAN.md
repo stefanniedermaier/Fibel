@@ -171,11 +171,13 @@ Die Werte für die Klassen 2–4 sind nur ein Vorschlag. Festgelegt werden sie, 
 | **1** (Version 1) | Silben, lauttreue Wörter, Anlaute, Silben klatschen | Silben und Buchstaben legen, ABC-Tastatur, Nachspuren                                                             | Mengen bis 10, Vergleichen, Zahlenhaus, Plus/Minus bis 10 und 20                         |
 | 2 (später)        | Sätze lesen, Satz und Bild zuordnen                 | Wörter mit Besonderheiten (ie, Doppelkonsonanten, ck/tz, Dehnungs-h, Auslautverhärtung), Großschreibung von Nomen | Zahlenraum 100, Zehner und Einer, Einmaleins, Uhrzeit (umgesetzt, eigener Bereich), Geld |
 | 3 (später)        | kurze Texte mit Fragen zum Inhalt                   | Wortfamilien, Ableiten (ä/äu), Wortarten                                                                          | Zahlenraum 1000, halbschriftliches Rechnen, Größen                                       |
-| 4 (später)        | längere Texte, Informationen entnehmen              | Satzzeichen, wörtliche Rede, das/dass                                                                             | Zahlenraum 1 Million, schriftliche Rechenverfahren                                       |
+| 4 (später)        | längere Texte, Informationen entnehmen              | Satzglieder, Fälle, wörtliche Rede (das/dass steht nicht im LehrplanPLUS Bayern)                                  | Zahlenraum 1 Million, schriftliche Rechenverfahren                                       |
 
 **Uhr (umgesetzt, eigener Bereich 🕒 neben Lesen, Schreiben und Rechnen, damit sie gezielt geübt werden kann):** „Uhr lesen“ (analoge Uhr, drei Uhrzeiten zur Wahl) und „Uhr stellen“ (Zeiger mit dem Finger ziehen; wie bei einer Lernuhr läuft der Stundenzeiger mit). Fünf Level: volle Stunden, halbe Stunden, Viertelstunden, 5-Minuten-Schritte, einzelne Minuten (nur lesen). Das Level steigt automatisch, sobald 6 Uhrzeiten eines Levels sicher sitzen (Leitner-Fach ≥ 2); frühere Level werden mitgeübt. Klasse 1 übt bis „halb“, Klasse 2 beginnt bei Viertelstunden. Gesprochen wird, wie in der Schule: „halb vier“, „Viertel nach drei“, „fünf vor halb vier“, „drei Uhr siebzehn“. Die falschen Antworten sind typische Lesefehler (falsche Stunde bei „halb“, „nach“ und „vor“ vertauscht, Zeiger verwechselt). Im Elternbereich lässt sich das Level festlegen.
 
 Die Skizze beschreibt den länderneutralen Basis-Katalog und ist für die Klassen 2–4 bewusst grob. Was ein Land anders macht, steht in seiner Länderanpassung (siehe unten).
+
+**Ausgearbeitet (27.11.2026):** Fächer und Unterrichtseinheiten für die Klassen 2, 3 und 4 nach dem LehrplanPLUS Bayern sowie ein Machbarkeits- und Umsetzungsplan für Heimat- und Sachunterricht in Klasse 1 stehen in [plaene/](plaene/README.md). Dort kommen neue Bereiche dazu (Sprache, Formen, Messen, HSU, Englisch) und Unterrichtseinheiten, die die Eltern passend zum Stand der Schule freischalten.
 
 ### Bundesländer
 
@@ -443,7 +445,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 **Abhängigkeiten:** Rechnen (Phase 4) braucht nur den Kern und kann deshalb parallel zu den Wörterbüchern und zu Lesen entstehen. Lesen und Schreiben brauchen die Wörterbücher aus Phase 2.
 
-**Klassen 2–4:** Sie sind keine Phase von Version 1. Später entsteht jede Klasse nach demselben Muster wie die Phasen 2–6: Wörterbuch, Katalog-Einträge und neue Module nur dort, wo die vorhandenen nicht ausreichen.
+**Klassen 2–4:** Sie sind keine Phase von Version 1. Später entsteht jede Klasse nach demselben Muster wie die Phasen 2–6: Wörterbuch, Katalog-Einträge und neue Module nur dort, wo die vorhandenen nicht ausreichen. Die Pläne pro Klasse stehen in [plaene/](plaene/README.md).
 
 **Weitere Bundesländer:** Auch sie gehören nicht zu Version 1. Für ein neues Land wird eine Anpassung unter `laender/<Code>/` angelegt und das Land danach in `laender/index.json` aktiviert.
 
@@ -483,11 +485,12 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 
 ## 14. Später (nicht in Version 1)
 
-- Inhalte für die Klassen 2–4 nach der Katalog-Skizze (Abschnitt 4)
+- Inhalte für die Klassen 2–4 nach den Plänen in [plaene/](plaene/README.md)
+- Heimat- und Sachunterricht ab Klasse 1 ([plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md))
 - Weitere Bundesländer: jeweils eine Länderanpassung, danach das Land in der Länderliste aktivieren
 - Laute, die die Eltern selbst aufnehmen (Mikrofon, lokal gespeichert)
 - Sticker-Album oder Welten zum Freischalten mit Kronen
-- Geometrie und Formen
+- Geometrie und Formen (als Bereich „Formen“ ab Klasse 2 geplant, siehe [plaene/klasse-2.md](plaene/klasse-2.md))
 - Tageslimit für Einheiten
 
 ## 15. Erweiterungen vor Version 1.0 (aus der ToDo-Bewertung)

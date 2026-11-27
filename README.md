@@ -2,6 +2,7 @@
 
 Lern-PWA für Grundschulkinder: Lesen, Schreiben, Rechnen und die Uhr in kurzen Einheiten.
 Läuft komplett offline auf dem Gerät – kein Server, kein Konto. Details: [PLAN.md](PLAN.md).
+Pläne für die Klassen 2–4 und für Heimat- und Sachunterricht nach dem Lehrplan: [plaene/](plaene/README.md).
 
 ## Entwicklung
 
