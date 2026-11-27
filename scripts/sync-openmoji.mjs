@@ -3,6 +3,8 @@
  * Copies exactly the OpenMoji SVGs the app uses into public/img/openmoji/.
  * Collects every "image" value (and the codes in "scene" and "images" lists) from the
  * JSON files under src/data/.
+ * Codes starting with "fibel-" are our own drawings in src/data/bilder/ (MIT, in the
+ * style of OpenMoji), e.g. "fibel-ampel-rot" → src/data/bilder/ampel-rot.svg.
  * Usage: npm run data:openmoji
  */
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs'
@@ -13,6 +15,8 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = join(root, 'src', 'data')
 const sourceDir = join(root, 'node_modules', 'openmoji', 'color', 'svg')
 const targetDir = join(root, 'public', 'img', 'openmoji')
+const ownDir = join(root, 'src', 'data', 'bilder')
+const OWN = 'fibel-'
 
 function jsonFiles(dir) {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
@@ -49,7 +53,9 @@ for (const file of jsonFiles(dataDir)) collectImages(JSON.parse(readFileSync(fil
 mkdirSync(targetDir, { recursive: true })
 const missing = []
 for (const code of codes) {
-  const source = join(sourceDir, `${code}.svg`)
+  const source = code.startsWith(OWN)
+    ? join(ownDir, `${code.slice(OWN.length)}.svg`)
+    : join(sourceDir, `${code}.svg`)
   if (existsSync(source)) copyFileSync(source, join(targetDir, `${code}.svg`))
   else missing.push(code)
 }

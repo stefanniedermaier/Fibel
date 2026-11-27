@@ -28,6 +28,7 @@ import {
 import { plain } from '@/core/plain'
 import { readableSentences } from '@/core/saetze'
 import { cleanLernwoerter } from '@/exercises/schreiben/diktat'
+import { MUELLTONNEN, THEMEN } from '@/exercises/sache/shared'
 import { say } from '@/core/speech'
 import { loadVoices, rankGermanVoices } from '@/core/tts'
 import { TOPICS, TOPIC_INFO, type ProfileSettings, type Topic } from '@/core/types'
@@ -177,6 +178,20 @@ function setFocus(topic: Topic, unit: string, days = 7) {
   settings.value.focus = focus
 }
 
+// HSU: a task to do together per theme, and the waste bins at home.
+function forscherauftrag(unitId: string): string | undefined {
+  return THEMEN.find((t) => `k1.sache.${t.id}` === unitId)?.forscherauftrag
+}
+function toggleTonne(id: string, on: boolean) {
+  const set = new Set(settings.value.muelltonnen)
+  if (on) set.add(id)
+  else set.delete(id)
+  settings.value.muelltonnen = MUELLTONNEN.map((t) => t.id).filter((t) => set.has(t))
+}
+const hasMuell = computed(() =>
+  unitsFor(form.grade, 'sache').some((u) => u.id === 'k1.sache.muell'),
+)
+
 function toggleUnit(id: string, on: boolean) {
   settings.value.units = { ...settings.value.units, [id]: on }
 }
@@ -320,15 +335,31 @@ async function remove() {
       </p>
       <fieldset v-for="g in unitGroups" :key="g.topic" class="units">
         <legend>{{ g.icon }} {{ g.label }}</legend>
-        <label v-for="u in g.units" :key="u.id" class="check">
-          <input
-            type="checkbox"
-            :checked="unitEnabled(u.id, settings)"
-            @change="toggleUnit(u.id, ($event.target as HTMLInputElement).checked)"
-          />
-          {{ u.title }} <small class="muted">{{ u.term }}. Halbjahr</small>
-        </label>
-        <label class="focus">
+        <template v-for="u in g.units" :key="u.id">
+          <label class="check">
+            <input
+              type="checkbox"
+              :checked="unitEnabled(u.id, settings)"
+              @change="toggleUnit(u.id, ($event.target as HTMLInputElement).checked)"
+            />
+            {{ u.title }} <small class="muted">{{ u.term }}. Halbjahr</small>
+          </label>
+          <p v-if="forscherauftrag(u.id)" class="muted small auftrag">
+            🔎 Forscherauftrag: {{ forscherauftrag(u.id) }}
+          </p>
+        </template>
+        <fieldset v-if="g.topic === 'sache' && hasMuell" class="tonnen">
+          <legend>Müll trennen: Diese Tonnen gibt es bei uns</legend>
+          <label v-for="t in MUELLTONNEN" :key="t.id" class="check">
+            <input
+              type="checkbox"
+              :checked="settings.muelltonnen.includes(t.id)"
+              @change="toggleTonne(t.id, ($event.target as HTMLInputElement).checked)"
+            />
+            {{ t.title }}
+          </label>
+        </fieldset>
+        <label v-if="g.topic !== 'sache'" class="focus">
           🚩 Schwerpunkt (kommt in „Alles gemischt“ etwa in jeder zweiten Aufgabe)
           <select
             :value="focusOf(g.topic)"
@@ -344,7 +375,7 @@ async function remove() {
             </option>
           </select>
         </label>
-        <p v-if="focusOf(g.topic)" class="muted small">
+        <p v-if="g.topic !== 'sache' && focusOf(g.topic)" class="muted small">
           Gilt bis {{ focusDays(g.topic) }}.
           <button type="button" class="link" @click="setFocus(g.topic, focusOf(g.topic), 14)">
             Auf 2 Wochen verlängern
@@ -612,6 +643,14 @@ select {
   border: 2px solid var(--accent);
   border-radius: 12px;
   background: #fff;
+}
+
+.auftrag {
+  margin: -4px 0 10px 36px;
+}
+
+.tonnen {
+  margin: 8px 0;
 }
 
 .focus {

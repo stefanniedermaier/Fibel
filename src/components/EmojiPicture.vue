@@ -15,8 +15,11 @@ watch(
 )
 
 const src = computed(() => `${import.meta.env.BASE_URL}img/openmoji/${props.code}.svg`)
+// Own drawings ("fibel-…") have no system emoji.
 const char = computed(() =>
-  String.fromCodePoint(...props.code.split('-').map((part) => parseInt(part, 16))),
+  /^[0-9A-F]+(-[0-9A-F]+)*$/i.test(props.code)
+    ? String.fromCodePoint(...props.code.split('-').map((part) => parseInt(part, 16)))
+    : '',
 )
 </script>
 

@@ -172,6 +172,10 @@ export function itemLabel(itemKey: string, wordText: (id: string) => string | un
       return sacheLabel(part)
     case 'sache.sortieren':
       return sacheLabel(part.slice(part.indexOf(':') + 1))
+    case 'sache.stimmt-das': {
+      const [thema, i] = part.split(':')
+      return THEMEN.find((t) => t.id === thema)?.aussagen[Number(i)]?.text ?? part
+    }
     case 'sache.paare': {
       const [thema, i] = part.split(':')
       return THEMEN.find((t) => t.id === thema)?.paare[Number(i)]?.frage ?? part

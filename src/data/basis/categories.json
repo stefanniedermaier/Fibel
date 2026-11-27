@@ -78,6 +78,12 @@
     "icon": "📅"
   },
   {
+    "id": "sache.verkehr",
+    "topic": "sache",
+    "title": "Sicher zu Fuß",
+    "icon": "🚦"
+  },
+  {
     "id": "sache.obst-gemuese",
     "topic": "sache",
     "title": "Obst und Gemüse",
@@ -88,6 +94,12 @@
     "topic": "sache",
     "title": "Meine Sinne",
     "icon": "👂"
+  },
+  {
+    "id": "sache.sichtbar",
+    "topic": "sache",
+    "title": "Gut sichtbar im Dunkeln",
+    "icon": "🔦"
   },
   {
     "id": "sache.jahreszeiten",
@@ -108,10 +120,28 @@
     "icon": "🌦️"
   },
   {
+    "id": "sache.gesund",
+    "topic": "sache",
+    "title": "Gesund essen, gesunde Zähne",
+    "icon": "🦷"
+  },
+  {
+    "id": "sache.gefuehle",
+    "topic": "sache",
+    "title": "Gefühle erkennen",
+    "icon": "😀"
+  },
+  {
     "id": "sache.wiese",
     "topic": "sache",
     "title": "Auf der Wiese",
     "icon": "🐞"
+  },
+  {
+    "id": "sache.muell",
+    "topic": "sache",
+    "title": "Müll trennen",
+    "icon": "♻️"
   },
   {
     "id": "sache.tiere",
@@ -130,5 +160,17 @@
     "topic": "sache",
     "title": "Berufe und Werkzeuge",
     "icon": "🔨"
+  },
+  {
+    "id": "sache.wirklich",
+    "topic": "sache",
+    "title": "Gibt es das wirklich?",
+    "icon": "🦄"
+  },
+  {
+    "id": "sache.frueher",
+    "topic": "sache",
+    "title": "Früher und heute",
+    "icon": "🕯️"
   }
 ]

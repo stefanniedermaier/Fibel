@@ -80,6 +80,8 @@ export interface ProfileSettings {
   flashMs: number
   /** Lernwörter of the week, typed in by the parents (stay on the device). */
   lernwoerter: string[]
+  /** HSU "Müll trennen": the bins the family has at home. */
+  muelltonnen: string[]
   /**
    * Focus per subject set by the parents: a teaching unit that gets about half of the
    * tasks in "Alles gemischt" until `until` (ms) – e.g. what school does this week.

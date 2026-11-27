@@ -4,25 +4,38 @@
  */
 import type { ExerciseModule } from '../../types'
 import SacheTask from '../SacheTask.vue'
-import { capitalize, getBegriff, getThema, type SacheData, type SacheParams } from '../shared'
+import {
+  capitalize,
+  getBegriff,
+  getThema,
+  visibleGroups,
+  type SacheData,
+  type SacheParams,
+} from '../shared'
 
 export const sortieren: ExerciseModule<SacheParams, SacheData> = {
   id: 'sache.sortieren',
   topic: 'sache',
 
-  items(_ctx, params) {
-    return getThema(params.thema).sortieren.flatMap((s) =>
-      Object.keys(s.zuordnung).map((id) => `sache.sortieren:${s.id}:${id}`),
-    )
+  items(ctx, params) {
+    return getThema(params.thema).sortieren.flatMap((s) => {
+      const groups = new Set(visibleGroups(s, ctx.settings).map((g) => g.id))
+      // With fewer than two bins at home there is nothing to sort.
+      if (groups.size < 2) return []
+      return Object.entries(s.zuordnung)
+        .filter(([, group]) => groups.has(group))
+        .map(([id]) => `sache.sortieren:${s.id}:${id}`)
+    })
   },
 
-  generate(_ctx, params, itemKey) {
+  generate(ctx, params, itemKey) {
     const [, sortId, begriffId] = itemKey.split(':') as [string, string, string]
     const sort = getThema(params.thema).sortieren.find((s) => s.id === sortId)
     if (!sort) throw new Error(`Unbekannte Sortierung: ${itemKey}`)
     const begriff = getBegriff(begriffId)
     const gruppe = sort.gruppen.find((g) => g.id === sort.zuordnung[begriffId])!
-    const titles = sort.gruppen.map((g) => g.title)
+    const gruppen = visibleGroups(sort, ctx.settings)
+    const titles = gruppen.map((g) => g.title)
     // "Wann wird das reif: im Sommer oder im Herbst?"
     const frage = sort.optionen
       ? `${sort.frage.replace(/\?$/, '')}: ${titles.slice(0, -1).join(', ')} oder ${titles.at(-1)}?`
@@ -36,7 +49,7 @@ export const sortieren: ExerciseModule<SacheParams, SacheData> = {
         prompt: begriff.image,
         correctKey: gruppe.id,
         // Groups keep their order (spring, summer, autumn, winter).
-        choices: sort.gruppen.map((g) => ({ key: g.id, image: g.image, label: g.title })),
+        choices: gruppen.map((g) => ({ key: g.id, image: g.image, label: g.title })),
       },
     }
   },

@@ -175,6 +175,13 @@
     "term": 1
   },
   {
+    "id": "k1.sache.verkehr",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Sicher zu Fuß",
+    "term": 1
+  },
+  {
     "id": "k1.sache.obst-gemuese",
     "grade": 1,
     "topic": "sache",
@@ -186,6 +193,13 @@
     "grade": 1,
     "topic": "sache",
     "title": "Meine Sinne",
+    "term": 1
+  },
+  {
+    "id": "k1.sache.sichtbar",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Gut sichtbar im Dunkeln",
     "term": 1
   },
   {
@@ -210,10 +224,31 @@
     "term": 1
   },
   {
+    "id": "k1.sache.gesund",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Gesund essen, gesunde Zähne",
+    "term": 1
+  },
+  {
+    "id": "k1.sache.gefuehle",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Gefühle erkennen",
+    "term": 1
+  },
+  {
     "id": "k1.sache.wiese",
     "grade": 1,
     "topic": "sache",
     "title": "Auf der Wiese",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.muell",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Müll trennen",
     "term": 2
   },
   {
@@ -235,6 +270,20 @@
     "grade": 1,
     "topic": "sache",
     "title": "Berufe und Werkzeuge",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.wirklich",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Gibt es das wirklich?",
+    "term": 2
+  },
+  {
+    "id": "k1.sache.frueher",
+    "grade": 1,
+    "topic": "sache",
+    "title": "Früher und heute",
     "term": 2
   }
 ]

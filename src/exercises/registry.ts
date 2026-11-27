@@ -6,6 +6,7 @@ import { reihenfolge } from './lesen/reihenfolge'
 import { hoerenBild } from './sache/hoeren-bild'
 import { paare } from './sache/paare'
 import { sortieren } from './sache/sortieren'
+import { stimmtDas } from './sache/stimmt-das'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -96,6 +97,7 @@ register(grossKlein)
 register(hoerenBild)
 register(paare)
 register(sortieren)
+register(stimmtDas)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

@@ -433,6 +433,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
   - **Lighthouse** (Version 12, ohne die entfernte PWA-Kategorie): Performance 99, Barrierefreiheit 100, Best Practices 100 für den Produktions-Build.
   - **Offen:** Version 1.0 taggen und veröffentlichen, die Testrunde mit dem Kind und das Anhören aller Wörter im Sprachtest auf dem Gerät.
 - **Klasse 1 nach Lehrplan ergänzt (Version 0.6.0):** Die Phasen 1–4 aus [plaene/klasse-1-abgleich.md](plaene/klasse-1-abgleich.md) und HSU Stufe 1 aus [plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md) sind umgesetzt: Einheiten, Kategorien, Wochenschwerpunkt und Stolpersteine; Sätze, Texte, Zuhören, Diktate und Sprache; Zahlen bis 20, Formen, Geld, Längen und Kalender; das Fach HSU mit neun Themen. Der Stand steht in den beiden Plänen.
+- **HSU Stufe 2 (Version 0.7.0):** „Stimmt das?“, sieben weitere Themen (Verkehr, Sichtbarkeit, Ernährung und Zähne, Gefühle, Müll, Wirklichkeit und Fantasie, Früher und heute), eigene Bilder für Verkehrszeichen und Mülltonnen, Mülltonnen und Forscheraufträge im Elternbereich.
 
 | Phase                          | Inhalt                                                                                                                                                                                                                                                                                                                                                                    | Fertig, wenn …                                                                                               | Umfang |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
@@ -488,7 +489,7 @@ Die Rechenaufgaben brauchen kein Wörterbuch, sie werden nach Regeln erzeugt. Da
 ## 14. Später (nicht in Version 1)
 
 - Inhalte für die Klassen 2–4 nach den Plänen in [plaene/](plaene/README.md)
-- Heimat- und Sachunterricht: Stufe 1 ist umgesetzt; Stufen 2 und 3 folgen ([plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md))
+- Heimat- und Sachunterricht: Stufen 1 und 2 sind umgesetzt; Stufe 3 folgt ([plaene/hsu-klasse-1.md](plaene/hsu-klasse-1.md))
 - Weitere Bundesländer: jeweils eine Länderanpassung, danach das Land in der Länderliste aktivieren
 - Laute, die die Eltern selbst aufnehmen (Mikrofon, lokal gespeichert)
 - Sticker-Album oder Welten zum Freischalten mit Kronen

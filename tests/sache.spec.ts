@@ -10,6 +10,7 @@ import { hoerenBild } from '@/exercises/sache/hoeren-bild'
 import { paare } from '@/exercises/sache/paare'
 import { getBegriff, THEMEN } from '@/exercises/sache/shared'
 import { sortieren } from '@/exercises/sache/sortieren'
+import { stimmtDas } from '@/exercises/sache/stimmt-das'
 
 const settings = resolveDefaults('DE-BY', 1)
 const ctx = { land: 'DE-BY', grade: 1, settings }
@@ -20,13 +21,17 @@ describe('HSU Klasse 1', () => {
     expect(topicLabel('sache', 'DE-BW')).toBe('Sachunterricht')
   })
 
-  it('zeigt im ersten Halbjahr fünf Themen, alle neun wenn freigeschaltet', () => {
+  it('zeigt die Themen des ersten Halbjahrs im Jahreslauf, alle wenn freigeschaltet', () => {
     expect(practiceCategories(ctx, 'sache', getExercise).map((c) => c.id)).toEqual([
+      'sache.verkehr',
       'sache.obst-gemuese',
       'sache.sinne',
+      'sache.sichtbar',
       'sache.jahreszeiten',
       'sache.feste',
       'sache.wetter',
+      'sache.gesund',
+      'sache.gefuehle',
     ])
     const units = Object.fromEntries(THEMEN.map((t) => [`k1.sache.${t.id}`, true]))
     const all = { ...ctx, settings: { ...settings, units } }
@@ -106,5 +111,50 @@ describe('HSU in der Statistik', () => {
     expect(itemLabel('sache.hoeren-bild:apfel', none)).toBe('der Apfel')
     expect(itemLabel('sache.sortieren:jahreszeit:schlitten', none)).toBe('der Schlitten')
     expect(itemLabel('sache.paare:tiere:0', none)).toBe('Was gibt uns die Kuh?')
+  })
+})
+
+describe('HSU Stufe 2', () => {
+  it('Stimmt das? Daumen hoch oder runter, danach die Regel', () => {
+    const rot = stimmtDas.generate(
+      ctx,
+      { thema: 'verkehr' },
+      'sache.stimmt-das:verkehr:1',
+      createRng(1),
+    )
+    expect(rot.instruction).toContain('Stimmt das?')
+    expect(rot.data.correctKey).toBe('nein')
+    expect(rot.afterword).toContain('stehen')
+    expect(rot.data.choices.map((c) => c.key)).toEqual(['ja', 'nein'])
+    for (const t of THEMEN)
+      for (const key of stimmtDas.items(ctx, { thema: t.id })) {
+        const d = stimmtDas.generate(ctx, { thema: t.id }, key, createRng(1)).data
+        expect(['ja', 'nein']).toContain(d.correctKey)
+      }
+  })
+
+  it('Müll trennen: nur die Tonnen, die es zu Hause gibt', () => {
+    const alle = sortieren.items(ctx, { thema: 'muell' })
+    expect(alle.length).toBe(12)
+    const ohneBio = {
+      ...ctx,
+      settings: { ...settings, muelltonnen: ['papier', 'gelb', 'glas', 'rest'] },
+    }
+    const items = sortieren.items(ohneBio, { thema: 'muell' })
+    expect(items).not.toContain('sache.sortieren:tonne:bananenschale')
+    const t = sortieren.generate(
+      ohneBio,
+      { thema: 'muell' },
+      'sache.sortieren:tonne:dose',
+      createRng(1),
+    )
+    expect(t.data.choices.map((c) => c.key)).toEqual(['papier', 'gelb', 'glas', 'rest'])
+    expect(t.data.correctKey).toBe('gelb')
+    const eine = { ...ctx, settings: { ...settings, muelltonnen: ['rest'] } }
+    expect(sortieren.items(eine, { thema: 'muell' })).toEqual([])
+  })
+
+  it('jedes Thema hat einen Forscherauftrag', () => {
+    for (const t of THEMEN) expect(t.forscherauftrag.length).toBeGreaterThan(20)
   })
 })

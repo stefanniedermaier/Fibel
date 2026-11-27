@@ -22,6 +22,7 @@
     "units": {},
     "flashMs": 1500,
     "lernwoerter": [],
+    "muelltonnen": ["papier", "gelb", "bio", "glas", "rest"],
     "focus": {}
   },
   "grades": {

@@ -783,9 +783,638 @@
       "wen": "das Polizeiauto",
       "image": "1F693",
       "merksatz": "Mit dem Polizeiauto fährt die Polizei."
+    },
+    {
+      "id": "ampel-rot",
+      "text": "die rote Ampel",
+      "wen": "die rote Ampel",
+      "image": "fibel-ampel-rot",
+      "merksatz": "Bei Rot bleibst du stehen, auch wenn kein Auto kommt."
+    },
+    {
+      "id": "ampel-gruen",
+      "text": "die grüne Ampel",
+      "wen": "die grüne Ampel",
+      "image": "fibel-ampel-gruen",
+      "merksatz": "Bei Grün darfst du gehen. Schau vorher trotzdem nach links und rechts."
+    },
+    {
+      "id": "zebrastreifen",
+      "text": "der Zebrastreifen",
+      "wen": "den Zebrastreifen",
+      "image": "fibel-zebrastreifen",
+      "merksatz": "Am Zebrastreifen gehst du erst los, wenn die Autos stehen."
+    },
+    {
+      "id": "schild-ueberweg",
+      "text": "das Schild für den Zebrastreifen",
+      "wen": "das Schild für den Zebrastreifen",
+      "image": "fibel-schild-ueberweg",
+      "merksatz": "Dieses Schild zeigt: Hier ist ein Zebrastreifen."
+    },
+    {
+      "id": "schild-gehweg",
+      "text": "das Schild für den Gehweg",
+      "wen": "das Schild für den Gehweg",
+      "image": "fibel-schild-gehweg",
+      "merksatz": "Dieses Schild zeigt: Hier ist ein Weg für Fußgänger."
+    },
+    {
+      "id": "schild-kinder",
+      "text": "das Schild mit den Kindern",
+      "wen": "das Schild mit den Kindern",
+      "image": "1F6B8",
+      "merksatz": "Dieses Schild warnt Autofahrer: Achtung, hier sind Kinder."
+    },
+    {
+      "id": "bus",
+      "text": "der Bus",
+      "wen": "den Bus",
+      "image": "1F68C",
+      "merksatz": "Der Bus hält an der Haltestelle."
+    },
+    {
+      "id": "fahrrad",
+      "text": "das Fahrrad",
+      "wen": "das Fahrrad",
+      "image": "1F6B2",
+      "merksatz": "Beim Fahrradfahren trägst du einen Helm."
+    },
+    {
+      "id": "roller",
+      "text": "der Roller",
+      "wen": "den Roller",
+      "image": "1F6F4",
+      "merksatz": "Beim Rollerfahren trägst du einen Helm."
+    },
+    {
+      "id": "auto",
+      "text": "das Auto",
+      "wen": "das Auto",
+      "image": "1F697",
+      "merksatz": "Ein Auto braucht einen langen Weg, bis es anhält."
+    },
+    {
+      "id": "zug",
+      "text": "der Zug",
+      "wen": "den Zug",
+      "image": "1F686",
+      "merksatz": "Der Zug fährt auf Schienen."
+    },
+    {
+      "id": "strassenbahn",
+      "text": "die Straßenbahn",
+      "wen": "die Straßenbahn",
+      "image": "1F68B",
+      "merksatz": "Die Straßenbahn fährt auf Schienen durch die Stadt."
+    },
+    {
+      "id": "ubahn",
+      "text": "die U-Bahn",
+      "wen": "die U-Bahn",
+      "image": "1F687",
+      "merksatz": "Die U-Bahn fährt unter der Erde."
+    },
+    {
+      "id": "dampflok",
+      "text": "die Dampflok",
+      "wen": "die Dampflok",
+      "image": "1F682",
+      "merksatz": "Früher fuhren Züge mit Dampf."
+    },
+    {
+      "id": "ball",
+      "text": "der Ball",
+      "wen": "den Ball",
+      "image": "26BD",
+      "merksatz": "Rollt ein Ball auf die Straße, bleibst du stehen."
+    },
+    {
+      "id": "warnweste",
+      "text": "die Warnweste",
+      "wen": "die Warnweste",
+      "image": "1F9BA",
+      "merksatz": "Eine Warnweste leuchtet hell, wenn Licht darauf fällt."
+    },
+    {
+      "id": "taschenlampe",
+      "text": "die Taschenlampe",
+      "wen": "die Taschenlampe",
+      "image": "1F526",
+      "merksatz": "Mit einer Taschenlampe sehen dich andere im Dunkeln."
+    },
+    {
+      "id": "reflektor",
+      "text": "der Reflektor",
+      "wen": "den Reflektor",
+      "image": "fibel-reflektor",
+      "merksatz": "Ein Reflektor leuchtet hell, wenn Autolicht darauf fällt."
+    },
+    {
+      "id": "jacke-hell",
+      "text": "die helle Jacke",
+      "wen": "die helle Jacke",
+      "image": "fibel-jacke-hell",
+      "merksatz": "Eine helle Jacke sieht man im Dunkeln gut."
+    },
+    {
+      "id": "jacke-dunkel",
+      "text": "die dunkle Jacke",
+      "wen": "die dunkle Jacke",
+      "image": "fibel-jacke-dunkel",
+      "merksatz": "Eine dunkle Jacke sieht man im Dunkeln schlecht."
+    },
+    {
+      "id": "wasser",
+      "text": "das Wasser",
+      "wen": "das Wasser",
+      "image": "1F4A7",
+      "merksatz": "Wasser ist das beste Getränk bei Durst."
+    },
+    {
+      "id": "brot",
+      "text": "das Brot",
+      "wen": "das Brot",
+      "image": "1F35E",
+      "merksatz": "Brot macht lange satt."
+    },
+    {
+      "id": "haehnchen",
+      "text": "das Hähnchen",
+      "wen": "das Hähnchen",
+      "image": "1F357",
+      "merksatz": "Fleisch isst man nur manchmal."
+    },
+    {
+      "id": "fruehstuecksei",
+      "text": "das Ei",
+      "wen": "das Ei",
+      "image": "1F95A",
+      "merksatz": "Ein Ei isst man nur manchmal."
+    },
+    {
+      "id": "schokolade",
+      "text": "die Schokolade",
+      "wen": "die Schokolade",
+      "image": "1F36B",
+      "merksatz": "Süßes isst man nur selten."
+    },
+    {
+      "id": "lolli",
+      "text": "der Lolli",
+      "wen": "den Lolli",
+      "image": "1F36D",
+      "merksatz": "Zucker schadet den Zähnen."
+    },
+    {
+      "id": "pommes",
+      "text": "die Pommes",
+      "wen": "die Pommes",
+      "image": "1F35F",
+      "merksatz": "Pommes sind fettig. Die gibt es nur selten."
+    },
+    {
+      "id": "kuchen",
+      "text": "der Kuchen",
+      "wen": "den Kuchen",
+      "image": "1F370",
+      "merksatz": "Kuchen ist süß. Den gibt es nur selten."
+    },
+    {
+      "id": "limo",
+      "text": "die Limo",
+      "wen": "die Limo",
+      "image": "1F964",
+      "merksatz": "In Limo ist viel Zucker. Trink lieber Wasser."
+    },
+    {
+      "id": "zahnbuerste",
+      "text": "die Zahnbürste",
+      "wen": "die Zahnbürste",
+      "image": "1FAA5",
+      "merksatz": "Zähne putzt du morgens und abends."
+    },
+    {
+      "id": "zahn",
+      "text": "der Zahn",
+      "wen": "den Zahn",
+      "image": "1F9B7",
+      "merksatz": "Zucker schadet den Zähnen."
+    },
+    {
+      "id": "seife",
+      "text": "die Seife",
+      "wen": "die Seife",
+      "image": "1F9FC",
+      "merksatz": "Mit Seife werden die Hände sauber."
+    },
+    {
+      "id": "froh",
+      "text": "das fröhliche Gesicht",
+      "wen": "das fröhliche Gesicht",
+      "image": "1F600",
+      "merksatz": "Wer sich freut, lacht."
+    },
+    {
+      "id": "traurig",
+      "text": "das traurige Gesicht",
+      "wen": "das traurige Gesicht",
+      "image": "1F622",
+      "merksatz": "Wer traurig ist, weint manchmal. Dann hilft Trost."
+    },
+    {
+      "id": "wuetend",
+      "text": "das wütende Gesicht",
+      "wen": "das wütende Gesicht",
+      "image": "1F621",
+      "merksatz": "Wer wütend ist, kann tief durchatmen."
+    },
+    {
+      "id": "aengstlich",
+      "text": "das ängstliche Gesicht",
+      "wen": "das ängstliche Gesicht",
+      "image": "1F628",
+      "merksatz": "Wer Angst hat, sucht sich Hilfe bei einem Erwachsenen."
+    },
+    {
+      "id": "ueberrascht",
+      "text": "das überraschte Gesicht",
+      "wen": "das überraschte Gesicht",
+      "image": "1F632",
+      "merksatz": "Wer überrascht ist, macht große Augen."
+    },
+    {
+      "id": "muede",
+      "text": "das müde Gesicht",
+      "wen": "das müde Gesicht",
+      "image": "1F634",
+      "merksatz": "Wer müde ist, braucht Schlaf."
+    },
+    {
+      "id": "geschenk",
+      "text": "das Geschenk",
+      "wen": "das Geschenk",
+      "image": "1F381",
+      "merksatz": "Über ein Geschenk freut man sich."
+    },
+    {
+      "id": "luftballon",
+      "text": "der Luftballon",
+      "wen": "den Luftballon",
+      "image": "1F388",
+      "merksatz": "Fliegt der Luftballon weg, ist man traurig."
+    },
+    {
+      "id": "zeitung",
+      "text": "die Zeitung",
+      "wen": "die Zeitung",
+      "image": "1F4F0",
+      "merksatz": "Zeitungen gehören ins Altpapier."
+    },
+    {
+      "id": "karton",
+      "text": "der Karton",
+      "wen": "den Karton",
+      "image": "1F4E6",
+      "merksatz": "Kartons gehören ins Altpapier."
+    },
+    {
+      "id": "dose",
+      "text": "die Dose",
+      "wen": "die Dose",
+      "image": "1F96B",
+      "merksatz": "Dosen sind Verpackung. Sie gehören in die Gelbe Tonne."
+    },
+    {
+      "id": "saftkarton",
+      "text": "der Saftkarton",
+      "wen": "den Saftkarton",
+      "image": "1F9C3",
+      "merksatz": "Saftkartons sind Verpackung. Sie gehören in die Gelbe Tonne."
+    },
+    {
+      "id": "plastikflasche",
+      "text": "die Plastikflasche",
+      "wen": "die Plastikflasche",
+      "image": "1F9F4",
+      "merksatz": "Plastikverpackungen gehören in die Gelbe Tonne."
+    },
+    {
+      "id": "bananenschale",
+      "text": "die Bananenschale",
+      "wen": "die Bananenschale",
+      "image": "1F34C",
+      "merksatz": "Bananenschalen gehören in die Biotonne."
+    },
+    {
+      "id": "eierschalen",
+      "text": "die Eierschalen",
+      "wen": "die Eierschalen",
+      "image": "1F95A",
+      "merksatz": "Eierschalen gehören in die Biotonne."
+    },
+    {
+      "id": "laub",
+      "text": "das Laub",
+      "wen": "das Laub",
+      "image": "1F342",
+      "merksatz": "Laub gehört in die Biotonne oder auf den Kompost."
+    },
+    {
+      "id": "marmeladenglas",
+      "text": "das Marmeladenglas",
+      "wen": "das Marmeladenglas",
+      "image": "1FAD9",
+      "merksatz": "Leere Gläser kommen in den Glascontainer."
+    },
+    {
+      "id": "glasflasche",
+      "text": "die Glasflasche",
+      "wen": "die Glasflasche",
+      "image": "1F37E",
+      "merksatz": "Glasflaschen ohne Pfand kommen in den Glascontainer."
+    },
+    {
+      "id": "alte-zahnbuerste",
+      "text": "die alte Zahnbürste",
+      "wen": "die alte Zahnbürste",
+      "image": "1FAA5",
+      "merksatz": "Eine alte Zahnbürste gehört in den Restmüll."
+    },
+    {
+      "id": "schwamm",
+      "text": "der alte Schwamm",
+      "wen": "den alten Schwamm",
+      "image": "1F9FD",
+      "merksatz": "Ein alter Schwamm gehört in den Restmüll."
+    },
+    {
+      "id": "batterie",
+      "text": "die Batterie",
+      "wen": "die Batterie",
+      "image": "1F50B",
+      "merksatz": "Alte Batterien kommen in die Sammelbox im Laden."
+    },
+    {
+      "id": "brotdose",
+      "text": "die Brotdose",
+      "wen": "die Brotdose",
+      "image": "1F371",
+      "merksatz": "Eine Brotdose kann man jeden Tag wieder benutzen."
+    },
+    {
+      "id": "muelleimer",
+      "text": "der Mülleimer",
+      "wen": "den Mülleimer",
+      "image": "1F5D1",
+      "merksatz": "Müll gehört in den Mülleimer, nie in die Natur."
+    },
+    {
+      "id": "pferd",
+      "text": "das Pferd",
+      "wen": "das Pferd",
+      "image": "1F40E",
+      "merksatz": "Pferde gibt es wirklich."
+    },
+    {
+      "id": "elefant",
+      "text": "der Elefant",
+      "wen": "den Elefanten",
+      "image": "1F418",
+      "merksatz": "Elefanten leben heute in Afrika und Asien."
+    },
+    {
+      "id": "giraffe",
+      "text": "die Giraffe",
+      "wen": "die Giraffe",
+      "image": "1F992",
+      "merksatz": "Giraffen leben heute in Afrika."
+    },
+    {
+      "id": "dinosaurier",
+      "text": "der Dinosaurier",
+      "wen": "den Dinosaurier",
+      "image": "1F996",
+      "merksatz": "Dinosaurier lebten vor sehr langer Zeit. Heute gibt es sie nicht mehr."
+    },
+    {
+      "id": "langhals",
+      "text": "der Langhals-Dinosaurier",
+      "wen": "den Langhals-Dinosaurier",
+      "image": "1F995",
+      "merksatz": "Dinosaurier kennen wir von ihren Knochen."
+    },
+    {
+      "id": "mammut",
+      "text": "das Mammut",
+      "wen": "das Mammut",
+      "image": "1F9A3",
+      "merksatz": "Mammuts lebten früher in der Eiszeit."
+    },
+    {
+      "id": "einhorn",
+      "text": "das Einhorn",
+      "wen": "das Einhorn",
+      "image": "1F984",
+      "merksatz": "Einhörner gibt es nur in Geschichten."
+    },
+    {
+      "id": "drache",
+      "text": "der Drache",
+      "wen": "den Drachen",
+      "image": "1F409",
+      "merksatz": "Drachen gibt es nur in Märchen."
+    },
+    {
+      "id": "meerjungfrau",
+      "text": "die Meerjungfrau",
+      "wen": "die Meerjungfrau",
+      "image": "1F9DC-200D-2640-FE0F",
+      "merksatz": "Meerjungfrauen gibt es nur in Geschichten."
+    },
+    {
+      "id": "fee",
+      "text": "die Fee",
+      "wen": "die Fee",
+      "image": "1F9DA",
+      "merksatz": "Feen gibt es nur in Märchen."
+    },
+    {
+      "id": "gespenst",
+      "text": "das Gespenst",
+      "wen": "das Gespenst",
+      "image": "1F47B",
+      "merksatz": "Gespenster gibt es nicht. Sie sind ausgedacht."
+    },
+    {
+      "id": "gluehbirne",
+      "text": "die Glühbirne",
+      "wen": "die Glühbirne",
+      "image": "1F4A1",
+      "merksatz": "Heute machen wir Licht mit Strom."
+    },
+    {
+      "id": "kerze",
+      "text": "die Kerze",
+      "wen": "die Kerze",
+      "image": "1F56F",
+      "merksatz": "Früher machte man Licht mit Kerzen."
+    },
+    {
+      "id": "handy",
+      "text": "das Handy",
+      "wen": "das Handy",
+      "image": "1F4F1",
+      "merksatz": "Heute telefonieren viele mit dem Handy."
+    },
+    {
+      "id": "telefon",
+      "text": "das alte Telefon",
+      "wen": "das alte Telefon",
+      "image": "260E",
+      "merksatz": "Früher hing das Telefon an einem Kabel und stand zu Hause."
+    },
+    {
+      "id": "kutschpferd",
+      "text": "das Pferd",
+      "wen": "das Pferd",
+      "image": "1F40E",
+      "merksatz": "Früher zogen Pferde die Kutschen."
+    },
+    {
+      "id": "radio",
+      "text": "das Radio",
+      "wen": "das Radio",
+      "image": "1F4FB",
+      "merksatz": "Bevor es Fernseher gab, hörte man Radio."
+    },
+    {
+      "id": "fernseher",
+      "text": "der Fernseher",
+      "wen": "den Fernseher",
+      "image": "1F4FA",
+      "merksatz": "Fernseher gibt es seit ungefähr 70 Jahren."
+    },
+    {
+      "id": "computer",
+      "text": "der Computer",
+      "wen": "den Computer",
+      "image": "1F4BB",
+      "merksatz": "Computer gibt es noch nicht so lange."
     }
   ],
   "themen": [
+    {
+      "id": "verkehr",
+      "title": "Sicher zu Fuß",
+      "icon": "🚦",
+      "term": 1,
+      "lehrplan": "HSU 1/2 5.3",
+      "quelle": "LehrplanPLUS HSU 1/2, 5.3 (sich als Fußgänger sicher verhalten); StVO § 25 (Fußgänger benutzen den Gehweg), § 26 (Fußgängerüberweg), § 37 (Lichtzeichen); Schulweg-Hinweise von DVR und Polizei",
+      "forscherauftrag": "Geht zusammen den Weg zur Schule oder zum Spielplatz. Bleibt an jedem Bordstein stehen und schaut gemeinsam: links, rechts, links.",
+      "erkennen": [
+        "ampel-rot",
+        "ampel-gruen",
+        "zebrastreifen",
+        "schild-ueberweg",
+        "schild-gehweg",
+        "bus",
+        "fahrrad",
+        "auto"
+      ],
+      "sortieren": [
+        {
+          "id": "schienen",
+          "frage": "Fährt das auf Schienen oder auf der Straße?",
+          "gruppen": [
+            {
+              "id": "schienen",
+              "title": "auf Schienen",
+              "image": "1F6E4"
+            },
+            {
+              "id": "strasse",
+              "title": "auf der Straße",
+              "image": "1F6E3"
+            }
+          ],
+          "zuordnung": {
+            "zug": "schienen",
+            "strassenbahn": "schienen",
+            "ubahn": "schienen",
+            "dampflok": "schienen",
+            "bus": "strasse",
+            "auto": "strasse",
+            "traktor": "strasse",
+            "polizeiauto": "strasse"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Bei Rot bleibe ich stehen.",
+          "image": "fibel-ampel-rot",
+          "richtig": true,
+          "regel": "Bei Rot bleibst du immer stehen, auch wenn kein Auto kommt."
+        },
+        {
+          "text": "Bei Rot darf ich schnell über die Straße laufen, wenn kein Auto kommt.",
+          "image": "fibel-ampel-rot",
+          "richtig": false,
+          "regel": "Bei Rot bleibst du immer stehen, auch wenn kein Auto kommt."
+        },
+        {
+          "text": "Auch bei Grün schaue ich nach links und rechts, bevor ich gehe.",
+          "image": "fibel-ampel-gruen",
+          "richtig": true,
+          "regel": "Auch bei Grün schaust du, ob alle Autos stehen."
+        },
+        {
+          "text": "Am Zebrastreifen gehe ich erst los, wenn die Autos stehen.",
+          "image": "fibel-zebrastreifen",
+          "richtig": true,
+          "regel": "Am Zebrastreifen wartest du, bis die Autos stehen. Dann gehst du los."
+        },
+        {
+          "text": "Am Zebrastreifen renne ich los, ohne zu schauen.",
+          "image": "fibel-zebrastreifen",
+          "richtig": false,
+          "regel": "Am Zebrastreifen bleibst du am Bordstein stehen und schaust, ob die Autos halten."
+        },
+        {
+          "text": "Ich gehe auf dem Gehweg und nicht auf der Straße.",
+          "image": "fibel-schild-gehweg",
+          "richtig": true,
+          "regel": "Fußgänger gehen auf dem Gehweg."
+        },
+        {
+          "text": "Am Bordstein bleibe ich stehen und schaue: links, rechts, links.",
+          "image": "1F6B8",
+          "richtig": true,
+          "regel": "Am Bordstein bleibst du stehen und schaust: links, rechts, links."
+        },
+        {
+          "text": "Zwischen parkenden Autos laufe ich schnell über die Straße.",
+          "image": "1F697",
+          "richtig": false,
+          "regel": "Zwischen parkenden Autos sehen dich die Fahrer nicht. Geh lieber zur Ampel oder zum Zebrastreifen."
+        },
+        {
+          "text": "Rollt mein Ball auf die Straße, renne ich sofort hinterher.",
+          "image": "26BD",
+          "richtig": false,
+          "regel": "Bleib stehen! Ein Erwachsener holt den Ball."
+        },
+        {
+          "text": "Beim Rollerfahren trage ich einen Helm.",
+          "image": "1F6F4",
+          "richtig": true,
+          "regel": "Ein Helm schützt deinen Kopf."
+        }
+      ],
+      "ablaeufe": []
+    },
     {
       "id": "obst-gemuese",
       "title": "Obst und Gemüse",
@@ -867,7 +1496,9 @@
         }
       ],
       "paare": [],
-      "ablaeufe": ["apfel"]
+      "ablaeufe": ["apfel"],
+      "forscherauftrag": "Geht zusammen auf den Markt oder in den Supermarkt: Welches Obst und Gemüse kommt gerade aus Deutschland?",
+      "aussagen": []
     },
     {
       "id": "sinne",
@@ -935,7 +1566,86 @@
         }
       ],
       "ablaeufe": [],
-      "merke": "richtig"
+      "merke": "richtig",
+      "forscherauftrag": "Verbindet dem Kind die Augen und lasst es Dinge nur durch Fühlen, Riechen oder Schmecken erraten.",
+      "aussagen": []
+    },
+    {
+      "id": "sichtbar",
+      "title": "Gut sichtbar im Dunkeln",
+      "icon": "🔦",
+      "term": 1,
+      "lehrplan": "HSU 1/2 5.3",
+      "quelle": "LehrplanPLUS HSU 1/2, 5.3 (Bedeutung der Sichtbarkeit im Straßenverkehr); StVZO § 67 (Beleuchtung am Fahrrad); Hinweise von DVR und ADAC zur Sichtbarkeit",
+      "forscherauftrag": "Macht abends im dunklen Zimmer eine Taschenlampe an und leuchtet auf eine helle Jacke, eine dunkle Jacke und einen Reflektor. Was sieht man am besten?",
+      "erkennen": ["warnweste", "taschenlampe", "reflektor", "jacke-hell", "jacke-dunkel"],
+      "sortieren": [
+        {
+          "id": "sichtbar",
+          "frage": "Hilft das, damit dich Autofahrer im Dunkeln sehen?",
+          "gruppen": [
+            {
+              "id": "ja",
+              "title": "hilft",
+              "image": "1F44D"
+            },
+            {
+              "id": "nein",
+              "title": "hilft nicht",
+              "image": "1F44E"
+            }
+          ],
+          "zuordnung": {
+            "warnweste": "ja",
+            "taschenlampe": "ja",
+            "reflektor": "ja",
+            "jacke-hell": "ja",
+            "jacke-dunkel": "nein",
+            "sonnenbrille": "nein",
+            "kappe": "nein"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Im Dunkeln sieht man helle Kleidung besser als dunkle.",
+          "image": "fibel-jacke-hell",
+          "richtig": true,
+          "regel": "Helle Kleidung sieht man im Dunkeln viel besser."
+        },
+        {
+          "text": "Eine dunkle Jacke sieht man nachts besonders gut.",
+          "image": "fibel-jacke-dunkel",
+          "richtig": false,
+          "regel": "Eine dunkle Jacke sieht man im Dunkeln schlecht. Zieh etwas Helles an."
+        },
+        {
+          "text": "Ein Reflektor leuchtet, wenn das Licht von einem Auto darauf fällt.",
+          "image": "fibel-reflektor",
+          "richtig": true,
+          "regel": "Reflektoren werfen das Licht zurück. So sieht dich der Autofahrer."
+        },
+        {
+          "text": "Eine Warnweste hilft, dass Autofahrer mich sehen.",
+          "image": "1F9BA",
+          "richtig": true,
+          "regel": "Mit einer Warnweste sieht man dich schon von weitem."
+        },
+        {
+          "text": "Mit einer Sonnenbrille sieht man mich im Dunkeln besser.",
+          "image": "1F576",
+          "richtig": false,
+          "regel": "Eine Sonnenbrille hilft nicht im Dunkeln. Helle Kleidung und Reflektoren helfen."
+        },
+        {
+          "text": "Ein Fahrrad braucht im Dunkeln Licht vorne und hinten.",
+          "image": "1F6B2",
+          "richtig": true,
+          "regel": "Am Fahrrad gehört vorne ein weißes und hinten ein rotes Licht."
+        }
+      ],
+      "ablaeufe": []
     },
     {
       "id": "jahreszeiten",
@@ -989,7 +1699,9 @@
         }
       ],
       "paare": [],
-      "ablaeufe": ["tag", "morgen"]
+      "ablaeufe": ["tag", "morgen"],
+      "forscherauftrag": "Sucht euch einen Baum in der Nähe und schaut ihn euch in jeder Jahreszeit an. Was hat sich verändert?",
+      "aussagen": []
     },
     {
       "id": "feste",
@@ -1042,7 +1754,9 @@
         }
       ],
       "paare": [],
-      "ablaeufe": []
+      "ablaeufe": [],
+      "forscherauftrag": "Hängt einen Kalender auf und malt die Feste des Jahres ein.",
+      "aussagen": []
     },
     {
       "id": "wetter",
@@ -1086,7 +1800,157 @@
           "merke": "richtig"
         }
       ],
-      "ablaeufe": ["regen", "schneemann"]
+      "ablaeufe": ["regen", "schneemann"],
+      "forscherauftrag": "Schaut eine Woche lang jeden Morgen aus dem Fenster und malt das Wetter auf.",
+      "aussagen": []
+    },
+    {
+      "id": "gesund",
+      "title": "Gesund essen, gesunde Zähne",
+      "icon": "🦷",
+      "term": 1,
+      "lehrplan": "HSU 1/2 2.1",
+      "quelle": "LehrplanPLUS HSU 1/2, 2.1 (gesunde Ernährung, Zahnpflege); Ernährungspyramide des Bundeszentrums für Ernährung",
+      "forscherauftrag": "Schaut zusammen in den Kühlschrank: Was davon esst ihr oft, was manchmal, was nur selten?",
+      "erkennen": ["zahnbuerste", "zahn", "seife", "wasser", "brot", "lolli"],
+      "sortieren": [
+        {
+          "id": "wie-oft",
+          "frage": "Wie oft sollte man das essen oder trinken?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "oft",
+              "title": "oft",
+              "image": "1F7E2"
+            },
+            {
+              "id": "manchmal",
+              "title": "manchmal",
+              "image": "1F7E1"
+            },
+            {
+              "id": "selten",
+              "title": "selten",
+              "image": "1F534"
+            }
+          ],
+          "zuordnung": {
+            "wasser": "oft",
+            "apfel": "oft",
+            "karotte": "oft",
+            "brot": "oft",
+            "brokkoli": "oft",
+            "fruehstuecksei": "manchmal",
+            "haehnchen": "manchmal",
+            "schokolade": "selten",
+            "lolli": "selten",
+            "pommes": "selten",
+            "kuchen": "selten",
+            "limo": "selten"
+          }
+        }
+      ],
+      "paare": [
+        {
+          "frage": "Womit putzt du die Zähne?",
+          "ziel": "zahn",
+          "richtig": "zahnbuerste",
+          "ablenker": ["seife", "lineal"]
+        },
+        {
+          "frage": "Womit wäschst du die Hände?",
+          "ziel": "hand",
+          "richtig": "seife",
+          "ablenker": ["zahnbuerste", "schere"]
+        },
+        {
+          "frage": "Was trinkst du am besten bei Durst?",
+          "ziel": "sonne",
+          "richtig": "wasser",
+          "ablenker": ["limo", "kuchen"]
+        }
+      ],
+      "merke": "richtig",
+      "aussagen": [
+        {
+          "text": "Zähne putzt man morgens und abends.",
+          "image": "1FAA5",
+          "richtig": true,
+          "regel": "Morgens und abends Zähne putzen, so bleiben sie gesund."
+        },
+        {
+          "text": "Süßigkeiten sind gut für die Zähne.",
+          "image": "1F36D",
+          "richtig": false,
+          "regel": "Zucker schadet den Zähnen. Süßes gibt es nur selten."
+        },
+        {
+          "text": "Bei Durst ist Wasser ein gutes Getränk.",
+          "image": "1F4A7",
+          "richtig": true,
+          "regel": "Wasser ist das beste Getränk bei Durst."
+        },
+        {
+          "text": "Vor dem Essen wasche ich mir die Hände.",
+          "image": "1F9FC",
+          "richtig": true,
+          "regel": "Vor dem Essen und nach der Toilette wäschst du die Hände mit Seife."
+        },
+        {
+          "text": "Limo kann man den ganzen Tag trinken.",
+          "image": "1F964",
+          "richtig": false,
+          "regel": "In Limo ist viel Zucker. Trink lieber Wasser."
+        },
+        {
+          "text": "Obst und Gemüse darf man jeden Tag essen.",
+          "image": "1F34E",
+          "richtig": true,
+          "regel": "Obst und Gemüse isst du am besten jeden Tag."
+        }
+      ],
+      "ablaeufe": ["haende"]
+    },
+    {
+      "id": "gefuehle",
+      "title": "Gefühle erkennen",
+      "icon": "😀",
+      "term": 1,
+      "lehrplan": "HSU 1/2 2.2",
+      "quelle": "LehrplanPLUS HSU 1/2, 2.2 (Gefühle wahrnehmen und benennen)",
+      "forscherauftrag": "Spielt Gefühle vor dem Spiegel: Wie sieht ein fröhliches, trauriges oder überraschtes Gesicht aus? Die anderen raten.",
+      "erkennen": ["froh", "traurig", "wuetend", "aengstlich", "ueberrascht", "muede"],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "Ein Kind bekommt ein Geschenk. Wie fühlt es sich wohl?",
+          "ziel": "geschenk",
+          "richtig": "froh",
+          "ablenker": ["traurig", "wuetend"]
+        },
+        {
+          "frage": "Der Luftballon ist weggeflogen. Wie fühlt sich das Kind wohl?",
+          "ziel": "luftballon",
+          "richtig": "traurig",
+          "ablenker": ["froh", "ueberrascht"]
+        },
+        {
+          "frage": "Es donnert laut. Wie fühlt sich das Kind wohl?",
+          "ziel": "gewitter",
+          "richtig": "aengstlich",
+          "ablenker": ["froh", "muede"]
+        },
+        {
+          "frage": "Es ist spät am Abend. Wie fühlt sich das Kind wohl?",
+          "ziel": "mond",
+          "richtig": "muede",
+          "ablenker": ["wuetend", "ueberrascht"]
+        }
+      ],
+      "merke": "richtig",
+      "aussagen": [],
+      "ablaeufe": []
     },
     {
       "id": "wiese",
@@ -1134,7 +1998,95 @@
         }
       ],
       "paare": [],
-      "ablaeufe": ["schmetterling-kurz", "blume"]
+      "ablaeufe": ["schmetterling-kurz", "blume"],
+      "forscherauftrag": "Setzt euch zehn Minuten auf eine Wiese und zählt, wie viele verschiedene Tiere ihr seht.",
+      "aussagen": []
+    },
+    {
+      "id": "muell",
+      "title": "Müll trennen",
+      "icon": "♻️",
+      "term": 2,
+      "lehrplan": "HSU 1/2 3.2, 5.2",
+      "quelle": "LehrplanPLUS HSU 1/2, 3.2 (Müll vermeiden und trennen) und 5.2; Abfalltrennung nach Verpackungsgesetz (Gelbe Tonne/Gelber Sack) und Batteriegesetz (Rücknahme im Handel)",
+      "forscherauftrag": "Sammelt einen Tag lang den Müll der Familie und sortiert ihn zusammen in die richtigen Tonnen.",
+      "erkennen": [],
+      "sortieren": [
+        {
+          "id": "tonne",
+          "frage": "In welche Tonne gehört das?",
+          "muell": true,
+          "gruppen": [
+            {
+              "id": "papier",
+              "title": "Papiertonne",
+              "image": "fibel-tonne-papier"
+            },
+            {
+              "id": "gelb",
+              "title": "Gelbe Tonne",
+              "image": "fibel-tonne-gelb"
+            },
+            {
+              "id": "bio",
+              "title": "Biotonne",
+              "image": "fibel-tonne-bio"
+            },
+            {
+              "id": "glas",
+              "title": "Glascontainer",
+              "image": "fibel-glascontainer"
+            },
+            {
+              "id": "rest",
+              "title": "Restmüll",
+              "image": "fibel-tonne-rest"
+            }
+          ],
+          "zuordnung": {
+            "zeitung": "papier",
+            "karton": "papier",
+            "dose": "gelb",
+            "saftkarton": "gelb",
+            "plastikflasche": "gelb",
+            "bananenschale": "bio",
+            "eierschalen": "bio",
+            "laub": "bio",
+            "marmeladenglas": "glas",
+            "glasflasche": "glas",
+            "alte-zahnbuerste": "rest",
+            "schwamm": "rest"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Alte Batterien gehören in den Restmüll.",
+          "image": "1F50B",
+          "richtig": false,
+          "regel": "Alte Batterien kommen in die Sammelbox im Laden."
+        },
+        {
+          "text": "Eine Brotdose spart Müll.",
+          "image": "1F371",
+          "richtig": true,
+          "regel": "Eine Brotdose kann man jeden Tag wieder benutzen. So entsteht weniger Müll."
+        },
+        {
+          "text": "Müll darf man auf der Wiese liegen lassen.",
+          "image": "1F5D1",
+          "richtig": false,
+          "regel": "Müll gehört in den Mülleimer, nie in die Natur."
+        },
+        {
+          "text": "Aus Altpapier macht man neues Papier.",
+          "image": "1F4F0",
+          "richtig": true,
+          "regel": "Aus Altpapier wird neues Papier gemacht."
+        }
+      ],
+      "ablaeufe": []
     },
     {
       "id": "tiere",
@@ -1215,7 +2167,9 @@
           "ablenker": ["ei", "wolle", "honig"]
         }
       ],
-      "ablaeufe": ["huhn"]
+      "ablaeufe": ["huhn"],
+      "forscherauftrag": "Besucht einen Bauernhof oder Tierpark: Welche Tiere geben uns etwas?",
+      "aussagen": []
     },
     {
       "id": "hecke",
@@ -1258,7 +2212,9 @@
           "ablenker": ["eis", "apfel"]
         }
       ],
-      "ablaeufe": ["kette-amsel", "kette-eule"]
+      "ablaeufe": ["kette-amsel", "kette-eule"],
+      "forscherauftrag": "Beobachtet einen Vogel am Futterhaus oder in der Hecke: Was frisst er?",
+      "aussagen": []
     },
     {
       "id": "berufe",
@@ -1334,7 +2290,143 @@
         }
       ],
       "ablaeufe": [],
-      "merke": "richtig"
+      "merke": "richtig",
+      "forscherauftrag": "Fragt Verwandte nach ihrem Beruf: Welche Werkzeuge brauchen sie?",
+      "aussagen": []
+    },
+    {
+      "id": "wirklich",
+      "title": "Gibt es das wirklich?",
+      "icon": "🦄",
+      "term": 2,
+      "lehrplan": "HSU 1/2 4.3",
+      "quelle": "LehrplanPLUS HSU 1/2, 4.3 (zwischen Wirklichkeit und Fantasie unterscheiden)",
+      "forscherauftrag": "Lest zusammen ein Märchen. Was darin gibt es wirklich, was ist ausgedacht?",
+      "erkennen": ["dinosaurier", "mammut", "einhorn", "drache", "meerjungfrau", "fee"],
+      "sortieren": [
+        {
+          "id": "wirklich",
+          "frage": "Gibt es das wirklich?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "heute",
+              "title": "gibt es heute",
+              "image": "1F30D"
+            },
+            {
+              "id": "frueher",
+              "title": "gab es früher",
+              "image": "1F9B4"
+            },
+            {
+              "id": "erfunden",
+              "title": "nur in Geschichten",
+              "image": "1F4D6"
+            }
+          ],
+          "zuordnung": {
+            "pferd": "heute",
+            "elefant": "heute",
+            "giraffe": "heute",
+            "dinosaurier": "frueher",
+            "langhals": "frueher",
+            "mammut": "frueher",
+            "einhorn": "erfunden",
+            "drache": "erfunden",
+            "meerjungfrau": "erfunden",
+            "fee": "erfunden",
+            "gespenst": "erfunden"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Dinosaurier leben heute noch im Wald.",
+          "image": "1F996",
+          "richtig": false,
+          "regel": "Dinosaurier lebten vor sehr langer Zeit. Heute gibt es sie nicht mehr."
+        },
+        {
+          "text": "Einhörner gibt es nur in Geschichten.",
+          "image": "1F984",
+          "richtig": true,
+          "regel": "Einhörner sind ausgedacht."
+        },
+        {
+          "text": "Elefanten gibt es wirklich.",
+          "image": "1F418",
+          "richtig": true,
+          "regel": "Elefanten leben heute in Afrika und Asien."
+        },
+        {
+          "text": "Drachen wohnen in unserem Garten.",
+          "image": "1F409",
+          "richtig": false,
+          "regel": "Drachen gibt es nur in Märchen."
+        }
+      ],
+      "ablaeufe": []
+    },
+    {
+      "id": "frueher",
+      "title": "Früher und heute",
+      "icon": "🕯️",
+      "term": 2,
+      "lehrplan": "HSU 1/2 4.2",
+      "quelle": "LehrplanPLUS HSU 1/2, 4.2 (Veränderungen im Alltag früher und heute)",
+      "forscherauftrag": "Fragt Oma, Opa oder ältere Nachbarn: Was gab es früher noch nicht, als sie Kinder waren?",
+      "erkennen": [],
+      "sortieren": [],
+      "paare": [
+        {
+          "frage": "Heute machen wir Licht mit Strom. Womit machte man früher Licht?",
+          "ziel": "gluehbirne",
+          "richtig": "kerze",
+          "ablenker": ["taschenlampe", "handy"]
+        },
+        {
+          "frage": "Heute telefonieren viele mit dem Handy. Womit telefonierte man früher?",
+          "ziel": "handy",
+          "richtig": "telefon",
+          "ablenker": ["computer", "fernseher"]
+        },
+        {
+          "frage": "Heute fahren viele mit dem Auto. Wer zog früher die Kutschen?",
+          "ziel": "auto",
+          "richtig": "kutschpferd",
+          "ablenker": ["fahrrad", "bus"]
+        },
+        {
+          "frage": "Bevor es Fernseher gab: Was hörte man da?",
+          "ziel": "fernseher",
+          "richtig": "radio",
+          "ablenker": ["handy", "computer"]
+        },
+        {
+          "frage": "Heute fahren Züge mit Strom. Womit fuhren Züge früher?",
+          "ziel": "zug",
+          "richtig": "dampflok",
+          "ablenker": ["auto", "bus"]
+        }
+      ],
+      "merke": "richtig",
+      "aussagen": [
+        {
+          "text": "Früher gab es noch keine Handys.",
+          "image": "1F4F1",
+          "richtig": true,
+          "regel": "Handys gibt es erst seit ungefähr 30 Jahren."
+        },
+        {
+          "text": "Früher hatten alle Kinder einen Computer.",
+          "image": "1F4BB",
+          "richtig": false,
+          "regel": "Computer gibt es noch nicht so lange."
+        }
+      ],
+      "ablaeufe": []
     }
   ]
 }

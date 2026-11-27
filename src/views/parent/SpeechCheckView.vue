@@ -6,6 +6,7 @@ import { DEFAULT_LAND, getLand } from '@/core/content'
 import { stopSpeaking } from '@/core/speech'
 import { getDb, getMeta, setMeta } from '@/core/storage/db'
 import { resolveListenWords } from '@/core/hoeren'
+import { BEGRIFFE, THEMEN } from '@/exercises/sache/shared'
 import { baseSyllables, resolveWords } from '@/core/words'
 import { useAppStore } from '@/stores/app'
 
@@ -38,6 +39,26 @@ const groups = computed<{ title: string; items: Item[] }[]>(() => [
     items: resolveListenWords(land.value, GRADE)
       .filter((w) => w.source === 'hoeren')
       .map((w) => ({ key: `hoer:${w.id}`, label: w.text, speak: w.say ?? w.text, image: w.image })),
+  },
+  {
+    title: 'HSU: Begriffe und Merksätze',
+    items: BEGRIFFE.map((b) => ({
+      key: `hsu:${b.id}`,
+      label: b.text,
+      speak: `${b.text}. ${b.merksatz}`,
+      image: b.image,
+    })),
+  },
+  {
+    title: 'HSU: Stimmt das?',
+    items: THEMEN.flatMap((t) =>
+      t.aussagen.map((a, i) => ({
+        key: `hsu-aussage:${t.id}:${i}`,
+        label: a.text,
+        speak: `${a.text} ${a.regel}`,
+        image: a.image,
+      })),
+    ),
   },
   {
     title: 'Silben',
@@ -98,7 +119,7 @@ const copied = ref(false)
 async function copyList() {
   const text = flagged.value.map(
     (i) =>
-      `${({ wort: 'Wort', hoer: 'Hörwort', silbe: 'Silbe' } as Record<string, string>)[i.key.split(':')[0]!]}: ${i.label}`,
+      `${({ wort: 'Wort', hoer: 'Hörwort', silbe: 'Silbe', hsu: 'HSU', 'hsu-aussage': 'HSU-Aussage' } as Record<string, string>)[i.key.split(':')[0]!]}: ${i.label}`,
   )
   await navigator.clipboard?.writeText(text.join('\n'))
   copied.value = true

@@ -186,6 +186,15 @@ export function checkSache(images: ReadonlySet<string>): string[] {
         problems.push(`${where}, „${p.frage}“: gleiche Bilder`)
       if (!p.frage.endsWith('?')) problems.push(`${where}, „${p.frage}“: ohne Fragezeichen`)
     }
+    if (!t.forscherauftrag) problems.push(`${where}: Forscherauftrag fehlt`)
+    if (!t.lehrplan || !t.quelle) problems.push(`${where}: Lehrplan oder Quelle fehlt`)
+    for (const a of t.aussagen) {
+      if (!images.has(a.image)) problems.push(`${where}, „${a.text}“: Bild ${a.image} fehlt`)
+      if (!a.text.endsWith('.') || !a.regel.endsWith('.'))
+        problems.push(`${where}, „${a.text}“: Aussage und Regel enden mit Punkt`)
+    }
+    if (t.aussagen.length > 0 && t.aussagen.every((a) => a.richtig === t.aussagen[0]!.richtig))
+      problems.push(`${where}: Aussagen sind alle richtig oder alle falsch`)
     for (const id of t.ablaeufe)
       if (!ablaufIds.has(id)) problems.push(`${where}: Ablauf „${id}“ fehlt`)
   }

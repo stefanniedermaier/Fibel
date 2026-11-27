@@ -704,6 +704,42 @@
     "title": "Uhr stellen"
   },
   {
+    "id": "k1.sache.verkehr.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.verkehr",
+    "unit": "k1.sache.verkehr",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "verkehr"
+    },
+    "title": "Sicher zu Fuß: Was ist das?"
+  },
+  {
+    "id": "k1.sache.verkehr.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.verkehr",
+    "unit": "k1.sache.verkehr",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "verkehr"
+    },
+    "title": "Sicher zu Fuß: Sortieren"
+  },
+  {
+    "id": "k1.sache.verkehr.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.verkehr",
+    "unit": "k1.sache.verkehr",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "verkehr"
+    },
+    "title": "Sicher zu Fuß: Stimmt das?"
+  },
+  {
     "id": "k1.sache.obst-gemuese.erkennen",
     "grade": 1,
     "topic": "sache",
@@ -763,6 +799,42 @@
       "thema": "sinne"
     },
     "title": "Meine Sinne: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.sichtbar.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.sichtbar",
+    "unit": "k1.sache.sichtbar",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "sichtbar"
+    },
+    "title": "Gut sichtbar im Dunkeln: Was ist das?"
+  },
+  {
+    "id": "k1.sache.sichtbar.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.sichtbar",
+    "unit": "k1.sache.sichtbar",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "sichtbar"
+    },
+    "title": "Gut sichtbar im Dunkeln: Sortieren"
+  },
+  {
+    "id": "k1.sache.sichtbar.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.sichtbar",
+    "unit": "k1.sache.sichtbar",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "sichtbar"
+    },
+    "title": "Gut sichtbar im Dunkeln: Stimmt das?"
   },
   {
     "id": "k1.sache.jahreszeiten.sortieren",
@@ -851,6 +923,91 @@
     "weight": 0.4
   },
   {
+    "id": "k1.sache.gesund.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.gesund",
+    "unit": "k1.sache.gesund",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "gesund"
+    },
+    "title": "Gesund essen, gesunde Zähne: Was ist das?"
+  },
+  {
+    "id": "k1.sache.gesund.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.gesund",
+    "unit": "k1.sache.gesund",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "gesund"
+    },
+    "title": "Gesund essen, gesunde Zähne: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.gesund.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.gesund",
+    "unit": "k1.sache.gesund",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "gesund"
+    },
+    "title": "Gesund essen, gesunde Zähne: Sortieren"
+  },
+  {
+    "id": "k1.sache.gesund.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.gesund",
+    "unit": "k1.sache.gesund",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "gesund"
+    },
+    "title": "Gesund essen, gesunde Zähne: Stimmt das?"
+  },
+  {
+    "id": "k1.sache.gesund.reihenfolge",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.gesund",
+    "unit": "k1.sache.gesund",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["haende"]
+    },
+    "title": "Gesund essen, gesunde Zähne: Was kommt zuerst?",
+    "weight": 0.4
+  },
+  {
+    "id": "k1.sache.gefuehle.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.gefuehle",
+    "unit": "k1.sache.gefuehle",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "gefuehle"
+    },
+    "title": "Gefühle erkennen: Was ist das?"
+  },
+  {
+    "id": "k1.sache.gefuehle.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.gefuehle",
+    "unit": "k1.sache.gefuehle",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "gefuehle"
+    },
+    "title": "Gefühle erkennen: Was gehört zusammen?"
+  },
+  {
     "id": "k1.sache.wiese.erkennen",
     "grade": 1,
     "topic": "sache",
@@ -886,6 +1043,30 @@
     },
     "title": "Auf der Wiese: Was kommt zuerst?",
     "weight": 0.4
+  },
+  {
+    "id": "k1.sache.muell.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.muell",
+    "unit": "k1.sache.muell",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "muell"
+    },
+    "title": "Müll trennen: Sortieren"
+  },
+  {
+    "id": "k1.sache.muell.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.muell",
+    "unit": "k1.sache.muell",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "muell"
+    },
+    "title": "Müll trennen: Stimmt das?"
   },
   {
     "id": "k1.sache.tiere.erkennen",
@@ -996,5 +1177,65 @@
       "thema": "berufe"
     },
     "title": "Berufe und Werkzeuge: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.wirklich.erkennen",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wirklich",
+    "unit": "k1.sache.wirklich",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "wirklich"
+    },
+    "title": "Gibt es das wirklich?: Was ist das?"
+  },
+  {
+    "id": "k1.sache.wirklich.sortieren",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wirklich",
+    "unit": "k1.sache.wirklich",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "wirklich"
+    },
+    "title": "Gibt es das wirklich?: Sortieren"
+  },
+  {
+    "id": "k1.sache.wirklich.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.wirklich",
+    "unit": "k1.sache.wirklich",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "wirklich"
+    },
+    "title": "Gibt es das wirklich?: Stimmt das?"
+  },
+  {
+    "id": "k1.sache.frueher.paare",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.frueher",
+    "unit": "k1.sache.frueher",
+    "exercise": "sache.paare",
+    "params": {
+      "thema": "frueher"
+    },
+    "title": "Früher und heute: Was gehört zusammen?"
+  },
+  {
+    "id": "k1.sache.frueher.stimmt-das",
+    "grade": 1,
+    "topic": "sache",
+    "category": "sache.frueher",
+    "unit": "k1.sache.frueher",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "frueher"
+    },
+    "title": "Früher und heute: Stimmt das?"
   }
 ]

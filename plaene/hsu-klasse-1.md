@@ -214,7 +214,22 @@ Session-Engine, Leitner, Sterne, Kronen und Statistik bleiben unverändert; die 
 - Nach jeder richtigen Antwort spricht die App den Merksatz des Begriffs.
 - Inhalte: `src/data/basis/klasse-1/sache.json` mit 112 Begriffen; `data:check` prüft Begriffe, Bilder, Gruppen, Paare und Abläufe.
 - **Abweichungen:** „Zeit“ heißt „Zeit und Jahreszeiten“ und übt Jahreszeiten und Tagesabläufe; die Uhr selbst bleibt im Fach Uhr. Abläufe zählen im HSU weniger (Gewicht 0,4), damit sich zwei Abläufe in einer Einheit nicht ständig wiederholen.
-- **Offen:** alle Begriffe und Merksätze auf dem Gerät anhören, Testrunde mit dem Kind.
+
+**Stand (27.11.2026, Version 0.7.0):** Stufe 2 ist umgesetzt.
+
+- Modul `sache.stimmt-das`: Eine Aussage mit Bild wird vorgelesen („Bei Rot bleibe ich stehen.“). Das Kind tippt 👍 „stimmt“ oder 👎 „stimmt nicht“, danach wird die Regel vorgelesen.
+- Sieben neue Themen. Insgesamt sind es jetzt 16, im Jahreslauf geordnet:
+  - Halbjahr 1: **Sicher zu Fuß**, **Gut sichtbar im Dunkeln**, **Gesund essen, gesunde Zähne** und **Gefühle erkennen** (nur Gesichter und eindeutige Situationen, keine Abfrage eigener Gefühle).
+  - Halbjahr 2: **Müll trennen**, **Gibt es das wirklich?** (gibt es heute, gab es früher, nur in Geschichten) und **Früher und heute**.
+- Eigene Zeichnungen im Stil von OpenMoji liegen in `src/data/bilder/` (Code `fibel-…`, MIT). Es gibt Fußgängerampel rot und grün, Zebrastreifen, die Zeichen Fußgängerüberweg (Z 350) und Gehweg (Z 239), fünf Mülltonnen, helle und dunkle Jacke sowie einen Reflektor. `npm run data:openmoji` kopiert sie mit.
+- Im Elternbereich wählen die Eltern, welche Mülltonnen es zu Hause gibt. Beim Sortieren erscheinen nur diese als Gruppen; Begriffe für fehlende Tonnen fallen weg. Unter jedem HSU-Thema steht ein **Forscherauftrag** zum gemeinsamen Ausprobieren. Den Schwerpunkt gibt es im HSU nicht, weil es kein „Alles gemischt“ gibt.
+- Sprachtest im Elternbereich: Er hat zwei neue Gruppen, „HSU: Begriffe und Merksätze“ und „HSU: Stimmt das?“.
+- Inhalte: 186 Begriffe. `data:check` prüft zusätzlich Aussagen (Bild, Punkt am Ende, nicht alle gleich beantwortet), Forscherauftrag, Lehrplan und Quelle.
+- Die Verkehrsregeln folgen StVO §§ 25, 26 und 37 sowie StVZO § 67 (Licht am Fahrrad) und den Schulweg-Hinweisen von DVR und Polizei. Die Quellen stehen je Thema in `sache.json`.
+
+**Abweichungen:** Die Mülltrennung kennt fünf Gruppen; Gelbe Tonne und Gelber Sack zählen als eine. Batterien gehören in keine Tonne und kommen deshalb nur als Aussage vor. „Früher und heute“ nutzt Paare statt Sortieren, weil vieles von früher (Pferde, Radio) auch heute noch da ist.
+
+- **Offen:** alle Begriffe, Merksätze und Aussagen auf dem Gerät anhören; Verkehrsregeln von einer Lehrkraft oder Verkehrserzieherin gegenlesen lassen; Testrunde mit dem Kind; Stufe 3 (Suchbilder, Draufsicht, Jahreskreis).
 
 **Zeitlich:** Stufe 1 lässt sich noch im laufenden Schuljahr nutzen; die Themen ab Frühling (Wiese, Tiere, Hecke, Berufe) liegen dann genau im Zeitraum der Schule. Das Verkehrsthema gehört an den Schuljahresanfang und kommt deshalb mit Stufe 2 rechtzeitig vor September 2027. Ab Klasse 2 läuft der Bereich weiter ([klasse-2.md](klasse-2.md), Abschnitt 10).
 
