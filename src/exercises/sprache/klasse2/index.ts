@@ -4,13 +4,15 @@
  * "pick the right one" tasks with text answers (WahlTask).
  */
 import sprache from '@/data/basis/klasse-2/sprache.json'
+import sprache3 from '@/data/basis/klasse-3/sprache.json'
 import { pickOne, shuffle, type Rng } from '@/core/random'
 import type { Word } from '@/core/types'
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import type { ExerciseModule, LearnerContext } from '../../types'
 import { findWord, gradeWords, itemId, spoken } from '../../lesen/shared'
 
-const words = (ctx: LearnerContext) => gradeWords(ctx, { wordGrade: 2 })
+// Grade 3 has its own dictionary (with articles, plurals and verb forms).
+const words = (ctx: LearnerContext) => gradeWords(ctx, { wordGrade: ctx.grade >= 3 ? 3 : 2 })
 const choices = (labels: readonly string[], rng: Rng) =>
   shuffle([...labels], rng).map((t) => ({ key: t, label: t }))
 const lower = (t: string) => t.toLowerCase()
@@ -18,11 +20,13 @@ const lower = (t: string) => t.toLowerCase()
 // --- SP2-2, SP2-6: Wortarten -------------------------------------------------
 
 export const WORTART_NAMES = { nomen: 'Nomen', verb: 'Verb', adjektiv: 'Adjektiv' } as const
+const ARTIKEL = ['der', 'die', 'das', 'ein', 'eine']
 type Haupt = keyof typeof WORTART_NAMES
 
 export interface WortartParams {
-  /** 'nomen': which of three words is a noun? 'wortart': noun, verb or adjective? */
-  mode: 'nomen' | 'wortart'
+  /** 'nomen': which of three words is a noun? 'wortart': noun, verb or adjective?
+   * 'wortart4' (grade 3): also articles. */
+  mode: 'nomen' | 'wortart' | 'wortart4'
 }
 
 export const wortart: ExerciseModule<WortartParams, WahlData> = {
@@ -33,10 +37,33 @@ export const wortart: ExerciseModule<WortartParams, WahlData> = {
     return words(ctx)
       .filter((w) => (params.mode === 'nomen' ? w.wortart === 'nomen' : w.wortart in WORTART_NAMES))
       .map((w) => `sprache.wortart:${params.mode}:${w.id}`)
+      .concat(
+        params.mode === 'wortart4'
+          ? ARTIKEL.map((a) => `sprache.wortart:wortart4:artikel-${a}`)
+          : [],
+      )
   },
 
   generate(ctx, params, itemKey, rng) {
     const id = itemId(itemKey).split(':')[1]!
+    const names =
+      params.mode === 'wortart4'
+        ? [...Object.values(WORTART_NAMES), 'Artikel']
+        : Object.values(WORTART_NAMES)
+    if (id.startsWith('artikel-')) {
+      const a = id.slice(8)
+      return {
+        instruction: `Welche Wortart ist ${a}?`,
+        caption: 'Welche Wortart ist das?',
+        hint: 'Der, die, das, ein und eine stehen vor einem Nomen.',
+        solution: `${a} ist ein Artikel. Er begleitet ein Nomen.`,
+        data: {
+          prompt: a,
+          correctKey: 'Artikel',
+          choices: names.map((t) => ({ key: t, label: t })),
+        },
+      }
+    }
     const all = words(ctx)
     const word = findWord(all, id)
     if (params.mode === 'nomen') {
@@ -62,13 +89,14 @@ export const wortart: ExerciseModule<WortartParams, WahlData> = {
     const kind = word.wortart as Haupt
     return {
       instruction: `Welche Wortart ist ${spoken(word)}?`,
-      caption: 'Nomen, Verb oder Adjektiv?',
+      caption:
+        params.mode === 'wortart4' ? 'Welche Wortart ist das?' : 'Nomen, Verb oder Adjektiv?',
       hint: 'Nomen: der, die, das. Verb: ich …, du …. Adjektiv: wie etwas ist.',
       solution: `${word.text} ist ein ${WORTART_NAMES[kind]}.`,
       data: {
         prompt: lower(word.text),
         correctKey: WORTART_NAMES[kind],
-        choices: Object.values(WORTART_NAMES).map((t) => ({ key: t, label: t })),
+        choices: names.map((t) => ({ key: t, label: t })),
       },
     }
   },
@@ -200,18 +228,23 @@ interface Familie {
   fremd: string[]
 }
 export const WORTFAMILIEN: readonly Familie[] = sprache.wortfamilien
+/** Grade 3 (SP3-5): families with a change of the stem vowel (singen – Gesang). */
+export const WORTFAMILIEN_3: readonly Familie[] = sprache3.wortfamilien
+const familien = (grade: number) => (grade >= 3 ? WORTFAMILIEN_3 : WORTFAMILIEN)
 
 export const wortfamilie: ExerciseModule<Record<string, never>, WahlData> = {
   id: 'sprache.wortfamilie',
   topic: 'sprache',
 
-  items() {
-    return WORTFAMILIEN.flatMap((f) => f.woerter.map((w) => `sprache.wortfamilie:${f.stamm}:${w}`))
+  items(ctx) {
+    return familien(ctx.grade).flatMap((f) =>
+      f.woerter.map((w) => `sprache.wortfamilie:${f.stamm}:${w}`),
+    )
   },
 
-  generate(_ctx, _params, itemKey, rng) {
+  generate(ctx, _params, itemKey, rng) {
     const [, stamm, wort] = itemKey.split(':') as [string, string, string]
-    const f = WORTFAMILIEN.find((x) => x.stamm === stamm)!
+    const f = familien(ctx.grade).find((x) => x.stamm === stamm)!
     return {
       instruction: `Welches Wort gehört zur Wortfamilie ${stamm}?`,
       hint: `Such den Wortstamm von ${stamm} im Wort.`,

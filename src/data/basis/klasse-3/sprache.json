@@ -1,0 +1,551 @@
+{
+  "nachsilben": [
+    {
+      "basis": "üben",
+      "baustein": "ung",
+      "wort": "Übung"
+    },
+    {
+      "basis": "zeichnen",
+      "baustein": "ung",
+      "wort": "Zeichnung"
+    },
+    {
+      "basis": "wohnen",
+      "baustein": "ung",
+      "wort": "Wohnung"
+    },
+    {
+      "basis": "meinen",
+      "baustein": "ung",
+      "wort": "Meinung"
+    },
+    {
+      "basis": "rechnen",
+      "baustein": "ung",
+      "wort": "Rechnung"
+    },
+    {
+      "basis": "frei",
+      "baustein": "heit",
+      "wort": "Freiheit"
+    },
+    {
+      "basis": "krank",
+      "baustein": "heit",
+      "wort": "Krankheit"
+    },
+    {
+      "basis": "klug",
+      "baustein": "heit",
+      "wort": "Klugheit"
+    },
+    {
+      "basis": "dumm",
+      "baustein": "heit",
+      "wort": "Dummheit"
+    },
+    {
+      "basis": "gesund",
+      "baustein": "heit",
+      "wort": "Gesundheit"
+    },
+    {
+      "basis": "freundlich",
+      "baustein": "keit",
+      "wort": "Freundlichkeit"
+    },
+    {
+      "basis": "sauber",
+      "baustein": "keit",
+      "wort": "Sauberkeit"
+    },
+    {
+      "basis": "ehrlich",
+      "baustein": "keit",
+      "wort": "Ehrlichkeit"
+    },
+    {
+      "basis": "traurig",
+      "baustein": "keit",
+      "wort": "Traurigkeit"
+    },
+    {
+      "basis": "schwierig",
+      "baustein": "keit",
+      "wort": "Schwierigkeit"
+    },
+    {
+      "basis": "Sonne",
+      "baustein": "ig",
+      "wort": "sonnig"
+    },
+    {
+      "basis": "Wind",
+      "baustein": "ig",
+      "wort": "windig"
+    },
+    {
+      "basis": "Salz",
+      "baustein": "ig",
+      "wort": "salzig"
+    },
+    {
+      "basis": "Schmutz",
+      "baustein": "ig",
+      "wort": "schmutzig"
+    },
+    {
+      "basis": "Eis",
+      "baustein": "ig",
+      "wort": "eisig"
+    },
+    {
+      "basis": "Freund",
+      "baustein": "lich",
+      "wort": "freundlich"
+    },
+    {
+      "basis": "Herbst",
+      "baustein": "lich",
+      "wort": "herbstlich"
+    },
+    {
+      "basis": "Gefahr",
+      "baustein": "lich",
+      "wort": "gefährlich"
+    },
+    {
+      "basis": "Angst",
+      "baustein": "lich",
+      "wort": "ängstlich"
+    },
+    {
+      "basis": "Ende",
+      "baustein": "lich",
+      "wort": "endlich"
+    }
+  ],
+  "wortfamilien": [
+    {
+      "stamm": "singen",
+      "woerter": ["Gesang", "Sänger", "sang"],
+      "fremd": ["Sand", "sinken"]
+    },
+    {
+      "stamm": "fahren",
+      "woerter": ["Fahrt", "Fähre", "fuhr"],
+      "fremd": ["Farbe", "Feder"]
+    },
+    {
+      "stamm": "trinken",
+      "woerter": ["Getränk", "trank", "Trinkflasche"],
+      "fremd": ["Treppe", "trocken"]
+    },
+    {
+      "stamm": "sprechen",
+      "woerter": ["Sprache", "Spruch", "sprach"],
+      "fremd": ["springen", "Spritze"]
+    },
+    {
+      "stamm": "fliegen",
+      "woerter": ["Flug", "Flugzeug", "flog"],
+      "fremd": ["Fliese", "Flasche"]
+    },
+    {
+      "stamm": "ziehen",
+      "woerter": ["Zug", "zog", "Anzug"],
+      "fremd": ["Ziege", "Zahl"]
+    },
+    {
+      "stamm": "binden",
+      "woerter": ["Band", "Verband", "band"],
+      "fremd": ["Bank", "Biene"]
+    },
+    {
+      "stamm": "schließen",
+      "woerter": ["Schloss", "Schlüssel", "schloss"],
+      "fremd": ["Schlitten", "schlafen"]
+    }
+  ],
+  "zusammensetzungen": [
+    {
+      "teile": [
+        ["der", "Schnee"],
+        ["der", "Mann"]
+      ],
+      "wort": "Schneemann",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["das", "Wasser"],
+        ["der", "Fall"]
+      ],
+      "wort": "Wasserfall",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["die", "Sonne"],
+        ["die", "Blume"]
+      ],
+      "wort": "Sonnenblume",
+      "artikel": "die"
+    },
+    {
+      "teile": [
+        ["das", "Haus"],
+        ["die", "Tür"]
+      ],
+      "wort": "Haustür",
+      "artikel": "die"
+    },
+    {
+      "teile": [
+        ["der", "Apfel"],
+        ["der", "Baum"]
+      ],
+      "wort": "Apfelbaum",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["die", "Schule"],
+        ["der", "Hof"]
+      ],
+      "wort": "Schulhof",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["das", "Fahrrad"],
+        ["der", "Helm"]
+      ],
+      "wort": "Fahrradhelm",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["die", "Kinder"],
+        ["das", "Zimmer"]
+      ],
+      "wort": "Kinderzimmer",
+      "artikel": "das"
+    },
+    {
+      "teile": [
+        ["der", "Tisch"],
+        ["die", "Decke"]
+      ],
+      "wort": "Tischdecke",
+      "artikel": "die"
+    },
+    {
+      "teile": [
+        ["das", "Buch"],
+        ["die", "Seite"]
+      ],
+      "wort": "Buchseite",
+      "artikel": "die"
+    },
+    {
+      "teile": [
+        ["schnell", ""],
+        ["der", "Zug"]
+      ],
+      "wort": "Schnellzug",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["fahren", ""],
+        ["das", "Rad"]
+      ],
+      "wort": "Fahrrad",
+      "artikel": "das"
+    },
+    {
+      "teile": [
+        ["schreiben", ""],
+        ["der", "Tisch"]
+      ],
+      "wort": "Schreibtisch",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["rot", ""],
+        ["die", "Beere"]
+      ],
+      "wort": "Rotbeere",
+      "artikel": "die"
+    },
+    {
+      "teile": [
+        ["die", "Hand"],
+        ["der", "Schuh"]
+      ],
+      "wort": "Handschuh",
+      "artikel": "der"
+    },
+    {
+      "teile": [
+        ["der", "Garten"],
+        ["das", "Haus"]
+      ],
+      "wort": "Gartenhaus",
+      "artikel": "das"
+    }
+  ],
+  "satzarten": [
+    {
+      "id": "s1",
+      "art": "aussage",
+      "text": "Heute scheint die Sonne."
+    },
+    {
+      "id": "s2",
+      "art": "aussage",
+      "text": "Mein Bruder spielt Fußball."
+    },
+    {
+      "id": "s3",
+      "art": "aussage",
+      "text": "Im Herbst fallen die Blätter."
+    },
+    {
+      "id": "s4",
+      "art": "aussage",
+      "text": "Wir fahren morgen in den Urlaub."
+    },
+    {
+      "id": "s5",
+      "art": "aussage",
+      "text": "Die Katze schläft auf dem Sofa."
+    },
+    {
+      "id": "s6",
+      "art": "frage",
+      "text": "Kommst du mit zum Spielplatz?"
+    },
+    {
+      "id": "s7",
+      "art": "frage",
+      "text": "Wo liegt mein Turnbeutel?"
+    },
+    {
+      "id": "s8",
+      "art": "frage",
+      "text": "Wie spät ist es?"
+    },
+    {
+      "id": "s9",
+      "art": "frage",
+      "text": "Hast du deine Hausaufgaben gemacht?"
+    },
+    {
+      "id": "s10",
+      "art": "frage",
+      "text": "Warum bellt der Hund?"
+    },
+    {
+      "id": "s11",
+      "art": "aufforderung",
+      "text": "Räum bitte dein Zimmer auf!"
+    },
+    {
+      "id": "s12",
+      "art": "aufforderung",
+      "text": "Mach die Tür leise zu!"
+    },
+    {
+      "id": "s13",
+      "art": "aufforderung",
+      "text": "Gib mir bitte den Stift!"
+    },
+    {
+      "id": "s14",
+      "art": "aufforderung",
+      "text": "Komm sofort nach Hause!"
+    },
+    {
+      "id": "s15",
+      "art": "aufforderung",
+      "text": "Wasch dir die Hände!"
+    },
+    {
+      "id": "s16",
+      "art": "ausruf",
+      "text": "Was für ein toller Tag!"
+    },
+    {
+      "id": "s17",
+      "art": "ausruf",
+      "text": "Hurra, wir haben gewonnen!"
+    },
+    {
+      "id": "s18",
+      "art": "ausruf",
+      "text": "Au, das tut weh!"
+    },
+    {
+      "id": "s19",
+      "art": "ausruf",
+      "text": "Oh, ist das schön!"
+    },
+    {
+      "id": "s20",
+      "art": "ausruf",
+      "text": "Juhu, endlich Ferien!"
+    }
+  ],
+  "satzglieder": [
+    {
+      "id": "g1",
+      "glieder": ["Der Hund", "bellt", "laut", "im Garten"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g2",
+      "glieder": ["Meine Oma", "backt", "heute", "einen Kuchen"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g3",
+      "glieder": ["Die Kinder", "spielen", "nach der Schule", "Fußball"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g4",
+      "glieder": ["Am Morgen", "fährt", "Papa", "mit dem Bus"],
+      "subjekt": 2,
+      "praedikat": 1
+    },
+    {
+      "id": "g5",
+      "glieder": ["Der kleine Igel", "sucht", "im Laub", "nach Käfern"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g6",
+      "glieder": ["Lena", "liest", "ihrem Bruder", "eine Geschichte", "vor"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g7",
+      "glieder": ["Im Sommer", "schwimmen", "wir", "im See"],
+      "subjekt": 2,
+      "praedikat": 1
+    },
+    {
+      "id": "g8",
+      "glieder": ["Die Lehrerin", "schreibt", "die Aufgabe", "an die Tafel"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g9",
+      "glieder": ["Unser Nachbar", "repariert", "sein Fahrrad", "im Hof"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g10",
+      "glieder": ["Morgen", "besuchen", "wir", "den Zoo"],
+      "subjekt": 2,
+      "praedikat": 1
+    },
+    {
+      "id": "g11",
+      "glieder": ["Der Wind", "weht", "die Blätter", "vom Baum"],
+      "subjekt": 0,
+      "praedikat": 1
+    },
+    {
+      "id": "g12",
+      "glieder": ["Mein Freund", "schenkt", "mir", "ein Buch"],
+      "subjekt": 0,
+      "praedikat": 1
+    }
+  ],
+  "luecken": [
+    {
+      "id": "b1",
+      "text": "Es regnet, ___ wir bleiben drinnen.",
+      "answer": "darum",
+      "ablenker": ["aber", "weil"]
+    },
+    {
+      "id": "b2",
+      "text": "Ich ziehe eine Jacke an, ___ es kalt ist.",
+      "answer": "weil",
+      "ablenker": ["und", "dann"]
+    },
+    {
+      "id": "b3",
+      "text": "Tim wollte spielen, ___ er musste Hausaufgaben machen.",
+      "answer": "aber",
+      "ablenker": ["weil", "darum"]
+    },
+    {
+      "id": "b4",
+      "text": "Zuerst putze ich die Zähne, ___ gehe ich ins Bett.",
+      "answer": "dann",
+      "ablenker": ["weil", "aber"]
+    },
+    {
+      "id": "b5",
+      "text": "Lea mag Äpfel ___ Birnen.",
+      "answer": "und",
+      "ablenker": ["weil", "dann"]
+    },
+    {
+      "id": "b6",
+      "text": "Wir gehen ins Schwimmbad, ___ die Sonne scheint.",
+      "answer": "weil",
+      "ablenker": ["aber", "oder"]
+    },
+    {
+      "id": "b7",
+      "text": "Möchtest du Saft ___ Wasser?",
+      "answer": "oder",
+      "ablenker": ["weil", "dann"]
+    },
+    {
+      "id": "b8",
+      "text": "Der Hund ist klein, ___ er bellt sehr laut.",
+      "answer": "aber",
+      "ablenker": ["weil", "oder"]
+    },
+    {
+      "id": "b9",
+      "text": "Ich bin müde, ___ ich gehe früh schlafen.",
+      "answer": "darum",
+      "ablenker": ["aber", "oder"]
+    },
+    {
+      "id": "b10",
+      "text": "Erst essen wir, ___ spielen wir draußen.",
+      "answer": "dann",
+      "ablenker": ["weil", "oder"]
+    },
+    {
+      "id": "b11",
+      "text": "Mia lacht, ___ der Witz lustig ist.",
+      "answer": "weil",
+      "ablenker": ["dann", "oder"]
+    },
+    {
+      "id": "b12",
+      "text": "Ich kaufe Brot ___ Milch.",
+      "answer": "und",
+      "ablenker": ["aber", "weil"]
+    }
+  ]
+}

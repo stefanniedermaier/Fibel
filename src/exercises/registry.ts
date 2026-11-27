@@ -42,6 +42,8 @@ import { ueberschlag } from './rechnen/ueberschlag'
 import { schriftlich } from './rechnen/schriftlich'
 import { trennen } from './schreiben/trennen'
 import { textstelle } from './lesen/textstelle'
+import { artikelZusammen, formen3, nachsilben, satzart } from './sprache/klasse3'
+import { satzglieder } from './sprache/satzglieder'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -168,6 +170,11 @@ register(ueberschlag)
 register(schriftlich)
 register(trennen)
 register(textstelle)
+register(formen3)
+register(nachsilben)
+register(artikelZusammen)
+register(satzglieder)
+register(satzart)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

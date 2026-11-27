@@ -358,5 +358,11 @@
     "topic": "lesen",
     "title": "Sachtexte, Tabellen, Anleitungen",
     "icon": "🔎"
+  },
+  {
+    "id": "sprache.zeitformen",
+    "topic": "sprache",
+    "title": "Wortarten und Zeitformen",
+    "icon": "🏷️"
   }
 ]

@@ -3,6 +3,7 @@
  * three words to choose from; only one makes sense ("Die Katze ___ Milch.").
  */
 import luecken from '@/data/basis/klasse-2/luecken.json'
+import sprache3 from '@/data/basis/klasse-3/sprache.json'
 import { shuffle } from '@/core/random'
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import type { ExerciseModule } from '../../types'
@@ -16,17 +17,20 @@ export interface Lueckensatz {
 }
 
 export const LUECKENSAETZE: readonly Lueckensatz[] = luecken
+/** Grade 3 (SP3-9): sentences joined with und, aber, weil, dann, darum, oder. */
+export const LUECKEN_3: readonly Lueckensatz[] = sprache3.luecken
+const lueckenFor = (grade: number) => (grade >= 3 ? LUECKEN_3 : LUECKENSAETZE)
 
 export const satzLuecke: ExerciseModule<Record<string, never>, WahlData> = {
   id: 'lesen.satz-luecke',
   topic: 'lesen',
 
-  items() {
-    return LUECKENSAETZE.map((l) => `lesen.satz-luecke:${l.id}`)
+  items(ctx) {
+    return lueckenFor(ctx.grade).map((l) => `lesen.satz-luecke:${l.id}`)
   },
 
-  generate(_ctx, _params, itemKey, rng) {
-    const l = LUECKENSAETZE.find((x) => x.id === itemId(itemKey))
+  generate(ctx, _params, itemKey, rng) {
+    const l = lueckenFor(ctx.grade).find((x) => x.id === itemId(itemKey))
     if (!l) throw new Error(`Unbekannter Lückensatz: ${itemKey}`)
     const full = l.text.replace('___', l.answer)
     return {

@@ -3295,5 +3295,159 @@
       "fragen": "textart"
     },
     "title": "Was für ein Text ist das?"
+  },
+  {
+    "id": "k3.sprache.wortarten.wortart",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.zeitformen",
+    "unit": "k3.sprache.wortarten",
+    "exercise": "sprache.wortart",
+    "params": {
+      "mode": "wortart4"
+    },
+    "title": "Welche Wortart?"
+  },
+  {
+    "id": "k3.sprache.steigerung.steigerung",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.zeitformen",
+    "unit": "k3.sprache.steigerung",
+    "exercise": "sprache.formen3",
+    "params": {
+      "mode": "steigerung"
+    },
+    "title": "groß, größer, am größten"
+  },
+  {
+    "id": "k3.sprache.zeitformen.praeteritum",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.zeitformen",
+    "unit": "k3.sprache.zeitformen",
+    "exercise": "sprache.formen3",
+    "params": {
+      "mode": "praeteritum"
+    },
+    "title": "Präteritum"
+  },
+  {
+    "id": "k3.sprache.zeitformen.perfekt",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.zeitformen",
+    "unit": "k3.sprache.zeitformen",
+    "exercise": "sprache.formen3",
+    "params": {
+      "mode": "perfekt"
+    },
+    "title": "Perfekt"
+  },
+  {
+    "id": "k3.sprache.nachsilben.nachsilben",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.bilden",
+    "unit": "k3.sprache.nachsilben",
+    "exercise": "sprache.nachsilben",
+    "params": {},
+    "title": "Welches Wort entsteht?"
+  },
+  {
+    "id": "k3.sprache.wortfamilie.wortfamilie",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.bilden",
+    "unit": "k3.sprache.wortfamilie",
+    "exercise": "sprache.wortfamilie",
+    "params": {},
+    "title": "Welches Wort gehört zur Familie?"
+  },
+  {
+    "id": "k3.sprache.zusammensetzungen.artikel",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.bilden",
+    "unit": "k3.sprache.zusammensetzungen",
+    "exercise": "sprache.artikel-zusammen",
+    "params": {},
+    "title": "Der, die oder das?"
+  },
+  {
+    "id": "k3.sprache.satzarten.satzart",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k3.sprache.satzarten",
+    "exercise": "sprache.satzart",
+    "params": {},
+    "title": "Was für ein Satz?"
+  },
+  {
+    "id": "k3.sprache.satzarten.satzzeichen",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k3.sprache.satzarten",
+    "exercise": "sprache.satzzeichen",
+    "params": {},
+    "title": "Welches Zeichen gehört ans Ende?"
+  },
+  {
+    "id": "k3.sprache.satzglieder.subjekt",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k3.sprache.satzglieder",
+    "exercise": "sprache.satzglieder",
+    "params": {
+      "mode": "subjekt"
+    },
+    "title": "Subjekt finden"
+  },
+  {
+    "id": "k3.sprache.satzglieder.praedikat",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k3.sprache.satzglieder",
+    "exercise": "sprache.satzglieder",
+    "params": {
+      "mode": "praedikat"
+    },
+    "title": "Prädikat finden"
+  },
+  {
+    "id": "k3.sprache.satzglieder.umstellen",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k3.sprache.satzglieder",
+    "exercise": "sprache.satzglieder",
+    "params": {
+      "mode": "umstellen"
+    },
+    "title": "Satz umstellen"
+  },
+  {
+    "id": "k3.sprache.verknuepfen.bindewoerter",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k3.sprache.verknuepfen",
+    "exercise": "lesen.satz-luecke",
+    "params": {},
+    "title": "Welches Bindewort passt?"
+  },
+  {
+    "id": "k3.sprache.verknuepfen.wortfeld",
+    "grade": 3,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k3.sprache.verknuepfen",
+    "exercise": "sprache.wortfeld",
+    "params": {},
+    "title": "Wortfelder"
   }
 ]

@@ -1,6 +1,7 @@
 /** Sentences for the language exercises: statements (saetze.json) and questions. */
 import fragen from '@/data/basis/klasse-1/fragesaetze.json'
 import sprache2 from '@/data/basis/klasse-2/sprache.json'
+import sprache3 from '@/data/basis/klasse-3/sprache.json'
 import { baseSentences, textReadable } from '@/core/saetze'
 import type { LearnerContext } from '../types'
 
@@ -13,7 +14,11 @@ export const FRAGESAETZE: readonly PlainSentence[] = fragen
 /** Grade 2: questions and exclamations (SP2-7). */
 export const SATZARTEN_2: readonly PlainSentence[] = sprache2.satzarten
 
-const extra = (grade: number) => (grade === 1 ? FRAGESAETZE : grade === 2 ? SATZARTEN_2 : [])
+/** Grade 3: statements, questions, requests and exclamations with their kind (SP3-7). */
+export const SATZARTEN_3: readonly (PlainSentence & { art: string })[] = sprache3.satzarten
+
+const extra = (grade: number) =>
+  grade === 1 ? FRAGESAETZE : grade === 2 ? SATZARTEN_2 : grade === 3 ? SATZARTEN_3 : []
 
 /** All readable sentences: statements and questions. */
 export function readablePlain(ctx: LearnerContext): PlainSentence[] {

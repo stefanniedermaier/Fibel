@@ -922,5 +922,68 @@
     "topic": "lesen",
     "title": "Textarten erkennen",
     "term": 2
+  },
+  {
+    "id": "k3.sprache.wortarten",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Wortarten: Nomen, Verb, Adjektiv, Artikel",
+    "term": 1
+  },
+  {
+    "id": "k3.sprache.steigerung",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Adjektive steigern",
+    "term": 1
+  },
+  {
+    "id": "k3.sprache.zeitformen",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Zeitformen: Gegenwart und Vergangenheit",
+    "term": 1
+  },
+  {
+    "id": "k3.sprache.nachsilben",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Wortbausteine: -ung, -heit, -keit, -ig, -lich",
+    "term": 2
+  },
+  {
+    "id": "k3.sprache.wortfamilie",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Wortfamilien mit Vokalwechsel",
+    "term": 2
+  },
+  {
+    "id": "k3.sprache.zusammensetzungen",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Zusammensetzungen und ihr Artikel",
+    "term": 2
+  },
+  {
+    "id": "k3.sprache.satzarten",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Satzarten und Satzzeichen",
+    "term": 1
+  },
+  {
+    "id": "k3.sprache.satzglieder",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Umstellprobe: Subjekt und Prädikat",
+    "term": 2
+  },
+  {
+    "id": "k3.sprache.verknuepfen",
+    "grade": 3,
+    "topic": "sprache",
+    "title": "Sätze verknüpfen, Wortfelder",
+    "term": 2
   }
 ]
