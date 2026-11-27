@@ -436,5 +436,11 @@
     "topic": "sache",
     "title": "Zeit und Zeitleiste",
     "icon": "⏳"
+  },
+  {
+    "id": "rechnen.million",
+    "topic": "rechnen",
+    "title": "Zahlen bis zur Million",
+    "icon": "🔢"
   }
 ]

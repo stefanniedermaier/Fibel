@@ -17,7 +17,7 @@ const settings = resolveDefaults('DE-BY', 2)
 const ctx = { land: 'DE-BY', grade: 2, settings }
 
 describe('Klasse 2 und 3: alle Bereiche', () => {
-  it.each([2, 3])(
+  it.each([2, 3, 4])(
     'Klasse %i: jeder Katalog-Eintrag hat Aufgaben, die Lösung ist wählbar',
     (grade) => {
       const base = { land: 'DE-BY', grade, settings: resolveDefaults('DE-BY', grade) }

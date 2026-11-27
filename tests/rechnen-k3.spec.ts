@@ -219,3 +219,45 @@ describe('Bandornamente', () => {
     }
   })
 })
+
+describe('Rechnen Klasse 4', () => {
+  const ctx4 = { land: 'DE-BY', grade: 4, settings: resolveDefaults('DE-BY', 4) }
+  it('Zahlwörter bis zur Million', async () => {
+    const { numberWord } = await import('@/core/numbers')
+    expect(numberWord(305040)).toBe('dreihundertfünftausendvierzig')
+    expect(numberWord(21000)).toBe('einundzwanzigtausend')
+    expect(numberWord(301001)).toBe('dreihunderteintausendeins')
+    expect(numberWord(1000000)).toBe('eine Million')
+  })
+
+  it('Million: Tafel, Runden, Zahlenstrahl', async () => {
+    const { million, zahl } = await import('@/exercises/rechnen/million')
+    expect(zahl(305040)).toBe('305 040')
+    const t = million.generate(
+      ctx4,
+      { mode: 'tafel' },
+      'rechnen.million:tafel:305040',
+      createRng(1),
+    )
+    expect(t.data.digits).toEqual([3, 0, 5, 0, 4, 0])
+    for (const mode of ['tafel', 'hoeren', 'stelle', 'runden', 'strahl', 'ordnen'] as const)
+      for (const key of million.items(ctx4, { mode }))
+        for (let seed = 0; seed < 4; seed++) {
+          const g = million.generate(ctx4, { mode }, key, createRng(seed))
+          const keys = g.data.choices.map((c) => c.key)
+          expect(new Set(keys).size, key).toBe(keys.length)
+          expect(keys).toContain(g.data.correctKey)
+        }
+  })
+
+  it('Schriftlich mit großen Zahlen bleibt richtig', async () => {
+    const { schriftlich } = await import('@/exercises/rechnen/schriftlich')
+    for (const op of ['+', '-'] as const)
+      for (const key of schriftlich.items(ctx4, { op, gross: true }))
+        for (let seed = 0; seed < 10; seed++) {
+          const t = schriftlich.generate(ctx4, { op, gross: true }, key, createRng(seed))
+          expect(value(t.data.columns)).toBe(t.data.result)
+          expect(t.data.result).toBeGreaterThan(0)
+        }
+  })
+})

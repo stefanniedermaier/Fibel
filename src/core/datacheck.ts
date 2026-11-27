@@ -344,7 +344,7 @@ const LATER = new Set([
 ])
 
 /** Grades that have content (folders under src/data/basis). */
-export const CONTENT_GRADES = [1, 2, 3]
+export const CONTENT_GRADES = [1, 2, 3, 4]
 
 function checkWords(
   words: readonly Word[],
@@ -550,6 +550,7 @@ export function checkData(images: ReadonlySet<string>): string[] {
         if (grade === 2) problems.push(...checkGrade2Words(words, land.name), ...checkGrade2Texts())
         if (grade === 3)
           problems.push(...checkGrade2Words(words, land.name, 3), ...checkGrade3Texts())
+        if (grade === 4) problems.push(...checkGrade2Words(words, land.name, 4))
         problems.push(...checkListening(land.code, grade, images))
       } catch (e) {
         problems.push(`${land.name}: Wortliste – ${(e as Error).message}`)

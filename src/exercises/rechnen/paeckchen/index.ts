@@ -23,6 +23,9 @@ export type Strategie =
   | 'analog100'
   | 'analog10'
   | 'analogmal'
+  | 'analog1000'
+  | 'analogmal100'
+  | 'ergaenzen'
 
 export interface PaeckchenParams {
   max: number
@@ -69,7 +72,17 @@ function tasks1000(): string[] {
   return keys
 }
 
+/** Up to a million (R4-4): thousands like ones, times with hundreds, complete to 1000. */
+function tasksMillion(): string[] {
+  const keys: string[] = []
+  for (let a = 1; a <= 9; a++) for (let b = 1; a + b <= 10; b++) keys.push(`analog1000:${a}+${b}`)
+  for (let k = 2; k <= 9; k++) for (const r of [3, 4, 6, 7, 8]) keys.push(`analogmal100:${k}x${r}`)
+  for (const a of [100, 300, 450, 620, 750, 880, 125, 999]) keys.push(`ergaenzen:${a}`)
+  return keys
+}
+
 function tasks(max: number): string[] {
+  if (max > 1000) return tasksMillion()
   if (max > 100) return tasks1000()
   if (max > 20) return tasks100()
   const keys: string[] = []
@@ -123,6 +136,26 @@ function strategie(
       hint: 'Es ist einer mehr als bei der Aufgabe darüber.',
     }
   }
+  if (kind === 'analogmal100') {
+    const [k, r] = value.split('x').map(Number) as [number, number]
+    return {
+      helper: `${k} · ${r} = ${k * r}`,
+      task: `${k * 100} · ${r}`,
+      answer: k * r * 100,
+      spoken: `${numberWord(k)} mal ${numberWord(r)} ist ${numberWord(k * r)}. Wie viel ist ${k * 100} mal ${numberWord(r)}?`,
+      hint: 'Hundertmal so viel: hänge zwei Nullen an.',
+    }
+  }
+  if (kind === 'ergaenzen') {
+    const a = Number(value)
+    return {
+      helper: `${a} + ? = 1000`,
+      task: `1000 − ${a}`,
+      answer: 1000 - a,
+      spoken: `Wie viel fehlt von ${numberWord(a)} bis tausend?`,
+      hint: 'Ergänze erst bis zum nächsten Hunderter, dann bis tausend.',
+    }
+  }
   if (kind === 'analogmal') {
     const [k, r] = value.split('x').map(Number) as [number, number]
     return {
@@ -134,6 +167,15 @@ function strategie(
     }
   }
   const [a, b] = value.split('+').map(Number) as [number, number]
+  if (kind === 'analog1000') {
+    return {
+      helper: `${a} + ${b} = ${a + b}`,
+      task: `${a * 1000} + ${b * 1000}`,
+      answer: (a + b) * 1000,
+      spoken: `${numberWord(a)} plus ${numberWord(b)} ist ${numberWord(a + b)}. Wie viel ist ${a * 1000} plus ${b * 1000}?`,
+      hint: 'Rechne mit Tausendern wie mit Einern.',
+    }
+  }
   if (kind === 'analog100' || kind === 'analog10') {
     const f = kind === 'analog100' ? 100 : 10
     return {

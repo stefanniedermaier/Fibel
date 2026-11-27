@@ -14,6 +14,8 @@ import SchriftlichTask from './SchriftlichTask.vue'
 export interface SchriftlichParams {
   op: '+' | '-'
   verfahren?: 'abziehen-entbuendeln'
+  /** Grade 4 (R4-5): numbers with four to six digits. */
+  gross?: boolean
 }
 
 /** One column of the calculation, from the ones to the left. */
@@ -37,7 +39,15 @@ export interface SchriftlichData {
 
 const digitsOf = (n: number, width: number) =>
   Array.from({ length: width }, (_, i) => Math.floor(n / 10 ** i) % 10)
-const PLACE = ['Einer', 'Zehner', 'Hunderter', 'Tausender']
+const PLACE = [
+  'Einer',
+  'Zehner',
+  'Hunderter',
+  'Tausender',
+  'Zehntausender',
+  'Hunderttausender',
+  'Millionen',
+]
 
 /** The columns of an addition, with carries and what to say. */
 export function addColumns(rows: readonly number[]): { width: number; columns: Spalte[] } {
@@ -99,6 +109,28 @@ export function subtractColumns(a: number, b: number): { width: number; columns:
 
 const rnd = (rng: Rng, lo: number, hi: number) => lo + Math.floor(rng() * (hi - lo + 1))
 
+/** R4-5: the same kinds of tasks with four to six digits. */
+function grosseZahlen(op: '+' | '-', kind: string, rng: Rng): number[] {
+  const stellen = rnd(rng, 4, 6)
+  const lo = 10 ** (stellen - 1)
+  if (op === '+') {
+    if (kind === 'drei')
+      return [rnd(rng, lo, 3 * lo), rnd(rng, lo, 3 * lo), rnd(rng, lo / 10, 2 * lo)]
+    return [rnd(rng, lo, 5 * lo), rnd(rng, lo / 10, 4 * lo)]
+  }
+  const a = rnd(rng, 4 * lo, 10 * lo - 1)
+  if (kind === 'null') {
+    // Zeros in the middle: 60 040 − 23 587.
+    const z = rnd(rng, 4, 9) * lo + rnd(rng, 1, 9) * 10
+    return [z, rnd(rng, lo, z - lo)]
+  }
+  if (kind === 'ohne') {
+    const b = digitsOf(a, stellen).reduce((s2, d, i) => s2 + rnd(rng, 0, d) * 10 ** i, 0)
+    return [a, Math.max(1, Math.min(b, a - 1))]
+  }
+  return [a, rnd(rng, lo, a - lo)]
+}
+
 export const schriftlich: ExerciseModule<SchriftlichParams, SchriftlichData> = {
   id: 'rechnen.schriftlich',
   topic: 'rechnen',
@@ -114,7 +146,8 @@ export const schriftlich: ExerciseModule<SchriftlichParams, SchriftlichData> = {
   generate(_ctx, params, itemKey, rng) {
     const kind = itemPart(itemKey).slice(1).split('-')[0]!
     let rows: number[]
-    if (params.op === '+') {
+    if (params.gross) rows = grosseZahlen(params.op, kind, rng)
+    else if (params.op === '+') {
       if (kind === 'drei') rows = [rnd(rng, 101, 399), rnd(rng, 101, 299), rnd(rng, 11, 299)]
       else if (kind === 'uebertrag') {
         // Carries in the ones and the tens: 478 + 256.
@@ -151,7 +184,7 @@ export const schriftlich: ExerciseModule<SchriftlichParams, SchriftlichData> = {
       params.op === '+' ? addColumns(rows) : subtractColumns(rows[0]!, rows[1]!)
     const sign = params.op === '+' ? ' + ' : ' − '
     return {
-      instruction: `Rechne schriftlich: ${rows.map((r) => numberWord(r)).join(params.op === '+' ? ' plus ' : ' minus ')}. Fang bei den Einern an.`,
+      instruction: `Rechne schriftlich: ${rows.map((r) => (r > 1000 ? String(r) : numberWord(r))).join(params.op === '+' ? ' plus ' : ' minus ')}. Fang bei den Einern an.`,
       caption: 'Rechne schriftlich. Fang rechts bei den Einern an.',
       hint: 'Rechne Spalte für Spalte, von rechts nach links.',
       solution: `${rows.join(sign)} = ${result}.`,

@@ -4285,5 +4285,170 @@
       "thema": "auge"
     },
     "title": "Das Auge: Teile finden"
+  },
+  {
+    "id": "k4.rechnen.million.tafel",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.million",
+    "exercise": "rechnen.million",
+    "params": {
+      "mode": "tafel"
+    },
+    "title": "Stellenwerttafel lesen"
+  },
+  {
+    "id": "k4.rechnen.million.hoeren",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.million",
+    "exercise": "rechnen.million",
+    "params": {
+      "mode": "hoeren"
+    },
+    "title": "Zahlen hören"
+  },
+  {
+    "id": "k4.rechnen.million.stelle",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.million",
+    "exercise": "rechnen.million",
+    "params": {
+      "mode": "stelle"
+    },
+    "title": "Welche Ziffer steht wo?"
+  },
+  {
+    "id": "k4.rechnen.strahl.strahl",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.strahl",
+    "exercise": "rechnen.million",
+    "params": {
+      "mode": "strahl"
+    },
+    "title": "Zahlenstrahl"
+  },
+  {
+    "id": "k4.rechnen.strahl.runden",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.strahl",
+    "exercise": "rechnen.million",
+    "params": {
+      "mode": "runden"
+    },
+    "title": "Runden"
+  },
+  {
+    "id": "k4.rechnen.ordnen.ordnen",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.million",
+    "unit": "k4.rechnen.ordnen",
+    "exercise": "rechnen.million",
+    "params": {
+      "mode": "ordnen"
+    },
+    "title": "Welche Zahl ist am größten?"
+  },
+  {
+    "id": "k4.rechnen.kopfrechnen.analog",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k4.rechnen.kopfrechnen",
+    "exercise": "rechnen.paeckchen",
+    "params": {
+      "max": 1000000,
+      "mode": "strategie"
+    },
+    "title": "3 + 4 → 3000 + 4000"
+  },
+  {
+    "id": "k4.rechnen.kopfrechnen.einmaleins",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k4.rechnen.kopfrechnen",
+    "exercise": "rechnen.einmaleins",
+    "params": {
+      "mode": "rechnen",
+      "reihen": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "geteilt": true
+    },
+    "title": "Einmaleins wiederholen",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.rechnen.ueberschlag.ungefaehr",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k4.rechnen.ueberschlag",
+    "exercise": "rechnen.ueberschlag",
+    "params": {
+      "mode": "ungefaehr",
+      "tausend": true
+    },
+    "title": "Ungefähr wie viel?"
+  },
+  {
+    "id": "k4.rechnen.ueberschlag.pruefen",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k4.rechnen.ueberschlag",
+    "exercise": "rechnen.ueberschlag",
+    "params": {
+      "mode": "pruefen",
+      "tausend": true
+    },
+    "title": "Kann das stimmen?"
+  },
+  {
+    "id": "k4.rechnen.schriftlich-plusminus.plus",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k4.rechnen.schriftlich-plusminus",
+    "exercise": "rechnen.schriftlich",
+    "params": {
+      "op": "+",
+      "gross": true
+    },
+    "title": "Schriftlich plus"
+  },
+  {
+    "id": "k4.rechnen.schriftlich-plusminus.minus",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.schriftlich",
+    "unit": "k4.rechnen.schriftlich-plusminus",
+    "exercise": "rechnen.schriftlich",
+    "params": {
+      "op": "-",
+      "verfahren": "abziehen-entbuendeln",
+      "gross": true
+    },
+    "title": "Schriftlich minus"
+  },
+  {
+    "id": "k4.rechnen.rechenart.wahl",
+    "grade": 4,
+    "topic": "rechnen",
+    "category": "rechnen.kopf",
+    "unit": "k4.rechnen.rechenart",
+    "exercise": "rechnen.ueberschlag",
+    "params": {
+      "mode": "wahl"
+    },
+    "title": "Im Kopf oder schriftlich?"
   }
 ]

@@ -30,8 +30,16 @@ const TENS = [
 
 /** Number word for 0–1000 ("einundzwanzig", "hundertdrei"). */
 export function numberWord(n: number): string {
-  if (!Number.isInteger(n) || n < 0 || n > 1000) throw new RangeError(`numberWord: ${n}`)
+  if (!Number.isInteger(n) || n < 0 || n > 1000000) throw new RangeError(`numberWord: ${n}`)
+  if (n === 1000000) return 'eine Million'
   if (n === 1000) return 'tausend'
+  if (n > 1000) {
+    // Grade 4: up to a million ("dreihundertfünftausendvierzig").
+    const t = Math.floor(n / 1000)
+    const rest = n % 1000
+    const prefix = t === 1 ? 'tausend' : `${numberWord(t).replace(/eins$/, 'ein')}tausend`
+    return rest === 0 ? prefix : prefix + numberWord(rest)
+  }
   if (n >= 100) {
     const hundreds = Math.floor(n / 100)
     const rest = n % 100

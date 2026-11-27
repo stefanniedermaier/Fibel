@@ -1195,5 +1195,54 @@
     "topic": "formen",
     "title": "Bandornamente fortsetzen",
     "term": 2
+  },
+  {
+    "id": "k4.rechnen.million",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Zahlen bis zur Million: Stellenwerttafel",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.strahl",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Zahlenstrahl bis zur Million und Runden",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.ordnen",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Vergleichen und ordnen bis zur Million",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.kopfrechnen",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Kopfrechnen mit großen Zahlen",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.ueberschlag",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Überschlag mit Tausendern",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.schriftlich-plusminus",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Schriftlich plus und minus bis zur Million",
+    "term": 1
+  },
+  {
+    "id": "k4.rechnen.rechenart",
+    "grade": 4,
+    "topic": "rechnen",
+    "title": "Rechenart wählen: Kopf oder schriftlich?",
+    "term": 2
   }
 ]

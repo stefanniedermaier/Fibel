@@ -21,7 +21,7 @@ watch(
   },
 )
 
-const PLACES = ['E', 'Z', 'H', 'T']
+const PLACES = ['E', 'Z', 'H', 'T', 'ZT', 'HT', 'M']
 const width = computed(() => props.data.width)
 const done = computed(() => (props.revealed ? props.data.columns.length : solved.value))
 
@@ -138,8 +138,8 @@ const cols = computed(() => Array.from({ length: width.value }, (_, k) => width.
 }
 
 .tafel td {
-  width: 52px;
-  height: 52px;
+  width: min(52px, 10.5vw);
+  height: min(52px, 10.5vw);
   text-align: center;
 }
 
