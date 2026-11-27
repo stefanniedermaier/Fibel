@@ -250,5 +250,23 @@
     "topic": "uhr",
     "title": "Zeitspanne und Kalender",
     "icon": "📅"
+  },
+  {
+    "id": "sprache.wortarten",
+    "topic": "sprache",
+    "title": "Wortarten",
+    "icon": "🏷️"
+  },
+  {
+    "id": "sprache.saetze",
+    "topic": "sprache",
+    "title": "Sätze",
+    "icon": "📝"
+  },
+  {
+    "id": "sprache.bilden",
+    "topic": "sprache",
+    "title": "Wörter bilden",
+    "icon": "🧩"
   }
 ]

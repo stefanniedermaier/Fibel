@@ -22,6 +22,14 @@ import { abc } from './schreiben/abc'
 import { satzLuecke } from './lesen/satz-luecke'
 import { uhrDigital } from './uhr/digital'
 import { zeitspanne } from './uhr/zeitspanne'
+import {
+  artikel,
+  formen as sprachFormen,
+  wortart,
+  wortfamilie,
+  wortfeld,
+  zusammensetzen,
+} from './sprache/klasse2'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
 import { anlautFremd, anlautGleich } from './lesen/anlaute'
@@ -128,6 +136,12 @@ register(abc)
 register(satzLuecke)
 register(uhrDigital)
 register(zeitspanne)
+register(wortart)
+register(artikel)
+register(sprachFormen)
+register(wortfamilie)
+register(wortfeld)
+register(zusammensetzen)
 
 export function getExercise(id: string): ExerciseModule | undefined {
   return modules.get(id)

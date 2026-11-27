@@ -565,5 +565,75 @@
     "topic": "uhr",
     "title": "Kalender",
     "term": 1
+  },
+  {
+    "id": "k2.sprache.laute",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Selbstlaute und Mitlaute",
+    "term": 1
+  },
+  {
+    "id": "k2.sprache.nomen",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Nomen und Artikel",
+    "term": 1
+  },
+  {
+    "id": "k2.sprache.mehrzahl",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Einzahl und Mehrzahl",
+    "term": 1
+  },
+  {
+    "id": "k2.sprache.verben",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Verben: ich, du, er",
+    "term": 2
+  },
+  {
+    "id": "k2.sprache.adjektive",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Nomen, Verb oder Adjektiv?",
+    "term": 2
+  },
+  {
+    "id": "k2.sprache.gross",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Großschreibung: Nomen und Satzanfang",
+    "term": 1
+  },
+  {
+    "id": "k2.sprache.satzzeichen",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Punkt, Fragezeichen, Ausrufezeichen",
+    "term": 2
+  },
+  {
+    "id": "k2.sprache.wortfamilie",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Wortfamilien",
+    "term": 2
+  },
+  {
+    "id": "k2.sprache.zusammensetzen",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Zusammengesetzte Nomen",
+    "term": 2
+  },
+  {
+    "id": "k2.sprache.wortfeld",
+    "grade": 2,
+    "topic": "sprache",
+    "title": "Wortfelder",
+    "term": 2
   }
 ]

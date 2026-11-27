@@ -2178,5 +2178,123 @@
       "mode": "gestern"
     },
     "title": "Gestern, heute, morgen"
+  },
+  {
+    "id": "k2.sprache.laute.vokale",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.wortarten",
+    "unit": "k2.sprache.laute",
+    "exercise": "sprache.vokale",
+    "params": {},
+    "title": "Selbstlaute finden"
+  },
+  {
+    "id": "k2.sprache.nomen.nomen",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.wortarten",
+    "unit": "k2.sprache.nomen",
+    "exercise": "sprache.wortart",
+    "params": {
+      "mode": "nomen"
+    },
+    "title": "Welches Wort ist ein Nomen?"
+  },
+  {
+    "id": "k2.sprache.nomen.artikel",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.wortarten",
+    "unit": "k2.sprache.nomen",
+    "exercise": "sprache.artikel",
+    "params": {},
+    "title": "Der, die oder das?"
+  },
+  {
+    "id": "k2.sprache.mehrzahl.mehrzahl",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.wortarten",
+    "unit": "k2.sprache.mehrzahl",
+    "exercise": "sprache.formen",
+    "params": {
+      "mode": "mehrzahl"
+    },
+    "title": "Wie heißt die Mehrzahl?"
+  },
+  {
+    "id": "k2.sprache.verben.person",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.wortarten",
+    "unit": "k2.sprache.verben",
+    "exercise": "sprache.formen",
+    "params": {
+      "mode": "person"
+    },
+    "title": "Welche Form passt?"
+  },
+  {
+    "id": "k2.sprache.adjektive.wortart",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.wortarten",
+    "unit": "k2.sprache.adjektive",
+    "exercise": "sprache.wortart",
+    "params": {
+      "mode": "wortart"
+    },
+    "title": "Welche Wortart?"
+  },
+  {
+    "id": "k2.sprache.gross.gross-klein",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k2.sprache.gross",
+    "exercise": "sprache.gross-klein",
+    "params": {},
+    "title": "Groß oder klein?"
+  },
+  {
+    "id": "k2.sprache.satzzeichen.satzzeichen",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.saetze",
+    "unit": "k2.sprache.satzzeichen",
+    "exercise": "sprache.satzzeichen",
+    "params": {},
+    "title": "Welches Zeichen gehört ans Ende?"
+  },
+  {
+    "id": "k2.sprache.wortfamilie.wortfamilie",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.bilden",
+    "unit": "k2.sprache.wortfamilie",
+    "exercise": "sprache.wortfamilie",
+    "params": {},
+    "title": "Welches Wort gehört zur Familie?"
+  },
+  {
+    "id": "k2.sprache.zusammensetzen.zusammensetzen",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.bilden",
+    "unit": "k2.sprache.zusammensetzen",
+    "exercise": "sprache.zusammensetzen",
+    "params": {},
+    "title": "Wie schreibt man das neue Wort?"
+  },
+  {
+    "id": "k2.sprache.wortfeld.wortfeld",
+    "grade": 2,
+    "topic": "sprache",
+    "category": "sprache.bilden",
+    "unit": "k2.sprache.wortfeld",
+    "exercise": "sprache.wortfeld",
+    "params": {},
+    "title": "Welches Wort passt dazu?"
   }
 ]

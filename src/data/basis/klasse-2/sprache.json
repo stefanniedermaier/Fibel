@@ -1,0 +1,228 @@
+{
+  "satzarten": [
+    {
+      "id": "f1",
+      "text": "Wann kommst du nach Hause?"
+    },
+    {
+      "id": "f2",
+      "text": "Hast du meinen Ball gesehen?"
+    },
+    {
+      "id": "f3",
+      "text": "Wie heißt dein Hund?"
+    },
+    {
+      "id": "f4",
+      "text": "Wo liegt mein Stift?"
+    },
+    {
+      "id": "f5",
+      "text": "Spielst du mit mir?"
+    },
+    {
+      "id": "f6",
+      "text": "Was gibt es heute zum Essen?"
+    },
+    {
+      "id": "f7",
+      "text": "Warum ist der Himmel blau?"
+    },
+    {
+      "id": "f8",
+      "text": "Kannst du mir helfen?"
+    },
+    {
+      "id": "a1",
+      "text": "Pass auf!"
+    },
+    {
+      "id": "a2",
+      "text": "Komm schnell her!"
+    },
+    {
+      "id": "a3",
+      "text": "Das ist ja toll!"
+    },
+    {
+      "id": "a4",
+      "text": "Hör sofort auf!"
+    },
+    {
+      "id": "a5",
+      "text": "Vorsicht, das ist heiß!"
+    },
+    {
+      "id": "a6",
+      "text": "Wir haben gewonnen!"
+    },
+    {
+      "id": "a7",
+      "text": "Mach die Tür zu!"
+    },
+    {
+      "id": "a8",
+      "text": "Hurra, es schneit!"
+    }
+  ],
+  "wortfamilien": [
+    {
+      "stamm": "fahren",
+      "woerter": ["Fahrrad", "Fahrer", "fährt"],
+      "fremd": ["Farbe", "Fahne"]
+    },
+    {
+      "stamm": "spielen",
+      "woerter": ["Spielzeug", "Spieler", "spielt"],
+      "fremd": ["Spiegel", "Spinne"]
+    },
+    {
+      "stamm": "schreiben",
+      "woerter": ["Schreibtisch", "Schrift", "schreibt"],
+      "fremd": ["schreien", "Schrank"]
+    },
+    {
+      "stamm": "backen",
+      "woerter": ["Bäcker", "Backofen", "gebacken"],
+      "fremd": ["Bach", "Becken"]
+    },
+    {
+      "stamm": "Haus",
+      "woerter": ["Häuser", "Haustür", "Hausaufgabe"],
+      "fremd": ["Hase", "Hose"]
+    },
+    {
+      "stamm": "lesen",
+      "woerter": ["Leser", "Lesebuch", "liest"],
+      "fremd": ["Löwe", "leise"]
+    },
+    {
+      "stamm": "Schule",
+      "woerter": ["Schüler", "Schultasche", "Schulhof"],
+      "fremd": ["Schuh", "Schal"]
+    },
+    {
+      "stamm": "singen",
+      "woerter": ["Sänger", "Gesang", "singt"],
+      "fremd": ["Sand", "Sieb"]
+    },
+    {
+      "stamm": "Kind",
+      "woerter": ["Kinder", "kindlich", "Kindergarten"],
+      "fremd": ["Kinn", "Kino"]
+    },
+    {
+      "stamm": "kochen",
+      "woerter": ["Koch", "Kochtopf", "Köchin"],
+      "fremd": ["Koffer", "Knochen"]
+    },
+    {
+      "stamm": "malen",
+      "woerter": ["Maler", "Malstift", "bemalen"],
+      "fremd": ["Mauer", "Mantel"]
+    },
+    {
+      "stamm": "Wasser",
+      "woerter": ["Wasserfall", "Wassereis", "Regenwasser"],
+      "fremd": ["Waschlappen", "Vase"]
+    }
+  ],
+  "wortfelder": [
+    {
+      "feld": "gehen",
+      "woerter": ["rennen", "schleichen", "hüpfen", "laufen", "spazieren"]
+    },
+    {
+      "feld": "sagen",
+      "woerter": ["rufen", "flüstern", "schreien", "fragen", "antworten"]
+    },
+    {
+      "feld": "sehen",
+      "woerter": ["schauen", "gucken", "beobachten", "entdecken"]
+    },
+    {
+      "feld": "essen",
+      "woerter": ["futtern", "naschen", "kauen", "schlucken"]
+    },
+    {
+      "feld": "groß",
+      "woerter": ["riesig", "gewaltig", "mächtig", "hoch"]
+    },
+    {
+      "feld": "schön",
+      "woerter": ["hübsch", "toll", "prächtig", "herrlich"]
+    }
+  ],
+  "zusammensetzungen": [
+    {
+      "id": "haustuer",
+      "teile": ["Haus", "Tür"],
+      "text": "Haustür"
+    },
+    {
+      "id": "handtuch",
+      "teile": ["Hand", "Tuch"],
+      "text": "Handtuch"
+    },
+    {
+      "id": "kindergarten",
+      "teile": ["Kinder", "Garten"],
+      "text": "Kindergarten"
+    },
+    {
+      "id": "apfelbaum",
+      "teile": ["Apfel", "Baum"],
+      "text": "Apfelbaum"
+    },
+    {
+      "id": "zahnbuerste",
+      "teile": ["Zahn", "Bürste"],
+      "text": "Zahnbürste"
+    },
+    {
+      "id": "schneemann",
+      "teile": ["Schnee", "Mann"],
+      "text": "Schneemann"
+    },
+    {
+      "id": "sonnenblume",
+      "teile": ["Sonne", "Blume"],
+      "text": "Sonnenblume"
+    },
+    {
+      "id": "blumentopf",
+      "teile": ["Blume", "Topf"],
+      "text": "Blumentopf"
+    },
+    {
+      "id": "fussball",
+      "teile": ["Fuß", "Ball"],
+      "text": "Fußball"
+    },
+    {
+      "id": "regenschirm",
+      "teile": ["Regen", "Schirm"],
+      "text": "Regenschirm"
+    },
+    {
+      "id": "baumhaus",
+      "teile": ["Baum", "Haus"],
+      "text": "Baumhaus"
+    },
+    {
+      "id": "hausschuh",
+      "teile": ["Haus", "Schuh"],
+      "text": "Hausschuh"
+    },
+    {
+      "id": "tischbein",
+      "teile": ["Tisch", "Bein"],
+      "text": "Tischbein"
+    },
+    {
+      "id": "wasserglas",
+      "teile": ["Wasser", "Glas"],
+      "text": "Wasserglas"
+    }
+  ]
+}

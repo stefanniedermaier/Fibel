@@ -31,18 +31,26 @@ export const satzzeichen: ExerciseModule<Record<string, never>, SatzzeichenData>
     const mark = s.text.slice(-1)
     return {
       instruction: 'Lies den Satz. Welches Zeichen gehört ans Ende?',
-      caption: 'Punkt oder Fragezeichen?',
-      hint: 'Fragt der Satz etwas? Dann kommt ein Fragezeichen.',
+      caption:
+        ctx.grade >= 2 ? 'Punkt, Fragezeichen oder Ausrufezeichen?' : 'Punkt oder Fragezeichen?',
+      hint:
+        ctx.grade >= 2
+          ? 'Fragt der Satz etwas? Ruft jemand oder bittet um etwas? Oder erzählt der Satz nur?'
+          : 'Fragt der Satz etwas? Dann kommt ein Fragezeichen.',
       solution:
         mark === '?'
           ? 'Das ist eine Frage. Am Ende steht ein Fragezeichen.'
-          : 'Das ist ein Aussagesatz. Am Ende steht ein Punkt.',
+          : mark === '!'
+            ? 'Das ist ein Ausruf oder eine Aufforderung. Am Ende steht ein Ausrufezeichen.'
+            : 'Das ist ein Aussagesatz. Am Ende steht ein Punkt.',
       data: {
         text: s.text.slice(0, -1),
         correctKey: mark,
+        // From grade 2 also the exclamation mark (SP2-7).
         choices: [
           { key: '.', label: '.' },
           { key: '?', label: '?' },
+          ...(ctx.grade >= 2 ? [{ key: '!', label: '!' }] : []),
         ],
       },
     }
