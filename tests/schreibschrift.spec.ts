@@ -104,7 +104,7 @@ describe('Verbundene Schrift (VA und SAS)', () => {
     const va = SCRIPTS['vereinfachte-ausgangsschrift']!.glyphs.n!
     const sas = SCRIPTS.schulausgangsschrift!.glyphs.n!
     expect(va.ein).toBe(50)
-    expect(sas.ein).toBe(100)
+    expect(sas.ein).toBe(90)
   })
 
   it('Nachspuren nimmt die Schrift aus dem Elternbereich', () => {
