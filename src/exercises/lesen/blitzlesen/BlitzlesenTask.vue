@@ -54,14 +54,6 @@ watch(
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .flash {
   display: flex;
   flex-direction: column;

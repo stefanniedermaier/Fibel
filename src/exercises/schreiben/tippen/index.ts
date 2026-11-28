@@ -2,6 +2,7 @@
  * Shared by the writing exercises that type a word on the device's own keyboard
  * (S2 "Buchstaben legen" and S3 "ABC-Tastatur").
  */
+import { capitalize } from '@/core/text'
 import type { Word } from '@/core/types'
 import type { LearnerContext } from '../../types'
 import { isCapitalised, spoken } from '../shared'
@@ -46,7 +47,7 @@ export function onlyLetters(text: string): string {
 
 /** What is shown: with auto capitalisation the first letter appears as a capital. */
 export function display(typed: string, autoCapitalize: boolean): string {
-  return autoCapitalize && typed ? typed.charAt(0).toUpperCase() + typed.slice(1) : typed
+  return autoCapitalize && typed ? capitalize(typed) : typed
 }
 
 export function tippenData(ctx: LearnerContext, word: Word, slots: boolean): TippenData {

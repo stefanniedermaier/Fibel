@@ -77,14 +77,6 @@ const size = (f: Figur) => ({ w: Math.max(...f.map((r) => r.length)) + 2, h: f.l
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .paper {
   max-width: 100%;
   height: auto;

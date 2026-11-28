@@ -7,7 +7,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 </script>
 
 <template>
-  <div class="task">
+  <div class="laengen">
     <ChoiceButtons
       class="pencils"
       label-prefix="Stift"
@@ -32,7 +32,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 </template>
 
 <style scoped>
-.task {
+.laengen {
   width: 100%;
 }
 

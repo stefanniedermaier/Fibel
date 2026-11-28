@@ -48,11 +48,7 @@ function answer(correct: boolean) {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(10px, 2.5vh, 20px);
-  width: 100%;
 }
 
 .equation {

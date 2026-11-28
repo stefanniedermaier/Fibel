@@ -70,11 +70,7 @@ const side = (x: number, y: number) => `M${x + S} ${y}l${D} ${-D}v${S}l${-D} ${D
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 28px;
-  width: 100%;
 }
 
 .building {

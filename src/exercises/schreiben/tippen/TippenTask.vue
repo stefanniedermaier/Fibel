@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import WordPrompt from '@/components/WordPrompt.vue'
+import { useNativeKeyboard } from '@/composables/useNativeKeyboard'
 import { cleanSentence, display, marks, matches, onlyLetters, type TippenData } from './index'
 
 // The word is typed on the device's own keyboard. A transparent <input> lies over our
@@ -14,12 +15,16 @@ const EXTRA_LETTERS = 2
 
 const input = ref<HTMLInputElement>()
 const typed = ref('')
-const focused = ref(false)
 const state = ref<'idle' | 'wrong' | 'right'>('idle')
 /** After a mistake: which letters were right (shown until the child types again). */
 const marking = ref<boolean[]>()
 
 const disabled = computed(() => props.locked || props.revealed || state.value === 'right')
+const { focused } = useNativeKeyboard(
+  input,
+  () => disabled.value,
+  () => props.data,
+)
 const targetLetters = computed(() => [...props.data.target])
 const maxLength = computed(() =>
   props.data.slots ? targetLetters.value.length : targetLetters.value.length + EXTRA_LETTERS,
@@ -45,14 +50,7 @@ const viewportHeight = ref(window.visualViewport?.height ?? window.innerHeight)
 const onResize = () => (viewportHeight.value = window.visualViewport?.height ?? window.innerHeight)
 const promptSize = computed(() => (viewportHeight.value < 560 ? 64 : 96))
 
-function focus() {
-  if (!disabled.value) input.value?.focus({ preventScroll: true })
-}
-
-onMounted(() => {
-  window.visualViewport?.addEventListener('resize', onResize)
-  focus()
-})
+onMounted(() => window.visualViewport?.addEventListener('resize', onResize))
 onUnmounted(() => window.visualViewport?.removeEventListener('resize', onResize))
 
 watch(
@@ -62,14 +60,8 @@ watch(
     state.value = 'idle'
     marking.value = undefined
     if (input.value) input.value.value = ''
-    void nextTick(focus)
   },
 )
-
-// Done (right or revealed): close the keyboard so the praise and the solution are visible.
-watch(disabled, (off) => {
-  if (off) input.value?.blur()
-})
 
 function onInput(e: Event) {
   const el = e.target as HTMLInputElement
@@ -161,11 +153,7 @@ function submit() {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(10px, 2.5vh, 20px);
-  width: 100%;
 }
 
 .row {
@@ -320,19 +308,6 @@ button.done:disabled {
 @keyframes blink {
   50% {
     opacity: 0;
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
   }
 }
 </style>

@@ -6,6 +6,7 @@
  * the middle) · 4: number sequences +1, +2, −1 · 5: bigger steps up to 20.
  * The next level opens when 80 % of the current one sit solidly (box ≥ 3).
  */
+import { capitalize } from '@/core/text'
 import reihenBilder from '@/data/common/reihen-bilder.json'
 import { numberWord } from '@/core/numbers'
 import { randomInt, shuffle, type Rng } from '@/core/random'
@@ -224,5 +225,3 @@ export const reihen: ExerciseModule<ReihenParams, ReihenData> = {
 
   component: ReihenTask,
 }
-
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)

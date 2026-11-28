@@ -3,6 +3,7 @@
  * the curriculum and short dialogues. English text is spoken with the English voice: in
  * instructions it is marked as [[en:…]] (core/speech.ts).
  */
+import type { BildWahlData } from '@/components/BildWahlTask.vue'
 import dialoge from '@/data/basis/englisch/dialoge.json'
 import words from '@/data/basis/englisch/words.json'
 
@@ -50,14 +51,8 @@ export const look = (w: EnglishWord) => w.image ?? (w.thema === 'zahlen' ? w.de 
 
 export const en = (text: string) => `[[en:${text}]]`
 
-export interface EnglischData {
-  /** Shown above the choices: a picture, digits or an English word. */
-  prompt?: { image?: string; text?: string }
-  correctKey: string
-  choices: { key: string; image?: string; label?: string }[]
-  /** English labels are spoken when tapped. */
-  speakLabels?: boolean
-}
+/** Shown with BildWahlTask: a picture, digits or an English word above the choices. */
+export type EnglischData = BildWahlData & { prompt?: { image?: string; text?: string }; lang: 'en' }
 
 /** Up to `n - 1` other words of the same topics that do not look like `word`. */
 export function others<T extends EnglishWord>(

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { capitalize } from '@/core/text'
 import { computed, ref, watch } from 'vue'
 import ChoiceButtons from '@/components/ChoiceButtons.vue'
 import WordPrompt from '@/components/WordPrompt.vue'
@@ -19,14 +20,12 @@ function answer(correct: boolean) {
 
 // If the first letter of a noun is missing, the choices are capitalised (R, not r).
 function choiceText(key: string): string {
-  return props.data.gap === 0 && props.data.capitalizeFirst
-    ? key.charAt(0).toUpperCase() + key.slice(1)
-    : key
+  return props.data.gap === 0 && props.data.capitalizeFirst ? capitalize(key) : key
 }
 
 const parts = computed(() =>
   props.data.graphemes.map((g, i) => {
-    const text = i === 0 && props.data.capitalizeFirst ? g.charAt(0).toUpperCase() + g.slice(1) : g
+    const text = i === 0 && props.data.capitalizeFirst ? capitalize(g) : g
     return { text, gap: i === props.data.gap }
   }),
 )
@@ -60,11 +59,7 @@ const parts = computed(() =>
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(16px, 4vh, 32px);
-  width: 100%;
 }
 
 .word {

@@ -4,6 +4,7 @@
  * spelling among two typical mistakes of the word's phenomena (Bine for Biene, Sone for
  * Sonne). After the answer the right word is shown and read out.
  */
+import { capitalize } from '@/core/text'
 import { shuffle } from '@/core/random'
 import type { Word } from '@/core/types'
 import type { ExerciseModule } from '../../types'
@@ -91,7 +92,7 @@ export const schreibung: ExerciseModule<SchreibenParams, WahlData> = {
     )
     const wrong = [...shuffle(own, rng), ...rest].slice(0, 2)
     const say = word.artikel ? `${word.artikel} ${spoken(word)}` : spoken(word)
-    const example = word.artikel ? ` ${say.charAt(0).toUpperCase()}${say.slice(1)}.` : ''
+    const example = word.artikel ? ` ${capitalize(say)}.` : ''
     return {
       instruction: `Wie schreibt man ${spoken(word)}?${example} Tippe auf das richtige Wort.`,
       caption: 'Welches Wort ist richtig geschrieben?',

@@ -2,7 +2,7 @@
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemId } from '../../lesen/shared'
-import SacheTask from '../SacheTask.vue'
+import BildWahlTask from '@/components/BildWahlTask.vue'
 import { getBegriff, getThema, type SacheData, type SacheParams } from '../shared'
 
 export const CHOICES = 4
@@ -37,5 +37,5 @@ export const hoerenBild: ExerciseModule<SacheParams, SacheData> = {
     }
   },
 
-  component: SacheTask,
+  component: BildWahlTask,
 }

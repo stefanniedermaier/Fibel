@@ -5,6 +5,7 @@
  * Entbündeln (plaene/klasse-3.md, section 6). The method is a parameter, so a state
  * adjustment could choose another one later.
  */
+import { randomInt } from '@/core/random'
 import { numberWord } from '@/core/numbers'
 import type { Rng } from '@/core/random'
 import type { ExerciseModule } from '../../types'
@@ -107,28 +108,30 @@ export function subtractColumns(a: number, b: number): { width: number; columns:
   return { width, columns: columns.slice(0, String(a - b).length) }
 }
 
-const rnd = (rng: Rng, lo: number, hi: number) => lo + Math.floor(rng() * (hi - lo + 1))
-
 /** R4-5: the same kinds of tasks with four to six digits. */
 function grosseZahlen(op: '+' | '-', kind: string, rng: Rng): number[] {
-  const stellen = rnd(rng, 4, 6)
+  const stellen = randomInt(rng, 4, 6)
   const lo = 10 ** (stellen - 1)
   if (op === '+') {
     if (kind === 'drei')
-      return [rnd(rng, lo, 3 * lo), rnd(rng, lo, 3 * lo), rnd(rng, lo / 10, 2 * lo)]
-    return [rnd(rng, lo, 5 * lo), rnd(rng, lo / 10, 4 * lo)]
+      return [
+        randomInt(rng, lo, 3 * lo),
+        randomInt(rng, lo, 3 * lo),
+        randomInt(rng, lo / 10, 2 * lo),
+      ]
+    return [randomInt(rng, lo, 5 * lo), randomInt(rng, lo / 10, 4 * lo)]
   }
-  const a = rnd(rng, 4 * lo, 10 * lo - 1)
+  const a = randomInt(rng, 4 * lo, 10 * lo - 1)
   if (kind === 'null') {
     // Zeros in the middle: 60 040 − 23 587.
-    const z = rnd(rng, 4, 9) * lo + rnd(rng, 1, 9) * 10
-    return [z, rnd(rng, lo, z - lo)]
+    const z = randomInt(rng, 4, 9) * lo + randomInt(rng, 1, 9) * 10
+    return [z, randomInt(rng, lo, z - lo)]
   }
   if (kind === 'ohne') {
-    const b = digitsOf(a, stellen).reduce((s2, d, i) => s2 + rnd(rng, 0, d) * 10 ** i, 0)
+    const b = digitsOf(a, stellen).reduce((s2, d, i) => s2 + randomInt(rng, 0, d) * 10 ** i, 0)
     return [a, Math.max(1, Math.min(b, a - 1))]
   }
-  return [a, rnd(rng, lo, a - lo)]
+  return [a, randomInt(rng, lo, a - lo)]
 }
 
 export const schriftlich: ExerciseModule<SchriftlichParams, SchriftlichData> = {
@@ -148,34 +151,35 @@ export const schriftlich: ExerciseModule<SchriftlichParams, SchriftlichData> = {
     let rows: number[]
     if (params.gross) rows = grosseZahlen(params.op, kind, rng)
     else if (params.op === '+') {
-      if (kind === 'drei') rows = [rnd(rng, 101, 399), rnd(rng, 101, 299), rnd(rng, 11, 299)]
+      if (kind === 'drei')
+        rows = [randomInt(rng, 101, 399), randomInt(rng, 101, 299), randomInt(rng, 11, 299)]
       else if (kind === 'uebertrag') {
         // Carries in the ones and the tens: 478 + 256.
-        const a = rnd(rng, 1, 4) * 100 + rnd(rng, 5, 9) * 10 + rnd(rng, 5, 9)
-        rows = [a, rnd(rng, 1, 4) * 100 + rnd(rng, 3, 9) * 10 + rnd(rng, 3, 9)]
-      } else rows = [rnd(rng, 101, 599), rnd(rng, 101, 399)]
+        const a = randomInt(rng, 1, 4) * 100 + randomInt(rng, 5, 9) * 10 + randomInt(rng, 5, 9)
+        rows = [a, randomInt(rng, 1, 4) * 100 + randomInt(rng, 3, 9) * 10 + randomInt(rng, 3, 9)]
+      } else rows = [randomInt(rng, 101, 599), randomInt(rng, 101, 399)]
     } else {
-      let a = rnd(rng, 400, 999)
-      let b = rnd(rng, 101, a - 50)
+      let a = randomInt(rng, 400, 999)
+      let b = randomInt(rng, 101, a - 50)
       if (kind === 'entbuendeln') {
         // The ones of b bigger than those of a: 734 − 258.
-        a = rnd(rng, 4, 9) * 100 + rnd(rng, 1, 9) * 10 + rnd(rng, 0, 6)
+        a = randomInt(rng, 4, 9) * 100 + randomInt(rng, 1, 9) * 10 + randomInt(rng, 0, 6)
         b =
-          rnd(rng, 1, Math.floor(a / 100) - 1) * 100 +
-          rnd(rng, 0, 9) * 10 +
-          rnd(rng, (a % 10) + 1, 9)
+          randomInt(rng, 1, Math.floor(a / 100) - 1) * 100 +
+          randomInt(rng, 0, 9) * 10 +
+          randomInt(rng, (a % 10) + 1, 9)
       }
       if (kind === 'ohne') {
         // Every digit of b at most the digit of a.
-        b = digitsOf(a, 3).reduce((s, d, i) => s + rnd(rng, 0, d) * 10 ** i, 0)
+        b = digitsOf(a, 3).reduce((s, d, i) => s + randomInt(rng, 0, d) * 10 ** i, 0)
         if (b < 100) b += 100
         if (b > a) b = a - 1
       } else if (kind === 'null') {
         // A zero in the tens (503 − 128): unbundling goes over the zero.
-        const h = rnd(rng, 3, 9)
-        const e = rnd(rng, 0, 4)
+        const h = randomInt(rng, 3, 9)
+        const e = randomInt(rng, 0, 4)
         a = h * 100 + e
-        b = rnd(rng, 1, h - 1) * 100 + rnd(rng, 1, 9) * 10 + rnd(rng, e + 1, 9)
+        b = randomInt(rng, 1, h - 1) * 100 + randomInt(rng, 1, 9) * 10 + randomInt(rng, e + 1, 9)
       }
       rows = [a, b]
     }

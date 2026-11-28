@@ -1,24 +1,11 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import ChoiceButtons from '@/components/ChoiceButtons.vue'
+import { computed } from 'vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
-import NumberInput from '@/components/NumberInput.vue'
+import RechnungWaehlen from '@/components/RechnungWaehlen.vue'
 import type { SachaufgabeData } from './index'
 
 const props = defineProps<{ data: SachaufgabeData; revealed: boolean; locked: boolean }>()
 const emit = defineEmits<{ answer: [correct: boolean] }>()
-
-// Step 1: pick the calculation. Step 2: work it out. Only the end counts as "right".
-const step = ref<1 | 2>(1)
-watch(
-  () => props.data,
-  () => (step.value = 1),
-)
-
-function onChoice(correct: boolean) {
-  if (correct) step.value = 2
-  else emit('answer', false)
-}
 
 // The picture: first group, and the added ones (plus) or the ones going away (minus).
 const pictures = computed(() => {
@@ -51,38 +38,21 @@ const size = computed(() => (props.data.a + props.data.b > 12 ? 34 : 46))
         </span>
       </span>
     </div>
-    <ChoiceButtons
-      v-if="step === 1 && !revealed"
-      :options="data.choices"
+    <RechnungWaehlen
+      :choices="data.choices"
       :correct-key="data.correctKey"
+      :result="data.result"
       :revealed="revealed"
       :locked="locked"
-      :min-width="120"
-      @answer="onChoice"
-    >
-      <template #default="{ option }">
-        <span class="calc">{{ option.label }}</span>
-      </template>
-    </ChoiceButtons>
-    <template v-else>
-      <p class="equation" aria-hidden="true">{{ data.correctKey }} = <span class="gap">?</span></p>
-      <NumberInput
-        :answer="data.result"
-        :revealed="revealed"
-        :locked="locked"
-        @answer="emit('answer', $event)"
-      />
-    </template>
+      :size="36"
+      @answer="emit('answer', $event)"
+    />
   </div>
 </template>
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 18px;
-  width: 100%;
 }
 
 .picture {
@@ -118,21 +88,5 @@ const size = computed(() => (props.data.a + props.data.b > 12 ? 34 : 46))
   inset: 45% -2px auto;
   border-top: 4px solid #d33c2c;
   transform: rotate(-30deg);
-}
-
-.calc {
-  font-size: 36px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.equation {
-  margin: 0;
-  font-size: clamp(36px, 10vw, 56px);
-  font-weight: 700;
-}
-
-.gap {
-  color: var(--accent-strong);
 }
 </style>

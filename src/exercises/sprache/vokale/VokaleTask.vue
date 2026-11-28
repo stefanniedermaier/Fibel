@@ -68,17 +68,4 @@ function tap(i: number) {
   color: #b3261e;
   box-shadow: 0 4px 0 #b3261e;
 }
-
-.shake {
-  animation: shake 0.45s;
-}
-
-@keyframes shake {
-  25% {
-    transform: translateX(-8px);
-  }
-  75% {
-    transform: translateX(8px);
-  }
-}
 </style>

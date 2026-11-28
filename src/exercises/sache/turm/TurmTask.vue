@@ -9,7 +9,7 @@ const COLORS = ['#EA5A47', '#61B2E4', '#F1B31C', '#B1CC33']
 </script>
 
 <template>
-  <div class="task">
+  <div class="turm">
     <ChoiceButtons
       label-prefix="Turm"
       :options="data.choices"
@@ -51,7 +51,7 @@ const COLORS = ['#EA5A47', '#61B2E4', '#F1B31C', '#B1CC33']
 </template>
 
 <style scoped>
-.task {
+.turm {
   display: flex;
   justify-content: center;
   width: 100%;

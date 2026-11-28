@@ -1,24 +1,10 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import ChoiceButtons from '@/components/ChoiceButtons.vue'
 import EmojiPicture from '@/components/EmojiPicture.vue'
-import NumberInput from '@/components/NumberInput.vue'
+import RechnungWaehlen from '@/components/RechnungWaehlen.vue'
 import type { SachaufgabenData } from './index'
 
-const props = defineProps<{ data: SachaufgabenData; revealed: boolean; locked: boolean }>()
+defineProps<{ data: SachaufgabenData; revealed: boolean; locked: boolean }>()
 const emit = defineEmits<{ answer: [correct: boolean] }>()
-
-// rechnen: step 1 the calculation, step 2 the result. pruefen: one choice.
-const step = ref<1 | 2>(1)
-watch(
-  () => props.data,
-  () => (step.value = 1),
-)
-function onChoice(correct: boolean) {
-  if (props.data.mode === 'pruefen') emit('answer', correct)
-  else if (correct) step.value = 2
-  else emit('answer', false)
-}
 </script>
 
 <template>
@@ -28,38 +14,22 @@ function onChoice(correct: boolean) {
       <p>{{ data.text }}</p>
     </div>
     <p v-if="data.claim" class="claim">Antwort: {{ data.claim }}</p>
-    <ChoiceButtons
-      v-if="step === 1 && !(revealed && data.mode === 'rechnen')"
-      :options="data.choices"
+    <!-- rechnen: the calculation, then the result. pruefen: one choice. -->
+    <RechnungWaehlen
+      :choices="data.choices"
       :correct-key="data.correctKey"
+      :result="data.mode === 'rechnen' ? data.result : undefined"
       :revealed="revealed"
       :locked="locked"
-      :min-width="120"
-      @answer="onChoice"
-    >
-      <template #default="{ option }">
-        <span class="calc">{{ option.label }}</span>
-      </template>
-    </ChoiceButtons>
-    <template v-else>
-      <p class="calc big">{{ data.correctKey }} = ?</p>
-      <NumberInput
-        :answer="data.result"
-        :revealed="revealed"
-        :locked="locked"
-        @answer="emit('answer', $event)"
-      />
-    </template>
+      :size="26"
+      @answer="emit('answer', $event)"
+    />
   </div>
 </template>
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 18px;
-  width: 100%;
 }
 
 .story {
@@ -80,15 +50,5 @@ function onChoice(correct: boolean) {
   margin: 0;
   font-size: 28px;
   font-weight: 700;
-}
-
-.calc {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.calc.big {
-  margin: 0;
-  font-size: 40px;
 }
 </style>

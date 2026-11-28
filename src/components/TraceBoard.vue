@@ -290,17 +290,4 @@ function slip() {
   stroke-linejoin: round;
   opacity: 0.85;
 }
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-8px);
-  }
-  75% {
-    transform: translateX(8px);
-  }
-}
 </style>

@@ -1,4 +1,5 @@
 /** R3 "Zahlenhaus": the roof shows the number, one floor half is missing (7 = 3 + ?). */
+import { capitalize } from '@/core/text'
 import { numberWord } from '@/core/numbers'
 import { randomInt } from '@/core/random'
 import type { ExerciseModule } from '../../types'
@@ -18,8 +19,6 @@ export interface ZahlenhausData {
   /** Which floor half is missing. */
   side: 'left' | 'right'
 }
-
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
 export const zahlenhaus: ExerciseModule<ZahlenhausParams, ZahlenhausData> = {
   id: 'rechnen.zahlenhaus',

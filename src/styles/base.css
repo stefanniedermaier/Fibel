@@ -79,6 +79,15 @@ button {
   background: var(--surface);
 }
 
+/* Root of every exercise component: a centred column (components set their own gap). */
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -132,4 +141,22 @@ button {
 
 .muted {
   color: var(--muted);
+}
+
+/* A wrong answer shakes (components use .shake or their own class with this animation). */
+.shake {
+  animation: shake 0.45s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
 }

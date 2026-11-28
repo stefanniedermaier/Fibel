@@ -40,14 +40,6 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .rows {
   display: flex;
   flex-direction: column;

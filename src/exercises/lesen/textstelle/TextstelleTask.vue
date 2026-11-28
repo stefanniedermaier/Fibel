@@ -50,11 +50,7 @@ function tap(i: number) {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 12px;
-  width: 100%;
 }
 
 .question {

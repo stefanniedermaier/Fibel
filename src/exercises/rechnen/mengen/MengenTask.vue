@@ -61,10 +61,8 @@ function choose(n: number) {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(24px, 6vh, 48px);
+  width: auto;
 }
 
 .picture {
@@ -110,19 +108,6 @@ function choose(n: number) {
 
 .choice.shake {
   animation: shake 0.45s;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
 }
 
 @keyframes pulse {

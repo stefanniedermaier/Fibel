@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { capitalize } from '@/core/text'
 import { computed, ref, watch } from 'vue'
 import type { Tile } from './tiles'
 
@@ -46,7 +47,7 @@ const disabled = computed(() => props.locked || props.revealed || state.value !=
 
 function shown(text: string, index: number): string {
   if (!props.capitalizeFirst || index !== 0) return text
-  return text.charAt(0).toUpperCase() + text.slice(1)
+  return capitalize(text)
 }
 
 const slots = computed(() =>
@@ -334,18 +335,5 @@ function keySlot(e: MouseEvent, index: number) {
 .tile:active:not(:disabled) {
   transform: translateY(3px);
   box-shadow: 0 2px 0 var(--accent-strong);
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
 }
 </style>

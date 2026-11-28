@@ -1,0 +1,75 @@
+/* Form controls of the profile settings and its sections (ProfileEditView). */
+
+.settings-form .voice-warn {
+  color: var(--error);
+}
+
+.settings-form .card {
+  margin-top: 16px;
+}
+
+.settings-form h2 {
+  margin-top: 0;
+}
+
+.settings-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.settings-form label.check {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+}
+
+.settings-form .check input {
+  width: 28px;
+  height: 28px;
+}
+
+.settings-form input[type='text'],
+.settings-form select {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 12px;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.settings-form .small {
+  font-size: 15px;
+}
+
+.settings-form button.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent-strong);
+  font: inherit;
+  text-decoration: underline;
+}
+
+.settings-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  background: #fff;
+  font: inherit;
+}
+
+.settings-form fieldset {
+  margin: 0 0 14px;
+  padding: 0;
+  border: 0;
+}
+
+.settings-form legend {
+  margin-bottom: 4px;
+}

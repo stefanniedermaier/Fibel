@@ -72,11 +72,7 @@ const pos = (c: string) => c.split('-').map((v) => Number(v) * S + 4) as [number
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 20px;
-  width: 100%;
 }
 
 .figures {

@@ -29,7 +29,7 @@ function choose(key: string) {
 </script>
 
 <template>
-  <div class="task" :class="[data.mode, { many: data.places.length > 4 }]">
+  <div class="lage" :class="[data.mode, { many: data.places.length > 4 }]">
     <span v-if="data.start" class="flag" aria-hidden="true">🏁</span>
     <template v-if="data.mode === 'kreuz'">
       <span class="centre" aria-hidden="true"
@@ -58,14 +58,14 @@ function choose(key: string) {
 </template>
 
 <style scoped>
-.task.kreuz {
+.lage.kreuz {
   display: grid;
   grid-template: repeat(3, auto) / repeat(3, auto);
   place-items: center;
   gap: 8px;
 }
 
-.task.reihe {
+.lage.reihe {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;

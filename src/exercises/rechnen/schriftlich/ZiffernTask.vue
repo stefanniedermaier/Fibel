@@ -1,25 +1,19 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { useAppStore } from '@/stores/app'
+import { computed } from 'vue'
+import DigitPad from '@/components/DigitPad.vue'
+import { useDigitSteps } from '@/composables/useDigitSteps'
 import type { MalGeteiltData } from './malgeteilt'
 
 const props = defineProps<{ data: MalGeteiltData; revealed: boolean; locked: boolean }>()
 const emit = defineEmits<{ answer: [correct: boolean] }>()
-const store = useAppStore()
 
 // Boxes as in the exercise book. The child taps the digit for the highlighted box;
 // carries and (when dividing) the working appear as the steps are done.
-const solved = ref(0)
-const explanation = ref('')
-const shaking = ref(false)
-watch(
-  () => props.data,
-  () => {
-    solved.value = 0
-    explanation.value = ''
-  },
+const { done, explanation, shaking, tap } = useDigitSteps(
+  () => props.data.steps,
+  () => props,
+  (correct) => emit('answer', correct),
 )
-const done = computed(() => (props.revealed ? props.data.steps.length : solved.value))
 
 const key = (r: number, c: number) => `${r}:${c}`
 const cells = computed(() => {
@@ -45,22 +39,6 @@ const filledRows = computed(
 /** A line appears together with the row above it (dividing: with the product). */
 const lineUnder = (r: number, c: number) =>
   filledRows.value.has(r) && props.data.lines.some((l) => l.row === r && c >= l.from && c <= l.to)
-
-function tap(d: number) {
-  if (props.locked || props.revealed || solved.value >= props.data.steps.length) return
-  const step = props.data.steps[solved.value]!
-  if (d === step.digit) {
-    solved.value++
-    explanation.value = ''
-    if (solved.value === props.data.steps.length) emit('answer', true)
-  } else {
-    explanation.value = step.explanation
-    void store.say(step.explanation)
-    shaking.value = true
-    setTimeout(() => (shaking.value = false), 450)
-    emit('answer', false)
-  }
-}
 </script>
 
 <template>
@@ -95,21 +73,13 @@ function tap(d: number) {
       </template>
     </div>
     <p v-if="explanation" class="explanation">{{ explanation }}</p>
-    <div class="pad" role="group" aria-label="Ziffern">
-      <button v-for="d in 10" :key="d" type="button" class="key" @click="tap(d - 1)">
-        {{ d - 1 }}
-      </button>
-    </div>
+    <DigitPad @digit="tap" />
   </div>
 </template>
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 14px;
-  width: 100%;
 }
 
 .heft {
@@ -168,33 +138,5 @@ function tap(d: number) {
   margin: 0;
   font-size: 18px;
   text-align: center;
-}
-
-.pad {
-  display: grid;
-  grid-template-columns: repeat(5, 60px);
-  gap: 8px;
-}
-
-.key {
-  height: 56px;
-  font-size: 28px;
-  font-weight: 700;
-  border-radius: 14px;
-  border: 3px solid var(--accent);
-  background: #fff;
-}
-
-.shake {
-  animation: shake 0.4s;
-}
-
-@keyframes shake {
-  25% {
-    transform: translateX(-6px);
-  }
-  75% {
-    transform: translateX(6px);
-  }
 }
 </style>

@@ -9,6 +9,7 @@
  * Division: the child taps the digits of the result; the working below (product,
  * difference, next digit brought down) appears after each digit.
  */
+import { randomInt } from '@/core/random'
 import { numberWord } from '@/core/numbers'
 import type { Rng } from '@/core/random'
 import type { ExerciseModule } from '../../types'
@@ -219,8 +220,6 @@ export function geteiltLayout(a: number, b: number): ZiffernData {
   }
 }
 
-const rnd = (rng: Rng, lo: number, hi: number) => lo + Math.floor(rng() * (hi - lo + 1))
-
 export interface MalGeteiltParams {
   /** 'mal1': one-digit multiplier, 'mal2': two digits, 'geteilt': divisor 2 to 9. */
   art: 'mal1' | 'mal2' | 'geteilt'
@@ -239,22 +238,28 @@ const KINDS: Record<MalGeteiltParams['art'], string[]> = {
 export function aufgabe(art: MalGeteiltParams['art'], kind: string, rng: Rng): [number, number] {
   if (art === 'mal1') {
     if (kind === 'null')
-      return [rnd(rng, 1, 9) * 1000 + rnd(rng, 1, 9) * 10 + rnd(rng, 0, 9), rnd(rng, 3, 9)]
-    return [kind === 'klein' ? rnd(rng, 112, 999) : rnd(rng, 1012, 9999), rnd(rng, 2, 9)]
+      return [
+        randomInt(rng, 1, 9) * 1000 + randomInt(rng, 1, 9) * 10 + randomInt(rng, 0, 9),
+        randomInt(rng, 3, 9),
+      ]
+    return [
+      kind === 'klein' ? randomInt(rng, 112, 999) : randomInt(rng, 1012, 9999),
+      randomInt(rng, 2, 9),
+    ]
   }
   if (art === 'mal2')
     return [
-      kind === 'zwei' ? rnd(rng, 12, 99) : rnd(rng, 102, 999),
-      rnd(rng, 1, 9) * 10 + rnd(rng, 1, 9),
+      kind === 'zwei' ? randomInt(rng, 12, 99) : randomInt(rng, 102, 999),
+      randomInt(rng, 1, 9) * 10 + randomInt(rng, 1, 9),
     ]
-  const b = rnd(rng, 2, 9)
+  const b = randomInt(rng, 2, 9)
   if (kind === 'null') {
     // A zero inside the result: 9156 : 7 = 1308.
-    const q = rnd(rng, 1, 9) * 1000 + rnd(rng, 1, 9) * 100 + rnd(rng, 1, 9)
+    const q = randomInt(rng, 1, 9) * 1000 + randomInt(rng, 1, 9) * 100 + randomInt(rng, 1, 9)
     return [q * b, b]
   }
-  const q = rnd(rng, 112, 1999)
-  return [q * b + (kind === 'rest' ? rnd(rng, 1, b - 1) : 0), b]
+  const q = randomInt(rng, 112, 1999)
+  return [q * b + (kind === 'rest' ? randomInt(rng, 1, b - 1) : 0), b]
 }
 
 export const malGeteilt: ExerciseModule<MalGeteiltParams, MalGeteiltData> = {

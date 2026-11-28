@@ -37,7 +37,7 @@ function tap(index: number) {
 </script>
 
 <template>
-  <div class="task">
+  <div class="reihenfolge">
     <div class="pictures">
       <button
         v-for="(p, i) in shown"
@@ -57,7 +57,7 @@ function tap(index: number) {
 </template>
 
 <style scoped>
-.task {
+.reihenfolge {
   width: 100%;
 }
 
@@ -102,18 +102,5 @@ function tap(index: number) {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
-}
-
-.shake {
-  animation: shake 0.45s;
-}
-
-@keyframes shake {
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
 }
 </style>

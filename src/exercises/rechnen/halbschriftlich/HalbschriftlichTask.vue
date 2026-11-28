@@ -47,11 +47,7 @@ function onAnswer(correct: boolean) {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 14px;
-  width: 100%;
 }
 
 .task-line {

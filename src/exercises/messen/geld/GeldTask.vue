@@ -95,11 +95,7 @@ function check() {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 18px;
-  width: 100%;
 }
 
 .money,

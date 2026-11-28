@@ -195,11 +195,7 @@ const shownChar = (i: number) =>
 .task {
   flex: 1;
   min-height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 10px;
-  width: 100%;
 }
 
 .head {
@@ -351,18 +347,5 @@ const shownChar = (i: number) =>
 .key:disabled {
   opacity: 0.45;
   box-shadow: none;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-8px);
-  }
-  75% {
-    transform: translateX(8px);
-  }
 }
 </style>

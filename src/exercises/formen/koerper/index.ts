@@ -2,10 +2,11 @@
  * F2-3 "Körper" (Mathematik 1/2, 2.2: Würfel, Quader, Kugel, Zylinder, Kegel, Pyramide;
  * Ecken, Kanten, Flächen; "rollt oder kippt"). Own pictures of the solids.
  */
+import { capitalize } from '@/core/text'
 import daten from '@/data/basis/klasse-2/koerper.json'
 import { numberWord } from '@/core/numbers'
 import { shuffle } from '@/core/random'
-import SacheTask from '@/exercises/sache/SacheTask.vue'
+import BildWahlTask from '@/components/BildWahlTask.vue'
 import type { SacheData } from '@/exercises/sache/shared'
 import type { ExerciseModule } from '../../types'
 
@@ -24,7 +25,6 @@ export const KOERPER: readonly Koerper[] = daten.koerper
 export const DINGE: readonly { id: string; text: string; image: string; koerper: string }[] =
   daten.dinge
 
-const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 /** "der Würfel" → "ein Würfel", "die Kugel" → "eine Kugel". */
 const indef = (name: string) => name.replace(/^der /, 'ein ').replace(/^die /, 'eine ')
 
@@ -89,8 +89,8 @@ export const koerper: ExerciseModule<KoerperParams, SacheData> = {
       return {
         instruction: `Welche Form hat ${d.text}?`,
         hint: 'Kann es rollen? Hat es Ecken?',
-        solution: `${cap(d.text)} sieht aus wie ${indef(right.name)}.`,
-        afterword: `${cap(d.text)}: ${right.name}.`,
+        solution: `${capitalize(d.text)} sieht aus wie ${indef(right.name)}.`,
+        afterword: `${capitalize(d.text)}: ${right.name}.`,
         data: {
           prompt: d.image,
           correctKey: right.id,
@@ -142,8 +142,8 @@ export const koerper: ExerciseModule<KoerperParams, SacheData> = {
         caption: 'Rollt der Körper oder kippt er?',
         hint: 'Hat der Körper eine runde Fläche?',
         solution: k.rollt
-          ? `${cap(k.name)} kann rollen.`
-          : `${cap(k.name)} kann nicht rollen, ${pronoun} kippt nur.`,
+          ? `${capitalize(k.name)} kann rollen.`
+          : `${capitalize(k.name)} kann nicht rollen, ${pronoun} kippt nur.`,
         data: {
           prompt: k.image,
           correctKey: k.rollt ? 'rollt' : 'kippt',
@@ -165,7 +165,7 @@ export const koerper: ExerciseModule<KoerperParams, SacheData> = {
     return {
       instruction: `Wie viele ${ZAEHLEN[what].frage} hat ${k.name}?`,
       hint: ZAEHLEN[what].hilfe,
-      solution: `${cap(k.name)} hat ${numberWord(n)} Ecken, ${numberWord(k.kanten!)} Kanten und ${numberWord(k.flaechen!)} Flächen.`,
+      solution: `${capitalize(k.name)} hat ${numberWord(n)} Ecken, ${numberWord(k.kanten!)} Kanten und ${numberWord(k.flaechen!)} Flächen.`,
       data: {
         prompt: k.image,
         correctKey: String(n),
@@ -174,5 +174,5 @@ export const koerper: ExerciseModule<KoerperParams, SacheData> = {
     }
   },
 
-  component: SacheTask,
+  component: BildWahlTask,
 }

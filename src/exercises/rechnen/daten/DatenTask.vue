@@ -77,14 +77,6 @@ function bundles(count: number): number[] {
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .liste {
   border-collapse: separate;
   border-spacing: 0 6px;

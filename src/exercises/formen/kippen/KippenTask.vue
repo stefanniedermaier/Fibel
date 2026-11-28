@@ -84,14 +84,6 @@ const NAME: Record<Richtung, string> = {
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .scene {
   display: flex;
   align-items: center;

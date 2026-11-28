@@ -36,11 +36,7 @@ watch(
 .task {
   flex: 1;
   min-height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 12px;
-  width: 100%;
 }
 
 .task :deep(.board) {

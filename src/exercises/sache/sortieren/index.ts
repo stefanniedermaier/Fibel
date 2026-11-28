@@ -3,15 +3,9 @@
  * "Zu welcher Jahreszeit passt das?"); the child taps the right group.
  */
 import type { ExerciseModule } from '../../types'
-import SacheTask from '../SacheTask.vue'
-import {
-  capitalize,
-  getBegriff,
-  getThema,
-  visibleGroups,
-  type SacheData,
-  type SacheParams,
-} from '../shared'
+import BildWahlTask from '@/components/BildWahlTask.vue'
+import { capitalize } from '@/core/text'
+import { getBegriff, getThema, visibleGroups, type SacheData, type SacheParams } from '../shared'
 
 export const sortieren: ExerciseModule<SacheParams, SacheData> = {
   id: 'sache.sortieren',
@@ -54,5 +48,5 @@ export const sortieren: ExerciseModule<SacheParams, SacheData> = {
     }
   },
 
-  component: SacheTask,
+  component: BildWahlTask,
 }

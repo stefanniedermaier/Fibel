@@ -4,6 +4,7 @@
  * "ordnen einfache Visualisierungen, um eine Abfolge … zu veranschaulichen").
  * The same exercise serves HSU with its own sequences (`source`).
  */
+import { capitalize } from '@/core/text'
 import ablaeufe from '@/data/common/ablaeufe.json'
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
@@ -67,9 +68,7 @@ export const reihenfolge: ExerciseModule<ReihenfolgeParams, ReihenfolgeData> = {
         images: ablauf.images,
         order,
         steps: ablauf.steps,
-        texts: params.saetze
-          ? ablauf.steps.map((s) => `${s.charAt(0).toUpperCase()}${s.slice(1)}.`)
-          : undefined,
+        texts: params.saetze ? ablauf.steps.map((s) => `${capitalize(s)}.`) : undefined,
       },
     }
   },

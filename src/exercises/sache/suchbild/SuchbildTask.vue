@@ -43,7 +43,7 @@ const stripes = (box: SuchStelle['box']) =>
 </script>
 
 <template>
-  <div class="task">
+  <div class="suchbild">
     <svg :viewBox="`0 0 ${W} ${H}`" class="scene" role="group" aria-label="Suchbild">
       <!-- Backgrounds -->
       <template v-if="data.scene.hintergrund === 'strasse'">
@@ -191,7 +191,7 @@ const stripes = (box: SuchStelle['box']) =>
 </template>
 
 <style scoped>
-.task {
+.suchbild {
   display: flex;
   justify-content: center;
   width: 100%;

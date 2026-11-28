@@ -46,11 +46,8 @@ const pts = (p: [number, number][]) => p.map(([x, y]) => `${x},${y}`).join(' ')
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   padding-top: 24px;
+  gap: normal;
 }
 
 .pic {

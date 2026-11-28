@@ -5,7 +5,7 @@
  */
 import zusammensetzungen from '@/data/basis/klasse-1/zusammensetzungen.json'
 import { shuffle } from '@/core/random'
-import SacheTask from '@/exercises/sache/SacheTask.vue'
+import BildWahlTask from '@/components/BildWahlTask.vue'
 import type { SacheData } from '@/exercises/sache/shared'
 import type { ExerciseModule } from '../../types'
 
@@ -48,5 +48,5 @@ export const wortbildung: ExerciseModule<Record<string, never>, SacheData> = {
     }
   },
 
-  component: SacheTask,
+  component: BildWahlTask,
 }

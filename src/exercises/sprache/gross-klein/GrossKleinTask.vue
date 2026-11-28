@@ -27,7 +27,7 @@ function tap(i: number) {
 </script>
 
 <template>
-  <div class="task">
+  <div class="gross-klein">
     <div class="words">
       <button
         v-for="(w, i) in data.words"
@@ -68,18 +68,5 @@ function tap(i: number) {
 .word.done {
   border-color: var(--ok);
   box-shadow: 0 4px 0 var(--ok);
-}
-
-.shake {
-  animation: shake 0.45s;
-}
-
-@keyframes shake {
-  25% {
-    transform: translateX(-8px);
-  }
-  75% {
-    transform: translateX(8px);
-  }
 }
 </style>

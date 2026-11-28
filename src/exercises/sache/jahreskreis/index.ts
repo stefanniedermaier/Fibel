@@ -3,6 +3,7 @@
  * seasons inside. The child taps a season ("Was kommt nach dem Sommer?") or a month
  * ("In welchem Monat ist Weihnachten?").
  */
+import { capitalize } from '@/core/text'
 import type { ExerciseModule } from '../../types'
 import { MONATE } from '../../uhr/kalender'
 import JahreskreisTask from './JahreskreisTask.vue'
@@ -36,7 +37,6 @@ export interface JahreskreisData {
 
 const season = (id: string) => JAHRESZEITEN.find((s) => s.id === id)!
 const seasonOf = (month: number) => JAHRESZEITEN.find((s) => s.months.includes(month as never))!
-const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
 export const jahreskreis: ExerciseModule<JahreskreisParams, JahreskreisData> = {
   id: 'sache.jahreskreis',
@@ -86,7 +86,7 @@ export const jahreskreis: ExerciseModule<JahreskreisParams, JahreskreisData> = {
     if (mode === 'fest') {
       const f = FESTE.find((x) => x.id === id)
       if (!f) throw new Error(`Unbekanntes Fest: ${itemKey}`)
-      const sentence = `${cap(f.frage.replace(/^In welchem Monat ist (.*)\?$/, '$1'))} ist im ${MONATE[f.month]}.`
+      const sentence = `${capitalize(f.frage.replace(/^In welchem Monat ist (.*)\?$/, '$1'))} ist im ${MONATE[f.month]}.`
       return {
         instruction: `${f.frage} Tippe außen auf den Monat.`,
         caption: f.frage,

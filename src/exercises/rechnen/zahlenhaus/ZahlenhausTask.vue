@@ -32,10 +32,8 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(12px, 3vh, 24px);
+  width: auto;
 }
 
 .house {

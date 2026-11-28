@@ -88,11 +88,7 @@ const short = (v: number) =>
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 28px;
-  width: 100%;
 }
 
 .tafel {

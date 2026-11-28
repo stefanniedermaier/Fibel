@@ -80,14 +80,6 @@ const W = PAD * 2 + RULER_CM * CM
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .ruler {
   width: 100%;
   max-width: 640px;

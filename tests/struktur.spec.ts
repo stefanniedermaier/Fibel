@@ -13,7 +13,7 @@ import { createRng } from '@/core/random'
 import { planSession, sharesOf, weightedShares } from '@/core/session'
 import { categoryRates } from '@/core/stats'
 import type { CatalogEntry, SessionRecord } from '@/core/types'
-import { getExercise } from '@/exercises/registry'
+import { allExercises, getExercise } from '@/exercises/registry'
 
 const settings = resolveDefaults('DE-BY', 1)
 const ctx = { land: 'DE-BY', grade: 1, settings }
@@ -128,5 +128,15 @@ describe('Statistik nach Kategorie', () => {
     ])
     expect(rates.find((r) => r.category === 'lesen.hoeren')).toMatchObject({ tasks: 2, rate: 0.5 })
     expect(rates.find((r) => r.category === 'lesen.woerter')).toMatchObject({ tasks: 1, rate: 1 })
+  })
+})
+
+describe('Übungs-Module', () => {
+  it('werden alle gefunden und vom Katalog benutzt', () => {
+    const ids = allExercises().map((m) => m.id)
+    expect(ids.length).toBeGreaterThanOrEqual(107)
+    const used = new Set(BASE_CATALOG.map((e) => e.exercise))
+    expect(ids.filter((id) => !used.has(id))).toEqual([])
+    expect([...used].filter((id) => !getExercise(id))).toEqual([])
   })
 })

@@ -54,11 +54,7 @@ function answer(correct: boolean) {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(16px, 4vh, 32px);
-  width: 100%;
 }
 
 .target {

@@ -5,7 +5,7 @@
  */
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../types'
-import EnglischTask from './EnglischTask.vue'
+import BildWahlTask from '@/components/BildWahlTask.vue'
 import texteEn from '@/data/basis/englisch/texte.json'
 import UhrWahlTask, { type UhrWahlData } from '../uhr/digital/UhrWahlTask.vue'
 import WahlTask, { type WahlData } from '../schreiben/schreibung/WahlTask.vue'
@@ -48,13 +48,14 @@ export const hoeren: ExerciseModule<EnglischParams, EnglischData> = {
       solution: `${en(word.en)} heißt ${word.de}.`,
       afterword: en(word.en),
       data: {
+        lang: 'en',
         correctKey: word.id,
         choices: shuffle([word, ...rest], rng).map(choiceOf),
       },
     }
   },
 
-  component: EnglischTask,
+  component: BildWahlTask,
 }
 
 export interface LesenParams extends EnglischParams {
@@ -86,7 +87,12 @@ export const lesen: ExerciseModule<LesenParams, EnglischData> = {
         ...common,
         instruction: 'Lies das englische Wort. Tippe auf das passende Bild.',
         hint: `Das Wort heißt ${en(word.en)}.`,
-        data: { prompt: { text: word.en }, correctKey: word.id, choices: all.map(choiceOf) },
+        data: {
+          lang: 'en',
+          prompt: { text: word.en },
+          correctKey: word.id,
+          choices: all.map(choiceOf),
+        },
       }
     const shown = look(word)
     return {
@@ -94,6 +100,7 @@ export const lesen: ExerciseModule<LesenParams, EnglischData> = {
       instruction: 'Wie heißt das auf Englisch? Tippe auf das richtige Wort.',
       hint: `Auf Deutsch heißt es ${word.de}.`,
       data: {
+        lang: 'en',
         prompt: word.image ? { image: shown } : { text: shown },
         correctKey: word.id,
         choices: all.map((w) => ({ key: w.id, label: w.en })),
@@ -101,7 +108,7 @@ export const lesen: ExerciseModule<LesenParams, EnglischData> = {
     }
   },
 
-  component: EnglischTask,
+  component: BildWahlTask,
 }
 
 export interface DialogParams {
@@ -132,13 +139,14 @@ export const dialog: ExerciseModule<DialogParams, EnglischData> = {
       solution: `Du kannst sagen: ${en(d.antwort)}`,
       afterword: `${en(d.frage)} ${en(d.antwort)}`,
       data: {
+        lang: 'en',
         correctKey: d.antwort,
         choices: answers.map(textChoice),
       },
     }
   },
 
-  component: EnglischTask,
+  component: BildWahlTask,
 }
 
 // --- Grade 4 (plaene/klasse-4.md, section 10) ---------------------------------

@@ -3,6 +3,7 @@
  * Steigerung, Zeitformen (Präteritum, Perfekt), Nachsilben and the article of
  * compound nouns. All are choices with text answers (WahlTask).
  */
+import { capitalize } from '@/core/text'
 import sprache3 from '@/data/basis/klasse-3/sprache.json'
 import { pickOne, shuffle } from '@/core/random'
 import type { Word } from '@/core/types'
@@ -110,7 +111,7 @@ export const wortformen: ExerciseModule<WortformenParams, WahlData> = {
       instruction: `Heute ${w.er} ${pronoun}. Gestern ${aux} ${pronoun} …`,
       caption: 'Welche Form passt?',
       hint: `Das Perfekt: ${pronoun} ${aux} …`,
-      solution: `${pronoun.charAt(0).toUpperCase()}${pronoun.slice(1)} ${aux} ${part}.`,
+      solution: `${capitalize(pronoun)} ${aux} ${part}.`,
       data: {
         helper: `Heute ${w.er} ${pronoun}.`,
         prompt: `Gestern ${aux} ${pronoun} ___.`,
@@ -154,7 +155,7 @@ export const nachsilben: ExerciseModule<Record<string, never>, WahlData> = {
     // Wrong: another suffix, or the capital letter wrong (nouns big, adjectives small).
     const wrong = [
       `${root}${OTHER[n.baustein]![0]}`,
-      noun ? n.wort.toLowerCase() : `${n.wort.charAt(0).toUpperCase()}${n.wort.slice(1)}`,
+      noun ? n.wort.toLowerCase() : `${capitalize(n.wort)}`,
     ]
     return {
       instruction: `${n.basis} und der Baustein ${n.baustein}. Welches Wort entsteht?`,

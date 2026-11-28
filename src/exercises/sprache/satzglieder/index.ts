@@ -3,6 +3,7 @@
  * (Satzglieder). Tap the subject ("Wer oder was?") or the predicate (the verb), or
  * pick the sentence that is correctly rearranged – the verb always stays second.
  */
+import { capitalize } from '@/core/text'
 import sprache3 from '@/data/basis/klasse-3/sprache.json'
 import sprache4 from '@/data/basis/klasse-4/sprache.json'
 import { pickOne, shuffle } from '@/core/random'
@@ -60,7 +61,7 @@ const lowerFirst = (s: string) =>
   /^(Der|Die|Das|Meine|Mein|Unser|Am|Im|In|Nach|Jeden|Morgen|Seine|Ihre)\b/.test(s)
     ? s.charAt(0).toLowerCase() + s.slice(1)
     : s
-const upperFirst = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+const upperFirst = (s: string) => capitalize(s)
 
 /** Builds a sentence with `first` in front and the verb second. */
 export function umgestellt(s: Satz, first: number): string {

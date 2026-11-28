@@ -4,8 +4,9 @@
  */
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
-import SacheTask from '../SacheTask.vue'
-import { capitalize, getBegriff, getThema, type SacheData, type SacheParams } from '../shared'
+import BildWahlTask from '@/components/BildWahlTask.vue'
+import { capitalize } from '@/core/text'
+import { getBegriff, getThema, type SacheData, type SacheParams } from '../shared'
 
 export const paare: ExerciseModule<SacheParams, SacheData> = {
   id: 'sache.paare',
@@ -37,5 +38,5 @@ export const paare: ExerciseModule<SacheParams, SacheData> = {
     }
   },
 
-  component: SacheTask,
+  component: BildWahlTask,
 }

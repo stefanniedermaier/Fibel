@@ -1,4 +1,5 @@
 /** R2 "Vergleichen": two numbers with their quantities – which sign fits: <, = or >? */
+import { capitalize } from '@/core/text'
 import { numberWord } from '@/core/numbers'
 import type { ExerciseModule } from '../../types'
 import { itemPart } from '../shared'
@@ -82,7 +83,7 @@ export const vergleichen: ExerciseModule<VergleichenParams, VergleichenData> = {
       instruction: `Welches Zeichen passt zwischen ${numberWord(a)} und ${numberWord(b)}?`,
       caption: 'Welches Zeichen passt?',
       hint: 'Wo sind mehr Plättchen? Die Spitze zeigt zur kleineren Zahl.',
-      solution: `${sentence.charAt(0).toUpperCase()}${sentence.slice(1)}.`,
+      solution: `${capitalize(sentence)}.`,
       data: {
         a,
         b,

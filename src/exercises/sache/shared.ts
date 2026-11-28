@@ -3,6 +3,7 @@
  * done by listening and looking: the child cannot read yet. After a right answer a
  * short fact to remember (Merksatz) is spoken.
  */
+import type { BildWahlData } from '@/components/BildWahlTask.vue'
 import sache from '@/data/common/sache.json'
 
 export interface Begriff {
@@ -129,13 +130,6 @@ export function getBegriff(id: string): Begriff {
   return begriff
 }
 
-export const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
-
 /** Data shared by the HSU components: an optional picture and picture answers. */
-export interface SacheData {
-  /** One picture, or two shown with a plus (Schnee + Mann). */
-  prompt?: string | string[]
-  correctKey: string
-  /** Without a picture the label is shown big (numbers). */
-  choices: { key: string; image?: string; label?: string }[]
-}
+/** Shown with BildWahlTask: one picture, or two with a plus (Schnee + Mann). */
+export type SacheData = BildWahlData & { prompt?: string | string[] }

@@ -69,12 +69,8 @@ function check() {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: clamp(10px, 2.5vh, 24px);
-  width: 100%;
   height: 100%;
 }
 
@@ -119,18 +115,5 @@ function check() {
   border-color: var(--ok);
   background: #e6f6ea;
   opacity: 1;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
 }
 </style>

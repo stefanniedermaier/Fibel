@@ -1,29 +1,23 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { useAppStore } from '@/stores/app'
+import { computed } from 'vue'
+import DigitPad from '@/components/DigitPad.vue'
+import { useDigitSteps } from '@/composables/useDigitSteps'
 import type { SchriftlichData } from './index'
 
 const props = defineProps<{ data: SchriftlichData; revealed: boolean; locked: boolean }>()
 const emit = defineEmits<{ answer: [correct: boolean] }>()
-const store = useAppStore()
 
 // Place value table: the child taps the digit of the current column (from the right).
 // Carries appear above the next column once a column is solved; when subtracting, the
 // unbundled digits are shown crossed out with the new ones above them.
-const solved = ref(0)
-const explanation = ref('')
-const shaking = ref(false)
-watch(
-  () => props.data,
-  () => {
-    solved.value = 0
-    explanation.value = ''
-  },
+const { done, explanation, shaking, tap } = useDigitSteps(
+  () => props.data.columns,
+  () => props,
+  (correct) => emit('answer', correct),
 )
 
 const PLACES = ['E', 'Z', 'H', 'T', 'ZT', 'HT', 'M']
 const width = computed(() => props.data.width)
-const done = computed(() => (props.revealed ? props.data.columns.length : solved.value))
 
 /** Digit of a number in column i (0 = ones), or '' beyond its length. */
 const digit = (n: number, i: number) =>
@@ -44,22 +38,6 @@ const carries = computed(() =>
     i > 0 && i <= done.value ? props.data.columns[i - 1]?.carry || '' : '',
   ),
 )
-
-function tap(d: number) {
-  if (props.locked || props.revealed || solved.value >= props.data.columns.length) return
-  const col = props.data.columns[solved.value]!
-  if (d === col.digit) {
-    solved.value++
-    explanation.value = ''
-    if (solved.value === props.data.columns.length) emit('answer', true)
-  } else {
-    explanation.value = col.explanation
-    void store.say(col.explanation)
-    shaking.value = true
-    setTimeout(() => (shaking.value = false), 450)
-    emit('answer', false)
-  }
-}
 
 const cols = computed(() => Array.from({ length: width.value }, (_, k) => width.value - 1 - k))
 </script>
@@ -107,21 +85,13 @@ const cols = computed(() => Array.from({ length: width.value }, (_, k) => width.
       </tbody>
     </table>
     <p v-if="explanation" class="explanation">{{ explanation }}</p>
-    <div class="pad" role="group" aria-label="Ziffern">
-      <button v-for="d in 10" :key="d" type="button" class="key" @click="tap(d - 1)">
-        {{ d - 1 }}
-      </button>
-    </div>
+    <DigitPad @digit="tap" />
   </div>
 </template>
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 14px;
-  width: 100%;
 }
 
 .tafel {
@@ -179,33 +149,5 @@ s {
   max-width: 520px;
   font-size: 18px;
   text-align: center;
-}
-
-.pad {
-  display: grid;
-  grid-template-columns: repeat(5, 60px);
-  gap: 8px;
-}
-
-.key {
-  height: 56px;
-  border: 3px solid var(--accent);
-  border-radius: 12px;
-  background: var(--surface);
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.shake {
-  animation: shake 0.4s;
-}
-
-@keyframes shake {
-  25% {
-    transform: translateX(-8px);
-  }
-  75% {
-    transform: translateX(8px);
-  }
 }
 </style>

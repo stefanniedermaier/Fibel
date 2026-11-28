@@ -2,6 +2,7 @@
  * Clock times for the "Uhr" exercises: levels, spoken German forms and typical
  * reading mistakes (used as distractors).
  */
+import { capitalize } from '@/core/text'
 import { numberWord } from '@/core/numbers'
 import { SAFE_BOX } from '@/core/leitner'
 import { shuffle, type Rng } from '@/core/random'
@@ -136,7 +137,7 @@ export function spokenTime({ h, m }: ClockTime): string {
 
 /** Capitalised start, for whole sentences. */
 export function sentence(text: string): string {
-  return `${text.charAt(0).toUpperCase()}${text.slice(1)}`
+  return `${capitalize(text)}`
 }
 
 /** A distractor may only use minutes the child already knows at this level. */

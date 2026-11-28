@@ -55,11 +55,7 @@ const size = computed(() => (props.data.tokens.length > 7 ? 24 : isNumbers.value
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(20px, 5vh, 40px);
-  width: 100%;
 }
 
 .row {

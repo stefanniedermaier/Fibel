@@ -4,12 +4,10 @@
  * - 'pruefen': 398 + 207 = 905 – can that be right?
  */
 import { numberWord } from '@/core/numbers'
-import { shuffle, type Rng } from '@/core/random'
+import { randomInt, shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import { itemPart } from '../shared'
-
-const rnd = (rng: Rng, lo: number, hi: number) => lo + Math.floor(rng() * (hi - lo + 1))
 
 export interface UeberschlagParams {
   mode: 'ungefaehr' | 'pruefen'
@@ -31,7 +29,8 @@ export const ueberschlag: ExerciseModule<UeberschlagParams, WahlData> = {
     const round100 = (n: number) => Math.round(n / (100 * f)) * 100 * f
     // Numbers near a hundred (a thousand), so rounding is easy: 398, 207, 612 …
     const near = () =>
-      rnd(rng, 1, 8) * 100 * f + (rng() < 0.5 ? rnd(rng, 1, 15 * f) : -rnd(rng, 1, 15 * f))
+      randomInt(rng, 1, 8) * 100 * f +
+      (rng() < 0.5 ? randomInt(rng, 1, 15 * f) : -randomInt(rng, 1, 15 * f))
     const word = (n: number) => (n > 1000 ? String(n) : numberWord(n))
     let a = near()
     let b = near()
@@ -70,7 +69,7 @@ export const ueberschlag: ExerciseModule<UeberschlagParams, WahlData> = {
     }
     // Plausible: the exact result. Not plausible: off by about a hundred or more.
     const right = rng() < 0.5
-    const off = rnd(rng, 2, 4) * 100 * f
+    const off = randomInt(rng, 2, 4) * 100 * f
     const shown = right ? exact : exact - off >= 0 && rng() < 0.5 ? exact - off : exact + off
     return {
       instruction: `${task} = ${shown}. Kann das stimmen? Mach einen Überschlag.`,

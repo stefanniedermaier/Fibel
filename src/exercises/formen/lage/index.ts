@@ -4,6 +4,7 @@
  * `reihe`: animals in a row – "Wer ist zwischen dem Hasen und der Maus?"
  * Left and right are meant as seen by the child (on the screen).
  */
+import { capitalize } from '@/core/text'
 import lage from '@/data/common/lage.json'
 import { pickOne, shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
@@ -56,7 +57,7 @@ export const lageBegriffe: ExerciseModule<LageParams, LageData> = {
           relation === 'links' || relation === 'rechts'
             ? 'Streck Daumen und Zeigefinger aus: Die linke Hand macht ein L.'
             : undefined,
-        solution: `${target.name.charAt(0).toUpperCase()}${target.name.slice(1)} ist ${where}.`,
+        solution: `${capitalize(target.name)} ist ${where}.`,
         data: { mode: 'kreuz', centre: centre.image, places, correctKey: relation },
       }
     }

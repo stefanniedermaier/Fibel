@@ -26,11 +26,7 @@ const emit = defineEmits<{ answer: [correct: boolean] }>()
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(20px, 5vh, 40px);
-  width: 100%;
 }
 
 .letter {

@@ -3,7 +3,7 @@
  * stehen."), the child taps thumbs up or down; then the rule is spoken.
  */
 import type { ExerciseModule } from '../../types'
-import SacheTask from '../SacheTask.vue'
+import BildWahlTask from '@/components/BildWahlTask.vue'
 import { getThema, type SacheData, type SacheParams } from '../shared'
 
 export const stimmtDas: ExerciseModule<SacheParams, SacheData> = {
@@ -33,5 +33,5 @@ export const stimmtDas: ExerciseModule<SacheParams, SacheData> = {
     }
   },
 
-  component: SacheTask,
+  component: BildWahlTask,
 }

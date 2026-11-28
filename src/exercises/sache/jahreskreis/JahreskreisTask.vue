@@ -90,7 +90,7 @@ function state(ring: JahreskreisData['ring'], key: string): string {
 </script>
 
 <template>
-  <div class="task">
+  <div class="jahreskreis">
     <svg viewBox="0 0 300 300" class="ring" role="group" aria-label="Jahreskreis">
       <g
         v-for="m in months"
@@ -119,7 +119,7 @@ function state(ring: JahreskreisData['ring'], key: string): string {
 </template>
 
 <style scoped>
-.task {
+.jahreskreis {
   display: flex;
   justify-content: center;
   width: 100%;

@@ -175,14 +175,6 @@ const jugY = (ml: number) => JUG_BOTTOM - ml * 0.3
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .pic {
   width: 100%;
   max-width: min(260px, 30vh);

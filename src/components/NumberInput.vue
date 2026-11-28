@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useNativeKeyboard } from '@/composables/useNativeKeyboard'
 import { cleanNumber } from '@/core/numbers'
 
 // Number answers on the device's own number keyboard. A transparent <input> lies over
@@ -16,7 +17,6 @@ const digits = computed(() => props.maxDigits ?? Math.max(2, String(props.answer
 
 const field = ref<HTMLInputElement>()
 const input = ref('')
-const focused = ref(false)
 const state = ref<'idle' | 'wrong' | 'right'>('idle')
 
 const disabled = () => props.locked || props.revealed || state.value === 'right'
@@ -26,26 +26,13 @@ function setInput(value: string) {
   if (field.value && field.value.value !== value) field.value.value = value
 }
 
-function focus() {
-  if (!disabled()) field.value?.focus({ preventScroll: true })
-}
-
-onMounted(focus)
+const { focused } = useNativeKeyboard(field, disabled, () => props.answer)
 
 watch(
   () => props.answer,
   () => {
     setInput('')
     state.value = 'idle'
-    void nextTick(focus)
-  },
-)
-
-// Done (right or revealed): close the keyboard so the praise and the solution are visible.
-watch(
-  () => props.locked || props.revealed || state.value === 'right',
-  (off) => {
-    if (off) field.value?.blur()
   },
 )
 
@@ -176,18 +163,5 @@ function submit() {
 .done:disabled {
   opacity: 0.45;
   box-shadow: none;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
 }
 </style>

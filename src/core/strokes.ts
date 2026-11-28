@@ -2,6 +2,7 @@
  * Stroke templates for tracing letters: geometry, composing letters into a
  * multigraph (Sch = S + c + h) and the tracing check. Pure functions, no DOM.
  */
+import { capitalize } from './text'
 import druckschrift from '@/data/schriften/druckschrift/strokes.json'
 import schulausgangsschrift from '@/data/schriften/schulausgangsschrift/strokes.json'
 import vereinfachteAusgangsschrift from '@/data/schriften/vereinfachte-ausgangsschrift/strokes.json'
@@ -242,7 +243,7 @@ export function glyphFor(script: Script, text: string): Glyph | undefined {
 
 /** Upper-case form of a grapheme as it is written at the start of a word ("sch" → "Sch"). */
 export function upperForm(grapheme: string): string {
-  return grapheme.charAt(0).toUpperCase() + grapheme.slice(1)
+  return capitalize(grapheme)
 }
 
 /** All single letters a script must provide for the given graphemes. */

@@ -3,16 +3,7 @@ import BackButton from '@/components/BackButton.vue'
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import EmojiPicture from '@/components/EmojiPicture.vue'
-import SyllableWord from '@/components/SyllableWord.vue'
 import { AVATARS, DEFAULT_AVATAR } from '@/core/avatars'
-import {
-  LETTERS,
-  baseSyllables,
-  resolveWords,
-  syllablesForSettings,
-  wordsForSettings,
-} from '@/core/words'
-import { READING_LEVEL_KEY } from '@/exercises/lesen/shared'
 import { LEVEL_KEY as REIHEN_LEVEL_KEY } from '@/exercises/rechnen/reihen'
 import { CLOCK_LEVEL_KEY } from '@/exercises/uhr/time'
 import {
@@ -22,17 +13,17 @@ import {
   getLand,
   gradeHasContent,
   resolveDefaults,
-  unitEnabled,
-  unitsFor,
 } from '@/core/content'
 import { plain } from '@/core/plain'
-import { readableSentences } from '@/core/saetze'
 import { cleanLernwoerter } from '@/exercises/schreiben/diktat'
-import { MUELLTONNEN, THEMEN, unitOf } from '@/exercises/sache/shared'
-import { say } from '@/core/speech'
-import { loadVoices, rankEnglishVoices, rankGermanVoices } from '@/core/tts'
-import { TOPICS, TOPIC_INFO, type ProfileSettings, type Topic } from '@/core/types'
+import type { ProfileSettings } from '@/core/types'
 import { useAppStore } from '@/stores/app'
+import { levelSetting } from './profile/levels'
+import ReadingSection from './profile/ReadingSection.vue'
+import UnitsSection from './profile/UnitsSection.vue'
+import VoiceSection from './profile/VoiceSection.vue'
+import WritingSection from './profile/WritingSection.vue'
+import './profile/settings-form.css'
 
 const props = defineProps<{ id?: string }>()
 const store = useAppStore()
@@ -86,61 +77,8 @@ const crownStars = computed({
   set: (n: number) => (settings.value.crownRatio = n / settings.value.tasksPerUnit),
 })
 
-// --- Reading: letters, syllables, word level -------------------------------
-const gradeWordList = computed(() => resolveWords(form.land, form.grade))
-const readable = computed(() => wordsForSettings(gradeWordList.value, settings.value))
-const readableSyllables = computed(
-  () => syllablesForSettings(baseSyllables(form.grade), settings.value).length,
-)
-const letterSet = computed(() => new Set(settings.value.letters))
-const readableSentenceCount = computed(
-  () => readableSentences(form.land, form.grade, settings.value).length,
-)
-
-// Lernwörter: one per line or separated by commas; cleaned when saved.
-const lernwoerterText = computed({
-  get: () => settings.value.lernwoerter.join('\n'),
-  set: (text: string) => (settings.value.lernwoerter = text.split(/[\n,;]+/)),
-})
-
-function toggleLetter(id: string) {
-  const set = new Set(settings.value.letters)
-  if (set.has(id)) set.delete(id)
-  else set.add(id)
-  // Keep the school order of letters.json.
-  settings.value.letters = LETTERS.map((l) => l.id).filter((l) => set.has(l))
-}
-
-/** All letters up to (and including) this one, in school order. */
-function lettersUpTo(id: string) {
-  const index = LETTERS.findIndex((l) => l.id === id)
-  settings.value.letters = LETTERS.slice(0, index + 1).map((l) => l.id)
-}
-
-/** A level set by hand (0 = automatic), stored in settings.levels[key]. */
-function levelSetting(key: string) {
-  return computed({
-    get: () => settings.value.levels[key] ?? 0,
-    set: (level: number) => {
-      const levels = { ...settings.value.levels }
-      if (level === 0) delete levels[key]
-      else levels[key] = level
-      settings.value.levels = levels
-    },
-  })
-}
-const reihenLevelSetting = levelSetting(REIHEN_LEVEL_KEY)
-const clockLevelSetting = levelSetting(CLOCK_LEVEL_KEY)
-
-const readingLevel = computed({
-  get: () => settings.value.levels[READING_LEVEL_KEY] ?? 0,
-  set: (level: number) => {
-    const levels = { ...settings.value.levels }
-    if (level === 0) delete levels[READING_LEVEL_KEY]
-    else levels[READING_LEVEL_KEY] = level
-    settings.value.levels = levels
-  },
-})
+const reihenLevelSetting = levelSetting(settings, REIHEN_LEVEL_KEY)
+const clockLevelSetting = levelSetting(settings, CLOCK_LEVEL_KEY)
 
 // --- Arithmetic --------------------------------------------------------------
 const hasRechnen = computed(() => catalogFor(form.land, form.grade, 'rechnen').length > 0)
@@ -152,75 +90,11 @@ const numberRanges = computed(() => {
   return [10, 20, 100, 1000, 1000000].filter((n) => n <= Math.max(start, 20))
 })
 
-// --- Teaching units (plaene/README.md, section 4) ---------------------------
-const unitGroups = computed(() =>
-  TOPICS.map((topic) => ({
-    topic,
-    ...TOPIC_INFO[topic],
-    units: unitsFor(form.grade, topic),
-  })).filter((g) => g.units.length > 0),
-)
-
-// Focus of the week: one unit per subject gets about half of the mixed tasks.
-const DAY = 24 * 60 * 60 * 1000
-function focusOf(topic: Topic): string {
-  const f = settings.value.focus?.[topic]
-  return f && f.until > Date.now() ? f.unit : ''
-}
-function focusDays(topic: Topic): string {
-  const f = settings.value.focus?.[topic]
-  if (!f || f.until <= Date.now()) return ''
-  return new Date(f.until).toLocaleDateString('de-DE', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-  })
-}
-function setFocus(topic: Topic, unit: string, days = 7) {
-  const focus = { ...settings.value.focus }
-  if (unit) focus[topic] = { unit, until: Date.now() + days * DAY }
-  else delete focus[topic]
-  settings.value.focus = focus
-}
-
-// HSU: a task to do together per theme, and the waste bins at home.
-function forscherauftrag(unitId: string): string | undefined {
-  return THEMEN.find((t) => unitOf(t) === unitId)?.forscherauftrag
-}
-function toggleTonne(id: string, on: boolean) {
-  const set = new Set(settings.value.muelltonnen)
-  if (on) set.add(id)
-  else set.delete(id)
-  settings.value.muelltonnen = MUELLTONNEN.map((t) => t.id).filter((t) => set.has(t))
-}
-const hasMuell = computed(() =>
-  unitsFor(form.grade, 'sache').some((u) => u.id === 'k1.sache.muell'),
-)
-
-function toggleUnit(id: string, on: boolean) {
-  settings.value.units = { ...settings.value.units, [id]: on }
-}
-
 function toggleGrade(g: number, on: boolean) {
   const set = new Set(settings.value.unlockedGrades)
   if (on) set.add(g)
   else set.delete(g)
   settings.value.unlockedGrades = [...set].sort()
-}
-
-// Voices
-const voices = ref<SpeechSynthesisVoice[]>([])
-const germanVoices = computed(() => rankGermanVoices(voices.value))
-const englishVoices = computed(() => rankEnglishVoices(voices.value))
-/** English starts in grade 3 (plaene/klasse-3.md, section 10). */
-const showEnglish = computed(() => form.grade >= 3)
-function testEnglish() {
-  void say('So klingt Englisch: [[en:Hello! How are you? I am fine, thank you.]]', settings.value)
-}
-onMounted(async () => (voices.value = await loadVoices()))
-
-function testVoice() {
-  void say(`Hallo ${form.name || 'du'}! So klinge ich.`, settings.value)
 }
 
 async function save() {
@@ -289,7 +163,7 @@ async function remove() {
     <h1>{{ isNew ? 'Neues Profil' : 'Profil bearbeiten' }}</h1>
   </header>
 
-  <form @submit.prevent="save">
+  <form class="settings-form" @submit.prevent="save">
     <section class="card">
       <h2>Kind</h2>
       <label>
@@ -346,135 +220,9 @@ async function remove() {
       </label>
     </section>
 
-    <section v-if="unitGroups.length > 0" class="card">
-      <h2>Einheiten</h2>
-      <p class="muted">
-        Was in der Schule schon dran war. Einheiten des 1. Halbjahrs sind von Anfang an an, die des
-        2. Halbjahrs schalten Sie ein, sobald die Schule so weit ist.
-      </p>
-      <fieldset v-for="g in unitGroups" :key="g.topic" class="units">
-        <legend>{{ g.icon }} {{ g.label }}</legend>
-        <template v-for="u in g.units" :key="u.id">
-          <label class="check">
-            <input
-              type="checkbox"
-              :checked="unitEnabled(u.id, settings)"
-              @change="toggleUnit(u.id, ($event.target as HTMLInputElement).checked)"
-            />
-            {{ u.title }} <small class="muted">{{ u.term }}. Halbjahr</small>
-          </label>
-          <p v-if="forscherauftrag(u.id)" class="muted small auftrag">
-            🔎 Forscherauftrag: {{ forscherauftrag(u.id) }}
-          </p>
-        </template>
-        <fieldset v-if="g.topic === 'sache' && hasMuell" class="tonnen">
-          <legend>Müll trennen: Diese Tonnen gibt es bei uns</legend>
-          <label v-for="t in MUELLTONNEN" :key="t.id" class="check">
-            <input
-              type="checkbox"
-              :checked="settings.muelltonnen.includes(t.id)"
-              @change="toggleTonne(t.id, ($event.target as HTMLInputElement).checked)"
-            />
-            {{ t.title }}
-          </label>
-        </fieldset>
-        <label v-if="g.topic !== 'sache'" class="focus">
-          🚩 Schwerpunkt (kommt in „Alles gemischt“ etwa in jeder zweiten Aufgabe)
-          <select
-            :value="focusOf(g.topic)"
-            @change="setFocus(g.topic, ($event.target as HTMLSelectElement).value)"
-          >
-            <option value="">kein Schwerpunkt</option>
-            <option
-              v-for="u in g.units.filter((x) => unitEnabled(x.id, settings))"
-              :key="u.id"
-              :value="u.id"
-            >
-              {{ u.title }}
-            </option>
-          </select>
-        </label>
-        <p v-if="g.topic !== 'sache' && focusOf(g.topic)" class="muted small">
-          Gilt bis {{ focusDays(g.topic) }}.
-          <button type="button" class="link" @click="setFocus(g.topic, focusOf(g.topic), 14)">
-            Auf 2 Wochen verlängern
-          </button>
-        </p>
-      </fieldset>
-    </section>
+    <UnitsSection v-model:settings="settings" :grade="form.grade" />
 
-    <section v-if="gradeWordList.length > 0" class="card">
-      <h2>Lesen</h2>
-
-      <label class="check">
-        <input v-model="settings.letterFilter" type="checkbox" />
-        Nur Buchstaben, die in der Schule schon dran waren
-      </label>
-
-      <template v-if="settings.letterFilter">
-        <p class="muted">
-          Tippe die gelernten Buchstaben an. Lange drücken markiert alle bis zu diesem Buchstaben.
-        </p>
-        <div class="letters">
-          <button
-            v-for="l in LETTERS"
-            :key="l.id"
-            type="button"
-            class="letter"
-            :class="{ on: letterSet.has(l.id) }"
-            :aria-pressed="letterSet.has(l.id)"
-            @click="toggleLetter(l.id)"
-            @contextmenu.prevent="lettersUpTo(l.id)"
-          >
-            {{ l.upper }}
-          </button>
-        </div>
-      </template>
-      <p class="count" :class="{ warn: readable.length < 3 }">
-        Damit gibt es <strong>{{ readable.length }}</strong> Wörter und
-        <strong>{{ readableSyllables }}</strong> Silben und
-        <strong>{{ readableSentenceCount }}</strong> Sätze zum Lesen.
-        <span v-if="readable.length < 3">Für alle Leseübungen braucht es mindestens 3 Wörter.</span>
-      </p>
-
-      <label class="check">
-        <input v-model="settings.syllableColoring" type="checkbox" />
-        Silben farbig (blau/rot)
-      </label>
-      <label class="check">
-        <input v-model="settings.syllableArcs" type="checkbox" />
-        Silbenbögen
-      </label>
-      <p class="preview">
-        <SyllableWord
-          :syllables="['To', 'ma', 'te']"
-          :coloring="settings.syllableColoring"
-          :arcs="settings.syllableArcs"
-          :size="44"
-        />
-      </p>
-
-      <label>
-        Blitzlesen: So lange ist das Wort zu sehen
-        <select v-model.number="settings.flashMs">
-          <option :value="1000">1 Sekunde</option>
-          <option :value="1500">1,5 Sekunden</option>
-          <option :value="2500">2,5 Sekunden</option>
-          <option :value="4000">4 Sekunden</option>
-        </select>
-      </label>
-
-      <label>
-        Wort-Level beim Lesen
-        <select v-model.number="readingLevel">
-          <option :value="0">automatisch (steigt mit dem Lernfortschritt)</option>
-          <option :value="1">1 – zwei offene Silben (Oma, Rose)</option>
-          <option :value="2">2 – drei offene Silben (Tomate)</option>
-          <option :value="3">3 – geschlossene Silben (Igel, Brot)</option>
-          <option :value="4">4 – Sch, Ei, Au, Umlaute (Schaf, Eis)</option>
-        </select>
-      </label>
-    </section>
+    <ReadingSection v-model:settings="settings" :land="form.land" :grade="form.grade" />
 
     <section v-if="hasRechnen" class="card">
       <h2>Rechnen</h2>
@@ -520,42 +268,7 @@ async function remove() {
       </label>
     </section>
 
-    <section v-if="hasSchreiben" class="card">
-      <h2>Schreiben</h2>
-      <label class="check">
-        <input v-model="settings.strictCase" type="checkbox" />
-        Groß-/Kleinschreibung werten (sonst wird der Anfangsbuchstabe von Nomen automatisch groß)
-      </label>
-      <label>
-        Nachspuren: Wie genau muss der Finger der Linie folgen?
-        <select v-model.number="settings.traceTolerance">
-          <option :value="1.4">locker</option>
-          <option :value="1">normal</option>
-          <option :value="0.7">genau</option>
-        </select>
-      </label>
-      <label>
-        Lernwörter der Woche (ein Wort pro Zeile, z. B. aus dem Heft der Schule)
-        <textarea v-model="lernwoerterText" rows="4" autocomplete="off" spellcheck="false" />
-      </label>
-      <label class="check">
-        <input v-model="settings.schreibwerkstatt" type="checkbox" />
-        Experiment: Schreibwerkstatt – frei tippen, die App liest vor, was dasteht (ohne Bewertung,
-        nichts wird gespeichert)
-      </label>
-      <label class="check">
-        <input v-model="settings.kaestchen" type="checkbox" />
-        Experiment: Wörter frei in Kästchen schreiben (die App erkennt die Buchstaben)
-      </label>
-      <label v-if="settings.kaestchen">
-        Erkennung: Wie genau muss geschrieben werden?
-        <select v-model.number="settings.recognitionTolerance">
-          <option :value="1.25">locker</option>
-          <option :value="1">normal</option>
-          <option :value="0.8">genau</option>
-        </select>
-      </label>
-    </section>
+    <WritingSection v-model:settings="settings" :grade="form.grade" :has-schreiben="hasSchreiben" />
 
     <section class="card">
       <h2>Einheit</h2>
@@ -591,61 +304,7 @@ async function remove() {
       </p>
     </section>
 
-    <section v-if="form.grade >= 2" class="card">
-      <h2>Verbundene Schrift</h2>
-      <label>
-        Schrift der Schule
-        <select v-model="settings.schreibschrift">
-          <option :value="null">noch nicht gewählt</option>
-          <option value="va">Vereinfachte Ausgangsschrift (VA)</option>
-          <option value="sas">Schulausgangsschrift (SAS)</option>
-        </select>
-      </label>
-      <p v-if="!settings.schreibschrift" class="voice-warn">
-        Bitte die Schrift wählen, die die Schule ab Klasse 2 lehrt (steht im Schreibheft oder auf
-        der Liste der Lehrkraft). Bis dahin übt die App mit der Vereinfachten Ausgangsschrift.
-      </p>
-      <p class="muted">
-        Beim Nachspuren der Schreibschrift nutzt die App diese Vorlage. Unter „Schrift-Vorlagen“
-        lassen sich beide Schriften ansehen und ausprobieren.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Stimme</h2>
-      <label v-if="germanVoices.length > 0">
-        Stimme
-        <select v-model="settings.voiceURI">
-          <option :value="null">automatisch (beste Offline-Stimme)</option>
-          <option v-for="v in germanVoices" :key="v.voiceURI" :value="v.voiceURI">
-            {{ v.name }}{{ v.localService ? '' : ' (nur online)' }}
-          </option>
-        </select>
-      </label>
-      <p v-else class="muted">Keine deutsche Stimme gefunden – siehe Gerätetest.</p>
-      <label>
-        Tempo {{ settings.speechRate.toFixed(2) }}
-        <input v-model.number="settings.speechRate" type="range" min="0.5" max="1.3" step="0.05" />
-      </label>
-      <button type="button" class="btn" @click="testVoice">🔊 Stimme testen</button>
-      <template v-if="showEnglish">
-        <label v-if="englishVoices.length > 0">
-          Englische Stimme
-          <select v-model="settings.voiceURIEn">
-            <option :value="null">automatisch (britisches Englisch bevorzugt)</option>
-            <option v-for="v in englishVoices" :key="v.voiceURI" :value="v.voiceURI">
-              {{ v.name }} ({{ v.lang }}){{ v.localService ? '' : ' – nur online' }}
-            </option>
-          </select>
-        </label>
-        <p v-else class="voice-warn">
-          Keine englische Stimme gefunden. Die Englisch-Übungen brauchen eine: In den Einstellungen
-          des Geräts unter „Sprachausgabe“ eine englische Stimme laden (wie für Deutsch, siehe
-          Gerätetest). Sonst liest die deutsche Stimme die englischen Wörter.
-        </p>
-        <button type="button" class="btn" @click="testEnglish">🔊 Englisch testen</button>
-      </template>
-    </section>
+    <VoiceSection v-model:settings="settings" :name="form.name" :grade="form.grade" />
 
     <p v-if="error" class="error">{{ error }}</p>
 
@@ -662,96 +321,10 @@ async function remove() {
 </template>
 
 <style scoped>
-.voice-warn {
-  color: var(--error);
-}
-
 .top {
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-.card {
-  margin-top: 16px;
-}
-
-h2 {
-  margin-top: 0;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 14px;
-}
-
-label.check {
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  min-height: 48px;
-}
-
-.check input {
-  width: 28px;
-  height: 28px;
-}
-
-input[type='text'],
-select {
-  width: 100%;
-  min-width: 0;
-  min-height: 52px;
-  padding: 0 12px;
-  border: 2px solid var(--accent);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.auftrag {
-  margin: -4px 0 10px 36px;
-}
-
-.tonnen {
-  margin: 8px 0;
-}
-
-.focus {
-  margin-top: 8px;
-}
-
-.small {
-  font-size: 15px;
-}
-
-button.link {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--accent-strong);
-  font: inherit;
-  text-decoration: underline;
-}
-
-textarea {
-  width: 100%;
-  padding: 8px 12px;
-  border: 2px solid var(--accent);
-  border-radius: 12px;
-  background: #fff;
-  font: inherit;
-}
-
-fieldset {
-  margin: 0 0 14px;
-  padding: 0;
-  border: 0;
-}
-
-legend {
-  margin-bottom: 4px;
 }
 
 .avatars {
@@ -788,41 +361,5 @@ legend {
 
 .danger {
   margin-top: 32px;
-}
-
-.letters {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.letter {
-  min-height: 52px;
-  border: 2px solid #e2d3bd;
-  border-radius: 12px;
-  background: var(--bg);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--muted);
-}
-
-.letter.on {
-  border-color: var(--accent-strong);
-  background: var(--accent);
-  color: var(--text);
-}
-
-.count {
-  margin: 0 0 14px;
-}
-
-.count.warn span {
-  display: block;
-  color: var(--accent-strong);
-}
-
-.preview {
-  margin: 0 0 14px;
 }
 </style>

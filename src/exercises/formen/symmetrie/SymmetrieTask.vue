@@ -91,14 +91,6 @@ const optionCells = (key: string) => props.data.options?.find((o) => o.key === k
 </template>
 
 <style scoped>
-.task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
 .figure {
   width: min(100%, 280px);
   height: auto;

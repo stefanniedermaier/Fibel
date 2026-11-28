@@ -57,10 +57,8 @@ function check() {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(16px, 4vh, 32px);
+  width: auto;
 }
 
 .number {
@@ -94,18 +92,5 @@ function check() {
   border-color: var(--ok);
   background: #e6f6ea;
   opacity: 1;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
 }
 </style>

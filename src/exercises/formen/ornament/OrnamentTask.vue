@@ -82,11 +82,7 @@ const TRANSFORM: Record<Lage, string> = {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 32px;
-  width: 100%;
 }
 
 .band {

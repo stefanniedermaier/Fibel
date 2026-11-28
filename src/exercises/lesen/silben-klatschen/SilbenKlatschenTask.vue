@@ -52,11 +52,7 @@ function answer(correct: boolean) {
 
 <style scoped>
 .task {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: clamp(14px, 3vh, 28px);
-  width: 100%;
 }
 
 .word {
