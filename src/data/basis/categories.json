@@ -514,5 +514,17 @@
     "topic": "formen",
     "title": "Kippen und Parkette",
     "icon": "🧊"
+  },
+  {
+    "id": "englisch.freizeit",
+    "topic": "englisch",
+    "title": "Freizeit und Feste",
+    "icon": "🎉"
+  },
+  {
+    "id": "englisch.einkaufen",
+    "topic": "englisch",
+    "title": "Einkaufen",
+    "icon": "🛒"
   }
 ]

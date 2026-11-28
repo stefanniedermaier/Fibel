@@ -80,7 +80,15 @@ import { vokale } from './sprache/vokale'
 import { kalender } from './uhr/kalender'
 import { uhrLesen } from './uhr/lesen'
 import { uhrStellen } from './uhr/stellen'
-import { dialog, hoeren, lesen } from './englisch'
+import {
+  abschreibenEnglisch,
+  dialog,
+  hoeren,
+  lesen,
+  preisEnglisch,
+  textEnglisch,
+  uhrEnglisch,
+} from './englisch'
 import { ablesen } from './messen/groessen'
 import { netz } from './formen/netz'
 import { gebaeude } from './formen/gebaeude'
@@ -191,6 +199,10 @@ register(satzart)
 register(hoeren)
 register(lesen)
 register(dialog)
+register(uhrEnglisch)
+register(preisEnglisch)
+register(textEnglisch)
+register(abschreibenEnglisch)
 register(ablesen)
 register(netz)
 register(gebaeude)

@@ -72,3 +72,41 @@ describe('Rechenzeichen beim Vorlesen', () => {
     expect(spokenSigns('Hör zu: 9:05')).toBe('Hör zu: 9:05')
   })
 })
+
+describe('Englisch Klasse 4', () => {
+  const ctx4 = { land: 'DE-BY', grade: 4, settings: resolveDefaults('DE-BY', 4) }
+  it('Uhrzeiten und Preise auf Englisch', async () => {
+    const { englishTime, englishPrice, englishNumber } = await import('@/exercises/englisch')
+    expect(englishTime(3 * 60 + 30)).toBe("It's half past three.")
+    expect(englishTime(3 * 60 + 45)).toBe("It's quarter to four.")
+    expect(englishTime(12 * 60 + 45)).toBe("It's quarter to one.")
+    expect(englishTime(7 * 60)).toBe("It's seven o'clock.")
+    expect(englishNumber(45)).toBe('forty-five')
+    expect(englishPrice(350)).toBe('three euros fifty')
+    expect(englishPrice(199)).toBe('one euro ninety-nine')
+  })
+  it('alle neuen Übungen: Lösung wählbar, keine doppelten Antworten', async () => {
+    const m = await import('@/exercises/englisch')
+    for (const [mod, params] of [
+      [m.uhrEnglisch, {}],
+      [m.preisEnglisch, {}],
+      [m.textEnglisch, {}],
+      [m.abschreibenEnglisch, { themen: ['essen', 'kleidung', 'feste'] }],
+    ] as const)
+      for (const key of mod.items(ctx4, params as never)) {
+        const t = mod.generate(ctx4, params as never, key, createRng(2)) as {
+          data: { correctKey?: string; choices?: { key: string }[]; target?: string }
+        }
+        if (t.data.choices) {
+          const keys = t.data.choices.map((c) => c.key)
+          expect(new Set(keys).size, key).toBe(keys.length)
+          expect(keys).toContain(t.data.correctKey)
+        } else expect(t.data.target).toMatch(/^[a-z]+$/i)
+      }
+  })
+  it('Dialoge der Klasse 4 erscheinen nicht in Klasse 3', async () => {
+    const { dialog } = await import('@/exercises/englisch')
+    expect(dialog.items(ctx, {}).some((k) => k.endsWith(':d50'))).toBe(false)
+    expect(dialog.items(ctx4, {}).some((k) => k.endsWith(':d50'))).toBe(true)
+  })
+})

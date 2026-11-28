@@ -5271,5 +5271,172 @@
     },
     "title": "Bandornamente",
     "weight": 0.5
+  },
+  {
+    "id": "k4.englisch.hobbies.hoeren",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.freizeit",
+    "unit": "k4.englisch.hobbies",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["freizeit"]
+    },
+    "title": "Hobbies hören"
+  },
+  {
+    "id": "k4.englisch.hobbies.dialog",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.freizeit",
+    "unit": "k4.englisch.hobbies",
+    "exercise": "englisch.dialog",
+    "params": {
+      "dialoge": ["d40", "d41", "d45"]
+    },
+    "title": "What do you like doing?"
+  },
+  {
+    "id": "k4.englisch.feste.hoeren",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.freizeit",
+    "unit": "k4.englisch.feste",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["feste"]
+    },
+    "title": "Festivals hören"
+  },
+  {
+    "id": "k4.englisch.feste.lesen",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.freizeit",
+    "unit": "k4.englisch.feste",
+    "exercise": "englisch.lesen",
+    "params": {
+      "themen": ["feste"],
+      "richtung": "wort-bild"
+    },
+    "title": "Festivals lesen"
+  },
+  {
+    "id": "k4.englisch.feste.dialog",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.freizeit",
+    "unit": "k4.englisch.feste",
+    "exercise": "englisch.dialog",
+    "params": {
+      "dialoge": ["d46", "d47", "d51"]
+    },
+    "title": "Happy birthday!",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.englisch.uhrzeit.uhr",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k4.englisch.uhrzeit",
+    "exercise": "englisch.uhr",
+    "params": {},
+    "title": "What's the time?"
+  },
+  {
+    "id": "k4.englisch.uhrzeit.dialog",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.schule",
+    "unit": "k4.englisch.uhrzeit",
+    "exercise": "englisch.dialog",
+    "params": {
+      "dialoge": ["d50"]
+    },
+    "title": "Nach der Uhrzeit fragen",
+    "weight": 0.3
+  },
+  {
+    "id": "k4.englisch.shopping.essen",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.einkaufen",
+    "unit": "k4.englisch.shopping",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["essen"]
+    },
+    "title": "Food hören"
+  },
+  {
+    "id": "k4.englisch.shopping.kleidung",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.einkaufen",
+    "unit": "k4.englisch.shopping",
+    "exercise": "englisch.hoeren",
+    "params": {
+      "themen": ["kleidung"]
+    },
+    "title": "Clothes hören"
+  },
+  {
+    "id": "k4.englisch.shopping.preis",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.einkaufen",
+    "unit": "k4.englisch.shopping",
+    "exercise": "englisch.preis",
+    "params": {},
+    "title": "How much is it?"
+  },
+  {
+    "id": "k4.englisch.shopping.dialog",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.einkaufen",
+    "unit": "k4.englisch.shopping",
+    "exercise": "englisch.dialog",
+    "params": {
+      "dialoge": ["d42", "d43", "d44", "d48", "d49"]
+    },
+    "title": "Im Laden"
+  },
+  {
+    "id": "k4.englisch.texte.text",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.freizeit",
+    "unit": "k4.englisch.texte",
+    "exercise": "englisch.text",
+    "params": {},
+    "title": "Einladung, Steckbrief, Poster"
+  },
+  {
+    "id": "k4.englisch.texte.lesen",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.freizeit",
+    "unit": "k4.englisch.texte",
+    "exercise": "englisch.lesen",
+    "params": {
+      "themen": ["freizeit", "feste", "essen", "kleidung"],
+      "richtung": "bild-wort"
+    },
+    "title": "Bild → Wort",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.englisch.abschreiben.abschreiben",
+    "grade": 4,
+    "topic": "englisch",
+    "category": "englisch.einkaufen",
+    "unit": "k4.englisch.abschreiben",
+    "exercise": "englisch.abschreiben",
+    "params": {
+      "themen": ["essen", "kleidung", "feste", "farben", "tiere"]
+    },
+    "title": "Look – cover – write"
   }
 ]

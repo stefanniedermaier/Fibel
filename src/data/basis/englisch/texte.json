@@ -1,0 +1,108 @@
+[
+  {
+    "id": "invitation",
+    "text": "Hi Ben! It's my birthday on Saturday. Come to my party at three o'clock. We can play games and eat cake. Love, Emma",
+    "fragen": [
+      {
+        "frage": "Wann ist die Party?",
+        "richtig": "am Samstag um 3 Uhr",
+        "falsch": ["am Sonntag um 3 Uhr", "am Samstag um 5 Uhr"]
+      },
+      {
+        "frage": "Was machen die Kinder auf der Party?",
+        "richtig": "spielen und Kuchen essen",
+        "falsch": ["schwimmen gehen", "ins Kino gehen"]
+      }
+    ]
+  },
+  {
+    "id": "profile",
+    "text": "My name is Lucy. I'm nine years old. I live in London. I have got a brother and a cat. My hobby is dancing. My favourite colour is green.",
+    "fragen": [
+      {
+        "frage": "Wie alt ist Lucy?",
+        "richtig": "9",
+        "falsch": ["10", "8"]
+      },
+      {
+        "frage": "Was ist Lucys Hobby?",
+        "richtig": "tanzen",
+        "falsch": ["schwimmen", "lesen"]
+      },
+      {
+        "frage": "Welches Haustier hat Lucy?",
+        "richtig": "eine Katze",
+        "falsch": ["einen Hund", "einen Hasen"]
+      }
+    ]
+  },
+  {
+    "id": "shopping-list",
+    "text": "Shopping list: three apples, one bread, milk, cheese and six eggs. Don't forget the orange juice!",
+    "fragen": [
+      {
+        "frage": "Wie viele Eier stehen auf der Liste?",
+        "richtig": "6",
+        "falsch": ["3", "1"]
+      },
+      {
+        "frage": "Was soll man nicht vergessen?",
+        "richtig": "den Orangensaft",
+        "falsch": ["die Bananen", "die Schokolade"]
+      }
+    ]
+  },
+  {
+    "id": "poster",
+    "text": "Summer Fun Day! Saturday, 10 o'clock. Football, swimming and ice cream for everyone. Come to the park!",
+    "fragen": [
+      {
+        "frage": "Wo ist das Fest?",
+        "richtig": "im Park",
+        "falsch": ["in der Schule", "im Zoo"]
+      },
+      {
+        "frage": "Was gibt es für alle?",
+        "richtig": "Eis",
+        "falsch": ["Pizza", "Kuchen"]
+      }
+    ]
+  },
+  {
+    "id": "my-day",
+    "text": "I get up at seven o'clock. I go to school by bus. After school I play football with my friends. In the evening I read a book.",
+    "fragen": [
+      {
+        "frage": "Wann steht das Kind auf?",
+        "richtig": "um 7 Uhr",
+        "falsch": ["um 6 Uhr", "um 8 Uhr"]
+      },
+      {
+        "frage": "Wie kommt es zur Schule?",
+        "richtig": "mit dem Bus",
+        "falsch": ["mit dem Fahrrad", "zu Fuß"]
+      },
+      {
+        "frage": "Was macht es am Abend?",
+        "richtig": "ein Buch lesen",
+        "falsch": ["Fußball spielen", "fernsehen"]
+      }
+    ]
+  },
+  {
+    "id": "halloween",
+    "text": "On Halloween children wear costumes. They go from house to house and say: Trick or treat! People give them sweets. Many houses have a pumpkin with a funny face.",
+    "fragen": [
+      {
+        "frage": "Was sagen die Kinder?",
+        "richtig": "Trick or treat!",
+        "falsch": ["Happy birthday!", "Merry Christmas!"]
+      },
+      {
+        "frage": "Was bekommen die Kinder?",
+        "richtig": "Süßigkeiten",
+        "falsch": ["Geld", "Bücher"]
+      }
+    ]
+  }
+]

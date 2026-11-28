@@ -1496,5 +1496,47 @@
     "topic": "formen",
     "title": "Parkettierungen und Ornamente",
     "term": 2
+  },
+  {
+    "id": "k4.englisch.hobbies",
+    "grade": 4,
+    "topic": "englisch",
+    "title": "Hobbies and free time",
+    "term": 1
+  },
+  {
+    "id": "k4.englisch.feste",
+    "grade": 4,
+    "topic": "englisch",
+    "title": "Festivals and birthdays",
+    "term": 1
+  },
+  {
+    "id": "k4.englisch.uhrzeit",
+    "grade": 4,
+    "topic": "englisch",
+    "title": "What's the time?",
+    "term": 1
+  },
+  {
+    "id": "k4.englisch.shopping",
+    "grade": 4,
+    "topic": "englisch",
+    "title": "Shopping: food, clothes, prices",
+    "term": 2
+  },
+  {
+    "id": "k4.englisch.texte",
+    "grade": 4,
+    "topic": "englisch",
+    "title": "Kurze Texte lesen",
+    "term": 2
+  },
+  {
+    "id": "k4.englisch.abschreiben",
+    "grade": 4,
+    "topic": "englisch",
+    "title": "Wörter abschreiben",
+    "term": 2
   }
 ]

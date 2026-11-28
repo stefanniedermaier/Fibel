@@ -22,10 +22,12 @@ export interface Dialog {
   frage: string
   antwort: string
   falsch: string[]
+  /** Grade 4 dialogues (shopping, free time, festivals); default grade 3. */
+  klasse?: number
 }
 
 export const WORDS: readonly EnglishWord[] = words.woerter
-export const DIALOGE: readonly Dialog[] = dialoge
+export const DIALOGE: readonly Dialog[] = dialoge as Dialog[]
 
 export interface EnglischParams {
   themen: string[]

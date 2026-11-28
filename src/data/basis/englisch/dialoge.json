@@ -232,5 +232,89 @@
     "frage": "Merry Christmas!",
     "antwort": "Merry Christmas to you too!",
     "falsch": ["Good morning.", "I can swim."]
+  },
+  {
+    "id": "d40",
+    "frage": "What do you like doing?",
+    "antwort": "I like swimming.",
+    "falsch": ["I'm nine.", "It's a dog."],
+    "klasse": 4
+  },
+  {
+    "id": "d41",
+    "frage": "What's your hobby?",
+    "antwort": "My hobby is reading.",
+    "falsch": ["It's blue.", "Thank you."],
+    "klasse": 4
+  },
+  {
+    "id": "d42",
+    "frage": "Can I help you?",
+    "antwort": "Yes, please. I'd like an apple.",
+    "falsch": ["I'm fine.", "Happy birthday!"],
+    "klasse": 4
+  },
+  {
+    "id": "d43",
+    "frage": "How much is the T-shirt?",
+    "antwort": "It's ten euros.",
+    "falsch": ["It's red.", "Yes, I can."],
+    "klasse": 4
+  },
+  {
+    "id": "d44",
+    "frage": "Here you are.",
+    "antwort": "Thank you!",
+    "falsch": ["How old are you?", "It's sunny."],
+    "klasse": 4
+  },
+  {
+    "id": "d45",
+    "frage": "Would you like to come to my party?",
+    "antwort": "Yes, I'd love to!",
+    "falsch": ["It's a cake.", "I'm from Germany."],
+    "klasse": 4
+  },
+  {
+    "id": "d46",
+    "frage": "When is your birthday?",
+    "antwort": "It's in May.",
+    "falsch": ["I'm ten.", "It's a present."],
+    "klasse": 4
+  },
+  {
+    "id": "d47",
+    "frage": "What do you want for Christmas?",
+    "antwort": "I want a new bike.",
+    "falsch": ["It's Monday.", "I like Easter."],
+    "klasse": 4
+  },
+  {
+    "id": "d48",
+    "frage": "Do you like this dress?",
+    "antwort": "Yes, it's very nice.",
+    "falsch": ["I'm fine.", "It's two o'clock."],
+    "klasse": 4
+  },
+  {
+    "id": "d49",
+    "frage": "Anything else?",
+    "antwort": "No, thank you.",
+    "falsch": ["Goodbye!", "It's in June."],
+    "klasse": 4
+  },
+  {
+    "id": "d50",
+    "frage": "What's the time?",
+    "antwort": "It's three o'clock.",
+    "falsch": ["It's three euros.", "I'm three."],
+    "klasse": 4
+  },
+  {
+    "id": "d51",
+    "frage": "Trick or treat!",
+    "antwort": "Here's some chocolate!",
+    "falsch": ["Merry Christmas!", "How are you?"],
+    "klasse": 4
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "quelle": "Eigene Auswahl nach den Themengebieten des LehrplanPLUS Englisch 3/4 (4.1 Freunde und Familie, 4.2 Schule). Die verbindliche ISB-Wortliste war nicht verfügbar; mit der Liste der Schule abgleichen.",
+  "quelle": "Eigene Auswahl nach den Themengebieten des LehrplanPLUS Englisch 3/4 (4.1 Freunde und Familie, 4.2 Schule). Die verbindliche ISB-Wortliste war nicht verfügbar; mit der Liste der Schule abgleichen. Klasse 4: Themengebiete 4.3 Freizeit und Feste, 4.4 Einkaufen.",
   "woerter": [
     {
       "id": "classroom-stand-up",
@@ -612,6 +612,334 @@
       "thema": "faecher",
       "klasse": 3,
       "image": "26BD"
+    },
+    {
+      "id": "freizeit-swimming",
+      "en": "swimming",
+      "de": "schwimmen",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F3CA"
+    },
+    {
+      "id": "freizeit-football",
+      "en": "football",
+      "de": "Fußball",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "26BD"
+    },
+    {
+      "id": "freizeit-reading",
+      "en": "reading",
+      "de": "lesen",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F4D6"
+    },
+    {
+      "id": "freizeit-dancing",
+      "en": "dancing",
+      "de": "tanzen",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F483"
+    },
+    {
+      "id": "freizeit-riding-a-bike",
+      "en": "riding a bike",
+      "de": "Rad fahren",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F6B4"
+    },
+    {
+      "id": "freizeit-playing-the-guitar",
+      "en": "playing the guitar",
+      "de": "Gitarre spielen",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F3B8"
+    },
+    {
+      "id": "freizeit-painting",
+      "en": "painting",
+      "de": "malen",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F3A8"
+    },
+    {
+      "id": "freizeit-skating",
+      "en": "skating",
+      "de": "Skateboard fahren",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F6F9"
+    },
+    {
+      "id": "freizeit-playing-computer-games",
+      "en": "playing computer games",
+      "de": "Computerspiele",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F3AE"
+    },
+    {
+      "id": "freizeit-singing",
+      "en": "singing",
+      "de": "singen",
+      "thema": "freizeit",
+      "klasse": 4,
+      "image": "1F3A4"
+    },
+    {
+      "id": "feste-christmas",
+      "en": "Christmas",
+      "de": "Weihnachten",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F384"
+    },
+    {
+      "id": "feste-easter",
+      "en": "Easter",
+      "de": "Ostern",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F430"
+    },
+    {
+      "id": "feste-halloween",
+      "en": "Halloween",
+      "de": "Halloween",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F383"
+    },
+    {
+      "id": "feste-birthday",
+      "en": "birthday",
+      "de": "Geburtstag",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F382"
+    },
+    {
+      "id": "feste-present",
+      "en": "present",
+      "de": "Geschenk",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F381"
+    },
+    {
+      "id": "feste-candle",
+      "en": "candle",
+      "de": "Kerze",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F56F"
+    },
+    {
+      "id": "feste-party",
+      "en": "party",
+      "de": "Party",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F389"
+    },
+    {
+      "id": "feste-balloon",
+      "en": "balloon",
+      "de": "Luftballon",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F388"
+    },
+    {
+      "id": "feste-santa-claus",
+      "en": "Santa Claus",
+      "de": "Weihnachtsmann",
+      "thema": "feste",
+      "klasse": 4,
+      "image": "1F385"
+    },
+    {
+      "id": "essen-apple",
+      "en": "apple",
+      "de": "Apfel",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F34E"
+    },
+    {
+      "id": "essen-banana",
+      "en": "banana",
+      "de": "Banane",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F34C"
+    },
+    {
+      "id": "essen-bread",
+      "en": "bread",
+      "de": "Brot",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F35E"
+    },
+    {
+      "id": "essen-milk",
+      "en": "milk",
+      "de": "Milch",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F95B"
+    },
+    {
+      "id": "essen-cheese",
+      "en": "cheese",
+      "de": "Käse",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F9C0"
+    },
+    {
+      "id": "essen-egg",
+      "en": "egg",
+      "de": "Ei",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F95A"
+    },
+    {
+      "id": "essen-orange-juice",
+      "en": "orange juice",
+      "de": "Orangensaft",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F9C3"
+    },
+    {
+      "id": "essen-ice-cream",
+      "en": "ice cream",
+      "de": "Eis",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F368"
+    },
+    {
+      "id": "essen-pizza",
+      "en": "pizza",
+      "de": "Pizza",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F355"
+    },
+    {
+      "id": "essen-carrot",
+      "en": "carrot",
+      "de": "Karotte",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F955"
+    },
+    {
+      "id": "essen-sandwich",
+      "en": "sandwich",
+      "de": "Sandwich",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F96A"
+    },
+    {
+      "id": "essen-chocolate",
+      "en": "chocolate",
+      "de": "Schokolade",
+      "thema": "essen",
+      "klasse": 4,
+      "image": "1F36B"
+    },
+    {
+      "id": "kleidung-t-shirt",
+      "en": "T-shirt",
+      "de": "T-Shirt",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F455"
+    },
+    {
+      "id": "kleidung-jeans",
+      "en": "jeans",
+      "de": "Jeans",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F456"
+    },
+    {
+      "id": "kleidung-dress",
+      "en": "dress",
+      "de": "Kleid",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F457"
+    },
+    {
+      "id": "kleidung-shoes",
+      "en": "shoes",
+      "de": "Schuhe",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F45F"
+    },
+    {
+      "id": "kleidung-cap",
+      "en": "cap",
+      "de": "Kappe",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F9E2"
+    },
+    {
+      "id": "kleidung-jacket",
+      "en": "jacket",
+      "de": "Jacke",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F9E5"
+    },
+    {
+      "id": "kleidung-socks",
+      "en": "socks",
+      "de": "Socken",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F9E6"
+    },
+    {
+      "id": "kleidung-scarf",
+      "en": "scarf",
+      "de": "Schal",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F9E3"
+    },
+    {
+      "id": "kleidung-gloves",
+      "en": "gloves",
+      "de": "Handschuhe",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1F9E4"
+    },
+    {
+      "id": "kleidung-skirt",
+      "en": "skirt",
+      "de": "Rock",
+      "thema": "kleidung",
+      "klasse": 4,
+      "image": "1FA73"
     }
   ]
 }
