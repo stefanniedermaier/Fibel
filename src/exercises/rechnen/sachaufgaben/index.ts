@@ -10,6 +10,7 @@ import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemPart } from '../shared'
 import SachaufgabenTask from './SachaufgabenTask.vue'
+import { textChoices } from '../../choices'
 
 export type SachOp = '+' | '-' | '·' | ':'
 
@@ -110,7 +111,7 @@ export const sachaufgaben: ExerciseModule<SachaufgabenParams, SachaufgabenData> 
           text: m.text,
           result: m.ergebnis,
           correctKey: m.richtig,
-          choices: shuffle([m.richtig, ...m.falsch], rng).map((l) => ({ key: l, label: l })),
+          choices: textChoices([m.richtig, ...m.falsch], rng),
         },
       }
     }
@@ -147,7 +148,7 @@ export const sachaufgaben: ExerciseModule<SachaufgabenParams, SachaufgabenData> 
           text,
           result,
           correctKey: right,
-          choices: shuffle([right, ...wrong], rng).map((l) => ({ key: l, label: l })),
+          choices: textChoices([right, ...wrong], rng),
         },
       }
     }
@@ -199,7 +200,7 @@ export const sachaufgaben: ExerciseModule<SachaufgabenParams, SachaufgabenData> 
         text,
         result,
         correctKey: right,
-        choices: shuffle([right, ...wrong], rng).map((l) => ({ key: l, label: l })),
+        choices: textChoices([right, ...wrong], rng),
       },
     }
   },

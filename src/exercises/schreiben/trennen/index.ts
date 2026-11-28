@@ -9,6 +9,7 @@ import type { Word } from '@/core/types'
 import type { ExerciseModule } from '../../types'
 import { findWord, gradeWords, itemId, type SchreibenParams } from '../shared'
 import WahlTask, { type WahlData } from '../schreibung/WahlTask.vue'
+import { textChoices } from '../../choices'
 
 export const hyphenated = (w: Pick<Word, 'syllables'>) => w.syllables.join('-')
 
@@ -64,7 +65,7 @@ export const trennen: ExerciseModule<SchreibenParams, WahlData> = {
         image: word.image,
         prompt: word.text,
         correctKey: right,
-        choices: shuffle([right, ...wrong], rng).map((t) => ({ key: t, label: t })),
+        choices: textChoices([right, ...wrong], rng),
       },
     }
   },

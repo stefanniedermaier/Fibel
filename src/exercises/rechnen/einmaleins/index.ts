@@ -10,6 +10,7 @@ import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemPart } from '../shared'
 import EinmaleinsTask from './EinmaleinsTask.vue'
+import { textChoices } from '../../choices'
 
 export interface EinmaleinsParams {
   mode: 'bild' | 'rechnen' | 'rest'
@@ -107,7 +108,7 @@ export const einmaleins: ExerciseModule<EinmaleinsParams, EinmaleinsData> = {
           rows,
           cols,
           correctKey: right,
-          choices: shuffle([right, ...wrong], rng).map((l) => ({ key: l, label: l })),
+          choices: textChoices([right, ...wrong], rng),
         },
       }
     }
@@ -131,7 +132,7 @@ export const einmaleins: ExerciseModule<EinmaleinsParams, EinmaleinsData> = {
           task: `${a} : ${d}`,
           answer: q,
           correctKey: right,
-          choices: shuffle([right, ...near.slice(0, 2)], rng).map((l) => ({ key: l, label: l })),
+          choices: textChoices([right, ...near.slice(0, 2)], rng),
         },
       }
     }

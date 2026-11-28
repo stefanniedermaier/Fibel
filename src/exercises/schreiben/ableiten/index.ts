@@ -8,6 +8,7 @@ import type { Word } from '@/core/types'
 import type { ExerciseModule } from '../../types'
 import { findWord, gradeWords, itemId, writingPool, type SchreibenParams } from '../shared'
 import WahlTask, { type WahlData } from '../schreibung/WahlTask.vue'
+import { textChoices } from '../../choices'
 
 const HARD: Record<string, string> = { b: 'p', d: 't', g: 'k' }
 
@@ -90,7 +91,7 @@ export const ableiten: ExerciseModule<SchreibenParams, WahlData> = {
         helper: hard ? `${von} → ?` : `${von} → ?`,
         prompt: `${l.before}_${l.after}`,
         correctKey: l.right,
-        choices: shuffle([l.right, l.wrong], rng).map((t) => ({ key: t, label: t })),
+        choices: textChoices([l.right, l.wrong], rng),
       },
     }
   },

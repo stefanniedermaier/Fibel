@@ -10,6 +10,7 @@ import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemPart, shownOp, type Op } from '../shared'
 import SachaufgabeTask from './SachaufgabeTask.vue'
+import { textChoice } from '../../choices'
 
 export interface Rechengeschichte {
   id: string
@@ -95,7 +96,7 @@ export const sachaufgabe: ExerciseModule<SachaufgabeParams, SachaufgabeData> = {
         op,
         b,
         result,
-        choices: choices.map((c) => ({ key: c, label: c })),
+        choices: choices.map(textChoice),
         correctKey: right,
       },
     }

@@ -4,21 +4,20 @@
  * compound nouns. All are choices with text answers (WahlTask).
  */
 import sprache3 from '@/data/basis/klasse-3/sprache.json'
-import { pickOne, shuffle, type Rng } from '@/core/random'
+import { pickOne, shuffle } from '@/core/random'
 import type { Word } from '@/core/types'
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import type { ExerciseModule, LearnerContext } from '../../types'
 import { findWord, gradeWords, itemId } from '../../lesen/shared'
+import { textChoice, textChoices as choices } from '../../choices'
 
 const words3 = (ctx: LearnerContext) => gradeWords(ctx, { wordGrade: 3 })
-const choices = (labels: readonly string[], rng: Rng) =>
-  shuffle([...new Set(labels)], rng).map((t) => ({ key: t, label: t }))
 const UML: Record<string, string> = { ä: 'a', ö: 'o', ü: 'u' }
 const noUmlaut = (s: string) => s.replace(/[äöü]/, (c) => UML[c]!)
 
 // --- SP3-2, SP3-3: Formen ----------------------------------------------------
 
-export interface Formen3Params {
+export interface WortformenParams {
   mode: 'steigerung' | 'praeteritum' | 'perfekt'
 }
 
@@ -53,8 +52,8 @@ export function wrongPartizip(w: Word): string[] {
   )
 }
 
-export const formen3: ExerciseModule<Formen3Params, WahlData> = {
-  id: 'sprache.formen3',
+export const wortformen: ExerciseModule<WortformenParams, WahlData> = {
+  id: 'sprache.wortformen',
   topic: 'sprache',
 
   items(ctx, params) {
@@ -62,12 +61,12 @@ export const formen3: ExerciseModule<Formen3Params, WahlData> = {
     if (params.mode === 'steigerung')
       return ws
         .filter((w) => w.steigerung && !w.steigerung[0].startsWith('besser'))
-        .flatMap((w) => [0, 1].map((st) => `sprache.formen3:steigerung:${w.id}-${st}`))
+        .flatMap((w) => [0, 1].map((st) => `sprache.wortformen:steigerung:${w.id}-${st}`))
     if (params.mode === 'praeteritum')
       return ws
         .filter((w) => w.praeteritum && w.er?.endsWith('t'))
-        .map((w) => `sprache.formen3:praeteritum:${w.id}`)
-    return ws.filter((w) => w.perfekt).map((w) => `sprache.formen3:perfekt:${w.id}`)
+        .map((w) => `sprache.wortformen:praeteritum:${w.id}`)
+    return ws.filter((w) => w.perfekt).map((w) => `sprache.wortformen:perfekt:${w.id}`)
   },
 
   generate(ctx, params, itemKey, rng) {
@@ -204,7 +203,7 @@ export const artikelZusammen: ExerciseModule<Record<string, never>, WahlData> = 
         helper: parts.join(' + '),
         prompt: `___ ${z.wort}`,
         correctKey: z.artikel,
-        choices: ['der', 'die', 'das'].map((t) => ({ key: t, label: t })),
+        choices: ['der', 'die', 'das'].map(textChoice),
       },
     }
   },

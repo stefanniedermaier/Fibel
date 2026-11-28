@@ -8,6 +8,7 @@
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import MassstabTask from './MassstabTask.vue'
+import { textChoices } from '../../choices'
 
 /** A figure as rows of '#' on squared paper. */
 export type Figur = string[]
@@ -135,7 +136,7 @@ export const massstab: ExerciseModule<MassstabParams, MassstabData> = {
           mode: 'plan',
           prompt: p.massstab,
           correctKey: p.richtig,
-          choices: shuffle([p.richtig, ...p.falsch], rng).map((l) => ({ key: l, label: l })),
+          choices: textChoices([p.richtig, ...p.falsch], rng),
         },
       }
     }

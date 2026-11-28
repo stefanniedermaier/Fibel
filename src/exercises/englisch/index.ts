@@ -22,6 +22,7 @@ import {
   type EnglischData,
   type EnglischParams,
 } from './shared'
+import { textChoice, textChoices } from '../choices'
 
 export const CHOICES = 4
 const itemOf = (key: string) => key.slice(key.indexOf(':') + 1)
@@ -132,7 +133,7 @@ export const dialog: ExerciseModule<DialogParams, EnglischData> = {
       afterword: `${en(d.frage)} ${en(d.antwort)}`,
       data: {
         correctKey: d.antwort,
-        choices: answers.map((a) => ({ key: a, label: a })),
+        choices: answers.map(textChoice),
       },
     }
   },
@@ -298,7 +299,7 @@ export const textEnglisch: ExerciseModule<Record<string, never>, WahlData> = {
       data: {
         prompt: t.text,
         correctKey: f.richtig,
-        choices: shuffle([f.richtig, ...f.falsch], rng).map((x) => ({ key: x, label: x })),
+        choices: textChoices([f.richtig, ...f.falsch], rng),
       },
     }
   },

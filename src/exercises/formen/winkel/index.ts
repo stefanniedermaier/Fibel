@@ -4,33 +4,14 @@
  * - `figur`: which figure has only right angles (Rechteck, Quadrat) – among a
  *   parallelogram, a rhombus, a trapezoid and a kite.
  */
+import { rad } from '@/core/geometry'
 import { pickOne, shuffle, type Rng } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import WinkelTask from './WinkelTask.vue'
 
 export interface WinkelParams {
-  /** 'parkett' (F4-4): with which shape can you tile a floor without gaps? */
-  mode: 'winkel' | 'figur' | 'parkett'
+  mode: 'winkel' | 'figur'
 }
-
-const rad = (deg: number) => (deg * Math.PI) / 180
-
-const regelmaessig = (n: number, r = 42, start = -90): [number, number][] =>
-  Array.from({ length: n }, (_, i) => {
-    const a = rad(start + (i * 360) / n)
-    return [Math.round(50 + r * Math.cos(a)), Math.round(50 + r * Math.sin(a))] as [number, number]
-  })
-
-/** Shapes that tile the plane (triangle, square, hexagon) and some that do not. */
-export const PARKETT: Record<string, { name: string; passt: boolean; points: [number, number][] }> =
-  {
-    dreieck: { name: 'das Dreieck', passt: true, points: regelmaessig(3) },
-    quadrat: { name: 'das Quadrat', passt: true, points: regelmaessig(4, 42, -45) },
-    sechseck: { name: 'das Sechseck', passt: true, points: regelmaessig(6) },
-    kreis: { name: 'der Kreis', passt: false, points: regelmaessig(32) },
-    fuenfeck: { name: 'das Fünfeck', passt: false, points: regelmaessig(5) },
-    achteck: { name: 'das Achteck', passt: false, points: regelmaessig(8, 42, -22.5) },
-  }
 
 /** A drawing: polyline points in a 100 × 100 box; closed for figures. */
 export interface Zeichnung {
@@ -143,10 +124,6 @@ export const winkel: ExerciseModule<WinkelParams, WinkelData> = {
   topic: 'formen',
 
   items(_ctx, params) {
-    if (params.mode === 'parkett')
-      return Object.keys(PARKETT)
-        .filter((k) => PARKETT[k]!.passt)
-        .map((k) => `formen.winkel:parkett:${k}`)
     if (params.mode === 'figur')
       return ['rechteck', 'quadrat'].map((f) => `formen.winkel:figur:${f}`)
     return [0, 30, 45, 90, 120, 160, 200, 250, 300].map((t) => `formen.winkel:winkel:${t}`)
@@ -154,19 +131,6 @@ export const winkel: ExerciseModule<WinkelParams, WinkelData> = {
 
   generate(_ctx, params, itemKey, rng) {
     const id = itemKey.split(':')[2]!
-    if (params.mode === 'parkett') {
-      const wrong = shuffle(
-        Object.keys(PARKETT).filter((k) => !PARKETT[k]!.passt),
-        rng,
-      ).slice(0, 2)
-      const z = (k: string): Zeichnung => ({ key: k, points: PARKETT[k]!.points, closed: true })
-      return {
-        instruction: 'Mit welcher Form kannst du einen Boden ganz ohne Lücken auslegen?',
-        hint: 'Stell dir viele gleiche Fliesen nebeneinander vor. Bleiben Lücken?',
-        solution: `Mit ${PARKETT[id]!.name} geht es ohne Lücken. Bei den anderen Formen bleiben Lücken.`,
-        data: { correctKey: id, choices: shuffle([z(id), ...wrong.map(z)], rng) },
-      }
-    }
     if (params.mode === 'figur') {
       const wrong = shuffle(
         Object.keys(FIGUREN).filter((k) => !FIGUREN[k]!.rechte),

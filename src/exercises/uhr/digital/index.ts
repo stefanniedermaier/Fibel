@@ -8,6 +8,7 @@ import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemPart } from '../../rechnen/shared'
 import UhrWahlTask, { type UhrWahlData } from './UhrWahlTask.vue'
+import { textChoices } from '../../choices'
 
 export interface DigitalParams {
   mode: 'tageszeit' | 'analog'
@@ -57,7 +58,7 @@ export const uhrDigital: ExerciseModule<DigitalParams, UhrWahlData> = {
           icon: t.icon,
           clocks: [{ total: total(h, m) }],
           correctKey: shown,
-          choices: shuffle([shown, ...wrong], rng).map((k) => ({ key: k, label: k })),
+          choices: textChoices([shown, ...wrong], rng),
         },
       }
     }

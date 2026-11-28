@@ -5,7 +5,7 @@ import { resolveWords } from '@/core/words'
 import { textSentences, textstelle } from '@/exercises/lesen/textstelle'
 import { cleanSentence, matches } from '@/exercises/schreiben/tippen'
 import { separable, wrongSeparations } from '@/exercises/schreiben/trennen'
-import { wrongPartizip, wrongPraeteritum, wrongSteigerung } from '@/exercises/sprache/klasse3'
+import { wrongPartizip, wrongPraeteritum, wrongSteigerung } from '@/exercises/sprache/wortformen'
 import { SAETZE, umgestellt } from '@/exercises/sprache/satzglieder'
 
 const ctx = { land: 'DE-BY', grade: 3, settings: resolveDefaults('DE-BY', 3) }
@@ -85,10 +85,10 @@ describe('Deutsch Klasse 4', () => {
       }
   })
   it('Lücken: Lösung unter den Antworten', async () => {
-    const { luecke4, LUECKEN } = await import('@/exercises/sprache/luecke4')
+    const { luecken, LUECKEN } = await import('@/exercises/sprache/luecken')
     for (const art of Object.keys(LUECKEN))
-      for (const key of luecke4.items(ctx4, { art })) {
-        const t = luecke4.generate(ctx4, { art }, key, createRng(1))
+      for (const key of luecken.items(ctx4, { art })) {
+        const t = luecken.generate(ctx4, { art }, key, createRng(1))
         expect(t.data.choices.map((c) => c.key)).toContain(t.data.correctKey)
       }
   })

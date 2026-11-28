@@ -30,8 +30,10 @@ import {
   wortfeld,
   zusammensetzen,
   bausteine,
-} from './sprache/klasse2'
-import { lineal, schaetzen, umrechnen } from './messen/laenge'
+} from './sprache/woerter'
+import { lineal } from './messen/laenge'
+import { umrechnen } from './messen/groessen/umrechnen'
+import { schaetzen } from './messen/groessen/schaetzen'
 import { sachaufgaben } from './rechnen/sachaufgaben'
 import { zufall } from './rechnen/zufall'
 import { kombinatorik } from './rechnen/kombinatorik'
@@ -42,7 +44,7 @@ import { ueberschlag } from './rechnen/ueberschlag'
 import { schriftlich } from './rechnen/schriftlich'
 import { trennen } from './schreiben/trennen'
 import { textstelle } from './lesen/textstelle'
-import { artikelZusammen, formen3, nachsilben, satzart } from './sprache/klasse3'
+import { artikelZusammen, wortformen, nachsilben, satzart } from './sprache/wortformen'
 import { satzglieder } from './sprache/satzglieder'
 import { textFragen } from './lesen/text-fragen'
 import { satzBild } from './lesen/satz-bild'
@@ -93,10 +95,12 @@ import { ablesen } from './messen/groessen'
 import { netz } from './formen/netz'
 import { gebaeude } from './formen/gebaeude'
 import { winkel } from './formen/winkel'
+import { parkett } from './formen/parkett'
+import { rechenart } from './rechnen/rechenart'
 import { ornament } from './formen/ornament'
 import { million } from './rechnen/million'
 import { malGeteilt } from './rechnen/schriftlich/malgeteilt'
-import { luecke4 } from './sprache/luecke4'
+import { luecken } from './sprache/luecken'
 import { redewendung } from './lesen/redewendung'
 import { teilerModul } from './rechnen/teiler'
 import { massstab } from './formen/massstab'
@@ -191,7 +195,7 @@ register(ueberschlag)
 register(schriftlich)
 register(trennen)
 register(textstelle)
-register(formen3)
+register(wortformen)
 register(nachsilben)
 register(artikelZusammen)
 register(satzglieder)
@@ -207,10 +211,12 @@ register(ablesen)
 register(netz)
 register(gebaeude)
 register(winkel)
+register(parkett)
+register(rechenart)
 register(ornament)
 register(million)
 register(malGeteilt)
-register(luecke4)
+register(luecken)
 register(redewendung)
 register(teilerModul)
 register(massstab)

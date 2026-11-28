@@ -9,6 +9,7 @@ import type { Word } from '@/core/types'
 import type { ExerciseModule } from '../../types'
 import { findWord, gradeWords, itemId, spoken, writingPool, type SchreibenParams } from '../shared'
 import WahlTask, { type WahlData } from './WahlTask.vue'
+import { textChoices } from '../../choices'
 
 const V = 'aeiouäöü'
 
@@ -100,7 +101,7 @@ export const schreibung: ExerciseModule<SchreibenParams, WahlData> = {
       data: {
         image: word.image,
         correctKey: word.text,
-        choices: shuffle([word.text, ...wrong], rng).map((t) => ({ key: t, label: t })),
+        choices: textChoices([word.text, ...wrong], rng),
       },
     }
   },

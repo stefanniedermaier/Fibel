@@ -7,6 +7,7 @@ import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { gradeWords, itemId, type SchreibenParams } from '../shared'
 import WahlTask, { type WahlData } from '../schreibung/WahlTask.vue'
+import { textChoices } from '../../choices'
 
 export const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
@@ -64,7 +65,7 @@ export const abc: ExerciseModule<AbcParams, WahlData> = {
         data: {
           prompt: er,
           correctKey: verb.text,
-          choices: shuffle([verb.text, ...wrong], rng).map((t) => ({ key: t, label: t })),
+          choices: textChoices([verb.text, ...wrong], rng),
         },
       }
     }
@@ -107,7 +108,7 @@ export const abc: ExerciseModule<AbcParams, WahlData> = {
         solution: `${first.text} steht zuerst, denn ${plainFirst(first.text)} kommt im ABC vor den anderen.`,
         data: {
           correctKey: first.text,
-          choices: shuffle([first.text, ...picked], rng).map((t) => ({ key: t, label: t })),
+          choices: textChoices([first.text, ...picked], rng),
         },
       }
     }
@@ -126,7 +127,7 @@ export const abc: ExerciseModule<AbcParams, WahlData> = {
       data: {
         prompt: mode === 'nach' ? `${value} → ?` : `? ← ${value}`,
         correctKey: answer,
-        choices: shuffle([answer, ...others], rng).map((t) => ({ key: t, label: t })),
+        choices: textChoices([answer, ...others], rng),
       },
     }
   },

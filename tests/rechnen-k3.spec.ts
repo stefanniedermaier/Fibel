@@ -91,7 +91,7 @@ describe('Rechnen Klasse 3', () => {
 
 describe('Messen Klasse 3', () => {
   it('Umrechnen: jede Aufgabe hat drei verschiedene Antworten, die Lösung ist dabei', async () => {
-    const { umrechnen } = await import('@/exercises/messen/laenge')
+    const { umrechnen } = await import('@/exercises/messen/groessen/umrechnen')
     const { UMRECHNUNGEN, sayUnits, solved } = await import('@/exercises/messen/groessen/tabelle')
     for (const art of Object.keys(UMRECHNUNGEN) as (keyof typeof UMRECHNUNGEN)[])
       for (const key of umrechnen.items(ctx, { art })) {

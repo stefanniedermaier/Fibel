@@ -8,6 +8,7 @@
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import KalenderTask from './KalenderTask.vue'
+import { textChoice } from '../../choices'
 
 export const WOCHENTAGE = [
   'Montag',
@@ -83,7 +84,7 @@ export const kalender: ExerciseModule<KalenderParams, KalenderData> = {
         params.mode === 'gestern'
           ? `${forward ? 'Morgen ist' : 'Gestern war'} ${answer}.`
           : `${forward ? 'Nach' : 'Vor'} ${list[i]} kommt ${answer}.`,
-      data: { choices: choices.map((c) => ({ key: c, label: c })), correctKey: answer },
+      data: { choices: choices.map(textChoice), correctKey: answer },
     }
   },
 

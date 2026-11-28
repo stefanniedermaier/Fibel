@@ -8,6 +8,7 @@ import {
   glyphProblems,
   segmentPoints,
   strokePoints,
+  type Segment,
 } from '@/core/strokes'
 import { VERBINDUNGEN, nachspuren } from '@/exercises/schreiben/nachspuren'
 
@@ -72,30 +73,41 @@ describe('Verbundene Schrift (VA und SAS)', () => {
   })
 
   it('Wörter fließen: an keiner Verbindung ein Knick', () => {
-    // Direction change between two neighbouring pieces of the main stroke, in degrees.
+    // Direction of a segment where it starts or ends.
+    const dir = (seg: Segment, end: boolean): [number, number] => {
+      if ('c' in seg) {
+        const c = seg.c
+        return end ? [c[6] - c[4], c[7] - c[5]] : [c[2] - c[0], c[3] - c[1]]
+      }
+      if ('l' in seg) return [seg.l[2] - seg.l[0], seg.l[3] - seg.l[1]]
+      const pts = segmentPoints(seg)
+      const [p, q] = end ? [pts.at(-2)!, pts.at(-1)!] : [pts[0]!, pts[1]!]
+      return [q.x - p.x, q.y - p.y]
+    }
     const turn = (a: [number, number], b: [number, number]) => {
       const d = Math.abs(Math.atan2(b[1], b[0]) - Math.atan2(a[1], a[0])) * (180 / Math.PI)
       return Math.min(d, 360 - d)
     }
-    const dir = (seg: { l: number[] }): [number, number] => [
-      seg.l[2]! - seg.l[0]!,
-      seg.l[3]! - seg.l[1]!,
-    ]
-    for (const word of ['eine', 'Wolke', 'sieben', 'bin', 'ich', 'Garten', 'vor', 'wir', 'Bob']) {
-      const script = SCRIPTS.schulausgangsschrift!
-      const main = glyphFor(script, word)!.strokes.find((s) => s.length > 40)!
-      // At every joint (where one letter ends and the next begins) the line goes on smoothly.
-      let x = 0
-      for (const ch of word.slice(0, -1)) {
-        x += script.glyphs[ch]!.w
-        const i = main.findIndex(
-          (seg) => 'l' in seg && Math.abs(seg.l[0] - x) < 0.6 && seg.l[1] < 101,
-        )
-        if (i <= 0 || script.glyphs[ch]!.ein === undefined) continue
-        const before = main[i - 1]!
-        const after = main[i]!
-        if (!('l' in before) || !('l' in after)) continue
-        expect(turn(dir(before), dir(after)), `${word}: nach ${ch}`).toBeLessThan(25)
+    for (const key of ['va', 'sas'] as const) {
+      const script = SCRIPTS[SCHREIBSCHRIFTEN[key].id]!
+      for (const word of ['eine', 'sieben', 'bin', 'ich', 'Garten', 'vor', 'wir', 'Bob', 'Wolke']) {
+        const strokes = glyphFor(script, word)!.strokes
+        // At every joint (one letter ends, the next begins) the line goes on smoothly.
+        const isJoint = (seg: Segment, at: number, ch: string) => {
+          const p = segmentPoints(seg)[0]!
+          return Math.abs(p.x - at) < 0.6 && Math.abs(p.y - script.glyphs[ch]!.aus!) < 0.6
+        }
+        let x = word[0] === word[0]!.toLowerCase() ? 0 : script.glyphs[word[0]!]!.w + 16
+        for (const ch of word.slice(word[0] === word[0]!.toLowerCase() ? 0 : 1, -1)) {
+          x += script.glyphs[ch]!.w
+          const main = strokes.find((st) => st.some((seg) => isJoint(seg, x, ch)))!
+          const i = main ? main.findIndex((seg) => isJoint(seg, x, ch)) : -1
+          expect(i, `${key} ${word}: Verbindung nach ${ch}`).toBeGreaterThan(0)
+          expect(
+            turn(dir(main[i - 1]!, true), dir(main[i]!, false)),
+            `${key} ${word}: nach ${ch}`,
+          ).toBeLessThan(5)
+        }
       }
     }
   })

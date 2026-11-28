@@ -32,8 +32,25 @@ const LAND_WORD_FILES = import.meta.glob<WordEntry[]>('../data/laender/*/klasse-
   import: 'default',
 })
 
+/**
+ * Grades whose dictionary builds on an earlier one: Klasse 4 keeps all words of
+ * Klasse 3 (the basic vocabulary is set for grades 3/4 together) and adds its own.
+ */
+export const WORDS_BUILD_ON: Readonly<Record<number, number>> = { 4: 3 }
+
 export function baseWordEntries(grade: number): WordEntry[] {
-  return BASE_WORD_FILES[`../data/basis/klasse-${grade}/words.json`] ?? []
+  const own = BASE_WORD_FILES[`../data/basis/klasse-${grade}/words.json`] ?? []
+  const from = WORDS_BUILD_ON[grade]
+  return from ? [...baseWordEntries(from), ...own] : own
+}
+
+/** The state's word changes for a grade – or those of the grade it builds on. */
+type WordChanges = NonNullable<LandOverlay['words']>[string]
+
+function wordChanges(overlay: LandOverlay | undefined, grade: number): WordChanges | undefined {
+  const own = overlay?.words?.[String(grade)]
+  const from = WORDS_BUILD_ON[grade]
+  return own ?? (from ? wordChanges(overlay, from) : undefined)
 }
 
 export function baseSyllables(grade: number): Syllable[] {
@@ -70,7 +87,7 @@ export function applyWordOverlay(
   overlay: LandOverlay | undefined,
   lookup: FileLookup = landWordFile,
 ): Word[] {
-  const changes = overlay?.words?.[String(grade)]
+  const changes = wordChanges(overlay, grade)
   if (!overlay || !changes) return base.map((w) => toWord(w, 'basis', false))
   const label = overlay.land
 

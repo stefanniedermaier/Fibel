@@ -4,7 +4,7 @@
  * "ordnen einfache Visualisierungen, um eine Abfolge … zu veranschaulichen").
  * The same exercise serves HSU with its own sequences (`source`).
  */
-import ablaeufe from '@/data/basis/klasse-1/ablaeufe.json'
+import ablaeufe from '@/data/common/ablaeufe.json'
 import { shuffle } from '@/core/random'
 import type { ExerciseModule } from '../../types'
 import { itemId } from '../shared'

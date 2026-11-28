@@ -3314,7 +3314,7 @@
     "topic": "sprache",
     "category": "sprache.zeitformen",
     "unit": "k3.sprache.steigerung",
-    "exercise": "sprache.formen3",
+    "exercise": "sprache.wortformen",
     "params": {
       "mode": "steigerung"
     },
@@ -3326,7 +3326,7 @@
     "topic": "sprache",
     "category": "sprache.zeitformen",
     "unit": "k3.sprache.zeitformen",
-    "exercise": "sprache.formen3",
+    "exercise": "sprache.wortformen",
     "params": {
       "mode": "praeteritum"
     },
@@ -3338,7 +3338,7 @@
     "topic": "sprache",
     "category": "sprache.zeitformen",
     "unit": "k3.sprache.zeitformen",
-    "exercise": "sprache.formen3",
+    "exercise": "sprache.wortformen",
     "params": {
       "mode": "perfekt"
     },
@@ -4445,10 +4445,8 @@
     "topic": "rechnen",
     "category": "rechnen.kopf",
     "unit": "k4.rechnen.rechenart",
-    "exercise": "rechnen.ueberschlag",
-    "params": {
-      "mode": "wahl"
-    },
+    "exercise": "rechnen.rechenart",
+    "params": {},
     "title": "Im Kopf oder schriftlich?"
   },
   {
@@ -4493,7 +4491,7 @@
     "topic": "schreiben",
     "category": "schreiben.satz",
     "unit": "k4.schreiben.flexion",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "fall"
     },
@@ -4518,7 +4516,7 @@
     "topic": "schreiben",
     "category": "schreiben.satz",
     "unit": "k4.schreiben.praeteritum",
-    "exercise": "sprache.formen3",
+    "exercise": "sprache.wortformen",
     "params": {
       "mode": "praeteritum"
     },
@@ -4590,7 +4588,7 @@
     "topic": "schreiben",
     "category": "schreiben.stamm",
     "unit": "k4.schreiben.gross",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "gross"
     },
@@ -4676,7 +4674,7 @@
     "topic": "sprache",
     "category": "sprache.woerter4",
     "unit": "k4.sprache.pronomen",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "pronomen"
     },
@@ -4701,7 +4699,7 @@
     "topic": "sprache",
     "category": "sprache.woerter4",
     "unit": "k4.sprache.zeitformen",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "zeit-erkennen"
     },
@@ -4713,7 +4711,7 @@
     "topic": "sprache",
     "category": "sprache.woerter4",
     "unit": "k4.sprache.zeitformen",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "zeitform"
     },
@@ -4725,7 +4723,7 @@
     "topic": "sprache",
     "category": "sprache.woerter4",
     "unit": "k4.sprache.zeitformen",
-    "exercise": "sprache.formen3",
+    "exercise": "sprache.wortformen",
     "params": {
       "mode": "perfekt"
     },
@@ -4763,7 +4761,7 @@
     "topic": "sprache",
     "category": "sprache.satz4",
     "unit": "k4.sprache.faelle",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "fall"
     },
@@ -4775,7 +4773,7 @@
     "topic": "sprache",
     "category": "sprache.texte4",
     "unit": "k4.sprache.rede",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "rede"
     },
@@ -4787,7 +4785,7 @@
     "topic": "sprache",
     "category": "sprache.woerter4",
     "unit": "k4.sprache.bausteine",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "bausteine"
     },
@@ -4799,7 +4797,7 @@
     "topic": "sprache",
     "category": "sprache.texte4",
     "unit": "k4.sprache.textarten",
-    "exercise": "sprache.luecke4",
+    "exercise": "sprache.luecken",
     "params": {
       "art": "textart"
     },
@@ -5253,10 +5251,8 @@
     "topic": "formen",
     "category": "formen.kippen",
     "unit": "k4.formen.parkett",
-    "exercise": "formen.winkel",
-    "params": {
-      "mode": "parkett"
-    },
+    "exercise": "formen.parkett",
+    "params": {},
     "title": "Ohne Lücken auslegen"
   },
   {

@@ -4,9 +4,9 @@
  * mean? One meaning and two that take the words literally.
  */
 import daten from '@/data/basis/klasse-4/redewendungen.json'
-import { shuffle } from '@/core/random'
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import type { ExerciseModule } from '../types'
+import { textChoices } from '../choices'
 
 export interface Redewendung {
   id: string
@@ -43,7 +43,7 @@ export const redewendung: ExerciseModule<RedewendungParams, WahlData> = {
       data: {
         prompt: `„${r.text}“`,
         correctKey: r.bedeutung,
-        choices: shuffle([r.bedeutung, ...r.falsch], rng).map((t) => ({ key: t, label: t })),
+        choices: textChoices([r.bedeutung, ...r.falsch], rng),
       },
     }
   },

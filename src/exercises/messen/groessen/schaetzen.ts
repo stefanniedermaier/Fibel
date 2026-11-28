@@ -1,4 +1,10 @@
-/** M3-6: estimating with reference sizes – 1 kg, 1 l, 1 km (Mathematik 3/4, 3.2). */
+/**
+ * Schätzen with reference sizes: lengths in grade 2 (M2-5; a door is about 2 m high),
+ * weights, capacity and distances from grade 3 (M3-6: 1 kg, 1 l, 1 km).
+ */
+import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
+import type { ExerciseModule } from '../../types'
+import { textChoices as choices } from '../../choices'
 export type SchaetzArt = 'gewicht' | 'hohlmass' | 'strecke'
 
 export interface Schaetzung {
@@ -154,3 +160,113 @@ export const SCHAETZEN_3: readonly Schaetzung[] = [
     hilfe: KM,
   },
 ]
+
+/** Reference sizes (rounded); the wrong answers are far off, not tricky. */
+export const SCHAETZEN = [
+  {
+    id: 'tuer',
+    was: 'Wie hoch ist eine Tür?',
+    image: '1F6AA',
+    richtig: '2 m',
+    falsch: ['20 cm', '20 m'],
+  },
+  {
+    id: 'stift',
+    was: 'Wie lang ist ein Bleistift?',
+    image: '270F',
+    richtig: '18 cm',
+    falsch: ['18 m', '2 cm'],
+  },
+  {
+    id: 'kind',
+    was: 'Wie groß ist ein Kind in der zweiten Klasse?',
+    image: '1F9D2',
+    richtig: '1 m 25 cm',
+    falsch: ['25 cm', '5 m'],
+  },
+  {
+    id: 'bus',
+    was: 'Wie lang ist ein Bus?',
+    image: '1F68C',
+    richtig: '12 m',
+    falsch: ['12 cm', '1 m'],
+  },
+  {
+    id: 'tisch',
+    was: 'Wie hoch ist ein Tisch?',
+    image: 'fibel-tisch',
+    richtig: '75 cm',
+    falsch: ['7 cm', '7 m'],
+  },
+  {
+    id: 'haus',
+    was: 'Wie hoch ist ein Haus mit zwei Stockwerken?',
+    image: '1F3E0',
+    richtig: '8 m',
+    falsch: ['80 cm', '80 m'],
+  },
+  {
+    id: 'heft',
+    was: 'Wie lang ist ein Schulheft?',
+    image: '1F4D2',
+    richtig: '30 cm',
+    falsch: ['3 m', '3 cm'],
+  },
+  {
+    id: 'ameise',
+    was: 'Wie lang ist eine Ameise?',
+    image: '1F41C',
+    richtig: 'weniger als 1 cm',
+    falsch: ['10 cm', '1 m'],
+  },
+  {
+    id: 'giraffe',
+    was: 'Wie groß ist eine Giraffe?',
+    image: '1F992',
+    richtig: '5 m',
+    falsch: ['50 cm', '50 m'],
+  },
+  {
+    id: 'baum',
+    was: 'Wie hoch ist ein großer Baum?',
+    image: '1F333',
+    richtig: '20 m',
+    falsch: ['20 cm', '2 m'],
+  },
+] as const
+
+export interface SchaetzenParams {
+  /** Grade 3: weights, capacity, long distances (default: lengths of grade 2). */
+  art?: SchaetzArt
+}
+
+const schaetzListe = (art?: SchaetzArt) =>
+  art ? SCHAETZEN_3.filter((s) => s.art === art) : SCHAETZEN
+
+export const schaetzen: ExerciseModule<SchaetzenParams, WahlData> = {
+  id: 'messen.schaetzen',
+  topic: 'messen',
+
+  items(_ctx, params) {
+    return schaetzListe(params.art).map((s) => `messen.schaetzen:${s.id}`)
+  },
+
+  generate(_ctx, params, itemKey, rng) {
+    const s = schaetzListe(params.art).find((x) => x.id === itemKey.split(':')[1])!
+    return {
+      instruction: `Schätze: ${s.was}`,
+      hint:
+        'hilfe' in s
+          ? s.hilfe
+          : 'Denk an etwas, das du kennst: Ein Meter ist etwa so hoch wie ein Tisch und ein bisschen mehr.',
+      solution: `Ungefähr ${s.richtig}.`,
+      data: {
+        image: s.image,
+        correctKey: s.richtig,
+        choices: choices([s.richtig, ...s.falsch], rng),
+      },
+    }
+  },
+
+  component: WahlTask,
+}

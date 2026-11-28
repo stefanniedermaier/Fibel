@@ -4,10 +4,11 @@
  */
 import luecken from '@/data/basis/klasse-2/luecken.json'
 import sprache3 from '@/data/basis/klasse-3/sprache.json'
-import { shuffle } from '@/core/random'
+
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import type { ExerciseModule } from '../../types'
 import { itemId } from '../shared'
+import { textChoices } from '../../choices'
 
 export interface Lueckensatz {
   id: string
@@ -40,7 +41,7 @@ export const satzLuecke: ExerciseModule<Record<string, never>, WahlData> = {
       data: {
         helper: l.text.replace('___', '…'),
         correctKey: l.answer,
-        choices: shuffle([l.answer, ...l.ablenker], rng).map((t) => ({ key: t, label: t })),
+        choices: textChoices([l.answer, ...l.ablenker], rng),
       },
     }
   },

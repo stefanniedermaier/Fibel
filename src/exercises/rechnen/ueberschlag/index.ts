@@ -12,57 +12,20 @@ import { itemPart } from '../shared'
 const rnd = (rng: Rng, lo: number, hi: number) => lo + Math.floor(rng() * (hi - lo + 1))
 
 export interface UeberschlagParams {
-  mode: 'ungefaehr' | 'pruefen' | 'wahl'
+  mode: 'ungefaehr' | 'pruefen'
   /** Grade 4: round to full thousands (numbers up to 100 000). */
   tausend?: boolean
 }
-
-/** R4-9: easy in the head, or better in writing? Only clear cases. */
-export const WAHL = [
-  { task: '3000 + 4000', key: 'kopf' },
-  { task: '25 000 − 5 000', key: 'kopf' },
-  { task: '600 · 3', key: 'kopf' },
-  { task: '1000 − 999', key: 'kopf' },
-  { task: '4 800 : 4', key: 'kopf' },
-  { task: '90 000 + 10 000', key: 'kopf' },
-  { task: '48 375 + 29 868', key: 'schriftlich' },
-  { task: '70 412 − 38 579', key: 'schriftlich' },
-  { task: '3 487 · 6', key: 'schriftlich' },
-  { task: '256 · 37', key: 'schriftlich' },
-  { task: '9 156 : 7', key: 'schriftlich' },
-  { task: '102 345 + 67 989', key: 'schriftlich' },
-] as const
 
 export const ueberschlag: ExerciseModule<UeberschlagParams, WahlData> = {
   id: 'rechnen.ueberschlag',
   topic: 'rechnen',
 
   items(_ctx, params) {
-    if (params.mode === 'wahl') return WAHL.map((_, i) => `rechnen.ueberschlag:wahl${i}`)
     return ['+a', '+b', '+c', '-a', '-b', '-c'].map((k) => `rechnen.ueberschlag:${params.mode}${k}`)
   },
 
   generate(_ctx, params, itemKey, rng) {
-    if (params.mode === 'wahl') {
-      const w = WAHL[Number(itemPart(itemKey).slice(4))]!
-      return {
-        instruction: `Wie rechnest du ${w.task} am besten: im Kopf oder schriftlich?`,
-        caption: 'Im Kopf oder schriftlich?',
-        hint: 'Sind die Zahlen rund und leicht? Dann geht es im Kopf.',
-        solution:
-          w.key === 'kopf'
-            ? 'Das geht gut im Kopf: Die Zahlen sind rund.'
-            : 'Hier ist schriftlich sicherer: Die Zahlen sind groß und krumm.',
-        data: {
-          prompt: w.task,
-          correctKey: w.key,
-          choices: [
-            { key: 'kopf', label: '🧠 im Kopf' },
-            { key: 'schriftlich', label: '✍️ schriftlich' },
-          ],
-        },
-      }
-    }
     const plus = itemPart(itemKey).includes('+')
     const f = params.tausend ? 10 : 1
     const round100 = (n: number) => Math.round(n / (100 * f)) * 100 * f

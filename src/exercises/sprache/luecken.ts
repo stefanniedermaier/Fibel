@@ -4,9 +4,10 @@
  * The data are in klasse-4/sprache.json, grouped by `art`.
  */
 import sprache4 from '@/data/basis/klasse-4/sprache.json'
-import { shuffle } from '@/core/random'
+
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import type { ExerciseModule } from '../types'
+import { textChoices } from '../choices'
 
 export interface Luecke {
   satz: string
@@ -17,7 +18,7 @@ export interface Luecke {
 
 export const LUECKEN: Record<string, readonly Luecke[]> = sprache4.luecken
 
-export interface Luecke4Params {
+export interface LueckenParams {
   art: string
 }
 
@@ -35,12 +36,12 @@ const FRAGE: Record<string, string> = {
 /** Questions that are already in the prompt are not repeated. */
 const prompt = (l: Luecke) => (l.satz.startsWith('Welcher Satz') ? undefined : l.satz)
 
-export const luecke4: ExerciseModule<Luecke4Params, WahlData> = {
-  id: 'sprache.luecke4',
+export const luecken: ExerciseModule<LueckenParams, WahlData> = {
+  id: 'sprache.luecken',
   topic: 'sprache',
 
   items(_ctx, params) {
-    return (LUECKEN[params.art] ?? []).map((_, i) => `sprache.luecke4:${params.art}:${i}`)
+    return (LUECKEN[params.art] ?? []).map((_, i) => `sprache.luecken:${params.art}:${i}`)
   },
 
   generate(_ctx, params, itemKey, rng) {
@@ -56,7 +57,7 @@ export const luecke4: ExerciseModule<Luecke4Params, WahlData> = {
       data: {
         prompt: shown?.replace('___', '…'),
         correctKey: l.richtig,
-        choices: shuffle([l.richtig, ...l.falsch], rng).map((t) => ({ key: t, label: t })),
+        choices: textChoices([l.richtig, ...l.falsch], rng),
       },
     }
   },

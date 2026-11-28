@@ -5,16 +5,15 @@
  */
 import sprache from '@/data/basis/klasse-2/sprache.json'
 import sprache3 from '@/data/basis/klasse-3/sprache.json'
-import { pickOne, shuffle, type Rng } from '@/core/random'
+import { pickOne, shuffle } from '@/core/random'
 import type { Word } from '@/core/types'
 import WahlTask, { type WahlData } from '@/exercises/schreiben/schreibung/WahlTask.vue'
 import type { ExerciseModule, LearnerContext } from '../../types'
 import { findWord, gradeWords, itemId, spoken } from '../../lesen/shared'
+import { textChoice, textChoices as choices } from '../../choices'
 
 // Grade 3 has its own dictionary (with articles, plurals and verb forms).
 const words = (ctx: LearnerContext) => gradeWords(ctx, { wordGrade: ctx.grade >= 3 ? 3 : 2 })
-const choices = (labels: readonly string[], rng: Rng) =>
-  shuffle([...labels], rng).map((t) => ({ key: t, label: t }))
 const lower = (t: string) => t.toLowerCase()
 
 // --- SP2-2, SP2-6: Wortarten -------------------------------------------------
@@ -60,7 +59,7 @@ export const wortart: ExerciseModule<WortartParams, WahlData> = {
         data: {
           prompt: a,
           correctKey: 'Artikel',
-          choices: names.map((t) => ({ key: t, label: t })),
+          choices: names.map(textChoice),
         },
       }
     }
@@ -96,7 +95,7 @@ export const wortart: ExerciseModule<WortartParams, WahlData> = {
       data: {
         prompt: lower(word.text),
         correctKey: WORTART_NAMES[kind],
-        choices: names.map((t) => ({ key: t, label: t })),
+        choices: names.map(textChoice),
       },
     }
   },
@@ -127,7 +126,7 @@ export const artikel: ExerciseModule<Record<string, never>, WahlData> = {
         image: word.image,
         prompt: `___ ${word.text}`,
         correctKey: word.artikel!,
-        choices: ['der', 'die', 'das'].map((t) => ({ key: t, label: t })),
+        choices: ['der', 'die', 'das'].map(textChoice),
       },
     }
   },

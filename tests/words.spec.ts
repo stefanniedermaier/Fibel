@@ -208,3 +208,19 @@ describe('Wortlisten mit Länderanpassung', () => {
       for (const g of w.graphemes) expect(ids.has(g), g).toBe(true)
   })
 })
+
+describe('Wörterbuch Klasse 4 baut auf Klasse 3 auf', () => {
+  it('enthält alle Wörter von Klasse 3 und eigene dazu', () => {
+    const k3 = resolveWords('DE-BY', 3)
+    const k4 = resolveWords('DE-BY', 4)
+    expect(k4.slice(0, k3.length).map((w) => w.id)).toEqual(k3.map((w) => w.id))
+    expect(k4.length).toBeGreaterThan(k3.length)
+    expect(new Set(k4.map((w) => w.id)).size).toBe(k4.length)
+  })
+
+  it('übernimmt den Grundwortschatz von Klasse 3', () => {
+    const gws = (g: number) => resolveWords('DE-BY', g).filter((w) => w.grundwortschatz)
+    expect(gws(4).map((w) => w.id)).toEqual(gws(3).map((w) => w.id))
+    expect(gws(3).length).toBeGreaterThan(200)
+  })
+})

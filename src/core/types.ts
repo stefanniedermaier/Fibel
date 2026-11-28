@@ -168,7 +168,10 @@ export interface LandOverlay {
     remove?: string[]
     patch?: Record<string, Partial<Omit<CatalogEntry, 'id'>>>
   }
-  /** Word list changes per grade (key = grade). */
+  /**
+   * Word list changes per grade (key = grade). A grade without an entry uses the one of
+   * the grade its dictionary builds on (WORDS_BUILD_ON: Klasse 4 → 3).
+   */
   words?: Record<
     string,
     {

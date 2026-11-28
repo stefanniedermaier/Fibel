@@ -3,7 +3,7 @@
  * done by listening and looking: the child cannot read yet. After a right answer a
  * short fact to remember (Merksatz) is spoken.
  */
-import sache from '@/data/basis/klasse-1/sache.json'
+import sache from '@/data/common/sache.json'
 
 export interface Begriff {
   id: string

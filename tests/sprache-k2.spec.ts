@@ -3,7 +3,7 @@ import { catalogFor, resolveDefaults } from '@/core/content'
 import { createRng } from '@/core/random'
 import { resolveWords } from '@/core/words'
 import { getExercise } from '@/exercises/registry'
-import { personalForms, wrongPlurals } from '@/exercises/sprache/klasse2'
+import { personalForms, wrongPlurals } from '@/exercises/sprache/woerter'
 import { satzzeichen } from '@/exercises/sprache/satzzeichen'
 
 const settings = resolveDefaults('DE-BY', 2)

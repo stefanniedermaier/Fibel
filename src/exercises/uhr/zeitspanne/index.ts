@@ -10,6 +10,7 @@ import type { ExerciseModule } from '../../types'
 import { itemPart } from '../../rechnen/shared'
 import { digital, fromTotal, spokenTime } from '../time'
 import UhrWahlTask, { type UhrWahlData } from '../digital/UhrWahlTask.vue'
+import { textChoices } from '../../choices'
 
 export interface ZeitspanneParams {
   mode: 'spaeter' | 'frueher' | 'dauer'
@@ -104,7 +105,7 @@ function minutenAufgabe(
       prompt: uhrzeit(start),
       clocks: [],
       correctKey: right,
-      choices: shuffle([right, ...wrong], rng).map((k) => ({ key: k, label: k })),
+      choices: textChoices([right, ...wrong], rng),
     },
   }
 }
@@ -205,7 +206,7 @@ export const zeitspanne: ExerciseModule<ZeitspanneParams, UhrWahlData> = {
       data: {
         clocks: [{ total: start }],
         correctKey: right,
-        choices: shuffle([right, ...wrong], rng).map((k) => ({ key: k, label: k })),
+        choices: textChoices([right, ...wrong], rng),
       },
     }
   },

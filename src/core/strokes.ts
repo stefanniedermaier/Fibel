@@ -14,6 +14,8 @@ export interface Point {
 export type Segment =
   | { l: [number, number, number, number] }
   | { a: [number, number, number, number, number, number] }
+  /** Cubic Bézier [x0, y0, x1, y1, x2, y2, x3, y3] (connected handwriting). */
+  | { c: [number, number, number, number, number, number, number, number] }
   | { p: [number, number] }
 
 export type Stroke = Segment[]
@@ -75,6 +77,21 @@ export function segmentPoints(segment: Segment, step = 2): Point[] {
       x: x1 + ((x2 - x1) * i) / n,
       y: y1 + ((y2 - y1) * i) / n,
     }))
+  }
+  if ('c' in segment) {
+    const [x0, y0, x1, y1, x2, y2, x3, y3] = segment.c
+    const approx =
+      Math.hypot(x1 - x0, y1 - y0) + Math.hypot(x2 - x1, y2 - y1) + Math.hypot(x3 - x2, y3 - y2)
+    const n = Math.max(2, Math.ceil(approx / step))
+    return Array.from({ length: n + 1 }, (_, i) => {
+      const t = i / n
+      const u = 1 - t
+      const a = u * u * u
+      const b = 3 * u * u * t
+      const c = 3 * u * t * t
+      const d = t * t * t
+      return { x: a * x0 + b * x1 + c * x2 + d * x3, y: a * y0 + b * y1 + c * y2 + d * y3 }
+    })
   }
   const [cx, cy, rx, ry, from, to] = segment.a
   const approxLength = (Math.abs(to - from) / 360) * Math.PI * (rx + ry)
@@ -152,6 +169,10 @@ function shift(segment: Segment, dx: number): Segment {
   if ('l' in segment) {
     const [x1, y1, x2, y2] = segment.l
     return { l: [x1 + dx, y1, x2 + dx, y2] }
+  }
+  if ('c' in segment) {
+    const c = segment.c.map((v, i) => (i % 2 === 0 ? v + dx : v))
+    return { c: c as [number, number, number, number, number, number, number, number] }
   }
   const [cx, cy, rx, ry, from, to] = segment.a
   return { a: [cx + dx, cy, rx, ry, from, to] }
