@@ -71,6 +71,35 @@ describe('Verbundene Schrift (VA und SAS)', () => {
     expect(g.E!.strokes).toHaveLength(1)
   })
 
+  it('Wörter fließen: an keiner Verbindung ein Knick', () => {
+    // Direction change between two neighbouring pieces of the main stroke, in degrees.
+    const turn = (a: [number, number], b: [number, number]) => {
+      const d = Math.abs(Math.atan2(b[1], b[0]) - Math.atan2(a[1], a[0])) * (180 / Math.PI)
+      return Math.min(d, 360 - d)
+    }
+    const dir = (seg: { l: number[] }): [number, number] => [
+      seg.l[2]! - seg.l[0]!,
+      seg.l[3]! - seg.l[1]!,
+    ]
+    for (const word of ['eine', 'Wolke', 'sieben', 'bin', 'ich', 'Garten', 'vor', 'wir', 'Bob']) {
+      const script = SCRIPTS.schulausgangsschrift!
+      const main = glyphFor(script, word)!.strokes.find((s) => s.length > 40)!
+      // At every joint (where one letter ends and the next begins) the line goes on smoothly.
+      let x = 0
+      for (const ch of word.slice(0, -1)) {
+        x += script.glyphs[ch]!.w
+        const i = main.findIndex(
+          (seg) => 'l' in seg && Math.abs(seg.l[0] - x) < 0.6 && seg.l[1] < 101,
+        )
+        if (i <= 0 || script.glyphs[ch]!.ein === undefined) continue
+        const before = main[i - 1]!
+        const after = main[i]!
+        if (!('l' in before) || !('l' in after)) continue
+        expect(turn(dir(before), dir(after)), `${word}: nach ${ch}`).toBeLessThan(25)
+      }
+    }
+  })
+
   it('die beiden Schriften unterscheiden sich in der Verbindung', () => {
     const va = SCRIPTS['vereinfachte-ausgangsschrift']!.glyphs.n!
     const sas = SCRIPTS.schulausgangsschrift!.glyphs.n!

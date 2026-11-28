@@ -1,7 +1,7 @@
 {
   "name": "fibel",
   "private": true,
-  "version": "0.14.1",
+  "version": "0.14.2",
   "license": "MIT",
   "description": "Lern-PWA für Grundschulkinder: Lesen, Schreiben, Rechnen – offline, ohne Server.",
   "type": "module",

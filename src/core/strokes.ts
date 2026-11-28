@@ -27,6 +27,10 @@ export interface Glyph {
    */
   ein?: number
   aus?: number
+  /** Number of segments at the start that form the entry curve. */
+  einSegs?: number
+  /** Entry curves from other heights (SAS: "55" after o, v, w, b, r), replacing the first `einSegs`. */
+  einAlt?: Record<string, Stroke>
 }
 
 export interface Script {
@@ -175,9 +179,12 @@ function joined(glyphs: readonly Glyph[]): Glyph {
         else extras.push(moved)
         return
       }
-      const first = moved[0]
-      if (connect && first && 'l' in first) {
-        const [x1, , x2, y2] = first.l
+      const alt = connect && prev!.aus !== g.ein ? g.einAlt?.[String(prev!.aus)] : undefined
+      if (alt && g.einSegs) {
+        // Enter from the height where the previous letter ended, on a curve of its own.
+        moved.splice(0, g.einSegs, ...alt.map((seg) => shift(seg, x)))
+      } else if (connect && prev!.aus !== g.ein && moved[0] && 'l' in moved[0]) {
+        const [x1, , x2, y2] = moved[0].l
         moved[0] = { l: [x1, prev!.aus!, x2, y2] }
       }
       if (connect && mains.length > 0) mains[mains.length - 1]!.push(...moved)
