@@ -34,6 +34,8 @@ export interface Script {
   name: string
   /** Connected handwriting (VA, SAS): letters of a word are joined. */
   verbunden?: boolean
+  /** Slant to the right (SAS): x grows by (100 − y) · neigung; ascenders reach further. */
+  neigung?: number
   glyphs: Record<string, Glyph>
 }
 
@@ -184,7 +186,13 @@ function joined(glyphs: readonly Glyph[]): Glyph {
     x += g.w
     prev = g
   }
-  return { w: x, strokes: [...mains, ...extras] }
+  // Slanted letters reach a little beyond their width: the word is as wide as its ink.
+  const strokes = [...mains, ...extras]
+  const right = Math.max(
+    x,
+    ...strokes.flatMap((st) => st.flatMap((seg) => segmentPoints(seg)).map((p) => p.x)),
+  )
+  return { w: Math.round(right), strokes }
 }
 
 /**
@@ -219,7 +227,9 @@ export function lettersNeeded(ids: readonly string[]): string[] {
 }
 
 /** Problems in a glyph: gaps inside a stroke or points outside the four lines. */
-export function glyphProblems(glyph: Glyph, tolerance = 0.6): string[] {
+export function glyphProblems(glyph: Glyph, tolerance = 0.6, neigung = 0): string[] {
+  // A slanted script may reach beyond the width above the base line.
+  const overhang = neigung * (LINES.base - LINES.top + 25)
   const problems: string[] = []
   glyph.strokes.forEach((stroke, i) => {
     if (stroke.length === 0) problems.push(`Strich ${i + 1} ist leer`)
@@ -231,7 +241,12 @@ export function glyphProblems(glyph: Glyph, tolerance = 0.6): string[] {
       }
     }
     for (const p of strokePoints(stroke)) {
-      if (p.y < -25 || p.y > LINES.bottom + 5 || p.x < -6 || p.x > glyph.w + 6) {
+      if (
+        p.y < -25 ||
+        p.y > LINES.bottom + 5 ||
+        p.x < -6 - neigung * (LINES.bottom - LINES.base) ||
+        p.x > glyph.w + 6 + overhang
+      ) {
         problems.push(`Strich ${i + 1}: Punkt (${p.x.toFixed(0)}, ${p.y.toFixed(0)}) außerhalb`)
         break
       }

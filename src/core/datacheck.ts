@@ -249,7 +249,8 @@ function checkScripts(): string[] {
       if (!script.glyphs[ch]) problems.push(`${script.name}: Vorlage für „${ch}“ fehlt`)
     }
     for (const [ch, glyph] of Object.entries(script.glyphs)) {
-      for (const p of glyphProblems(glyph)) problems.push(`${script.name} „${ch}“: ${p}`)
+      for (const p of glyphProblems(glyph, 0.6, script.neigung))
+        problems.push(`${script.name} „${ch}“: ${p}`)
     }
   }
   return problems

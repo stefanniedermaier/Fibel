@@ -34,7 +34,7 @@ describe('Verbundene Schrift (VA und SAS)', () => {
     it(`${key}: Wörter werden in einem Zug geschrieben, ohne Lücken`, () => {
       for (const word of ['eine', 'sieben', 'Wolke', 'Bub', 'schön', 'Straße', ...VERBINDUNGEN]) {
         const g = glyphFor(script, word)!
-        expect(glyphProblems(g), word).toEqual([])
+        expect(glyphProblems(g, 0.6, script.neigung), word).toEqual([])
         // Capitals stand alone, all small letters form one main stroke; the rest are
         // dots and crosses.
         const capitals = [...word].filter((c) => c !== c.toLowerCase()).length
@@ -45,11 +45,31 @@ describe('Verbundene Schrift (VA und SAS)', () => {
         if (capitals === 0) {
           const first = g.strokes[0]!
           const end = segmentPoints(first.at(-1)!).at(-1)!
-          expect(end.x, word).toBeCloseTo(g.w)
+          expect(end.x, word).toBeLessThanOrEqual(g.w)
+          expect(end.y, word).toBeCloseTo(script.glyphs[word.at(-1)!]!.aus!)
         }
       }
     })
   }
+
+  it('SAS ist nach rechts geneigt wie auf dem Schulplakat, VA steht gerade', () => {
+    expect(SCRIPTS.schulausgangsschrift!.neigung).toBeGreaterThan(0.2)
+    expect(SCRIPTS['vereinfachte-ausgangsschrift']!.neigung).toBeUndefined()
+    // The stem of the d leans right: its top is further right than its foot.
+    const d = strokePoints(SCRIPTS.schulausgangsschrift!.glyphs.d!.strokes[0]!)
+    const top = d.reduce((a, b) => (b.y < a.y ? b : a))
+    const foot = d.filter((p) => p.y > 95).reduce((a, b) => (b.x > a.x ? b : a))
+    expect(top.x).toBeGreaterThan(foot.x - 30 + 20)
+  })
+
+  it('SAS-Großbuchstaben in Schreibschrift-Form', () => {
+    const g = SCRIPTS.schulausgangsschrift!.glyphs
+    // A in one stroke plus the bar, M and N in one stroke, the poster's E is rounded.
+    expect(g.A!.strokes).toHaveLength(2)
+    expect(g.M!.strokes).toHaveLength(1)
+    expect(g.N!.strokes).toHaveLength(1)
+    expect(g.E!.strokes).toHaveLength(1)
+  })
 
   it('die beiden Schriften unterscheiden sich in der Verbindung', () => {
     const va = SCRIPTS['vereinfachte-ausgangsschrift']!.glyphs.n!
