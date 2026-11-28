@@ -30,6 +30,8 @@ const emit = defineEmits<{ done: []; slip: [] }>()
 
 const MARGIN = 18
 const strokes = computed(() => prepareStrokes(props.glyph))
+/** Words in connected handwriting are wider than a letter: the board grows with them. */
+const maxWidth = computed(() => Math.min(960, Math.max(420, (props.glyph.w + 2 * MARGIN) * 3.2)))
 const viewBox = computed(() => `${-MARGIN} -30 ${props.glyph.w + 2 * MARGIN} ${LINES.bottom + 45}`)
 
 const current = ref(0)
@@ -128,6 +130,7 @@ function slip() {
     class="board"
     :class="{ slipped, readonly }"
     :viewBox="viewBox"
+    :style="{ maxWidth: `${maxWidth}px` }"
     role="img"
     aria-label="Buchstabe zum Nachspuren"
     @pointerdown.prevent="down"

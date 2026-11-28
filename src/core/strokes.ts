@@ -3,6 +3,8 @@
  * multigraph (Sch = S + c + h) and the tracing check. Pure functions, no DOM.
  */
 import druckschrift from '@/data/schriften/druckschrift/strokes.json'
+import schulausgangsschrift from '@/data/schriften/schulausgangsschrift/strokes.json'
+import vereinfachteAusgangsschrift from '@/data/schriften/vereinfachte-ausgangsschrift/strokes.json'
 
 export interface Point {
   x: number
@@ -19,11 +21,19 @@ export type Stroke = Segment[]
 export interface Glyph {
   w: number
   strokes: Stroke[]
+  /**
+   * Connected scripts, small letters: the first segment starts at (0, ein) and the
+   * main stroke ends at (w, aus). Letters of a word join there.
+   */
+  ein?: number
+  aus?: number
 }
 
 export interface Script {
   id: string
   name: string
+  /** Connected handwriting (VA, SAS): letters of a word are joined. */
+  verbunden?: boolean
   glyphs: Record<string, Glyph>
 }
 
@@ -34,6 +44,15 @@ export const LETTER_GAP = 16
 
 export const SCRIPTS: Record<string, Script> = {
   druckschrift: druckschrift as unknown as Script,
+  'vereinfachte-ausgangsschrift': vereinfachteAusgangsschrift as unknown as Script,
+  schulausgangsschrift: schulausgangsschrift as unknown as Script,
+}
+
+/** The two connected scripts taught in grade 2 (the parents choose one). */
+export type Schreibschrift = 'va' | 'sas'
+export const SCHREIBSCHRIFTEN: Record<Schreibschrift, { id: string; name: string }> = {
+  va: { id: 'vereinfachte-ausgangsschrift', name: 'Vereinfachte Ausgangsschrift (VA)' },
+  sas: { id: 'schulausgangsschrift', name: 'Schulausgangsschrift (SAS)' },
 }
 
 // --- Geometry ------------------------------------------------------------------
@@ -133,12 +152,49 @@ function shift(segment: Segment, dx: number): Segment {
 }
 
 /**
+ * A word in connected handwriting: each small letter continues the main stroke of the
+ * one before (its entry is moved to the height where the previous letter ended), so
+ * the word is traced in one go. Dots and crosses (i, t, ä …) come after the word, as
+ * children write them. Capitals stand on their own, with a small gap.
+ */
+function joined(glyphs: readonly Glyph[]): Glyph {
+  const mains: Stroke[] = []
+  const extras: Stroke[] = []
+  let x = 0
+  let prev: Glyph | undefined
+  for (const g of glyphs) {
+    const connect = prev?.aus !== undefined && g.ein !== undefined
+    if (prev && !connect) x += LETTER_GAP
+    g.strokes.forEach((stroke, i) => {
+      const moved = stroke.map((seg) => shift(seg, x))
+      if (i > 0 || g.ein === undefined) {
+        // Capitals keep all their strokes; small letters only the extra ones here.
+        if (g.ein === undefined) mains.push(moved)
+        else extras.push(moved)
+        return
+      }
+      const first = moved[0]
+      if (connect && first && 'l' in first) {
+        const [x1, , x2, y2] = first.l
+        moved[0] = { l: [x1, prev!.aus!, x2, y2] }
+      }
+      if (connect && mains.length > 0) mains[mains.length - 1]!.push(...moved)
+      else mains.push(moved)
+    })
+    x += g.w
+    prev = g
+  }
+  return { w: x, strokes: [...mains, ...extras] }
+}
+
+/**
  * The glyph for a written unit, e.g. "M", "m", "Sch", "ei": multigraphs are composed
  * from their letters, side by side. Returns undefined if a letter has no template.
  */
 export function glyphFor(script: Script, text: string): Glyph | undefined {
   const glyphs = [...text].map((ch) => script.glyphs[ch])
   if (glyphs.some((g) => !g)) return undefined
+  if (script.verbunden) return joined(glyphs as Glyph[])
   const strokes: Stroke[] = []
   let x = 0
   for (const g of glyphs as Glyph[]) {

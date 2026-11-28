@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 import GlyphAnimation from '@/components/GlyphAnimation.vue'
 import TraceBoard from '@/components/TraceBoard.vue'
 import { DEFAULT_LAND } from '@/core/content'
-import { SCRIPTS, glyphFor, upperForm } from '@/core/strokes'
+import { SCHREIBSCHRIFTEN, SCRIPTS, glyphFor, upperForm } from '@/core/strokes'
 import { LETTERS, scriptFor } from '@/core/words'
 import { useAppStore } from '@/stores/app'
 
@@ -12,18 +12,25 @@ import { useAppStore } from '@/stores/app'
 // animation; parents can also try tracing it. Replaces the stroke editor from the
 // plan – the templates live in src/data/schriften/<script>/strokes.json.
 const store = useAppStore()
-const scriptId = computed(() =>
-  scriptFor(store.active?.land ?? DEFAULT_LAND, store.active?.grade ?? 1),
+// Druckschrift (grade 1) or the connected handwriting chosen for the profile (grade 2+).
+const scriptId = ref(
+  (store.active?.grade ?? 1) >= 2
+    ? SCHREIBSCHRIFTEN[store.settings?.schreibschrift ?? 'va'].id
+    : scriptFor(store.active?.land ?? DEFAULT_LAND, store.active?.grade ?? 1),
 )
 const script = computed(() => SCRIPTS[scriptId.value] ?? SCRIPTS.druckschrift!)
+const choices = Object.values(SCRIPTS).map((s) => ({ id: s.id, name: s.name }))
 
-const forms = computed(() =>
-  LETTERS.flatMap((l) => [upperForm(l.id), l.id]).filter((t) => glyphFor(script.value, t)),
-)
+/** In connected handwriting: some words, to see how the letters join. */
+const WOERTER = ['Oma', 'eine', 'Wolke', 'Hund', 'sieben', 'Buch', 'schön', 'Straße']
+const forms = computed(() => [
+  ...LETTERS.flatMap((l) => [upperForm(l.id), l.id]).filter((t) => glyphFor(script.value, t)),
+  ...(script.value.verbunden ? WOERTER.filter((w) => glyphFor(script.value, w)) : []),
+])
 /** Single letters only (multigraphs are composed from them). */
 const singles = computed(() => forms.value.filter((t) => t.length === 1))
 const selected = ref('A')
-const glyph = computed(() => glyphFor(script.value, selected.value)!)
+const glyph = computed(() => glyphFor(script.value, selected.value) ?? glyphFor(script.value, 'a')!)
 const run = ref(0)
 const mode = ref<'animation' | 'try'>('animation')
 const traced = ref(false)
@@ -40,6 +47,12 @@ function choose(text: string) {
     <BackButton :to="{ name: 'parent' }" />
     <h1>Schrift-Vorlagen</h1>
   </header>
+  <label class="choose">
+    Schrift
+    <select v-model="scriptId" @change="choose(selected)">
+      <option v-for="c in choices" :key="c.id" :value="c.id">{{ c.name }}</option>
+    </select>
+  </label>
   <p class="muted">
     {{ script.name }} – so werden die Buchstaben beim Nachspuren geschrieben: Die Zahlen zeigen die
     Reihenfolge der Striche, die Animation die Richtung. Wenn etwas anders ist als in der Schule,
@@ -108,6 +121,14 @@ function choose(text: string) {
 
 .card {
   margin-top: 16px;
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 12px 0;
+  font-weight: 700;
 }
 
 .stage {

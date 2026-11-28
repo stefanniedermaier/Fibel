@@ -574,5 +574,11 @@
     "topic": "sache",
     "title": "Technik: Hebel, Zahnrad, Brücke",
     "icon": "⚙️"
+  },
+  {
+    "id": "schreiben.schrift3",
+    "topic": "schreiben",
+    "title": "Schreibschrift",
+    "icon": "🖋️"
   }
 ]

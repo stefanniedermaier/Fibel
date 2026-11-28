@@ -68,6 +68,7 @@ watch(
       const keep = {
         voiceURI: settings.value.voiceURI,
         voiceURIEn: settings.value.voiceURIEn,
+        schreibschrift: settings.value.schreibschrift,
         speechRate: settings.value.speechRate,
       }
       settings.value = { ...resolveDefaults(land, grade), ...keep }
@@ -257,6 +258,7 @@ async function save() {
               sound: s.sound,
               voiceURI: s.voiceURI,
               voiceURIEn: s.voiceURIEn,
+              schreibschrift: s.schreibschrift,
               speechRate: s.speechRate,
             }
           : s,
@@ -586,6 +588,26 @@ async function remove() {
       <p class="muted">
         Ältere Einheiten werden automatisch vom Gerät gelöscht. Der Lernstand (was schon sitzt)
         bleibt erhalten.
+      </p>
+    </section>
+
+    <section v-if="form.grade >= 2" class="card">
+      <h2>Verbundene Schrift</h2>
+      <label>
+        Schrift der Schule
+        <select v-model="settings.schreibschrift">
+          <option :value="null">noch nicht gewählt</option>
+          <option value="va">Vereinfachte Ausgangsschrift (VA)</option>
+          <option value="sas">Schulausgangsschrift (SAS)</option>
+        </select>
+      </label>
+      <p v-if="!settings.schreibschrift" class="voice-warn">
+        Bitte die Schrift wählen, die die Schule ab Klasse 2 lehrt (steht im Schreibheft oder auf
+        der Liste der Lehrkraft). Bis dahin übt die App mit der Vereinfachten Ausgangsschrift.
+      </p>
+      <p class="muted">
+        Beim Nachspuren der Schreibschrift nutzt die App diese Vorlage. Unter „Schrift-Vorlagen“
+        lassen sich beide Schriften ansehen und ausprobieren.
       </p>
     </section>
 

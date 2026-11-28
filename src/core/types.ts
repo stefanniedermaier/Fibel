@@ -95,6 +95,11 @@ export interface ProfileSettings {
   voiceURI: string | null
   /** From grade 3: the voice for English words (plaene/klasse-3.md, section 10). */
   voiceURIEn: string | null
+  /**
+   * From grade 2 (S2-12): the connected handwriting of the school – Vereinfachte
+   * Ausgangsschrift or Schulausgangsschrift. Null until the parents choose (then VA).
+   */
+  schreibschrift: 'va' | 'sas' | null
   speechRate: number
   /** Levels set by hand, per catalog entry id. */
   levels: Record<string, number>

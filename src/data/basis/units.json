@@ -1594,5 +1594,19 @@
     "topic": "sache",
     "title": "Technik: Hebel, Zahnrad, Brücke",
     "term": 2
+  },
+  {
+    "id": "k2.schreiben.schreibschrift",
+    "grade": 2,
+    "topic": "schreiben",
+    "title": "Verbundene Schrift nachspuren",
+    "term": 2
+  },
+  {
+    "id": "k3.schreiben.schreibschrift",
+    "grade": 3,
+    "topic": "schreiben",
+    "title": "Schreibschrift: Wörter und Verbindungen",
+    "term": 1
   }
 ]

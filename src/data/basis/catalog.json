@@ -5683,5 +5683,79 @@
     },
     "title": "Technik: Hebel, Zahnrad, Brücke: Was kommt zuerst?",
     "weight": 0.5
+  },
+  {
+    "id": "k2.schreiben.schreibschrift.klein",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.abc",
+    "unit": "k2.schreiben.schreibschrift",
+    "exercise": "schreiben.nachspuren",
+    "params": {
+      "verbunden": "klein"
+    },
+    "title": "Kleine Buchstaben in Schreibschrift"
+  },
+  {
+    "id": "k2.schreiben.schreibschrift.gross",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.abc",
+    "unit": "k2.schreiben.schreibschrift",
+    "exercise": "schreiben.nachspuren",
+    "params": {
+      "verbunden": "gross"
+    },
+    "title": "Große Buchstaben",
+    "weight": 0.5
+  },
+  {
+    "id": "k2.schreiben.schreibschrift.verbindungen",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.abc",
+    "unit": "k2.schreiben.schreibschrift",
+    "exercise": "schreiben.nachspuren",
+    "params": {
+      "verbunden": "verbindungen"
+    },
+    "title": "Verbindungen: ei, ie, sch …"
+  },
+  {
+    "id": "k2.schreiben.schreibschrift.woerter",
+    "grade": 2,
+    "topic": "schreiben",
+    "category": "schreiben.abc",
+    "unit": "k2.schreiben.schreibschrift",
+    "exercise": "schreiben.nachspuren",
+    "params": {
+      "verbunden": "woerter"
+    },
+    "title": "Wörter in einem Zug"
+  },
+  {
+    "id": "k3.schreiben.schreibschrift.woerter",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.schrift3",
+    "unit": "k3.schreiben.schreibschrift",
+    "exercise": "schreiben.nachspuren",
+    "params": {
+      "verbunden": "woerter"
+    },
+    "title": "Wörter in einem Zug"
+  },
+  {
+    "id": "k3.schreiben.schreibschrift.verbindungen",
+    "grade": 3,
+    "topic": "schreiben",
+    "category": "schreiben.schrift3",
+    "unit": "k3.schreiben.schreibschrift",
+    "exercise": "schreiben.nachspuren",
+    "params": {
+      "verbunden": "verbindungen"
+    },
+    "title": "Verbindungen",
+    "weight": 0.5
   }
 ]
