@@ -178,5 +178,61 @@
     ],
     "sache": true,
     "frage": "Was war zuerst? Ordne von ganz früher bis heute."
+  },
+  {
+    "id": "kette-teich",
+    "title": "Eine Nahrungskette am Teich",
+    "images": ["1F99F", "1F438", "1F40D"],
+    "steps": ["die Mücke", "der Frosch frisst die Mücke", "die Ringelnatter frisst den Frosch"],
+    "sache": true,
+    "frage": "Wer frisst wen? Fang beim kleinsten Tier an."
+  },
+  {
+    "id": "gemeinde-gross",
+    "title": "Von klein nach groß",
+    "images": [
+      "1F3E1",
+      "1F3D8",
+      "1F3F4-E0064-E0065-E0062-E0079-E007F",
+      "1F1E9-1F1EA",
+      "1F1EA-1F1FA"
+    ],
+    "steps": ["meine Gemeinde", "mein Landkreis", "Bayern", "Deutschland", "Europa"],
+    "sache": true,
+    "frage": "Was ist am kleinsten? Ordne von klein nach groß."
+  },
+  {
+    "id": "abstimmen",
+    "title": "Wie eine Abstimmung abläuft",
+    "images": ["1F4A1", "1F5E3", "270B", "1F522", "2705"],
+    "steps": [
+      "Vorschläge sammeln",
+      "darüber sprechen",
+      "abstimmen",
+      "Stimmen zählen",
+      "das Ergebnis gilt für alle"
+    ],
+    "sache": true
+  },
+  {
+    "id": "erste-hilfe",
+    "title": "Erste Hilfe bei einem Unfall",
+    "images": ["1F6A8", "260E", "1FA79", "1F691"],
+    "steps": [
+      "die Unfallstelle absichern",
+      "Notruf 112 wählen",
+      "Erste Hilfe leisten und trösten",
+      "auf den Rettungsdienst warten"
+    ],
+    "sache": true,
+    "frage": "Was machst du zuerst?"
+  },
+  {
+    "id": "werkzeug-maschine",
+    "title": "Vom Werkzeug zur Maschine",
+    "images": ["1FAA8", "1F528", "1F682", "1F916"],
+    "steps": ["der Stein als Werkzeug", "der Hammer", "die Dampfmaschine", "der Roboter"],
+    "sache": true,
+    "frage": "Was gab es zuerst? Ordne von früher bis heute."
   }
 ]

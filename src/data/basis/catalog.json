@@ -5438,5 +5438,250 @@
       "themen": ["essen", "kleidung", "feste", "farben", "tiere"]
     },
     "title": "Look – cover – write"
+  },
+  {
+    "id": "k4.sache.gewaesser.erkennen",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.gewaesser",
+    "unit": "k4.sache.gewaesser",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "gewaesser"
+    },
+    "title": "Lebensraum Gewässer: Was ist das?"
+  },
+  {
+    "id": "k4.sache.gewaesser.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.gewaesser",
+    "unit": "k4.sache.gewaesser",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "gewaesser"
+    },
+    "title": "Lebensraum Gewässer: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.gewaesser.reihenfolge",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.gewaesser",
+    "unit": "k4.sache.gewaesser",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["kette-teich"]
+    },
+    "title": "Lebensraum Gewässer: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.sache.strom.sortieren",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.strom",
+    "unit": "k4.sache.strom",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "strom"
+    },
+    "title": "Strom: Sortieren"
+  },
+  {
+    "id": "k4.sache.strom.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.strom",
+    "unit": "k4.sache.strom",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "strom"
+    },
+    "title": "Strom: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.orientierung.erkennen",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.orientierung",
+    "unit": "k4.sache.orientierung",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "orientierung"
+    },
+    "title": "Orientierung und Karten: Was ist das?"
+  },
+  {
+    "id": "k4.sache.orientierung.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.orientierung",
+    "unit": "k4.sache.orientierung",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "orientierung"
+    },
+    "title": "Orientierung und Karten: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.bayern.sortieren",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.bayern",
+    "unit": "k4.sache.bayern",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "bayern"
+    },
+    "title": "Bayern, Deutschland, Europa: Sortieren"
+  },
+  {
+    "id": "k4.sache.bayern.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.bayern",
+    "unit": "k4.sache.bayern",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "bayern"
+    },
+    "title": "Bayern, Deutschland, Europa: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.bayern.reihenfolge",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.bayern",
+    "unit": "k4.sache.bayern",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["gemeinde-gross"]
+    },
+    "title": "Bayern, Deutschland, Europa: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.sache.radfahren.erkennen",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.radfahren",
+    "unit": "k4.sache.radfahren",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "radfahren"
+    },
+    "title": "Radfahren: Was ist das?"
+  },
+  {
+    "id": "k4.sache.radfahren.sortieren",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.radfahren",
+    "unit": "k4.sache.radfahren",
+    "exercise": "sache.sortieren",
+    "params": {
+      "thema": "radfahren"
+    },
+    "title": "Radfahren: Sortieren"
+  },
+  {
+    "id": "k4.sache.radfahren.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.radfahren",
+    "unit": "k4.sache.radfahren",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "radfahren"
+    },
+    "title": "Radfahren: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.gemeinde.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.gemeinde",
+    "unit": "k4.sache.gemeinde",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "gemeinde"
+    },
+    "title": "Gemeinde und Demokratie: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.gemeinde.reihenfolge",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.gemeinde",
+    "unit": "k4.sache.gemeinde",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["abstimmen"]
+    },
+    "title": "Gemeinde und Demokratie: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.sache.erste-hilfe.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.erste-hilfe",
+    "unit": "k4.sache.erste-hilfe",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "erste-hilfe"
+    },
+    "title": "Erste Hilfe und Notruf: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.erste-hilfe.reihenfolge",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.erste-hilfe",
+    "unit": "k4.sache.erste-hilfe",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["erste-hilfe", "notruf"]
+    },
+    "title": "Erste Hilfe und Notruf: Was kommt zuerst?",
+    "weight": 0.5
+  },
+  {
+    "id": "k4.sache.technik.erkennen",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.technik",
+    "unit": "k4.sache.technik",
+    "exercise": "sache.hoeren-bild",
+    "params": {
+      "thema": "technik"
+    },
+    "title": "Technik: Hebel, Zahnrad, Brücke: Was ist das?"
+  },
+  {
+    "id": "k4.sache.technik.stimmt-das",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.technik",
+    "unit": "k4.sache.technik",
+    "exercise": "sache.stimmt-das",
+    "params": {
+      "thema": "technik"
+    },
+    "title": "Technik: Hebel, Zahnrad, Brücke: Stimmt das?"
+  },
+  {
+    "id": "k4.sache.technik.reihenfolge",
+    "grade": 4,
+    "topic": "sache",
+    "category": "sache.technik",
+    "unit": "k4.sache.technik",
+    "exercise": "lesen.reihenfolge",
+    "params": {
+      "ids": ["werkzeug-maschine"]
+    },
+    "title": "Technik: Hebel, Zahnrad, Brücke: Was kommt zuerst?",
+    "weight": 0.5
   }
 ]

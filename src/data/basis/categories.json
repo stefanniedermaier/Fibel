@@ -526,5 +526,53 @@
     "topic": "englisch",
     "title": "Einkaufen",
     "icon": "🛒"
+  },
+  {
+    "id": "sache.gewaesser",
+    "topic": "sache",
+    "title": "Lebensraum Gewässer",
+    "icon": "🦆"
+  },
+  {
+    "id": "sache.strom",
+    "topic": "sache",
+    "title": "Strom",
+    "icon": "⚡"
+  },
+  {
+    "id": "sache.orientierung",
+    "topic": "sache",
+    "title": "Orientierung und Karten",
+    "icon": "🧭"
+  },
+  {
+    "id": "sache.bayern",
+    "topic": "sache",
+    "title": "Bayern, Deutschland, Europa",
+    "icon": "🗺️"
+  },
+  {
+    "id": "sache.radfahren",
+    "topic": "sache",
+    "title": "Radfahren",
+    "icon": "🚲"
+  },
+  {
+    "id": "sache.gemeinde",
+    "topic": "sache",
+    "title": "Gemeinde und Demokratie",
+    "icon": "🏛️"
+  },
+  {
+    "id": "sache.erste-hilfe",
+    "topic": "sache",
+    "title": "Erste Hilfe und Notruf",
+    "icon": "🩹"
+  },
+  {
+    "id": "sache.technik",
+    "topic": "sache",
+    "title": "Technik: Hebel, Zahnrad, Brücke",
+    "icon": "⚙️"
   }
 ]

@@ -1538,5 +1538,61 @@
     "topic": "englisch",
     "title": "Wörter abschreiben",
     "term": 2
+  },
+  {
+    "id": "k4.sache.gewaesser",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Lebensraum Gewässer",
+    "term": 1
+  },
+  {
+    "id": "k4.sache.strom",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Strom",
+    "term": 1
+  },
+  {
+    "id": "k4.sache.orientierung",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Orientierung und Karten",
+    "term": 1
+  },
+  {
+    "id": "k4.sache.bayern",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Bayern, Deutschland, Europa",
+    "term": 2
+  },
+  {
+    "id": "k4.sache.radfahren",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Radfahren",
+    "term": 2
+  },
+  {
+    "id": "k4.sache.gemeinde",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Gemeinde und Demokratie",
+    "term": 2
+  },
+  {
+    "id": "k4.sache.erste-hilfe",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Erste Hilfe und Notruf",
+    "term": 1
+  },
+  {
+    "id": "k4.sache.technik",
+    "grade": 4,
+    "topic": "sache",
+    "title": "Technik: Hebel, Zahnrad, Brücke",
+    "term": 2
   }
 ]

@@ -1644,6 +1644,258 @@
       "wen": "die Schutzbrille",
       "image": "1F97D",
       "merksatz": "Eine Schutzbrille schützt die Augen beim Werken."
+    },
+    {
+      "id": "ente",
+      "text": "die Ente",
+      "wen": "die Ente",
+      "image": "1F986",
+      "merksatz": "Enten gründeln: Sie tauchen mit dem Kopf unter und suchen Pflanzen und kleine Tiere."
+    },
+    {
+      "id": "fisch-hsu",
+      "text": "der Fisch",
+      "wen": "den Fisch",
+      "image": "1F41F",
+      "merksatz": "Fische atmen mit Kiemen den Sauerstoff im Wasser."
+    },
+    {
+      "id": "seerose",
+      "text": "die Seerose",
+      "wen": "die Seerose",
+      "image": "1FAB7",
+      "merksatz": "Die Seerose wurzelt im Boden des Teiches, ihre Blätter schwimmen auf dem Wasser."
+    },
+    {
+      "id": "biber",
+      "text": "der Biber",
+      "wen": "den Biber",
+      "image": "1F9AB",
+      "merksatz": "Der Biber fällt mit seinen Zähnen Bäume und baut Dämme."
+    },
+    {
+      "id": "schwan",
+      "text": "der Schwan",
+      "wen": "den Schwan",
+      "image": "1F9A2",
+      "merksatz": "Schwäne fressen Wasserpflanzen."
+    },
+    {
+      "id": "muecke",
+      "text": "die Mücke",
+      "wen": "die Mücke",
+      "image": "1F99F",
+      "merksatz": "Mückenlarven leben im Wasser."
+    },
+    {
+      "id": "ringelnatter",
+      "text": "die Ringelnatter",
+      "wen": "die Ringelnatter",
+      "image": "1F40D",
+      "merksatz": "Die Ringelnatter ist ungiftig. Sie schwimmt gut und frisst Frösche."
+    },
+    {
+      "id": "kompass",
+      "text": "der Kompass",
+      "wen": "den Kompass",
+      "image": "1F9ED",
+      "merksatz": "Die Kompassnadel zeigt immer nach Norden."
+    },
+    {
+      "id": "landkarte",
+      "text": "die Landkarte",
+      "wen": "die Landkarte",
+      "image": "1F5FA",
+      "merksatz": "Auf einer Karte ist Norden meistens oben."
+    },
+    {
+      "id": "globus",
+      "text": "der Globus",
+      "wen": "den Globus",
+      "image": "1F30D",
+      "merksatz": "Ein Globus ist ein kleines Modell der Erde."
+    },
+    {
+      "id": "wegweiser",
+      "text": "der Wegweiser",
+      "wen": "den Wegweiser",
+      "image": "1F4CD",
+      "merksatz": "Ein Wegweiser zeigt die Richtung und oft auch die Entfernung."
+    },
+    {
+      "id": "fluss-hsu",
+      "text": "der Fluss",
+      "wen": "den Fluss",
+      "image": "1F30A",
+      "merksatz": "Große Flüsse in Bayern sind Donau, Main, Inn und Isar."
+    },
+    {
+      "id": "berg",
+      "text": "der Berg",
+      "wen": "den Berg",
+      "image": "26F0",
+      "merksatz": "Der höchste Berg Deutschlands ist die Zugspitze in Bayern."
+    },
+    {
+      "id": "donau",
+      "text": "die Donau",
+      "wen": "die Donau",
+      "image": "1F30A",
+      "merksatz": "Die Donau fließt von Westen nach Osten durch Bayern bis ins Schwarze Meer."
+    },
+    {
+      "id": "isar",
+      "text": "die Isar",
+      "wen": "die Isar",
+      "image": "1F30A",
+      "merksatz": "Die Isar fließt durch München."
+    },
+    {
+      "id": "main",
+      "text": "der Main",
+      "wen": "den Main",
+      "image": "1F30A",
+      "merksatz": "Der Main fließt durch Unterfranken, zum Beispiel durch Würzburg."
+    },
+    {
+      "id": "inn",
+      "text": "der Inn",
+      "wen": "den Inn",
+      "image": "1F30A",
+      "merksatz": "Der Inn kommt aus den Alpen und mündet bei Passau in die Donau."
+    },
+    {
+      "id": "zugspitze",
+      "text": "die Zugspitze",
+      "wen": "die Zugspitze",
+      "image": "1F3D4",
+      "merksatz": "Die Zugspitze ist fast 3000 Meter hoch."
+    },
+    {
+      "id": "alpen",
+      "text": "die Alpen",
+      "wen": "die Alpen",
+      "image": "1F3D4",
+      "merksatz": "Die Alpen liegen im Süden von Bayern."
+    },
+    {
+      "id": "bayerischer-wald",
+      "text": "der Bayerische Wald",
+      "wen": "den Bayerischen Wald",
+      "image": "26F0",
+      "merksatz": "Der Bayerische Wald ist ein Mittelgebirge im Osten von Bayern."
+    },
+    {
+      "id": "fichtelgebirge",
+      "text": "das Fichtelgebirge",
+      "wen": "das Fichtelgebirge",
+      "image": "26F0",
+      "merksatz": "Das Fichtelgebirge liegt in Oberfranken."
+    },
+    {
+      "id": "schild-vorfahrt-achten",
+      "text": "Vorfahrt achten",
+      "wen": "das Schild Vorfahrt achten",
+      "image": "fibel-schild-vorfahrt-achten",
+      "merksatz": "Bei diesem Schild musst du die anderen zuerst fahren lassen."
+    },
+    {
+      "id": "schild-stop",
+      "text": "das Stoppschild",
+      "wen": "das Stoppschild",
+      "image": "fibel-schild-stop",
+      "merksatz": "Beim Stoppschild hältst du ganz an und lässt die anderen fahren."
+    },
+    {
+      "id": "schild-vorfahrtstrasse",
+      "text": "die Vorfahrtstraße",
+      "wen": "das Schild Vorfahrtstraße",
+      "image": "fibel-schild-vorfahrtstrasse",
+      "merksatz": "Auf der Vorfahrtstraße hast du Vorfahrt an den nächsten Kreuzungen."
+    },
+    {
+      "id": "schild-radweg",
+      "text": "der Radweg",
+      "wen": "das Schild Radweg",
+      "image": "fibel-schild-radweg",
+      "merksatz": "Dieser Radweg muss benutzt werden."
+    },
+    {
+      "id": "schild-fahrrad-verboten",
+      "text": "Verbot für Fahrräder",
+      "wen": "das Schild Verbot für Fahrräder",
+      "image": "fibel-schild-fahrrad-verboten",
+      "merksatz": "Hier dürfen keine Fahrräder fahren."
+    },
+    {
+      "id": "klingel-rad",
+      "text": "die Klingel",
+      "wen": "die Klingel",
+      "image": "1F514",
+      "merksatz": "Mit der Klingel warnst du andere."
+    },
+    {
+      "id": "fahrradlicht",
+      "text": "das Licht",
+      "wen": "das Licht",
+      "image": "1F526",
+      "merksatz": "Vorne leuchtet ein weißes, hinten ein rotes Licht."
+    },
+    {
+      "id": "helm",
+      "text": "der Helm",
+      "wen": "den Helm",
+      "image": "26D1",
+      "merksatz": "Ein Helm schützt deinen Kopf bei einem Sturz."
+    },
+    {
+      "id": "wahlurne",
+      "text": "die Wahlurne",
+      "wen": "die Wahlurne",
+      "image": "1F5F3",
+      "merksatz": "Bei einer Wahl ist jede Stimme gleich viel wert."
+    },
+    {
+      "id": "pflaster-hsu",
+      "text": "das Pflaster",
+      "wen": "das Pflaster",
+      "image": "1FA79",
+      "merksatz": "Eine kleine Wunde deckt man mit einem Pflaster ab."
+    },
+    {
+      "id": "krankenwagen",
+      "text": "der Krankenwagen",
+      "wen": "den Krankenwagen",
+      "image": "1F691",
+      "merksatz": "Den Rettungsdienst rufst du unter der Nummer 112."
+    },
+    {
+      "id": "zahnrad-hsu",
+      "text": "das Zahnrad",
+      "wen": "das Zahnrad",
+      "image": "2699",
+      "merksatz": "Zahnräder übertragen eine Drehung."
+    },
+    {
+      "id": "roboter",
+      "text": "der Roboter",
+      "wen": "den Roboter",
+      "image": "1F916",
+      "merksatz": "Roboter sind Maschinen, die Arbeit nach einem Programm erledigen."
+    },
+    {
+      "id": "gluehbirne-strom",
+      "text": "die Glühbirne",
+      "wen": "die Glühbirne",
+      "image": "1F4A1",
+      "merksatz": "Eine Lampe leuchtet nur, wenn der Stromkreis geschlossen ist."
+    },
+    {
+      "id": "stecker",
+      "text": "der Stecker",
+      "wen": "den Stecker",
+      "image": "1F50C",
+      "merksatz": "Steckdosen sind gefährlich: Niemals etwas hineinstecken!"
     }
   ],
   "themen": [
@@ -4186,6 +4438,487 @@
       "lehrplan": "HSU 3/4 4.1",
       "quelle": "LehrplanPLUS HSU 3/4, 4.1 Zeit und Wandel: Zeiteinheiten, Zeitleiste, Vergangenheit, Gegenwart und Zukunft",
       "forscherauftrag": "Macht eine Zeitleiste von deinem Leben: Geburt, erster Zahn, Kindergarten, Schule. Fragt Oma und Opa, wie es war, als sie in die dritte Klasse gingen."
+    },
+    {
+      "klasse": 4,
+      "erkennen": ["ente", "frosch", "fisch-hsu", "seerose", "biber", "schwan"],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Frösche legen ihren Laich ins Wasser.",
+          "image": "1F438",
+          "richtig": true,
+          "regel": "Aus dem Laich schlüpfen Kaulquappen."
+        },
+        {
+          "text": "Müll im Bach schadet den Tieren.",
+          "image": "1F30A",
+          "richtig": true,
+          "regel": "Tiere verfangen sich darin oder fressen Plastik."
+        },
+        {
+          "text": "Der Biber baut Dämme aus Ästen.",
+          "image": "1F9AB",
+          "richtig": true,
+          "regel": "Mit dem Damm staut er das Wasser zu einem kleinen See."
+        },
+        {
+          "text": "Fische atmen mit einer Lunge.",
+          "image": "1F41F",
+          "richtig": false,
+          "regel": "Fische atmen mit Kiemen."
+        },
+        {
+          "text": "Am Ufer darf man Pflanzen ausreißen und Tiere mitnehmen.",
+          "image": "1FAB7",
+          "richtig": false,
+          "regel": "Pflanzen und Tiere am Wasser sind geschützt. Nur anschauen!"
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["kette-teich"],
+      "id": "gewaesser",
+      "title": "Lebensraum Gewässer",
+      "icon": "🦆",
+      "term": 1,
+      "lehrplan": "HSU 3/4 3.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.1: Lebensraum Gewässer, Tiere und Pflanzen, Einfluss des Menschen",
+      "forscherauftrag": "Beobachtet an einem Bach oder Teich: Welche Tiere seht ihr im Wasser, welche am Ufer? Schöpft vorsichtig etwas Wasser und schaut mit der Lupe hinein."
+    },
+    {
+      "klasse": 4,
+      "erkennen": [],
+      "sortieren": [
+        {
+          "id": "leiter",
+          "frage": "Leitet das den Strom?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "ja",
+              "title": "leitet",
+              "image": "26A1"
+            },
+            {
+              "id": "nein",
+              "title": "leitet nicht",
+              "image": "274C"
+            }
+          ],
+          "zuordnung": {
+            "nagel": "ja",
+            "muenze": "ja",
+            "loeffel": "ja",
+            "bueroklammer": "ja",
+            "holz": "nein",
+            "papier": "nein",
+            "wolle": "nein",
+            "glasflasche": "nein"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Eine Lampe leuchtet nur, wenn der Stromkreis geschlossen ist.",
+          "image": "1F4A1",
+          "richtig": true,
+          "regel": "Der Strom muss im Kreis fließen können."
+        },
+        {
+          "text": "Mit Strom aus der Steckdose darf man experimentieren.",
+          "image": "1F50C",
+          "richtig": false,
+          "regel": "Strom aus der Steckdose ist lebensgefährlich. Experimente nur mit einer Batterie."
+        },
+        {
+          "text": "Metalle leiten den Strom.",
+          "image": "1F529",
+          "richtig": true,
+          "regel": "Darum sind Kabel innen aus Kupfer."
+        },
+        {
+          "text": "Holz leitet den Strom gut.",
+          "image": "1FAB5",
+          "richtig": false,
+          "regel": "Trockenes Holz leitet keinen Strom."
+        },
+        {
+          "text": "Licht ausmachen, wenn man den Raum verlässt, spart Energie.",
+          "image": "1F4A1",
+          "richtig": true,
+          "regel": "Energie sparen schont die Umwelt und kostet weniger."
+        },
+        {
+          "text": "Bei Gewitter ist man unter einem einzelnen Baum sicher.",
+          "image": "26C8",
+          "richtig": false,
+          "regel": "Bei Gewitter nie unter einen einzelnen Baum stellen. Am sichersten ist ein Haus oder ein Auto."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": [],
+      "id": "strom",
+      "title": "Strom",
+      "icon": "⚡",
+      "term": 1,
+      "lehrplan": "HSU 3/4 3.2",
+      "quelle": "LehrplanPLUS HSU 3/4, 3.2: elektrischer Strom, Leiter und Nichtleiter, Stromkreis, Sicherheit, Energie sparen",
+      "forscherauftrag": "Baut mit einer Flachbatterie, einem Lämpchen und zwei Kabeln einen Stromkreis. Testet: Welche Dinge leiten den Strom, wenn ihr sie dazwischen haltet?"
+    },
+    {
+      "klasse": 4,
+      "erkennen": ["kompass", "landkarte", "globus", "wegweiser"],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Die Sonne geht im Osten auf.",
+          "image": "2600",
+          "richtig": true,
+          "regel": "Im Osten geht sie auf, im Süden steht sie mittags, im Westen geht sie unter."
+        },
+        {
+          "text": "Die Sonne geht im Norden unter.",
+          "image": "2600",
+          "richtig": false,
+          "regel": "Die Sonne geht im Westen unter."
+        },
+        {
+          "text": "Auf einer Karte ist Norden meistens oben.",
+          "image": "1F5FA",
+          "richtig": true,
+          "regel": "Darum zeigt der Pfeil auf Karten nach oben."
+        },
+        {
+          "text": "Die Legende erklärt die Zeichen auf der Karte.",
+          "image": "1F5FA",
+          "richtig": true,
+          "regel": "In der Legende steht zum Beispiel, welches Zeichen für eine Kirche steht."
+        },
+        {
+          "text": "Die Kompassnadel zeigt nach Süden.",
+          "image": "1F9ED",
+          "richtig": false,
+          "regel": "Die Kompassnadel zeigt nach Norden."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": [],
+      "id": "orientierung",
+      "title": "Orientierung und Karten",
+      "icon": "🧭",
+      "term": 1,
+      "lehrplan": "HSU 3/4 5.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 5.1: Himmelsrichtungen, Karten, Kartenzeichen und Legende, Maßstab",
+      "forscherauftrag": "Stellt euch am Mittag nach draußen: Wo steht die Sonne? Dort ist Süden. Zeigt dann nach Norden, Osten und Westen."
+    },
+    {
+      "klasse": 4,
+      "erkennen": [],
+      "sortieren": [
+        {
+          "id": "fluss-gebirge",
+          "frage": "Ist das ein Fluss oder ein Gebirge?",
+          "optionen": true,
+          "gruppen": [
+            {
+              "id": "fluss",
+              "title": "Fluss",
+              "image": "1F30A"
+            },
+            {
+              "id": "gebirge",
+              "title": "Berg oder Gebirge",
+              "image": "26F0"
+            }
+          ],
+          "zuordnung": {
+            "donau": "fluss",
+            "isar": "fluss",
+            "main": "fluss",
+            "inn": "fluss",
+            "zugspitze": "gebirge",
+            "alpen": "gebirge",
+            "bayerischer-wald": "gebirge",
+            "fichtelgebirge": "gebirge"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Die Hauptstadt von Bayern ist München.",
+          "image": "1F3F4-E0064-E0065-E0062-E0079-E007F",
+          "richtig": true,
+          "regel": "München ist die Landeshauptstadt."
+        },
+        {
+          "text": "Bayern hat sieben Regierungsbezirke.",
+          "image": "1F3F4-E0064-E0065-E0062-E0079-E007F",
+          "richtig": true,
+          "regel": "Oberbayern, Niederbayern, Oberpfalz, Oberfranken, Mittelfranken, Unterfranken und Schwaben."
+        },
+        {
+          "text": "Der höchste Berg Deutschlands ist die Zugspitze.",
+          "image": "1F3D4",
+          "richtig": true,
+          "regel": "Die Zugspitze liegt in Bayern und ist fast 3000 Meter hoch."
+        },
+        {
+          "text": "Bayern liegt am Meer.",
+          "image": "1F3F4-E0064-E0065-E0062-E0079-E007F",
+          "richtig": false,
+          "regel": "Bayern liegt im Süden Deutschlands, weit weg vom Meer."
+        },
+        {
+          "text": "Die Hauptstadt von Deutschland ist Nürnberg.",
+          "image": "1F1E9-1F1EA",
+          "richtig": false,
+          "regel": "Die Hauptstadt von Deutschland ist Berlin."
+        },
+        {
+          "text": "Deutschland gehört zur Europäischen Union.",
+          "image": "1F1EA-1F1FA",
+          "richtig": true,
+          "regel": "In der EU arbeiten viele Länder Europas zusammen."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["gemeinde-gross"],
+      "id": "bayern",
+      "title": "Bayern, Deutschland, Europa",
+      "icon": "🗺️",
+      "term": 2,
+      "lehrplan": "HSU 3/4 5.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 5.1: Gemeinde, Landkreis, Regierungsbezirk, Bayern in Deutschland und Europa, Flüsse und Gebirge",
+      "forscherauftrag": "Sucht auf einer Bayernkarte euren Wohnort. In welchem Regierungsbezirk liegt er? Welcher Fluss ist in der Nähe?"
+    },
+    {
+      "klasse": 4,
+      "erkennen": [
+        "schild-vorfahrt-achten",
+        "schild-stop",
+        "schild-vorfahrtstrasse",
+        "schild-radweg",
+        "schild-fahrrad-verboten"
+      ],
+      "sortieren": [
+        {
+          "id": "sicher",
+          "frage": "Was gehört zu einem verkehrssicheren Fahrrad?",
+          "gruppen": [
+            {
+              "id": "ja",
+              "title": "gehört dazu",
+              "image": "2705"
+            },
+            {
+              "id": "nein",
+              "title": "gehört nicht dazu",
+              "image": "274C"
+            }
+          ],
+          "zuordnung": {
+            "klingel-rad": "ja",
+            "fahrradlicht": "ja",
+            "reflektor": "ja",
+            "luftballon": "nein",
+            "teddy": "nein",
+            "handy": "nein"
+          }
+        }
+      ],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Ein Fahrrad braucht zwei Bremsen, die unabhängig voneinander wirken.",
+          "image": "1F6B2",
+          "richtig": true,
+          "regel": "So steht es in der Straßenverkehrs-Ordnung."
+        },
+        {
+          "text": "Mit einem Helm bist du beim Sturz besser geschützt.",
+          "image": "26D1",
+          "richtig": true,
+          "regel": "Der Helm ist nicht Pflicht, aber er schützt deinen Kopf."
+        },
+        {
+          "text": "Beim Stoppschild darf man langsam weiterrollen.",
+          "image": "fibel-schild-stop",
+          "richtig": false,
+          "regel": "Beim Stoppschild musst du ganz anhalten."
+        },
+        {
+          "text": "Rechts vor links gilt, wenn keine Schilder da sind.",
+          "image": "1F6B2",
+          "richtig": true,
+          "regel": "Wer von rechts kommt, darf zuerst fahren."
+        },
+        {
+          "text": "Beim Abbiegen gibst du mit dem Arm ein Handzeichen.",
+          "image": "270B",
+          "richtig": true,
+          "regel": "So wissen die anderen, wohin du fährst."
+        },
+        {
+          "text": "Während der Fahrt darf man mit dem Handy telefonieren.",
+          "image": "1F4F1",
+          "richtig": false,
+          "regel": "Beim Radfahren ist das Handy verboten. Du brauchst beide Hände und deine Aufmerksamkeit."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": [],
+      "id": "radfahren",
+      "title": "Radfahren",
+      "icon": "🚲",
+      "term": 2,
+      "lehrplan": "HSU 3/4 5.3",
+      "quelle": "LehrplanPLUS HSU 3/4, 5.3: verkehrssicheres Fahrrad, Verkehrszeichen, Vorfahrt; Straßenverkehrs-Ordnung (StVO)",
+      "forscherauftrag": "Prüft zusammen dein Fahrrad: Bremsen, Klingel, Licht vorne und hinten, Reflektoren. Die App ersetzt nicht das Üben im Verkehr und die Radfahrausbildung."
+    },
+    {
+      "klasse": 4,
+      "erkennen": [],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Die Bürgerinnen und Bürger wählen den Bürgermeister.",
+          "image": "1F5F3",
+          "richtig": true,
+          "regel": "In Bayern wird der Bürgermeister direkt gewählt."
+        },
+        {
+          "text": "Bei einer Wahl ist jede Stimme gleich viel wert.",
+          "image": "1F5F3",
+          "richtig": true,
+          "regel": "Das ist ein Grundsatz der Demokratie."
+        },
+        {
+          "text": "Der Bürgermeister entscheidet im Gemeinderat immer allein.",
+          "image": "1F3DB",
+          "richtig": false,
+          "regel": "Der Gemeinderat stimmt gemeinsam ab. Die Mehrheit entscheidet."
+        },
+        {
+          "text": "Kinder haben eigene Rechte.",
+          "image": "1F9D2",
+          "richtig": true,
+          "regel": "Zum Beispiel das Recht auf Bildung, auf Spiel und auf Schutz."
+        },
+        {
+          "text": "Bei einer Mehrheitsentscheidung gewinnt, wer am lautesten ist.",
+          "image": "270B",
+          "richtig": false,
+          "regel": "Es gewinnt der Vorschlag, für den die meisten stimmen."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["abstimmen"],
+      "id": "gemeinde",
+      "title": "Gemeinde und Demokratie",
+      "icon": "🏛️",
+      "term": 2,
+      "lehrplan": "HSU 3/4 1.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 1.1: Gemeinde, Bürgermeister und Gemeinderat, Mehrheitsentscheidung, Kinderrechte",
+      "forscherauftrag": "Schaut auf der Internetseite eurer Gemeinde nach: Wie heißt eure Bürgermeisterin oder euer Bürgermeister? Gibt es ein Kinder- oder Jugendparlament?"
+    },
+    {
+      "klasse": 4,
+      "erkennen": [],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Eine kleine Wunde deckt man mit einem Pflaster ab.",
+          "image": "1FA79",
+          "richtig": true,
+          "regel": "Vorher vorsichtig sauber machen."
+        },
+        {
+          "text": "Bei Nasenbluten legt man den Kopf weit nach hinten.",
+          "image": "1F443",
+          "richtig": false,
+          "regel": "Den Kopf leicht nach vorne beugen und einen kühlen Lappen in den Nacken legen."
+        },
+        {
+          "text": "Die 112 darf jeder anrufen, auch Kinder.",
+          "image": "260E",
+          "richtig": true,
+          "regel": "Der Notruf ist kostenlos und geht von jedem Handy."
+        },
+        {
+          "text": "Einem Verletzten Mut zuzusprechen hilft ihm.",
+          "image": "1F917",
+          "richtig": true,
+          "regel": "Trösten und dableiben gehört zur Ersten Hilfe."
+        },
+        {
+          "text": "Eine kleine Verbrennung kühlt man mit Eiswürfeln.",
+          "image": "1F9CA",
+          "richtig": false,
+          "regel": "Kühle sie kurz unter fließendem, nicht eiskaltem Wasser."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["erste-hilfe", "notruf"],
+      "id": "erste-hilfe",
+      "title": "Erste Hilfe und Notruf",
+      "icon": "🩹",
+      "term": 1,
+      "lehrplan": "HSU 3/4 2.1",
+      "quelle": "LehrplanPLUS HSU 3/4, 2.1: Verhalten in Notsituationen, Erste Hilfe, Notruf",
+      "forscherauftrag": "Schaut zusammen in euren Verbandskasten: Was ist darin? Übt einen Notruf, ohne wirklich zu wählen."
+    },
+    {
+      "klasse": 4,
+      "erkennen": ["hammer", "saege", "schere", "zahnrad-hsu", "kran", "bruecke", "roboter"],
+      "sortieren": [],
+      "paare": [],
+      "aussagen": [
+        {
+          "text": "Mit einem langen Hebel braucht man weniger Kraft.",
+          "image": "1F528",
+          "richtig": true,
+          "regel": "Je länger der Hebel, desto leichter geht es."
+        },
+        {
+          "text": "Eine Schere besteht aus zwei Hebeln.",
+          "image": "2702",
+          "richtig": true,
+          "regel": "Die beiden Hälften drehen sich um eine Schraube."
+        },
+        {
+          "text": "Zahnräder können eine Drehung weitergeben.",
+          "image": "2699",
+          "richtig": true,
+          "regel": "Greift ein Zahnrad in ein anderes, dreht sich das andere mit."
+        },
+        {
+          "text": "Ein kleines Zahnrad dreht sich langsamer als das große, in das es greift.",
+          "image": "2699",
+          "richtig": false,
+          "regel": "Das kleine Zahnrad dreht sich schneller."
+        },
+        {
+          "text": "Dreiecke machen Brücken und Kräne stabil.",
+          "image": "1F309",
+          "richtig": true,
+          "regel": "Ein Dreieck lässt sich nicht verschieben."
+        }
+      ],
+      "suchbilder": [],
+      "ablaeufe": ["werkzeug-maschine"],
+      "id": "technik",
+      "title": "Technik: Hebel, Zahnrad, Brücke",
+      "icon": "⚙️",
+      "term": 2,
+      "lehrplan": "HSU 3/4 6.1, 6.2",
+      "quelle": "LehrplanPLUS HSU 3/4, 6.1 und 6.2: Hebel, Zahnräder, vom Werkzeug zur Maschine, Stabilität von Bauwerken",
+      "forscherauftrag": "Hebt mit einem langen und einem kurzen Lineal ein Buch an, das auf einem Stift als Drehpunkt liegt. Womit geht es leichter?"
     }
   ]
 }
